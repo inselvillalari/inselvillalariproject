@@ -14,6 +14,7 @@ import Contact from "../../components/Contact";
 const Home1 = () => {
   React.useEffect(() => {
     document.querySelector("body").classList.add("homepage");
+    
   }, []);
   return (
     <LightLayout footerClass={"mt-30"}>
