@@ -55,90 +55,25 @@ const Navbar = ({ navbarRef, logoRef, logoClass }) => {
 
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav ml-auto">
-              <li className="nav-item dropdown" onClick={handleDropdown}>
-                <span
-                  className="nav-link dropdown-toggle"
-                  data-toggle="dropdown"
-                  role="button"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                >
-                  Home
-                </span>
-                <div className="dropdown-menu">
-                  <Link href="/home7">
-                    <a className="dropdown-item">Home Default</a>
-                  </Link>
-                  <Link href="/home6">
-                    <a className="dropdown-item">Interior Agency</a>
-                  </Link>
-                  <Link href="/home5">
-                    <a className="dropdown-item">Creative Arch</a>
-                  </Link>
-                  <Link href="/home4">
-                    <a className="dropdown-item">Architecture Studio</a>
-                  </Link>
-                  <Link href="/home1">
-                    <a className="dropdown-item">Home Light</a>
-                  </Link>
-                  <Link href="/home2">
-                    <a className="dropdown-item">Interior Light</a>
-                  </Link>
-                  <Link href="/home3">
-                    <a className="dropdown-item">Architecture Light</a>
-                  </Link>
-                </div>
-              </li>
               <li className="nav-item">
-                <Link href="/about">
-                  <a className="nav-link">About</a>
+                <Link href="/agena">
+                  <a className="nav-link">Agena</a>
                 </Link>
               </li>
-              <li className="nav-item dropdown" onClick={handleDropdown}>
-                <span
-                  className="nav-link dropdown-toggle"
-                  data-toggle="dropdown"
-                  href="#"
-                  role="button"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                >
-                  Portfolio
-                </span>
-                <div className="dropdown-menu">
-                  <Link href="/work1">
-                    <a className="dropdown-item">Two Column</a>
-                  </Link>
-                  <Link href="/work2">
-                    <a className="dropdown-item">Three Column</a>
-                  </Link>
-                  <Link href="/work3">
-                    <a className="dropdown-item">Four Column</a>
-                  </Link>
-                  <Link href="/project-details">
-                    <a className="dropdown-item">Single Project</a>
-                  </Link>
-                </div>
+              <li className="nav-item">
+                <Link href="/capella">
+                  <a className="nav-link">Capella</a>
+                </Link>
               </li>
-              <li className="nav-item dropdown" onClick={handleDropdown}>
-                <span
-                  className="nav-link dropdown-toggle"
-                  data-toggle="dropdown"
-                  href="#"
-                  role="button"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                >
-                  Blog
-                </span>
-                <div className="dropdown-menu">
-                  <Link href="/blogs">
-                    <a className="dropdown-item">Blogs</a>
-                  </Link>
-                  <Link href="/blog-details">
-                    <a className="dropdown-item">Post Details</a>
-                  </Link>
-                </div>
+              <li className="nav-item">
+                <Link href="/gredi">
+                  <a className="nav-link">Gredi</a>
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link href="/rigel">
+                  <a className="nav-link">Rigel</a>
+                </Link>
               </li>
               <li className="nav-item">
                 <Link href="/contact">
