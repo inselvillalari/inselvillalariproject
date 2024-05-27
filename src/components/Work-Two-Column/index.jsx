@@ -2,7 +2,6 @@
 import React from "react";
 import Link from "next/link";
 import initIsotope from "../../common/initIsotope";
-
 export const WorkTwoColumn = () => {
   React.useEffect(() => {
     setTimeout(() => {
@@ -16,7 +15,17 @@ export const WorkTwoColumn = () => {
           <div className="row gallery">
             <div className="col-lg-6 items mt-0 interior theaters residential">
               <div className="section-head mb-0">
-                <h3>Mekanlar</h3>
+                <h3>Works</h3>
+                <div className="filtering mt-30">
+                  <div className="filter">
+                    <span data-filter="*" className="active">
+                      All
+                    </span>
+                    <span data-filter=".interior">Interior</span>
+                    <span data-filter=".theaters">Theaters</span>
+                    <span data-filter=".residential">Residential</span>
+                  </div>
+                </div>
               </div>
             </div>
             <div className="col-lg-6 items theaters">
@@ -26,7 +35,7 @@ export const WorkTwoColumn = () => {
                 </div>
                 <div className="cont vis">
                   <h5>
-                    <Link href="/agena/nightViews">Gece Görünümleri</Link>
+                    <Link href="/project-details">Modern Townhouse</Link>
                   </h5>
                   <span>Architecture</span>
                   <span>Modern</span>
@@ -40,7 +49,7 @@ export const WorkTwoColumn = () => {
                 </div>
                 <div className="cont vis">
                   <h5>
-                    <Link href="/project-details">Gündüz Görünümleri</Link>
+                    <Link href="/project-details">Modern Townhouse</Link>
                   </h5>
                   <span>Architecture</span>
                   <span>Modern</span>
@@ -54,7 +63,7 @@ export const WorkTwoColumn = () => {
                 </div>
                 <div className="cont vis">
                   <h5>
-                    <Link href="/project-details">İç Mekan</Link>
+                    <Link href="/project-details">Modern Townhouse</Link>
                   </h5>
                   <span>Architecture</span>
                   <span>Modern</span>
@@ -68,14 +77,27 @@ export const WorkTwoColumn = () => {
                 </div>
                 <div className="cont vis">
                   <h5>
-                    <Link href="/project-details">Dış Mekan</Link>
+                    <Link href="/project-details">Modern Townhouse</Link>
                   </h5>
                   <span>Architecture</span>
                   <span>Modern</span>
                 </div>
               </div>
             </div>
-     
+            <div className="col-lg-6 items theaters">
+              <div className="item">
+                <div className="img">
+                  <img src="/assets/img/works/4.jpg" alt="" />
+                </div>
+                <div className="cont vis">
+                  <h5>
+                    <Link href="/project-details">Modern Townhouse</Link>
+                  </h5>
+                  <span>Architecture</span>
+                  <span>Modern</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

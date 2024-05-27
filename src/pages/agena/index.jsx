@@ -2,7 +2,7 @@
 import React from "react";
 import WorkHeader from "../../components/Work-header";
 import MainLayout from "../../layouts/main";
-import { WorkTwoColumn } from "../../components/Work-Two-Column";
+import { AgenaPage } from "./agena";
 
 const Agena = () => {
   React.useEffect(() => {
@@ -18,7 +18,7 @@ const Agena = () => {
         // title = "text"
         content="Architecture bibendum pharetra eleifend. Suspendisse vel volutpat purus, sit amet bibendum nisl. Cras mollis turpis a ipsum ultes, nec condimentum ipsum consequat. Mauris vitae consequat nibh, vitae interdum mi."
       />
-      <WorkTwoColumn />
+      <AgenaPage />
     </MainLayout>
   );
 };
