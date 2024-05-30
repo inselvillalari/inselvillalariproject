@@ -2098,8 +2098,8 @@ body {
 
 .services .item .icon {
   color: #c5a47e;
-  font-size: 50px;
-  margin-bottom: 20px; }
+  font-size: 30px;
+  margin-bottom: 10px; }
 
 .services .item h6 {
   margin-bottom: 20px; }
@@ -2321,7 +2321,7 @@ body {
   position: relative; }
   .works .item:hover:after,
   .works .item:hover .cont {
-    opacity: 1; }
+    opacity: 0; }
   .works .item:after {
     content: '';
     position: absolute;
@@ -2683,7 +2683,7 @@ body {
     -o-transition: all 1.5s;
     transition: all 1.5s; }
     .skills-box .skill-progress .progres:after {
-      content: attr(data-value);
+      content: attr(data-name);
       position: absolute;
       right: 10px;
       top: -45px;

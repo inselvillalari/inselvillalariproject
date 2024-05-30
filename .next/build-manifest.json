@@ -25,35 +25,15 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/capella": [
+    "/agena": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/capella.js"
-    ],
-    "/capella/nightViews": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/capella/nightViews.js"
-    ],
-    "/gredi": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/gredi.js"
-    ],
-    "/gredi/dayViews": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/gredi/dayViews.js"
+      "static/chunks/pages/agena.js"
     ],
     "/rigel": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/rigel.js"
-    ],
-    "/rigel/dayViews": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/rigel/dayViews.js"
     ]
   },
   "ampFirstPages": []

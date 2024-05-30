@@ -2,6 +2,8 @@
 import React from "react";
 import Link from "next/link";
 import initIsotope from "../../common/initIsotope";
+import AgenaFeatures from "./features";
+import AgenaSkills from "./skills";
 
 export const AgenaPage = () => {
   React.useEffect(() => {
@@ -85,6 +87,8 @@ export const AgenaPage = () => {
             </Link>
           </div>
         </div>
+        <AgenaSkills />
+        <AgenaFeatures />
       </section>
     </>
   );

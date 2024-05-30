@@ -102,9 +102,9 @@ const Intro3 = () => {
                           {slide?.content && (
                             <p className="mt-10">{slide.content}</p>
                           )}
-                          <Link href="/work3">
+                          <Link href={slide?.pageLink}>
                             <a className="btn-curve btn-color mt-20">
-                              <span>Discover Work</span>
+                              <span>Detay</span>
                             </a>
                           </Link>
                         </div>
