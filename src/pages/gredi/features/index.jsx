@@ -7,6 +7,47 @@ const GrediFeatures = () => {
           <h3>Özellikler</h3>
         </div>
         <div className="row">
+          <div className="col-4">
+            <div className="item md-mb20">
+              <span className="icon flaticon-sketch"></span>
+              <p style={{ color: "inherit" }}>10 Kişilik</p>
+            </div>
+          </div>
+          <div className="col-4">
+            <div className="item md-mb20">
+              <span className="icon flaticon-sketch"></span>
+              <p style={{ color: "inherit" }}>5 + 1</p>
+            </div>
+          </div>
+          <div className="col-4">
+            <div className="item md-mb20">
+              <span className="icon flaticon-sketch"></span>
+              <p style={{ color: "inherit" }}>Özel Havuzlu</p>
+            </div>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-4">
+            <div className="item md-mb20">
+              <span className="icon flaticon-sketch"></span>
+              <p style={{ color: "inherit" }}>Bilardo</p>
+            </div>
+          </div>
+          <div className="col-4">
+            <div className="item md-mb20">
+              <span className="icon flaticon-sketch"></span>
+              <p style={{ color: "inherit" }}>BBQ - Mangal</p>
+            </div>
+          </div>
+          <div className="col-4">
+            <div className="item md-mb20">
+              <span className="icon flaticon-sketch"></span>
+              <p style={{ color: "inherit" }}>Jakuzi</p>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <div className="row">
           <div className="col-2">
             <div className="item md-mb20">
               <span className="icon flaticon-sketch"></span>
