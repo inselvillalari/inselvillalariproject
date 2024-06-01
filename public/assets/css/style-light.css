@@ -690,7 +690,7 @@ a:hover, span:hover {
   left: 0;
   height: 50vh;
   width: 100%;
-  background: #252531;
+  background: #181818;
   -webkit-transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
   -o-transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
   transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
@@ -3688,7 +3688,7 @@ body {
 /* ====================== [ End contact ] ====================== */
 /* ====================== [ Start Footer ] ====================== */
 footer {
-  background: #252531;
+  background: #181818;
   width: calc(100% - 50px);
   margin-left: 25px;
   margin-bottom: 25px;

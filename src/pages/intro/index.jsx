@@ -165,17 +165,14 @@ const IntroWithVertical = () => {
           <Link href="#">
             <a
               style={{
-                width: "25px",
-                height: "25px",
-                lineHeight: "25px",
+                width: "40px",
+                height: "40px",
+                lineHeight: "40px",
                 textAlign: "center",
                 borderRadius: "20%",
                 fontSize: "20px",
                 cursor: "pointer",
-                background: "#d6249f",
-                background:
-                  "radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);box-shadow: 0px 3px 10px rgba(0,0,0,.25)",
-                marginRight: "9px",
+                color: "#C13584",
               }}
             >
               <i className="fab fa-instagram"></i>
