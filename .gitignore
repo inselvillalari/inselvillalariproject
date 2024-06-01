@@ -48,3 +48,7 @@ Thumbs.db
 *.mov
 *.wmv
 
+# Ignore webpack cache
+.next/cache/webpack/server-development/
+
+
