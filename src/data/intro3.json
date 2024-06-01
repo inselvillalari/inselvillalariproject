@@ -1,28 +1,28 @@
 [
   {
     "id": 1,
-    "title": { "first": "VİLLA", "second": "AGENA" },
+    "title": { "first": "VİLLA AGENA", "second": "" },
     "content": "",
     "image": "/assets/img/slid/n/1.jpg",
     "pageLink": "/agena"
   },
   {
     "id": 2,
-    "title": { "first": "Classic", "second": "and Modern" },
+    "title": { "first": "VİLLA CAPELLA", "second": "" },
     "content": "Architek have been developing a transversal approach combining architecture, urbanism and landscape.",
     "image": "/assets/img/slid/n/3.jpg",
     "pageLink": "/capella"
   },
   {
     "id": 3,
-    "title": { "first": "Elegant &", "second": "Unique Design" },
+    "title": { "first": "VİLLA GREDI", "second": "" },
     "content": "Architek have been developing a transversal approach combining architecture, urbanism and landscape.",
     "image": "/assets/img/slid/n/2.jpg",
     "pageLink": "/gredi"
   },
   {
     "id": 4,
-    "title": { "first": "VİLLA RİGEL", "second": "" },
+    "title": { "first": "VİLLA RIGEL", "second": "" },
     "content": "Architek have been developing a transversal approach combining architecture, urbanism and landscape.",
     "image": "/assets/img/slid/n/villa.jpg",
     "pageLink": "/rigel"

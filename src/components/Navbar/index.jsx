@@ -2,7 +2,7 @@
 import React from "react";
 import Link from "next/link";
 import appData from "../../data/app.json";
-import getSiblings from '../../common/getSiblings'
+import getSiblings from "../../common/getSiblings";
 
 const Navbar = ({ navbarRef, logoRef, logoClass }) => {
   const handleDropdown = (e) => {
@@ -77,7 +77,7 @@ const Navbar = ({ navbarRef, logoRef, logoClass }) => {
               </li>
               <li className="nav-item">
                 <Link href="/contact">
-                  <a className="nav-link">Contact</a>
+                  <a className="nav-link">İletişim</a>
                 </Link>
               </li>
             </ul>

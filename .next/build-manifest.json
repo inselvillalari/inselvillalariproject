@@ -30,10 +30,10 @@
       "static/chunks/main.js",
       "static/chunks/pages/agena.js"
     ],
-    "/gredi": [
+    "/home": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/gredi.js"
+      "static/chunks/pages/home.js"
     ]
   },
   "ampFirstPages": []

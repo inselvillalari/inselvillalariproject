@@ -1,5 +1,5 @@
 import React from "react";
-import intro2Data from "../../data/Intro2.json";
+import introData from "../../pages/intro/index.json";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Split from "../Split";
 
@@ -82,7 +82,7 @@ const IntroWithVertical = () => {
               }}
               className="swiper-wrapper cta__slider"
             >
-              {intro2Data.map((slide) => (
+              {introData.map((slide) => (
                 <SwiperSlide
                   key={slide.id}
                   className="cta__slider-item swiper-slide"
