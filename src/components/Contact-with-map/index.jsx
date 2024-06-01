@@ -1,15 +1,43 @@
+import { useState, useRef } from "react";
 import React from "react";
-import appData from '../../data/app.json'
+import appData from "../../data/app.json";
+import { Toaster } from "react-hot-toast";
+import emailjs from "@emailjs/browser";
+import { toast } from "react-hot-toast";
 
 const ContactWithMap = () => {
+  const [loading, setLoading] = useState(false);
+  const form = useRef();
+
+  const sendMail = (e) => {
+    e.preventDefault();
+    setLoading(true);
+    emailjs
+      .sendForm("service_r4h1kb4", "template_19ovror", form.current, {
+        publicKey: "9ckWRHvavuIs1plCB",
+      })
+      .then(
+        () => {
+          setLoading(false);
+          form.current.reset();
+          toast.success("Mailiniz başarıyla gönderildi!");
+        },
+        (error) => {
+          console.log("FAILED...", error);
+          setLoading(false);
+          toast.error("Mailiniz gönderimi başarısız.");
+        }
+      );
+  };
   return (
     <div className="container-fluid">
+      <Toaster position="top-right" />
       <div className="row">
         <div className="col-lg-6 map-box">
           <iframe src={appData.mapIframe}></iframe>
         </div>
         <div className="col-lg-6 form">
-          <form id="contact-form" method="post">
+          <form ref={form} id="contact-form" onSubmit={sendMail}>
             <div className="messages"></div>
 
             <div className="controls">
@@ -18,7 +46,7 @@ const ContactWithMap = () => {
                   id="form_name"
                   type="text"
                   name="name"
-                  placeholder="Name"
+                  placeholder="İsminiz"
                   required="required"
                 />
               </div>
@@ -28,7 +56,7 @@ const ContactWithMap = () => {
                   id="form_email"
                   type="email"
                   name="email"
-                  placeholder="Email"
+                  placeholder="Mailiniz"
                   required="required"
                 />
               </div>
@@ -37,14 +65,18 @@ const ContactWithMap = () => {
                 <textarea
                   id="form_message"
                   name="message"
-                  placeholder="Message"
+                  placeholder="Mesajınız"
                   rows="4"
                   required="required"
                 ></textarea>
               </div>
 
-              <button type="submit" className="btn-curve btn-color">
-                <span>Send Message</span>
+              <button
+                type="submit"
+                className="btn-curve btn-color"
+                disabled={loading}
+              >
+                <span>Mail Gönder</span>
               </button>
             </div>
           </form>
