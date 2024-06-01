@@ -162,8 +162,13 @@ const IntroWithVertical = () => {
             zIndex: 100,
           }}
         >
-          <Link href="#">
+          <Link
+            href="https://www.instagram.com/insel_villalari?igsh=aGowaGF3c2ozM2dm"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
             <a
+              target="_blank"
               style={{
                 width: "40px",
                 height: "40px",
@@ -178,8 +183,9 @@ const IntroWithVertical = () => {
               <i className="fab fa-instagram"></i>
             </a>
           </Link>
-          <Link href="#">
+          <Link href="#" rel="noopener noreferrer" target="_blank">
             <a
+              target="_blank"
               style={{
                 width: "40px",
                 height: "40px",
@@ -194,7 +200,7 @@ const IntroWithVertical = () => {
               <i className="fab fa-whatsapp"></i>
             </a>
           </Link>
-          <Link href="#">
+          <Link href="/contact">
             <a
               style={{
                 width: "40px",
