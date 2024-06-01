@@ -25,7 +25,7 @@ const AboutUs = () => {
               </ul>
               <Link href="/about">
                 <a className="btn-curve btn-color mt-30">
-                  <span>Read More</span>
+                  <span>Daha Fazlası</span>
                 </a>
               </Link>
             </div>
@@ -55,7 +55,6 @@ const AboutUs = () => {
                   <div className="years-exp">
                     <div className="exp-text">
                       <h2 className="custom-font">{aboutUsData.exp}</h2>
-                      <h6>Years Of Experience</h6>
                     </div>
                   </div>
                 </div>

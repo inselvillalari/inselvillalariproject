@@ -25,7 +25,7 @@ const RigelSkills = () => {
                 <div className="skill-progress">
                   <div
                     className="progres custom-font"
-                    data-value="30%"
+                    data-value="33%"
                     data-name="300 m"
                   ></div>
                 </div>
@@ -79,7 +79,7 @@ const RigelSkills = () => {
                 <div className="skill-progress">
                   <div
                     className="progres custom-font"
-                    data-value="30%"
+                    data-value="33%"
                     data-name="300 m"
                   ></div>
                 </div>

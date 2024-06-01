@@ -1,25 +1,29 @@
 {
   "title": {
-    "first": "Best Designers",
-    "second": "Architectures for You."
+    "first": "Kalkan",
+    "second": "Kızıltaş'ta"
   },
-  "image1": "/assets/img/ab1.jpg",
-  "image2": "/assets/img/ab2.jpg",
-  "content": "Architecture bibendum pharetra eleifend. Suspendisse vel volutpat purus, sit amet bibendum nisl. Cras mollis turpis a ipsum ultes, nec condimentum ipsum consequat. Mauris vitae consequat nibh, vitae interdum mi.",
+  "image1": "/assets/img/slid/aboutUs/1.jpg",
+  "image2": "/assets/img/slid/aboutUs/2.jpg",
+  "content": "mavi ve yeşili sizlerle buluşturuyoruz. Villalarımız, bütün bir yılın yorgunluğunu üzerinizden atmanız için kusursuz bir şekilde tasarlanmıştır. Siz değerli misafirlerimize 'işte bu' dedirtecek bir tatil geçirtmek için; kapılarımızı açıyoruz…",
 
-  "exp": 21,
+  "exp": 8,
   "textList": [
     {
       "id": 1,
-      "name": "Architecture"
+      "name": "Agena"
     },
     {
       "id": 2,
-      "name": "Interior Design"
+      "name": "Capella"
     },
     {
       "id": 3,
-      "name": "Furniture"
+      "name": "Gredi"
+    },
+    {
+      "id": 4,
+      "name": "Rigel"
     }
   ]
 }

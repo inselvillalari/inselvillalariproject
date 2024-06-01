@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "image": "/assets/img/team/1.jpg",
+    "facebook": "#",
+    "twitter": "#",
+    "behance": "#",
+    "linkedin": "#",
+    "username": "",
+    "usertitle": "Agena"
+  },
+  {
+    "id": 2,
+    "image": "/assets/img/team/2.jpg",
+    "facebook": "#",
+    "twitter": "#",
+    "behance": "#",
+    "linkedin": "#",
+    "username": "",
+    "usertitle": "Capella"
+  },
+  {
+    "id": 3,
+    "image": "/assets/img/team/3.jpg",
+    "facebook": "#",
+    "twitter": "#",
+    "behance": "#",
+    "linkedin": "#",
+    "username": "",
+    "usertitle": "Gredi"
+  },
+  {
+    "id": 4,
+    "image": "/assets/img/team/4.jpg",
+    "facebook": "#",
+    "twitter": "#",
+    "behance": "#",
+    "linkedin": "#",
+    "username": "",
+    "usertitle": "Rigel"
+  }
+]
