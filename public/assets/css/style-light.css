@@ -1980,6 +1980,14 @@ body {
 }
 /* ====================== [ End Intro ] ====================== */
 /* ====================== [ Start services ] ====================== */
+@media screen and (max-width: 991px) {
+  .services{
+    display: none;
+  }
+  .social-icon{
+    display: none;
+  }
+}
 .services .bord-box {
   overflow: hidden;
 }

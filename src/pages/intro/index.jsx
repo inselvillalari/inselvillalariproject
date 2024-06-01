@@ -153,6 +153,67 @@ const IntroWithVertical = () => {
           ref={paginationRef}
           className="swiper-pagination top custom-font"
         ></div>
+        <div
+          className="social-icon"
+          style={{
+            position: "absolute",
+            left: "40px",
+            bottom: "100px",
+            zIndex: 100,
+          }}
+        >
+          <Link href="#">
+            <a
+              style={{
+                width: "25px",
+                height: "25px",
+                lineHeight: "25px",
+                textAlign: "center",
+                borderRadius: "20%",
+                fontSize: "20px",
+                cursor: "pointer",
+                background: "#d6249f",
+                background:
+                  "radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);box-shadow: 0px 3px 10px rgba(0,0,0,.25)",
+                marginRight: "9px",
+              }}
+            >
+              <i className="fab fa-instagram"></i>
+            </a>
+          </Link>
+          <Link href="#">
+            <a
+              style={{
+                width: "40px",
+                height: "40px",
+                lineHeight: "40px",
+                textAlign: "center",
+                borderRadius: "50%",
+                color: "rgb(37,211,102)",
+                fontSize: "20px",
+                cursor: "pointer !important",
+              }}
+            >
+              <i className="fab fa-whatsapp"></i>
+            </a>
+          </Link>
+          <Link href="#">
+            <a
+              style={{
+                width: "40px",
+                height: "40px",
+                lineHeight: "40px",
+                textAlign: "center",
+                borderRadius: "50%",
+                color: "rgb(234, 67, 53)",
+                fontSize: "20px",
+                cursor: "pointer",
+              }}
+            >
+              <i className="fab fa-google"></i>
+            </a>
+          </Link>
+        </div>
       </header>
     </>
   );
