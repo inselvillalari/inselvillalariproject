@@ -7,12 +7,12 @@ const AgenaSkills = () => {
   }, []);
   return (
       <div
-        className="skills-sec section-padding pt-80"
+        className="skills-sec section-padding pt-100"
         style={{ backgroundColor: "#181818" }}
       >
         <div className="container">
           <div className="row">
-            <div className="col-lg-6 valign">
+            <div className="col-lg-6 valign  md-mb50">
               <div className="skills-box full-width">
                 <div className="skill-item">
                   <h6>Merkez</h6>
