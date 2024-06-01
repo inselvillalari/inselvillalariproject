@@ -183,7 +183,11 @@ const IntroWithVertical = () => {
               <i className="fab fa-instagram"></i>
             </a>
           </Link>
-          <Link href="#" rel="noopener noreferrer" target="_blank">
+          <Link
+            href="https://wa.me/905071376396?text=Merhaba,%20İnsel%20Villaları%20hakkında%20bilgi%20almak%20istiyorum"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
             <a
               target="_blank"
               style={{
