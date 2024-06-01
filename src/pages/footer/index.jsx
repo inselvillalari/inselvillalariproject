@@ -99,32 +99,29 @@ const Footer = ({ classText }) => {
                 <img src="/assets/img/logo-light.png" alt="" />
               </div>
               <div className="social">
-                <Link href="#">
-                  <a>
-                    <i className="fab fa-facebook-f"></i>
+                <Link
+                  href="https://wa.me/905071376396?text=Merhaba,%20İnsel%20Villaları%20hakkında%20bilgi%20almak%20istiyorum"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <a target="_blank">
+                    <i className="fab fa-whatsapp"></i>
                   </a>
                 </Link>
-                <Link href="#">
-                  <a>
-                    <i className="fab fa-twitter"></i>
-                  </a>
-                </Link>
-                <Link href="https://www.instagram.com/insel_villalari?igsh=aGowaGF3c2ozM2dm">
-                  <a>
+                <Link
+                  href="https://www.instagram.com/insel_villalari?igsh=aGowaGF3c2ozM2dm"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <a target="_blank">
                     <i className="fab fa-instagram"></i>
                   </a>
                 </Link>
-                <Link href="#">
+                <Link href="/contact">
                   <a>
-                    <i className="fab fa-youtube"></i>
+                    <i className="fab fa-google"></i>
                   </a>
                 </Link>
-              </div>
-              <div className="copy-right">
-                <p>
-                  © 2022, Arch Template. Made with passion by
-                  <Link href="#">ThemesCamp</Link>.
-                </p>
               </div>
             </div>
           </div>

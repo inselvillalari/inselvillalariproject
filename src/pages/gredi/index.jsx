@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
 import WorkHeader from "../../components/Work-header";
-import MainLayout from "../../layouts/main";
+import MainLayout from "../layout/MainLayout";
 import { GrediPage } from "./gredi";
 
 const Agena = () => {

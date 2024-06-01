@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
-import LightLayout from "../../layouts/light";
+import LightLayout from "../layout/LightLayout";
 import Intro from "../intro";
 import Services from "../services";
 import AboutUs from "../aboutus";
