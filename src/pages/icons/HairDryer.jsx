@@ -50,7 +50,7 @@ function HairDryer({ title }) {
           </g>
         </g>
       </svg>
-      <p style={{ color: "inherit" }}>{title}</p>
+      <p style={{ color: "inherit",marginLeft:'10px' }}>{title}</p>
     </div>
   );
 }

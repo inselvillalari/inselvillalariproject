@@ -4032,6 +4032,9 @@ footer .item .copy-right p a {
   .sm-mb80 {
     margin-bottom: 80px;
  }
+ .sm-pl10 {
+  padding-left: 10px;
+}
   .sm-pb10 {
     padding-bottom: 10px;
  }

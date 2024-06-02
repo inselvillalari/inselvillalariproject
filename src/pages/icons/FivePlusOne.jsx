@@ -70,7 +70,7 @@ function FivePlusOne({ title }) {
           <path d="m424 240a8 8 0 0 1 -8-8v-40a8 8 0 0 1 16 0v40a8 8 0 0 1 -8 8z"></path>
         </g>
       </svg>
-      <p style={{ color: "inherit" }}>{title}</p>
+      <p style={{ color: "inherit",marginLeft:'10px' }}>{title}</p>
     </div>
   );
 }

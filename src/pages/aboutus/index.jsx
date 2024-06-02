@@ -13,7 +13,7 @@ const AboutUs = () => {
               className="exp-content nopat wow fadeInUp"
               data-wow-delay=".3s"
             >
-              <h6 className="sub-title">Hakkımızda</h6>
+              <h6 className="sub-title">Konumumuz</h6>
               <h2 className="mb-20 playfont">
                 {aboutUsData.title.first} <br /> {aboutUsData.title.second}
               </h2>
@@ -23,11 +23,11 @@ const AboutUs = () => {
                   <li key={item.id}>{item.name}</li>
                 ))}
               </ul>
-              <Link href="/about">
+              {/* <Link href="/about">
                 <a className="btn-curve btn-color mt-30">
                   <span>Daha Fazlası</span>
                 </a>
-              </Link>
+              </Link> */}
             </div>
           </div>
           <div className="col-lg-6">

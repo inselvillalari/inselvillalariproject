@@ -22,109 +22,141 @@ const CapellaFeatures = () => {
           <h3>Özellikler</h3>
         </div>
         <div className="row">
-          <div className="col-sm-12 col-md-6">
-            <div
-              className="row"
-              style={{
-                flexDirection: "column",
-                paddingLeft: "150px",
-              }}
-            >
-              <div className="item">
-                <TenPeople title="10 Kişilik" />
+          <div className="col-sm-12 col-md-6 sm-mb30 sm-pl50">
+            <div className="row">
+              <div className="col-4">
+                <div className="item">
+                  <TenPeople title="10 Kişilik" />
+                </div>
               </div>
-              <div className="item">
-                <FivePlusOne title="5+1" />
+              <div className="col-4">
+                <div className="item">
+                  <PrivatePool title="Özel Havuzlu" />
+                </div>
               </div>
-              <div className="item">
-                <PrivatePool title="Özel Havuzlu" />
+              <div className="col-4">
+                <div className="item">
+                  <FivePlusOne title="5+1" />
+                </div>
               </div>
-              <div className="item">
-                <Bilardo title="Bilardo" />
+              <div className="col-4 mt-4">
+                <div className="item">
+                  <Bilardo title="Bilardo" />
+                </div>
               </div>
-              <div className="item">
-                <BBQ title="BBQ - Mangal" />
+              <div className="col-4 mt-4">
+                <div className="item">
+                  <BBQ title="BBQ - Mangal" />
+                </div>
               </div>
-              <div className="item">
-                <Jacuzzy title="Jakuzi" />
+              <div className="col-4 mt-4">
+                <div className="item">
+                  <Jacuzzy title="Jakuzi" />
+                </div>
               </div>
-              <div className="item">
-                <Wifi title="İnternet Bağlantısı" />
+              <div className="col-4 mt-4">
+                <div className="item">
+                  <Wifi title="İnternet Bağlantısı" />
+                </div>
               </div>
-              <div className="item">
-                <PingPong title="Masa Tenisi" />
+              <div className="col-4 mt-4">
+                <div className="item">
+                  <PingPong title="Masa Tenisi" />
+                </div>
               </div>
-              <div className="item">
-                <CarPark title="Otopark" />
+              <div className="col-4 mt-4">
+                <div className="item">
+                  <CarPark title="Otopark" />
+                </div>
               </div>
-              <div className="item">
-                <Guard title="Güvenlik Görevlisi" />
+              <div className="col-4 mt-4">
+                <div className="item">
+                  <Guard title="Güvenlik Görevlisi" />
+                </div>
               </div>
-              <div className="item">
-                <PoolHeating title="Havuz Isıtma" />
+              <div className="col-4 mt-4">
+                <div className="item">
+                  <PoolHeating title="Havuz Isıtma" />
+                </div>
               </div>
-              <div className="item">
-                <IndoorPool title="Kapalı Havuz" />
+              <div className="col-4 mt-4">
+                <div className="item">
+                  <Terrace title="Teras" />
+                </div>
               </div>
-              <div className="item">
-                <BabyBed title="Bebek Yatağı" />
+              <div className="col-4 mt-4">
+                <div className="item">
+                  <BabyBed title="Bebek Yatağı" />
+                </div>
               </div>
-              <div className="item">
-                <Terrace title="Teras" />
+              <div className="col-4 mt-4">
+                <div className="item">
+                  <IndoorPool title="Kapalı Havuz" />
+                </div>
               </div>
             </div>
           </div>
           <div className="col-sm-12 col-md-6">
-            <div
-              className="row"
-              style={{
-                flexDirection: "column",
-                paddingLeft: "50px",
-              }}
-            >
-              <div className="item">
-                <Check title="Smart TV - Uydu" />
-              </div>
-              <div className="item">
-                <Check title="Klima" />
-              </div>
-              <div className="item ">
-                <Check title="Full Mobilyalı" />
-              </div>
-              <div className="item ">
-                <Check title="Beyaz Eşyalı" />
-              </div>
-              <div>
-                <div className="item">
-                  <Check title="Saç Kurutma Makinesi" />
+            <div className="row pl-5">
+              <div className="col-sm-12 col-md-6 sm-mb30 sm-pl50">
+                <div
+                  className="row"
+                  style={{
+                    flexDirection: "column",
+                  }}
+                >
+                  <div className="item">
+                    <Check title="Smart TV - Uydu" />
+                  </div>
+                  <div className="item">
+                    <Check title="Klima" />
+                  </div>
+                  <div className="item ">
+                    <Check title="Full Mobilyalı" />
+                  </div>
+                  <div className="item ">
+                    <Check title="Beyaz Eşyalı" />
+                  </div>
+                  <div className="item">
+                    <Check title="Saç Kurutma Makinesi" />
+                  </div>
+                  <div className="item">
+                    <Check title="Ütü" />
+                  </div>
+                  <div className="item ">
+                    <Check title="Deniz Manzaralı" />
+                  </div>
                 </div>
-                <div className="item">
-                  <Check title="Ütü" />
+              </div>
+              <div className="col-sm-12 col-md-6 sm-pl50">
+                <div
+                  className="row "
+                  style={{
+                    flexDirection: "column",
+                  }}
+                >
+                  <div className="item ">
+                    <Check title="Havuz - Bahçe Bakımı" />
+                  </div>
+                  <div className="item ">
+                    <Check title="Oyun Alanı" />
+                  </div>
+                  <div className="item ">
+                    <Check title="Duşakabin" />
+                  </div>
+                  <div className="item ">
+                    <Check title="Alarm" />
+                  </div>
+                  <div className="item ">
+                    <Check title="Bahçeli" />
+                  </div>
+                  <div className="item ">
+                    <Check title="Çocuk Havuzu" />
+                  </div>
+                  <div className="item ">
+                    <Check title="Ebeveyn Banyosu" />
+                  </div>
                 </div>
-                <div className="item ">
-                  <Check title="Deniz Manzaralı" />
-                </div>
-              </div>
-              <div className="item ">
-                <Check title="Havuz - Bahçe Bakımı" />
-              </div>
-              <div className="item ">
-                <Check title="Oyun Alanı" />
-              </div>
-              <div className="item ">
-                <Check title="Duşakabin" />
-              </div>
-              <div className="item ">
-                <Check title="Alarm" />
-              </div>
-              <div className="item ">
-                <Check title="Bahçeli" />
-              </div>
-              <div className="item ">
-                <Check title="Çocuk Havuzu" />
-              </div>
-              <div className="item ">
-                <Check title="Ebeveyn Banyosu" />
               </div>
             </div>
           </div>

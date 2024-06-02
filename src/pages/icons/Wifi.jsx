@@ -97,7 +97,7 @@ function Wifi({ title }) {
           fill="#3b3b47"
         ></path>
       </svg>
-      <p style={{ color: "inherit" }}>{title}</p>
+      <p style={{ color: "inherit",marginLeft:'10px' }}>{title}</p>
     </div>
   );
 }
