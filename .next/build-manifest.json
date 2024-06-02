@@ -30,10 +30,15 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/rigel/dayViews": [
+    "/capella": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/rigel/dayViews.js"
+      "static/chunks/pages/capella.js"
+    ],
+    "/contact": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/contact.js"
     ]
   },
   "ampFirstPages": []

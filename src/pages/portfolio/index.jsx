@@ -48,7 +48,7 @@ const Portfolio2 = () => {
             </div>
             <div className="more">
               <Link
-                href="https://www.google.com/search?q=ka%C5%9F&oq=ka%C5%9F&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIGCAEQRRg9MgYIAhBFGD0yBggDEEUYPNIBBzY5MWowajeoAgCwAgA&sourceid=chrome&ie=UTF-8"
+                href="https://www.google.com/search?q=ka%C5%9F%27ta+gezilecek+yerler&sca_esv=c8c65b53b193be60&biw=2560&bih=1294&ei=7blcZp3KG93ixc8Ps-SumAw&udm=&oq=ka%C5%9Fta+ge&gs_lp=Egxnd3Mtd2l6LXNlcnAiCWthxZ90YSBnZSoCCAAyDRAAGIAEGLEDGIMBGAoyBxAAGIAEGAoyBxAAGIAEGAoyBxAAGIAEGAoyCBAAGBYYChgeMgYQABgWGB4yBhAAGBYYHjIIEAAYFhgKGB4yCBAAGBYYChgeMggQABgWGB4YD0iKFlDJBli4DHAAeAKQAQCYAZIBoAGnBaoBAzAuNbgBA8gBAPgBAZgCBqACtgXCAgQQABhHwgIMEAAYgAQYQxiKBRgKwgIFEAAYgATCAggQABiABBiiBJgDAIgGAZAGCJIHAzEuNaAHkSQ&sclient=gws-wiz-serp"
                 rel="noopener noreferrer"
                 target="_blank"
               >

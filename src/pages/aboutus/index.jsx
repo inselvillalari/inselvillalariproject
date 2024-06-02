@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const AboutUs = () => {
   return (
-    <section className="about section-padding">
+    <section className="about section-padding" style={{ backgroundColor: "#EFFAFA" }}>
       <div className="container">
         <div className="row">
           <div className="col-lg-6 valign">
