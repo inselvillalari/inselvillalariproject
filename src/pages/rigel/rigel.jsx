@@ -21,7 +21,7 @@ export const RigelPage = () => {
                 <h3>Mekanlar</h3>
               </div>
             </div>
-            <Link href="/rigel/nightViews">
+            <Link href="/rigel/dayViews">
               <div className="col-lg-6 items theaters">
                 <div className="item">
                   <div className="img">
@@ -29,10 +29,10 @@ export const RigelPage = () => {
                   </div>
                   <div className="cont vis">
                     <h5>
-                      <Link href="/rigel/nightViews">Gece Görünümleri</Link>
+                      <Link href="/rigel/dayViews">Gündüz Görünümleri</Link>
                     </h5>
-                    <span>Architecture</span>
-                    <span>Modern</span>
+                    {/* <span>Architecture</span>
+                    <span>Modern</span> */}
                   </div>
                 </div>
               </div>
@@ -47,8 +47,8 @@ export const RigelPage = () => {
                     <h5>
                       <Link href="/rigel/dayViews">Gündüz Görünümleri</Link>
                     </h5>
-                    <span>Architecture</span>
-                    <span>Modern</span>
+                    {/* <span>Architecture</span>
+                    <span>Modern</span> */}
                   </div>
                 </div>
               </div>
@@ -63,8 +63,8 @@ export const RigelPage = () => {
                     <h5>
                       <Link href="/rigel/interior">İç Mekan</Link>
                     </h5>
-                    <span>Architecture</span>
-                    <span>Modern</span>
+                    {/* <span>Architecture</span>
+                    <span>Modern</span> */}
                   </div>
                 </div>
               </div>
@@ -79,8 +79,8 @@ export const RigelPage = () => {
                     <h5>
                       <Link href="/rigel/activities">Dış Mekan</Link>
                     </h5>
-                    <span>Architecture</span>
-                    <span>Modern</span>
+                    {/* <span>Architecture</span>
+                    <span>Modern</span> */}
                   </div>
                 </div>
               </div>

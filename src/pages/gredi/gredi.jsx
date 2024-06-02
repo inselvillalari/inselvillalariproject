@@ -21,7 +21,7 @@ export const GrediPage = () => {
                 <h3>Mekanlar</h3>
               </div>
             </div>
-            <Link href="/gredi/nightViews">
+            <Link href="/gredi/dayViews">
               <div className="col-lg-6 items theaters">
                 <div className="item">
                   <div className="img">
@@ -29,15 +29,15 @@ export const GrediPage = () => {
                   </div>
                   <div className="cont vis">
                     <h5>
-                      <Link href="/gredi/nightViews">Gece Görünümleri</Link>
+                      <Link href="/gredi/dayViews">Gündüz Görünümleri</Link>
                     </h5>
-                    <span>Architecture</span>
-                    <span>Modern</span>
+                    {/* <span>Architecture</span>
+                    <span>Modern</span> */}
                   </div>
                 </div>
               </div>
             </Link>
-            <Link href="/gredi/dayViews">
+            <Link href="/gredi/nightViews">
               <div className="col-lg-6 items residential interior">
                 <div className="item">
                   <div className="img">
@@ -45,10 +45,10 @@ export const GrediPage = () => {
                   </div>
                   <div className="cont vis">
                     <h5>
-                      <Link href="/gredi/dayViews">Gündüz Görünümleri</Link>
+                      <Link href="/gredi/nightViews">Gece Görünümleri</Link>
                     </h5>
-                    <span>Architecture</span>
-                    <span>Modern</span>
+                    {/* <span>Architecture</span>
+                    <span>Modern</span> */}
                   </div>
                 </div>
               </div>
@@ -63,8 +63,8 @@ export const GrediPage = () => {
                     <h5>
                       <Link href="/gredi/interior">İç Mekan</Link>
                     </h5>
-                    <span>Architecture</span>
-                    <span>Modern</span>
+                    {/* <span>Architecture</span>
+                    <span>Modern</span> */}
                   </div>
                 </div>
               </div>
@@ -79,8 +79,8 @@ export const GrediPage = () => {
                     <h5>
                       <Link href="/gredi/activities">Dış Mekan</Link>
                     </h5>
-                    <span>Architecture</span>
-                    <span>Modern</span>
+                    {/* <span>Architecture</span>
+                    <span>Modern</span> */}
                   </div>
                 </div>
               </div>

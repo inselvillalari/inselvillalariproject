@@ -21,50 +21,56 @@ export const CapellaPage = () => {
                 <h3>Mekanlar</h3>
               </div>
             </div>
-            <Link href="/capella/nightViews">
+            <Link href="/capella/dayViews">
               <div className="col-lg-6 items theaters">
                 <div className="item">
                   <div className="img">
-                    <img src="/assets/img/works/2.jpg" alt="" />
-                  </div>
-                  <div className="cont vis">
-                    <h5>
-                      <Link href="/capella/nightViews">Gece Görünümleri</Link>
-                    </h5>
-                    <span>Architecture</span>
-                    <span>Modern</span>
-                  </div>
-                </div>
-              </div>
-            </Link>
-            <Link href="/capella/dayViews">
-              <div className="col-lg-6 items residential interior">
-                <div className="item">
-                  <div className="img">
-                    <img src="/assets/img/works/1.jpg" alt="" />
+                    <img
+                      alt=""
+                      src="/assets/img/slid/capella/dayViews/1.jpeg"
+                    />
                   </div>
                   <div className="cont vis">
                     <h5>
                       <Link href="/capella/dayViews">Gündüz Görünümleri</Link>
                     </h5>
-                    <span>Architecture</span>
-                    <span>Modern</span>
+                    {/* <span>Architecture</span>
+                    <span>Modern</span> */}
                   </div>
                 </div>
               </div>
             </Link>
-            <Link href="/capella/interior">
-              <div className="col-lg-6 items interior">
+            <Link href="/capella/nightViews">
+              <div className="col-lg-6 items residential interior">
                 <div className="item">
                   <div className="img">
-                    <img src="/assets/img/works/5.jpg" alt="" />
+                    <img
+                      alt=""
+                      src="/assets/img/slid/capella/nightViews/1.jpeg"
+                    />
                   </div>
                   <div className="cont vis">
                     <h5>
-                      <Link href="/capella/interior">İç Mekan</Link>
+                      <Link href="/capella/nightViews">Gece Görünümleri</Link>
                     </h5>
-                    <span>Architecture</span>
-                    <span>Modern</span>
+                    {/* <span>Architecture</span>
+                    <span>Modern</span> */}
+                  </div>
+                </div>
+              </div>
+            </Link>
+            <Link href="/capella/insideViews">
+              <div className="col-lg-6 items interior">
+                <div className="item">
+                  <div className="img">
+                    <img alt="" src="/assets/img/slid/capella/indoor/2.jpeg" />
+                  </div>
+                  <div className="cont vis">
+                    <h5>
+                      <Link href="/capella/insideViews">İç Mekan</Link>
+                    </h5>
+                    {/* <span>Architecture</span>
+                    <span>Modern</span> */}
                   </div>
                 </div>
               </div>
@@ -73,14 +79,17 @@ export const CapellaPage = () => {
               <div className="col-lg-6 items residential">
                 <div className="item">
                   <div className="img">
-                    <img src="/assets/img/works/3.jpg" alt="" />
+                    <img
+                      alt=""
+                      src="/assets/img/slid/capella/activities/2.jpeg"
+                    />
                   </div>
                   <div className="cont vis">
                     <h5>
-                      <Link href="/capella/activities">Dış Mekan</Link>
+                      <Link href="/capella/activities">Aktiviteler</Link>
                     </h5>
-                    <span>Architecture</span>
-                    <span>Modern</span>
+                    {/* <span>Architecture</span>
+                    <span>Modern</span> */}
                   </div>
                 </div>
               </div>

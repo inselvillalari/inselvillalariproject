@@ -2,23 +2,20 @@
 import React from "react";
 import MainLayout from "../../../layouts/main";
 import PageHeader from "../../../components/Page-header";
-import ProjectIntro from "../../../components/Project-Intro";
-import NextProject from "../../../components/Next-Project";
+import ProjectIntro from "./ProjectIntro";
 import ProjectVideo from "../../../components/Project-Video";
 
-const AgenaDayViews = () => {
-
+const GrediDayViews = () => {
   React.useEffect(() => {
     document.querySelector("body").classList.add("index3");
   }, []);
   return (
     <MainLayout>
       <PageHeader
-        title="Luxury Furniture"
+        title="VİLLA GREDİ"
         fullPath={[
-          { id: 1, name: "home", url: "/" },
-          { id: 2, name: "portfolio", url: "/work1" },
-          { id: 3, name: "project details", url: "/project-details" },
+          { id: 1, name: "Anasayfa", url: "/" },
+          { id: 2, name: "İletişim", url: "/contact" },
         ]}
         image="/assets/img/portfolio/project1/bg.jpg"
       />
@@ -54,10 +51,8 @@ const AgenaDayViews = () => {
           </a>
         </div>
       </section>
-
-      <NextProject />
     </MainLayout>
   );
 };
 
-export default AgenaDayViews;
+export default GrediDayViews;

@@ -7,7 +7,7 @@ const Footer = ({ classText }) => {
     <footer className={`${classText ? classText : ""}`}>
       <div className="container">
         <div className="row">
-          <div className="col-lg-4">
+          <div className="col-lg-6">
             <div className="item md-mb50">
               <div className="title">
                 <h5>Bize Ulaşın</h5>
@@ -37,7 +37,7 @@ const Footer = ({ classText }) => {
               </ul>
             </div>
           </div>
-          <div className="col-lg-4">
+          {/* <div className="col-lg-4">
             <div className="item md-mb50">
               <div className="title">
                 <h5>Recent News</h5>
@@ -92,11 +92,11 @@ const Footer = ({ classText }) => {
                 </li>
               </ul>
             </div>
-          </div>
-          <div className="col-lg-4">
+          </div> */}
+          <div className="col-lg-6">
             <div className="item">
               <div className="logo">
-                <img src="/assets/img/logo-light.png" alt="" />
+                {/* <img src="/assets/img/logo-light.png" alt="" /> */}
               </div>
               <div className="social">
                 <Link
