@@ -24,16 +24,16 @@ const CapellaDayViews = () => {
         <div className="justified-gallery">
           <div className="row">
             <a href="#" className="col-lg-4 col-xl-3 col-md-12">
-              <img alt="" src="/assets/img/portfolio/project1/1.jpg" />
-            </a>
-            <a href="#" className="col-lg-4 col-xl-3 col-md-6">
               <img alt="" src="/assets/img/slid/capella/dayViews/2.jpg" />
             </a>
             <a href="#" className="col-lg-4 col-xl-3 col-md-6">
-              <img alt="" src="/assets/img/portfolio/project1/6.jpg" />
+              <img alt="" src="/assets/img/slid/capella/dayViews/3.jpeg" />
+            </a>
+            <a href="#" className="col-lg-4 col-xl-3 col-md-6">
+              <img alt="" src="/assets/img/slid/capella/dayViews/4.jpg" />
             </a>
             <a href="#" className="col-lg-4 col-xl-3 col-md-12">
-              <img alt="" src="/assets/img/slid/capella/dayViews/3.jpeg" />
+              <img alt="" src="/assets/img/slid/capella/dayViews/5.jpeg" />
             </a>
           </div>
         </div>
@@ -44,10 +44,10 @@ const CapellaDayViews = () => {
       <section className="projdtal">
         <div className="justified-gallery">
           <a href="#" className="col-lg-4 col-xl-3 col-md-6">
-            <img alt="" src="/assets/img/slid/capella/dayViews/4.jpg" />
+            <img alt="" src="/assets/img/slid/capella/dayViews/6.jpeg" />
           </a>
           <a href="#" className="col-lg-4 col-xl-3 col-md-6">
-            <img alt="" src="/assets/img/portfolio/project1/9.jpg" />
+            <img alt="" src="/assets/img/slid/capella/dayViews/7.jpeg" />
           </a>
         </div>
       </section>

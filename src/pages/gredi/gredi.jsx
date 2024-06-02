@@ -25,7 +25,7 @@ export const GrediPage = () => {
               <div className="col-lg-6 items theaters">
                 <div className="item">
                   <div className="img">
-                    <img src="/assets/img/works/2.jpg" alt="" />
+                    <img alt="" src="/assets/img/slid/gredi/dayViews/1.jpeg" />
                   </div>
                   <div className="cont vis">
                     <h5>
@@ -41,7 +41,10 @@ export const GrediPage = () => {
               <div className="col-lg-6 items residential interior">
                 <div className="item">
                   <div className="img">
-                    <img src="/assets/img/works/1.jpg" alt="" />
+                    <img
+                      alt=""
+                      src="/assets/img/slid/gredi/nightViews/1.jpeg"
+                    />
                   </div>
                   <div className="cont vis">
                     <h5>
@@ -53,15 +56,15 @@ export const GrediPage = () => {
                 </div>
               </div>
             </Link>
-            <Link href="/gredi/interior">
+            <Link href="/gredi/insideViews">
               <div className="col-lg-6 items interior">
                 <div className="item">
                   <div className="img">
-                    <img src="/assets/img/works/5.jpg" alt="" />
+                    <img alt="" src="/assets/img/slid/gredi/indoor/2.jpeg" />
                   </div>
                   <div className="cont vis">
                     <h5>
-                      <Link href="/gredi/interior">İç Mekan</Link>
+                      <Link href="/gredi/insideViews">İç Mekan</Link>
                     </h5>
                     {/* <span>Architecture</span>
                     <span>Modern</span> */}
@@ -73,11 +76,14 @@ export const GrediPage = () => {
               <div className="col-lg-6 items residential">
                 <div className="item">
                   <div className="img">
-                    <img src="/assets/img/works/3.jpg" alt="" />
+                    <img
+                      alt=""
+                      src="/assets/img/slid/gredi/activities/2.jpeg"
+                    />
                   </div>
                   <div className="cont vis">
                     <h5>
-                      <Link href="/gredi/activities">Dış Mekan</Link>
+                      <Link href="/gredi/activities">Aktiviteler</Link>
                     </h5>
                     {/* <span>Architecture</span>
                     <span>Modern</span> */}

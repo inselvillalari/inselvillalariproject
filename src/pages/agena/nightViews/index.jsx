@@ -2,7 +2,6 @@
 import React from "react";
 import MainLayout from "../../layout/MainLayout";
 import PageHeader from "../../../components/Page-header";
-import ProjectIntro from "../../../components/Project-Intro";
 import ProjectIntro from "./ProjectIntro";
 import ProjectVideo from "../../../components/Project-Video";
 
@@ -25,16 +24,16 @@ const AgenaNightViews = () => {
         <div className="justified-gallery">
           <div className="row">
             <a href="#" className="col-lg-4 col-xl-3 col-md-12">
-              <img alt="" src="/assets/img/portfolio/project1/1.jpg" />
+              <img alt="" src="/assets/img/slid/agena/nightViews/2.jpeg" />
             </a>
             <a href="#" className="col-lg-4 col-xl-3 col-md-6">
-              <img alt="" src="/assets/img/portfolio/project1/2.jpg" />
+              <img alt="" src="/assets/img/slid/agena/nightViews/3.jpeg" />
             </a>
             <a href="#" className="col-lg-4 col-xl-3 col-md-6">
-              <img alt="" src="/assets/img/portfolio/project1/6.jpg" />
+              <img alt="" src="/assets/img/slid/agena/nightViews/4.jpeg" />
             </a>
             <a href="#" className="col-lg-4 col-xl-3 col-md-12">
-              <img alt="" src="/assets/img/portfolio/project1/3.jpg" />
+              <img alt="" src="/assets/img/slid/agena/nightViews/5.jpeg" />
             </a>
           </div>
         </div>
@@ -45,10 +44,10 @@ const AgenaNightViews = () => {
       <section className="projdtal">
         <div className="justified-gallery">
           <a href="#" className="col-lg-4 col-xl-3 col-md-6">
-            <img alt="" src="/assets/img/portfolio/project1/8.jpg" />
+            <img alt="" src="/assets/img/slid/agena/nightViews/6.jpeg" />
           </a>
           <a href="#" className="col-lg-4 col-xl-3 col-md-6">
-            <img alt="" src="/assets/img/portfolio/project1/9.jpg" />
+            <img alt="" src="/assets/img/slid/agena/nightViews/7.jpeg" />
           </a>
         </div>
       </section>

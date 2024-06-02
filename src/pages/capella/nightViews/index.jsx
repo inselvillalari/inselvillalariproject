@@ -27,13 +27,13 @@ const CapellaNightViews = () => {
               <img alt="" src="/assets/img/slid/capella/nightViews/2.jpeg" />
             </a>
             <a href="#" className="col-lg-4 col-xl-3 col-md-6">
-              <img alt="" src="/assets/img/portfolio/project1/2.jpg" />
-            </a>
-            <a href="#" className="col-lg-4 col-xl-3 col-md-6">
               <img alt="" src="/assets/img/slid/capella/nightViews/3.jpeg" />
             </a>
+            <a href="#" className="col-lg-4 col-xl-3 col-md-6">
+              <img alt="" src="/assets/img/slid/capella/nightViews/4.jpeg" />
+            </a>
             <a href="#" className="col-lg-4 col-xl-3 col-md-12">
-              <img alt="" src="/assets/img/portfolio/project1/3.jpg" />
+              <img alt="" src="/assets/img/slid/capella/nightViews/5.jpeg" />
             </a>
           </div>
         </div>
@@ -44,10 +44,10 @@ const CapellaNightViews = () => {
       <section className="projdtal">
         <div className="justified-gallery">
           <a href="#" className="col-lg-4 col-xl-3 col-md-6">
-            <img alt="" src="/assets/img/portfolio/project1/8.jpg" />
+            <img alt="" src="/assets/img/slid/capella/nightViews/6.jpeg" />
           </a>
           <a href="#" className="col-lg-4 col-xl-3 col-md-6">
-            <img alt="" src="/assets/img/portfolio/project1/9.jpg" />
+            <img alt="" src="/assets/img/slid/capella/nightViews/7.jpeg" />
           </a>
         </div>
       </section>

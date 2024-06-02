@@ -25,7 +25,7 @@ export const AgenaPage = () => {
               <div className="col-lg-6 items theaters">
                 <div className="item">
                   <div className="img">
-                    <img src="/assets/img/works/2.jpg" alt="" />
+                    <img alt="" src="/assets/img/slid/agena/dayViews/1.jpeg" />
                   </div>
                   <div className="cont vis">
                     <h5>
@@ -41,7 +41,10 @@ export const AgenaPage = () => {
               <div className="col-lg-6 items residential interior">
                 <div className="item">
                   <div className="img">
-                    <img src="/assets/img/works/1.jpg" alt="" />
+                    <img
+                      alt=""
+                      src="/assets/img/slid/agena/nightViews/1.jpeg"
+                    />
                   </div>
                   <div className="cont vis">
                     <h5>
@@ -53,15 +56,15 @@ export const AgenaPage = () => {
                 </div>
               </div>
             </Link>
-            <Link href="/agena/interior">
+            <Link href="/agena/insideViews">
               <div className="col-lg-6 items interior">
                 <div className="item">
                   <div className="img">
-                    <img src="/assets/img/works/5.jpg" alt="" />
+                    <img alt="" src="/assets/img/slid/agena/indoor/2.jpeg" />
                   </div>
                   <div className="cont vis">
                     <h5>
-                      <Link href="/agena/interior">İç Mekan</Link>
+                      <Link href="/agena/insideViews">İç Mekan</Link>
                     </h5>
                     {/* <span>Architecture</span>
                     <span>Modern</span> */}
@@ -73,7 +76,10 @@ export const AgenaPage = () => {
               <div className="col-lg-6 items residential">
                 <div className="item">
                   <div className="img">
-                    <img src="/assets/img/works/3.jpg" alt="" />
+                    <img
+                      alt=""
+                      src="/assets/img/slid/agena/activities/2.jpeg"
+                    />
                   </div>
                   <div className="cont vis">
                     <h5>
