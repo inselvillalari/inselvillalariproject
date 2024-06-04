@@ -1,7 +1,7 @@
 import React from "react";
 import introData from "./index.json";
 import { Swiper, SwiperSlide } from "swiper/react";
-import Split from "../Split";
+import Split from "../split";
 
 import SwiperCore, { Navigation, Pagination, Parallax } from "swiper";
 
