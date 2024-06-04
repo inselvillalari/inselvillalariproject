@@ -5,7 +5,7 @@ import initIsotope from "../../common/initIsotope";
 import GrediFeatures from "./features";
 import GrediSkills from "./skills";
 
-export const GrediPage = () => {
+const GrediPage = () => {
   React.useEffect(() => {
     setTimeout(() => {
       if (window.Isotope) initIsotope();
@@ -99,3 +99,5 @@ export const GrediPage = () => {
     </>
   );
 };
+
+export default GrediPage;
