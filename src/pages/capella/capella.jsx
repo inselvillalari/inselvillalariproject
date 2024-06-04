@@ -5,7 +5,7 @@ import initIsotope from "../../common/initIsotope";
 import CapellaFeatures from "./features";
 import CapellaSkills from "./skills";
 
-export const CapellaPage = () => {
+const CapellaPage = () => {
   React.useEffect(() => {
     setTimeout(() => {
       if (window.Isotope) initIsotope();
@@ -102,3 +102,5 @@ export const CapellaPage = () => {
     </>
   );
 };
+
+export default CapellaPage;
