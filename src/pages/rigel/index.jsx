@@ -2,9 +2,9 @@
 import React from "react";
 import WorkHeader from "../../components/Work-header";
 import MainLayout from "../layout/MainLayout";
-import { RigelPage } from "./rigel";
+import RigelPage  from "./Rigel";
 
-const Agena = () => {
+const Rigel = () => {
   React.useEffect(() => {
     document.querySelector("body").classList.add("index3");
   }, []);
@@ -25,4 +25,4 @@ const Agena = () => {
   );
 };
 
-export default Agena;
+export default Rigel;

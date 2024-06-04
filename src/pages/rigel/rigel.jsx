@@ -5,7 +5,7 @@ import initIsotope from "../../common/initIsotope";
 import RigelFeatures from "./features";
 import RigelSkills from "./skills";
 
-export const RigelPage = () => {
+ const RigelPage = () => {
   React.useEffect(() => {
     setTimeout(() => {
       if (window.Isotope) initIsotope();
@@ -99,3 +99,5 @@ export const RigelPage = () => {
     </>
   );
 };
+
+export default RigelPage;
