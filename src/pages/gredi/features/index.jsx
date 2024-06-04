@@ -56,22 +56,12 @@ const GrediFeatures = () => {
               </div>
               <div className="col-4 mt-4">
                 <div className="item">
-                  <Wifi title="İnternet Bağlantısı" />
-                </div>
-              </div>
-              <div className="col-4 mt-4">
-                <div className="item">
                   <PingPong title="Masa Tenisi" />
                 </div>
               </div>
               <div className="col-4 mt-4">
                 <div className="item">
                   <CarPark title="Otopark" />
-                </div>
-              </div>
-              <div className="col-4 mt-4">
-                <div className="item">
-                  <Guard title="Güvenlik Görevlisi" />
                 </div>
               </div>
               <div className="col-4 mt-4">
@@ -108,6 +98,9 @@ const GrediFeatures = () => {
                   <div className="item">
                     <Check title="Smart TV - Uydu" />
                   </div>
+                  <div className="item ">
+                    <Check title="Güvenlik Görevlisi" />
+                  </div>
                   <div className="item">
                     <Check title="Klima" />
                   </div>
@@ -135,6 +128,9 @@ const GrediFeatures = () => {
                     flexDirection: "column",
                   }}
                 >
+                  <div className="item ">
+                    <Check title="İnternet Bağlantısı" />
+                  </div>
                   <div className="item ">
                     <Check title="Havuz - Bahçe Bakımı" />
                   </div>

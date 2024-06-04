@@ -3782,6 +3782,9 @@ footer .item .copy-right p a {
 /* ====================== [ End Footer ] ====================== */
 /* ====================== [ Start Responsive ] ====================== */
 @media screen and (max-width: 991px) {
+  .md-ml0 {
+    margin-left: 0px !important;
+ }
   .md-mb10 {
     margin-bottom: 10px;
  }

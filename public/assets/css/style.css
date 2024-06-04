@@ -2310,7 +2310,6 @@ body {
   padding: 0 15px; }
 
 .works .row {
-  margin-left: -50px;
   margin-right: -50px; }
 
 .works .items {
@@ -4105,6 +4104,9 @@ footer {
 /* ====================== [ End Footer ] ====================== */
 /* ====================== [ Start Responsive ] ====================== */
 @media screen and (max-width: 991px) {
+  .md-ml0 {
+    margin-left: 0px !important;
+ }
   .md-mb10 {
     margin-bottom: 10px; }
   .md-mb20 {

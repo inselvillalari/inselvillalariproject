@@ -118,7 +118,7 @@ const IntroWithVertical = () => {
                                 {slide.content.second}
                               </p>
                             )}
-                            <Link href="/agena">
+                            <Link href={slide?.pageLink}>
                               <a className="btn-curve btn-color mt-30">
                                 <span>Detaya Git</span>
                               </a>

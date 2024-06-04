@@ -75,6 +75,11 @@ const Navbar = ({ navbarRef, logoRef, logoClass }) => {
                   <a className="nav-link">Rigel</a>
                 </Link>
               </li>
+              <li className="nav-item md-ml0" style={{marginLeft:"60px"}}>
+                <Link href="/">
+                  <a className="nav-link">Anasayfa</a>
+                </Link>
+              </li>
               <li className="nav-item">
                 <Link href="/contact">
                   <a className="nav-link">İletişim</a>
