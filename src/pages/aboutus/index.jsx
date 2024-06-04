@@ -15,6 +15,7 @@ const AboutUs = () => {
             >
               <h6 className="sub-title">Konumumuz</h6>
               <h2 className="mb-20 playfont">
+              
                 {aboutUsData.title.first} <br /> {aboutUsData.title.second}
               </h2>
               <p>{aboutUsData.content}</p>
