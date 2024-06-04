@@ -15,6 +15,11 @@
     "static/development/_middlewareManifest.js"
   ],
   "pages": {
+    "/": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/index.js"
+    ],
     "/_app": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
@@ -25,30 +30,10 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/agena/insideViews": [
+    "/agena": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/agena/insideViews.js"
-    ],
-    "/capella": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/capella.js"
-    ],
-    "/capella/nightViews": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/capella/nightViews.js"
-    ],
-    "/gredi": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/gredi.js"
-    ],
-    "/gredi/activities": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/gredi/activities.js"
+      "static/chunks/pages/agena.js"
     ]
   },
   "ampFirstPages": []
