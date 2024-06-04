@@ -30,10 +30,10 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/agena": [
+    "/capella": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/agena.js"
+      "static/chunks/pages/capella.js"
     ],
     "/gredi": [
       "static/chunks/webpack.js",

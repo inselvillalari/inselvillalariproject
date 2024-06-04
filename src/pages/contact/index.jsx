@@ -1,5 +1,5 @@
 import React from "react";
-import PageHeader from "./pageHeader";
+import PageHeader from "./PageHeader";
 import MainLayout from "../main";
 import ContactInfo from "./contactInfo";
 import ContactWithMap from "./contactWithMap";
