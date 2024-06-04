@@ -5,7 +5,7 @@ import initIsotope from "../../common/initIsotope";
 import AgenaFeatures from "./features";
 import AgenaSkills from "./skills";
 
-export const AgenaPage = () => {
+const AgenaPage = () => {
   React.useEffect(() => {
     setTimeout(() => {
       if (window.Isotope) initIsotope();
@@ -99,3 +99,5 @@ export const AgenaPage = () => {
     </>
   );
 };
+
+export default AgenaPage;

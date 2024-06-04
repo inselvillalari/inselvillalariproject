@@ -2,7 +2,7 @@
 import React from "react";
 import WorkHeader from "../../components/Work-header";
 import MainLayout from "../layout/MainLayout";
-import { AgenaPage } from "./agena";
+import AgenaPage from "./agena";
 
 const Agena = () => {
   React.useEffect(() => {
