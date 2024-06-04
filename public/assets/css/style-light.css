@@ -1997,11 +1997,11 @@ body {
   z-index: 4;
 }
 .services .feat-top {
-  padding: 100px 80px;
   position: relative;
   width: 100%;
   margin-top: -40px;
   z-index: 3;
+  height: 100px;
 }
 .services .feat-top .notfull {
   position: absolute;

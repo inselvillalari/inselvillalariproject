@@ -13,9 +13,7 @@ export const AgenaPage = () => {
   }, []);
   return (
     <>
-      <section
-        className="works filter-img section-padding"
-      >
+      <section className="works filter-img section-padding">
         <div className="container">
           <div className="row gallery">
             <div className="col-lg-6 items mt-0 interior theaters residential">

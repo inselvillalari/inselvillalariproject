@@ -17,36 +17,48 @@ const RigelInsideViews = () => {
           { id: 1, name: "Anasayfa", url: "/" },
           { id: 2, name: "İletişim", url: "/contact" },
         ]}
-        image="/assets/img/portfolio/project1/bg.jpg"
+        image="/assets/img/slid/villasCoverImg/rigel.jpg"
       />
       <ProjectIntro />
       <section className="projdtal">
         <div className="justified-gallery">
           <div className="row">
-            <a href="#" className="col-lg-4 col-xl-3 col-md-12">
+            <a
+              style={{ cursor: "none" }}
+              className="col-lg-4 col-xl-3 col-md-12"
+            >
               <img alt="" src="/assets/img/slid/rigel/indoor/1.jpeg" />
             </a>
-            <a href="#" className="col-lg-4 col-xl-3 col-md-6">
+            <a
+              style={{ cursor: "none" }}
+              className="col-lg-4 col-xl-3 col-md-6"
+            >
               <img alt="" src="/assets/img/slid/rigel/indoor/3.jpeg" />
             </a>
-            <a href="#" className="col-lg-4 col-xl-3 col-md-6">
+            <a
+              style={{ cursor: "none" }}
+              className="col-lg-4 col-xl-3 col-md-6"
+            >
               <img alt="" src="/assets/img/slid/rigel/indoor/4.jpeg" />
             </a>
-            <a href="#" className="col-lg-4 col-xl-3 col-md-12">
+            <a
+              style={{ cursor: "none" }}
+              className="col-lg-4 col-xl-3 col-md-12"
+            >
               <img alt="" src="/assets/img/slid/rigel/indoor/5.jpeg" />
             </a>
           </div>
         </div>
       </section>
 
-      <ProjectVideo />
+      {/* <ProjectVideo /> */}
 
       <section className="projdtal">
         <div className="justified-gallery">
-          <a href="#" className="col-lg-4 col-xl-3 col-md-6">
+          <a style={{ cursor: "none" }} className="col-lg-4 col-xl-3 col-md-6">
             <img alt="" src="/assets/img/slid/rigel/indoor/6.jpeg" />
           </a>
-          <a href="#" className="col-lg-4 col-xl-3 col-md-6">
+          <a style={{ cursor: "none" }} className="col-lg-4 col-xl-3 col-md-6">
             <img alt="" src="/assets/img/slid/rigel/indoor/7.jpeg" />
           </a>
         </div>

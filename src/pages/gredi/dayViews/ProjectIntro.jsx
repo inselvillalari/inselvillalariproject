@@ -8,7 +8,7 @@ const ProjectIntro = () => {
         <div className="row">
           <div className="col-lg-3 col-md-4">
             <div className="htit">
-              <h4>Gece Görünümleri</h4>
+              <h4>Gündüz Görünümleri</h4>
             </div>
           </div>
           <div className="col-lg-8 offset-lg-1 col-md-8 mb-30">
