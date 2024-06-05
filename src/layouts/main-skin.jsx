@@ -19,10 +19,10 @@ const MainSkin = ({ children }) => {
     window.addEventListener("scroll", () => {
       if (window.pageYOffset > 300) {
         navbar.classList.add("nav-scroll");
-        logo.setAttribute("src", "/assets/img/logo-light.png");
+        // logo.setAttribute("src", "/assets/img/logo-light.png");
       } else {
         navbar.classList.remove("nav-scroll");
-        logo.setAttribute("src", "/assets/img/logo-light.png");
+        // logo.setAttribute("src", "/assets/img/logo-light.png");
       }
     });
   }, [navbarRef]);
