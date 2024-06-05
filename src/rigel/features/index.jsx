@@ -31,7 +31,7 @@ const RigelFeatures = () => {
               </div>
               <div className="col-4">
                 <div className="item">
-                  <PrivatePool title="Özel Havuz" />
+                  <PrivatePool title="Havuz" />
                 </div>
               </div>
               <div className="col-4">
