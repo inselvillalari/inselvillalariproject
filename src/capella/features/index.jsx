@@ -31,7 +31,7 @@ const CapellaFeatures = () => {
               </div>
               <div className="col-4">
                 <div className="item">
-                  <PrivatePool title="Özel Havuzlu" />
+                  <PrivatePool title="Özel Havuz" />
                 </div>
               </div>
               <div className="col-4">
@@ -46,7 +46,7 @@ const CapellaFeatures = () => {
               </div>
               <div className="col-4 mt-4">
                 <div className="item">
-                  <BBQ title="BBQ - Mangal" />
+                  <BBQ title="BBQ" />
                 </div>
               </div>
               <div className="col-4 mt-4">
@@ -54,27 +54,27 @@ const CapellaFeatures = () => {
                   <Jacuzzy title="Jakuzi" />
                 </div>
               </div>
-              <div className="col-4 mt-4">
+              {/* <div className="col-4 mt-4">
                 <div className="item">
                   <PingPong title="Masa Tenisi" />
                 </div>
-              </div>
-              <div className="col-4 mt-4">
+              </div> */}
+              {/* <div className="col-4 mt-4">
                 <div className="item">
                   <CarPark title="Otopark" />
                 </div>
-              </div>
-              <div className="col-4 mt-4">
+              </div> */}
+              {/* <div className="col-4 mt-4">
                 <div className="item">
                   <PoolHeating title="Havuz Isıtma" />
                 </div>
-              </div>
-              <div className="col-4 mt-4">
+              </div> */}
+              {/* <div className="col-4 mt-4">
                 <div className="item">
                   <Terrace title="Teras" />
                 </div>
-              </div>
-              <div className="col-4 mt-4">
+              </div> */}
+              {/* <div className="col-4 mt-4">
                 <div className="item">
                   <BabyBed title="Bebek Yatağı" />
                 </div>
@@ -83,7 +83,7 @@ const CapellaFeatures = () => {
                 <div className="item">
                   <IndoorPool title="Kapalı Havuz" />
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
           <div className="col-sm-12 col-md-6">
@@ -96,6 +96,9 @@ const CapellaFeatures = () => {
                   }}
                 >
                   <div className="item">
+                    <Check title="Otopark" />
+                  </div>
+                  <div className="item">
                     <Check title="Smart TV - Uydu" />
                   </div>
                   <div className="item ">
@@ -104,8 +107,14 @@ const CapellaFeatures = () => {
                   <div className="item">
                     <Check title="Klima" />
                   </div>
+                  <div className="item">
+                    <Check title="Masa Tenisi" />
+                  </div>
                   <div className="item ">
                     <Check title="Full Mobilyalı" />
+                  </div>
+                  <div className="item">
+                    <Check title="Havuz Isıtma" />
                   </div>
                   <div className="item ">
                     <Check title="Beyaz Eşyalı" />
@@ -130,6 +139,15 @@ const CapellaFeatures = () => {
                 >
                   <div className="item ">
                     <Check title="İnternet Bağlantısı" />
+                  </div>
+                  <div className="item ">
+                    <Check title="Bebek Yatağı" />
+                  </div>
+                  <div className="item ">
+                    <Check title="Kapalı Havuz" />
+                  </div>
+                  <div className="item ">
+                    <Check title="Teras" />
                   </div>
                   <div className="item ">
                     <Check title="Havuz - Bahçe Bakımı" />
