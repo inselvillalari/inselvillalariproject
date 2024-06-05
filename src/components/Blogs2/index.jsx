@@ -28,11 +28,7 @@ const Blogs2 = () => {
               >
                 <div className="post-img">
                   <div className="img">
-                    <img
-                      src={blog.image}
-                      alt=""
-                      style={{ width: "65% !important" }}
-                    />
+                    <img style={{ width: "65%" }} src={blog.image} alt="" />
                   </div>
                 </div>
                 <div className="cont">
