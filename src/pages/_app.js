@@ -6,6 +6,7 @@ import "../styles/globals.css";
 import Cursor from "../components/Cursor";
 import ScrollToTop from "../components/scrollToTop";
 
+
 function MyApp({ Component, pageProps }) {
   return (
     <>
