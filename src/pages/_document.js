@@ -1,5 +1,6 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
 
+import Insights from './example-component'
 class MyDocument extends Document {
   static async getInitialProps(ctx) {
     const initialProps = await Document.getInitialProps(ctx);
@@ -49,6 +50,7 @@ class MyDocument extends Document {
         </Head>
 
         <body>
+          <Insights />
           <Main />
           <NextScript />
         </body>
