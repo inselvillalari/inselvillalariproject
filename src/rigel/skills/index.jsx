@@ -9,7 +9,6 @@ const RigelSkills = () => {
       className="skills-sec section-padding pt-100"
       style={{ backgroundColor: "#181818" }}
     >
-      {" "}
       <div className="container">
         <div className="row">
           <div className="col-lg-6 valign  md-mb50">
@@ -19,7 +18,7 @@ const RigelSkills = () => {
                 <div className="skill-progress">
                   <div
                     className="progres custom-font"
-                    data-value="50%"
+                    data-value="65%"
                     data-name="1 km"
                   ></div>
                 </div>
@@ -29,7 +28,7 @@ const RigelSkills = () => {
                 <div className="skill-progress">
                   <div
                     className="progres custom-font"
-                    data-value="33%"
+                    data-value="45%"
                     data-name="300 m"
                   ></div>
                 </div>
@@ -39,7 +38,7 @@ const RigelSkills = () => {
                 <div className="skill-progress">
                   <div
                     className="progres custom-font"
-                    data-value="45%"
+                    data-value="55%"
                     data-name="700 m"
                   ></div>
                 </div>
@@ -63,7 +62,7 @@ const RigelSkills = () => {
                 <div className="skill-progress">
                   <div
                     className="progres custom-font"
-                    data-value="50%"
+                    data-value="65%"
                     data-name="1 km"
                   ></div>
                 </div>
@@ -73,7 +72,7 @@ const RigelSkills = () => {
                 <div className="skill-progress">
                   <div
                     className="progres custom-font"
-                    data-value="50%"
+                    data-value="65%"
                     data-name="1 km"
                   ></div>
                 </div>
@@ -83,7 +82,7 @@ const RigelSkills = () => {
                 <div className="skill-progress">
                   <div
                     className="progres custom-font"
-                    data-value="33%"
+                    data-value="45%"
                     data-name="300 m"
                   ></div>
                 </div>

@@ -18,7 +18,7 @@ const GrediSkills = () => {
                 <div className="skill-progress">
                   <div
                     className="progres custom-font"
-                    data-value="50%"
+                    data-value="65%"
                     data-name="1 km"
                   ></div>
                 </div>
@@ -28,7 +28,7 @@ const GrediSkills = () => {
                 <div className="skill-progress">
                   <div
                     className="progres custom-font"
-                    data-value="33%"
+                    data-value="45%"
                     data-name="300 m"
                   ></div>
                 </div>
@@ -38,7 +38,7 @@ const GrediSkills = () => {
                 <div className="skill-progress">
                   <div
                     className="progres custom-font"
-                    data-value="45%"
+                    data-value="55%"
                     data-name="700 m"
                   ></div>
                 </div>
@@ -62,7 +62,7 @@ const GrediSkills = () => {
                 <div className="skill-progress">
                   <div
                     className="progres custom-font"
-                    data-value="50%"
+                    data-value="65%"
                     data-name="1 km"
                   ></div>
                 </div>
@@ -72,7 +72,7 @@ const GrediSkills = () => {
                 <div className="skill-progress">
                   <div
                     className="progres custom-font"
-                    data-value="50%"
+                    data-value="65%"
                     data-name="1 km"
                   ></div>
                 </div>
@@ -82,7 +82,7 @@ const GrediSkills = () => {
                 <div className="skill-progress">
                   <div
                     className="progres custom-font"
-                    data-value="33%"
+                    data-value="45%"
                     data-name="300 m"
                   ></div>
                 </div>
