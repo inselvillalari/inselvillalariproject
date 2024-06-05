@@ -13,6 +13,7 @@ import removeSlashFromPagination from "../../common/removeSlashFromPagination";
 SwiperCore.use([Navigation, Pagination, Parallax]);
 
 const IntroWithVertical = () => {
+  const widthRef = React.useRef(null);
   const [load, setLoad] = React.useState(true);
   React.useEffect(() => {
     setTimeout(() => {
@@ -33,6 +34,7 @@ const IntroWithVertical = () => {
         <div
           id="js-cta-slider"
           className="cta__slider-wrapper nofull swiper-container"
+          ref={widthRef}
         >
           {!load ? (
             <Swiper
@@ -48,10 +50,13 @@ const IntroWithVertical = () => {
                 el: paginationRef.current,
               }}
               slidesPerView={1}
-              direction="vertical"
+              direction="horizontal"
               loop={true}
               grabCursor={true}
               watchSlidesProgress={true}
+              breakpoints={{
+                450: { direction: "vertical" },
+              }}
               onBeforeInit={(swiper) => {
                 swiper.params.navigation.prevEl = navigationPrevRef.current;
                 swiper.params.navigation.nextEl = navigationNextRef.current;
@@ -138,14 +143,22 @@ const IntroWithVertical = () => {
               ref={navigationNextRef}
               className="cta__slider-arrow cta__slider-arrow--next"
             >
-              <i className="fas fa-chevron-up"></i>
+              {widthRef?.current?.offsetWidth > 450 ? (
+                <i className="fas fa-chevron-up"></i>
+              ) : (
+                <i className="fas fa-chevron-right"></i>
+              )}
             </i>
             <i
               id="js-cta-slider-previous"
               ref={navigationPrevRef}
               className="cta__slider-arrow cta__slider-arrow--previous"
             >
-              <i className="fas fa-chevron-down"></i>
+            {widthRef?.current?.offsetWidth > 450 ? (
+                <i className="fas fa-chevron-down"></i>
+              ) : (
+                <i className="fas fa-chevron-left"></i>
+              )}
             </i>
           </div>
         </div>
