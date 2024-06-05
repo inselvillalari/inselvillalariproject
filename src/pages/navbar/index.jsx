@@ -34,7 +34,7 @@ const Navbar = ({ navbarRef, logoRef, logoClass }) => {
         <div className="container">
           <Link href="/">
             <a className={`logo ${logoClass && logoClass}`}>
-              <img src={appData.lightLogo} alt="logo" ref={logoRef} />
+              {/* <img src={appData.lightLogo} alt="logo" ref={logoRef} /> */}
             </a>
           </Link>
 
