@@ -17,7 +17,7 @@ const GrediInsideViews = () => {
           { id: 1, name: "Anasayfa", url: "/" },
           { id: 2, name: "İletişim", url: "/contact" },
         ]}
-        image="/assets/img/slid/villasCoverImg/gredi.jpg"
+        image="/assets/img/slid/villasCoverImg/gredi.jpeg"
       />
       <ProjectIntro />
       <section className="projdtal">

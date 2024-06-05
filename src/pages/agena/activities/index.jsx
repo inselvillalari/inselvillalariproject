@@ -17,7 +17,7 @@ const AgenaActivities = () => {
           { id: 1, name: "Anasayfa", url: "/" },
           { id: 2, name: "İletişim", url: "/contact" },
         ]}
-        image="/assets/img/slid/villasCoverImg/agena.jpg"
+        image="/assets/img/slid/villasCoverImg/agena.jpeg"
       />
       <ProjectIntro />
       <section className="projdtal">

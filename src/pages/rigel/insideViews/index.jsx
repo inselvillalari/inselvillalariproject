@@ -17,7 +17,7 @@ const RigelInsideViews = () => {
           { id: 1, name: "Anasayfa", url: "/" },
           { id: 2, name: "İletişim", url: "/contact" },
         ]}
-        image="/assets/img/slid/villasCoverImg/rigel.jpg"
+        image="/assets/img/slid/villasCoverImg/rigel.jpeg"
       />
       <ProjectIntro />
       <section className="projdtal">

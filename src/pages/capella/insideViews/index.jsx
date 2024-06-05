@@ -17,7 +17,7 @@ const CapellaInsideViews = () => {
           { id: 1, name: "Anasayfa", url: "/" },
           { id: 2, name: "İletişim", url: "/contact" },
         ]}
-        image="/assets/img/slid/villasCoverImg/capella.jpg"
+        image="/assets/img/slid/villasCoverImg/capella.jpeg"
       />
       <ProjectIntro />
       <section className="projdtal">

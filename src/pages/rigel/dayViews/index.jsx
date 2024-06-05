@@ -17,7 +17,7 @@ const RigelDayViews = () => {
           { id: 1, name: "Anasayfa", url: "/" },
           { id: 2, name: "İletişim", url: "/contact" },
         ]}
-        image="/assets/img/slid/villasCoverImg/rigel.jpg"
+        image="/assets/img/slid/villasCoverImg/rigel.jpeg"
       />
       <ProjectIntro />
       <section className="projdtal">
@@ -27,7 +27,7 @@ const RigelDayViews = () => {
               style={{ cursor: "none" }}
               className="col-lg-4 col-xl-3 col-md-12"
             >
-              <img alt="" src="/assets/img/slid/rigel/dayViews/2.jpg" />
+              <img alt="" src="/assets/img/slid/rigel/dayViews/2.jpeg" />
             </a>
             <a
               style={{ cursor: "none" }}
@@ -39,7 +39,7 @@ const RigelDayViews = () => {
               style={{ cursor: "none" }}
               className="col-lg-4 col-xl-3 col-md-6"
             >
-              <img alt="" src="/assets/img/slid/rigel/dayViews/4.jpg" />
+              <img alt="" src="/assets/img/slid/rigel/dayViews/4.jpeg" />
             </a>
             <a
               style={{ cursor: "none" }}
