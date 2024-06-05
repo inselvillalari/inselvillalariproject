@@ -27,7 +27,7 @@ const CapellaDayViews = () => {
               style={{ cursor: "none" }}
               className="col-lg-4 col-xl-3 col-md-12"
             >
-              <img alt="" src="/assets/img/slid/capella/dayViews/2.jpg" />
+              <img alt="" src="/assets/img/slid/capella/dayViews/2.jpeg" />
             </a>
             <a
               style={{ cursor: "none" }}
@@ -39,7 +39,7 @@ const CapellaDayViews = () => {
               style={{ cursor: "none" }}
               className="col-lg-4 col-xl-3 col-md-6"
             >
-              <img alt="" src="/assets/img/slid/capella/dayViews/4.jpg" />
+              <img alt="" src="/assets/img/slid/capella/dayViews/4.jpeg" />
             </a>
             <a
               style={{ cursor: "none" }}

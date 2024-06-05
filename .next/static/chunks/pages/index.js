@@ -1550,7 +1550,7 @@ module.exports = JSON.parse('[{"id":1,"image":"/assets/img/blog/1.jpg","title":"
 /***/ (function(module) {
 
 "use strict";
-module.exports = JSON.parse('{"title":{"first":"Kalkan","second":"Kızıltaş\'ta"},"image1":"/assets/img/slid/aboutUs/1.jpg","image2":"/assets/img/slid/aboutUs/2.jpg","content":"mavi ve yeşili sizlerle buluşturuyoruz. Villalarımız, bütün bir yılın yorgunluğunu üzerinizden atmanız için kusursuz bir şekilde tasarlanmıştır. Siz değerli misafirlerimize \'işte bu\' dedirtecek bir tatil geçirtmek için; kapılarımızı açıyoruz…","exp":"","textList":[{"id":1,"name":"Agena"},{"id":2,"name":"Capella"},{"id":3,"name":"Gredi"},{"id":4,"name":"Rigel"}]}');
+module.exports = JSON.parse('{"title":{"first":"Kalkan","second":"Kızıltaş\'ta"},"image1":"/assets/img/slid/aboutUs/1.jpeg","image2":"/assets/img/slid/aboutUs/2.jpeg","content":"mavi ve yeşili sizlerle buluşturuyoruz. Villalarımız, bütün bir yılın yorgunluğunu üzerinizden atmanız için kusursuz bir şekilde tasarlanmıştır. Siz değerli misafirlerimize \'işte bu\' dedirtecek bir tatil geçirtmek için; kapılarımızı açıyoruz…","exp":"","textList":[{"id":1,"name":"Agena"},{"id":2,"name":"Capella"},{"id":3,"name":"Gredi"},{"id":4,"name":"Rigel"}]}');
 
 /***/ }),
 
@@ -1561,7 +1561,7 @@ module.exports = JSON.parse('{"title":{"first":"Kalkan","second":"Kızıltaş\'t
 /***/ (function(module) {
 
 "use strict";
-module.exports = JSON.parse('[{"id":1,"title":{"first":"","second":"VİLLA AGENA"},"image":"/assets/img/slid/homePage/agenaHomePage.jpg","pageLink":"/agena"},{"id":2,"title":{"first":"","second":"VİLLA CAPELLA"},"image":"/assets/img/slid/homePage/capellaHomePage.jpg","pageLink":"/capella"},{"id":3,"title":{"first":"","second":"VİLLA GREDI"},"image":"/assets/img/slid/homePage/grediHomePage.jpeg","pageLink":"/gredi"},{"id":4,"title":{"first":"","second":"VİLLA RIGEL"},"image":"/assets/img/slid/homePage/rigelHomePage.jpeg","pageLink":"/rigel"}]');
+module.exports = JSON.parse('[{"id":1,"title":{"first":"","second":"VİLLA AGENA"},"image":"/assets/img/slid/homePage/agenaHomePage.jpeg","pageLink":"/agena"},{"id":2,"title":{"first":"","second":"VİLLA CAPELLA"},"image":"/assets/img/slid/homePage/capellaHomePage.jpeg","pageLink":"/capella"},{"id":3,"title":{"first":"","second":"VİLLA GREDI"},"image":"/assets/img/slid/homePage/grediHomePage.jpeg","pageLink":"/gredi"},{"id":4,"title":{"first":"","second":"VİLLA RIGEL"},"image":"/assets/img/slid/homePage/rigelHomePage.jpeg","pageLink":"/rigel"}]');
 
 /***/ }),
 

@@ -2,13 +2,13 @@
   {
     "id": 1,
     "title": { "first": "", "second": "VİLLA AGENA" },
-    "image": "/assets/img/slid/homePage/agenaHomePage.jpg",
+    "image": "/assets/img/slid/homePage/agenaHomePage.jpeg",
     "pageLink": "/agena"
   },
   {
     "id": 2,
     "title": { "first": "", "second": "VİLLA CAPELLA" },
-    "image": "/assets/img/slid/homePage/capellaHomePage.jpg",
+    "image": "/assets/img/slid/homePage/capellaHomePage.jpeg",
     "pageLink": "/capella"
   },
   {
