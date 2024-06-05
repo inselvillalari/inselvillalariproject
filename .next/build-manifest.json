@@ -15,6 +15,11 @@
     "static/development/_middlewareManifest.js"
   ],
   "pages": {
+    "/": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/index.js"
+    ],
     "/_app": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
@@ -25,15 +30,15 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/capella": [
+    "/agena": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/capella.js"
+      "static/chunks/pages/agena.js"
     ],
-    "/gredi": [
+    "/contact": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/gredi.js"
+      "static/chunks/pages/contact.js"
     ]
   },
   "ampFirstPages": []

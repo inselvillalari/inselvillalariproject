@@ -2,7 +2,7 @@
 import React from "react";
 import WorkHeader from "../../components/Work-header";
 import MainLayout from "../layout/MainLayout";
-import  CapellaPage  from "./Capella";
+import CapellaPage from "../../capella/CapellaPage";
 
 const Capella = () => {
   React.useEffect(() => {

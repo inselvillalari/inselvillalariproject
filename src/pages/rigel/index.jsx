@@ -2,7 +2,7 @@
 import React from "react";
 import WorkHeader from "../../components/Work-header";
 import MainLayout from "../layout/MainLayout";
-import RigelPage  from "./Rigel";
+import RigelPage from "../../rigel/RigelPage";
 
 const Rigel = () => {
   React.useEffect(() => {

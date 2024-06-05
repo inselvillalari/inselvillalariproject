@@ -2,7 +2,7 @@
 import React from "react";
 import MainLayout from "../../layout/MainLayout";
 import PageHeader from "../../../components/Page-header";
-import ProjectIntro from "./ProjectIntro";
+import ProjectIntro from "../../../rigel/nightViews/ProjectIntro";
 import ProjectVideo from "../../../components/Project-Video";
 
 const RigelNightViews = () => {

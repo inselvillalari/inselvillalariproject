@@ -1,8 +1,8 @@
 import React from "react";
-import PageHeader from "./PageHeader";
+import PageHeader from "../../contact/PageHeader";
 import MainLayout from "../main";
-import ContactInfo from "./contactInfo";
-import ContactWithMap from "./contactWithMap";
+import ContactInfo from "../../contact/contactInfo";
+import ContactWithMap from "../../contact/contactWithMap";
 
 const Contact = () => {
   React.useEffect(() => {
