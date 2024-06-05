@@ -3202,6 +3202,7 @@ body {
   font-weight: 500;
   letter-spacing: 1px;
   margin-right: 10px;
+  pointer-events: none;
 }
 .blog-grid .item .info a:last-of-type {
   margin-right: 0;

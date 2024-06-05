@@ -1,23 +1,16 @@
 [
   {
     "id": 1,
-    "image": "/assets/img/blog/1.jpg",
-    "title": "In Good Taste: Mark Finlay Architects and Interiors",
+    "image": "/assets/img/slid/random/1.jpeg",
+    "title": "Villa Agena",
     "by": "ALEX SMITH",
-    "date": "Aug 06 2022"
+    "date": "5 Haz 2024"
   },
   {
     "id": 2,
-    "image": "/assets/img/blog/1.jpg",
-    "title": "Five Things You Should Know About Modern Furniture.",
+    "image": "/assets/img/slid/random/2.jpeg",
+    "title": "Villa Capella",
     "by": "ALEX SMITH",
-    "date": "Aug 06 2022"
-  },
-  {
-    "id": 3,
-    "image": "/assets/img/blog/3.jpg",
-    "title": "What it's like to be an interior designer?",
-    "by": "ALEX SMITH",
-    "date": "Aug 06 2022"
+    "date": "6 Haz 2024"
   }
 ]

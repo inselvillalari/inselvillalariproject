@@ -11,16 +11,16 @@ const Blogs2 = () => {
           <div className="row justify-content-center">
             <div className="col-lg-6 col-md-8 col-sm-10">
               <h6 className="custom-font wow fadeInDown" data-wow-delay=".3s">
-                Latest News
+                KALKAN
               </h6>
               <h4 className="playfont wow flipInX" data-wow-delay=".5s">
-                Our Blogs
+                Görünümler
               </h4>
             </div>
           </div>
         </div>
         <div className="row">
-          {Blog1Data.slice(0, 2).map((blog, index) => (
+          {Blog1Data.map((blog, index) => (
             <div className="col-lg-6" key={blog.id}>
               <div
                 className="item wow fadeInUp md-mb50"
@@ -28,24 +28,24 @@ const Blogs2 = () => {
               >
                 <div className="post-img">
                   <div className="img">
-                    <img src={blog.image} alt="" />
+                    <img
+                      src={blog.image}
+                      alt=""
+                      style={{ width: "65% !important" }}
+                    />
                   </div>
                 </div>
                 <div className="cont">
                   <div className="info">
-                    <Link href="/blog-details">{blog.by}</Link>
-                    <Link href="/blog-details">{blog.date}</Link>
+                    {/* <Link href="" style={{ pointerEvents: 'none' }}>
+                      {blog.by}
+                    </Link> */}
+                    <Link href="" style={{ pointerEvents: "none" }}>
+                      {blog.date}
+                    </Link>
                   </div>
 
-                  <h5 className="playfont">
-                    <Link href="/blog-details">{blog.title}</Link>
-                  </h5>
-
-                  <Link href="/blog-details">
-                    <a className="more">
-                      <span className="custom-font">Read More</span>
-                    </a>
-                  </Link>
+                  <h5 className="playfont">{blog.title}</h5>
                 </div>
               </div>
             </div>

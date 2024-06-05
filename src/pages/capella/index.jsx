@@ -16,7 +16,7 @@ const Capella = () => {
           // second: "and the building speak for themeselves",
         }}
         // title = "text"
-        content="Kalkan Kızıltaş'ta yer alan, çok özel bir lokasyonda, mavi ve yeşille bütünleşmiş, kendini gösteren, modern ve çarpıcı bir etki yaratan lüks bir villadır. Villamız, bütün bir yılın yorgunluğunu üzerinizden atmanız için kusursuz bir şekilde tasarlanmıştır. Siz değerli misafirlerimize 'işte bu' dedirtecek bir tatil geçirtmek için; kapılarımızı açıyoruz…"
+        content="Kalkan Kızıltaş'ta, çok özel bir lokasyonda yer alan, mavi ve yeşille bütünleşmiş, modern ve çarpıcı bir etkisi ile kendini gösteren lüks bir villadır. Bulunduğu yer itibariyle, Kalkan manzarasını bütünüyle kucaklayabilirsiniz. Villamızın giriş katında deniz manzaralı açık mutfak ve salon, üst katlarında beş adet suit yatak odası bulunmakta olup, ebeveyn odalarının birinde yer alan jakuzide manzaraya karşı keyif de yapabileceksiniz. Villamız, bütün bir yılın yorgunluğunu üzerinizden atmanız için kusursuz bir şekilde tasarlanmıştır. Siz değerli misafirlerimize 'işte bu' dedirtecek bir tatil geçirtmek için; kapılarımızı açıyoruz…"
       />
       <CapellaPage />
     </MainLayout>
