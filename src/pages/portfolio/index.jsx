@@ -10,9 +10,9 @@ const Portfolio2 = () => {
     <section className="portfolio full-bg">
       <div className="container-fluid">
         <div className="row">
-          <div className="col-lg-3 col-md-6 cluom current" data-tab="tab-1">
+          <div className="col-lg-2 col-md-6 cluom current" data-tab="tab-1">
             <div className="info">
-              <h1 className="custom-font">Patara Antik Kenti</h1>
+              <h1 className="custom-font">Patara</h1>
             </div>
             <div className="more">
               <Link
@@ -26,23 +26,7 @@ const Portfolio2 = () => {
               </Link>
             </div>
           </div>
-          <div className="col-lg-3 col-md-6 cluom" data-tab="tab-2">
-            <div className="info">
-              <h1 className="custom-font">Kaputaş Plajı</h1>
-            </div>
-            <div className="more">
-              <Link
-                href="https://www.google.com/search?q=Kaputa%C5%9F+plaj%C4%B1&oq=Kaputa%C5%9F+plaj%C4%B1&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBCDU0MTVqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                <a target="_blank">
-                  Detaya Git <i className="fas fa-chevron-right"></i>
-                </a>
-              </Link>
-            </div>
-          </div>
-          <div className="col-lg-3 col-md-6 cluom" data-tab="tab-3">
+          <div className="col-lg-2 col-md-6 cluom" data-tab="tab-2">
             <div className="info">
               <h1 className="custom-font">Kaş</h1>
             </div>
@@ -58,13 +42,61 @@ const Portfolio2 = () => {
               </Link>
             </div>
           </div>
-          <div className="col-lg-3 col-md-6 cluom" data-tab="tab-4">
+          <div className="col-lg-2 col-md-6 cluom" data-tab="tab-3">
+            <div className="info">
+              <h1 className="custom-font">Kaputaş Plajı</h1>
+            </div>
+            <div className="more">
+              <Link
+                href="https://www.google.com/search?q=Kaputa%C5%9F+plaj%C4%B1&oq=Kaputa%C5%9F+plaj%C4%B1&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBCDU0MTVqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <a target="_blank">
+                  Detaya Git <i className="fas fa-chevron-right"></i>
+                </a>
+              </Link>
+            </div>
+          </div>
+          <div className="col-lg-2 col-md-6 cluom" data-tab="tab-4">
             <div className="info">
               <h1 className="custom-font">Saklıkent</h1>
             </div>
             <div className="more">
               <Link
                 href="https://tr.wikipedia.org/wiki/Sakl%C4%B1kent_Mill%C3%AE_Park%C4%B1"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <a target="_blank">
+                  Detaya Git <i className="fas fa-chevron-right"></i>
+                </a>
+              </Link>
+            </div>
+          </div>
+          <div className="col-lg-2 col-md-6 cluom" data-tab="tab-5">
+            <div className="info">
+              <h1 className="custom-font">Kekova</h1>
+            </div>
+            <div className="more">
+              <Link
+                href="https://tr.wikipedia.org/wiki/Kekova"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <a target="_blank">
+                  Detaya Git <i className="fas fa-chevron-right"></i>
+                </a>
+              </Link>
+            </div>
+          </div>
+          <div className="col-lg-2 col-md-6 cluom" data-tab="tab-6">
+            <div className="info">
+              <h1 className="custom-font">Tlos</h1>
+            </div>
+            <div className="more">
+              <Link
+                href="https://tr.wikipedia.org/wiki/Tlos"
                 rel="noopener noreferrer"
                 target="_blank"
               >
@@ -89,7 +121,7 @@ const Portfolio2 = () => {
           id="tab-2"
           className="bg-img tab-img"
           style={{
-            backgroundImage: `url(/assets/img/slid/portfolio/kaputas.jpeg)`,
+            backgroundImage: `url(/assets/img/slid/portfolio/kas.jpeg)`,
           }}
           data-overlay-dark="2"
         ></div>
@@ -97,7 +129,7 @@ const Portfolio2 = () => {
           id="tab-3"
           className="bg-img tab-img"
           style={{
-            backgroundImage: `url(/assets/img/slid/portfolio/kas.jpeg)`,
+            backgroundImage: `url(/assets/img/slid/portfolio/kaputas.jpeg)`,
           }}
           data-overlay-dark="2"
         ></div>
@@ -106,6 +138,22 @@ const Portfolio2 = () => {
           className="bg-img tab-img"
           style={{
             backgroundImage: `url(/assets/img/slid/portfolio/saklikent.jpeg)`,
+          }}
+          data-overlay-dark="2"
+        ></div>
+        <div
+          id="tab-5"
+          className="bg-img tab-img"
+          style={{
+            backgroundImage: `url(/assets/img/slid/portfolio/kekova.jpeg)`,
+          }}
+          data-overlay-dark="2"
+        ></div>
+        <div
+          id="tab-6"
+          className="bg-img tab-img"
+          style={{
+            backgroundImage: `url(/assets/img/slid/portfolio/tlos.jpeg)`,
           }}
           data-overlay-dark="2"
         ></div>
