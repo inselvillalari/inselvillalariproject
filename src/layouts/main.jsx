@@ -3,6 +3,7 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Head from "next/head";
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 const MainLayout = ({ children, logoClassText }) => {
   const navbarRef = React.useRef(null);
@@ -37,6 +38,7 @@ const MainLayout = ({ children, logoClassText }) => {
         logoClass={logoClassText}
       />
       {children}
+      <SpeedInsights />
       <Footer />
     </>
   );
