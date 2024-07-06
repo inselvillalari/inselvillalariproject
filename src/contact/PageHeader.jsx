@@ -20,13 +20,13 @@ const PageHeader = ({ title, fullPath, image }) => {
               <div className="path">
                 {fullPath.map((item, index) => (
                   <React.Fragment key={item.id}>
-                    <Link href={item.url}>
-                      <a
-                        className={router.pathname == item.url ? "active" : ""}
-                      >
-                        {item.name}
-                      </a>
-                    </Link>
+                    <a
+                      href={item.url}
+                      className={router.pathname == item.url ? "active" : ""}
+                    >
+                      {item.name}
+                    </a>
+
                     {index != fullPath.length - 1 ? <span>/</span> : ""}
                   </React.Fragment>
                 ))}

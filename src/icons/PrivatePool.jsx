@@ -5,7 +5,7 @@ function PrivatePool({ title }) {
     <div className="row">
       <svg
         id="fi_1925866"
-        enable-background="new 0 0 512.01 512.01"
+        enableBackground="new 0 0 512.01 512.01"
         viewBox="0 0 512.01 512.01"
         height="30"
         width="30"

@@ -46,20 +46,20 @@ const Footer = ({ classText }) => {
                 <li>
                   <div className="img">
                     <Link href="/blog-details">
-                      <a>
+ 
                         <img src="/assets/img/blog/1.jpg" alt="" />
-                      </a>
+
                     </Link>
                   </div>
 
                   <div className="sm-post">
                     <Link href="/blog-details">
-                      <a>
+ 
                         <p>
                           The Start-Up Ultimate Guide to Make Your WordPress
                           Journal.
                         </p>
-                      </a>
+
                     </Link>
                     <span className="date">14 Jan 2022</span>
                   </div>
@@ -67,19 +67,19 @@ const Footer = ({ classText }) => {
                 <li>
                   <div className="img">
                     <Link href="/blog-details">
-                      <a>
+
                         <img src="/assets/img/blog/2.jpg" alt="" />
-                      </a>
+
                     </Link>
                   </div>
                   <div className="sm-post">
                     <Link href="/blog-details">
-                      <a>
+
                         <p>
                           The Start-Up Ultimate Guide to Make Your WordPress
                           Journal.
                         </p>
-                      </a>
+
                     </Link>
                     <span className="date">14 Jan 2022</span>
                   </div>
@@ -104,23 +104,17 @@ const Footer = ({ classText }) => {
                   rel="noopener noreferrer"
                   target="_blank"
                 >
-                  <a target="_blank">
-                    <i className="fab fa-whatsapp"></i>
-                  </a>
+                  <i className="fab fa-whatsapp"></i>
                 </Link>
                 <Link
                   href="https://www.instagram.com/insel_villalari?igsh=aGowaGF3c2ozM2dm"
                   rel="noopener noreferrer"
                   target="_blank"
                 >
-                  <a target="_blank">
-                    <i className="fab fa-instagram"></i>
-                  </a>
+                  <i className="fab fa-instagram"></i>
                 </Link>
                 <Link href="/contact">
-                  <a>
-                    <i className="fab fa-google"></i>
-                  </a>
+                  <i className="fab fa-google"></i>
                 </Link>
               </div>
             </div>

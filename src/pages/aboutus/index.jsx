@@ -5,7 +5,10 @@ import Link from "next/link";
 
 const AboutUs = () => {
   return (
-    <section className="about section-padding" style={{ backgroundColor: "#EFFAFA" }}>
+    <section
+      className="about section-padding"
+      style={{ backgroundColor: "#EFFAFA" }}
+    >
       <div className="container">
         <div className="row">
           <div className="col-lg-6 valign">
@@ -15,7 +18,6 @@ const AboutUs = () => {
             >
               <h6 className="sub-title">Konumumuz</h6>
               <h2 className="mb-20 playfont">
-              
                 {aboutUsData.title.first} <br /> {aboutUsData.title.second}
               </h2>
               <p>{aboutUsData.content}</p>
@@ -24,11 +26,11 @@ const AboutUs = () => {
                   <li key={item.id}>{item.name}</li>
                 ))}
               </ul>
-              {/* <Link href="/about">
-                <a className="btn-curve btn-color mt-30">
+              {/* 
+                <a className="btn-curve btn-color mt-30" href="/about">
                   <span>Daha Fazlası</span>
                 </a>
-              </Link> */}
+            */}
             </div>
           </div>
           <div className="col-lg-6">

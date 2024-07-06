@@ -5,7 +5,7 @@ function BabyBed({ title }) {
     <div className="row">
       <svg
         id="fi_7107300"
-        enable-background="new 0 0 512 512"
+        enableBackground="new 0 0 512 512"
         height="30"
         width="30"
         viewBox="0 0 512 512"

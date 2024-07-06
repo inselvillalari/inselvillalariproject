@@ -64,26 +64,26 @@ const IntroWithVertical = () => {
               }}
               onSwiper={(swiper) => {
                 setTimeout(() => {
-                  for (var i = 0; i < swiper.slides.length; i++) {
+                  for (var i = 0; i < swiper?.slides?.length; i++) {
                     swiper.slides[i].childNodes[0].setAttribute(
                       "data-swiper-parallax",
                       0.75 * swiper.height
                     );
                   }
 
-                  swiper.params.navigation.prevEl = navigationPrevRef.current;
-                  swiper.params.navigation.nextEl = navigationNextRef.current;
-
-                  swiper.params.pagination.el = paginationRef.current;
-
-                  swiper.navigation.destroy();
-                  swiper.navigation.init();
-                  swiper.navigation.update();
-
-                  swiper.pagination.destroy();
-                  swiper.pagination.init();
-                  swiper.pagination.update();
-                });
+                  if (swiper.params) {
+                    swiper.params.navigation.prevEl = navigationPrevRef.current;
+                    swiper.params.navigation.nextEl = navigationNextRef.current;
+                    swiper.params.pagination.el = paginationRef.current;
+                    // Re-init navigation
+                    swiper.navigation?.destroy();
+                    swiper.navigation?.init();
+                    swiper.navigation?.update();
+                    swiper.pagination?.destroy();
+                    swiper.pagination?.init();
+                    swiper.pagination?.update();
+                  }
+                }, 500);
               }}
               className="swiper-wrapper cta__slider"
             >
@@ -123,10 +123,11 @@ const IntroWithVertical = () => {
                                 {slide.content.second}
                               </p>
                             )}
-                            <Link href={slide?.pageLink}>
-                              <a className="btn-curve btn-color mt-30">
-                                <span>Detaya Git</span>
-                              </a>
+                            <Link
+                              href={slide?.pageLink}
+                              className="btn-curve btn-color mt-30"
+                            >
+                              <span>Detaya Git</span>
                             </Link>
                           </div>
                         </div>
@@ -154,7 +155,7 @@ const IntroWithVertical = () => {
               ref={navigationPrevRef}
               className="cta__slider-arrow cta__slider-arrow--previous"
             >
-            {widthRef?.current?.offsetWidth > 450 ? (
+              {widthRef?.current?.offsetWidth > 450 ? (
                 <i className="fas fa-chevron-down"></i>
               ) : (
                 <i className="fas fa-chevron-left"></i>
@@ -175,64 +176,57 @@ const IntroWithVertical = () => {
             zIndex: 100,
           }}
         >
-          <Link
+          <a
             href="https://www.instagram.com/insel_villalari?igsh=aGowaGF3c2ozM2dm"
             rel="noopener noreferrer"
             target="_blank"
+            style={{
+              width: "40px",
+              height: "40px",
+              lineHeight: "40px",
+              textAlign: "center",
+              borderRadius: "20%",
+              fontSize: "20px",
+              cursor: "pointer",
+              color: "#C13584",
+            }}
           >
-            <a
-              target="_blank"
-              style={{
-                width: "40px",
-                height: "40px",
-                lineHeight: "40px",
-                textAlign: "center",
-                borderRadius: "20%",
-                fontSize: "20px",
-                cursor: "pointer",
-                color: "#C13584",
-              }}
-            >
-              <i className="fab fa-instagram"></i>
-            </a>
-          </Link>
-          <Link
+            <i className="fab fa-instagram"></i>
+          </a>
+
+          <a
             href="https://wa.me/905071376396?text=Merhaba,%20İnsel%20Villaları%20hakkında%20bilgi%20almak%20istiyorum"
             rel="noopener noreferrer"
             target="_blank"
+            style={{
+              width: "40px",
+              height: "40px",
+              lineHeight: "40px",
+              textAlign: "center",
+              borderRadius: "50%",
+              color: "rgb(37,211,102)",
+              fontSize: "20px",
+              cursor: "pointer !important",
+            }}
           >
-            <a
-              target="_blank"
-              style={{
-                width: "40px",
-                height: "40px",
-                lineHeight: "40px",
-                textAlign: "center",
-                borderRadius: "50%",
-                color: "rgb(37,211,102)",
-                fontSize: "20px",
-                cursor: "pointer !important",
-              }}
-            >
-              <i className="fab fa-whatsapp"></i>
-            </a>
-          </Link>
-          <Link href="/contact">
-            <a
-              style={{
-                width: "40px",
-                height: "40px",
-                lineHeight: "40px",
-                textAlign: "center",
-                borderRadius: "50%",
-                color: "rgb(234, 67, 53)",
-                fontSize: "20px",
-                cursor: "pointer",
-              }}
-            >
-              <i className="fab fa-google"></i>
-            </a>
-          </Link>
+            <i className="fab fa-whatsapp"></i>
+          </a>
+
+          <a
+            href="/contact"
+            style={{
+              width: "40px",
+              height: "40px",
+              lineHeight: "40px",
+              textAlign: "center",
+              borderRadius: "50%",
+              color: "rgb(234, 67, 53)",
+              fontSize: "20px",
+              cursor: "pointer",
+            }}
+          >
+            <i className="fab fa-google"></i>
+          </a>
         </div>
       </header>
     </>

@@ -31,9 +31,7 @@ const CapellaPage = () => {
                     />
                   </div>
                   <div className="cont vis">
-                    <h5>
-                      <Link href="/capella/dayViews">Gündüz Görünümleri</Link>
-                    </h5>
+                    <h5>Gündüz Görünümleri</h5>
                     {/* <span>Architecture</span>
                     <span>Modern</span> */}
                   </div>
@@ -50,9 +48,7 @@ const CapellaPage = () => {
                     />
                   </div>
                   <div className="cont vis">
-                    <h5>
-                      <Link href="/capella/nightViews">Gece Görünümleri</Link>
-                    </h5>
+                    <h5>Gece Görünümleri</h5>
                     {/* <span>Architecture</span>
                     <span>Modern</span> */}
                   </div>
@@ -66,9 +62,7 @@ const CapellaPage = () => {
                     <img alt="" src="/assets/img/slid/capella/indoor/2.jpeg" />
                   </div>
                   <div className="cont vis">
-                    <h5>
-                      <Link href="/capella/insideViews">İç Mekan</Link>
-                    </h5>
+                    <h5>İç Mekan</h5>
                     {/* <span>Architecture</span>
                     <span>Modern</span> */}
                   </div>
@@ -85,9 +79,7 @@ const CapellaPage = () => {
                     />
                   </div>
                   <div className="cont vis">
-                    <h5>
-                      <Link href="/capella/activities">Aktiviteler</Link>
-                    </h5>
+                    <h5>Aktiviteler</h5>
                     {/* <span>Architecture</span>
                     <span>Modern</span> */}
                   </div>

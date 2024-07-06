@@ -32,11 +32,9 @@ const Navbar = ({ navbarRef, logoRef, logoClass }) => {
     <>
       <nav className="navbar change navbar-expand-lg" ref={navbarRef}>
         <div className="container">
-          <Link href="/">
-            <a className={`logo ${logoClass && logoClass}`}>
-              {/* <img src={appData.lightLogo} alt="logo" ref={logoRef} /> */}
-            </a>
-          </Link>
+          <a className={`logo ${logoClass && logoClass}`} href="/">
+            {/* <img src={appData.lightLogo} alt="logo" ref={logoRef} /> */}
+          </a>
 
           <button
             className="navbar-toggler"
@@ -56,34 +54,34 @@ const Navbar = ({ navbarRef, logoRef, logoClass }) => {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav ml-auto">
               <li className="nav-item">
-                <Link href="/agena">
-                  <a className="nav-link">Agena</a>
-                </Link>
+                <a className="nav-link" href="/agena">
+                  Agena
+                </a>
               </li>
               <li className="nav-item">
-                <Link href="/capella">
-                  <a className="nav-link">Capella</a>
-                </Link>
+                <a className="nav-link" href="/capella">
+                  Capella
+                </a>
               </li>
               <li className="nav-item">
-                <Link href="/gredi">
-                  <a className="nav-link">Gredi</a>
-                </Link>
+                <a className="nav-link" href="/gredi">
+                  Gredi
+                </a>
               </li>
               <li className="nav-item">
-                <Link href="/rigel">
-                  <a className="nav-link">Rigel</a>
-                </Link>
+                <a className="nav-link" href="/rigel">
+                  Rigel
+                </a>
               </li>
               <li className="nav-item md-ml0" style={{ marginLeft: "60px" }}>
-                <Link href="/">
-                  <a className="nav-link">Anasayfa</a>
-                </Link>
+                <a className="nav-link" href="/">
+                  Anasayfa
+                </a>
               </li>
               <li className="nav-item">
-                <Link href="/contact">
-                  <a className="nav-link">İletişim</a>
-                </Link>
+                <a className="nav-link" href="/contact">
+                  İletişim
+                </a>
               </li>
             </ul>
           </div>

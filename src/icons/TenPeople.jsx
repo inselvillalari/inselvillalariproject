@@ -5,7 +5,7 @@ function TenPeople({ title }) {
     <div className="row">
       <svg
         id="fi_3597742"
-        enable-background="new 0 0 64 64"
+        enableBackground="new 0 0 64 64"
         viewBox="0 0 64 64"
         height="30"
         width="30"

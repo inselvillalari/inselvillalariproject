@@ -15,15 +15,13 @@ const Portfolio2 = () => {
               <h1 className="custom-font">Patara</h1>
             </div>
             <div className="more">
-              <Link
+              <a
                 href="https://tr.wikipedia.org/wiki/Patara"
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                <a target="_blank">
-                  Detaya Git <i className="fas fa-chevron-right"></i>
-                </a>
-              </Link>
+                Detaya Git <i className="fas fa-chevron-right"></i>
+              </a>
             </div>
           </div>
           <div className="col-lg-2 col-md-6 cluom" data-tab="tab-2">
@@ -31,15 +29,13 @@ const Portfolio2 = () => {
               <h1 className="custom-font">Kaş</h1>
             </div>
             <div className="more">
-              <Link
+              <a
                 href="https://www.google.com/search?q=ka%C5%9F%27ta+gezilecek+yerler&sca_esv=c8c65b53b193be60&biw=2560&bih=1294&ei=7blcZp3KG93ixc8Ps-SumAw&udm=&oq=ka%C5%9Fta+ge&gs_lp=Egxnd3Mtd2l6LXNlcnAiCWthxZ90YSBnZSoCCAAyDRAAGIAEGLEDGIMBGAoyBxAAGIAEGAoyBxAAGIAEGAoyBxAAGIAEGAoyCBAAGBYYChgeMgYQABgWGB4yBhAAGBYYHjIIEAAYFhgKGB4yCBAAGBYYChgeMggQABgWGB4YD0iKFlDJBli4DHAAeAKQAQCYAZIBoAGnBaoBAzAuNbgBA8gBAPgBAZgCBqACtgXCAgQQABhHwgIMEAAYgAQYQxiKBRgKwgIFEAAYgATCAggQABiABBiiBJgDAIgGAZAGCJIHAzEuNaAHkSQ&sclient=gws-wiz-serp"
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                <a target="_blank">
-                  Detaya Git <i className="fas fa-chevron-right"></i>
-                </a>
-              </Link>
+                Detaya Git <i className="fas fa-chevron-right"></i>
+              </a>
             </div>
           </div>
           <div className="col-lg-2 col-md-6 cluom" data-tab="tab-3">
@@ -47,15 +43,13 @@ const Portfolio2 = () => {
               <h1 className="custom-font">Kaputaş Plajı</h1>
             </div>
             <div className="more">
-              <Link
+              <a
                 href="https://www.google.com/search?q=Kaputa%C5%9F+plaj%C4%B1&oq=Kaputa%C5%9F+plaj%C4%B1&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBCDU0MTVqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8"
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                <a target="_blank">
-                  Detaya Git <i className="fas fa-chevron-right"></i>
-                </a>
-              </Link>
+                Detaya Git <i className="fas fa-chevron-right"></i>
+              </a>
             </div>
           </div>
           <div className="col-lg-2 col-md-6 cluom" data-tab="tab-4">
@@ -63,15 +57,13 @@ const Portfolio2 = () => {
               <h1 className="custom-font">Saklıkent</h1>
             </div>
             <div className="more">
-              <Link
+              <a
                 href="https://tr.wikipedia.org/wiki/Sakl%C4%B1kent_Mill%C3%AE_Park%C4%B1"
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                <a target="_blank">
-                  Detaya Git <i className="fas fa-chevron-right"></i>
-                </a>
-              </Link>
+                Detaya Git <i className="fas fa-chevron-right"></i>
+              </a>
             </div>
           </div>
           <div className="col-lg-2 col-md-6 cluom" data-tab="tab-5">
@@ -79,15 +71,13 @@ const Portfolio2 = () => {
               <h1 className="custom-font">Kekova</h1>
             </div>
             <div className="more">
-              <Link
+              <a
                 href="https://tr.wikipedia.org/wiki/Kekova"
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                <a target="_blank">
-                  Detaya Git <i className="fas fa-chevron-right"></i>
-                </a>
-              </Link>
+                Detaya Git <i className="fas fa-chevron-right"></i>
+              </a>
             </div>
           </div>
           <div className="col-lg-2 col-md-6 cluom" data-tab="tab-6">
@@ -95,15 +85,13 @@ const Portfolio2 = () => {
               <h1 className="custom-font">Tlos</h1>
             </div>
             <div className="more">
-              <Link
+              <a
                 href="https://tr.wikipedia.org/wiki/Tlos"
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                <a target="_blank">
-                  Detaya Git <i className="fas fa-chevron-right"></i>
-                </a>
-              </Link>
+                Detaya Git <i className="fas fa-chevron-right"></i>
+              </a>
             </div>
           </div>
         </div>

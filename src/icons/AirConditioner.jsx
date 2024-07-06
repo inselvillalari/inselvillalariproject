@@ -4,7 +4,7 @@ function AirConditioner({ title }) {
   return (
     <div className="row">
       <svg
-        enable-background="new 0 0 512 512"
+        enableBackground="new 0 0 512 512"
         viewBox="0 0 512 512"
         height="30"
         width="30"

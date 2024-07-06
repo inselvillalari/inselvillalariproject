@@ -5,7 +5,7 @@ function Terrace({ title }) {
     <div className="row">
       <svg
         id="fi_6791513"
-        enable-background="new 0 0 511.996 511.996"
+        enableBackground="new 0 0 511.996 511.996"
         height="30"
         viewBox="0 0 511.996 511.996"
         width="30"

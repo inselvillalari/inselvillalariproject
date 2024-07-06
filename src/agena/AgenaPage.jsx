@@ -28,9 +28,7 @@ const AgenaPage = () => {
                     <img alt="" src="/assets/img/slid/agena/dayViews/1.jpeg" />
                   </div>
                   <div className="cont vis">
-                    <h5>
-                      <Link href="/agena/dayViews">Gündüz Görünümleri</Link>
-                    </h5>
+                    <h5>Gündüz Görünümleri</h5>
                     {/* <span>Architecture</span>
                     <span>Modern</span> */}
                   </div>
@@ -47,9 +45,7 @@ const AgenaPage = () => {
                     />
                   </div>
                   <div className="cont vis">
-                    <h5>
-                      <Link href="/agena/nightViews">Gece Görünümleri</Link>
-                    </h5>
+                    <h5>Gece Görünümleri</h5>
                     {/* <span>Architecture</span>
                     <span>Modern</span> */}
                   </div>
@@ -63,9 +59,7 @@ const AgenaPage = () => {
                     <img alt="" src="/assets/img/slid/agena/indoor/2.jpeg" />
                   </div>
                   <div className="cont vis">
-                    <h5>
-                      <Link href="/agena/insideViews">İç Mekan</Link>
-                    </h5>
+                    <h5>İç Mekan</h5>
                     {/* <span>Architecture</span>
                     <span>Modern</span> */}
                   </div>
@@ -82,9 +76,7 @@ const AgenaPage = () => {
                     />
                   </div>
                   <div className="cont vis">
-                    <h5>
-                      <Link href="/agena/activities">Aktiviteler</Link>
-                    </h5>
+                    <h5>Aktiviteler</h5>
                     {/* <span>Architecture</span>
                     <span>Modern</span> */}
                   </div>

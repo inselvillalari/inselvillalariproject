@@ -5,7 +5,7 @@ function Bilardo({ title }) {
     <div className="row">
       <svg
         id="fi_4295446"
-        enable-background="new 0 0 512 512"
+        enableBackground="new 0 0 512 512"
         viewBox="0 0 512 512"
         width="30px"
         height="30px"
