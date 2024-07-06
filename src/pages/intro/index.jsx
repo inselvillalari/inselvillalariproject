@@ -27,6 +27,17 @@ const IntroWithVertical = () => {
   const navigationPrevRef = React.useRef(null);
   const navigationNextRef = React.useRef(null);
   const paginationRef = React.useRef(null);
+  const sliderRef = React.useRef(null);
+
+  const handlePrev = React.useCallback(() => {
+    if (!sliderRef.current) return;
+    sliderRef.current.swiper.slidePrev();
+  }, []);
+
+  const handleNext = React.useCallback(() => {
+    if (!sliderRef.current) return;
+    sliderRef.current.swiper.slideNext();
+  }, []);
 
   return (
     <>
@@ -38,12 +49,13 @@ const IntroWithVertical = () => {
         >
           {!load ? (
             <Swiper
+              ref={sliderRef}
               speed={800}
               parallax={true}
-              navigation={{
-                prevEl: navigationPrevRef.current,
-                nextEl: navigationNextRef.current,
-              }}
+              // navigation={{
+              //   prevEl: navigationPrevRef.current,
+              //   nextEl: navigationNextRef.current,
+              // }}
               pagination={{
                 type: "fraction",
                 clickable: true,
@@ -58,8 +70,8 @@ const IntroWithVertical = () => {
                 450: { direction: "vertical" },
               }}
               onBeforeInit={(swiper) => {
-                swiper.params.navigation.prevEl = navigationPrevRef.current;
-                swiper.params.navigation.nextEl = navigationNextRef.current;
+                // swiper.params.navigation.prevEl = navigationPrevRef.current;
+                // swiper.params.navigation.nextEl = navigationNextRef.current;
                 swiper.params.pagination.el = paginationRef.current;
               }}
               onSwiper={(swiper) => {
@@ -72,8 +84,8 @@ const IntroWithVertical = () => {
                   }
 
                   if (swiper.params) {
-                    swiper.params.navigation.prevEl = navigationPrevRef.current;
-                    swiper.params.navigation.nextEl = navigationNextRef.current;
+                    // swiper.params.navigation.prevEl = navigationPrevRef.current;
+                    // swiper.params.navigation.nextEl = navigationNextRef.current;
                     swiper.params.pagination.el = paginationRef.current;
                     // Re-init navigation
                     swiper.navigation?.destroy();
@@ -143,9 +155,10 @@ const IntroWithVertical = () => {
               id="js-cta-slider-next"
               ref={navigationNextRef}
               className="cta__slider-arrow cta__slider-arrow--next"
+              onClick={handleNext}
             >
               {widthRef?.current?.offsetWidth > 450 ? (
-                <i className="fas fa-chevron-up"></i>
+                <i className="fas fa-chevron-down"></i>
               ) : (
                 <i className="fas fa-chevron-right"></i>
               )}
@@ -154,9 +167,10 @@ const IntroWithVertical = () => {
               id="js-cta-slider-previous"
               ref={navigationPrevRef}
               className="cta__slider-arrow cta__slider-arrow--previous"
+              onClick={handlePrev}
             >
               {widthRef?.current?.offsetWidth > 450 ? (
-                <i className="fas fa-chevron-down"></i>
+                <i className="fas fa-chevron-up"></i>
               ) : (
                 <i className="fas fa-chevron-left"></i>
               )}
