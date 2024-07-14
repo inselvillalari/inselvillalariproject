@@ -8,5 +8,8 @@
   "/agena/nightViews": "pages/agena/nightViews.js",
   "/capella": "pages/capella.js",
   "/gredi": "pages/gredi.js",
-  "/rigel": "pages/rigel.js"
+  "/rigel": "pages/rigel.js",
+  "/capella/activities": "pages/capella/activities.js",
+  "/capella/dayViews": "pages/capella/dayViews.js",
+  "/capella/insideViews": "pages/capella/insideViews.js"
 }

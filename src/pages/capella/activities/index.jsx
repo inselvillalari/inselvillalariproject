@@ -27,25 +27,25 @@ const CapellaActivities = () => {
               style={{ cursor: "none" }}
               className="col-lg-4 col-xl-3 col-md-12"
             >
-              <img alt="" src="/assets/img/slid/capella/activities/3.jpeg" />
-            </a>
-            <a
-              style={{ cursor: "none" }}
-              className="col-lg-4 col-xl-3 col-md-6"
-            >
-              <img alt="" src="/assets/img/slid/capella/activities/4.jpeg" />
-            </a>
-            <a
-              style={{ cursor: "none" }}
-              className="col-lg-4 col-xl-3 col-md-6"
-            >
               <img alt="" src="/assets/img/slid/capella/activities/1.jpeg" />
+            </a>
+            <a
+              style={{ cursor: "none" }}
+              className="col-lg-4 col-xl-3 col-md-6"
+            >
+              <img alt="" src="/assets/img/slid/capella/activities/2.jpeg" />
+            </a>
+            <a
+              style={{ cursor: "none" }}
+              className="col-lg-4 col-xl-3 col-md-6"
+            >
+              <img alt="" src="/assets/img/slid/capella/activities/3.jpeg" />
             </a>
             <a
               style={{ cursor: "none" }}
               className="col-lg-4 col-xl-3 col-md-12"
             >
-              <img alt="" src="/assets/img/slid/capella/activities/5.jpeg" />
+              <img alt="" src="/assets/img/slid/capella/activities/7.jpeg" />
             </a>
           </div>
         </div>
@@ -53,7 +53,7 @@ const CapellaActivities = () => {
 
       {/* <ProjectVideo /> */}
 
-      <section className="projdtal">
+      {/* <section className="projdtal">
         <div className="justified-gallery">
           <a style={{ cursor: "none" }} className="col-lg-4 col-xl-3 col-md-6">
             <img alt="" src="/assets/img/slid/capella/activities/6.jpeg" />
@@ -62,7 +62,7 @@ const CapellaActivities = () => {
             <img alt="" src="/assets/img/slid/capella/activities/7.jpeg" />
           </a>
         </div>
-      </section>
+      </section> */}
     </MainLayout>
   );
 };
