@@ -144,9 +144,6 @@ const CapellaFeatures = () => {
                     <Check title="Bebek Yatağı" />
                   </div>
                   <div className="item ">
-                    <Check title="Kapalı Havuz" />
-                  </div>
-                  <div className="item ">
                     <Check title="Teras" />
                   </div>
                   <div className="item ">

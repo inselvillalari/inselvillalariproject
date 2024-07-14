@@ -41,7 +41,7 @@ const AgenaFeatures = () => {
               </div>
               <div className="col-4 mt-4">
                 <div className="item">
-                  <Bilardo title="Bilardo" />
+                  <PingPong title="Masa Tenisi" />
                 </div>
               </div>
               <div className="col-4 mt-4">
@@ -107,14 +107,8 @@ const AgenaFeatures = () => {
                   <div className="item">
                     <Check title="Klima" />
                   </div>
-                  <div className="item">
-                    <Check title="Masa Tenisi" />
-                  </div>
                   <div className="item ">
                     <Check title="Full Mobilyalı" />
-                  </div>
-                  <div className="item">
-                    <Check title="Havuz Isıtma" />
                   </div>
                   <div className="item ">
                     <Check title="Beyaz Eşyalı" />
@@ -144,9 +138,6 @@ const AgenaFeatures = () => {
                     <Check title="Bebek Yatağı" />
                   </div>
                   <div className="item ">
-                    <Check title="Kapalı Havuz" />
-                  </div>
-                  <div className="item ">
                     <Check title="Teras" />
                   </div>
                   <div className="item ">
@@ -163,9 +154,6 @@ const AgenaFeatures = () => {
                   </div>
                   <div className="item ">
                     <Check title="Bahçeli" />
-                  </div>
-                  <div className="item ">
-                    <Check title="Çocuk Havuzu" />
                   </div>
                   <div className="item ">
                     <Check title="Ebeveyn Banyosu" />

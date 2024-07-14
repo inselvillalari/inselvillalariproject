@@ -113,9 +113,6 @@ const GrediFeatures = () => {
                   <div className="item ">
                     <Check title="Full Mobilyalı" />
                   </div>
-                  <div className="item">
-                    <Check title="Havuz Isıtma" />
-                  </div>
                   <div className="item ">
                     <Check title="Beyaz Eşyalı" />
                   </div>
@@ -127,6 +124,9 @@ const GrediFeatures = () => {
                   </div>
                   <div className="item ">
                     <Check title="Deniz Manzaralı" />
+                  </div>
+                  <div className="item ">
+                    <Check title="Ebeveyn Banyosu" />
                   </div>
                 </div>
               </div>
@@ -166,9 +166,6 @@ const GrediFeatures = () => {
                   </div>
                   <div className="item ">
                     <Check title="Çocuk Havuzu" />
-                  </div>
-                  <div className="item ">
-                    <Check title="Ebeveyn Banyosu" />
                   </div>
                 </div>
               </div>
