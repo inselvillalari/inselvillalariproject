@@ -41,7 +41,7 @@ const AgenaFeatures = () => {
               </div>
               <div className="col-4 mt-4">
                 <div className="item">
-                  <PingPong title="Masa Tenisi" />
+                  <CarPark title="Otopark" />
                 </div>
               </div>
               <div className="col-4 mt-4">
@@ -60,8 +60,8 @@ const AgenaFeatures = () => {
                 </div>
               </div> */}
               {/* <div className="col-4 mt-4">
-                <div className="item">
-                  <CarPark title="Otopark" />
+                    <div className="item">
+                  <PingPong title="Masa Tenisi" />
                 </div>
               </div> */}
               {/* <div className="col-4 mt-4">
@@ -96,7 +96,7 @@ const AgenaFeatures = () => {
                   }}
                 >
                   <div className="item">
-                    <Check title="Otopark" />
+                    <Check title="Masa Tenisi" />
                   </div>
                   <div className="item">
                     <Check title="Smart TV - Uydu" />
