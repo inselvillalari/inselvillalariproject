@@ -31,7 +31,7 @@ const Footer = ({ classText }) => {
                   <span className="icon pe-7s-call"></span>
                   <div className="cont">
                     <h6>Bizi Arayın</h6>
-                    <p>+90 507 137 63 96</p>
+                    <p>+90 532 490 53 07</p>
                   </div>
                 </li>
               </ul>
