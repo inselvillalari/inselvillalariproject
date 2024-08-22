@@ -209,7 +209,7 @@ const IntroWithVertical = () => {
           </a>
 
           <a
-            href="https://wa.me/905071376396?text=Merhaba,%20İnsel%20Villaları%20hakkında%20bilgi%20almak%20istiyorum"
+            href="https://wa.me/905324905307?text=Merhaba,%20İnsel%20Villaları%20hakkında%20bilgi%20almak%20istiyorum"
             rel="noopener noreferrer"
             target="_blank"
             style={{

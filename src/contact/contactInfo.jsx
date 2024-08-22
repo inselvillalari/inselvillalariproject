@@ -10,7 +10,7 @@ const ContactInfo = () => {
               <span className="icon pe-7s-phone"></span>
               <div className="cont">
                 <h6 className="custom-font">Bizi Arayın</h6>
-                <p>+90 (507) 137 63 96</p>
+                <p>+90 (532) 490 53 07</p>
               </div>
             </div>
           </div>
@@ -28,7 +28,7 @@ const ContactInfo = () => {
               <span className="icon pe-7s-map"></span>
               <div className="cont">
                 <h6 className="custom-font">Adres</h6>
-                <p>Zakkum Sokak Kalkan, Kaş, ANTALYA</p>
+                <p>Zakkum Sokak No:4 Kalkan, Kaş, ANTALYA</p>
               </div>
             </div>
           </div>
