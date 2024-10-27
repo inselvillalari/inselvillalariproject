@@ -1,0 +1,38 @@
+/* [project]/src/agena/propertyDetails/style.scss.css [client] (css) */
+@media (width <= 767px) {
+  .property-detail-info-list ul {
+    padding: 20px 30px;
+    float: none;
+    border: none;
+  }
+}
+
+.property-detail-info-list ul {
+  padding: 30px 50px 40px;
+  margin: 0;
+  float: left;
+  border-right: 1px solid;
+  border-color: var(--border-color-7);
+}
+
+.property-detail-info-list ul:last-child {
+  border-right: none;
+}
+
+.property-detail-info-list ul li {
+  display: block;
+}
+
+.property-detail-info-list ul li label {
+  margin-right: 5px;
+  font-weight: 600;
+  min-width: 110px;
+  display: inline-block;
+}
+
+.property-detail-info-list ul li span {
+  font-weight: 600;
+  color: var(--ltn__heading-color);
+}
+
+/*# sourceMappingURL=src_agena_propertyDetails_style_scss_735113.css.map*/

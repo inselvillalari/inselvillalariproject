@@ -4,6 +4,7 @@ import Link from "next/link";
 import initIsotope from "../common/initIsotope";
 import CapellaFeatures from "./features";
 import CapellaSkills from "./skills";
+import PropertyDetails from "./propertyDetails";
 
 const CapellaPage = () => {
   React.useEffect(() => {
@@ -90,6 +91,7 @@ const CapellaPage = () => {
         </div>
         <CapellaSkills />
         <CapellaFeatures />
+        <PropertyDetails />
       </section>
     </>
   );

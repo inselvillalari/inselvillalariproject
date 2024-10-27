@@ -104,6 +104,9 @@ const CapellaFeatures = () => {
                   <div className="item ">
                     <Check title="Güvenlik Görevlisi" />
                   </div>
+                  <div className="item ">
+                    <Check title="Güvenlik Kamerası" />
+                  </div>
                   <div className="item">
                     <Check title="Klima" />
                   </div>
@@ -139,6 +142,9 @@ const CapellaFeatures = () => {
                 >
                   <div className="item ">
                     <Check title="İnternet Bağlantısı" />
+                  </div>
+                  <div className="item ">
+                    <Check title="Çamaşır Makinesi" />
                   </div>
                   <div className="item ">
                     <Check title="Bebek Yatağı" />

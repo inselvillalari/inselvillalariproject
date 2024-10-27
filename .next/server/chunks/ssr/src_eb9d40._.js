@@ -1011,7 +1011,7 @@ const Footer = ({ classText })=>{
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__commonjs__external__react$2f$jsx$2d$dev$2d$runtime__["jsxDEV"])("p", {
-                                                            children: "+90 507 137 63 96"
+                                                            children: "+90 532 490 53 07"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/pages/footer/index.jsx",
                                                             lineNumber: 34,
@@ -1062,7 +1062,7 @@ const Footer = ({ classText })=>{
                                     className: "social",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__commonjs__external__react$2f$jsx$2d$dev$2d$runtime__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$link$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {
-                                            href: "https://wa.me/905071376396?text=Merhaba,%20İnsel%20Villaları%20hakkında%20bilgi%20almak%20istiyorum",
+                                            href: "https://wa.me/905324905307?text=Merhaba,%20İnsel%20Villaları%20hakkında%20bilgi%20almak%20istiyorum",
                                             rel: "noopener noreferrer",
                                             target: "_blank",
                                             children: /*#__PURE__*/ (0, __TURBOPACK__commonjs__external__react$2f$jsx$2d$dev$2d$runtime__["jsxDEV"])("i", {
@@ -6386,9 +6386,9 @@ const CapellaFeatures = ()=>{
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__commonjs__external__react$2f$jsx$2d$dev$2d$runtime__["jsxDEV"])("div", {
-                                                    className: "item",
+                                                    className: "item ",
                                                     children: /*#__PURE__*/ (0, __TURBOPACK__commonjs__external__react$2f$jsx$2d$dev$2d$runtime__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$icons$2f$Check$2e$jsx__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {
-                                                        title: "Klima"
+                                                        title: "Güvenlik Kamerası"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/capella/features/index.jsx",
                                                         lineNumber: 108,
@@ -6402,7 +6402,7 @@ const CapellaFeatures = ()=>{
                                                 /*#__PURE__*/ (0, __TURBOPACK__commonjs__external__react$2f$jsx$2d$dev$2d$runtime__["jsxDEV"])("div", {
                                                     className: "item",
                                                     children: /*#__PURE__*/ (0, __TURBOPACK__commonjs__external__react$2f$jsx$2d$dev$2d$runtime__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$icons$2f$Check$2e$jsx__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {
-                                                        title: "Masa Tenisi"
+                                                        title: "Klima"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/capella/features/index.jsx",
                                                         lineNumber: 111,
@@ -6414,9 +6414,9 @@ const CapellaFeatures = ()=>{
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__commonjs__external__react$2f$jsx$2d$dev$2d$runtime__["jsxDEV"])("div", {
-                                                    className: "item ",
+                                                    className: "item",
                                                     children: /*#__PURE__*/ (0, __TURBOPACK__commonjs__external__react$2f$jsx$2d$dev$2d$runtime__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$icons$2f$Check$2e$jsx__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {
-                                                        title: "Full Mobilyalı"
+                                                        title: "Masa Tenisi"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/capella/features/index.jsx",
                                                         lineNumber: 114,
@@ -6428,9 +6428,9 @@ const CapellaFeatures = ()=>{
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__commonjs__external__react$2f$jsx$2d$dev$2d$runtime__["jsxDEV"])("div", {
-                                                    className: "item",
+                                                    className: "item ",
                                                     children: /*#__PURE__*/ (0, __TURBOPACK__commonjs__external__react$2f$jsx$2d$dev$2d$runtime__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$icons$2f$Check$2e$jsx__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {
-                                                        title: "Havuz Isıtma"
+                                                        title: "Full Mobilyalı"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/capella/features/index.jsx",
                                                         lineNumber: 117,
@@ -6442,9 +6442,9 @@ const CapellaFeatures = ()=>{
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__commonjs__external__react$2f$jsx$2d$dev$2d$runtime__["jsxDEV"])("div", {
-                                                    className: "item ",
+                                                    className: "item",
                                                     children: /*#__PURE__*/ (0, __TURBOPACK__commonjs__external__react$2f$jsx$2d$dev$2d$runtime__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$icons$2f$Check$2e$jsx__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {
-                                                        title: "Beyaz Eşyalı"
+                                                        title: "Havuz Isıtma"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/capella/features/index.jsx",
                                                         lineNumber: 120,
@@ -6456,9 +6456,9 @@ const CapellaFeatures = ()=>{
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__commonjs__external__react$2f$jsx$2d$dev$2d$runtime__["jsxDEV"])("div", {
-                                                    className: "item",
+                                                    className: "item ",
                                                     children: /*#__PURE__*/ (0, __TURBOPACK__commonjs__external__react$2f$jsx$2d$dev$2d$runtime__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$icons$2f$Check$2e$jsx__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {
-                                                        title: "Saç Kurutma Makinesi"
+                                                        title: "Beyaz Eşyalı"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/capella/features/index.jsx",
                                                         lineNumber: 123,
@@ -6472,7 +6472,7 @@ const CapellaFeatures = ()=>{
                                                 /*#__PURE__*/ (0, __TURBOPACK__commonjs__external__react$2f$jsx$2d$dev$2d$runtime__["jsxDEV"])("div", {
                                                     className: "item",
                                                     children: /*#__PURE__*/ (0, __TURBOPACK__commonjs__external__react$2f$jsx$2d$dev$2d$runtime__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$icons$2f$Check$2e$jsx__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {
-                                                        title: "Ütü"
+                                                        title: "Saç Kurutma Makinesi"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/capella/features/index.jsx",
                                                         lineNumber: 126,
@@ -6484,9 +6484,9 @@ const CapellaFeatures = ()=>{
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__commonjs__external__react$2f$jsx$2d$dev$2d$runtime__["jsxDEV"])("div", {
-                                                    className: "item ",
+                                                    className: "item",
                                                     children: /*#__PURE__*/ (0, __TURBOPACK__commonjs__external__react$2f$jsx$2d$dev$2d$runtime__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$icons$2f$Check$2e$jsx__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {
-                                                        title: "Deniz Manzaralı"
+                                                        title: "Ütü"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/capella/features/index.jsx",
                                                         lineNumber: 129,
@@ -6495,6 +6495,20 @@ const CapellaFeatures = ()=>{
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/capella/features/index.jsx",
                                                     lineNumber: 128,
+                                                    columnNumber: 19
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__commonjs__external__react$2f$jsx$2d$dev$2d$runtime__["jsxDEV"])("div", {
+                                                    className: "item ",
+                                                    children: /*#__PURE__*/ (0, __TURBOPACK__commonjs__external__react$2f$jsx$2d$dev$2d$runtime__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$icons$2f$Check$2e$jsx__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {
+                                                        title: "Deniz Manzaralı"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/src/capella/features/index.jsx",
+                                                        lineNumber: 132,
+                                                        columnNumber: 21
+                                                    }, this)
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/capella/features/index.jsx",
+                                                    lineNumber: 131,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
@@ -6522,20 +6536,6 @@ const CapellaFeatures = ()=>{
                                                         title: "İnternet Bağlantısı"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/capella/features/index.jsx",
-                                                        lineNumber: 141,
-                                                        columnNumber: 21
-                                                    }, this)
-                                                }, void 0, false, {
-                                                    fileName: "[project]/src/capella/features/index.jsx",
-                                                    lineNumber: 140,
-                                                    columnNumber: 19
-                                                }, this),
-                                                /*#__PURE__*/ (0, __TURBOPACK__commonjs__external__react$2f$jsx$2d$dev$2d$runtime__["jsxDEV"])("div", {
-                                                    className: "item ",
-                                                    children: /*#__PURE__*/ (0, __TURBOPACK__commonjs__external__react$2f$jsx$2d$dev$2d$runtime__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$icons$2f$Check$2e$jsx__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {
-                                                        title: "Bebek Yatağı"
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/src/capella/features/index.jsx",
                                                         lineNumber: 144,
                                                         columnNumber: 21
                                                     }, this)
@@ -6547,7 +6547,7 @@ const CapellaFeatures = ()=>{
                                                 /*#__PURE__*/ (0, __TURBOPACK__commonjs__external__react$2f$jsx$2d$dev$2d$runtime__["jsxDEV"])("div", {
                                                     className: "item ",
                                                     children: /*#__PURE__*/ (0, __TURBOPACK__commonjs__external__react$2f$jsx$2d$dev$2d$runtime__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$icons$2f$Check$2e$jsx__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {
-                                                        title: "Teras"
+                                                        title: "Çamaşır Makinesi"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/capella/features/index.jsx",
                                                         lineNumber: 147,
@@ -6561,7 +6561,7 @@ const CapellaFeatures = ()=>{
                                                 /*#__PURE__*/ (0, __TURBOPACK__commonjs__external__react$2f$jsx$2d$dev$2d$runtime__["jsxDEV"])("div", {
                                                     className: "item ",
                                                     children: /*#__PURE__*/ (0, __TURBOPACK__commonjs__external__react$2f$jsx$2d$dev$2d$runtime__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$icons$2f$Check$2e$jsx__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {
-                                                        title: "Havuz - Bahçe Bakımı"
+                                                        title: "Bebek Yatağı"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/capella/features/index.jsx",
                                                         lineNumber: 150,
@@ -6575,7 +6575,7 @@ const CapellaFeatures = ()=>{
                                                 /*#__PURE__*/ (0, __TURBOPACK__commonjs__external__react$2f$jsx$2d$dev$2d$runtime__["jsxDEV"])("div", {
                                                     className: "item ",
                                                     children: /*#__PURE__*/ (0, __TURBOPACK__commonjs__external__react$2f$jsx$2d$dev$2d$runtime__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$icons$2f$Check$2e$jsx__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {
-                                                        title: "Oyun Alanı"
+                                                        title: "Teras"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/capella/features/index.jsx",
                                                         lineNumber: 153,
@@ -6589,7 +6589,7 @@ const CapellaFeatures = ()=>{
                                                 /*#__PURE__*/ (0, __TURBOPACK__commonjs__external__react$2f$jsx$2d$dev$2d$runtime__["jsxDEV"])("div", {
                                                     className: "item ",
                                                     children: /*#__PURE__*/ (0, __TURBOPACK__commonjs__external__react$2f$jsx$2d$dev$2d$runtime__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$icons$2f$Check$2e$jsx__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {
-                                                        title: "Duşakabin"
+                                                        title: "Havuz - Bahçe Bakımı"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/capella/features/index.jsx",
                                                         lineNumber: 156,
@@ -6603,7 +6603,7 @@ const CapellaFeatures = ()=>{
                                                 /*#__PURE__*/ (0, __TURBOPACK__commonjs__external__react$2f$jsx$2d$dev$2d$runtime__["jsxDEV"])("div", {
                                                     className: "item ",
                                                     children: /*#__PURE__*/ (0, __TURBOPACK__commonjs__external__react$2f$jsx$2d$dev$2d$runtime__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$icons$2f$Check$2e$jsx__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {
-                                                        title: "Alarm"
+                                                        title: "Oyun Alanı"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/capella/features/index.jsx",
                                                         lineNumber: 159,
@@ -6617,7 +6617,7 @@ const CapellaFeatures = ()=>{
                                                 /*#__PURE__*/ (0, __TURBOPACK__commonjs__external__react$2f$jsx$2d$dev$2d$runtime__["jsxDEV"])("div", {
                                                     className: "item ",
                                                     children: /*#__PURE__*/ (0, __TURBOPACK__commonjs__external__react$2f$jsx$2d$dev$2d$runtime__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$icons$2f$Check$2e$jsx__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {
-                                                        title: "Bahçeli"
+                                                        title: "Duşakabin"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/capella/features/index.jsx",
                                                         lineNumber: 162,
@@ -6631,7 +6631,7 @@ const CapellaFeatures = ()=>{
                                                 /*#__PURE__*/ (0, __TURBOPACK__commonjs__external__react$2f$jsx$2d$dev$2d$runtime__["jsxDEV"])("div", {
                                                     className: "item ",
                                                     children: /*#__PURE__*/ (0, __TURBOPACK__commonjs__external__react$2f$jsx$2d$dev$2d$runtime__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$icons$2f$Check$2e$jsx__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {
-                                                        title: "Çocuk Havuzu"
+                                                        title: "Alarm"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/capella/features/index.jsx",
                                                         lineNumber: 165,
@@ -6645,7 +6645,7 @@ const CapellaFeatures = ()=>{
                                                 /*#__PURE__*/ (0, __TURBOPACK__commonjs__external__react$2f$jsx$2d$dev$2d$runtime__["jsxDEV"])("div", {
                                                     className: "item ",
                                                     children: /*#__PURE__*/ (0, __TURBOPACK__commonjs__external__react$2f$jsx$2d$dev$2d$runtime__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$icons$2f$Check$2e$jsx__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {
-                                                        title: "Ebeveyn Banyosu"
+                                                        title: "Bahçeli"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/capella/features/index.jsx",
                                                         lineNumber: 168,
@@ -6655,16 +6655,44 @@ const CapellaFeatures = ()=>{
                                                     fileName: "[project]/src/capella/features/index.jsx",
                                                     lineNumber: 167,
                                                     columnNumber: 19
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__commonjs__external__react$2f$jsx$2d$dev$2d$runtime__["jsxDEV"])("div", {
+                                                    className: "item ",
+                                                    children: /*#__PURE__*/ (0, __TURBOPACK__commonjs__external__react$2f$jsx$2d$dev$2d$runtime__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$icons$2f$Check$2e$jsx__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {
+                                                        title: "Çocuk Havuzu"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/src/capella/features/index.jsx",
+                                                        lineNumber: 171,
+                                                        columnNumber: 21
+                                                    }, this)
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/capella/features/index.jsx",
+                                                    lineNumber: 170,
+                                                    columnNumber: 19
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__commonjs__external__react$2f$jsx$2d$dev$2d$runtime__["jsxDEV"])("div", {
+                                                    className: "item ",
+                                                    children: /*#__PURE__*/ (0, __TURBOPACK__commonjs__external__react$2f$jsx$2d$dev$2d$runtime__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$icons$2f$Check$2e$jsx__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {
+                                                        title: "Ebeveyn Banyosu"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/src/capella/features/index.jsx",
+                                                        lineNumber: 174,
+                                                        columnNumber: 21
+                                                    }, this)
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/capella/features/index.jsx",
+                                                    lineNumber: 173,
+                                                    columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/capella/features/index.jsx",
-                                            lineNumber: 134,
+                                            lineNumber: 137,
                                             columnNumber: 17
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/capella/features/index.jsx",
-                                        lineNumber: 133,
+                                        lineNumber: 136,
                                         columnNumber: 15
                                     }, this)
                                 ]
@@ -7068,7 +7096,9 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$link
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$common$2f$initIsotope$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/src/common/initIsotope.js [ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$capella$2f$features$2f$index$2e$jsx__$5b$ssr$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/src/capella/features/index.jsx [ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$capella$2f$skills$2f$index$2e$jsx__$5b$ssr$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/src/capella/skills/index.jsx [ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$capella$2f$propertyDetails$2f$index$2e$jsx__$5b$ssr$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/src/capella/propertyDetails/index.jsx [ssr] (ecmascript)");
 "__TURBOPACK__ecmascript__hoisting__location__";
+;
 ;
 ;
 ;
@@ -7098,17 +7128,17 @@ const CapellaPage = ()=>{
                                         children: "Mekanlar"
                                     }, void 0, false, {
                                         fileName: "[project]/src/capella/CapellaPage.jsx",
-                                        lineNumber: 21,
+                                        lineNumber: 22,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/capella/CapellaPage.jsx",
-                                    lineNumber: 20,
+                                    lineNumber: 21,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/capella/CapellaPage.jsx",
-                                lineNumber: 19,
+                                lineNumber: 20,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__commonjs__external__react$2f$jsx$2d$dev$2d$runtime__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$link$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -7125,12 +7155,12 @@ const CapellaPage = ()=>{
                                                     src: "/assets/img/slid/capella/dayViews/1.jpeg"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/capella/CapellaPage.jsx",
-                                                    lineNumber: 28,
+                                                    lineNumber: 29,
                                                     columnNumber: 21
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/src/capella/CapellaPage.jsx",
-                                                lineNumber: 27,
+                                                lineNumber: 28,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__commonjs__external__react$2f$jsx$2d$dev$2d$runtime__["jsxDEV"])("div", {
@@ -7139,28 +7169,28 @@ const CapellaPage = ()=>{
                                                     children: "Gündüz Görünümleri"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/capella/CapellaPage.jsx",
-                                                    lineNumber: 34,
+                                                    lineNumber: 35,
                                                     columnNumber: 21
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/src/capella/CapellaPage.jsx",
-                                                lineNumber: 33,
+                                                lineNumber: 34,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/capella/CapellaPage.jsx",
-                                        lineNumber: 26,
+                                        lineNumber: 27,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/capella/CapellaPage.jsx",
-                                    lineNumber: 25,
+                                    lineNumber: 26,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/capella/CapellaPage.jsx",
-                                lineNumber: 24,
+                                lineNumber: 25,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__commonjs__external__react$2f$jsx$2d$dev$2d$runtime__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$link$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -7177,12 +7207,12 @@ const CapellaPage = ()=>{
                                                     src: "/assets/img/slid/capella/nightViews/1.jpeg"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/capella/CapellaPage.jsx",
-                                                    lineNumber: 45,
+                                                    lineNumber: 46,
                                                     columnNumber: 21
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/src/capella/CapellaPage.jsx",
-                                                lineNumber: 44,
+                                                lineNumber: 45,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__commonjs__external__react$2f$jsx$2d$dev$2d$runtime__["jsxDEV"])("div", {
@@ -7191,28 +7221,28 @@ const CapellaPage = ()=>{
                                                     children: "Gece Görünümleri"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/capella/CapellaPage.jsx",
-                                                    lineNumber: 51,
+                                                    lineNumber: 52,
                                                     columnNumber: 21
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/src/capella/CapellaPage.jsx",
-                                                lineNumber: 50,
+                                                lineNumber: 51,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/capella/CapellaPage.jsx",
-                                        lineNumber: 43,
+                                        lineNumber: 44,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/capella/CapellaPage.jsx",
-                                    lineNumber: 42,
+                                    lineNumber: 43,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/capella/CapellaPage.jsx",
-                                lineNumber: 41,
+                                lineNumber: 42,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__commonjs__external__react$2f$jsx$2d$dev$2d$runtime__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$link$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -7229,12 +7259,12 @@ const CapellaPage = ()=>{
                                                     src: "/assets/img/slid/capella/indoor/2.jpeg"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/capella/CapellaPage.jsx",
-                                                    lineNumber: 62,
+                                                    lineNumber: 63,
                                                     columnNumber: 21
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/src/capella/CapellaPage.jsx",
-                                                lineNumber: 61,
+                                                lineNumber: 62,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__commonjs__external__react$2f$jsx$2d$dev$2d$runtime__["jsxDEV"])("div", {
@@ -7243,28 +7273,28 @@ const CapellaPage = ()=>{
                                                     children: "İç Mekan"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/capella/CapellaPage.jsx",
-                                                    lineNumber: 65,
+                                                    lineNumber: 66,
                                                     columnNumber: 21
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/src/capella/CapellaPage.jsx",
-                                                lineNumber: 64,
+                                                lineNumber: 65,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/capella/CapellaPage.jsx",
-                                        lineNumber: 60,
+                                        lineNumber: 61,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/capella/CapellaPage.jsx",
-                                    lineNumber: 59,
+                                    lineNumber: 60,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/capella/CapellaPage.jsx",
-                                lineNumber: 58,
+                                lineNumber: 59,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__commonjs__external__react$2f$jsx$2d$dev$2d$runtime__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$link$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -7281,12 +7311,12 @@ const CapellaPage = ()=>{
                                                     src: "/assets/img/slid/capella/activities/2.jpeg"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/capella/CapellaPage.jsx",
-                                                    lineNumber: 76,
+                                                    lineNumber: 77,
                                                     columnNumber: 21
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/src/capella/CapellaPage.jsx",
-                                                lineNumber: 75,
+                                                lineNumber: 76,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__commonjs__external__react$2f$jsx$2d$dev$2d$runtime__["jsxDEV"])("div", {
@@ -7295,55 +7325,60 @@ const CapellaPage = ()=>{
                                                     children: "Aktiviteler"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/capella/CapellaPage.jsx",
-                                                    lineNumber: 82,
+                                                    lineNumber: 83,
                                                     columnNumber: 21
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/src/capella/CapellaPage.jsx",
-                                                lineNumber: 81,
+                                                lineNumber: 82,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/capella/CapellaPage.jsx",
-                                        lineNumber: 74,
+                                        lineNumber: 75,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/capella/CapellaPage.jsx",
-                                    lineNumber: 73,
+                                    lineNumber: 74,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/capella/CapellaPage.jsx",
-                                lineNumber: 72,
+                                lineNumber: 73,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/capella/CapellaPage.jsx",
-                        lineNumber: 18,
+                        lineNumber: 19,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/src/capella/CapellaPage.jsx",
-                    lineNumber: 17,
+                    lineNumber: 18,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__commonjs__external__react$2f$jsx$2d$dev$2d$runtime__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$capella$2f$skills$2f$index$2e$jsx__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                     fileName: "[project]/src/capella/CapellaPage.jsx",
-                    lineNumber: 91,
+                    lineNumber: 92,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__commonjs__external__react$2f$jsx$2d$dev$2d$runtime__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$capella$2f$features$2f$index$2e$jsx__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                     fileName: "[project]/src/capella/CapellaPage.jsx",
-                    lineNumber: 92,
+                    lineNumber: 93,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ (0, __TURBOPACK__commonjs__external__react$2f$jsx$2d$dev$2d$runtime__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$capella$2f$propertyDetails$2f$index$2e$jsx__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
+                    fileName: "[project]/src/capella/CapellaPage.jsx",
+                    lineNumber: 94,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/capella/CapellaPage.jsx",
-            lineNumber: 16,
+            lineNumber: 17,
             columnNumber: 7
         }, this)
     }, void 0, false);
@@ -7379,7 +7414,7 @@ const Capella = ()=>{
                     first: "VİLLA CAPELLA"
                 },
                 // title = "text"
-                content: "Villamızın giriş katında deniz ve doğa manzaralı Amerikan mutfak ve salon, üst katlarında beş adet suit yatak odası bulunmakta olup, ebeveyn odalarımızdan ikisinde yer alan jakuzide manzaraya karşı keyif yapabileceksiniz.  4 adet Suit Aile ve 1 adet Suit Genç yatak odamız bulunmaktadır. Aile odalarımızın her birinde Çift kişilik yatak, Elbise dolabı, Komodin, Makyaj masası, Klima, Jakuzi, Banyo, TV ve balkon bulunmaktadır.  Genç odamızda ise 2 Adet tek kişilik yatak, Elbise dolabı, Komodin, Makyaj masası, Bebek yatağı, Klima, Banyo, TV ve balkon bulunmaktadır. Tripleks villamızın 1. katında 2 aile odası ve 1 genç odası bulunmaktadır. Aile odalarımızın iki tanesi teras katındadır.  Villanın zemin katında spor odası (bilardo, masa tenisi, koşu bandı, kondisyon bisikleti) ve oturma alanı bulunmaktadır. Banyo mevcuttur. Villamızın Havuz Ebatları; En: 3,90 m Boy: 7,55 m Derinlik: 145-160 cm"
+                content: "Villamızın giriş katında deniz ve doğa manzaralı Amerikan mutfak ve salon, üst katlarında beş adet suit yatak odası bulunmakta olup, ebeveyn odalarımızdan ikisinde yer alan jakuzide manzaraya karşı keyif yapabileceksiniz.   Hayallerinizin ötesinde bir tatil imkanı sunmakta olan villamız, bodrum katta spor salonu (bilardo, masa tenisi, koşu bandı, kondisyon bisikleti) ile bütün bir yılın yorgunluğunu üzerinizden atmanız için, kusursuz bir şekilde tasarlanmıştır. "
             }, void 0, false, {
                 fileName: "[project]/src/pages/capella/index.jsx",
                 lineNumber: 13,
@@ -7387,7 +7422,7 @@ const Capella = ()=>{
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__commonjs__external__react$2f$jsx$2d$dev$2d$runtime__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$capella$2f$CapellaPage$2e$jsx__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                 fileName: "[project]/src/pages/capella/index.jsx",
-                lineNumber: 26,
+                lineNumber: 22,
                 columnNumber: 7
             }, this)
         ]

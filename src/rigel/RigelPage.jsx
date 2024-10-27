@@ -4,6 +4,7 @@ import Link from "next/link";
 import initIsotope from "../common/initIsotope";
 import RigelFeatures from "./features";
 import RigelSkills from "./skills";
+import PropertyDetails from "./propertyDetails";
 
 const RigelPage = () => {
   React.useEffect(() => {
@@ -87,6 +88,7 @@ const RigelPage = () => {
         </div>
         <RigelSkills />
         <RigelFeatures />
+        <PropertyDetails />
       </section>
     </>
   );

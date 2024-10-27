@@ -4,6 +4,7 @@ import Link from "next/link";
 import initIsotope from "../common/initIsotope";
 import GrediFeatures from "./features";
 import GrediSkills from "./skills";
+import PropertyDetails from "./propertyDetails";
 
 const GrediPage = () => {
   React.useEffect(() => {
@@ -87,6 +88,7 @@ const GrediPage = () => {
         </div>
         <GrediSkills />
         <GrediFeatures />
+        <PropertyDetails />
       </section>
     </>
   );

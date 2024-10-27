@@ -3,13 +3,11 @@
   "/_document": "pages/_document.js",
   "/": "pages/index.js",
   "/agena": "pages/agena.js",
-  "/agena/insideViews": "pages/agena/insideViews.js",
-  "/_error": "pages/_error.js",
-  "/agena/nightViews": "pages/agena/nightViews.js",
   "/capella": "pages/capella.js",
   "/gredi": "pages/gredi.js",
   "/rigel": "pages/rigel.js",
-  "/capella/activities": "pages/capella/activities.js",
+  "/_error": "pages/_error.js",
+  "/capella/nightViews": "pages/capella/nightViews.js",
   "/capella/dayViews": "pages/capella/dayViews.js",
   "/capella/insideViews": "pages/capella/insideViews.js"
 }
