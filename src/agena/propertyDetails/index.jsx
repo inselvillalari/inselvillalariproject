@@ -1,5 +1,6 @@
 import React from "react";
 import "./style.scss";
+import Link from "next/link";
 
 const PropertyDetails = () => {
   return (
@@ -49,7 +50,19 @@ const PropertyDetails = () => {
               <span>Bilardo - Masa Tenisi - Dart</span>
             </li>
             <li>
-              <label>Property Status:</label> <span>For Sale</span>
+              <label>Kiralama için:</label>
+              <span>
+                <Link
+                  href="https://wa.me/905324905307?text=Merhaba,%20İnsel%20Villaları%20hakkında%20bilgi%20almak%20istiyorum"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <i
+                    className="fab fa-whatsapp"
+                    style={{ color: "rgb(37, 211, 102)" }}
+                  ></i>
+                </Link>
+              </span>
             </li>
           </ul>
         </div>

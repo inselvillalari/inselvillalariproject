@@ -6440,9 +6440,9 @@ const AgenaFeatures = ()=>{
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    className: "item",
+                                                    className: "item ",
                                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$icons$2f$Check$2e$jsx__$5b$client$5d$__$28$ecmascript$29$__["default"], {
-                                                        title: "Klima"
+                                                        title: "Güvenlik Kamerası"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/agena/features/index.jsx",
                                                         lineNumber: 108,
@@ -6454,9 +6454,9 @@ const AgenaFeatures = ()=>{
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    className: "item ",
+                                                    className: "item",
                                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$icons$2f$Check$2e$jsx__$5b$client$5d$__$28$ecmascript$29$__["default"], {
-                                                        title: "Full Mobilyalı"
+                                                        title: "Klima"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/agena/features/index.jsx",
                                                         lineNumber: 111,
@@ -6470,7 +6470,7 @@ const AgenaFeatures = ()=>{
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                     className: "item ",
                                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$icons$2f$Check$2e$jsx__$5b$client$5d$__$28$ecmascript$29$__["default"], {
-                                                        title: "Beyaz Eşyalı"
+                                                        title: "Full Mobilyalı"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/agena/features/index.jsx",
                                                         lineNumber: 114,
@@ -6482,9 +6482,9 @@ const AgenaFeatures = ()=>{
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    className: "item",
+                                                    className: "item ",
                                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$icons$2f$Check$2e$jsx__$5b$client$5d$__$28$ecmascript$29$__["default"], {
-                                                        title: "Saç Kurutma Makinesi"
+                                                        title: "Beyaz Eşyalı"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/agena/features/index.jsx",
                                                         lineNumber: 117,
@@ -6498,7 +6498,7 @@ const AgenaFeatures = ()=>{
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                     className: "item",
                                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$icons$2f$Check$2e$jsx__$5b$client$5d$__$28$ecmascript$29$__["default"], {
-                                                        title: "Ütü"
+                                                        title: "Saç Kurutma Makinesi"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/agena/features/index.jsx",
                                                         lineNumber: 120,
@@ -6510,9 +6510,9 @@ const AgenaFeatures = ()=>{
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    className: "item ",
+                                                    className: "item",
                                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$icons$2f$Check$2e$jsx__$5b$client$5d$__$28$ecmascript$29$__["default"], {
-                                                        title: "Deniz Manzaralı"
+                                                        title: "Ütü"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/agena/features/index.jsx",
                                                         lineNumber: 123,
@@ -6521,6 +6521,20 @@ const AgenaFeatures = ()=>{
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/agena/features/index.jsx",
                                                     lineNumber: 122,
+                                                    columnNumber: 19
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                    className: "item ",
+                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$icons$2f$Check$2e$jsx__$5b$client$5d$__$28$ecmascript$29$__["default"], {
+                                                        title: "Deniz Manzaralı"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/src/agena/features/index.jsx",
+                                                        lineNumber: 126,
+                                                        columnNumber: 21
+                                                    }, this)
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/agena/features/index.jsx",
+                                                    lineNumber: 125,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
@@ -6548,20 +6562,6 @@ const AgenaFeatures = ()=>{
                                                         title: "İnternet Bağlantısı"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/agena/features/index.jsx",
-                                                        lineNumber: 135,
-                                                        columnNumber: 21
-                                                    }, this)
-                                                }, void 0, false, {
-                                                    fileName: "[project]/src/agena/features/index.jsx",
-                                                    lineNumber: 134,
-                                                    columnNumber: 19
-                                                }, this),
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    className: "item ",
-                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$icons$2f$Check$2e$jsx__$5b$client$5d$__$28$ecmascript$29$__["default"], {
-                                                        title: "Bebek Yatağı"
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/src/agena/features/index.jsx",
                                                         lineNumber: 138,
                                                         columnNumber: 21
                                                     }, this)
@@ -6573,7 +6573,7 @@ const AgenaFeatures = ()=>{
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                     className: "item ",
                                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$icons$2f$Check$2e$jsx__$5b$client$5d$__$28$ecmascript$29$__["default"], {
-                                                        title: "Teras"
+                                                        title: "Çamaşır Makinesi"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/agena/features/index.jsx",
                                                         lineNumber: 141,
@@ -6587,7 +6587,7 @@ const AgenaFeatures = ()=>{
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                     className: "item ",
                                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$icons$2f$Check$2e$jsx__$5b$client$5d$__$28$ecmascript$29$__["default"], {
-                                                        title: "Havuz - Bahçe Bakımı"
+                                                        title: "Bebek Yatağı"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/agena/features/index.jsx",
                                                         lineNumber: 144,
@@ -6601,7 +6601,7 @@ const AgenaFeatures = ()=>{
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                     className: "item ",
                                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$icons$2f$Check$2e$jsx__$5b$client$5d$__$28$ecmascript$29$__["default"], {
-                                                        title: "Oyun Alanı"
+                                                        title: "Teras"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/agena/features/index.jsx",
                                                         lineNumber: 147,
@@ -6615,7 +6615,7 @@ const AgenaFeatures = ()=>{
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                     className: "item ",
                                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$icons$2f$Check$2e$jsx__$5b$client$5d$__$28$ecmascript$29$__["default"], {
-                                                        title: "Duşakabin"
+                                                        title: "Havuz - Bahçe Bakımı"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/agena/features/index.jsx",
                                                         lineNumber: 150,
@@ -6629,7 +6629,7 @@ const AgenaFeatures = ()=>{
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                     className: "item ",
                                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$icons$2f$Check$2e$jsx__$5b$client$5d$__$28$ecmascript$29$__["default"], {
-                                                        title: "Alarm"
+                                                        title: "Oyun Alanı"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/agena/features/index.jsx",
                                                         lineNumber: 153,
@@ -6643,7 +6643,7 @@ const AgenaFeatures = ()=>{
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                     className: "item ",
                                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$icons$2f$Check$2e$jsx__$5b$client$5d$__$28$ecmascript$29$__["default"], {
-                                                        title: "Bahçeli"
+                                                        title: "Duşakabin"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/agena/features/index.jsx",
                                                         lineNumber: 156,
@@ -6657,7 +6657,7 @@ const AgenaFeatures = ()=>{
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                     className: "item ",
                                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$icons$2f$Check$2e$jsx__$5b$client$5d$__$28$ecmascript$29$__["default"], {
-                                                        title: "Ebeveyn Banyosu"
+                                                        title: "Alarm"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/agena/features/index.jsx",
                                                         lineNumber: 159,
@@ -6667,16 +6667,44 @@ const AgenaFeatures = ()=>{
                                                     fileName: "[project]/src/agena/features/index.jsx",
                                                     lineNumber: 158,
                                                     columnNumber: 19
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                    className: "item ",
+                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$icons$2f$Check$2e$jsx__$5b$client$5d$__$28$ecmascript$29$__["default"], {
+                                                        title: "Bahçeli"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/src/agena/features/index.jsx",
+                                                        lineNumber: 162,
+                                                        columnNumber: 21
+                                                    }, this)
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/agena/features/index.jsx",
+                                                    lineNumber: 161,
+                                                    columnNumber: 19
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                    className: "item ",
+                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$icons$2f$Check$2e$jsx__$5b$client$5d$__$28$ecmascript$29$__["default"], {
+                                                        title: "Ebeveyn Banyosu"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/src/agena/features/index.jsx",
+                                                        lineNumber: 165,
+                                                        columnNumber: 21
+                                                    }, this)
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/agena/features/index.jsx",
+                                                    lineNumber: 164,
+                                                    columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/agena/features/index.jsx",
-                                            lineNumber: 128,
+                                            lineNumber: 131,
                                             columnNumber: 17
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/agena/features/index.jsx",
-                                        lineNumber: 127,
+                                        lineNumber: 130,
                                         columnNumber: 15
                                     }, this)
                                 ]
@@ -7085,7 +7113,9 @@ __turbopack_esm__({
 });
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/react/jsx-dev-runtime.js [client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/react/index.js [client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$link$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/link.js [client] (ecmascript)");
 "__TURBOPACK__ecmascript__hoisting__location__";
+;
 ;
 ;
 ;
@@ -7101,12 +7131,12 @@ const PropertyDetails = ()=>{
                         children: "Detaylar"
                     }, void 0, false, {
                         fileName: "[project]/src/agena/propertyDetails/index.jsx",
-                        lineNumber: 9,
+                        lineNumber: 10,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/src/agena/propertyDetails/index.jsx",
-                    lineNumber: 8,
+                    lineNumber: 9,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -7120,21 +7150,21 @@ const PropertyDetails = ()=>{
                                             children: "Kat Sayısı:"
                                         }, void 0, false, {
                                             fileName: "[project]/src/agena/propertyDetails/index.jsx",
-                                            lineNumber: 14,
+                                            lineNumber: 15,
                                             columnNumber: 15
                                         }, this),
                                         " ",
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                            children: "3"
+                                            children: "4"
                                         }, void 0, false, {
                                             fileName: "[project]/src/agena/propertyDetails/index.jsx",
-                                            lineNumber: 14,
+                                            lineNumber: 15,
                                             columnNumber: 42
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/agena/propertyDetails/index.jsx",
-                                    lineNumber: 13,
+                                    lineNumber: 14,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -7143,7 +7173,7 @@ const PropertyDetails = ()=>{
                                             children: "Oda Sayısı:"
                                         }, void 0, false, {
                                             fileName: "[project]/src/agena/propertyDetails/index.jsx",
-                                            lineNumber: 17,
+                                            lineNumber: 18,
                                             columnNumber: 15
                                         }, this),
                                         " ",
@@ -7151,13 +7181,13 @@ const PropertyDetails = ()=>{
                                             children: "5 + 1"
                                         }, void 0, false, {
                                             fileName: "[project]/src/agena/propertyDetails/index.jsx",
-                                            lineNumber: 17,
+                                            lineNumber: 18,
                                             columnNumber: 42
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/agena/propertyDetails/index.jsx",
-                                    lineNumber: 16,
+                                    lineNumber: 17,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -7166,7 +7196,7 @@ const PropertyDetails = ()=>{
                                             children: "Suit Aile Odası:"
                                         }, void 0, false, {
                                             fileName: "[project]/src/agena/propertyDetails/index.jsx",
-                                            lineNumber: 20,
+                                            lineNumber: 21,
                                             columnNumber: 15
                                         }, this),
                                         " ",
@@ -7174,13 +7204,13 @@ const PropertyDetails = ()=>{
                                             children: "4"
                                         }, void 0, false, {
                                             fileName: "[project]/src/agena/propertyDetails/index.jsx",
-                                            lineNumber: 20,
+                                            lineNumber: 21,
                                             columnNumber: 47
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/agena/propertyDetails/index.jsx",
-                                    lineNumber: 19,
+                                    lineNumber: 20,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -7189,7 +7219,7 @@ const PropertyDetails = ()=>{
                                             children: "Suit Genç Odası:"
                                         }, void 0, false, {
                                             fileName: "[project]/src/agena/propertyDetails/index.jsx",
-                                            lineNumber: 23,
+                                            lineNumber: 24,
                                             columnNumber: 15
                                         }, this),
                                         " ",
@@ -7197,22 +7227,22 @@ const PropertyDetails = ()=>{
                                             children: "1"
                                         }, void 0, false, {
                                             fileName: "[project]/src/agena/propertyDetails/index.jsx",
-                                            lineNumber: 23,
+                                            lineNumber: 24,
                                             columnNumber: 47
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/agena/propertyDetails/index.jsx",
-                                    lineNumber: 22,
+                                    lineNumber: 23,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
-                                            children: "Banyo"
+                                            children: "Banyo Sayısı:"
                                         }, void 0, false, {
                                             fileName: "[project]/src/agena/propertyDetails/index.jsx",
-                                            lineNumber: 26,
+                                            lineNumber: 27,
                                             columnNumber: 15
                                         }, this),
                                         " ",
@@ -7220,19 +7250,19 @@ const PropertyDetails = ()=>{
                                             children: "6"
                                         }, void 0, false, {
                                             fileName: "[project]/src/agena/propertyDetails/index.jsx",
-                                            lineNumber: 26,
-                                            columnNumber: 36
+                                            lineNumber: 27,
+                                            columnNumber: 44
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/agena/propertyDetails/index.jsx",
-                                    lineNumber: 25,
+                                    lineNumber: 26,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/agena/propertyDetails/index.jsx",
-                            lineNumber: 12,
+                            lineNumber: 13,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -7243,20 +7273,20 @@ const PropertyDetails = ()=>{
                                             children: "Suit Aile Odası:"
                                         }, void 0, false, {
                                             fileName: "[project]/src/agena/propertyDetails/index.jsx",
-                                            lineNumber: 31,
+                                            lineNumber: 32,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                             children: "Çift Kişilik Yatak - Banyo - TV - Klima - Balkon - Elbise Dolabı"
                                         }, void 0, false, {
                                             fileName: "[project]/src/agena/propertyDetails/index.jsx",
-                                            lineNumber: 32,
+                                            lineNumber: 33,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/agena/propertyDetails/index.jsx",
-                                    lineNumber: 30,
+                                    lineNumber: 31,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -7265,20 +7295,20 @@ const PropertyDetails = ()=>{
                                             children: "Suit Genç Odası:"
                                         }, void 0, false, {
                                             fileName: "[project]/src/agena/propertyDetails/index.jsx",
-                                            lineNumber: 37,
+                                            lineNumber: 38,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                             children: "2 Adet Tek Kişilik Yatak - Banyo - TV - Klima - Balkon - Elbise Dolabı"
                                         }, void 0, false, {
                                             fileName: "[project]/src/agena/propertyDetails/index.jsx",
-                                            lineNumber: 38,
+                                            lineNumber: 39,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/agena/propertyDetails/index.jsx",
-                                    lineNumber: 36,
+                                    lineNumber: 37,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -7287,89 +7317,105 @@ const PropertyDetails = ()=>{
                                             children: "Havuz Ölçüleri:"
                                         }, void 0, false, {
                                             fileName: "[project]/src/agena/propertyDetails/index.jsx",
-                                            lineNumber: 44,
-                                            columnNumber: 15
-                                        }, this),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                            children: "En: 4,35 m Boy: 8,95 m Derinlik: 1,55-1,95 cm"
-                                        }, void 0, false, {
-                                            fileName: "[project]/src/agena/propertyDetails/index.jsx",
                                             lineNumber: 45,
                                             columnNumber: 15
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                            children: "En: 4,35 m Boy: 8,95 m Derinlik: 155-195 cm"
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/agena/propertyDetails/index.jsx",
+                                            lineNumber: 46,
+                                            columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/agena/propertyDetails/index.jsx",
-                                    lineNumber: 43,
+                                    lineNumber: 44,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
-                                            children: "Price:"
+                                            children: "Zemin Kat:"
                                         }, void 0, false, {
                                             fileName: "[project]/src/agena/propertyDetails/index.jsx",
-                                            lineNumber: 48,
+                                            lineNumber: 49,
                                             columnNumber: 15
                                         }, this),
-                                        " ",
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                            children: "2"
+                                            children: "Bilardo - Masa Tenisi - Dart"
                                         }, void 0, false, {
                                             fileName: "[project]/src/agena/propertyDetails/index.jsx",
-                                            lineNumber: 48,
-                                            columnNumber: 37
+                                            lineNumber: 50,
+                                            columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/agena/propertyDetails/index.jsx",
-                                    lineNumber: 47,
+                                    lineNumber: 48,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
-                                            children: "Property Status:"
+                                            children: "Kiralama için:"
                                         }, void 0, false, {
                                             fileName: "[project]/src/agena/propertyDetails/index.jsx",
-                                            lineNumber: 51,
+                                            lineNumber: 53,
                                             columnNumber: 15
                                         }, this),
-                                        " ",
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                            children: "For Sale"
+                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$link$2e$js__$5b$client$5d$__$28$ecmascript$29$__["default"], {
+                                                href: "https://wa.me/905324905307?text=Merhaba,%20İnsel%20Villaları%20hakkında%20bilgi%20almak%20istiyorum",
+                                                rel: "noopener noreferrer",
+                                                target: "_blank",
+                                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("i", {
+                                                    className: "fab fa-whatsapp",
+                                                    style: {
+                                                        color: "rgb(37, 211, 102)"
+                                                    }
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/agena/propertyDetails/index.jsx",
+                                                    lineNumber: 60,
+                                                    columnNumber: 19
+                                                }, this)
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/agena/propertyDetails/index.jsx",
+                                                lineNumber: 55,
+                                                columnNumber: 17
+                                            }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/src/agena/propertyDetails/index.jsx",
-                                            lineNumber: 51,
-                                            columnNumber: 47
+                                            lineNumber: 54,
+                                            columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/agena/propertyDetails/index.jsx",
-                                    lineNumber: 50,
+                                    lineNumber: 52,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/agena/propertyDetails/index.jsx",
-                            lineNumber: 29,
+                            lineNumber: 30,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/agena/propertyDetails/index.jsx",
-                    lineNumber: 11,
+                    lineNumber: 12,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/agena/propertyDetails/index.jsx",
-            lineNumber: 7,
+            lineNumber: 8,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/agena/propertyDetails/index.jsx",
-        lineNumber: 6,
+        lineNumber: 7,
         columnNumber: 5
     }, this);
 };
@@ -7717,7 +7763,7 @@ const Agena = ()=>{
                     first: "VİLLA AGENA"
                 },
                 // title = "text"
-                content: "Villamızın giriş katında deniz ve doğa manzaralı Amerikan mutfak ve salon, üst katlarında beş adet suit yatak odası bulunmakta olup, ana ebeveyn odamızda yer alan jakuzide manzaraya karşı keyif yapabileceksiniz.  4 adet Suit Aile ve 1 adet Suit Genç yatak odamız bulunmaktadır. Aile odalarımızın her birinde Çift kişilik yatak, Elbise dolabı, Komodin, Makyaj masası, Klima, Jakuzi, Banyo, TV ve balkon bulunmaktadır.  Genç odamızda ise 2 Adet tek kişilik yatak, Elbise dolabı, Komodin, Makyaj masası, Bebek yatağı, Klima, Banyo, TV ve balkon bulunmaktadır. Tripleks villamızın 1. katında 2 aile odası ve 1 genç odası bulunmaktadır. Aile odalarımızın iki tanesi teras katındadır.  Villamızın Havuz Ebatları; En: 4,35 m Boy: 8,95 m Derinlik: 1,55-1,95 cm"
+                content: "Villamızın giriş katında deniz ve doğa manzaralı Amerikan mutfak ve salon, üst katlarında beş adet suit yatak odası bulunmakta olup, ana ebeveyn odamızda yer alan jakuzide manzaraya karşı keyif yapabileceksiniz.  Hayallerinizin ötesinde bir tatil imkanı sunmakta olan villamız, bodrum katta spor salonu (bilardo, masa tenisi, dart) ile bütün bir yılın yorgunluğunu üzerinizden atmanız için, kusursuz bir şekilde tasarlanmıştır. "
             }, void 0, false, {
                 fileName: "[project]/src/pages/agena/index.jsx",
                 lineNumber: 13,
@@ -7725,7 +7771,7 @@ const Agena = ()=>{
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$agena$2f$AgenaPage$2e$jsx__$5b$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                 fileName: "[project]/src/pages/agena/index.jsx",
-                lineNumber: 25,
+                lineNumber: 22,
                 columnNumber: 7
             }, this)
         ]

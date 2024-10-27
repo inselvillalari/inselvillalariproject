@@ -7092,7 +7092,9 @@ __turbopack_esm__({
 });
 var __TURBOPACK__commonjs__external__react$2f$jsx$2d$dev$2d$runtime__ = __turbopack_external_require__("react/jsx-dev-runtime", true);
 var __TURBOPACK__commonjs__external__react__ = __turbopack_external_require__("react", true);
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$link$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/link.js [ssr] (ecmascript)");
 "__TURBOPACK__ecmascript__hoisting__location__";
+;
 ;
 ;
 ;
@@ -7108,12 +7110,12 @@ const PropertyDetails = ()=>{
                         children: "Detaylar"
                     }, void 0, false, {
                         fileName: "[project]/src/capella/propertyDetails/index.jsx",
-                        lineNumber: 9,
+                        lineNumber: 10,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/src/capella/propertyDetails/index.jsx",
-                    lineNumber: 8,
+                    lineNumber: 9,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__commonjs__external__react$2f$jsx$2d$dev$2d$runtime__["jsxDEV"])("div", {
@@ -7127,7 +7129,7 @@ const PropertyDetails = ()=>{
                                             children: "Kat Sayısı:"
                                         }, void 0, false, {
                                             fileName: "[project]/src/capella/propertyDetails/index.jsx",
-                                            lineNumber: 14,
+                                            lineNumber: 15,
                                             columnNumber: 15
                                         }, this),
                                         " ",
@@ -7135,13 +7137,13 @@ const PropertyDetails = ()=>{
                                             children: "4"
                                         }, void 0, false, {
                                             fileName: "[project]/src/capella/propertyDetails/index.jsx",
-                                            lineNumber: 14,
+                                            lineNumber: 15,
                                             columnNumber: 42
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/capella/propertyDetails/index.jsx",
-                                    lineNumber: 13,
+                                    lineNumber: 14,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__commonjs__external__react$2f$jsx$2d$dev$2d$runtime__["jsxDEV"])("li", {
@@ -7150,7 +7152,7 @@ const PropertyDetails = ()=>{
                                             children: "Oda Sayısı:"
                                         }, void 0, false, {
                                             fileName: "[project]/src/capella/propertyDetails/index.jsx",
-                                            lineNumber: 17,
+                                            lineNumber: 18,
                                             columnNumber: 15
                                         }, this),
                                         " ",
@@ -7158,13 +7160,13 @@ const PropertyDetails = ()=>{
                                             children: "5 + 1"
                                         }, void 0, false, {
                                             fileName: "[project]/src/capella/propertyDetails/index.jsx",
-                                            lineNumber: 17,
+                                            lineNumber: 18,
                                             columnNumber: 42
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/capella/propertyDetails/index.jsx",
-                                    lineNumber: 16,
+                                    lineNumber: 17,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__commonjs__external__react$2f$jsx$2d$dev$2d$runtime__["jsxDEV"])("li", {
@@ -7173,7 +7175,7 @@ const PropertyDetails = ()=>{
                                             children: "Suit Aile Odası:"
                                         }, void 0, false, {
                                             fileName: "[project]/src/capella/propertyDetails/index.jsx",
-                                            lineNumber: 20,
+                                            lineNumber: 21,
                                             columnNumber: 15
                                         }, this),
                                         " ",
@@ -7181,13 +7183,13 @@ const PropertyDetails = ()=>{
                                             children: "4"
                                         }, void 0, false, {
                                             fileName: "[project]/src/capella/propertyDetails/index.jsx",
-                                            lineNumber: 20,
+                                            lineNumber: 21,
                                             columnNumber: 47
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/capella/propertyDetails/index.jsx",
-                                    lineNumber: 19,
+                                    lineNumber: 20,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__commonjs__external__react$2f$jsx$2d$dev$2d$runtime__["jsxDEV"])("li", {
@@ -7196,7 +7198,7 @@ const PropertyDetails = ()=>{
                                             children: "Suit Genç Odası:"
                                         }, void 0, false, {
                                             fileName: "[project]/src/capella/propertyDetails/index.jsx",
-                                            lineNumber: 23,
+                                            lineNumber: 24,
                                             columnNumber: 15
                                         }, this),
                                         " ",
@@ -7204,13 +7206,13 @@ const PropertyDetails = ()=>{
                                             children: "1"
                                         }, void 0, false, {
                                             fileName: "[project]/src/capella/propertyDetails/index.jsx",
-                                            lineNumber: 23,
+                                            lineNumber: 24,
                                             columnNumber: 47
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/capella/propertyDetails/index.jsx",
-                                    lineNumber: 22,
+                                    lineNumber: 23,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__commonjs__external__react$2f$jsx$2d$dev$2d$runtime__["jsxDEV"])("li", {
@@ -7219,7 +7221,7 @@ const PropertyDetails = ()=>{
                                             children: "Banyo Sayısı:"
                                         }, void 0, false, {
                                             fileName: "[project]/src/capella/propertyDetails/index.jsx",
-                                            lineNumber: 26,
+                                            lineNumber: 27,
                                             columnNumber: 15
                                         }, this),
                                         " ",
@@ -7227,19 +7229,19 @@ const PropertyDetails = ()=>{
                                             children: "7"
                                         }, void 0, false, {
                                             fileName: "[project]/src/capella/propertyDetails/index.jsx",
-                                            lineNumber: 26,
+                                            lineNumber: 27,
                                             columnNumber: 44
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/capella/propertyDetails/index.jsx",
-                                    lineNumber: 25,
+                                    lineNumber: 26,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/capella/propertyDetails/index.jsx",
-                            lineNumber: 12,
+                            lineNumber: 13,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__commonjs__external__react$2f$jsx$2d$dev$2d$runtime__["jsxDEV"])("ul", {
@@ -7250,20 +7252,20 @@ const PropertyDetails = ()=>{
                                             children: "Suit Aile Odası:"
                                         }, void 0, false, {
                                             fileName: "[project]/src/capella/propertyDetails/index.jsx",
-                                            lineNumber: 31,
+                                            lineNumber: 32,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__commonjs__external__react$2f$jsx$2d$dev$2d$runtime__["jsxDEV"])("span", {
                                             children: "Çift Kişilik Yatak - Banyo - TV - Klima - Balkon - Elbise Dolabı"
                                         }, void 0, false, {
                                             fileName: "[project]/src/capella/propertyDetails/index.jsx",
-                                            lineNumber: 32,
+                                            lineNumber: 33,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/capella/propertyDetails/index.jsx",
-                                    lineNumber: 30,
+                                    lineNumber: 31,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__commonjs__external__react$2f$jsx$2d$dev$2d$runtime__["jsxDEV"])("li", {
@@ -7272,20 +7274,20 @@ const PropertyDetails = ()=>{
                                             children: "Suit Genç Odası:"
                                         }, void 0, false, {
                                             fileName: "[project]/src/capella/propertyDetails/index.jsx",
-                                            lineNumber: 37,
+                                            lineNumber: 38,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__commonjs__external__react$2f$jsx$2d$dev$2d$runtime__["jsxDEV"])("span", {
                                             children: "2 Adet Tek Kişilik Yatak - Banyo - TV - Klima - Balkon - Elbise Dolabı"
                                         }, void 0, false, {
                                             fileName: "[project]/src/capella/propertyDetails/index.jsx",
-                                            lineNumber: 38,
+                                            lineNumber: 39,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/capella/propertyDetails/index.jsx",
-                                    lineNumber: 36,
+                                    lineNumber: 37,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__commonjs__external__react$2f$jsx$2d$dev$2d$runtime__["jsxDEV"])("li", {
@@ -7294,20 +7296,20 @@ const PropertyDetails = ()=>{
                                             children: "Havuz Ölçüleri:"
                                         }, void 0, false, {
                                             fileName: "[project]/src/capella/propertyDetails/index.jsx",
-                                            lineNumber: 44,
+                                            lineNumber: 45,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__commonjs__external__react$2f$jsx$2d$dev$2d$runtime__["jsxDEV"])("span", {
                                             children: "En: 3,90 m Boy: 7,55 m Derinlik: 145-160 cm"
                                         }, void 0, false, {
                                             fileName: "[project]/src/capella/propertyDetails/index.jsx",
-                                            lineNumber: 45,
+                                            lineNumber: 46,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/capella/propertyDetails/index.jsx",
-                                    lineNumber: 43,
+                                    lineNumber: 44,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__commonjs__external__react$2f$jsx$2d$dev$2d$runtime__["jsxDEV"])("li", {
@@ -7316,20 +7318,20 @@ const PropertyDetails = ()=>{
                                             children: "Bodrum Kat:"
                                         }, void 0, false, {
                                             fileName: "[project]/src/capella/propertyDetails/index.jsx",
-                                            lineNumber: 48,
+                                            lineNumber: 49,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__commonjs__external__react$2f$jsx$2d$dev$2d$runtime__["jsxDEV"])("span", {
                                             children: "Bilardo - Masa Tenisi - Dart - Spor Salonu"
                                         }, void 0, false, {
                                             fileName: "[project]/src/capella/propertyDetails/index.jsx",
-                                            lineNumber: 49,
+                                            lineNumber: 50,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/capella/propertyDetails/index.jsx",
-                                    lineNumber: 47,
+                                    lineNumber: 48,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__commonjs__external__react$2f$jsx$2d$dev$2d$runtime__["jsxDEV"])("li", {
@@ -7338,44 +7340,59 @@ const PropertyDetails = ()=>{
                                             children: "Property Status:"
                                         }, void 0, false, {
                                             fileName: "[project]/src/capella/propertyDetails/index.jsx",
-                                            lineNumber: 52,
+                                            lineNumber: 53,
                                             columnNumber: 15
                                         }, this),
                                         " ",
                                         /*#__PURE__*/ (0, __TURBOPACK__commonjs__external__react$2f$jsx$2d$dev$2d$runtime__["jsxDEV"])("span", {
-                                            children: "For Sale"
+                                            children: /*#__PURE__*/ (0, __TURBOPACK__commonjs__external__react$2f$jsx$2d$dev$2d$runtime__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$link$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {
+                                                href: "https://wa.me/905324905307?text=Merhaba,%20İnsel%20Villaları%20hakkında%20bilgi%20almak%20istiyorum",
+                                                rel: "noopener noreferrer",
+                                                target: "_blank",
+                                                children: /*#__PURE__*/ (0, __TURBOPACK__commonjs__external__react$2f$jsx$2d$dev$2d$runtime__["jsxDEV"])("i", {
+                                                    className: "fab fa-whatsapp"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/capella/propertyDetails/index.jsx",
+                                                    lineNumber: 60,
+                                                    columnNumber: 19
+                                                }, this)
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/capella/propertyDetails/index.jsx",
+                                                lineNumber: 55,
+                                                columnNumber: 17
+                                            }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/src/capella/propertyDetails/index.jsx",
-                                            lineNumber: 52,
-                                            columnNumber: 47
+                                            lineNumber: 54,
+                                            columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/capella/propertyDetails/index.jsx",
-                                    lineNumber: 51,
+                                    lineNumber: 52,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/capella/propertyDetails/index.jsx",
-                            lineNumber: 29,
+                            lineNumber: 30,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/capella/propertyDetails/index.jsx",
-                    lineNumber: 11,
+                    lineNumber: 12,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/capella/propertyDetails/index.jsx",
-            lineNumber: 7,
+            lineNumber: 8,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/capella/propertyDetails/index.jsx",
-        lineNumber: 6,
+        lineNumber: 7,
         columnNumber: 5
     }, this);
 };
