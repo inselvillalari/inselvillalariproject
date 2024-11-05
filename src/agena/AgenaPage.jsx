@@ -5,6 +5,7 @@ import initIsotope from "../common/initIsotope";
 import AgenaFeatures from "./features";
 import AgenaSkills from "./skills";
 import PropertyDetails from "./propertyDetails";
+import BookingCalendar from "./calendar";
 
 const AgenaPage = () => {
   React.useEffect(() => {
@@ -86,6 +87,7 @@ const AgenaPage = () => {
             </Link>
           </div>
         </div>
+        <BookingCalendar/>
         <AgenaSkills />
         <AgenaFeatures />
         <PropertyDetails />

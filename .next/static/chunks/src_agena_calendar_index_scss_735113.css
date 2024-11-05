@@ -1,0 +1,74 @@
+/* [project]/src/agena/calendar/index.scss.css [client] (css) */
+.booking-calendar .react-calendar {
+  border: none;
+  font-family: Arial, sans-serif;
+}
+
+.dolu {
+  color: #fff;
+  background-color: #001f3f !important;
+}
+
+.rezervasyon {
+  color: #fff;
+  background-color: #ff851b !important;
+}
+
+.fırsat {
+  color: #000;
+  background-color: #ffdc00 !important;
+}
+
+.giriş {
+  color: #fff;
+  background-color: #2ecc71 !important;
+}
+
+.indirim {
+  color: #fff;
+  background-color: #e74c3c !important;
+}
+
+.girişÇıkış {
+  color: #fff;
+  background-color: #2980b9 !important;
+}
+
+.legend {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.legend .legend-color {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+}
+
+.dolu .legend.legend-color {
+  background-color: #001f3f;
+}
+
+.rezervasyon .legend.legend-color {
+  background-color: #ff851b;
+}
+
+.fırsat .legend.legend-color {
+  background-color: #ffdc00;
+}
+
+.giriş .legend.legend-color {
+  background-color: #2ecc71;
+}
+
+.indirim .legend.legend-color {
+  background-color: #e74c3c;
+}
+
+.girişÇıkış .legend.legend-color {
+  background-color: #2980b9;
+}
+
+/*# sourceMappingURL=src_agena_calendar_index_scss_735113.css.map*/
