@@ -2,6 +2,7 @@
 .booking-calendar .react-calendar {
   border: none;
   font-family: Arial, sans-serif;
+  border-radius: 8%;
 }
 
 .dolu {

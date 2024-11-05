@@ -1,8 +1,7 @@
-/* [project]/src/agena/calendar/index.scss.css [ssr] (css) */
+/* [project]/src/agena/calendar/index.scss.css [client] (css) */
 .booking-calendar .react-calendar {
   border: none;
   font-family: Arial, sans-serif;
-  border-radius: 8%;
 }
 
 .dolu {
@@ -72,4 +71,5 @@
   background-color: #2980b9;
 }
 
-/*# sourceMappingURL=src_agena_calendar_index_scss_f42186.css.map*/
+
+/*# sourceMappingURL=src_agena_calendar_index_scss_366b38.css.map*/

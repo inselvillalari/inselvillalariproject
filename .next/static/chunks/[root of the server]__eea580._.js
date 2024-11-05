@@ -1,4 +1,4 @@
-(globalThis.TURBOPACK = globalThis.TURBOPACK || []).push(["static/chunks/node_modules_next_b6181b._.js", {
+(globalThis.TURBOPACK = globalThis.TURBOPACK || []).push(["static/chunks/[root of the server]__eea580._.js", {
 
 "[project]/node_modules/next/dist/compiled/process/browser.js [client] (ecmascript)": (function({ r: __turbopack_require__, f: __turbopack_module_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, M: __turbopack_modules__, l: __turbopack_load__, j: __turbopack_dynamic__, P: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, R: __turbopack_resolve_module_id_path__, g: global, __dirname, k: __turbopack_refresh__, m: module, e: exports, t: require }) { !function() {
 
@@ -19448,11 +19448,6 @@ if ((typeof exports.default === 'function' || typeof exports.default === 'object
 } //# sourceMappingURL=next-dev-turbopack.js.map
 
 }.call(this) }),
-"[project]/node_modules/next/script.js [client] (ecmascript)": (function({ r: __turbopack_require__, f: __turbopack_module_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, M: __turbopack_modules__, l: __turbopack_load__, j: __turbopack_dynamic__, P: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, R: __turbopack_resolve_module_id_path__, g: global, __dirname, k: __turbopack_refresh__, m: module, e: exports, t: require }) { !function() {
-
-module.exports = __turbopack_require__("[project]/node_modules/next/dist/client/script.js [client] (ecmascript)");
-
-}.call(this) }),
 "[project]/node_modules/next/dist/shared/lib/side-effect.js [client] (ecmascript)": (function({ r: __turbopack_require__, f: __turbopack_module_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, M: __turbopack_modules__, l: __turbopack_load__, j: __turbopack_dynamic__, P: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, R: __turbopack_resolve_module_id_path__, g: global, __dirname, k: __turbopack_refresh__, m: module, e: exports, t: require }) { !function() {
 
 "use strict";
@@ -19765,833 +19760,160 @@ if ((typeof exports.default === 'function' || typeof exports.default === 'object
 } //# sourceMappingURL=head.js.map
 
 }.call(this) }),
-"[project]/node_modules/next/head.js [client] (ecmascript)": (function({ r: __turbopack_require__, f: __turbopack_module_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, M: __turbopack_modules__, l: __turbopack_load__, j: __turbopack_dynamic__, P: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, R: __turbopack_resolve_module_id_path__, g: global, __dirname, k: __turbopack_refresh__, m: module, e: exports, t: require }) { !function() {
-
-module.exports = __turbopack_require__("[project]/node_modules/next/dist/shared/lib/head.js [client] (ecmascript)");
-
-}.call(this) }),
-"[project]/node_modules/next/dist/client/components/router-reducer/reducers/get-segment-value.js [client] (ecmascript)": (function({ r: __turbopack_require__, f: __turbopack_module_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, M: __turbopack_modules__, l: __turbopack_load__, j: __turbopack_dynamic__, P: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, R: __turbopack_resolve_module_id_path__, g: global, __dirname, k: __turbopack_refresh__, m: module, e: exports, t: require }) { !function() {
+"[project]/node_modules/next/dist/pages/_error.js [client] (ecmascript)": (function({ r: __turbopack_require__, f: __turbopack_module_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, M: __turbopack_modules__, l: __turbopack_load__, j: __turbopack_dynamic__, P: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, R: __turbopack_resolve_module_id_path__, g: global, __dirname, k: __turbopack_refresh__, m: module, e: exports, t: require }) { !function() {
 
 "use strict";
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-Object.defineProperty(exports, "getSegmentValue", {
+Object.defineProperty(exports, "default", {
     enumerable: true,
     get: function() {
-        return getSegmentValue;
+        return Error;
     }
 });
-function getSegmentValue(segment) {
-    return Array.isArray(segment) ? segment[1] : segment;
+const _interop_require_default = __turbopack_require__("[project]/node_modules/@swc/helpers/cjs/_interop_require_default.cjs [client] (ecmascript)");
+const _jsxruntime = __turbopack_require__("[project]/node_modules/react/jsx-runtime.js [client] (ecmascript)");
+const _react = /*#__PURE__*/ _interop_require_default._(__turbopack_require__("[project]/node_modules/react/index.js [client] (ecmascript)"));
+const _head = /*#__PURE__*/ _interop_require_default._(__turbopack_require__("[project]/node_modules/next/dist/shared/lib/head.js [client] (ecmascript)"));
+const statusCodes = {
+    400: "Bad Request",
+    404: "This page could not be found",
+    405: "Method Not Allowed",
+    500: "Internal Server Error"
+};
+function _getInitialProps(param) {
+    let { res, err } = param;
+    const statusCode = res && res.statusCode ? res.statusCode : err ? err.statusCode : 404;
+    return {
+        statusCode
+    };
 }
+const styles = {
+    error: {
+        // https://github.com/sindresorhus/modern-normalize/blob/main/modern-normalize.css#L38-L52
+        fontFamily: 'system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji"',
+        height: "100vh",
+        textAlign: "center",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center"
+    },
+    desc: {
+        lineHeight: "48px"
+    },
+    h1: {
+        display: "inline-block",
+        margin: "0 20px 0 0",
+        paddingRight: 23,
+        fontSize: 24,
+        fontWeight: 500,
+        verticalAlign: "top"
+    },
+    h2: {
+        fontSize: 14,
+        fontWeight: 400,
+        lineHeight: "28px"
+    },
+    wrap: {
+        display: "inline-block"
+    }
+};
+class Error extends _react.default.Component {
+    render() {
+        const { statusCode, withDarkMode = true } = this.props;
+        const title = this.props.title || statusCodes[statusCode] || "An unexpected error has occurred";
+        return /*#__PURE__*/ (0, _jsxruntime.jsxs)("div", {
+            style: styles.error,
+            children: [
+                /*#__PURE__*/ (0, _jsxruntime.jsx)(_head.default, {
+                    children: /*#__PURE__*/ (0, _jsxruntime.jsx)("title", {
+                        children: statusCode ? statusCode + ": " + title : "Application error: a client-side exception has occurred"
+                    })
+                }),
+                /*#__PURE__*/ (0, _jsxruntime.jsxs)("div", {
+                    style: styles.desc,
+                    children: [
+                        /*#__PURE__*/ (0, _jsxruntime.jsx)("style", {
+                            dangerouslySetInnerHTML: {
+                                /* CSS minified from
+                body { margin: 0; color: #000; background: #fff; }
+                .next-error-h1 {
+                  border-right: 1px solid rgba(0, 0, 0, .3);
+                }
+
+                ${
+                  withDarkMode
+                    ? `@media (prefers-color-scheme: dark) {
+                  body { color: #fff; background: #000; }
+                  .next-error-h1 {
+                    border-right: 1px solid rgba(255, 255, 255, .3);
+                  }
+                }`
+                    : ''
+                }
+               */ __html: "body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}" + (withDarkMode ? "@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}" : "")
+                            }
+                        }),
+                        statusCode ? /*#__PURE__*/ (0, _jsxruntime.jsx)("h1", {
+                            className: "next-error-h1",
+                            style: styles.h1,
+                            children: statusCode
+                        }) : null,
+                        /*#__PURE__*/ (0, _jsxruntime.jsx)("div", {
+                            style: styles.wrap,
+                            children: /*#__PURE__*/ (0, _jsxruntime.jsxs)("h2", {
+                                style: styles.h2,
+                                children: [
+                                    this.props.title || statusCode ? title : /*#__PURE__*/ (0, _jsxruntime.jsx)(_jsxruntime.Fragment, {
+                                        children: "Application error: a client-side exception has occurred (see the browser console for more information)"
+                                    }),
+                                    "."
+                                ]
+                            })
+                        })
+                    ]
+                })
+            ]
+        });
+    }
+}
+Error.displayName = "ErrorPage";
+Error.getInitialProps = _getInitialProps;
+Error.origGetInitialProps = _getInitialProps;
 if ((typeof exports.default === 'function' || typeof exports.default === 'object' && exports.default !== null) && typeof exports.default.__esModule === 'undefined') {
     Object.defineProperty(exports.default, '__esModule', {
         value: true
     });
     Object.assign(exports.default, exports);
     module.exports = exports.default;
-} //# sourceMappingURL=get-segment-value.js.map
+} //# sourceMappingURL=_error.js.map
 
 }.call(this) }),
-"[project]/node_modules/next/dist/client/components/async-local-storage.js [client] (ecmascript)": (function({ r: __turbopack_require__, f: __turbopack_module_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, M: __turbopack_modules__, l: __turbopack_load__, j: __turbopack_dynamic__, P: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, R: __turbopack_resolve_module_id_path__, g: global, __dirname, k: __turbopack_refresh__, m: module, e: exports, t: require }) { !function() {
+"[project]/node_modules/next/error.js [client] (ecmascript)": (function({ r: __turbopack_require__, f: __turbopack_module_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, M: __turbopack_modules__, l: __turbopack_load__, j: __turbopack_dynamic__, P: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, R: __turbopack_resolve_module_id_path__, g: global, __dirname, k: __turbopack_refresh__, m: module, e: exports, t: require }) { !function() {
 
-"use strict";
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-Object.defineProperty(exports, "createAsyncLocalStorage", {
-    enumerable: true,
-    get: function() {
-        return createAsyncLocalStorage;
-    }
-});
-const sharedAsyncLocalStorageNotAvailableError = new Error("Invariant: AsyncLocalStorage accessed in runtime where it is not available");
-class FakeAsyncLocalStorage {
-    disable() {
-        throw sharedAsyncLocalStorageNotAvailableError;
-    }
-    getStore() {
-        // This fake implementation of AsyncLocalStorage always returns `undefined`.
-        return undefined;
-    }
-    run() {
-        throw sharedAsyncLocalStorageNotAvailableError;
-    }
-    exit() {
-        throw sharedAsyncLocalStorageNotAvailableError;
-    }
-    enterWith() {
-        throw sharedAsyncLocalStorageNotAvailableError;
-    }
-}
-const maybeGlobalAsyncLocalStorage = globalThis.AsyncLocalStorage;
-function createAsyncLocalStorage() {
-    if (maybeGlobalAsyncLocalStorage) {
-        return new maybeGlobalAsyncLocalStorage();
-    }
-    return new FakeAsyncLocalStorage();
-}
-if ((typeof exports.default === 'function' || typeof exports.default === 'object' && exports.default !== null) && typeof exports.default.__esModule === 'undefined') {
-    Object.defineProperty(exports.default, '__esModule', {
-        value: true
-    });
-    Object.assign(exports.default, exports);
-    module.exports = exports.default;
-} //# sourceMappingURL=async-local-storage.js.map
+module.exports = __turbopack_require__("[project]/node_modules/next/dist/pages/_error.js [client] (ecmascript)");
 
 }.call(this) }),
-"[project]/node_modules/next/dist/client/components/request-async-storage-instance.js [client] (ecmascript)": (function({ r: __turbopack_require__, f: __turbopack_module_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, M: __turbopack_modules__, l: __turbopack_load__, j: __turbopack_dynamic__, P: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, R: __turbopack_resolve_module_id_path__, g: global, __dirname, k: __turbopack_refresh__, m: module, e: exports, t: require }) { !function() {
+"[next]/entry/page-loader.ts { PAGE => \"[project]/node_modules/next/error.js [client] (ecmascript)\" } [client] (ecmascript)": (function({ r: __turbopack_require__, f: __turbopack_module_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, M: __turbopack_modules__, l: __turbopack_load__, j: __turbopack_dynamic__, P: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, R: __turbopack_resolve_module_id_path__, g: global, __dirname, k: __turbopack_refresh__, m: module, e: exports, t: require }) { !function() {
 
-"use strict";
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-Object.defineProperty(exports, "requestAsyncStorage", {
-    enumerable: true,
-    get: function() {
-        return requestAsyncStorage;
+const PAGE_PATH = "/_error";
+(window.__NEXT_P = window.__NEXT_P || []).push([
+    PAGE_PATH,
+    ()=>{
+        return __turbopack_require__("[project]/node_modules/next/error.js [client] (ecmascript)");
     }
-});
-const _asynclocalstorage = __turbopack_require__("[project]/node_modules/next/dist/client/components/async-local-storage.js [client] (ecmascript)");
-const requestAsyncStorage = (0, _asynclocalstorage.createAsyncLocalStorage)();
-if ((typeof exports.default === 'function' || typeof exports.default === 'object' && exports.default !== null) && typeof exports.default.__esModule === 'undefined') {
-    Object.defineProperty(exports.default, '__esModule', {
-        value: true
-    });
-    Object.assign(exports.default, exports);
-    module.exports = exports.default;
-} //# sourceMappingURL=request-async-storage-instance.js.map
-
-}.call(this) }),
-"[project]/node_modules/next/dist/client/components/request-async-storage.external.js [client] (ecmascript)": (function({ r: __turbopack_require__, f: __turbopack_module_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, M: __turbopack_modules__, l: __turbopack_load__, j: __turbopack_dynamic__, P: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, R: __turbopack_resolve_module_id_path__, g: global, __dirname, k: __turbopack_refresh__, m: module, e: exports, t: require }) { !function() {
-
-"TURBOPACK { transition: next-shared }";
-"use strict";
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-0 && (module.exports = {
-    getExpectedRequestStore: null,
-    requestAsyncStorage: null
-});
-function _export(target, all) {
-    for(var name in all)Object.defineProperty(target, name, {
-        enumerable: true,
-        get: all[name]
+]);
+if (module.hot) {
+    module.hot.dispose(function() {
+        window.__NEXT_P.push([
+            PAGE_PATH
+        ]);
     });
 }
-_export(exports, {
-    getExpectedRequestStore: function() {
-        return getExpectedRequestStore;
-    },
-    requestAsyncStorage: function() {
-        return _requestasyncstorageinstance.requestAsyncStorage;
-    }
-});
-const _requestasyncstorageinstance = __turbopack_require__("[project]/node_modules/next/dist/client/components/request-async-storage-instance.js [client] (ecmascript)");
-function getExpectedRequestStore(callingExpression) {
-    const store = _requestasyncstorageinstance.requestAsyncStorage.getStore();
-    if (store) return store;
-    throw new Error("`" + callingExpression + "` was called outside a request scope. Read more: https://nextjs.org/docs/messages/next-dynamic-api-wrong-context");
-}
-if ((typeof exports.default === 'function' || typeof exports.default === 'object' && exports.default !== null) && typeof exports.default.__esModule === 'undefined') {
-    Object.defineProperty(exports.default, '__esModule', {
-        value: true
-    });
-    Object.assign(exports.default, exports);
-    module.exports = exports.default;
-} //# sourceMappingURL=request-async-storage.external.js.map
-
-}.call(this) }),
-"[project]/node_modules/next/dist/client/components/action-async-storage-instance.js [client] (ecmascript)": (function({ r: __turbopack_require__, f: __turbopack_module_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, M: __turbopack_modules__, l: __turbopack_load__, j: __turbopack_dynamic__, P: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, R: __turbopack_resolve_module_id_path__, g: global, __dirname, k: __turbopack_refresh__, m: module, e: exports, t: require }) { !function() {
-
-"use strict";
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-Object.defineProperty(exports, "actionAsyncStorage", {
-    enumerable: true,
-    get: function() {
-        return actionAsyncStorage;
-    }
-});
-const _asynclocalstorage = __turbopack_require__("[project]/node_modules/next/dist/client/components/async-local-storage.js [client] (ecmascript)");
-const actionAsyncStorage = (0, _asynclocalstorage.createAsyncLocalStorage)();
-if ((typeof exports.default === 'function' || typeof exports.default === 'object' && exports.default !== null) && typeof exports.default.__esModule === 'undefined') {
-    Object.defineProperty(exports.default, '__esModule', {
-        value: true
-    });
-    Object.assign(exports.default, exports);
-    module.exports = exports.default;
-} //# sourceMappingURL=action-async-storage-instance.js.map
-
-}.call(this) }),
-"[project]/node_modules/next/dist/client/components/action-async-storage.external.js [client] (ecmascript)": (function({ r: __turbopack_require__, f: __turbopack_module_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, M: __turbopack_modules__, l: __turbopack_load__, j: __turbopack_dynamic__, P: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, R: __turbopack_resolve_module_id_path__, g: global, __dirname, k: __turbopack_refresh__, m: module, e: exports, t: require }) { !function() {
-
-"TURBOPACK { transition: next-shared }";
-"use strict";
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-Object.defineProperty(exports, "actionAsyncStorage", {
-    enumerable: true,
-    get: function() {
-        return _actionasyncstorageinstance.actionAsyncStorage;
-    }
-});
-const _actionasyncstorageinstance = __turbopack_require__("[project]/node_modules/next/dist/client/components/action-async-storage-instance.js [client] (ecmascript)");
-if ((typeof exports.default === 'function' || typeof exports.default === 'object' && exports.default !== null) && typeof exports.default.__esModule === 'undefined') {
-    Object.defineProperty(exports.default, '__esModule', {
-        value: true
-    });
-    Object.assign(exports.default, exports);
-    module.exports = exports.default;
-} //# sourceMappingURL=action-async-storage.external.js.map
-
-}.call(this) }),
-"[project]/node_modules/next/dist/client/components/redirect-status-code.js [client] (ecmascript)": (function({ r: __turbopack_require__, f: __turbopack_module_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, M: __turbopack_modules__, l: __turbopack_load__, j: __turbopack_dynamic__, P: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, R: __turbopack_resolve_module_id_path__, g: global, __dirname, k: __turbopack_refresh__, m: module, e: exports, t: require }) { !function() {
-
-"use strict";
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-Object.defineProperty(exports, "RedirectStatusCode", {
-    enumerable: true,
-    get: function() {
-        return RedirectStatusCode;
-    }
-});
-var RedirectStatusCode;
-(function(RedirectStatusCode) {
-    RedirectStatusCode[RedirectStatusCode["SeeOther"] = 303] = "SeeOther";
-    RedirectStatusCode[RedirectStatusCode["TemporaryRedirect"] = 307] = "TemporaryRedirect";
-    RedirectStatusCode[RedirectStatusCode["PermanentRedirect"] = 308] = "PermanentRedirect";
-})(RedirectStatusCode || (RedirectStatusCode = {}));
-if ((typeof exports.default === 'function' || typeof exports.default === 'object' && exports.default !== null) && typeof exports.default.__esModule === 'undefined') {
-    Object.defineProperty(exports.default, '__esModule', {
-        value: true
-    });
-    Object.assign(exports.default, exports);
-    module.exports = exports.default;
-} //# sourceMappingURL=redirect-status-code.js.map
-
-}.call(this) }),
-"[project]/node_modules/next/dist/client/components/redirect.js [client] (ecmascript)": (function({ r: __turbopack_require__, f: __turbopack_module_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, M: __turbopack_modules__, l: __turbopack_load__, j: __turbopack_dynamic__, P: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, R: __turbopack_resolve_module_id_path__, g: global, __dirname, k: __turbopack_refresh__, m: module, e: exports, t: require }) { !function() {
-
-"use strict";
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-0 && (module.exports = {
-    RedirectType: null,
-    getRedirectError: null,
-    getRedirectStatusCodeFromError: null,
-    getRedirectTypeFromError: null,
-    getURLFromRedirectError: null,
-    isRedirectError: null,
-    permanentRedirect: null,
-    redirect: null
-});
-function _export(target, all) {
-    for(var name in all)Object.defineProperty(target, name, {
-        enumerable: true,
-        get: all[name]
-    });
-}
-_export(exports, {
-    RedirectType: function() {
-        return RedirectType;
-    },
-    getRedirectError: function() {
-        return getRedirectError;
-    },
-    getRedirectStatusCodeFromError: function() {
-        return getRedirectStatusCodeFromError;
-    },
-    getRedirectTypeFromError: function() {
-        return getRedirectTypeFromError;
-    },
-    getURLFromRedirectError: function() {
-        return getURLFromRedirectError;
-    },
-    isRedirectError: function() {
-        return isRedirectError;
-    },
-    permanentRedirect: function() {
-        return permanentRedirect;
-    },
-    redirect: function() {
-        return redirect;
-    }
-});
-const _requestasyncstorageexternal = __turbopack_require__("[project]/node_modules/next/dist/client/components/request-async-storage.external.js [client] (ecmascript)");
-const _actionasyncstorageexternal = __turbopack_require__("[project]/node_modules/next/dist/client/components/action-async-storage.external.js [client] (ecmascript)");
-const _redirectstatuscode = __turbopack_require__("[project]/node_modules/next/dist/client/components/redirect-status-code.js [client] (ecmascript)");
-const REDIRECT_ERROR_CODE = "NEXT_REDIRECT";
-var RedirectType;
-(function(RedirectType) {
-    RedirectType["push"] = "push";
-    RedirectType["replace"] = "replace";
-})(RedirectType || (RedirectType = {}));
-function getRedirectError(url, type, statusCode) {
-    if (statusCode === void 0) statusCode = _redirectstatuscode.RedirectStatusCode.TemporaryRedirect;
-    const error = new Error(REDIRECT_ERROR_CODE);
-    error.digest = REDIRECT_ERROR_CODE + ";" + type + ";" + url + ";" + statusCode + ";";
-    const requestStore = _requestasyncstorageexternal.requestAsyncStorage.getStore();
-    if (requestStore) {
-        error.mutableCookies = requestStore.mutableCookies;
-    }
-    return error;
-}
-function redirect(/** The URL to redirect to */ url, type) {
-    if (type === void 0) type = "replace";
-    const actionStore = _actionasyncstorageexternal.actionAsyncStorage.getStore();
-    throw getRedirectError(url, type, // as we don't want the POST request to follow the redirect,
-    // as it could result in erroneous re-submissions.
-    (actionStore == null ? void 0 : actionStore.isAction) ? _redirectstatuscode.RedirectStatusCode.SeeOther : _redirectstatuscode.RedirectStatusCode.TemporaryRedirect);
-}
-function permanentRedirect(/** The URL to redirect to */ url, type) {
-    if (type === void 0) type = "replace";
-    const actionStore = _actionasyncstorageexternal.actionAsyncStorage.getStore();
-    throw getRedirectError(url, type, // as we don't want the POST request to follow the redirect,
-    // as it could result in erroneous re-submissions.
-    (actionStore == null ? void 0 : actionStore.isAction) ? _redirectstatuscode.RedirectStatusCode.SeeOther : _redirectstatuscode.RedirectStatusCode.PermanentRedirect);
-}
-function isRedirectError(error) {
-    if (typeof error !== "object" || error === null || !("digest" in error) || typeof error.digest !== "string") {
-        return false;
-    }
-    const [errorCode, type, destination, status] = error.digest.split(";", 4);
-    const statusCode = Number(status);
-    return errorCode === REDIRECT_ERROR_CODE && (type === "replace" || type === "push") && typeof destination === "string" && !isNaN(statusCode) && statusCode in _redirectstatuscode.RedirectStatusCode;
-}
-function getURLFromRedirectError(error) {
-    if (!isRedirectError(error)) return null;
-    // Slices off the beginning of the digest that contains the code and the
-    // separating ';'.
-    return error.digest.split(";", 3)[2];
-}
-function getRedirectTypeFromError(error) {
-    if (!isRedirectError(error)) {
-        throw new Error("Not a redirect error");
-    }
-    return error.digest.split(";", 2)[1];
-}
-function getRedirectStatusCodeFromError(error) {
-    if (!isRedirectError(error)) {
-        throw new Error("Not a redirect error");
-    }
-    return Number(error.digest.split(";", 4)[3]);
-}
-if ((typeof exports.default === 'function' || typeof exports.default === 'object' && exports.default !== null) && typeof exports.default.__esModule === 'undefined') {
-    Object.defineProperty(exports.default, '__esModule', {
-        value: true
-    });
-    Object.assign(exports.default, exports);
-    module.exports = exports.default;
-} //# sourceMappingURL=redirect.js.map
-
-}.call(this) }),
-"[project]/node_modules/next/dist/client/components/not-found.js [client] (ecmascript)": (function({ r: __turbopack_require__, f: __turbopack_module_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, M: __turbopack_modules__, l: __turbopack_load__, j: __turbopack_dynamic__, P: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, R: __turbopack_resolve_module_id_path__, g: global, __dirname, k: __turbopack_refresh__, m: module, e: exports, t: require }) { !function() {
-
-"use strict";
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-0 && (module.exports = {
-    isNotFoundError: null,
-    notFound: null
-});
-function _export(target, all) {
-    for(var name in all)Object.defineProperty(target, name, {
-        enumerable: true,
-        get: all[name]
-    });
-}
-_export(exports, {
-    isNotFoundError: function() {
-        return isNotFoundError;
-    },
-    notFound: function() {
-        return notFound;
-    }
-});
-const NOT_FOUND_ERROR_CODE = "NEXT_NOT_FOUND";
-function notFound() {
-    // eslint-disable-next-line no-throw-literal
-    const error = new Error(NOT_FOUND_ERROR_CODE);
-    error.digest = NOT_FOUND_ERROR_CODE;
-    throw error;
-}
-function isNotFoundError(error) {
-    if (typeof error !== "object" || error === null || !("digest" in error)) {
-        return false;
-    }
-    return error.digest === NOT_FOUND_ERROR_CODE;
-}
-if ((typeof exports.default === 'function' || typeof exports.default === 'object' && exports.default !== null) && typeof exports.default.__esModule === 'undefined') {
-    Object.defineProperty(exports.default, '__esModule', {
-        value: true
-    });
-    Object.assign(exports.default, exports);
-    module.exports = exports.default;
-} //# sourceMappingURL=not-found.js.map
-
-}.call(this) }),
-"[project]/node_modules/next/dist/client/components/navigation.react-server.js [client] (ecmascript)": (function({ r: __turbopack_require__, f: __turbopack_module_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, M: __turbopack_modules__, l: __turbopack_load__, j: __turbopack_dynamic__, P: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, R: __turbopack_resolve_module_id_path__, g: global, __dirname, k: __turbopack_refresh__, m: module, e: exports, t: require }) { !function() {
-
-/** @internal */ "use strict";
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-0 && (module.exports = {
-    ReadonlyURLSearchParams: null,
-    RedirectType: null,
-    notFound: null,
-    permanentRedirect: null,
-    redirect: null
-});
-function _export(target, all) {
-    for(var name in all)Object.defineProperty(target, name, {
-        enumerable: true,
-        get: all[name]
-    });
-}
-_export(exports, {
-    ReadonlyURLSearchParams: function() {
-        return ReadonlyURLSearchParams;
-    },
-    RedirectType: function() {
-        return _redirect.RedirectType;
-    },
-    notFound: function() {
-        return _notfound.notFound;
-    },
-    permanentRedirect: function() {
-        return _redirect.permanentRedirect;
-    },
-    redirect: function() {
-        return _redirect.redirect;
-    }
-});
-const _redirect = __turbopack_require__("[project]/node_modules/next/dist/client/components/redirect.js [client] (ecmascript)");
-const _notfound = __turbopack_require__("[project]/node_modules/next/dist/client/components/not-found.js [client] (ecmascript)");
-class ReadonlyURLSearchParamsError extends Error {
-    constructor(){
-        super("Method unavailable on `ReadonlyURLSearchParams`. Read more: https://nextjs.org/docs/app/api-reference/functions/use-search-params#updating-searchparams");
-    }
-}
-class ReadonlyURLSearchParams extends URLSearchParams {
-    /** @deprecated Method unavailable on `ReadonlyURLSearchParams`. Read more: https://nextjs.org/docs/app/api-reference/functions/use-search-params#updating-searchparams */ append() {
-        throw new ReadonlyURLSearchParamsError();
-    }
-    /** @deprecated Method unavailable on `ReadonlyURLSearchParams`. Read more: https://nextjs.org/docs/app/api-reference/functions/use-search-params#updating-searchparams */ delete() {
-        throw new ReadonlyURLSearchParamsError();
-    }
-    /** @deprecated Method unavailable on `ReadonlyURLSearchParams`. Read more: https://nextjs.org/docs/app/api-reference/functions/use-search-params#updating-searchparams */ set() {
-        throw new ReadonlyURLSearchParamsError();
-    }
-    /** @deprecated Method unavailable on `ReadonlyURLSearchParams`. Read more: https://nextjs.org/docs/app/api-reference/functions/use-search-params#updating-searchparams */ sort() {
-        throw new ReadonlyURLSearchParamsError();
-    }
-}
-if ((typeof exports.default === 'function' || typeof exports.default === 'object' && exports.default !== null) && typeof exports.default.__esModule === 'undefined') {
-    Object.defineProperty(exports.default, '__esModule', {
-        value: true
-    });
-    Object.assign(exports.default, exports);
-    module.exports = exports.default;
-} //# sourceMappingURL=navigation.react-server.js.map
-
-}.call(this) }),
-"[project]/node_modules/next/dist/shared/lib/server-inserted-html.shared-runtime.js [client] (ecmascript)": (function({ r: __turbopack_require__, f: __turbopack_module_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, M: __turbopack_modules__, l: __turbopack_load__, j: __turbopack_dynamic__, P: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, R: __turbopack_resolve_module_id_path__, g: global, __dirname, k: __turbopack_refresh__, m: module, e: exports, t: require }) { !function() {
-
-"use client";
-"use strict";
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-0 && (module.exports = {
-    ServerInsertedHTMLContext: null,
-    useServerInsertedHTML: null
-});
-function _export(target, all) {
-    for(var name in all)Object.defineProperty(target, name, {
-        enumerable: true,
-        get: all[name]
-    });
-}
-_export(exports, {
-    ServerInsertedHTMLContext: function() {
-        return ServerInsertedHTMLContext;
-    },
-    useServerInsertedHTML: function() {
-        return useServerInsertedHTML;
-    }
-});
-const _interop_require_wildcard = __turbopack_require__("[project]/node_modules/@swc/helpers/cjs/_interop_require_wildcard.cjs [client] (ecmascript)");
-const _react = /*#__PURE__*/ _interop_require_wildcard._(__turbopack_require__("[project]/node_modules/react/index.js [client] (ecmascript)"));
-const ServerInsertedHTMLContext = /*#__PURE__*/ _react.default.createContext(null);
-function useServerInsertedHTML(callback) {
-    const addInsertedServerHTMLCallback = (0, _react.useContext)(ServerInsertedHTMLContext);
-    // Should have no effects on client where there's no flush effects provider
-    if (addInsertedServerHTMLCallback) {
-        addInsertedServerHTMLCallback(callback);
-    }
-} //# sourceMappingURL=server-inserted-html.shared-runtime.js.map
-
-}.call(this) }),
-"[project]/node_modules/next/dist/client/components/static-generation-async-storage-instance.js [client] (ecmascript)": (function({ r: __turbopack_require__, f: __turbopack_module_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, M: __turbopack_modules__, l: __turbopack_load__, j: __turbopack_dynamic__, P: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, R: __turbopack_resolve_module_id_path__, g: global, __dirname, k: __turbopack_refresh__, m: module, e: exports, t: require }) { !function() {
-
-"use strict";
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-Object.defineProperty(exports, "staticGenerationAsyncStorage", {
-    enumerable: true,
-    get: function() {
-        return staticGenerationAsyncStorage;
-    }
-});
-const _asynclocalstorage = __turbopack_require__("[project]/node_modules/next/dist/client/components/async-local-storage.js [client] (ecmascript)");
-const staticGenerationAsyncStorage = (0, _asynclocalstorage.createAsyncLocalStorage)();
-if ((typeof exports.default === 'function' || typeof exports.default === 'object' && exports.default !== null) && typeof exports.default.__esModule === 'undefined') {
-    Object.defineProperty(exports.default, '__esModule', {
-        value: true
-    });
-    Object.assign(exports.default, exports);
-    module.exports = exports.default;
-} //# sourceMappingURL=static-generation-async-storage-instance.js.map
-
-}.call(this) }),
-"[project]/node_modules/next/dist/client/components/static-generation-async-storage.external.js [client] (ecmascript)": (function({ r: __turbopack_require__, f: __turbopack_module_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, M: __turbopack_modules__, l: __turbopack_load__, j: __turbopack_dynamic__, P: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, R: __turbopack_resolve_module_id_path__, g: global, __dirname, k: __turbopack_refresh__, m: module, e: exports, t: require }) { !function() {
-
-"TURBOPACK { transition: next-shared }";
-"use strict";
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-Object.defineProperty(exports, "staticGenerationAsyncStorage", {
-    enumerable: true,
-    get: function() {
-        return _staticgenerationasyncstorageinstance.staticGenerationAsyncStorage;
-    }
-});
-const _staticgenerationasyncstorageinstance = __turbopack_require__("[project]/node_modules/next/dist/client/components/static-generation-async-storage-instance.js [client] (ecmascript)");
-if ((typeof exports.default === 'function' || typeof exports.default === 'object' && exports.default !== null) && typeof exports.default.__esModule === 'undefined') {
-    Object.defineProperty(exports.default, '__esModule', {
-        value: true
-    });
-    Object.assign(exports.default, exports);
-    module.exports = exports.default;
-} //# sourceMappingURL=static-generation-async-storage.external.js.map
-
-}.call(this) }),
-"[project]/node_modules/next/dist/client/components/bailout-to-client-rendering.js [client] (ecmascript)": (function({ r: __turbopack_require__, f: __turbopack_module_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, M: __turbopack_modules__, l: __turbopack_load__, j: __turbopack_dynamic__, P: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, R: __turbopack_resolve_module_id_path__, g: global, __dirname, k: __turbopack_refresh__, m: module, e: exports, t: require }) { !function() {
-
-"use strict";
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-Object.defineProperty(exports, "bailoutToClientRendering", {
-    enumerable: true,
-    get: function() {
-        return bailoutToClientRendering;
-    }
-});
-const _bailouttocsr = __turbopack_require__("[project]/node_modules/next/dist/shared/lib/lazy-dynamic/bailout-to-csr.js [client] (ecmascript)");
-const _staticgenerationasyncstorageexternal = __turbopack_require__("[project]/node_modules/next/dist/client/components/static-generation-async-storage.external.js [client] (ecmascript)");
-function bailoutToClientRendering(reason) {
-    const staticGenerationStore = _staticgenerationasyncstorageexternal.staticGenerationAsyncStorage.getStore();
-    if (staticGenerationStore == null ? void 0 : staticGenerationStore.forceStatic) return;
-    if (staticGenerationStore == null ? void 0 : staticGenerationStore.isStaticGeneration) throw new _bailouttocsr.BailoutToCSRError(reason);
-}
-if ((typeof exports.default === 'function' || typeof exports.default === 'object' && exports.default !== null) && typeof exports.default.__esModule === 'undefined') {
-    Object.defineProperty(exports.default, '__esModule', {
-        value: true
-    });
-    Object.assign(exports.default, exports);
-    module.exports = exports.default;
-} //# sourceMappingURL=bailout-to-client-rendering.js.map
-
-}.call(this) }),
-"[project]/node_modules/next/dist/client/components/navigation.js [client] (ecmascript)": (function({ r: __turbopack_require__, f: __turbopack_module_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, M: __turbopack_modules__, l: __turbopack_load__, j: __turbopack_dynamic__, P: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, R: __turbopack_resolve_module_id_path__, g: global, __dirname, k: __turbopack_refresh__, m: module, e: exports, t: require }) { !function() {
-
-"use strict";
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-0 && (module.exports = {
-    ReadonlyURLSearchParams: null,
-    RedirectType: null,
-    ServerInsertedHTMLContext: null,
-    notFound: null,
-    permanentRedirect: null,
-    redirect: null,
-    useParams: null,
-    usePathname: null,
-    useRouter: null,
-    useSearchParams: null,
-    useSelectedLayoutSegment: null,
-    useSelectedLayoutSegments: null,
-    useServerInsertedHTML: null
-});
-function _export(target, all) {
-    for(var name in all)Object.defineProperty(target, name, {
-        enumerable: true,
-        get: all[name]
-    });
-}
-_export(exports, {
-    ReadonlyURLSearchParams: function() {
-        return _navigationreactserver.ReadonlyURLSearchParams;
-    },
-    RedirectType: function() {
-        return _navigationreactserver.RedirectType;
-    },
-    ServerInsertedHTMLContext: function() {
-        return _serverinsertedhtmlsharedruntime.ServerInsertedHTMLContext;
-    },
-    notFound: function() {
-        return _navigationreactserver.notFound;
-    },
-    permanentRedirect: function() {
-        return _navigationreactserver.permanentRedirect;
-    },
-    redirect: function() {
-        return _navigationreactserver.redirect;
-    },
-    useParams: function() {
-        return useParams;
-    },
-    usePathname: function() {
-        return usePathname;
-    },
-    useRouter: function() {
-        return useRouter;
-    },
-    useSearchParams: function() {
-        return useSearchParams;
-    },
-    useSelectedLayoutSegment: function() {
-        return useSelectedLayoutSegment;
-    },
-    useSelectedLayoutSegments: function() {
-        return useSelectedLayoutSegments;
-    },
-    useServerInsertedHTML: function() {
-        return _serverinsertedhtmlsharedruntime.useServerInsertedHTML;
-    }
-});
-const _react = __turbopack_require__("[project]/node_modules/react/index.js [client] (ecmascript)");
-const _approutercontextsharedruntime = __turbopack_require__("[project]/node_modules/next/dist/shared/lib/app-router-context.shared-runtime.js [client] (ecmascript)");
-const _hooksclientcontextsharedruntime = __turbopack_require__("[project]/node_modules/next/dist/shared/lib/hooks-client-context.shared-runtime.js [client] (ecmascript)");
-const _getsegmentvalue = __turbopack_require__("[project]/node_modules/next/dist/client/components/router-reducer/reducers/get-segment-value.js [client] (ecmascript)");
-const _segment = __turbopack_require__("[project]/node_modules/next/dist/shared/lib/segment.js [client] (ecmascript)");
-const _navigationreactserver = __turbopack_require__("[project]/node_modules/next/dist/client/components/navigation.react-server.js [client] (ecmascript)");
-const _serverinsertedhtmlsharedruntime = __turbopack_require__("[project]/node_modules/next/dist/shared/lib/server-inserted-html.shared-runtime.js [client] (ecmascript)");
-/**
- * A [Client Component](https://nextjs.org/docs/app/building-your-application/rendering/client-components) hook
- * that lets you *read* the current URL's search parameters.
- *
- * Learn more about [`URLSearchParams` on MDN](https://developer.mozilla.org/docs/Web/API/URLSearchParams)
- *
- * @example
- * ```ts
- * "use client"
- * import { useSearchParams } from 'next/navigation'
- *
- * export default function Page() {
- *   const searchParams = useSearchParams()
- *   searchParams.get('foo') // returns 'bar' when ?foo=bar
- *   // ...
- * }
- * ```
- *
- * Read more: [Next.js Docs: `useSearchParams`](https://nextjs.org/docs/app/api-reference/functions/use-search-params)
- */ function useSearchParams() {
-    const searchParams = (0, _react.useContext)(_hooksclientcontextsharedruntime.SearchParamsContext);
-    // In the case where this is `null`, the compat types added in
-    // `next-env.d.ts` will add a new overload that changes the return type to
-    // include `null`.
-    const readonlySearchParams = (0, _react.useMemo)(()=>{
-        if (!searchParams) {
-            // When the router is not ready in pages, we won't have the search params
-            // available.
-            return null;
-        }
-        return new _navigationreactserver.ReadonlyURLSearchParams(searchParams);
-    }, [
-        searchParams
-    ]);
-    if (typeof window === "undefined") {
-        // AsyncLocalStorage should not be included in the client bundle.
-        const { bailoutToClientRendering } = __turbopack_require__("[project]/node_modules/next/dist/client/components/bailout-to-client-rendering.js [client] (ecmascript)");
-        // TODO-APP: handle dynamic = 'force-static' here and on the client
-        bailoutToClientRendering("useSearchParams()");
-    }
-    return readonlySearchParams;
-}
-/**
- * A [Client Component](https://nextjs.org/docs/app/building-your-application/rendering/client-components) hook
- * that lets you read the current URL's pathname.
- *
- * @example
- * ```ts
- * "use client"
- * import { usePathname } from 'next/navigation'
- *
- * export default function Page() {
- *  const pathname = usePathname() // returns "/dashboard" on /dashboard?foo=bar
- *  // ...
- * }
- * ```
- *
- * Read more: [Next.js Docs: `usePathname`](https://nextjs.org/docs/app/api-reference/functions/use-pathname)
- */ function usePathname() {
-    // In the case where this is `null`, the compat types added in `next-env.d.ts`
-    // will add a new overload that changes the return type to include `null`.
-    return (0, _react.useContext)(_hooksclientcontextsharedruntime.PathnameContext);
-}
-/**
- *
- * This hook allows you to programmatically change routes inside [Client Component](https://nextjs.org/docs/app/building-your-application/rendering/client-components).
- *
- * @example
- * ```ts
- * "use client"
- * import { useRouter } from 'next/navigation'
- *
- * export default function Page() {
- *  const router = useRouter()
- *  // ...
- *  router.push('/dashboard') // Navigate to /dashboard
- * }
- * ```
- *
- * Read more: [Next.js Docs: `useRouter`](https://nextjs.org/docs/app/api-reference/functions/use-router)
- */ function useRouter() {
-    const router = (0, _react.useContext)(_approutercontextsharedruntime.AppRouterContext);
-    if (router === null) {
-        throw new Error("invariant expected app router to be mounted");
-    }
-    return router;
-}
-/**
- * A [Client Component](https://nextjs.org/docs/app/building-your-application/rendering/client-components) hook
- * that lets you read a route's dynamic params filled in by the current URL.
- *
- * @example
- * ```ts
- * "use client"
- * import { useParams } from 'next/navigation'
- *
- * export default function Page() {
- *   // on /dashboard/[team] where pathname is /dashboard/nextjs
- *   const { team } = useParams() // team === "nextjs"
- * }
- * ```
- *
- * Read more: [Next.js Docs: `useParams`](https://nextjs.org/docs/app/api-reference/functions/use-params)
- */ function useParams() {
-    return (0, _react.useContext)(_hooksclientcontextsharedruntime.PathParamsContext);
-}
-/** Get the canonical parameters from the current level to the leaf node. */ function getSelectedLayoutSegmentPath(tree, parallelRouteKey, first, segmentPath) {
-    if (first === void 0) first = true;
-    if (segmentPath === void 0) segmentPath = [];
-    let node;
-    if (first) {
-        // Use the provided parallel route key on the first parallel route
-        node = tree[1][parallelRouteKey];
-    } else {
-        // After first parallel route prefer children, if there's no children pick the first parallel route.
-        const parallelRoutes = tree[1];
-        var _parallelRoutes_children;
-        node = (_parallelRoutes_children = parallelRoutes.children) != null ? _parallelRoutes_children : Object.values(parallelRoutes)[0];
-    }
-    if (!node) return segmentPath;
-    const segment = node[0];
-    const segmentValue = (0, _getsegmentvalue.getSegmentValue)(segment);
-    if (!segmentValue || segmentValue.startsWith(_segment.PAGE_SEGMENT_KEY)) {
-        return segmentPath;
-    }
-    segmentPath.push(segmentValue);
-    return getSelectedLayoutSegmentPath(node, parallelRouteKey, false, segmentPath);
-}
-/**
- * A [Client Component](https://nextjs.org/docs/app/building-your-application/rendering/client-components) hook
- * that lets you read the active route segments **below** the Layout it is called from.
- *
- * @example
- * ```ts
- * 'use client'
- *
- * import { useSelectedLayoutSegments } from 'next/navigation'
- *
- * export default function ExampleClientComponent() {
- *   const segments = useSelectedLayoutSegments()
- *
- *   return (
- *     <ul>
- *       {segments.map((segment, index) => (
- *         <li key={index}>{segment}</li>
- *       ))}
- *     </ul>
- *   )
- * }
- * ```
- *
- * Read more: [Next.js Docs: `useSelectedLayoutSegments`](https://nextjs.org/docs/app/api-reference/functions/use-selected-layout-segments)
- */ function useSelectedLayoutSegments(parallelRouteKey) {
-    if (parallelRouteKey === void 0) parallelRouteKey = "children";
-    const context = (0, _react.useContext)(_approutercontextsharedruntime.LayoutRouterContext);
-    // @ts-expect-error This only happens in `pages`. Type is overwritten in navigation.d.ts
-    if (!context) return null;
-    return getSelectedLayoutSegmentPath(context.tree, parallelRouteKey);
-}
-/**
- * A [Client Component](https://nextjs.org/docs/app/building-your-application/rendering/client-components) hook
- * that lets you read the active route segment **one level below** the Layout it is called from.
- *
- * @example
- * ```ts
- * 'use client'
- * import { useSelectedLayoutSegment } from 'next/navigation'
- *
- * export default function ExampleClientComponent() {
- *   const segment = useSelectedLayoutSegment()
- *
- *   return <p>Active segment: {segment}</p>
- * }
- * ```
- *
- * Read more: [Next.js Docs: `useSelectedLayoutSegment`](https://nextjs.org/docs/app/api-reference/functions/use-selected-layout-segment)
- */ function useSelectedLayoutSegment(parallelRouteKey) {
-    if (parallelRouteKey === void 0) parallelRouteKey = "children";
-    const selectedLayoutSegments = useSelectedLayoutSegments(parallelRouteKey);
-    if (!selectedLayoutSegments || selectedLayoutSegments.length === 0) {
-        return null;
-    }
-    const selectedLayoutSegment = parallelRouteKey === "children" ? selectedLayoutSegments[0] : selectedLayoutSegments[selectedLayoutSegments.length - 1];
-    // if the default slot is showing, we return null since it's not technically "selected" (it's a fallback)
-    // and returning an internal value like `__DEFAULT__` would be confusing.
-    return selectedLayoutSegment === _segment.DEFAULT_SEGMENT_KEY ? null : selectedLayoutSegment;
-}
-if ((typeof exports.default === 'function' || typeof exports.default === 'object' && exports.default !== null) && typeof exports.default.__esModule === 'undefined') {
-    Object.defineProperty(exports.default, '__esModule', {
-        value: true
-    });
-    Object.assign(exports.default, exports);
-    module.exports = exports.default;
-} //# sourceMappingURL=navigation.js.map
-
-}.call(this) }),
-"[project]/node_modules/next/navigation.js [client] (ecmascript)": (function({ r: __turbopack_require__, f: __turbopack_module_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, M: __turbopack_modules__, l: __turbopack_load__, j: __turbopack_dynamic__, P: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, R: __turbopack_resolve_module_id_path__, g: global, __dirname, k: __turbopack_refresh__, m: module, e: exports, t: require }) { !function() {
-
-module.exports = __turbopack_require__("[project]/node_modules/next/dist/client/components/navigation.js [client] (ecmascript)");
 
 }.call(this) }),
 }]);
 
-//# sourceMappingURL=node_modules_next_b6181b._.js.map
+//# sourceMappingURL=%5Broot%20of%20the%20server%5D__eea580._.js.map

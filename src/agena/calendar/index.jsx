@@ -1,25 +1,25 @@
-import React, { useState } from 'react';
-import Calendar from 'react-calendar';
-import 'react-calendar/dist/Calendar.css';
-import './index.scss'; // Stil dosyasını burada oluşturacağız.
+import React, { useState } from "react";
+import Calendar from "react-calendar";
+import "react-calendar/dist/Calendar.css";
+import "./index.scss"; // Stil dosyasını burada oluşturacağız.
 
 const BookingCalendar = () => {
   const [date, setDate] = useState(new Date());
 
   // Günlere özel durum verileri
   const bookingData = [
-    { date: '2024-11-05', status: 'dolu' },
-    { date: '2024-11-06', status: 'rezervasyon' },
-    { date: '2024-11-07', status: 'fırsat' },
-    { date: '2024-11-08', status: 'giriş' },
-    { date: '2024-11-09', status: 'indirim' },
-    { date: '2024-11-10', status: 'girişÇıkış' },
+    { date: "2024-11-05", status: "dolu" },
+    // { date: "2024-11-06", status: "rezervasyon" },
+    // { date: "2024-11-07", status: "fırsat" },
+    // { date: "2024-11-08", status: "giriş" },
+    // { date: "2024-11-09", status: "indirim" },
+    // { date: "2024-11-10", status: "girişÇıkış" },
     // Diğer tarihler...
   ];
 
   // Her güne durumuna göre sınıf atayan fonksiyon
   const tileClassName = ({ date, view }) => {
-    if (view === 'month') {
+    if (view === "month") {
       const booking = bookingData.find(
         (item) => new Date(item.date).toDateString() === date.toDateString()
       );
@@ -32,23 +32,41 @@ const BookingCalendar = () => {
   };
 
   return (
-    <div className="booking-calendar">
-      <Calendar
-        onChange={setDate}
-        value={date}
-        tileClassName={tileClassName}
-      />
+    <section className=" section-padding">
+      <div className="container">
+        <div className="booking-calendar">
+          <Calendar
+            onChange={setDate}
+            value={date}
+            tileClassName={tileClassName}
+            selectRange={true} // Tarih aralığı seçimini etkinleştirir
+            showNeighboringMonth={true}
+          />
 
-      {/* Takvim altındaki açıklama (legend) bölümü */}
-      <div className="legend">
-        <div><span className="legend-color dolu"></span> Dolu</div>
-        <div><span className="legend-color rezervasyon"></span> Rezervasyon</div>
-        <div><span className="legend-color fırsat"></span> Fırsat</div>
-        <div><span className="legend-color giriş"></span> Giriş Günü</div>
-        <div><span className="legend-color indirim"></span> İndirim</div>
-        <div><span className="legend-color girişÇıkış"></span> Giriş/Çıkış</div>
+          {/* Takvim altındaki açıklama (legend) bölümü */}
+          <div className="legend">
+            <div>
+              <span className="legend-color dolu"></span> Dolu
+            </div>
+            <div>
+              <span className="legend-color rezervasyon"></span> Rezervasyon
+            </div>
+            <div>
+              <span className="legend-color fırsat"></span> Fırsat
+            </div>
+            <div>
+              <span className="legend-color giriş"></span> Giriş Günü
+            </div>
+            <div>
+              <span className="legend-color indirim"></span> İndirim
+            </div>
+            <div>
+              <span className="legend-color girişÇıkış"></span> Giriş/Çıkış
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 
