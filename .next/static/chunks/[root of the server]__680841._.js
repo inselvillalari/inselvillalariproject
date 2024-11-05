@@ -7438,6 +7438,30 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$mul
 var _s = __turbopack_refresh__.signature();
 ;
 ;
+;
+const days = [
+    "Pz",
+    "Pt",
+    "Sa",
+    "Ça",
+    "Pe",
+    "Cu",
+    "Ct"
+];
+const months = [
+    "Ocak",
+    "Şubat",
+    "Mart",
+    "Nisan",
+    "Mayıs",
+    "Haziran",
+    "Temmuz",
+    "Ağustos",
+    "Eylül",
+    "Ekim",
+    "Kasım",
+    "Aralık"
+];
 const BookingCalendar = (dateRangesData)=>{
     _s();
     const [dateRanges, setDateRanges] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useState"])([]);
@@ -7450,13 +7474,16 @@ const BookingCalendar = (dateRangesData)=>{
             }));
         setDateRanges(parsedRanges);
     }, []);
-    console.log('dateRangesData', dateRangesData);
+    console.log("dateRangesData", dateRangesData);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
         className: "section-padding",
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: "container",
+            className: "container d-flex justify-content-center",
             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$multi$2d$date$2d$picker$2f$build$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["Calendar"], {
-                numberOfMonths: 2,
+                numberOfMonths: 3,
+                weekStartDayIndex: 1,
+                weekDays: days,
+                months: months,
                 range: true,
                 readOnly: true,
                 className: "bg-dark",
@@ -7483,17 +7510,17 @@ const BookingCalendar = (dateRangesData)=>{
                 }
             }, void 0, false, {
                 fileName: "[project]/src/components/BookingCalendar/index.jsx",
-                lineNumber: 23,
+                lineNumber: 37,
                 columnNumber: 9
             }, this)
         }, void 0, false, {
             fileName: "[project]/src/components/BookingCalendar/index.jsx",
-            lineNumber: 22,
+            lineNumber: 36,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/components/BookingCalendar/index.jsx",
-        lineNumber: 21,
+        lineNumber: 35,
         columnNumber: 5
     }, this);
 };
@@ -7532,17 +7559,17 @@ const dateRangesData = [
     {
         start: "2024-12-11",
         end: "2024-12-23",
-        color: "#49FFB1"
+        color: "gray"
     },
     {
         start: "2024-12-26",
         end: "2024-12-29",
-        color: "yellow"
+        color: "pink"
     },
     {
         start: "2024-12-01",
         end: "2024-12-05",
-        color: "green"
+        color: "brown"
     }
 ];
 const AgenaPage = ()=>{

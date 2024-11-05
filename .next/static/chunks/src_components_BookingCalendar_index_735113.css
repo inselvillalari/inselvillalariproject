@@ -1,0 +1,10 @@
+/* [project]/src/components/BookingCalendar/index.css [client] (css) */
+.custom-calendar.rmdp-wrapper, .rmdp-container .custom-calendar.ep-arrow:after {
+  background-color: bisque;
+}
+
+.rmdp-week-day {
+  color: red !important;
+}
+
+/*# sourceMappingURL=src_components_BookingCalendar_index_735113.css.map*/

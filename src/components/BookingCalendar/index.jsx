@@ -1,8 +1,22 @@
 import React, { useState, useEffect } from "react";
 import { Calendar, DateObject } from "react-multi-date-picker";
+import "./index.css";
 
-
-
+const days = ["Pz", "Pt", "Sa", "Ça", "Pe", "Cu", "Ct"];
+const months = [
+  "Ocak",
+  "Şubat",
+  "Mart",
+  "Nisan",
+  "Mayıs",
+  "Haziran",
+  "Temmuz",
+  "Ağustos",
+  "Eylül",
+  "Ekim",
+  "Kasım",
+  "Aralık",
+];
 
 const BookingCalendar = (dateRangesData) => {
   const [dateRanges, setDateRanges] = useState([]);
@@ -16,12 +30,15 @@ const BookingCalendar = (dateRangesData) => {
     }));
     setDateRanges(parsedRanges);
   }, []);
-console.log('dateRangesData',dateRangesData)
+  console.log("dateRangesData", dateRangesData);
   return (
     <section className="section-padding">
-      <div className="container">
+      <div className="container d-flex justify-content-center">
         <Calendar
-          numberOfMonths={2}
+          numberOfMonths={3}
+          weekStartDayIndex={1}
+          weekDays={days}
+          months={months}
           range
           readOnly
           className="bg-dark"

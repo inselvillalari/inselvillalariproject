@@ -1,0 +1,8 @@
+.custom-calendar.rmdp-wrapper,
+.rmdp-container .custom-calendar.ep-arrow::after {
+  background-color: bisque;
+}
+
+.rmdp-week-day{
+    color: red !important;
+}
