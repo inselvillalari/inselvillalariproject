@@ -7,12 +7,21 @@ import AgenaSkills from "./skills";
 import PropertyDetails from "./propertyDetails";
 import BookingCalendar from "../components/BookingCalendar";
 
-
 const dateRangesData = [
   {
     start: "2024-11-01",
     end: "2025-04-01",
     color: "gray",
+  },
+  {
+    start: "2025-04-01",
+    end: "2025-04-26",
+    color: "#ff851b",
+  },
+  {
+    start: "2025-05-07",
+    end: "2025-05-14",
+    color: "#ff851b",
   },
 ];
 
@@ -96,7 +105,7 @@ const AgenaPage = () => {
             </Link>
           </div>
         </div>
-        <BookingCalendar dateRangesData={dateRangesData}/>
+        <BookingCalendar dateRangesData={dateRangesData} />
         <AgenaSkills />
         <AgenaFeatures />
         <PropertyDetails />

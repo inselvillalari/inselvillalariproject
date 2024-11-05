@@ -13,6 +13,11 @@ const dateRangesData = [
     end: "2025-04-01",
     color: "gray",
   },
+  {
+    start: "2025-04-13",
+    end: "2025-04-18",
+    color: "#ff851b",
+  },
 ];
 
 const GrediPage = () => {

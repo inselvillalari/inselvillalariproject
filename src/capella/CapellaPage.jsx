@@ -13,6 +13,11 @@ const dateRangesData = [
     end: "2025-04-01",
     color: "gray",
   },
+  {
+    start: "2025-04-17",
+    end: "2025-04-21",
+    color: "#ff851b",
+  },
 ];
 
 const CapellaPage = () => {

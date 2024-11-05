@@ -7702,6 +7702,16 @@ const dateRangesData = [
         start: "2024-11-01",
         end: "2025-04-01",
         color: "gray"
+    },
+    {
+        start: "2025-04-01",
+        end: "2025-04-26",
+        color: "#ff851b"
+    },
+    {
+        start: "2025-05-07",
+        end: "2025-05-14",
+        color: "#ff851b"
     }
 ];
 const AgenaPage = ()=>{
@@ -7728,17 +7738,17 @@ const AgenaPage = ()=>{
                                         children: "Mekanlar"
                                     }, void 0, false, {
                                         fileName: "[project]/src/agena/AgenaPage.jsx",
-                                        lineNumber: 32,
+                                        lineNumber: 41,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/agena/AgenaPage.jsx",
-                                    lineNumber: 31,
+                                    lineNumber: 40,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/agena/AgenaPage.jsx",
-                                lineNumber: 30,
+                                lineNumber: 39,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$link$2e$js__$5b$client$5d$__$28$ecmascript$29$__["default"], {
@@ -7755,12 +7765,12 @@ const AgenaPage = ()=>{
                                                     src: "/assets/img/slid/agena/dayViews/1.jpeg"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/agena/AgenaPage.jsx",
-                                                    lineNumber: 39,
+                                                    lineNumber: 48,
                                                     columnNumber: 21
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/src/agena/AgenaPage.jsx",
-                                                lineNumber: 38,
+                                                lineNumber: 47,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -7769,28 +7779,28 @@ const AgenaPage = ()=>{
                                                     children: "Gündüz Görünümleri"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/agena/AgenaPage.jsx",
-                                                    lineNumber: 42,
+                                                    lineNumber: 51,
                                                     columnNumber: 21
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/src/agena/AgenaPage.jsx",
-                                                lineNumber: 41,
+                                                lineNumber: 50,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/agena/AgenaPage.jsx",
-                                        lineNumber: 37,
+                                        lineNumber: 46,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/agena/AgenaPage.jsx",
-                                    lineNumber: 36,
+                                    lineNumber: 45,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/agena/AgenaPage.jsx",
-                                lineNumber: 35,
+                                lineNumber: 44,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$link$2e$js__$5b$client$5d$__$28$ecmascript$29$__["default"], {
@@ -7807,12 +7817,12 @@ const AgenaPage = ()=>{
                                                     src: "/assets/img/slid/agena/nightViews/1.jpeg"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/agena/AgenaPage.jsx",
-                                                    lineNumber: 53,
+                                                    lineNumber: 62,
                                                     columnNumber: 21
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/src/agena/AgenaPage.jsx",
-                                                lineNumber: 52,
+                                                lineNumber: 61,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -7821,28 +7831,28 @@ const AgenaPage = ()=>{
                                                     children: "Gece Görünümleri"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/agena/AgenaPage.jsx",
-                                                    lineNumber: 59,
+                                                    lineNumber: 68,
                                                     columnNumber: 21
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/src/agena/AgenaPage.jsx",
-                                                lineNumber: 58,
+                                                lineNumber: 67,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/agena/AgenaPage.jsx",
-                                        lineNumber: 51,
+                                        lineNumber: 60,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/agena/AgenaPage.jsx",
-                                    lineNumber: 50,
+                                    lineNumber: 59,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/agena/AgenaPage.jsx",
-                                lineNumber: 49,
+                                lineNumber: 58,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$link$2e$js__$5b$client$5d$__$28$ecmascript$29$__["default"], {
@@ -7859,12 +7869,12 @@ const AgenaPage = ()=>{
                                                     src: "/assets/img/slid/agena/indoor/2.jpeg"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/agena/AgenaPage.jsx",
-                                                    lineNumber: 70,
+                                                    lineNumber: 79,
                                                     columnNumber: 21
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/src/agena/AgenaPage.jsx",
-                                                lineNumber: 69,
+                                                lineNumber: 78,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -7873,28 +7883,28 @@ const AgenaPage = ()=>{
                                                     children: "İç Mekan"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/agena/AgenaPage.jsx",
-                                                    lineNumber: 73,
+                                                    lineNumber: 82,
                                                     columnNumber: 21
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/src/agena/AgenaPage.jsx",
-                                                lineNumber: 72,
+                                                lineNumber: 81,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/agena/AgenaPage.jsx",
-                                        lineNumber: 68,
+                                        lineNumber: 77,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/agena/AgenaPage.jsx",
-                                    lineNumber: 67,
+                                    lineNumber: 76,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/agena/AgenaPage.jsx",
-                                lineNumber: 66,
+                                lineNumber: 75,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$link$2e$js__$5b$client$5d$__$28$ecmascript$29$__["default"], {
@@ -7911,12 +7921,12 @@ const AgenaPage = ()=>{
                                                     src: "/assets/img/slid/agena/activities/2.jpeg"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/agena/AgenaPage.jsx",
-                                                    lineNumber: 84,
+                                                    lineNumber: 93,
                                                     columnNumber: 21
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/src/agena/AgenaPage.jsx",
-                                                lineNumber: 83,
+                                                lineNumber: 92,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -7925,67 +7935,67 @@ const AgenaPage = ()=>{
                                                     children: "Aktiviteler"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/agena/AgenaPage.jsx",
-                                                    lineNumber: 90,
+                                                    lineNumber: 99,
                                                     columnNumber: 21
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/src/agena/AgenaPage.jsx",
-                                                lineNumber: 89,
+                                                lineNumber: 98,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/agena/AgenaPage.jsx",
-                                        lineNumber: 82,
+                                        lineNumber: 91,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/agena/AgenaPage.jsx",
-                                    lineNumber: 81,
+                                    lineNumber: 90,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/agena/AgenaPage.jsx",
-                                lineNumber: 80,
+                                lineNumber: 89,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/agena/AgenaPage.jsx",
-                        lineNumber: 29,
+                        lineNumber: 38,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/src/agena/AgenaPage.jsx",
-                    lineNumber: 28,
+                    lineNumber: 37,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$BookingCalendar$2f$index$2e$jsx__$5b$client$5d$__$28$ecmascript$29$__["default"], {
                     dateRangesData: dateRangesData
                 }, void 0, false, {
                     fileName: "[project]/src/agena/AgenaPage.jsx",
-                    lineNumber: 99,
+                    lineNumber: 108,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$agena$2f$skills$2f$index$2e$jsx__$5b$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                     fileName: "[project]/src/agena/AgenaPage.jsx",
-                    lineNumber: 100,
+                    lineNumber: 109,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$agena$2f$features$2f$index$2e$jsx__$5b$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                     fileName: "[project]/src/agena/AgenaPage.jsx",
-                    lineNumber: 101,
+                    lineNumber: 110,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$agena$2f$propertyDetails$2f$index$2e$jsx__$5b$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                     fileName: "[project]/src/agena/AgenaPage.jsx",
-                    lineNumber: 102,
+                    lineNumber: 111,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/agena/AgenaPage.jsx",
-            lineNumber: 27,
+            lineNumber: 36,
             columnNumber: 7
         }, this)
     }, void 0, false);
