@@ -290,77 +290,67 @@ body.hideX .pace {
 
 
 /* [project]/src/agena/calendar/index.scss.css [ssr] (css) */
-.booking-calendar .react-calendar {
-  border: none;
-  font-family: Arial, sans-serif;
-  border-radius: 8%;
+.booking-calendar .calendar-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
 }
 
-.dolu {
-  color: #fff;
-  background-color: #001f3f !important;
-}
-
-.rezervasyon {
-  color: #fff;
-  background-color: #ff851b !important;
-}
-
-.fırsat {
-  color: #000;
-  background-color: #ffdc00 !important;
-}
-
-.giriş {
-  color: #fff;
-  background-color: #2ecc71 !important;
-}
-
-.indirim {
-  color: #fff;
-  background-color: #e74c3c !important;
-}
-
-.girişÇıkış {
-  color: #fff;
-  background-color: #2980b9 !important;
-}
-
-.legend {
+.booking-calendar .calendar-container {
   display: flex;
   gap: 10px;
-  margin-top: 20px;
 }
 
-.legend .legend-color {
+.booking-calendar .calendar {
+  width: 100%;
+}
+
+.booking-calendar .legend {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.booking-calendar .legend-color {
   display: inline-block;
   width: 15px;
   height: 15px;
   margin-right: 5px;
 }
 
-.dolu .legend.legend-color {
+.booking-calendar .musait {
+  background-color: #fff;
+}
+
+.booking-calendar .dolu {
   background-color: #001f3f;
+  color: #fff;
 }
 
-.rezervasyon .legend.legend-color {
+.booking-calendar .rezervasyon {
   background-color: #ff851b;
+  color: #fff;
 }
 
-.fırsat .legend.legend-color {
+.booking-calendar .fırsat {
   background-color: #ffdc00;
+  color: #000;
 }
 
-.giriş .legend.legend-color {
+.booking-calendar .girişGünü {
   background-color: #2ecc71;
+  color: #fff;
 }
 
-.indirim .legend.legend-color {
+.booking-calendar .indirim {
   background-color: #e74c3c;
+  color: #fff;
 }
 
-.girişÇıkış .legend.legend-color {
+.booking-calendar .girişÇıkış {
   background-color: #2980b9;
+  color: #fff;
 }
 
 

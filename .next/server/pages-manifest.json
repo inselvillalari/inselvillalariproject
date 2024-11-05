@@ -1,5 +1,8 @@
 {
   "/_app": "pages/_app.js",
   "/_document": "pages/_document.js",
-  "/agena": "pages/agena.js"
+  "/agena": "pages/agena.js",
+  "/_error": "pages/_error.js",
+  "/agena/activities": "pages/agena/activities.js",
+  "/capella": "pages/capella.js"
 }

@@ -1,63 +1,64 @@
-/* Takvim genel stil */
 .booking-calendar {
-    .react-calendar {
-      border: none;
-      font-family: Arial, sans-serif;
-      border-radius: 8%;
-    }
+  .calendar-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
   }
-  
-  /* Durumlara göre gün stilleri */
-  .dolu {
-    background-color: #001f3f !important;
-    color: white;
-  }
-  
-  .rezervasyon {
-    background-color: #ff851b !important;
-    color: white;
-  }
-  
-  .fırsat {
-    background-color: #ffdc00 !important;
-    color: black;
-  }
-  
-  .giriş {
-    background-color: #2ecc71 !important;
-    color: white;
-  }
-  
-  .indirim {
-    background-color: #e74c3c !important;
-    color: white;
-  }
-  
-  .girişÇıkış {
-    background-color: #2980b9 !important;
-    color: white;
-  }
-  
-  /* Legend (Açıklama) bölümünün stilleri */
-  .legend {
+
+  .calendar-container {
     display: flex;
     gap: 10px;
-    margin-top: 20px;
-  
-    /* Renkli kareleri daha kolay oluşturmak için bir mixin tanımlayalım */
-    .legend-color {
-      display: inline-block;
-      width: 15px;
-      height: 15px;
-      margin-right: 5px;
-    }
-  
-    /* Her duruma göre legend renklerini iç içe tanımlayalım */
-    .dolu &.legend-color { background-color: #001f3f; }
-    .rezervasyon &.legend-color { background-color: #ff851b; }
-    .fırsat &.legend-color { background-color: #ffdc00; }
-    .giriş &.legend-color { background-color: #2ecc71; }
-    .indirim &.legend-color { background-color: #e74c3c; }
-    .girişÇıkış &.legend-color { background-color: #2980b9; }
   }
-  
+
+  .calendar {
+    width: 100%;
+  }
+
+  .legend {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    flex-wrap: wrap;
+  }
+
+  .legend-color {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+  }
+
+  .musait {
+    background-color: #ffffff;
+  }
+
+  .dolu {
+    background-color: #001f3f;
+    color: white;
+  }
+
+  .rezervasyon {
+    background-color: #ff851b;
+    color: white;
+  }
+
+  .fırsat {
+    background-color: #ffdc00;
+    color: black;
+  }
+
+  .girişGünü {
+    background-color: #2ecc71;
+    color: white;
+  }
+
+  .indirim {
+    background-color: #e74c3c;
+    color: white;
+  }
+
+  .girişÇıkış {
+    background-color: #2980b9;
+    color: white;
+  }
+}

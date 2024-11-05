@@ -7431,8 +7431,10 @@ __turbopack_esm__({
     "default": ()=>__TURBOPACK__default__export__
 });
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/react/jsx-dev-runtime.js [client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$date$2d$fns$2f$addDays$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/date-fns/addDays.js [client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/react/index.js [client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$calendar$2f$dist$2f$esm$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__$3c$locals$3e$__ = __turbopack_import__("[project]/node_modules/react-calendar/dist/esm/index.js [client] (ecmascript) <locals>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$date$2d$range$2f$dist$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/react-date-range/dist/index.js [client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$date$2d$fns$2f$locale$2f$tr$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/date-fns/locale/tr.js [client] (ecmascript)");
 "__TURBOPACK__ecmascript__hoisting__location__";
 ;
 var _s = __turbopack_refresh__.signature();
@@ -7440,171 +7442,104 @@ var _s = __turbopack_refresh__.signature();
 ;
 ;
 ;
+;
+;
 const BookingCalendar = ()=>{
     _s();
-    const [date, setDate] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useState"])(new Date());
-    // Günlere özel durum verileri
-    const bookingData = [
+    const [state, setState] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useState"])([
         {
-            date: "2024-11-05",
-            status: "dolu"
+            startDate: new Date(),
+            endDate: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$date$2d$fns$2f$addDays$2e$js__$5b$client$5d$__$28$ecmascript$29$__["addDays"])(new Date(), 7),
+            key: "selection"
         }
-    ];
-    // Her güne durumuna göre sınıf atayan fonksiyon
-    const tileClassName = ({ date, view })=>{
-        if (view === "month") {
-            const booking = bookingData.find((item)=>new Date(item.date).toDateString() === date.toDateString());
-            if (booking) {
-                return booking.status; // Günün durumuna göre sınıf adını döndürür
-            }
-        }
-        return null;
-    };
-    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
-        className: " section-padding",
-        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: "container",
-            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "booking-calendar",
-                children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$calendar$2f$dist$2f$esm$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__$3c$locals$3e$__["default"], {
-                        onChange: setDate,
-                        value: date,
-                        tileClassName: tileClassName,
-                        selectRange: true,
-                        showNeighboringMonth: true
-                    }, void 0, false, {
-                        fileName: "[project]/src/agena/calendar/index.jsx",
-                        lineNumber: 38,
-                        columnNumber: 11
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "legend",
-                        children: [
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                        className: "legend-color dolu"
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/agena/calendar/index.jsx",
-                                        lineNumber: 49,
-                                        columnNumber: 15
-                                    }, this),
-                                    " Dolu"
-                                ]
-                            }, void 0, true, {
-                                fileName: "[project]/src/agena/calendar/index.jsx",
-                                lineNumber: 48,
-                                columnNumber: 13
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                        className: "legend-color rezervasyon"
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/agena/calendar/index.jsx",
-                                        lineNumber: 52,
-                                        columnNumber: 15
-                                    }, this),
-                                    " Rezervasyon"
-                                ]
-                            }, void 0, true, {
-                                fileName: "[project]/src/agena/calendar/index.jsx",
-                                lineNumber: 51,
-                                columnNumber: 13
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                        className: "legend-color fırsat"
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/agena/calendar/index.jsx",
-                                        lineNumber: 55,
-                                        columnNumber: 15
-                                    }, this),
-                                    " Fırsat"
-                                ]
-                            }, void 0, true, {
-                                fileName: "[project]/src/agena/calendar/index.jsx",
-                                lineNumber: 54,
-                                columnNumber: 13
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                        className: "legend-color giriş"
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/agena/calendar/index.jsx",
-                                        lineNumber: 58,
-                                        columnNumber: 15
-                                    }, this),
-                                    " Giriş Günü"
-                                ]
-                            }, void 0, true, {
-                                fileName: "[project]/src/agena/calendar/index.jsx",
-                                lineNumber: 57,
-                                columnNumber: 13
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                        className: "legend-color indirim"
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/agena/calendar/index.jsx",
-                                        lineNumber: 61,
-                                        columnNumber: 15
-                                    }, this),
-                                    " İndirim"
-                                ]
-                            }, void 0, true, {
-                                fileName: "[project]/src/agena/calendar/index.jsx",
-                                lineNumber: 60,
-                                columnNumber: 13
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                        className: "legend-color girişÇıkış"
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/agena/calendar/index.jsx",
-                                        lineNumber: 64,
-                                        columnNumber: 15
-                                    }, this),
-                                    " Giriş/Çıkış"
-                                ]
-                            }, void 0, true, {
-                                fileName: "[project]/src/agena/calendar/index.jsx",
-                                lineNumber: 63,
-                                columnNumber: 13
-                            }, this)
-                        ]
-                    }, void 0, true, {
-                        fileName: "[project]/src/agena/calendar/index.jsx",
-                        lineNumber: 47,
-                        columnNumber: 11
-                    }, this)
-                ]
-            }, void 0, true, {
-                fileName: "[project]/src/agena/calendar/index.jsx",
-                lineNumber: 37,
-                columnNumber: 9
-            }, this)
-        }, void 0, false, {
-            fileName: "[project]/src/agena/calendar/index.jsx",
-            lineNumber: 36,
-            columnNumber: 7
-        }, this)
+    ]);
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$date$2d$range$2f$dist$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["DateRangePicker"], {
+        onChange: (item)=>setState([
+                item.selection
+            ]),
+        showSelectionPreview: true,
+        moveRangeOnFirstSelection: false,
+        months: 2,
+        ranges: state,
+        direction: "horizontal",
+        locale: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$date$2d$fns$2f$locale$2f$tr$2e$js__$5b$client$5d$__$28$ecmascript$29$__["tr"]
     }, void 0, false, {
         fileName: "[project]/src/agena/calendar/index.jsx",
-        lineNumber: 35,
+        lineNumber: 16,
         columnNumber: 5
     }, this);
 };
-_s(BookingCalendar, "rW+rxy2mJ1oFEB1Cqg4Z2uVJym0=");
+_s(BookingCalendar, "tvNn1vArF9yVksjAkXy4JST9QVc=");
 _c = BookingCalendar;
 const __TURBOPACK__default__export__ = BookingCalendar;
 var _c;
 __turbopack_refresh__.register(_c, "BookingCalendar");
+ // SILMEEEEEEEEEEEEEEEEEEEEEE
+ // import React, { useState } from "react";
+ // import { DateRangePicker } from "react-date-range";
+ // import { addDays } from "date-fns";
+ // import "react-date-range/dist/styles.css";
+ // import "react-date-range/dist/theme/default.css";
+ // import "./index.scss"; // Özel stilleri buraya ekleyeceğiz
+ // import { tr } from "date-fns/locale";
+ // const BookingCalendar = () => {
+ //   const [range, setRange] = useState([
+ //     {
+ //       startDate: new Date(),
+ //       endDate: addDays(new Date(), 7),
+ //       key: "selection",
+ //     },
+ //   ]);
+ //   // Günlere özel durum verileri
+ //   const bookingData = [
+ //     { date: "2024-11-05", status: "dolu" },
+ //     { date: "2024-11-06", status: "rezervasyon" },
+ //     { date: "2024-11-07", status: "fırsat" },
+ //     { date: "2024-11-08", status: "girişGünü" },
+ //     { date: "2024-11-09", status: "indirim" },
+ //     { date: "2024-11-10", status: "girişÇıkış" },
+ //     // Diğer tarihler...
+ //   ];
+ //   const getStatusClassName = (date) => {
+ //     const formattedDate = date.toISOString().split("T")[0];
+ //     const booking = bookingData.find((item) => item.date === formattedDate);
+ //     return booking ? booking.status : "";
+ //   };
+ //   const dayContentRenderer = (day) => {
+ //     const statusClass = getStatusClassName(day);
+ //     return (
+ //       <div className={`day-content ${statusClass}`}>
+ //         {day.getDate()}
+ //       </div>
+ //     );
+ //   };
+ //   return (
+ //     <div className="booking-calendar">
+ //       <h2>Tarih Aralığı Seçin</h2>
+ //       <DateRangePicker
+ //         editableDateInputs={true}
+ //         onChange={(item) => setRange([item.selection])}
+ //         moveRangeOnFirstSelection={false}
+ //         ranges={range}
+ //         months={2}
+ //         direction="horizontal"
+ //         dayContentRenderer={dayContentRenderer} // Her gün için özel içerik
+ //         showDateDisplay={false}
+ //         locale={tr}
+ //       />
+ //       <div className="legend">
+ //         <div><span className="legend-color musait"></span> Müsait</div>
+ //         <div><span className="legend-color dolu"></span> Dolu</div>
+ //         <div><span className="legend-color rezervasyon"></span> Rezervasyon</div>
+ //         <div><span className="legend-color fırsat"></span> Fırsat</div>
+ //         <div><span className="legend-color girişGünü"></span> Giriş Günü</div>
+ //         <div><span className="legend-color indirim"></span> İndirim</div>
+ //         <div><span className="legend-color girişÇıkış"></span> Giriş/Çıkış</div>
+ //       </div>
+ //     </div>
+ //   );
+ // };
+ // export default BookingCalendar;
 
 })()),
 "[project]/src/agena/AgenaPage.jsx [client] (ecmascript)": (({ r: __turbopack_require__, f: __turbopack_module_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, M: __turbopack_modules__, l: __turbopack_load__, j: __turbopack_dynamic__, P: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, R: __turbopack_resolve_module_id_path__, g: global, __dirname, k: __turbopack_refresh__ }) => (() => {
