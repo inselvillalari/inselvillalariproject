@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["[project]/src/components/BookingCalendar/index.css"],"sourcesContent":[".custom-calendar.rmdp-wrapper,\n.rmdp-container .custom-calendar.ep-arrow::after {\n  background-color: bisque;\n}\n\n.rmdp-week-day {\n  color: rgb(172, 79, 79) !important;\n}\n\n.rmdp-month {\n  color: rgb(120, 59, 59) !important;\n}\n\n.musait {\n  background-color: white;\n  color: white;\n}\n\n.dolu {\n  background-color: gray;\n  color: white;\n}\n\n.rezervasyon {\n  background-color: #ff851b;\n  color: white;\n}\n\n.secili {\n  background-color: #1b7cd1;\n  color: white;\n}\n\n.legend {\n  display: flex;\n  gap: 10px;\n  margin-top: 20px;\n  flex-wrap: wrap;\n}\n\n.legend-color {\n  display: inline-block;\n  width: 15px;\n  height: 15px;\n  margin-right: 5px;\n}\n"],"names":[],"mappings":"AAAA;;;;AAKA;;;;AAIA;;;;AAIA;;;;;AAKA;;;;;AAKA;;;;;AAKA;;;;;AAKA;;;;;;;AAOA"}},
-    {"offset": {"line": 46, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
-}

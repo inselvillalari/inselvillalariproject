@@ -6790,304 +6790,320 @@ const AgenaSkills = ()=>{
         },
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             className: "container",
-            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "row",
-                children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "col-lg-6 valign  md-mb50",
-                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "skills-box full-width",
-                            children: [
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "skill-item",
-                                    children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h6", {
-                                            children: "Merkez"
-                                        }, void 0, false, {
-                                            fileName: "[project]/src/agena/skills/index.jsx",
-                                            lineNumber: 18,
-                                            columnNumber: 17
-                                        }, this),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "skill-progress",
-                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                className: "progres custom-font",
-                                                "data-value": "65%",
-                                                "data-name": "1 km"
-                                            }, void 0, false, {
-                                                fileName: "[project]/src/agena/skills/index.jsx",
-                                                lineNumber: 20,
-                                                columnNumber: 19
-                                            }, this)
-                                        }, void 0, false, {
-                                            fileName: "[project]/src/agena/skills/index.jsx",
-                                            lineNumber: 19,
-                                            columnNumber: 17
-                                        }, this)
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "[project]/src/agena/skills/index.jsx",
-                                    lineNumber: 17,
-                                    columnNumber: 15
-                                }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "skill-item",
-                                    children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h6", {
-                                            children: "Mini Market"
-                                        }, void 0, false, {
-                                            fileName: "[project]/src/agena/skills/index.jsx",
-                                            lineNumber: 28,
-                                            columnNumber: 17
-                                        }, this),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "skill-progress",
-                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                className: "progres custom-font",
-                                                "data-value": "45%",
-                                                "data-name": "300 m"
-                                            }, void 0, false, {
-                                                fileName: "[project]/src/agena/skills/index.jsx",
-                                                lineNumber: 30,
-                                                columnNumber: 19
-                                            }, this)
-                                        }, void 0, false, {
-                                            fileName: "[project]/src/agena/skills/index.jsx",
-                                            lineNumber: 29,
-                                            columnNumber: 17
-                                        }, this)
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "[project]/src/agena/skills/index.jsx",
-                                    lineNumber: 27,
-                                    columnNumber: 15
-                                }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "skill-item",
-                                    children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h6", {
-                                            children: "Otobüs Durakları"
-                                        }, void 0, false, {
-                                            fileName: "[project]/src/agena/skills/index.jsx",
-                                            lineNumber: 38,
-                                            columnNumber: 17
-                                        }, this),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "skill-progress",
-                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                className: "progres custom-font",
-                                                "data-value": "55%",
-                                                "data-name": "700 m"
-                                            }, void 0, false, {
-                                                fileName: "[project]/src/agena/skills/index.jsx",
-                                                lineNumber: 40,
-                                                columnNumber: 19
-                                            }, this)
-                                        }, void 0, false, {
-                                            fileName: "[project]/src/agena/skills/index.jsx",
-                                            lineNumber: 39,
-                                            columnNumber: 17
-                                        }, this)
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "[project]/src/agena/skills/index.jsx",
-                                    lineNumber: 37,
-                                    columnNumber: 15
-                                }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "skill-item",
-                                    children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h6", {
-                                            children: "Dalaman Havalimanı"
-                                        }, void 0, false, {
-                                            fileName: "[project]/src/agena/skills/index.jsx",
-                                            lineNumber: 48,
-                                            columnNumber: 17
-                                        }, this),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "skill-progress",
-                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                className: "progres custom-font",
-                                                "data-value": "80%",
-                                                "data-name": "120 km"
-                                            }, void 0, false, {
-                                                fileName: "[project]/src/agena/skills/index.jsx",
-                                                lineNumber: 50,
-                                                columnNumber: 19
-                                            }, this)
-                                        }, void 0, false, {
-                                            fileName: "[project]/src/agena/skills/index.jsx",
-                                            lineNumber: 49,
-                                            columnNumber: 17
-                                        }, this)
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "[project]/src/agena/skills/index.jsx",
-                                    lineNumber: 47,
-                                    columnNumber: 15
-                                }, this)
-                            ]
-                        }, void 0, true, {
-                            fileName: "[project]/src/agena/skills/index.jsx",
-                            lineNumber: 16,
-                            columnNumber: 13
-                        }, this)
+            children: [
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: "section-head",
+                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                        children: "Konum"
                     }, void 0, false, {
                         fileName: "[project]/src/agena/skills/index.jsx",
                         lineNumber: 15,
                         columnNumber: 11
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "col-lg-6",
-                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "skills-box full-width",
-                            children: [
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "skill-item",
-                                    children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h6", {
-                                            children: "Hastane"
-                                        }, void 0, false, {
-                                            fileName: "[project]/src/agena/skills/index.jsx",
-                                            lineNumber: 62,
-                                            columnNumber: 17
-                                        }, this),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "skill-progress",
-                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                className: "progres custom-font",
-                                                "data-value": "65%",
-                                                "data-name": "1 km"
-                                            }, void 0, false, {
-                                                fileName: "[project]/src/agena/skills/index.jsx",
-                                                lineNumber: 64,
-                                                columnNumber: 19
-                                            }, this)
-                                        }, void 0, false, {
-                                            fileName: "[project]/src/agena/skills/index.jsx",
-                                            lineNumber: 63,
-                                            columnNumber: 17
-                                        }, this)
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "[project]/src/agena/skills/index.jsx",
-                                    lineNumber: 61,
-                                    columnNumber: 15
-                                }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "skill-item",
-                                    children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h6", {
-                                            children: "Deniz (Plaj)"
-                                        }, void 0, false, {
-                                            fileName: "[project]/src/agena/skills/index.jsx",
-                                            lineNumber: 72,
-                                            columnNumber: 17
-                                        }, this),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "skill-progress",
-                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                className: "progres custom-font",
-                                                "data-value": "65%",
-                                                "data-name": "1 km"
-                                            }, void 0, false, {
-                                                fileName: "[project]/src/agena/skills/index.jsx",
-                                                lineNumber: 74,
-                                                columnNumber: 19
-                                            }, this)
-                                        }, void 0, false, {
-                                            fileName: "[project]/src/agena/skills/index.jsx",
-                                            lineNumber: 73,
-                                            columnNumber: 17
-                                        }, this)
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "[project]/src/agena/skills/index.jsx",
-                                    lineNumber: 71,
-                                    columnNumber: 15
-                                }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "skill-item",
-                                    children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h6", {
-                                            children: "Restaurant"
-                                        }, void 0, false, {
-                                            fileName: "[project]/src/agena/skills/index.jsx",
-                                            lineNumber: 82,
-                                            columnNumber: 17
-                                        }, this),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "skill-progress",
-                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                className: "progres custom-font",
-                                                "data-value": "45%",
-                                                "data-name": "300 m"
-                                            }, void 0, false, {
-                                                fileName: "[project]/src/agena/skills/index.jsx",
-                                                lineNumber: 84,
-                                                columnNumber: 19
-                                            }, this)
-                                        }, void 0, false, {
-                                            fileName: "[project]/src/agena/skills/index.jsx",
-                                            lineNumber: 83,
-                                            columnNumber: 17
-                                        }, this)
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "[project]/src/agena/skills/index.jsx",
-                                    lineNumber: 81,
-                                    columnNumber: 15
-                                }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "skill-item",
-                                    children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h6", {
-                                            children: "Antalya Havalimanı"
-                                        }, void 0, false, {
-                                            fileName: "[project]/src/agena/skills/index.jsx",
-                                            lineNumber: 92,
-                                            columnNumber: 17
-                                        }, this),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "skill-progress",
-                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                className: "progres custom-font",
-                                                "data-value": "100%",
-                                                "data-name": "220 km"
-                                            }, void 0, false, {
-                                                fileName: "[project]/src/agena/skills/index.jsx",
-                                                lineNumber: 94,
-                                                columnNumber: 19
-                                            }, this)
-                                        }, void 0, false, {
-                                            fileName: "[project]/src/agena/skills/index.jsx",
-                                            lineNumber: 93,
-                                            columnNumber: 17
-                                        }, this)
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "[project]/src/agena/skills/index.jsx",
-                                    lineNumber: 91,
-                                    columnNumber: 15
-                                }, this)
-                            ]
-                        }, void 0, true, {
-                            fileName: "[project]/src/agena/skills/index.jsx",
-                            lineNumber: 60,
-                            columnNumber: 13
-                        }, this)
-                    }, void 0, false, {
-                        fileName: "[project]/src/agena/skills/index.jsx",
-                        lineNumber: 59,
-                        columnNumber: 11
                     }, this)
-                ]
-            }, void 0, true, {
-                fileName: "[project]/src/agena/skills/index.jsx",
-                lineNumber: 14,
-                columnNumber: 9
-            }, this)
-        }, void 0, false, {
+                }, void 0, false, {
+                    fileName: "[project]/src/agena/skills/index.jsx",
+                    lineNumber: 14,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: "row",
+                    children: [
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: "col-lg-6 valign  md-mb50",
+                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "skills-box full-width",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "skill-item",
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h6", {
+                                                children: "Merkez"
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/agena/skills/index.jsx",
+                                                lineNumber: 21,
+                                                columnNumber: 17
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                className: "skill-progress",
+                                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                    className: "progres custom-font",
+                                                    "data-value": "65%",
+                                                    "data-name": "1 km"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/agena/skills/index.jsx",
+                                                    lineNumber: 23,
+                                                    columnNumber: 19
+                                                }, this)
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/agena/skills/index.jsx",
+                                                lineNumber: 22,
+                                                columnNumber: 17
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/src/agena/skills/index.jsx",
+                                        lineNumber: 20,
+                                        columnNumber: 15
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "skill-item",
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h6", {
+                                                children: "Mini Market"
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/agena/skills/index.jsx",
+                                                lineNumber: 31,
+                                                columnNumber: 17
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                className: "skill-progress",
+                                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                    className: "progres custom-font",
+                                                    "data-value": "45%",
+                                                    "data-name": "300 m"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/agena/skills/index.jsx",
+                                                    lineNumber: 33,
+                                                    columnNumber: 19
+                                                }, this)
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/agena/skills/index.jsx",
+                                                lineNumber: 32,
+                                                columnNumber: 17
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/src/agena/skills/index.jsx",
+                                        lineNumber: 30,
+                                        columnNumber: 15
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "skill-item",
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h6", {
+                                                children: "Otobüs Durakları"
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/agena/skills/index.jsx",
+                                                lineNumber: 41,
+                                                columnNumber: 17
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                className: "skill-progress",
+                                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                    className: "progres custom-font",
+                                                    "data-value": "55%",
+                                                    "data-name": "700 m"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/agena/skills/index.jsx",
+                                                    lineNumber: 43,
+                                                    columnNumber: 19
+                                                }, this)
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/agena/skills/index.jsx",
+                                                lineNumber: 42,
+                                                columnNumber: 17
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/src/agena/skills/index.jsx",
+                                        lineNumber: 40,
+                                        columnNumber: 15
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "skill-item",
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h6", {
+                                                children: "Dalaman Havalimanı"
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/agena/skills/index.jsx",
+                                                lineNumber: 51,
+                                                columnNumber: 17
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                className: "skill-progress",
+                                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                    className: "progres custom-font",
+                                                    "data-value": "80%",
+                                                    "data-name": "120 km"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/agena/skills/index.jsx",
+                                                    lineNumber: 53,
+                                                    columnNumber: 19
+                                                }, this)
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/agena/skills/index.jsx",
+                                                lineNumber: 52,
+                                                columnNumber: 17
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/src/agena/skills/index.jsx",
+                                        lineNumber: 50,
+                                        columnNumber: 15
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/src/agena/skills/index.jsx",
+                                lineNumber: 19,
+                                columnNumber: 13
+                            }, this)
+                        }, void 0, false, {
+                            fileName: "[project]/src/agena/skills/index.jsx",
+                            lineNumber: 18,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: "col-lg-6",
+                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "skills-box full-width",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "skill-item",
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h6", {
+                                                children: "Hastane"
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/agena/skills/index.jsx",
+                                                lineNumber: 65,
+                                                columnNumber: 17
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                className: "skill-progress",
+                                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                    className: "progres custom-font",
+                                                    "data-value": "65%",
+                                                    "data-name": "1 km"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/agena/skills/index.jsx",
+                                                    lineNumber: 67,
+                                                    columnNumber: 19
+                                                }, this)
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/agena/skills/index.jsx",
+                                                lineNumber: 66,
+                                                columnNumber: 17
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/src/agena/skills/index.jsx",
+                                        lineNumber: 64,
+                                        columnNumber: 15
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "skill-item",
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h6", {
+                                                children: "Deniz (Plaj)"
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/agena/skills/index.jsx",
+                                                lineNumber: 75,
+                                                columnNumber: 17
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                className: "skill-progress",
+                                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                    className: "progres custom-font",
+                                                    "data-value": "65%",
+                                                    "data-name": "1 km"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/agena/skills/index.jsx",
+                                                    lineNumber: 77,
+                                                    columnNumber: 19
+                                                }, this)
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/agena/skills/index.jsx",
+                                                lineNumber: 76,
+                                                columnNumber: 17
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/src/agena/skills/index.jsx",
+                                        lineNumber: 74,
+                                        columnNumber: 15
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "skill-item",
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h6", {
+                                                children: "Restaurant"
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/agena/skills/index.jsx",
+                                                lineNumber: 85,
+                                                columnNumber: 17
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                className: "skill-progress",
+                                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                    className: "progres custom-font",
+                                                    "data-value": "45%",
+                                                    "data-name": "300 m"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/agena/skills/index.jsx",
+                                                    lineNumber: 87,
+                                                    columnNumber: 19
+                                                }, this)
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/agena/skills/index.jsx",
+                                                lineNumber: 86,
+                                                columnNumber: 17
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/src/agena/skills/index.jsx",
+                                        lineNumber: 84,
+                                        columnNumber: 15
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "skill-item",
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h6", {
+                                                children: "Antalya Havalimanı"
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/agena/skills/index.jsx",
+                                                lineNumber: 95,
+                                                columnNumber: 17
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                className: "skill-progress",
+                                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                    className: "progres custom-font",
+                                                    "data-value": "100%",
+                                                    "data-name": "220 km"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/agena/skills/index.jsx",
+                                                    lineNumber: 97,
+                                                    columnNumber: 19
+                                                }, this)
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/agena/skills/index.jsx",
+                                                lineNumber: 96,
+                                                columnNumber: 17
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/src/agena/skills/index.jsx",
+                                        lineNumber: 94,
+                                        columnNumber: 15
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/src/agena/skills/index.jsx",
+                                lineNumber: 63,
+                                columnNumber: 13
+                            }, this)
+                        }, void 0, false, {
+                            fileName: "[project]/src/agena/skills/index.jsx",
+                            lineNumber: 62,
+                            columnNumber: 11
+                        }, this)
+                    ]
+                }, void 0, true, {
+                    fileName: "[project]/src/agena/skills/index.jsx",
+                    lineNumber: 17,
+                    columnNumber: 9
+                }, this)
+            ]
+        }, void 0, true, {
             fileName: "[project]/src/agena/skills/index.jsx",
             lineNumber: 13,
             columnNumber: 7
@@ -7441,7 +7457,6 @@ var _s = __turbopack_refresh__.signature();
 ;
 ;
 ;
-;
 const days = [
     "Pz",
     "Pt",
@@ -7508,17 +7523,17 @@ const BookingCalendar = (dateRangesData)=>{
                         children: "Takvim"
                     }, void 0, false, {
                         fileName: "[project]/src/components/BookingCalendar/index.jsx",
-                        lineNumber: 67,
+                        lineNumber: 66,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/src/components/BookingCalendar/index.jsx",
-                    lineNumber: 66,
+                    lineNumber: 65,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/components/BookingCalendar/index.jsx",
-                lineNumber: 65,
+                lineNumber: 64,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -7552,12 +7567,12 @@ const BookingCalendar = (dateRangesData)=>{
                     }
                 }, void 0, false, {
                     fileName: "[project]/src/components/BookingCalendar/index.jsx",
-                    lineNumber: 71,
+                    lineNumber: 70,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/components/BookingCalendar/index.jsx",
-                lineNumber: 70,
+                lineNumber: 69,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -7571,14 +7586,14 @@ const BookingCalendar = (dateRangesData)=>{
                                     className: "legend-color musait"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/BookingCalendar/index.jsx",
-                                    lineNumber: 106,
+                                    lineNumber: 105,
                                     columnNumber: 13
                                 }, this),
                                 " Müsait"
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/BookingCalendar/index.jsx",
-                            lineNumber: 105,
+                            lineNumber: 104,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -7587,14 +7602,14 @@ const BookingCalendar = (dateRangesData)=>{
                                     className: "legend-color rezervasyon"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/BookingCalendar/index.jsx",
-                                    lineNumber: 109,
+                                    lineNumber: 108,
                                     columnNumber: 13
                                 }, this),
                                 " Rezerve"
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/BookingCalendar/index.jsx",
-                            lineNumber: 108,
+                            lineNumber: 107,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -7603,14 +7618,14 @@ const BookingCalendar = (dateRangesData)=>{
                                     className: "legend-color dolu"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/BookingCalendar/index.jsx",
-                                    lineNumber: 112,
+                                    lineNumber: 111,
                                     columnNumber: 13
                                 }, this),
                                 " Tesis Tarafından Kapatılmış"
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/BookingCalendar/index.jsx",
-                            lineNumber: 111,
+                            lineNumber: 110,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -7619,31 +7634,31 @@ const BookingCalendar = (dateRangesData)=>{
                                     className: "legend-color secili"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/BookingCalendar/index.jsx",
-                                    lineNumber: 116,
+                                    lineNumber: 115,
                                     columnNumber: 13
                                 }, this),
                                 " Seçili Alan"
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/BookingCalendar/index.jsx",
-                            lineNumber: 115,
+                            lineNumber: 114,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/BookingCalendar/index.jsx",
-                    lineNumber: 104,
+                    lineNumber: 103,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/components/BookingCalendar/index.jsx",
-                lineNumber: 103,
+                lineNumber: 102,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/BookingCalendar/index.jsx",
-        lineNumber: 64,
+        lineNumber: 63,
         columnNumber: 5
     }, this);
 };

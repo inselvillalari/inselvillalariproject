@@ -2,10 +2,5 @@
   "/_app": "pages/_app.js",
   "/_document": "pages/_document.js",
   "/": "pages/index.js",
-  "/agena": "pages/agena.js",
-  "/agena/activities": "pages/agena/activities.js",
-  "/_error": "pages/_error.js",
-  "/capella": "pages/capella.js",
-  "/gredi": "pages/gredi.js",
-  "/rigel": "pages/rigel.js"
+  "/agena": "pages/agena.js"
 }

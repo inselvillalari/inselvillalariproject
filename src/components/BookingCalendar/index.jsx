@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import dynamic from "next/dynamic";
 import { Calendar, DateObject } from "react-multi-date-picker";
-import "./index.css";
 import "react-multi-date-picker/styles/backgrounds/bg-dark.css";
 
 const days = ["Pz", "Pt", "Sa", "Ça", "Pe", "Cu", "Ct"];
