@@ -5,6 +5,26 @@ import initIsotope from "../common/initIsotope";
 import AgenaFeatures from "./features";
 import AgenaSkills from "./skills";
 import PropertyDetails from "./propertyDetails";
+import BookingCalendar from "../components/BookingCalendar";
+
+
+const dateRangesData = [
+  {
+    start: "2024-12-11",
+    end: "2024-12-23",
+    color: "#49FFB1",
+  },
+  {
+    start: "2024-12-26",
+    end: "2024-12-29",
+    color: "yellow",
+  },
+  {
+    start: "2024-12-01",
+    end: "2024-12-05",
+    color: "green",
+  },
+];
 
 const AgenaPage = () => {
   React.useEffect(() => {
@@ -86,6 +106,7 @@ const AgenaPage = () => {
             </Link>
           </div>
         </div>
+        <BookingCalendar dateRangesData={dateRangesData}/>
         <AgenaSkills />
         <AgenaFeatures />
         <PropertyDetails />

@@ -1,1 +1,7 @@
-{"/_error":"pages/_error.js","/agena/activities":"pages/agena/activities.html","/aboutus":"pages/aboutus.html","/_document":"pages/_document.js","/agena/dayViews":"pages/agena/dayViews.html","/_app":"pages/_app.js","/agena/insideViews":"pages/agena/insideViews.html","/capella/activities":"pages/capella/activities.html","/agena":"pages/agena.html","/agena/nightViews":"pages/agena/nightViews.html","/capella/dayViews":"pages/capella/dayViews.html","/contact":"pages/contact.html","/capella":"pages/capella.html","/capella/nightViews":"pages/capella/nightViews.html","/gredi/dayViews":"pages/gredi/dayViews.html","/gredi/activities":"pages/gredi/activities.html","/capella/insideViews":"pages/capella/insideViews.html","/gredi/nightViews":"pages/gredi/nightViews.html","/gredi/insideViews":"pages/gredi/insideViews.html","/home":"pages/home.html","/gredi":"pages/gredi.html","/":"pages/index.html","/layout/LightLayout":"pages/layout/LightLayout.html","/layout/MainLayout":"pages/layout/MainLayout.html","/main":"pages/main.html","/portfolio":"pages/portfolio.html","/intro":"pages/intro.html","/footer":"pages/footer.html","/rigel/dayViews":"pages/rigel/dayViews.html","/rigel/activities":"pages/rigel/activities.html","/services":"pages/services.html","/rigel/insideViews":"pages/rigel/insideViews.html","/rigel/nightViews":"pages/rigel/nightViews.html","/rigel":"pages/rigel.html","/split":"pages/split.html","/navbar":"pages/navbar.html","/404":"pages/404.html"}
+{
+  "/_app": "pages/_app.js",
+  "/_document": "pages/_document.js",
+  "/": "pages/index.js",
+  "/agena": "pages/agena.js",
+  "/_error": "pages/_error.js"
+}
