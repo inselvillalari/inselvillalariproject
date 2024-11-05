@@ -10,6 +10,9 @@ const CapellaSkills = () => {
       style={{ backgroundColor: "#181818" }}
     >
       <div className="container">
+        <div className="section-head">
+          <h3>Konum</h3>
+        </div>
         <div className="row">
           <div className="col-lg-6 valign  md-mb50">
             <div className="skills-box full-width">

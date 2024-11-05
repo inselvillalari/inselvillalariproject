@@ -7432,10 +7432,13 @@ __turbopack_esm__({
 });
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/react/jsx-dev-runtime.js [client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/react/index.js [client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dynamic$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/dynamic.js [client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$multi$2d$date$2d$picker$2f$build$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/react-multi-date-picker/build/index.js [client] (ecmascript)");
 "__TURBOPACK__ecmascript__hoisting__location__";
 ;
 var _s = __turbopack_refresh__.signature();
+;
+;
 ;
 ;
 ;
@@ -7466,7 +7469,6 @@ const BookingCalendar = (dateRangesData)=>{
     _s();
     const [dateRanges, setDateRanges] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useState"])([]);
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
-        // JSON dosyasındaki tarih aralıklarını yükleyip, DateObject ile işleyin
         const parsedRanges = dateRangesData?.dateRangesData?.map((range)=>({
                 start: new __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$multi$2d$date$2d$picker$2f$build$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["DateObject"](range.start),
                 end: new __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$multi$2d$date$2d$picker$2f$build$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["DateObject"](range.end),
@@ -7474,61 +7476,186 @@ const BookingCalendar = (dateRangesData)=>{
             }));
         setDateRanges(parsedRanges);
     }, []);
-    console.log("dateRangesData", dateRangesData);
+    const [numberOfMonths, setNumberOfMonths] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useState"])(1);
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
+        function getNumberOfMonths() {
+            const width = window.innerWidth;
+            if (width >= 1200) {
+                return 3;
+            } else if (width >= 768) {
+                return 2;
+            } else {
+                return 1;
+            }
+        }
+        const handleResize = ()=>{
+            setNumberOfMonths(getNumberOfMonths());
+        };
+        setNumberOfMonths(getNumberOfMonths());
+        window.addEventListener("resize", handleResize);
+        return ()=>{
+            window.removeEventListener("resize", handleResize);
+        };
+    }, []);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
         className: "section-padding",
-        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: "container d-flex justify-content-center",
-            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$multi$2d$date$2d$picker$2f$build$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["Calendar"], {
-                numberOfMonths: 3,
-                weekStartDayIndex: 1,
-                weekDays: days,
-                months: months,
-                range: true,
-                readOnly: true,
-                className: "bg-dark",
-                style: {
-                    borderRadius: "8px"
-                },
-                mapDays: ({ date })=>{
-                    let props = {};
-                    let color = null;
-                    // Belirli tarih aralıklarını renklendir
-                    dateRanges.forEach((range)=>{
-                        if (date >= range.start && date <= range.end) {
-                            color = range.color;
-                        }
-                    });
-                    // Renk atanmışsa arka plan rengini ayarla
-                    if (color) {
-                        props.style = {
-                            backgroundColor: color,
-                            color: color === "gray" ? "black" : "white"
-                        };
-                    }
-                    return props;
-                }
+        children: [
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "container",
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: "section-head",
+                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                        children: "Takvim"
+                    }, void 0, false, {
+                        fileName: "[project]/src/components/BookingCalendar/index.jsx",
+                        lineNumber: 67,
+                        columnNumber: 11
+                    }, this)
+                }, void 0, false, {
+                    fileName: "[project]/src/components/BookingCalendar/index.jsx",
+                    lineNumber: 66,
+                    columnNumber: 9
+                }, this)
             }, void 0, false, {
                 fileName: "[project]/src/components/BookingCalendar/index.jsx",
-                lineNumber: 37,
-                columnNumber: 9
+                lineNumber: 65,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "container d-flex justify-content-center mobile",
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$multi$2d$date$2d$picker$2f$build$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["Calendar"], {
+                    numberOfMonths: numberOfMonths,
+                    weekStartDayIndex: 1,
+                    weekDays: days,
+                    months: months,
+                    range: true,
+                    readOnly: true,
+                    className: "bg-dark",
+                    style: {
+                        borderRadius: "8px"
+                    },
+                    mapDays: ({ date })=>{
+                        let props = {};
+                        let color = null;
+                        dateRanges.forEach((range)=>{
+                            if (date >= range.start && date <= range.end) {
+                                color = range.color;
+                            }
+                        });
+                        if (color) {
+                            props.style = {
+                                backgroundColor: color,
+                                color: color === "gray" ? "black" : "white"
+                            };
+                        }
+                        return props;
+                    }
+                }, void 0, false, {
+                    fileName: "[project]/src/components/BookingCalendar/index.jsx",
+                    lineNumber: 71,
+                    columnNumber: 9
+                }, this)
+            }, void 0, false, {
+                fileName: "[project]/src/components/BookingCalendar/index.jsx",
+                lineNumber: 70,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "container d-flex justify-content-center",
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: "legend",
+                    children: [
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                    className: "legend-color musait"
+                                }, void 0, false, {
+                                    fileName: "[project]/src/components/BookingCalendar/index.jsx",
+                                    lineNumber: 106,
+                                    columnNumber: 13
+                                }, this),
+                                " Müsait"
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/src/components/BookingCalendar/index.jsx",
+                            lineNumber: 105,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                    className: "legend-color rezervasyon"
+                                }, void 0, false, {
+                                    fileName: "[project]/src/components/BookingCalendar/index.jsx",
+                                    lineNumber: 109,
+                                    columnNumber: 13
+                                }, this),
+                                " Rezerve"
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/src/components/BookingCalendar/index.jsx",
+                            lineNumber: 108,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                    className: "legend-color dolu"
+                                }, void 0, false, {
+                                    fileName: "[project]/src/components/BookingCalendar/index.jsx",
+                                    lineNumber: 112,
+                                    columnNumber: 13
+                                }, this),
+                                " Tesis Tarafından Kapatılmış"
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/src/components/BookingCalendar/index.jsx",
+                            lineNumber: 111,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                    className: "legend-color secili"
+                                }, void 0, false, {
+                                    fileName: "[project]/src/components/BookingCalendar/index.jsx",
+                                    lineNumber: 116,
+                                    columnNumber: 13
+                                }, this),
+                                " Seçili Alan"
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/src/components/BookingCalendar/index.jsx",
+                            lineNumber: 115,
+                            columnNumber: 11
+                        }, this)
+                    ]
+                }, void 0, true, {
+                    fileName: "[project]/src/components/BookingCalendar/index.jsx",
+                    lineNumber: 104,
+                    columnNumber: 9
+                }, this)
+            }, void 0, false, {
+                fileName: "[project]/src/components/BookingCalendar/index.jsx",
+                lineNumber: 103,
+                columnNumber: 7
             }, this)
-        }, void 0, false, {
-            fileName: "[project]/src/components/BookingCalendar/index.jsx",
-            lineNumber: 36,
-            columnNumber: 7
-        }, this)
-    }, void 0, false, {
+        ]
+    }, void 0, true, {
         fileName: "[project]/src/components/BookingCalendar/index.jsx",
-        lineNumber: 35,
+        lineNumber: 64,
         columnNumber: 5
     }, this);
 };
-_s(BookingCalendar, "3us8cE6ryNWFuM4R9fK8ht1Uzc4=");
+_s(BookingCalendar, "Ssp3Q2wka0Yuw/LcLQ+3pyvS5So=");
 _c = BookingCalendar;
-const __TURBOPACK__default__export__ = BookingCalendar;
-var _c;
+const __TURBOPACK__default__export__ = _c2 = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dynamic$2e$js__$5b$client$5d$__$28$ecmascript$29$__["default"])(_c1 = ()=>Promise.resolve(BookingCalendar), {
+    ssr: false
+});
+var _c, _c1, _c2;
 __turbopack_refresh__.register(_c, "BookingCalendar");
+__turbopack_refresh__.register(_c1, "%default%$dynamic");
+__turbopack_refresh__.register(_c2, "%default%");
 
 })()),
 "[project]/src/agena/AgenaPage.jsx [client] (ecmascript)": (({ r: __turbopack_require__, f: __turbopack_module_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, M: __turbopack_modules__, l: __turbopack_load__, j: __turbopack_dynamic__, P: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, R: __turbopack_resolve_module_id_path__, g: global, __dirname, k: __turbopack_refresh__ }) => (() => {
@@ -7557,19 +7684,9 @@ var _s = __turbopack_refresh__.signature();
 ;
 const dateRangesData = [
     {
-        start: "2024-12-11",
-        end: "2024-12-23",
+        start: "2024-11-01",
+        end: "2025-04-01",
         color: "gray"
-    },
-    {
-        start: "2024-12-26",
-        end: "2024-12-29",
-        color: "pink"
-    },
-    {
-        start: "2024-12-01",
-        end: "2024-12-05",
-        color: "brown"
     }
 ];
 const AgenaPage = ()=>{
@@ -7596,17 +7713,17 @@ const AgenaPage = ()=>{
                                         children: "Mekanlar"
                                     }, void 0, false, {
                                         fileName: "[project]/src/agena/AgenaPage.jsx",
-                                        lineNumber: 42,
+                                        lineNumber: 32,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/agena/AgenaPage.jsx",
-                                    lineNumber: 41,
+                                    lineNumber: 31,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/agena/AgenaPage.jsx",
-                                lineNumber: 40,
+                                lineNumber: 30,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$link$2e$js__$5b$client$5d$__$28$ecmascript$29$__["default"], {
@@ -7623,12 +7740,12 @@ const AgenaPage = ()=>{
                                                     src: "/assets/img/slid/agena/dayViews/1.jpeg"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/agena/AgenaPage.jsx",
-                                                    lineNumber: 49,
+                                                    lineNumber: 39,
                                                     columnNumber: 21
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/src/agena/AgenaPage.jsx",
-                                                lineNumber: 48,
+                                                lineNumber: 38,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -7637,28 +7754,28 @@ const AgenaPage = ()=>{
                                                     children: "Gündüz Görünümleri"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/agena/AgenaPage.jsx",
-                                                    lineNumber: 52,
+                                                    lineNumber: 42,
                                                     columnNumber: 21
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/src/agena/AgenaPage.jsx",
-                                                lineNumber: 51,
+                                                lineNumber: 41,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/agena/AgenaPage.jsx",
-                                        lineNumber: 47,
+                                        lineNumber: 37,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/agena/AgenaPage.jsx",
-                                    lineNumber: 46,
+                                    lineNumber: 36,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/agena/AgenaPage.jsx",
-                                lineNumber: 45,
+                                lineNumber: 35,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$link$2e$js__$5b$client$5d$__$28$ecmascript$29$__["default"], {
@@ -7675,12 +7792,12 @@ const AgenaPage = ()=>{
                                                     src: "/assets/img/slid/agena/nightViews/1.jpeg"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/agena/AgenaPage.jsx",
-                                                    lineNumber: 63,
+                                                    lineNumber: 53,
                                                     columnNumber: 21
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/src/agena/AgenaPage.jsx",
-                                                lineNumber: 62,
+                                                lineNumber: 52,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -7689,28 +7806,28 @@ const AgenaPage = ()=>{
                                                     children: "Gece Görünümleri"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/agena/AgenaPage.jsx",
-                                                    lineNumber: 69,
+                                                    lineNumber: 59,
                                                     columnNumber: 21
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/src/agena/AgenaPage.jsx",
-                                                lineNumber: 68,
+                                                lineNumber: 58,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/agena/AgenaPage.jsx",
-                                        lineNumber: 61,
+                                        lineNumber: 51,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/agena/AgenaPage.jsx",
-                                    lineNumber: 60,
+                                    lineNumber: 50,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/agena/AgenaPage.jsx",
-                                lineNumber: 59,
+                                lineNumber: 49,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$link$2e$js__$5b$client$5d$__$28$ecmascript$29$__["default"], {
@@ -7727,12 +7844,12 @@ const AgenaPage = ()=>{
                                                     src: "/assets/img/slid/agena/indoor/2.jpeg"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/agena/AgenaPage.jsx",
-                                                    lineNumber: 80,
+                                                    lineNumber: 70,
                                                     columnNumber: 21
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/src/agena/AgenaPage.jsx",
-                                                lineNumber: 79,
+                                                lineNumber: 69,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -7741,28 +7858,28 @@ const AgenaPage = ()=>{
                                                     children: "İç Mekan"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/agena/AgenaPage.jsx",
-                                                    lineNumber: 83,
+                                                    lineNumber: 73,
                                                     columnNumber: 21
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/src/agena/AgenaPage.jsx",
-                                                lineNumber: 82,
+                                                lineNumber: 72,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/agena/AgenaPage.jsx",
-                                        lineNumber: 78,
+                                        lineNumber: 68,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/agena/AgenaPage.jsx",
-                                    lineNumber: 77,
+                                    lineNumber: 67,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/agena/AgenaPage.jsx",
-                                lineNumber: 76,
+                                lineNumber: 66,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$link$2e$js__$5b$client$5d$__$28$ecmascript$29$__["default"], {
@@ -7779,12 +7896,12 @@ const AgenaPage = ()=>{
                                                     src: "/assets/img/slid/agena/activities/2.jpeg"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/agena/AgenaPage.jsx",
-                                                    lineNumber: 94,
+                                                    lineNumber: 84,
                                                     columnNumber: 21
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/src/agena/AgenaPage.jsx",
-                                                lineNumber: 93,
+                                                lineNumber: 83,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -7793,67 +7910,67 @@ const AgenaPage = ()=>{
                                                     children: "Aktiviteler"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/agena/AgenaPage.jsx",
-                                                    lineNumber: 100,
+                                                    lineNumber: 90,
                                                     columnNumber: 21
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/src/agena/AgenaPage.jsx",
-                                                lineNumber: 99,
+                                                lineNumber: 89,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/agena/AgenaPage.jsx",
-                                        lineNumber: 92,
+                                        lineNumber: 82,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/agena/AgenaPage.jsx",
-                                    lineNumber: 91,
+                                    lineNumber: 81,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/agena/AgenaPage.jsx",
-                                lineNumber: 90,
+                                lineNumber: 80,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/agena/AgenaPage.jsx",
-                        lineNumber: 39,
+                        lineNumber: 29,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/src/agena/AgenaPage.jsx",
-                    lineNumber: 38,
+                    lineNumber: 28,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$BookingCalendar$2f$index$2e$jsx__$5b$client$5d$__$28$ecmascript$29$__["default"], {
                     dateRangesData: dateRangesData
                 }, void 0, false, {
                     fileName: "[project]/src/agena/AgenaPage.jsx",
-                    lineNumber: 109,
+                    lineNumber: 99,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$agena$2f$skills$2f$index$2e$jsx__$5b$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                     fileName: "[project]/src/agena/AgenaPage.jsx",
-                    lineNumber: 110,
+                    lineNumber: 100,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$agena$2f$features$2f$index$2e$jsx__$5b$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                     fileName: "[project]/src/agena/AgenaPage.jsx",
-                    lineNumber: 111,
+                    lineNumber: 101,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$agena$2f$propertyDetails$2f$index$2e$jsx__$5b$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                     fileName: "[project]/src/agena/AgenaPage.jsx",
-                    lineNumber: 112,
+                    lineNumber: 102,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/agena/AgenaPage.jsx",
-            lineNumber: 37,
+            lineNumber: 27,
             columnNumber: 7
         }, this)
     }, void 0, false);

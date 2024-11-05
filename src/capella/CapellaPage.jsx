@@ -5,6 +5,15 @@ import initIsotope from "../common/initIsotope";
 import CapellaFeatures from "./features";
 import CapellaSkills from "./skills";
 import PropertyDetails from "./propertyDetails";
+import BookingCalendar from "../components/BookingCalendar";
+
+const dateRangesData = [
+  {
+    start: "2024-11-01",
+    end: "2025-04-01",
+    color: "gray",
+  },
+];
 
 const CapellaPage = () => {
   React.useEffect(() => {
@@ -89,6 +98,7 @@ const CapellaPage = () => {
             </Link>
           </div>
         </div>
+        <BookingCalendar dateRangesData={dateRangesData} />
         <CapellaSkills />
         <CapellaFeatures />
         <PropertyDetails />

@@ -1,0 +1,712 @@
+/* [project]/src/styles/globals.css [ssr] (css) */
+svg.CircularProgressbar {
+  width: 110px;
+  height: 110px;
+}
+
+a, .nav-link, .works.filter-img .filtering .filter span {
+  cursor: pointer;
+}
+
+.slick-prev, .slick-next {
+  display: none !important;
+}
+
+.testimonials.grid .testim .slick-track .slick-active > div {
+  position: relative;
+  margin: 0 20px;
+}
+
+.testimonials.grid .testim .slick-track .item {
+  margin: 0;
+}
+
+#before-after-slider {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+#before-after-slider img {
+  all: unset;
+  width: 100%;
+}
+
+#after-image {
+  display: block;
+}
+
+.path a {
+  text-transform: capitalize;
+}
+
+#before-image {
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.contact .form input, .contact .form textarea {
+  color: #fff;
+}
+
+.twentytwenty-handle:before, .twentytwenty-handle:after {
+  content: " ";
+  display: block;
+  background: #fff;
+  position: absolute;
+  z-index: 30;
+  -webkit-box-shadow: 0 0 12px #33333380;
+  -moz-box-shadow: 0 0 12px #33333380;
+  box-shadow: 0 0 12px #33333380;
+  width: 3px;
+  height: 9999px;
+  left: 50%;
+}
+
+.twentytwenty-left-arrow, .twentytwenty-right-arrow {
+  width: 0;
+  height: 0;
+  border: 6px inset #0000;
+  position: absolute;
+  top: 50%;
+  margin-top: -6px;
+}
+
+.twentytwenty-handle:after {
+  bottom: 100%;
+}
+
+.twentytwenty-handle {
+  height: 38px;
+  width: 38px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -22px;
+  margin-top: -22px;
+  border: 3px solid #fff;
+  -webkit-border-radius: 1000px;
+  -moz-border-radius: 1000px;
+  border-radius: 1000px;
+  -webkit-box-shadow: 0 0 12px #33333380;
+  -moz-box-shadow: 0 0 12px #33333380;
+  box-shadow: 0 0 12px #33333380;
+  z-index: 40;
+  cursor: pointer;
+}
+
+.twentytwenty-left-arrow {
+  border-right: 6px solid #fff;
+  left: 50%;
+  margin-left: -17px;
+}
+
+.twentytwenty-right-arrow {
+  border-left: 6px solid #fff;
+  right: 50%;
+  margin-right: -17px;
+}
+
+#before-after-slider .overlay {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #00000080;
+  z-index: 11;
+  opacity: 0;
+  transition: opacity .3s linear;
+}
+
+#before-after-slider:hover .overlay {
+  opacity: 1;
+}
+
+.twentytwenty-before-label, .twentytwenty-after-label {
+  opacity: 0;
+}
+
+.twentytwenty-before-label:before, .twentytwenty-after-label:before {
+  content: attr(data-content);
+}
+
+.justified-gallery img {
+  height: 100%;
+  object-fit: cover;
+  min-height: 335px;
+}
+
+.twentytwenty-before-label:before {
+  left: 10px;
+}
+
+.twentytwenty-after-label:before {
+  right: 10px;
+}
+
+a.col-lg-4.col-xl-3.col-md-6 {
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-bottom: 10px;
+}
+
+.twentytwenty-before-label, .twentytwenty-after-label {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity .3s linear;
+}
+
+a.col-lg-4.col-xl-3.col-md-12 {
+  margin-bottom: 10px;
+}
+
+.twentytwenty-before-label:before, .twentytwenty-after-label:before {
+  position: absolute;
+  background: #fff3;
+  line-height: 38px;
+  padding: 0 20px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 13px;
+  letter-spacing: .1em;
+  z-index: 100;
+  top: 50%;
+  margin-top: -19px;
+}
+
+.justified-gallery {
+  margin: 10px 0;
+}
+
+.pages-header .cont h1 {
+  text-transform: capitalize;
+}
+
+.slick-dots li button {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  display: block !important;
+}
+
+.testimonials2 .slick-list {
+  margin: 0 !important;
+}
+
+.slid-half .nofull:after {
+  z-index: 1;
+}
+
+.team {
+  overflow: hidden;
+}
+
+.swiper-pointer-events.swiper-vertical, .cta__slider-arrows, .slid-half .swiper-pagination-fraction.top {
+  z-index: 55;
+}
+
+.testimonials2 .slick-slide > div {
+  padding: 0 10px !important;
+}
+
+@media (width <= 991px) {
+  .navbar .navbar-collapse {
+    display: block;
+    opacity: 0;
+    padding: 0;
+    height: 0;
+    transition: all .3s linear;
+  }
+
+  .navbar .navbar-collapse.show-with-trans {
+    opacity: 1;
+    padding: 10px 15px;
+    height: auto;
+  }
+}
+
+.hideX #preloader {
+  z-index: -1111111;
+  height: 0;
+  width: 0;
+  overflow: hidden;
+  display: none !important;
+}
+
+.hideX .pace {
+  display: none !important;
+}
+
+.pace-done #preloader:after {
+  bottom: 0;
+}
+
+.pace-done #preloader {
+  visibility: hidden;
+  -webkit-transition-delay: .5s;
+  -o-transition-delay: .5s;
+  transition-delay: .5s;
+}
+
+.pace-done #preloader:after, .pace-done #preloader:before {
+  height: 0;
+  -webkit-transition: all .7s cubic-bezier(1, 0, .55, 1);
+  -o-transition: all .7s cubic-bezier(1, 0, .55, 1);
+  transition: all .7s cubic-bezier(1, 0, .55, 1);
+  -webkit-transition-delay: 1s;
+  -o-transition-delay: 1s;
+  transition-delay: 1s;
+}
+
+body.hideX #preloader {
+  z-index: -1111111;
+  height: 0;
+  width: 0;
+  overflow: hidden;
+  display: none !important;
+}
+
+body.hideX .pace {
+  background-color: #0000;
+  display: none !important;
+}
+
+.map-box iframe, .contact-map iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+
+/* [project]/src/components/BookingCalendar/index.css [ssr] (css) */
+.custom-calendar.rmdp-wrapper, .rmdp-container .custom-calendar.ep-arrow:after {
+  background-color: bisque;
+}
+
+.rmdp-week-day {
+  color: #ac4f4f !important;
+}
+
+.rmdp-month {
+  color: #783b3b !important;
+}
+
+.musait {
+  background-color: #fff;
+  color: #fff;
+}
+
+.dolu {
+  background-color: gray;
+  color: #fff;
+}
+
+.rezervasyon {
+  background-color: #ff851b;
+  color: #fff;
+}
+
+.secili {
+  background-color: #1b7cd1;
+  color: #fff;
+}
+
+.legend {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.legend-color {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+}
+
+
+/* [project]/node_modules/react-multi-date-picker/styles/backgrounds/bg-dark.css [ssr] (css) */
+.bg-dark.rmdp-wrapper, .bg-dark .rmdp-month-picker, .bg-dark .rmdp-year-picker, .bg-dark .rmdp-time-picker div input, .rmdp-container .bg-dark.ep-arrow:after {
+  background-color: #312f2f;
+  color: #c4c7ca;
+}
+
+.bg-dark .rmdp-day:not(.rmdp-deactive), .bg-dark .rmdp-time-picker div .rmdp-am, .bg-dark .rmdp-header-values, .bg-dark .rmdp-panel-header {
+  color: #c4c7ca;
+}
+
+.bg-dark .rmdp-day.rmdp-range {
+  color: #fff;
+}
+
+.bg-dark .rmdp-panel-body li {
+  color: #f5f5f5;
+}
+
+.bg-dark .rmdp-day.rmdp-deactive, .bg-dark .rmdp-day.rmdp-disabled {
+  color: #87898b;
+}
+
+.rmdp-container .bg-dark.ep-arrow[direction="top"] {
+  border-bottom: 1px solid #312f2f;
+}
+
+.rmdp-container .bg-dark.ep-arrow[direction="left"] {
+  border-right: 1px solid #312f2f;
+}
+
+.rmdp-container .bg-dark.ep-arrow[direction="right"] {
+  border-left: 1px solid #312f2f;
+}
+
+.rmdp-container .bg-dark.ep-arrow[direction="bottom"] {
+  border-top: 1px solid #312f2f;
+}
+
+
+/* [project]/node_modules/react-multi-date-picker/styles/layouts/mobile.css [ssr] (css) */
+.rmdp-calendar-container-mobile {
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: #0009;
+}
+
+.rmdp-calendar-container-mobile .rmdp-mobile.rmdp-wrapper {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.rmdp-mobile.rmdp-wrapper {
+  box-shadow: unset;
+  border: 1px solid #cfd8e2;
+}
+
+.rmdp-mobile .rmdp-header, .rmdp-mobile .rmdp-panel-header {
+  height: 30px;
+  font-size: 16px;
+  padding-bottom: 15px;
+}
+
+.rmdp-mobile .rmdp-arrow-container {
+  height: 26px;
+  width: 26px;
+}
+
+.rmdp-mobile .rmdp-arrow {
+  padding: 3px;
+  height: 3px;
+  width: 3px;
+  margin-top: 6px;
+}
+
+.rmdp-mobile .rmdp-up i {
+  margin-top: 10px;
+}
+
+.rmdp-mobile .rmdp-left i {
+  margin-left: 4px;
+  margin-top: 7px;
+}
+
+.rmdp-mobile .rmdp-right i {
+  margin-left: -2px;
+  margin-top: 7px;
+}
+
+.rmdp-rtl.rmdp-mobile .rmdp-right i {
+  margin-left: 5px;
+}
+
+.rmdp-rtl.rmdp-mobile .rmdp-left i {
+  margin-left: -1px;
+}
+
+.rmdp-mobile .rmdp-day, .rmdp-mobile .rmdp-week-day {
+  height: 38px;
+  width: 38px;
+}
+
+.rmdp-mobile .rmdp-day span {
+  font-size: 15px;
+}
+
+.rmdp-mobile .dvdr {
+  margin: 0 10px;
+}
+
+.rmdp-mobile .ok {
+  position: absolute;
+  bottom: 0;
+}
+
+.rmdp-mobile .rmdp-week-day {
+  margin-top: 10px;
+  margin-bottom: 3px;
+}
+
+.rmdp-mobile .only.rmdp-month-picker, .rmdp-mobile .only.rmdp-year-picker {
+  margin: 15px 0;
+}
+
+.rmdp-mobile .rmdp-action-button {
+  margin: 0 3px;
+  margin-top: 15px;
+  font-size: 13px;
+}
+
+.rmdp-mobile .rmdp-action-buttons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.rmdp-mobile .rmdp-rtl .rmdp-action-button {
+  float: left;
+  margin-right: unset;
+  margin-left: 10px;
+}
+
+.rmdp-mobile .rmdp-action-button:focus {
+  outline: none;
+}
+
+.rmdp-mobile .rmdp-header {
+  margin-top: 15px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.rmdp-mobile .rmdp-panel-header {
+  margin-top: 20px;
+}
+
+.rmdp-mobile .rmdp-day-picker {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.rmdp-mobile .rmdp-action-button {
+  margin-bottom: 15px;
+}
+
+@media (width <= 420px) {
+  .rmdp-mobile .rmdp-day, .rmdp-mobile .rmdp-week-day {
+    height: 32px;
+    width: 32px;
+  }
+
+  .rmdp-mobile .only.rmdp-month-picker, .rmdp-mobile .only.rmdp-year-picker {
+    width: 230px;
+  }
+
+  .rmdp-mobile .rmdp-header, .rmdp-mobile .rmdp-panel-header {
+    height: 20px;
+  }
+
+  .rmdp-mobile .rmdp-day span {
+    font-size: 14px;
+  }
+
+  .rmdp-mobile .rmdp-day-picker {
+    padding: 10px 5px;
+  }
+
+  .rmdp-mobile.rmdp-single .rmdp-day-picker {
+    padding: 10px;
+  }
+
+  .rmdp-mobile .rmdp-arrow-container {
+    height: 20px;
+    width: 20px;
+    margin: 0 12px;
+  }
+
+  .rmdp-mobile .rmdp-arrow {
+    padding: 2px;
+    height: 3px;
+    width: 3px;
+    margin-top: 6px;
+  }
+
+  .rmdp-mobile .rmdp-action-button {
+    font-size: 13px;
+    padding: 5px;
+  }
+
+  .rmdp-mobile .rmdp-action-button:first-child {
+    padding-right: 10px;
+  }
+
+  .rmdp-mobile .rmdp-panel-header {
+    padding-bottom: 20px;
+  }
+
+  .rmdp-mobile .rmdp-left i, .rmdp-mobile .rmdp-right i {
+    margin-top: 6px;
+  }
+
+  .rmdp-mobile .rmdp-up i {
+    margin-top: 8px;
+  }
+
+  .rmdp-mobile .rmdp-down i {
+    margin-top: 4px;
+  }
+
+  .rmdp-mobile .rmdp-header {
+    margin-top: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  .rmdp-mobile .rmdp-panel-header {
+    margin-top: 15px;
+  }
+
+  .rmdp-mobile .rmdp-header, .rmdp-mobile .rmdp-panel-header {
+    font-size: 14px;
+  }
+
+  .rmdp-mobile .rmdp-day-picker {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  .rmdp-mobile .rmdp-action-button {
+    margin-bottom: 10px;
+    font-size: 12px;
+  }
+}
+
+@media (height <= 450px) {
+  .rmdp-mobile .rmdp-header, .rmdp-mobile .rmdp-panel-header {
+    height: 9px;
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  .rmdp-mobile .rmdp-day, .rmdp-mobile .rmdp-week-day {
+    height: 22px;
+    width: 22px;
+  }
+
+  .rmdp-mobile .rmdp-time-picker {
+    padding: 0;
+    min-width: 130px !important;
+  }
+
+  .rmdp-mobile .rmdp-time-picker div input {
+    font-size: 12px;
+    padding: 2px;
+  }
+
+  .rmdp-mobile .rmdp-day span {
+    font-size: 12px;
+  }
+
+  .rmdp-mobile .rmdp-month-picker .rmdp-day span, .rmdp-mobile .rmdp-week-day {
+    font-size: 10px;
+  }
+
+  .rmdp-mobile .rmdp-day-picker {
+    padding: 0 7px;
+  }
+
+  .rmdp-mobile .rmdp-panel-body {
+    padding: 0;
+    margin: 5px 0;
+  }
+
+  .rmdp-mobile .rmdp-panel-body li {
+    font-size: 11px;
+    margin: 5px;
+  }
+
+  .rmdp-mobile .rmdp-action-button {
+    font-size: 9px;
+    padding: 0 5px;
+    margin: 10px 5px;
+  }
+
+  .rmdp-mobile .rmdp-action-button:first-child {
+    margin-right: 10px;
+  }
+
+  .rmdp-mobile .rmdp-arrow-container {
+    margin: 0 3px;
+    height: 16px;
+    width: 16px;
+  }
+
+  .rmdp-mobile .rmdp-arrow {
+    padding: 2px;
+    height: 2px;
+    width: 2px;
+    margin-top: 3px;
+  }
+
+  .rmdp-mobile .only.rmdp-month-picker, .rmdp-mobile .only.rmdp-year-picker {
+    height: 160px;
+  }
+
+  .rmdp-mobile .rmdp-time-picker div input, .rmdp-mobile .dvdr {
+    margin: 0;
+  }
+
+  .rmdp-mobile .rmdp-week-day {
+    margin-top: 0;
+  }
+
+  .rmdp-mobile .rmdp-left i {
+    margin-top: 4px;
+    margin-left: 4px;
+  }
+
+  .rmdp-mobile .rmdp-right i {
+    margin-top: 4px;
+    margin-left: 0;
+  }
+
+  .rmdp-mobile .rmdp-up i {
+    margin-top: 5px;
+  }
+
+  .rmdp-mobile .rmdp-header {
+    margin-top: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  .rmdp-mobile .rmdp-panel-header {
+    margin-top: 13px;
+  }
+
+  .rmdp-mobile .rmdp-day-picker {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .rmdp-mobile .rmdp-action-button {
+    margin-bottom: 10px;
+  }
+}
+
+
+/*# sourceMappingURL=_31c9d0._.css.map*/

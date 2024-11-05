@@ -10,19 +10,9 @@ import BookingCalendar from "../components/BookingCalendar";
 
 const dateRangesData = [
   {
-    start: "2024-12-11",
-    end: "2024-12-23",
+    start: "2024-11-01",
+    end: "2025-04-01",
     color: "gray",
-  },
-  {
-    start: "2024-12-26",
-    end: "2024-12-29",
-    color: "pink",
-  },
-  {
-    start: "2024-12-01",
-    end: "2024-12-05",
-    color: "brown",
   },
 ];
 

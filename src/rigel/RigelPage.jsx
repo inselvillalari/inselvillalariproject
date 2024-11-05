@@ -5,6 +5,15 @@ import initIsotope from "../common/initIsotope";
 import RigelFeatures from "./features";
 import RigelSkills from "./skills";
 import PropertyDetails from "./propertyDetails";
+import BookingCalendar from "../components/BookingCalendar";
+
+const dateRangesData = [
+  {
+    start: "2024-11-01",
+    end: "2025-04-01",
+    color: "gray",
+  },
+];
 
 const RigelPage = () => {
   React.useEffect(() => {
@@ -86,6 +95,7 @@ const RigelPage = () => {
             </Link>
           </div>
         </div>
+        <BookingCalendar dateRangesData={dateRangesData} />
         <RigelSkills />
         <RigelFeatures />
         <PropertyDetails />

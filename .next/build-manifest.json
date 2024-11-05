@@ -27,15 +27,27 @@
     ],
     "/agena": [
       "static/chunks/[root of the server]__680841._.js",
-      "static/chunks/node_modules_next_a316ef._.js",
+      "static/chunks/node_modules_next_ce9f8e._.js",
       "static/chunks/node_modules_react_1cad9b._.js",
       "static/chunks/node_modules_react-dom_cjs_react-dom_development_ab7e07.js",
       "static/chunks/node_modules_react-dom_f14d04._.js",
       "static/chunks/node_modules_2f665d._.js",
-      "static/chunks/src_components_BookingCalendar_index_b811dc.css",
-      "static/chunks/node_modules_next_dist_pages_8a826c._.js",
-      "static/chunks/[next]_entry_page-loader_ts_84faa0._.js",
-      "static/chunks/[next]_entry_page-loader_ts_73405d._.js"
+      "static/chunks/_450dac._.css",
+      "static/chunks/node_modules_next_dist_pages_d816a8._.js",
+      "static/chunks/[next]_entry_page-loader_ts_135298._.js",
+      "static/chunks/[next]_entry_page-loader_ts_4f405a._.js"
+    ],
+    "/agena/activities": [
+      "static/chunks/node_modules_next_d6915f._.js",
+      "static/chunks/node_modules_react_1cad9b._.js",
+      "static/chunks/node_modules_react-dom_cjs_react-dom_development_ab7e07.js",
+      "static/chunks/node_modules_react-dom_f14d04._.js",
+      "static/chunks/node_modules_40caa9._.js",
+      "static/chunks/[root of the server]__70b6b5._.js",
+      "static/chunks/node_modules_react-modal-video_css_modal-video_474052.css",
+      "static/chunks/node_modules_next_dist_pages_647d19._.js",
+      "static/chunks/[next]_entry_page-loader_ts_d88f4b._.js",
+      "static/chunks/[next]_entry_page-loader_ts_8db8d1._.js"
     ],
     "/_error": [
       "static/chunks/[root of the server]__eea580._.js",
@@ -47,6 +59,42 @@
       "static/chunks/node_modules_next_dist_pages_8d961f._.js",
       "static/chunks/[next]_entry_page-loader_ts_d0b244._.js",
       "static/chunks/[next]_entry_page-loader_ts_351933._.js"
+    ],
+    "/capella": [
+      "static/chunks/[root of the server]__530335._.js",
+      "static/chunks/node_modules_next_a316ef._.js",
+      "static/chunks/node_modules_react_1cad9b._.js",
+      "static/chunks/node_modules_react-dom_cjs_react-dom_development_ab7e07.js",
+      "static/chunks/node_modules_react-dom_f14d04._.js",
+      "static/chunks/node_modules_2f665d._.js",
+      "static/chunks/_00183b._.css",
+      "static/chunks/node_modules_next_dist_pages_f7640e._.js",
+      "static/chunks/[next]_entry_page-loader_ts_8f2aff._.js",
+      "static/chunks/[next]_entry_page-loader_ts_a39005._.js"
+    ],
+    "/gredi": [
+      "static/chunks/[root of the server]__ad823d._.js",
+      "static/chunks/node_modules_next_a316ef._.js",
+      "static/chunks/node_modules_react_1cad9b._.js",
+      "static/chunks/node_modules_react-dom_cjs_react-dom_development_ab7e07.js",
+      "static/chunks/node_modules_react-dom_f14d04._.js",
+      "static/chunks/node_modules_2f665d._.js",
+      "static/chunks/_450dac._.css",
+      "static/chunks/node_modules_next_dist_pages_6a236b._.js",
+      "static/chunks/[next]_entry_page-loader_ts_58d90a._.js",
+      "static/chunks/[next]_entry_page-loader_ts_294efa._.js"
+    ],
+    "/rigel": [
+      "static/chunks/[root of the server]__9139ec._.js",
+      "static/chunks/node_modules_next_ce9f8e._.js",
+      "static/chunks/node_modules_react_1cad9b._.js",
+      "static/chunks/node_modules_react-dom_cjs_react-dom_development_ab7e07.js",
+      "static/chunks/node_modules_react-dom_f14d04._.js",
+      "static/chunks/node_modules_2f665d._.js",
+      "static/chunks/_450dac._.css",
+      "static/chunks/node_modules_next_dist_pages_0927fd._.js",
+      "static/chunks/[next]_entry_page-loader_ts_a65fae._.js",
+      "static/chunks/[next]_entry_page-loader_ts_7187ca._.js"
     ]
   },
   "devFiles": [],

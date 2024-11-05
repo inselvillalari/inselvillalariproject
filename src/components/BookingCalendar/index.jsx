@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
+import dynamic from "next/dynamic";
 import { Calendar, DateObject } from "react-multi-date-picker";
 import "./index.css";
+import "react-multi-date-picker/styles/backgrounds/bg-dark.css";
 
 const days = ["Pz", "Pt", "Sa", "Ça", "Pe", "Cu", "Ct"];
 const months = [
@@ -22,7 +24,6 @@ const BookingCalendar = (dateRangesData) => {
   const [dateRanges, setDateRanges] = useState([]);
 
   useEffect(() => {
-    // JSON dosyasındaki tarih aralıklarını yükleyip, DateObject ile işleyin
     const parsedRanges = dateRangesData?.dateRangesData?.map((range) => ({
       start: new DateObject(range.start),
       end: new DateObject(range.end),
@@ -30,12 +31,45 @@ const BookingCalendar = (dateRangesData) => {
     }));
     setDateRanges(parsedRanges);
   }, []);
-  console.log("dateRangesData", dateRangesData);
+
+  const [numberOfMonths, setNumberOfMonths] = useState(1);
+
+  useEffect(() => {
+    function getNumberOfMonths() {
+      const width = window.innerWidth;
+
+      if (width >= 1200) {
+        return 3;
+      } else if (width >= 768) {
+        return 2;
+      } else {
+        return 1;
+      }
+    }
+
+    const handleResize = () => {
+      setNumberOfMonths(getNumberOfMonths());
+    };
+
+    setNumberOfMonths(getNumberOfMonths());
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <section className="section-padding">
-      <div className="container d-flex justify-content-center">
+      <div className="container">
+        <div className="section-head">
+          <h3>Takvim</h3>
+        </div>
+      </div>
+      <div className="container d-flex justify-content-center mobile">
         <Calendar
-          numberOfMonths={3}
+          numberOfMonths={numberOfMonths}
           weekStartDayIndex={1}
           weekDays={days}
           months={months}
@@ -49,14 +83,12 @@ const BookingCalendar = (dateRangesData) => {
             let props = {};
             let color = null;
 
-            // Belirli tarih aralıklarını renklendir
             dateRanges.forEach((range) => {
               if (date >= range.start && date <= range.end) {
                 color = range.color;
               }
             });
 
-            // Renk atanmışsa arka plan rengini ayarla
             if (color) {
               props.style = {
                 backgroundColor: color,
@@ -68,8 +100,25 @@ const BookingCalendar = (dateRangesData) => {
           }}
         />
       </div>
+      <div className="container d-flex justify-content-center">
+        <div className="legend">
+          <div>
+            <span className="legend-color musait"></span> Müsait
+          </div>
+          <div>
+            <span className="legend-color rezervasyon"></span> Rezerve
+          </div>
+          <div>
+            <span className="legend-color dolu"></span> Tesis Tarafından
+            Kapatılmış
+          </div>
+          <div>
+            <span className="legend-color secili"></span> Seçili Alan
+          </div>
+        </div>
+      </div>
     </section>
   );
 };
 
-export default BookingCalendar;
+export default dynamic(() => Promise.resolve(BookingCalendar), { ssr: false });

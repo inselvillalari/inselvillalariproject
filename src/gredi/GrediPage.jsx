@@ -5,6 +5,15 @@ import initIsotope from "../common/initIsotope";
 import GrediFeatures from "./features";
 import GrediSkills from "./skills";
 import PropertyDetails from "./propertyDetails";
+import BookingCalendar from "../components/BookingCalendar";
+
+const dateRangesData = [
+  {
+    start: "2024-11-01",
+    end: "2025-04-01",
+    color: "gray",
+  },
+];
 
 const GrediPage = () => {
   React.useEffect(() => {
@@ -86,6 +95,7 @@ const GrediPage = () => {
             </Link>
           </div>
         </div>
+        <BookingCalendar dateRangesData={dateRangesData} />
         <GrediSkills />
         <GrediFeatures />
         <PropertyDetails />

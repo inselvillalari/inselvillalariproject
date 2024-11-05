@@ -1,7 +1,7 @@
 (globalThis.TURBOPACK = globalThis.TURBOPACK || []).push([
-    "static/chunks/[next]_entry_page-loader_ts_73405d._.js",
+    "static/chunks/[next]_entry_page-loader_ts_10aad2._.js",
     {},
-    {"otherChunks":["static/chunks/[root of the server]__680841._.js","static/chunks/node_modules_next_a316ef._.js","static/chunks/node_modules_react_1cad9b._.js","static/chunks/node_modules_react-dom_cjs_react-dom_development_ab7e07.js","static/chunks/node_modules_react-dom_f14d04._.js","static/chunks/node_modules_2f665d._.js",{"path":"static/chunks/src_components_BookingCalendar_index_b811dc.css","included":["[project]/src/components/BookingCalendar/index.css [client] (css)"],"moduleChunks":["static/chunks/src_components_BookingCalendar_index_735113.css"]},"static/chunks/node_modules_next_dist_pages_8a826c._.js"],"runtimeModuleIds":["[project]/node_modules/next/dist/compiled/@next/react-refresh-utils/dist/runtime.js [client] (ecmascript)","[project]/node_modules/next/dist/client/next-dev-turbopack.js [client] (ecmascript)","[next]/entry/page-loader.ts { PAGE => \"[project]/src/pages/agena/index.jsx [client] (ecmascript)\" } [client] (ecmascript)"]}
+    {"otherChunks":["static/chunks/[root of the server]__680841._.js","static/chunks/node_modules_next_a316ef._.js","static/chunks/node_modules_react_1cad9b._.js","static/chunks/node_modules_react-dom_cjs_react-dom_development_ab7e07.js","static/chunks/node_modules_react-dom_f14d04._.js","static/chunks/node_modules_2f665d._.js",{"path":"static/chunks/_450dac._.css","included":["[project]/src/components/BookingCalendar/index.css [client] (css)","[project]/node_modules/react-multi-date-picker/styles/backgrounds/bg-dark.css [client] (css)"],"moduleChunks":["static/chunks/src_components_BookingCalendar_index_735113.css","static/chunks/node_modules_react-multi-date-picker_styles_backgrounds_bg-dark_735113.css"]},"static/chunks/node_modules_next_dist_pages_6ce51d._.js"],"runtimeModuleIds":["[project]/node_modules/next/dist/compiled/@next/react-refresh-utils/dist/runtime.js [client] (ecmascript)","[project]/node_modules/next/dist/client/next-dev-turbopack.js [client] (ecmascript)","[next]/entry/page-loader.ts { PAGE => \"[project]/src/pages/agena/index.jsx [client] (ecmascript)\" } [client] (ecmascript)"]}
 ]);
 (() => {
 if (!Array.isArray(globalThis.TURBOPACK)) {
@@ -1557,4 +1557,4 @@ chunksToRegister.forEach(registerChunk);
 })();
 
 
-//# sourceMappingURL=%5Bnext%5D_entry_page-loader_ts_73405d._.js.map
+//# sourceMappingURL=%5Bnext%5D_entry_page-loader_ts_10aad2._.js.map

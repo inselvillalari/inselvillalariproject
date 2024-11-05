@@ -4,7 +4,45 @@
 }
 
 .rmdp-week-day {
-  color: red !important;
+  color: #ac4f4f !important;
+}
+
+.rmdp-month {
+  color: #783b3b !important;
+}
+
+.musait {
+  background-color: #fff;
+  color: #fff;
+}
+
+.dolu {
+  background-color: gray;
+  color: #fff;
+}
+
+.rezervasyon {
+  background-color: #ff851b;
+  color: #fff;
+}
+
+.secili {
+  background-color: #1b7cd1;
+  color: #fff;
+}
+
+.legend {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.legend-color {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
 }
 
 /*# sourceMappingURL=src_components_BookingCalendar_index_735113.css.map*/
