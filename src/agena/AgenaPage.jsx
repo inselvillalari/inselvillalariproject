@@ -41,37 +41,6 @@ const AgenaPage = () => {
                 <h3>Mekanlar</h3>
               </div>
             </div>
-            <Link href="/agena/dayViews">
-              <div className="col-lg-6 items theaters">
-                <div className="item">
-                  <div className="img">
-                    <img alt="" src="/assets/img/slid/agena/dayViews/1.jpeg" />
-                  </div>
-                  <div className="cont vis">
-                    <h5>Gündüz Görünümleri</h5>
-                    {/* <span>Architecture</span>
-                    <span>Modern</span> */}
-                  </div>
-                </div>
-              </div>
-            </Link>
-            <Link href="/agena/nightViews">
-              <div className="col-lg-6 items residential interior">
-                <div className="item">
-                  <div className="img">
-                    <img
-                      alt=""
-                      src="/assets/img/slid/agena/nightViews/1.jpeg"
-                    />
-                  </div>
-                  <div className="cont vis">
-                    <h5>Gece Görünümleri</h5>
-                    {/* <span>Architecture</span>
-                    <span>Modern</span> */}
-                  </div>
-                </div>
-              </div>
-            </Link>
             <Link href="/agena/insideViews">
               <div className="col-lg-6 items interior">
                 <div className="item">
@@ -86,7 +55,52 @@ const AgenaPage = () => {
                 </div>
               </div>
             </Link>
-            <Link href="/agena/activities">
+            <Link href="/agena/dayViews">
+              <div className="col-lg-6 items theaters">
+                <div className="item">
+                  <div className="img">
+                    <img alt="" src="/assets/img/slid/agena/dayViews/1.jpeg" />
+                  </div>
+                  <div className="cont vis">
+                    <h5>Gündüz Görünümleri</h5>
+                    {/* <span>Architecture</span>
+                    <span>Modern</span> */}
+                  </div>
+                </div>
+              </div>
+            </Link>
+            {/* <Link href="/agena/nightViews">
+              <div className="col-lg-6 items residential interior">
+                <div className="item">
+                  <div className="img">
+                    <img
+                      alt=""
+                      src="/assets/img/slid/agena/nightViews/1.jpeg"
+                    />
+                  </div>
+                  <div className="cont vis">
+                    <h5>Gece Görünümleri</h5>
+                    <span>Architecture</span>
+                    <span>Modern</span>
+                  </div>
+                </div>
+              </div>
+            </Link> */}
+            {/* <Link href="/agena/insideViews">
+              <div className="col-lg-6 items interior">
+                <div className="item">
+                  <div className="img">
+                    <img alt="" src="/assets/img/slid/agena/indoor/2.jpeg" />
+                  </div>
+                  <div className="cont vis">
+                    <h5>İç Mekan</h5>
+                    <span>Architecture</span>
+                    <span>Modern</span>
+                  </div>
+                </div>
+              </div>
+            </Link> */}
+            {/* <Link href="/agena/activities">
               <div className="col-lg-6 items residential">
                 <div className="item">
                   <div className="img">
@@ -97,12 +111,12 @@ const AgenaPage = () => {
                   </div>
                   <div className="cont vis">
                     <h5>Aktiviteler</h5>
-                    {/* <span>Architecture</span>
-                    <span>Modern</span> */}
+                    <span>Architecture</span>
+                    <span>Modern</span>
                   </div>
                 </div>
               </div>
-            </Link>
+            </Link> */}
           </div>
         </div>
         <BookingCalendar dateRangesData={dateRangesData} />

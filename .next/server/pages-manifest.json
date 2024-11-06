@@ -1,6 +1,9 @@
 {
   "/_app": "pages/_app.js",
   "/_document": "pages/_document.js",
-  "/": "pages/index.js",
-  "/agena": "pages/agena.js"
+  "/contact": "pages/contact.js",
+  "/agena": "pages/agena.js",
+  "/agena/nightViews": "pages/agena/nightViews.js",
+  "/agena/dayViews": "pages/agena/dayViews.js",
+  "/agena/insideViews": "pages/agena/insideViews.js"
 }
