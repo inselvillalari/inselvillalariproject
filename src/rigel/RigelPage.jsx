@@ -70,23 +70,24 @@ const RigelPage = () => {
                 </div>
               </div>
             </Link>
-            {/* <Link href="/rigel/nightViews">
+            <Link href="/rigel/nightViews">
               <div className="col-lg-6 items residential interior">
                 <div className="item">
                   <div className="img">
                     <img
                       alt=""
                       src="/assets/img/slid/rigel/nightViews/1.jpeg"
+                      className="gallery-img-class"
                     />
                   </div>
                   <div className="cont vis">
                     <h5>Gece Görünümleri</h5>
-                    <span>Architecture</span>
-                    <span>Modern</span>
+                    {/* <span>Architecture</span>
+                    <span>Modern</span> */}
                   </div>
                 </div>
               </div>
-            </Link> */}
+            </Link>
             {/* <Link href="/rigel/insideViews">
               <div className="col-lg-6 items interior">
                 <div className="item">
@@ -101,23 +102,24 @@ const RigelPage = () => {
                 </div>
               </div>
             </Link> */}
-            {/* <Link href="/rigel/activities">
+            <Link href="/rigel/activities">
               <div className="col-lg-6 items residential">
                 <div className="item">
                   <div className="img">
                     <img
                       alt=""
                       src="/assets/img/slid/rigel/activities/2.jpeg"
+                      className="gallery-img-class"
                     />
                   </div>
                   <div className="cont vis">
                     <h5>Aktiviteler</h5>
-                    <span>Architecture</span>
-                    <span>Modern</span>
+                    {/* <span>Architecture</span>
+                    <span>Modern</span> */}
                   </div>
                 </div>
               </div>
-            </Link> */}
+            </Link>
           </div>
         </div>
         {/* <BookingCalendar dateRangesData={dateRangesData} /> */}

@@ -37,7 +37,7 @@ const AgenaPage = () => {
       <section className="works filter-img section-padding">
         <div className="container">
           <BookingCalendar dateRangesData={dateRangesData} />
-          <div className="row gallery gallery-min-heigth">
+          <div className="row gallery gallery-min-heigth-agena">
             <div className="col-lg-6 items mt-0 interior theaters residential">
               <div className="section-head mb-0">
                 <h3>Mekanlar</h3>
@@ -71,54 +71,42 @@ const AgenaPage = () => {
                 </div>
               </div>
             </Link>
-            {/* <Link href="/agena/nightViews">
+            <Link href="/agena/nightViews">
               <div className="col-lg-6 items residential interior">
                 <div className="item">
                   <div className="img">
                     <img
                       alt=""
                       src="/assets/img/slid/agena/nightViews/1.jpeg"
+                      className="gallery-img-class"
                     />
                   </div>
                   <div className="cont vis">
                     <h5>Gece Görünümleri</h5>
-                    <span>Architecture</span>
-                    <span>Modern</span>
+                    {/* <span>Architecture</span>
+                    <span>Modern</span> */}
                   </div>
                 </div>
               </div>
-            </Link> */}
-            {/* <Link href="/agena/insideViews">
-              <div className="col-lg-6 items interior">
-                <div className="item">
-                  <div className="img">
-                    <img alt="" src="/assets/img/slid/agena/indoor/2.jpeg" />
-                  </div>
-                  <div className="cont vis">
-                    <h5>İç Mekan</h5>
-                    <span>Architecture</span>
-                    <span>Modern</span>
-                  </div>
-                </div>
-              </div>
-            </Link> */}
-            {/* <Link href="/agena/activities">
+            </Link>
+            <Link href="/agena/activities">
               <div className="col-lg-6 items residential">
                 <div className="item">
                   <div className="img">
                     <img
                       alt=""
                       src="/assets/img/slid/agena/activities/2.jpeg"
+                      className="gallery-img-class"
                     />
                   </div>
                   <div className="cont vis">
                     <h5>Aktiviteler</h5>
-                    <span>Architecture</span>
-                    <span>Modern</span>
+                    {/* <span>Architecture</span>
+                    <span>Modern</span> */}
                   </div>
                 </div>
               </div>
-            </Link> */}
+            </Link>
           </div>
         </div>
         {/* <BookingCalendar dateRangesData={dateRangesData} /> */}
