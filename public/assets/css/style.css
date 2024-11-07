@@ -5411,7 +5411,14 @@ footer .item .copy-right p a {
   }
 }
 
+.gallery-min-heigth{
+  min-height: 550px !important;
+}
+
 @media screen and (max-width: 480px) {
+  .gallery-min-heigth{
+    min-height: 710px !important;
+  }
   .fz-40 {
     font-size: 25px !important;
   }
@@ -5533,6 +5540,8 @@ footer .item .copy-right p a {
     width: 60px;
   }
 }
+
+
 
 @media (max-width: 767px) {
   .property-detail-info-list ul {

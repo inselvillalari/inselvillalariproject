@@ -31,7 +31,7 @@ const GrediPage = () => {
       <section className="works filter-img section-padding">
         <div className="container">
           <BookingCalendar dateRangesData={dateRangesData} />
-          <div className="row gallery">
+          <div className="row gallery gallery-min-heigth">
             <div className="col-lg-6 items mt-0 interior theaters residential">
               <div className="section-head mb-0">
                 <h3>Mekanlar</h3>
