@@ -6,6 +6,7 @@ import AgenaFeatures from "./features";
 import AgenaSkills from "./skills";
 import PropertyDetails from "./propertyDetails";
 import BookingCalendar from "../components/BookingCalendar";
+import Image from "next/image";
 
 const dateRangesData = [
   {
@@ -46,7 +47,15 @@ const AgenaPage = () => {
               <div className="col-lg-6 items interior">
                 <div className="item">
                   <div className="img">
-                    <img alt="" src="/assets/img/slid/agena/indoor/2.jpeg" />
+                    <Image
+                      src="/assets/img/slid/agena/indoor/2.jpeg"
+                      alt="İç Mekan"
+                      layout="responsive"
+                      // width={700} // Görselin orijinal genişliğine göre ayarlayın
+                      // height={475} // Görselin orijinal yüksekliğine göre ayarlayın
+                      placeholder="blur"
+                    />
+                    {/* <img alt="" src="/assets/img/slid/agena/indoor/2.jpeg" /> */}
                   </div>
                   <div className="cont vis">
                     <h5>İç Mekan</h5>
@@ -60,7 +69,15 @@ const AgenaPage = () => {
               <div className="col-lg-6 items theaters">
                 <div className="item">
                   <div className="img">
-                    <img alt="" src="/assets/img/slid/agena/dayViews/1.jpeg" />
+                    {/* <img alt="" src="/assets/img/slid/agena/dayViews/1.jpeg" /> */}
+                    <Image
+                      srcsrc="/assets/img/slid/agena/dayViews/1.jpeg"
+                      alt="İç Mekan"
+                      layout="responsive"
+                      // width={700} // Görselin orijinal genişliğine göre ayarlayın
+                      // height={475} // Görselin orijinal yüksekliğine göre ayarlayın
+                      placeholder="blur"
+                    />
                   </div>
                   <div className="cont vis">
                     <h5>Gündüz Görünümleri</h5>
