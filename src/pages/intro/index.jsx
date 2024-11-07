@@ -67,7 +67,7 @@ const IntroWithVertical = () => {
               grabCursor={true}
               watchSlidesProgress={true}
               breakpoints={{
-                450: { direction: "vertical" },
+                1100: { direction: "vertical" },
               }}
               onBeforeInit={(swiper) => {
                 // swiper.params.navigation.prevEl = navigationPrevRef.current;
@@ -157,7 +157,7 @@ const IntroWithVertical = () => {
               className="cta__slider-arrow cta__slider-arrow--next"
               onClick={handleNext}
             >
-              {widthRef?.current?.offsetWidth > 450 ? (
+              {widthRef?.current?.offsetWidth > 1100 ? (
                 <i className="fas fa-chevron-down"></i>
               ) : (
                 <i className="fas fa-chevron-right"></i>
@@ -169,7 +169,7 @@ const IntroWithVertical = () => {
               className="cta__slider-arrow cta__slider-arrow--previous"
               onClick={handlePrev}
             >
-              {widthRef?.current?.offsetWidth > 450 ? (
+              {widthRef?.current?.offsetWidth > 1100 ? (
                 <i className="fas fa-chevron-up"></i>
               ) : (
                 <i className="fas fa-chevron-left"></i>
