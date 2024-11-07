@@ -27,7 +27,13 @@ const AgenaInsideViews = () => {
               style={{ cursor: "none" }}
               className="col-lg-4 col-xl-3 col-md-12"
             >
-              <img alt="" src="/assets/img/slid/agena/indoor/5.jpeg" />
+              <img alt="" src="/assets/img/slid/agena/indoor/1.jpeg" />
+            </a>
+            <a
+              style={{ cursor: "none" }}
+              className="col-lg-4 col-xl-3 col-md-6"
+            >
+              <img alt="" src="/assets/img/slid/agena/indoor/2.jpeg" />
             </a>
             <a
               style={{ cursor: "none" }}
@@ -37,28 +43,25 @@ const AgenaInsideViews = () => {
             </a>
             <a
               style={{ cursor: "none" }}
-              className="col-lg-4 col-xl-3 col-md-6"
+              className="col-lg-4 col-xl-3 col-md-12"
             >
               <img alt="" src="/assets/img/slid/agena/indoor/4.jpeg" />
             </a>
+          </div>
+        </div>
+      </section>
+      <section className="projdtal">
+        <div className="justified-gallery">
+          <div className="row">
             <a
               style={{ cursor: "none" }}
               className="col-lg-4 col-xl-3 col-md-12"
             >
               <img alt="" src="/assets/img/slid/agena/indoor/6.jpeg" />
             </a>
-          </div>
-        </div>
-      </section>
-
-      {/* <ProjectVideo /> */}
-
-      <section className="projdtal">
-        <div className="justified-gallery">
-          <div className="row">
             <a
               style={{ cursor: "none" }}
-              className="col-lg-4 col-xl-3 col-md-6"
+              className="col-lg-4 col-xl-3 col-md-12"
             >
               <img alt="" src="/assets/img/slid/agena/indoor/7.jpeg" />
             </a>
@@ -74,18 +77,21 @@ const AgenaInsideViews = () => {
             >
               <img alt="" src="/assets/img/slid/agena/indoor/9.jpeg" />
             </a>
+          </div>
+        </div>
+      </section>
+
+      {/* <ProjectVideo /> */}
+
+      <section className="projdtal">
+        <div className="justified-gallery">
+          <div className="row">
             <a
               style={{ cursor: "none" }}
               className="col-lg-4 col-xl-3 col-md-6"
             >
               <img alt="" src="/assets/img/slid/agena/indoor/10.jpeg" />
             </a>
-          </div>
-        </div>
-      </section>
-      <section className="projdtal">
-        <div className="justified-gallery">
-          <div className="row">
             <a
               style={{ cursor: "none" }}
               className="col-lg-4 col-xl-3 col-md-6"
@@ -104,18 +110,18 @@ const AgenaInsideViews = () => {
             >
               <img alt="" src="/assets/img/slid/agena/indoor/13.jpeg" />
             </a>
-            <a
-              style={{ cursor: "none" }}
-              className="col-lg-4 col-xl-3 col-md-6"
-            >
-              <img alt="" src="/assets/img/slid/agena/indoor/14.jpeg" />
-            </a>
           </div>
         </div>
       </section>
       <section className="projdtal">
         <div className="justified-gallery">
           <div className="row">
+            <a
+              style={{ cursor: "none" }}
+              className="col-lg-4 col-xl-3 col-md-6"
+            >
+              <img alt="" src="/assets/img/slid/agena/indoor/14.jpeg" />
+            </a>
             <a
               style={{ cursor: "none" }}
               className="col-lg-4 col-xl-3 col-md-6"
@@ -134,12 +140,6 @@ const AgenaInsideViews = () => {
             >
               <img alt="" src="/assets/img/slid/agena/indoor/17.jpeg" />
             </a>
-            <a
-              style={{ cursor: "none" }}
-              className="col-lg-4 col-xl-3 col-md-6"
-            >
-              <img alt="" src="/assets/img/slid/agena/indoor/18.jpeg" />
-            </a>
           </div>
         </div>
       </section>
@@ -150,8 +150,20 @@ const AgenaInsideViews = () => {
               style={{ cursor: "none" }}
               className="col-lg-4 col-xl-3 col-md-6"
             >
+              <img alt="" src="/assets/img/slid/agena/indoor/18.jpeg" />
+            </a>
+            <a
+              style={{ cursor: "none" }}
+              className="col-lg-4 col-xl-3 col-md-6"
+            >
               <img alt="" src="/assets/img/slid/agena/indoor/19.jpeg" />
             </a>
+          </div>
+        </div>
+      </section>
+      <section className="projdtal">
+        <div className="justified-gallery">
+          <div className="row">
             {/* <a style={{ cursor: "none" }} className="col-lg-4 col-xl-3 col-md-6">
             <img alt="" src="/assets/img/slid/agena/indoor/16.jpeg" />
           </a>

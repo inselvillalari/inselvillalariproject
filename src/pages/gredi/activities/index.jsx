@@ -27,15 +27,15 @@ const GrediActivities = () => {
               style={{ cursor: "none" }}
               className="col-lg-4 col-xl-3 col-md-12"
             >
-              <img alt="" src="/assets/img/slid/gredi/activities/3.jpeg" />
+              <img alt="" src="/assets/img/slid/gredi/activities/1.jpeg" />
             </a>
             <a
               style={{ cursor: "none" }}
               className="col-lg-4 col-xl-3 col-md-6"
             >
-              <img alt="" src="/assets/img/slid/gredi/activities/4.jpeg" />
+              <img alt="" src="/assets/img/slid/gredi/activities/2.jpeg" />
             </a>
-            <a
+            {/* <a
               style={{ cursor: "none" }}
               className="col-lg-4 col-xl-3 col-md-6"
             >
@@ -46,14 +46,14 @@ const GrediActivities = () => {
               className="col-lg-4 col-xl-3 col-md-12"
             >
               <img alt="" src="/assets/img/slid/gredi/activities/5.jpeg" />
-            </a>
+            </a> */}
           </div>
         </div>
       </section>
       {/* 
       <ProjectVideo /> */}
 
-      <section className="projdtal">
+      {/* <section className="projdtal">
         <div className="justified-gallery">
           <div className="row">
             <a
@@ -70,7 +70,7 @@ const GrediActivities = () => {
             </a>
           </div>
         </div>
-      </section>
+      </section> */}
     </MainLayout>
   );
 };

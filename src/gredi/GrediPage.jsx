@@ -37,32 +37,18 @@ const GrediPage = () => {
                 <h3>Mekanlar</h3>
               </div>
             </div>
-            {/* <Link href="/gredi/dayViews">
+            <Link href="/gredi/dayViews">
               <div className="col-lg-6 items theaters">
-                <div className="item">
-                  <div className="img">
-                    <img alt="" src="/assets/img/slid/gredi/dayViews/1.jpeg" />
-                  </div>
-                  <div className="cont vis">
-                    <h5>Gündüz Görünümleri</h5>
-                    <span>Architecture</span>
-                    <span>Modern</span>
-                  </div>
-                </div>
-              </div>
-            </Link> */}
-            <Link href="/gredi/insideViews">
-              <div className="col-lg-6 items interior">
                 <div className="item">
                   <div className="img">
                     <img
                       alt=""
-                      src="/assets/img/slid/gredi/indoor/2.jpeg"
+                      src="/assets/img/slid/gredi/dayViews/1.jpeg"
                       className="gallery-img-class"
                     />
                   </div>
                   <div className="cont vis">
-                    <h5>İç Mekan</h5>
+                    <h5>Gündüz Görünümleri</h5>
                     {/* <span>Architecture</span>
                     <span>Modern</span> */}
                   </div>
@@ -93,7 +79,7 @@ const GrediPage = () => {
                   <div className="img">
                     <img
                       alt=""
-                      src="/assets/img/slid/gredi/indoor/2.jpeg"
+                      src="/assets/img/slid/gredi/indoor/1.jpeg"
                       className="gallery-img-class"
                     />
                   </div>
@@ -125,7 +111,6 @@ const GrediPage = () => {
             </Link>
           </div>
         </div>
-        {/* <BookingCalendar dateRangesData={dateRangesData} /> */}
         <GrediSkills />
         <GrediFeatures />
         <PropertyDetails />

@@ -27,6 +27,12 @@ const GrediDayViews = () => {
               style={{ cursor: "none" }}
               className="col-lg-4 col-xl-3 col-md-12"
             >
+              <img alt="" src="/assets/img/slid/gredi/dayViews/1.jpeg" />
+            </a>
+            <a
+              style={{ cursor: "none" }}
+              className="col-lg-4 col-xl-3 col-md-6"
+            >
               <img alt="" src="/assets/img/slid/gredi/dayViews/2.jpeg" />
             </a>
             <a
@@ -37,15 +43,9 @@ const GrediDayViews = () => {
             </a>
             <a
               style={{ cursor: "none" }}
-              className="col-lg-4 col-xl-3 col-md-6"
-            >
-              <img alt="" src="/assets/img/slid/gredi/dayViews/4.jpeg" />
-            </a>
-            <a
-              style={{ cursor: "none" }}
               className="col-lg-4 col-xl-3 col-md-12"
             >
-              <img alt="" src="/assets/img/slid/gredi/dayViews/5.jpeg" />
+              <img alt="" src="/assets/img/slid/gredi/dayViews/4.jpeg" />
             </a>
           </div>
         </div>
@@ -56,6 +56,12 @@ const GrediDayViews = () => {
       <section className="projdtal">
         <div className="justified-gallery">
           <div className="row">
+            <a
+              style={{ cursor: "none" }}
+              className="col-lg-4 col-xl-3 col-md-6"
+            >
+              <img alt="" src="/assets/img/slid/gredi/dayViews/5.jpeg" />
+            </a>
             <a
               style={{ cursor: "none" }}
               className="col-lg-4 col-xl-3 col-md-6"

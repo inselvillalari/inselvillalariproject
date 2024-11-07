@@ -33,19 +33,19 @@ const GrediInsideViews = () => {
               style={{ cursor: "none" }}
               className="col-lg-4 col-xl-3 col-md-6"
             >
-              <img alt="" src="/assets/img/slid/gredi/indoor/3.jpeg" />
+              <img alt="" src="/assets/img/slid/gredi/indoor/2.jpeg" />
             </a>
             <a
               style={{ cursor: "none" }}
               className="col-lg-4 col-xl-3 col-md-6"
             >
-              <img alt="" src="/assets/img/slid/gredi/indoor/4.jpeg" />
+              <img alt="" src="/assets/img/slid/gredi/indoor/3.jpeg" />
             </a>
             <a
               style={{ cursor: "none" }}
               className="col-lg-4 col-xl-3 col-md-12"
             >
-              <img alt="" src="/assets/img/slid/gredi/indoor/5.jpeg" />
+              <img alt="" src="/assets/img/slid/gredi/indoor/4.jpeg" />
             </a>
           </div>
         </div>
@@ -60,6 +60,12 @@ const GrediInsideViews = () => {
               style={{ cursor: "none" }}
               className="col-lg-4 col-xl-3 col-md-6"
             >
+              <img alt="" src="/assets/img/slid/gredi/indoor/5.jpeg" />
+            </a>
+            <a
+              style={{ cursor: "none" }}
+              className="col-lg-4 col-xl-3 col-md-6"
+            >
               <img alt="" src="/assets/img/slid/gredi/indoor/6.jpeg" />
             </a>
             <a
@@ -68,6 +74,42 @@ const GrediInsideViews = () => {
             >
               <img alt="" src="/assets/img/slid/gredi/indoor/7.jpeg" />
             </a>
+            <a
+              style={{ cursor: "none" }}
+              className="col-lg-4 col-xl-3 col-md-6"
+            >
+              <img alt="" src="/assets/img/slid/gredi/indoor/8.jpeg" />
+            </a>
+          </div>
+        </div>
+      </section>
+      <section className="projdtal">
+        <div className="justified-gallery">
+          <div className="row">
+            <a
+              style={{ cursor: "none" }}
+              className="col-lg-4 col-xl-3 col-md-6"
+            >
+              <img alt="" src="/assets/img/slid/gredi/indoor/9.jpeg" />
+            </a>
+            <a
+              style={{ cursor: "none" }}
+              className="col-lg-4 col-xl-3 col-md-6"
+            >
+              <img alt="" src="/assets/img/slid/gredi/indoor/10.jpeg" />
+            </a>
+            {/* <a
+              style={{ cursor: "none" }}
+              className="col-lg-4 col-xl-3 col-md-6"
+            >
+              <img alt="" src="/assets/img/slid/gredi/indoor/8.jpeg" />
+            </a>
+            <a
+              style={{ cursor: "none" }}
+              className="col-lg-4 col-xl-3 col-md-6"
+            >
+              <img alt="" src="/assets/img/slid/gredi/indoor/9.jpeg" />
+            </a> */}
           </div>
         </div>
       </section>

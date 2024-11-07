@@ -46,7 +46,11 @@ const RigelPage = () => {
               <div className="col-lg-6 items interior">
                 <div className="item">
                   <div className="img">
-                    <img alt="" src="/assets/img/slid/rigel/indoor/2.jpeg" className="gallery-img-class"/>
+                    <img
+                      alt=""
+                      src="/assets/img/slid/rigel/indoor/2.jpeg"
+                      className="gallery-img-class"
+                    />
                   </div>
                   <div className="cont vis">
                     <h5>İç Mekan</h5>
@@ -60,7 +64,11 @@ const RigelPage = () => {
               <div className="col-lg-6 items theaters">
                 <div className="item">
                   <div className="img">
-                    <img alt="" src="/assets/img/slid/rigel/dayViews/1.jpeg" className="gallery-img-class"/>
+                    <img
+                      alt=""
+                      src="/assets/img/slid/rigel/dayViews/1.jpeg"
+                      className="gallery-img-class"
+                    />
                   </div>
                   <div className="cont vis">
                     <h5>Gündüz Görünümleri</h5>
@@ -88,20 +96,6 @@ const RigelPage = () => {
                 </div>
               </div>
             </Link>
-            {/* <Link href="/rigel/insideViews">
-              <div className="col-lg-6 items interior">
-                <div className="item">
-                  <div className="img">
-                    <img alt="" src="/assets/img/slid/rigel/indoor/2.jpeg" />
-                  </div>
-                  <div className="cont vis">
-                    <h5>İç Mekan</h5>
-                    <span>Architecture</span>
-                    <span>Modern</span>
-                  </div>
-                </div>
-              </div>
-            </Link> */}
             <Link href="/rigel/activities">
               <div className="col-lg-6 items residential">
                 <div className="item">
@@ -122,7 +116,6 @@ const RigelPage = () => {
             </Link>
           </div>
         </div>
-        {/* <BookingCalendar dateRangesData={dateRangesData} /> */}
         <RigelSkills />
         <RigelFeatures />
         <PropertyDetails />

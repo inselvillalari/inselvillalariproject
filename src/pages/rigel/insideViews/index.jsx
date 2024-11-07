@@ -33,19 +33,19 @@ const RigelInsideViews = () => {
               style={{ cursor: "none" }}
               className="col-lg-4 col-xl-3 col-md-6"
             >
-              <img alt="" src="/assets/img/slid/rigel/indoor/3.jpeg" />
+              <img alt="" src="/assets/img/slid/rigel/indoor/2.jpeg" />
             </a>
             <a
               style={{ cursor: "none" }}
               className="col-lg-4 col-xl-3 col-md-6"
             >
-              <img alt="" src="/assets/img/slid/rigel/indoor/4.jpeg" />
+              <img alt="" src="/assets/img/slid/rigel/indoor/3.jpeg" />
             </a>
             <a
               style={{ cursor: "none" }}
               className="col-lg-4 col-xl-3 col-md-12"
             >
-              <img alt="" src="/assets/img/slid/rigel/indoor/5.jpeg" />
+              <img alt="" src="/assets/img/slid/rigel/indoor/4.jpeg" />
             </a>
           </div>
         </div>
@@ -60,6 +60,12 @@ const RigelInsideViews = () => {
               style={{ cursor: "none" }}
               className="col-lg-4 col-xl-3 col-md-6"
             >
+              <img alt="" src="/assets/img/slid/rigel/indoor/5.jpeg" />
+            </a>
+            <a
+              style={{ cursor: "none" }}
+              className="col-lg-4 col-xl-3 col-md-6"
+            >
               <img alt="" src="/assets/img/slid/rigel/indoor/6.jpeg" />
             </a>
             <a
@@ -67,6 +73,12 @@ const RigelInsideViews = () => {
               className="col-lg-4 col-xl-3 col-md-6"
             >
               <img alt="" src="/assets/img/slid/rigel/indoor/7.jpeg" />
+            </a>
+            <a
+              style={{ cursor: "none" }}
+              className="col-lg-4 col-xl-3 col-md-6"
+            >
+              <img alt="" src="/assets/img/slid/rigel/indoor/8.jpeg" />
             </a>
           </div>
         </div>
