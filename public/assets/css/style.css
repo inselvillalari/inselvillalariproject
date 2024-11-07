@@ -5415,7 +5415,16 @@ footer .item .copy-right p a {
   min-height: 550px !important;
 }
 
+.gallery-img-class{
+  min-width: 487.5px;
+  min-height: 365.63px;
+}
+
 @media screen and (max-width: 480px) {
+  .gallery-img-class{
+    min-width: 380px;
+    min-height: 285px;
+  }
   .gallery-min-heigth{
     min-height: 710px !important;
   }

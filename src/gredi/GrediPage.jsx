@@ -55,7 +55,11 @@ const GrediPage = () => {
               <div className="col-lg-6 items interior">
                 <div className="item">
                   <div className="img">
-                    <img alt="" src="/assets/img/slid/gredi/indoor/2.jpeg" />
+                    <img
+                      alt=""
+                      src="/assets/img/slid/gredi/indoor/2.jpeg"
+                      className="gallery-img-class"
+                    />
                   </div>
                   <div className="cont vis">
                     <h5>İç Mekan</h5>
@@ -72,6 +76,7 @@ const GrediPage = () => {
                     <img
                       alt=""
                       src="/assets/img/slid/gredi/nightViews/1.jpeg"
+                      className="gallery-img-class"
                     />
                   </div>
                   <div className="cont vis">
