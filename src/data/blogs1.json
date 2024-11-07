@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "image": "/assets/img/slid/random/1.jpeg",
+    "title": "Villa Agena",
+    "by": "ALEX SMITH",
+    "date": "5 Haz 2024"
+  },
+  {
+    "id": 2,
+    "image": "/assets/img/slid/random/2.jpeg",
+    "title": "Villa Capella",
+    "by": "ALEX SMITH",
+    "date": "6 Haz 2024"
+  }
+]
