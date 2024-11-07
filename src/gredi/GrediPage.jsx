@@ -30,6 +30,7 @@ const GrediPage = () => {
     <>
       <section className="works filter-img section-padding">
         <div className="container">
+          <BookingCalendar dateRangesData={dateRangesData} />
           <div className="row gallery">
             <div className="col-lg-6 items mt-0 interior theaters residential">
               <div className="section-head mb-0">
@@ -114,7 +115,7 @@ const GrediPage = () => {
             </Link> */}
           </div>
         </div>
-        <BookingCalendar dateRangesData={dateRangesData} />
+        {/* <BookingCalendar dateRangesData={dateRangesData} /> */}
         <GrediSkills />
         <GrediFeatures />
         <PropertyDetails />

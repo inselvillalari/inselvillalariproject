@@ -60,7 +60,7 @@ const BookingCalendar = (dateRangesData) => {
   }, []);
 
   return (
-    <section className="section-padding pt-100 p-0">
+    <section className="section-padding p-0 pb-100">
       <div className="container">
         <div className="section-head">
           <h3>Takvim</h3>
