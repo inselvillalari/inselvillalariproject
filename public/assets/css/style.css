@@ -5411,8 +5411,12 @@ footer .item .copy-right p a {
   }
 }
 
-.gallery-min-heigth{
+.gallery-min-heigth-capella{
   min-height: 550px !important;
+}
+
+.gallery-min-heigth{
+  min-height: 1015.24px !important;
 }
 
 .gallery-img-class{
@@ -5425,8 +5429,11 @@ footer .item .copy-right p a {
     min-width: 380px;
     min-height: 285px;
   }
-  .gallery-min-heigth{
+  .gallery-min-heigth-capella{
     min-height: 710px !important;
+  }
+  .gallery-min-heigth{
+    min-height: 1379.2px !important;
   }
   .fz-40 {
     font-size: 25px !important;
