@@ -15,13 +15,16 @@ dist/
 
 # Log files
 *.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
 
 # Package files
 *.jar
 
 # Maven
 target/
-dist/
 
 # JetBrains IDE
 .idea/
@@ -51,4 +54,38 @@ Thumbs.db
 # Ignore webpack cache
 .next/cache/webpack/server-development/
 
-.next   
+# Next.js
+.next/
+out/
+build/
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Logs
+logs
+
+# Testing
+coverage/
+*.lcov
+
+# Editor directories and files
+.vscode/
+*.swp
+*.swo
+*~
+*.sublime-workspace
+*.sublime-project
+
+# Ignore local sensitive files
+config.local.js
+
+# Yarn cache files
+.yarn/cache/
+.yarn/unplugged/
+.yarn/build-state.yml
+.yarn/install-state.gz
