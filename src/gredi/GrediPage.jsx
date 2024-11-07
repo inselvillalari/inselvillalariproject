@@ -67,7 +67,7 @@ const GrediPage = () => {
                 </div>
               </div>
             </Link>
-            <Link href="/gredi/insideViews">
+            {/* <Link href="/gredi/insideViews">
               <div className="col-lg-6 items interior">
                 <div className="item">
                   <div className="img">
@@ -75,8 +75,8 @@ const GrediPage = () => {
                   </div>
                   <div className="cont vis">
                     <h5>İç Mekan</h5>
-                    {/* <span>Architecture</span>
-                    <span>Modern</span> */}
+                    <span>Architecture</span>
+                    <span>Modern</span>
                   </div>
                 </div>
               </div>
@@ -92,12 +92,12 @@ const GrediPage = () => {
                   </div>
                   <div className="cont vis">
                     <h5>Aktiviteler</h5>
-                    {/* <span>Architecture</span>
-                    <span>Modern</span> */}
+                    <span>Architecture</span>
+                    <span>Modern</span>
                   </div>
                 </div>
               </div>
-            </Link>
+            </Link> */}
           </div>
         </div>
         <BookingCalendar dateRangesData={dateRangesData} />
