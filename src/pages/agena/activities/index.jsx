@@ -55,12 +55,20 @@ const AgenaActivities = () => {
 
       <section className="projdtal">
         <div className="justified-gallery">
-          <a style={{ cursor: "none" }} className="col-lg-4 col-xl-3 col-md-6">
-            <img alt="" src="/assets/img/slid/capella/activities/6.jpeg" />
-          </a>
-          <a style={{ cursor: "none" }} className="col-lg-4 col-xl-3 col-md-6">
-            <img alt="" src="/assets/img/slid/capella/activities/7.jpeg" />
-          </a>
+          <div className="row">
+            <a
+              style={{ cursor: "none" }}
+              className="col-lg-4 col-xl-3 col-md-6"
+            >
+              <img alt="" src="/assets/img/slid/capella/activities/6.jpeg" />
+            </a>
+            <a
+              style={{ cursor: "none" }}
+              className="col-lg-4 col-xl-3 col-md-6"
+            >
+              <img alt="" src="/assets/img/slid/capella/activities/7.jpeg" />
+            </a>
+          </div>
         </div>
       </section>
     </MainLayout>

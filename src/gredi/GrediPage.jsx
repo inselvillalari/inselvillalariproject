@@ -36,7 +36,7 @@ const GrediPage = () => {
                 <h3>Mekanlar</h3>
               </div>
             </div>
-            <Link href="/gredi/dayViews">
+            {/* <Link href="/gredi/dayViews">
               <div className="col-lg-6 items theaters">
                 <div className="item">
                   <div className="img">
@@ -44,6 +44,20 @@ const GrediPage = () => {
                   </div>
                   <div className="cont vis">
                     <h5>Gündüz Görünümleri</h5>
+                    <span>Architecture</span>
+                    <span>Modern</span>
+                  </div>
+                </div>
+              </div>
+            </Link> */}
+            <Link href="/gredi/insideViews">
+              <div className="col-lg-6 items interior">
+                <div className="item">
+                  <div className="img">
+                    <img alt="" src="/assets/img/slid/gredi/indoor/2.jpeg" />
+                  </div>
+                  <div className="cont vis">
+                    <h5>İç Mekan</h5>
                     {/* <span>Architecture</span>
                     <span>Modern</span> */}
                   </div>
@@ -80,8 +94,8 @@ const GrediPage = () => {
                   </div>
                 </div>
               </div>
-            </Link>
-            <Link href="/gredi/activities">
+            </Link> */}
+            {/* <Link href="/gredi/activities">
               <div className="col-lg-6 items residential">
                 <div className="item">
                   <div className="img">

@@ -41,6 +41,20 @@ const RigelPage = () => {
                 <h3>Mekanlar</h3>
               </div>
             </div>
+            <Link href="/rigel/insideViews">
+              <div className="col-lg-6 items interior">
+                <div className="item">
+                  <div className="img">
+                    <img alt="" src="/assets/img/slid/rigel/indoor/2.jpeg" />
+                  </div>
+                  <div className="cont vis">
+                    <h5>İç Mekan</h5>
+                    {/* <span>Architecture</span>
+                    <span>Modern</span> */}
+                  </div>
+                </div>
+              </div>
+            </Link>
             <Link href="/rigel/dayViews">
               <div className="col-lg-6 items theaters">
                 <div className="item">
@@ -55,7 +69,7 @@ const RigelPage = () => {
                 </div>
               </div>
             </Link>
-            <Link href="/rigel/nightViews">
+            {/* <Link href="/rigel/nightViews">
               <div className="col-lg-6 items residential interior">
                 <div className="item">
                   <div className="img">
@@ -66,12 +80,12 @@ const RigelPage = () => {
                   </div>
                   <div className="cont vis">
                     <h5>Gece Görünümleri</h5>
-                    {/* <span>Architecture</span>
-                    <span>Modern</span> */}
+                    <span>Architecture</span>
+                    <span>Modern</span>
                   </div>
                 </div>
               </div>
-            </Link>
+            </Link> */}
             {/* <Link href="/rigel/insideViews">
               <div className="col-lg-6 items interior">
                 <div className="item">
@@ -85,8 +99,8 @@ const RigelPage = () => {
                   </div>
                 </div>
               </div>
-            </Link>
-            <Link href="/rigel/activities">
+            </Link> */}
+            {/* <Link href="/rigel/activities">
               <div className="col-lg-6 items residential">
                 <div className="item">
                   <div className="img">

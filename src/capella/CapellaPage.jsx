@@ -36,6 +36,20 @@ const CapellaPage = () => {
                 <h3>Mekanlar</h3>
               </div>
             </div>
+            <Link href="/capella/insideViews">
+              <div className="col-lg-6 items interior">
+                <div className="item">
+                  <div className="img">
+                    <img alt="" src="/assets/img/slid/capella/indoor/2.jpeg" />
+                  </div>
+                  <div className="cont vis">
+                    <h5>İç Mekan</h5>
+                    {/* <span>Architecture</span>
+                    <span>Modern</span> */}
+                  </div>
+                </div>
+              </div>
+            </Link>
             <Link href="/capella/dayViews">
               <div className="col-lg-6 items theaters">
                 <div className="item">
@@ -53,7 +67,7 @@ const CapellaPage = () => {
                 </div>
               </div>
             </Link>
-            <Link href="/capella/nightViews">
+            {/* <Link href="/capella/nightViews">
               <div className="col-lg-6 items residential interior">
                 <div className="item">
                   <div className="img">
@@ -64,12 +78,12 @@ const CapellaPage = () => {
                   </div>
                   <div className="cont vis">
                     <h5>Gece Görünümleri</h5>
-                    {/* <span>Architecture</span>
-                    <span>Modern</span> */}
+                    <span>Architecture</span>
+                    <span>Modern</span>
                   </div>
                 </div>
               </div>
-            </Link>
+            </Link> */}
             {/* <Link href="/capella/insideViews">
               <div className="col-lg-6 items interior">
                 <div className="item">
@@ -83,8 +97,8 @@ const CapellaPage = () => {
                   </div>
                 </div>
               </div>
-            </Link>
-            <Link href="/capella/activities">
+            </Link> */}
+            {/* <Link href="/capella/activities">
               <div className="col-lg-6 items residential">
                 <div className="item">
                   <div className="img">
