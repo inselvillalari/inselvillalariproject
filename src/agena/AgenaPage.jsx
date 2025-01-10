@@ -19,11 +19,11 @@ const dateRangesData = [
   //   end: "2025-04-26",
   //   color: "#ff851b",
   // },
-  // {
-  //   start: "2025-05-07",
-  //   end: "2025-05-14",
-  //   color: "#ff851b",
-  // },
+  {
+    start: "2025-08-30",
+    end: "2025-09-07",
+    color: "#ff851b",
+  },
 ];
 
 const AgenaPage = () => {
