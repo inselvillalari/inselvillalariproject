@@ -41,7 +41,7 @@ const AgenaFeatures = () => {
               </div>
               <div className="col-4 mt-4">
                 <div className="item">
-                  <CarPark title="Otopark" />
+                  <Bilardo title="Bilardo" />
                 </div>
               </div>
               <div className="col-4 mt-4">
@@ -96,10 +96,16 @@ const AgenaFeatures = () => {
                   }}
                 >
                   <div className="item">
-                    <Check title="Masa Tenisi" />
+                    <Check title="Otopark" />
+                  </div>
+                  <div className="item">
+                    <Check title="Elektrikli Araç Şarj İstasyonu" />
                   </div>
                   <div className="item">
                     <Check title="Smart TV - Uydu" />
+                  </div>
+                  <div className="item">
+                    <Check title="Playstation 5" />
                   </div>
                   <div className="item ">
                     <Check title="Güvenlik Görevlisi" />
@@ -110,8 +116,14 @@ const AgenaFeatures = () => {
                   <div className="item">
                     <Check title="Klima" />
                   </div>
+                  <div className="item">
+                    <Check title="Masa Tenisi" />
+                  </div>
                   <div className="item ">
                     <Check title="Full Mobilyalı" />
+                  </div>
+                  <div className="item">
+                    <Check title="Havuz Isıtma" />
                   </div>
                   <div className="item ">
                     <Check title="Beyaz Eşyalı" />
@@ -160,6 +172,9 @@ const AgenaFeatures = () => {
                   </div>
                   <div className="item ">
                     <Check title="Bahçeli" />
+                  </div>
+                  <div className="item ">
+                    <Check title="Çocuk Havuzu" />
                   </div>
                   <div className="item ">
                     <Check title="Ebeveyn Banyosu" />

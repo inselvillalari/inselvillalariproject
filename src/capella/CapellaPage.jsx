@@ -14,6 +14,11 @@ const dateRangesData = [
     color: "gray",
   },
   {
+    start: "2024-04-07",
+    end: "2025-04-11",
+    color: "gray",
+  },
+  {
     start: "2025-07-13",
     end: "2025-07-23",
     color: "#ff851b",

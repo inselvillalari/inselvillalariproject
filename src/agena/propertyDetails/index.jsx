@@ -45,8 +45,8 @@ const PropertyDetails = () => {
               <span>En: 4,35 m Boy: 8,95 m Derinlik: 155-195 cm</span>
             </li>
             <li>
-              <label>Zemin Kat:</label>
-              <span>Bilardo - Masa Tenisi - Dart</span>
+              <label>Bodrum Kat:</label>
+              <span>Bilardo - Masa Tenisi - Dart - Spor Salonu</span>
             </li>
             <li>
               <label>Kiralama için:</label>

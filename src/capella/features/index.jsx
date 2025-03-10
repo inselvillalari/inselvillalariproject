@@ -99,7 +99,13 @@ const CapellaFeatures = () => {
                     <Check title="Otopark" />
                   </div>
                   <div className="item">
+                    <Check title="Elektrikli Araç Şarj İstasyonu" />
+                  </div>
+                  <div className="item">
                     <Check title="Smart TV - Uydu" />
+                  </div>
+                  <div className="item">
+                    <Check title="Playstation 5" />
                   </div>
                   <div className="item ">
                     <Check title="Güvenlik Görevlisi" />
