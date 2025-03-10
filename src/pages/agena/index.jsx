@@ -17,7 +17,7 @@ const Agena = () => {
         }}
         // title = "text"
         content="Villamızın giriş katında deniz ve doğa manzaralı Amerikan mutfak ve salon, üst katlarında beş adet suit yatak odası bulunmakta olup, ana ebeveyn odamızda yer alan jakuzide manzaraya karşı keyif yapabileceksiniz. 
-        Hayallerinizin ötesinde bir tatil imkanı sunmakta olan villamız, bodrum katta spor salonu (bilardo, masa tenisi, dart) ile bütün bir yılın yorgunluğunu üzerinizden atmanız için, kusursuz bir şekilde tasarlanmıştır. "
+        Hayallerinizin ötesinde bir tatil imkanı sunmakta olan villamız, bodrum katta oyun odası (bilardo, masa tenisi, dart) ile bütün bir yılın yorgunluğunu üzerinizden atmanız için, kusursuz bir şekilde tasarlanmıştır. "
       />
       <AgenaPage />
     </MainLayout>
