@@ -1,16 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import ReservationForm from "../components/Reservation/VillaReservationForm";
 import PriceDetailCard from "../components/Reservation/PriceDetailCard";
 import LightLayout from "./layout/LightLayout";
 
 export default function ReservationPage() {
-  const [formData, setFormData] = useState({
-    villa: "",
-    entryDate: "",
-    exitDate: "",
-    heatedPool: false,
-  });
-
   return (
     <LightLayout>
       <div
@@ -27,15 +20,10 @@ export default function ReservationPage() {
           }}
         >
           <div style={{ flex: "1 1 500px", maxWidth: "600px" }}>
-            <ReservationForm onFormChange={setFormData} />
+            <ReservationForm />
           </div>
           <div style={{ flex: "1 1 300px", maxWidth: "400px" }}>
-            <PriceDetailCard
-              villa={formData.villa}
-              entryDate={formData.entryDate}
-              exitDate={formData.exitDate}
-              heatedPool={formData.heatedPool}
-            />
+            <PriceDetailCard />
           </div>
         </div>
       </div>

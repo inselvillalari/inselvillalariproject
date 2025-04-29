@@ -1,18 +1,21 @@
-import React, { useMemo } from "react";
+// ✅ PriceDetailCard.js (Formik yerine sadece Redux kullanır, hatasız ve kontrollü)
+import React, { useMemo, useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { setReservationData } from "../../store/reservationSlice";
 import dayjs from "dayjs";
 import villaPrices from "./villaPrices";
 
-export default function PriceDetailCard({
-  villa,
-  entryDate,
-  exitDate,
-  heatedPool,
-}) {
+export default function PriceDetailCard() {
+  const dispatch = useDispatch();
+  const { villa, entryDate, exitDate, heatedPool } = useSelector(
+    (state) => state.reservation
+  );
+
   const result = useMemo(() => {
     if (!villa || !entryDate || !exitDate) return null;
 
-    const start = dayjs(entryDate);
-    const end = dayjs(exitDate);
+    const start = dayjs(new Date(entryDate));
+    const end = dayjs(new Date(exitDate));
     const dayDiff = end.diff(start, "day");
 
     if (dayDiff <= 0) return null;
@@ -20,7 +23,7 @@ export default function PriceDetailCard({
     let totalVillaPrice = 0;
     let totalHeatedPoolPrice = heatedPool ? dayDiff * 1800 : 0;
 
-    const pricePeriods = villaPrices[villa] || [];
+    const pricePeriods = villaPrices?.[villa] || [];
 
     for (let d = 0; d < dayDiff; d++) {
       const currentDay = start.add(d, "day");
@@ -41,6 +44,19 @@ export default function PriceDetailCard({
       grandTotal: totalVillaPrice + totalHeatedPoolPrice,
     };
   }, [villa, entryDate, exitDate, heatedPool]);
+
+  useEffect(() => {
+    if (result) {
+      dispatch(
+        setReservationData({
+          totalVillaPrice: result.villaPrice,
+          totalHeatedPoolPrice: result.heatedPoolPrice,
+          grandTotal: result.grandTotal,
+          totalNights: result.dayCount,
+        })
+      );
+    }
+  }, [result]);
 
   return (
     <div
@@ -107,7 +123,6 @@ export default function PriceDetailCard({
             Genel Toplam: {result.grandTotal.toLocaleString("tr-TR")} TL
           </div>
 
-          {/* Depozito Notu */}
           <div
             style={{
               marginTop: "10px",

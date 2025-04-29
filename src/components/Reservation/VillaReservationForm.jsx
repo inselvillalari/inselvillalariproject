@@ -2,15 +2,48 @@ import React, { useState, useEffect } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import DatePicker from "react-datepicker";
+import { useDispatch, useSelector } from "react-redux";
+import { useRouter } from "next/router";
+import { setReservationData } from "../../store/reservationSlice";
 import "react-datepicker/dist/react-datepicker.css";
 import "../../styles/globals.css";
 
 const villas = ["Villa Agena", "Villa Capella", "Villa Gredi", "Villa Rigel"];
 
-export default function ReservationForm({ onFormChange }) {
+export default function ReservationForm() {
   const [extraAdults, setExtraAdults] = useState([]);
   const [extraChildren, setExtraChildren] = useState([]);
   const [guestError, setGuestError] = useState("");
+  const dispatch = useDispatch();
+  const router = useRouter();
+  const reservationPrices = useSelector((state) => state.reservation);
+
+  const inputStyle = {
+    width: "100%",
+    padding: "6px",
+    height: "34px",
+    border: "1px solid #ccc",
+    borderRadius: "6px",
+    marginBottom: "10px",
+    fontSize: "13px",
+    fontFamily: "'Poppins', sans-serif",
+  };
+
+  const labelStyle = {
+    fontWeight: "600",
+    marginBottom: "4px",
+    fontSize: "13px",
+    fontFamily: "'Poppins', sans-serif",
+  };
+
+  const sectionTitleStyle = {
+    fontSize: "16px",
+    fontWeight: "700",
+    margin: "20px 0 10px",
+    fontFamily: "'Poppins', sans-serif",
+    borderBottom: "1px solid #eee",
+    paddingBottom: "5px",
+  };
 
   const formik = useFormik({
     initialValues: {
@@ -59,8 +92,18 @@ export default function ReservationForm({ onFormChange }) {
       children: Yup.number().required("Çocuk sayısı zorunludur."),
     }),
     onSubmit: (values) => {
-      console.log(values);
-      alert("Rezervasyon başarıyla tamamlandı!");
+      dispatch(
+        setReservationData({
+          ...values,
+          entryDate: values.entryDate?.toISOString() || null,
+          exitDate: values.exitDate?.toISOString() || null,
+          totalVillaPrice: reservationPrices.totalVillaPrice,
+          totalHeatedPoolPrice: reservationPrices.totalHeatedPoolPrice,
+          grandTotal: reservationPrices.grandTotal,
+          totalNights: reservationPrices.totalNights,
+        })
+      );
+      router.push("/ReservationConfirmationPage");
     },
   });
 
@@ -106,50 +149,26 @@ export default function ReservationForm({ onFormChange }) {
   }, [formik.values.adults, formik.values.children]);
 
   useEffect(() => {
-    onFormChange({
-      villa: formik.values.villa,
-      entryDate: formik.values.entryDate,
-      exitDate: formik.values.exitDate,
-      heatedPool: formik.values.heatedPool,
-      adults: formik.values.adults,
-      children: formik.values.children,
-    });
+    if (
+      formik.values.villa &&
+      formik.values.entryDate &&
+      formik.values.exitDate
+    ) {
+      dispatch(
+        setReservationData({
+          villa: formik.values.villa,
+          entryDate: formik.values.entryDate?.toISOString() || null,
+          exitDate: formik.values.exitDate?.toISOString() || null,
+          heatedPool: formik.values.heatedPool,
+        })
+      );
+    }
   }, [
     formik.values.villa,
     formik.values.entryDate,
     formik.values.exitDate,
     formik.values.heatedPool,
-    formik.values.adults,
-    formik.values.children,
-    onFormChange,
   ]);
-
-  const inputStyle = {
-    width: "100%",
-    padding: "6px",
-    height: "34px",
-    border: "1px solid #ccc",
-    borderRadius: "6px",
-    marginBottom: "10px",
-    fontSize: "13px",
-    fontFamily: "'Poppins', sans-serif",
-  };
-
-  const labelStyle = {
-    fontWeight: "600",
-    marginBottom: "4px",
-    fontSize: "13px",
-    fontFamily: "'Poppins', sans-serif",
-  };
-
-  const sectionTitleStyle = {
-    fontSize: "16px",
-    fontWeight: "700",
-    margin: "20px 0 10px",
-    fontFamily: "'Poppins', sans-serif",
-    borderBottom: "1px solid #eee",
-    paddingBottom: "5px",
-  };
 
   return (
     <div
