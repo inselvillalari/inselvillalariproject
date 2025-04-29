@@ -11,23 +11,18 @@ import Image from "next/image";
 const dateRangesData = [
   {
     start: "2024-11-01",
-    end: "2025-04-01",
-    color: "gray",
-  },
-  {
-    start: "2025-04-01",
     end: "2025-05-15",
     color: "gray",
   },
-  // {
-  //   start: "2025-04-01",
-  //   end: "2025-04-26",
-  //   color: "#ff851b",
-  // },
   {
     start: "2025-08-30",
     end: "2025-09-07",
     color: "#ff851b",
+  },
+  {
+    start: "2025-11-01",
+    end: "2026-04-01",
+    color: "gray",
   },
 ];
 

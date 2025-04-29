@@ -256,3 +256,63 @@ body.hideX .pace {
     height: 100%;
     border: 0;
 }
+
+
+/* Datepicker ana kutusu */
+.react-datepicker {
+  font-family: 'Poppins', sans-serif;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 13px;
+  background: white;
+}
+
+/* Başlık (Ay - Yıl) */
+.react-datepicker__current-month {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/* Gün isimleri */
+.react-datepicker__day-name {
+  font-size: 13px;
+  font-weight: 500;
+  color: #666;
+}
+
+/* Günler */
+.react-datepicker__day {
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+  margin: 2px;
+  font-size: 13px;
+  color: #555;
+}
+
+/* Seçili gün */
+.react-datepicker__day--selected, 
+.react-datepicker__day--keyboard-selected {
+  background-color: #C8A97E;
+  color: #fff;
+  border-radius: 50%;
+}
+
+/* İleri-geri oklar */
+.react-datepicker__navigation {
+  top: 10px;
+}
+
+/* Devre dışı günler */
+.react-datepicker__day--disabled {
+  color: #ccc;
+}
+
+/* Hover gün */
+.react-datepicker__day:hover {
+  background-color: #f3e8d5;
+  color: #000;
+  border-radius: 50%;
+}

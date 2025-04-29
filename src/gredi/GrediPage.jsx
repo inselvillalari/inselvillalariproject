@@ -10,11 +10,6 @@ import BookingCalendar from "../components/BookingCalendar";
 const dateRangesData = [
   {
     start: "2024-11-01",
-    end: "2025-04-01",
-    color: "gray",
-  },
-  {
-    start: "2025-04-01",
     end: "2025-05-15",
     color: "gray",
   },
@@ -23,6 +18,11 @@ const dateRangesData = [
   //   end: "2025-04-18",
   //   color: "#ff851b",
   // },
+  {
+    start: "2025-11-01",
+    end: "2026-04-01",
+    color: "gray",
+  },
 ];
 
 const GrediPage = () => {
