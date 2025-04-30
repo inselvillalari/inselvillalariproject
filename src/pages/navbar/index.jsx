@@ -79,6 +79,11 @@ const Navbar = ({ navbarRef, logoRef, logoClass }) => {
                 </a>
               </li>
               <li className="nav-item">
+                <a className="nav-link" href="/about">
+                  Hakkımızda
+                </a>
+              </li>
+              <li className="nav-item">
                 <a className="nav-link" href="/reservation">
                   Rezervasyon
                 </a>
