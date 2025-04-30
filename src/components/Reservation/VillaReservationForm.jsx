@@ -6,7 +6,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { useRouter } from "next/router";
 import { setReservationData } from "../../store/reservationSlice";
 import "react-datepicker/dist/react-datepicker.css";
-import "../../styles/globals.css";
 
 const villas = ["Villa Agena", "Villa Capella", "Villa Gredi", "Villa Rigel"];
 
