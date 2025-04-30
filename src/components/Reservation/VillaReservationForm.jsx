@@ -103,7 +103,7 @@ export default function ReservationForm() {
           totalNights: reservationPrices.totalNights,
         })
       );
-      router.push("/ReservationConfirmationPage");
+      router.push("/reservation-edit");
     },
   });
 

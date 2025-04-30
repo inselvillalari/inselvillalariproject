@@ -35,64 +35,23 @@ const Footer = ({ classText }) => {
                   </div>
                 </li>
               </ul>
+
+              {/* ➕ Yasal Sayfa Linkleri */}
+              <div style={{ marginTop: "1.5rem" }}>
+                <ul style={{ listStyle: "none", paddingLeft: 0 }}>
+                  <li>
+                    <Link href="/gizlilik-politikasi">Gizlilik Politikası</Link>
+                  </li>
+                  <li>
+                    <Link href="/mesafeli-satis-sozlesmesi">
+                      Mesafeli Hizmet Satış Sözleşmesi
+                    </Link>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
-          {/* <div className="col-lg-4">
-            <div className="item md-mb50">
-              <div className="title">
-                <h5>Recent News</h5>
-              </div>
-              <ul>
-                <li>
-                  <div className="img">
-                    <Link href="/blog-details">
- 
-                        <img src="/assets/img/blog/1.jpg" alt="" />
 
-                    </Link>
-                  </div>
-
-                  <div className="sm-post">
-                    <Link href="/blog-details">
- 
-                        <p>
-                          The Start-Up Ultimate Guide to Make Your WordPress
-                          Journal.
-                        </p>
-
-                    </Link>
-                    <span className="date">14 Jan 2022</span>
-                  </div>
-                </li>
-                <li>
-                  <div className="img">
-                    <Link href="/blog-details">
-
-                        <img src="/assets/img/blog/2.jpg" alt="" />
-
-                    </Link>
-                  </div>
-                  <div className="sm-post">
-                    <Link href="/blog-details">
-
-                        <p>
-                          The Start-Up Ultimate Guide to Make Your WordPress
-                          Journal.
-                        </p>
-
-                    </Link>
-                    <span className="date">14 Jan 2022</span>
-                  </div>
-                </li>
-                <li>
-                  <div className="subscribe">
-                    <input type="text" placeholder="Type Your Email" />
-                    <span className="subs pe-7s-paper-plane"></span>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div> */}
           <div className="col-lg-6">
             <div className="item">
               <div className="logo">
@@ -116,6 +75,32 @@ const Footer = ({ classText }) => {
                 <Link href="/contact">
                   <i className="fab fa-google"></i>
                 </Link>
+              </div>
+
+              {/* ➕ Ödeme Logoları */}
+              <div
+                style={{
+                  marginTop: "2rem",
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "12px",
+                }}
+              >
+                <img
+                  src="/assets/img/payment/visa.png"
+                  alt="Visa"
+                  style={{ height: "32px", width: "auto" }}
+                />
+                <img
+                  src="/assets/img/payment/mastercard.png"
+                  alt="MasterCard"
+                  style={{ height: "32px", width: "auto" }}
+                />
+                <img
+                  src="/assets/img/payment/iyzico.png"
+                  alt="iyzico ile Öde"
+                  style={{ height: "32px", width: "auto" }}
+                />
               </div>
             </div>
           </div>

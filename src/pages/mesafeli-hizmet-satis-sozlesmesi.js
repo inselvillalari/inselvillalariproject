@@ -167,7 +167,7 @@ export default function Sozlesme() {
 
           <p>
             Ön rezervasyonun yapılmasından itibaren ilanda belirtilen süre
-            içerisinde toplam kiralama bedelinin yüzde 35’i (%35) kiralama
+            içerisinde toplam kiralama bedelinin yüzde 40’ı (yüzdekırk) kiralama
             ekranının ilgili ödeme sayfasında yer alan IBAN numarasına ve banka
             hesabına havale, EFT ve/veya kredi kartıyla ödenecektir. Ön
             rezervasyonu müteakiben işbu maddede kararlaştırılan ön ödemenin
