@@ -6,6 +6,7 @@ import AgenaFeatures from "./features";
 import AgenaSkills from "./skills";
 import PropertyDetails from "./propertyDetails";
 import BookingCalendar from "../components/BookingCalendar";
+import { useTranslation } from "react-i18next";
 import Image from "next/image";
 
 const dateRangesData = [
@@ -27,6 +28,7 @@ const dateRangesData = [
 ];
 
 const AgenaPage = () => {
+  const { t } = useTranslation("common");
   React.useEffect(() => {
     setTimeout(() => {
       if (window.Isotope) initIsotope();

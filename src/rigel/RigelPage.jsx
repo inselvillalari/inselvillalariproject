@@ -6,6 +6,7 @@ import RigelFeatures from "./features";
 import RigelSkills from "./skills";
 import PropertyDetails from "./propertyDetails";
 import BookingCalendar from "../components/BookingCalendar";
+import { useTranslation } from "react-i18next";
 
 const dateRangesData = [
   {
@@ -26,6 +27,7 @@ const dateRangesData = [
 ];
 
 const RigelPage = () => {
+  const { t } = useTranslation("common");
   React.useEffect(() => {
     setTimeout(() => {
       if (window.Isotope) initIsotope();
