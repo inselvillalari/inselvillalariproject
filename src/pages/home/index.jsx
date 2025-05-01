@@ -6,7 +6,7 @@ import Services from "../services";
 import AboutUs from "../aboutus";
 import Portfolio from "../portfolio";
 import Blogs2 from "../../components/Blogs2";
-
+import { withTranslationProps } from "../../utils/withTranslation";
 const Home1 = () => {
   React.useEffect(() => {
     document.querySelector("body").classList.add("homepage");
@@ -21,5 +21,7 @@ const Home1 = () => {
     </LightLayout>
   );
 };
+
+export const getStaticProps = withTranslationProps();
 
 export default Home1;

@@ -8,8 +8,9 @@ import {
   ListItemText,
 } from "@mui/material";
 import LanguageIcon from "@mui/icons-material/Language";
+import { i18n } from "i18next";
 
-const LanguageSwitcher = () => {
+const LanguageSwitcher = (classname) => {
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
 
@@ -30,8 +31,10 @@ const LanguageSwitcher = () => {
     }
   };
 
+  console.log('classname',classname)
+
   return (
-    <div>
+    <div classname={classname}>
       <IconButton
         disableRipple
         disableFocusRipple

@@ -34,21 +34,25 @@ const Navbar = ({ navbarRef, logoRef, logoClass }) => {
       <nav className="navbar change navbar-expand-lg" ref={navbarRef}>
         <div className="container">
           <a className={`logo ${logoClass && logoClass}`} href="/"></a>
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-toggle="collapse"
-            onClick={handleMobileDropdown}
-            data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span className="icon-bar">
-              <i className="fas fa-bars"></i>
-            </span>
-          </button>
-
+          <div className="d-flex">
+            <button
+              className="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              onClick={handleMobileDropdown}
+              data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span className="icon-bar">
+                <i className="fas fa-bars"></i>
+              </span>
+            </button>
+            <div className="d-block d-md-none">
+              <LanguageSwitcher />
+            </div>
+          </div>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav ml-auto">
               <li className="nav-item">
@@ -91,7 +95,7 @@ const Navbar = ({ navbarRef, logoRef, logoClass }) => {
                   İletişim
                 </a>
               </li>
-              <li className="nav-item ml-5">
+              <li className="nav-item ml-5 d-none d-md-block">
                 <div className="d-flex h-100 align-items-center">
                   <LanguageSwitcher />
                 </div>

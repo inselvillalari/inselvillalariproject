@@ -99,7 +99,7 @@ const Footer = ({ classText }) => {
                 <img
                   src="/assets/img/payment/iyzico.png"
                   alt="iyzico ile Öde"
-                  style={{ height: "32px", width: "auto" }}
+                  style={{ height: "90px", width: "auto" }}
                 />
               </div>
             </div>

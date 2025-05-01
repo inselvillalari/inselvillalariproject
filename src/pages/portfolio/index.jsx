@@ -7,7 +7,7 @@ const Portfolio2 = () => {
     worksCardEffect();
   }, []);
   return (
-    <section className="portfolio full-bg">
+    <section className="portfolio full-bg d-none d-md-block">
       <div className="container-fluid">
         <div className="row">
           <div className="col-lg-2 col-md-6 cluom current" data-tab="tab-1">

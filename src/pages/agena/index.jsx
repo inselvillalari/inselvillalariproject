@@ -4,7 +4,7 @@ import WorkHeader from "../../components/Work-header";
 import MainLayout from "../layout/MainLayout";
 import AgenaPage from "../../agena/AgenaPage";
 import { useTranslation } from "next-i18next";
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { withTranslationProps } from "../../utils/withTranslation";
 
 const Agena = () => {
   const { t } = useTranslation("common");
@@ -26,12 +26,6 @@ const Agena = () => {
   );
 };
 
-export async function getStaticProps({ locale }) {
-  return {
-    props: {
-      ...(await serverSideTranslations(locale, ["common"])),
-    },
-  };
-}
+export const getStaticProps = withTranslationProps();
 
 export default Agena;

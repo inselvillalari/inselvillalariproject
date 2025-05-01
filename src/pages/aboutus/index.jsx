@@ -54,13 +54,6 @@ const AboutUs = () => {
                     <img src={aboutUsData.image2} alt="" />
                   </div>
                 </div>
-                <div className="col-md-5">
-                  <div className="years-exp">
-                    <div className="exp-text">
-                      <h2 className="custom-font">{aboutUsData.exp}</h2>
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
           </div>

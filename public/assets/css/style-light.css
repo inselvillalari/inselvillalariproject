@@ -974,7 +974,7 @@ body {
   opacity: 0.4;
 }
 [data-overlay-dark="5"]:before, [data-overlay-light="5"]:before {
-  opacity: 0.5;
+  opacity: 0;
 }
 [data-overlay-dark="6"]:before, [data-overlay-light="6"]:before {
   opacity: 0.6;
@@ -1623,7 +1623,7 @@ body {
 .cta__slider-arrows {
   display: block;
   position: absolute;
-  bottom: 40px;
+  bottom: 50px;
   right: 40px;
   z-index: 2;
 }
@@ -1633,7 +1633,7 @@ body {
   text-align: center;
   line-height: 55px;
   font-size: 13px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid #fff;
   display: block;
   cursor: pointer;
 }
@@ -3853,7 +3853,7 @@ footer .item .copy-right p a {
   .navbar .navbar-collapse {
     max-height: 340px;
     overflow: auto;
-    background: #111;
+    background: #fff;
     text-align: center;
     padding: 10px 15px;
  }
