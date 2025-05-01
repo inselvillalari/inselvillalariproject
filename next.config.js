@@ -15,4 +15,5 @@ module.exports = {
     ignoreDuringBuilds: false,
   },
   i18n,
+  reactStrictMode: true,
 };

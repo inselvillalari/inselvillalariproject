@@ -8,7 +8,7 @@ import ScrollToTop from "../components/scrollToTop";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Provider } from "react-redux";
 import store from "../store/store"; // doğru path
-
+import { appWithTranslation } from "next-i18next";
 function MyApp({ Component, pageProps }) {
   return (
     <Provider store={store}>
@@ -48,4 +48,4 @@ function MyApp({ Component, pageProps }) {
   );
 }
 
-export default MyApp;
+export default appWithTranslation(MyApp);

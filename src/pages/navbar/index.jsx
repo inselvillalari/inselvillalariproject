@@ -3,6 +3,7 @@ import React from "react";
 import Link from "next/link";
 import appData from "./app.json";
 import getSiblings from "../../common/getSiblings";
+import LanguageSwitcher from "../../components/languageSwitcher";
 
 const Navbar = ({ navbarRef, logoRef, logoClass }) => {
   const handleDropdown = (e) => {
@@ -32,10 +33,7 @@ const Navbar = ({ navbarRef, logoRef, logoClass }) => {
     <>
       <nav className="navbar change navbar-expand-lg" ref={navbarRef}>
         <div className="container">
-          <a className={`logo ${logoClass && logoClass}`} href="/">
-            {/* <img src={appData.lightLogo} alt="logo" ref={logoRef} /> */}
-          </a>
-
+          <a className={`logo ${logoClass && logoClass}`} href="/"></a>
           <button
             className="navbar-toggler"
             type="button"
@@ -92,6 +90,11 @@ const Navbar = ({ navbarRef, logoRef, logoClass }) => {
                 <a className="nav-link" href="/contact">
                   İletişim
                 </a>
+              </li>
+              <li className="nav-item ml-5">
+                <div className="d-flex h-100 align-items-center">
+                  <LanguageSwitcher />
+                </div>
               </li>
             </ul>
           </div>
