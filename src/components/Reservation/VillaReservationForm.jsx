@@ -62,7 +62,7 @@ export default function ReservationForm() {
       villa: Yup.string().required("Lütfen bir villa seçiniz."),
       hirerName: Yup.string()
         .matches(/^[a-zA-ZğüşöçıİĞÜŞÖÇ\s]+$/, "Sadece harf giriniz.")
-        .required("Bu alan doldurulmalıdır."),
+        .required("Bu alan zorunludur."),
       hirerIdNumber: Yup.string()
         .test(
           "tcOrPassport-valid",
@@ -77,14 +77,14 @@ export default function ReservationForm() {
             }
           }
         )
-        .required("Bu alan doldurulmalıdır."),
+        .required("Bu alan zorunludur."),
       email: Yup.string()
         .email("Geçerli bir e-posta giriniz.")
-        .required("Bu alan doldurulmalıdır."),
+        .required("Bu alan zorunludur."),
       phone: Yup.string()
         .matches(/^[0-9]+$/, "Sadece rakam giriniz.")
         .min(10, "Telefon numarası en az 10 haneli olmalıdır.")
-        .required("Bu alan doldurulmalıdır."),
+        .required("Bu alan zorunludur."),
       entryDate: Yup.date().required("Giriş tarihi zorunludur."),
       exitDate: Yup.date().required("Çıkış tarihi zorunludur."),
       adults: Yup.number().required("Yetişkin sayısı zorunludur."),

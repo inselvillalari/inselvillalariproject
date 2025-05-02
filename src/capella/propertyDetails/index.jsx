@@ -17,10 +17,10 @@ const PropertyDetails = () => {
               <label>Oda Sayısı:</label> <span>5 + 1</span>
             </li>
             <li>
-              <label>Suit Aile Odası:</label> <span>4</span>
+              <label>Suit Aile Odası:</label> <span>3</span>
             </li>
             <li>
-              <label>Suit Genç Odası:</label> <span>1</span>
+              <label>Suit Genç Odası:</label> <span>2</span>
             </li>
             <li>
               <label>Banyo Sayısı:</label> <span>7</span>
@@ -46,7 +46,7 @@ const PropertyDetails = () => {
             </li>
             <li>
               <label>Bodrum Kat:</label>
-              <span>Bilardo - Masa Tenisi - Dart - Spor Salonu</span>
+              <span>Bilardo - Masa Tenisi - Spor Salonu</span>
             </li>
             <li>
               <label>Kiralama için:</label>
