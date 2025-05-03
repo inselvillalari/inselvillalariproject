@@ -1,6 +1,6 @@
 import React from "react";
 import Head from "next/head";
-import LightLayout from "./layout/LightLayout";
+import LightLayout from "../layout/LightLayout";
 
 export default function ReservationPage() {
   return (

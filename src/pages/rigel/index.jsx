@@ -2,8 +2,8 @@
 import React from "react";
 import WorkHeader from "../../components/Work-header";
 import MainLayout from "../layout/MainLayout";
-import RigelPage from "../../rigel/RigelPage";
 import { useTranslation } from "react-i18next";
+import RigelPage from "../../components/rigel/RigelPage";
 
 const Rigel = () => {
   const { t } = useTranslation("common");

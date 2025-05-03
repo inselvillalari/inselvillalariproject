@@ -1,19 +1,12 @@
 import React from "react";
-import TenPeople from "../../icons/TenPeople";
-import FivePlusOne from "../../icons/FivePlusOne";
-import Bilardo from "../../icons/Bilardo";
-import Check from "../../icons/Check";
-import PrivatePool from "../../icons/PrivatePool";
-import BBQ from "../../icons/BBQ";
-import Jacuzzy from "../../icons/Jacuzzy";
-import Wifi from "../../icons/Wifi";
-import PingPong from "../../icons/PingPong";
-import CarPark from "../../icons/CarPark";
-import Guard from "../../icons/Guard";
-import PoolHeating from "../../icons/PoolHeating";
-import IndoorPool from "../../icons/IndoorPool";
-import BabyBed from "../../icons/BabyBed";
-import Terrace from "../../icons/Terrace";
+import TenPeople from "../../../icons/TenPeople";
+import FivePlusOne from "../../../icons/FivePlusOne";
+import Bilardo from "../../../icons/Bilardo";
+import Check from "../../../icons/Check";
+import PrivatePool from "../../../icons/PrivatePool";
+import BBQ from "../../../icons/BBQ";
+import Jacuzzy from "../../../icons/Jacuzzy";
+
 const AgenaFeatures = () => {
   return (
     <section className="services section-padding p-0">

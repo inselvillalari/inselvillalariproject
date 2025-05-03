@@ -34,7 +34,7 @@ const LanguageSwitcher = (classname) => {
   console.log('classname',classname)
 
   return (
-    <div classname={classname}>
+    <div className={classname}>
       <IconButton
         disableRipple
         disableFocusRipple

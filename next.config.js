@@ -15,5 +15,10 @@ module.exports = {
     ignoreDuringBuilds: false,
   },
   i18n,
-  reactStrictMode: true,
+  experimental: {
+    optimizeCss: true, // ✅ CSS inline yazar (FOUC azaltır)
+  },
+  compiler: {
+    styledComponents: true, // ❗️Eğer styled-components kullanıyorsan
+  },
 };

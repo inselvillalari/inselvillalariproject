@@ -484,7 +484,7 @@ export default function ReservationForm() {
           }}
         >
           <a
-            href="/mesafeliKiralamaSozlesmesi"
+            href="/agreement"
             target="_blank"
             rel="noopener noreferrer"
             style={{

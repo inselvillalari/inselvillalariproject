@@ -1,7 +1,7 @@
 import React from "react";
-import LightLayout from "./layout/LightLayout";
+import LightLayout from "../layout/LightLayout";
 
-export default function Sozlesme() {
+export default function Agreement() {
   return (
     <LightLayout>
       <div className="container" style={{marginTop:'50px'}}>

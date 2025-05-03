@@ -1,20 +1,20 @@
 import React from "react";
-import TenPeople from "../../icons/TenPeople";
-import FivePlusOne from "../../icons/FivePlusOne";
-import Bilardo from "../../icons/Bilardo";
-import Check from "../../icons/Check";
-import PrivatePool from "../../icons/PrivatePool";
-import BBQ from "../../icons/BBQ";
-import Jacuzzy from "../../icons/Jacuzzy";
-import Wifi from "../../icons/Wifi";
-import PingPong from "../../icons/PingPong";
-import CarPark from "../../icons/CarPark";
-import Guard from "../../icons/Guard";
-import PoolHeating from "../../icons/PoolHeating";
-import IndoorPool from "../../icons/IndoorPool";
-import BabyBed from "../../icons/BabyBed";
-import Terrace from "../../icons/Terrace";
-const CapellaFeatures = () => {
+import TenPeople from "../../../icons/TenPeople";
+import FivePlusOne from "../../../icons/FivePlusOne";
+import Bilardo from "../../../icons/Bilardo";
+import Check from "../../../icons/Check";
+import PrivatePool from "../../../icons/PrivatePool";
+import BBQ from "../../../icons/BBQ";
+import Jacuzzy from "../../../icons/Jacuzzy";
+import Wifi from "../../../icons/Wifi";
+import PingPong from "../../../icons/PingPong";
+import CarPark from "../../../icons/CarPark";
+import Guard from "../../../icons/Guard";
+import PoolHeating from "../../../icons/PoolHeating";
+import IndoorPool from "../../../icons/IndoorPool";
+import BabyBed from "../../../icons/BabyBed";
+import Terrace from "../../../icons/Terrace";
+const RigelFeatures = () => {
   return (
     <section className="services section-padding p-0">
       <div className="container">
@@ -150,6 +150,9 @@ const CapellaFeatures = () => {
                     <Check title="İnternet Bağlantısı" />
                   </div>
                   <div className="item ">
+                    <Check title="Kapalı Havuz" />
+                  </div>
+                  <div className="item ">
                     <Check title="Çamaşır Makinesi" />
                   </div>
                   <div className="item ">
@@ -189,4 +192,4 @@ const CapellaFeatures = () => {
   );
 };
 
-export default CapellaFeatures;
+export default RigelFeatures;

@@ -40,10 +40,10 @@ const Footer = ({ classText }) => {
               <div style={{ marginTop: "1.5rem" }}>
                 <ul style={{ listStyle: "none", paddingLeft: 0 }}>
                   <li>
-                    <Link href="/gizlilik-politikasi">Gizlilik Politikası</Link>
+                    <Link href="/privacy-policy">Gizlilik Politikası</Link>
                   </li>
                   <li>
-                    <Link href="/mesafeli-satis-sozlesmesi">
+                    <Link href="/agreement">
                       Mesafeli Hizmet Satış Sözleşmesi
                     </Link>
                   </li>

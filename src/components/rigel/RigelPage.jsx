@@ -1,13 +1,12 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
 import Link from "next/link";
-import initIsotope from "../common/initIsotope";
-import AgenaFeatures from "./features";
-import AgenaSkills from "./skills";
+import initIsotope from "../../common/initIsotope";
+import RigelFeatures from "./features";
+import RigelSkills from "./skills";
 import PropertyDetails from "./propertyDetails";
-import BookingCalendar from "../components/BookingCalendar";
+import BookingCalendar from "../BookingCalendar";
 import { useTranslation } from "react-i18next";
-import Image from "next/image";
 
 const dateRangesData = [
   {
@@ -20,11 +19,11 @@ const dateRangesData = [
     end: "2025-05-31",
     color: "#ff851b",
   },
-  {
-    start: "2025-08-30",
-    end: "2025-09-07",
-    color: "#ff851b",
-  },
+  // {
+  //   start: "2025-05-07",
+  //   end: "2025-05-14",
+  //   color: "#ff851b",
+  // },
   {
     start: "2025-11-01",
     end: "2026-04-01",
@@ -32,7 +31,7 @@ const dateRangesData = [
   },
 ];
 
-const AgenaPage = () => {
+const RigelPage = () => {
   const { t } = useTranslation("common");
   React.useEffect(() => {
     setTimeout(() => {
@@ -44,19 +43,19 @@ const AgenaPage = () => {
       <section className="works filter-img section-padding">
         <div className="container">
           <BookingCalendar dateRangesData={dateRangesData} />
-          <div className="row gallery gallery-min-heigth-agena">
+          <div className="row gallery gallery-min-heigth">
             <div className="col-lg-6 items mt-0 interior theaters residential">
               <div className="section-head mb-0">
                 <h3>Mekanlar</h3>
               </div>
             </div>
-            <Link href="/agena/insideViews">
+            <Link href="/rigel/insideViews">
               <div className="col-lg-6 items interior">
                 <div className="item">
                   <div className="img">
                     <img
                       alt=""
-                      src="/assets/img/slid/agena/indoor/2.jpeg"
+                      src="/assets/img/slid/rigel/indoor/2.jpeg"
                       className="gallery-img-class"
                     />
                   </div>
@@ -68,13 +67,13 @@ const AgenaPage = () => {
                 </div>
               </div>
             </Link>
-            <Link href="/agena/dayViews">
+            <Link href="/rigel/dayViews">
               <div className="col-lg-6 items theaters">
                 <div className="item">
                   <div className="img">
                     <img
                       alt=""
-                      src="/assets/img/slid/agena/dayViews/1.jpeg"
+                      src="/assets/img/slid/rigel/dayViews/1.jpeg"
                       className="gallery-img-class"
                     />
                   </div>
@@ -86,50 +85,50 @@ const AgenaPage = () => {
                 </div>
               </div>
             </Link>
-            {/* <Link href="/agena/nightViews">
+            <Link href="/rigel/nightViews">
               <div className="col-lg-6 items residential interior">
                 <div className="item">
                   <div className="img">
                     <img
                       alt=""
-                      src="/assets/img/slid/agena/nightViews/1.jpeg"
+                      src="/assets/img/slid/rigel/nightViews/1.jpeg"
                       className="gallery-img-class"
                     />
                   </div>
                   <div className="cont vis">
                     <h5>Gece Görünümleri</h5>
-                    <span>Architecture</span>
-                    <span>Modern</span>
+                    {/* <span>Architecture</span>
+                    <span>Modern</span> */}
                   </div>
                 </div>
               </div>
             </Link>
-            <Link href="/agena/activities">
+            <Link href="/rigel/activities">
               <div className="col-lg-6 items residential">
                 <div className="item">
                   <div className="img">
                     <img
                       alt=""
-                      src="/assets/img/slid/agena/activities/2.jpeg"
+                      src="/assets/img/slid/rigel/activities/2.jpeg"
                       className="gallery-img-class"
                     />
                   </div>
                   <div className="cont vis">
                     <h5>Aktiviteler</h5>
-                    <span>Architecture</span>
-                    <span>Modern</span>
+                    {/* <span>Architecture</span>
+                    <span>Modern</span> */}
                   </div>
                 </div>
               </div>
-            </Link> */}
+            </Link>
           </div>
         </div>
-        <AgenaSkills />
-        <AgenaFeatures />
+        <RigelSkills />
+        <RigelFeatures />
         <PropertyDetails />
       </section>
     </>
   );
 };
 
-export default AgenaPage;
+export default RigelPage;

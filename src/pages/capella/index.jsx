@@ -2,8 +2,8 @@
 import React from "react";
 import WorkHeader from "../../components/Work-header";
 import MainLayout from "../layout/MainLayout";
-import CapellaPage from "../../capella/CapellaPage";
 import { useTranslation } from "react-i18next";
+import CapellaPage from "../../components/capella/CapellaPage";
 
 const Capella = () => {
   const { t } = useTranslation("common");

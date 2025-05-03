@@ -1,7 +1,7 @@
 import React from "react";
-import ReservationForm from "../components/Reservation/VillaReservationForm";
-import PriceDetailCard from "../components/Reservation/PriceDetailCard";
-import LightLayout from "./layout/LightLayout";
+import ReservationForm from "../../components/Reservation/VillaReservationForm";
+import PriceDetailCard from "../../components/Reservation/PriceDetailCard";
+import LightLayout from "../layout/LightLayout";
 
 export default function ReservationPage() {
   return (

@@ -2,9 +2,9 @@
 import React from "react";
 import WorkHeader from "../../components/Work-header";
 import MainLayout from "../layout/MainLayout";
-import GrediPage from "../../gredi/GrediPage";
 import { useTranslation } from "next-i18next";
 import { withTranslationProps } from "../../utils/withTranslation";
+import GrediPage from "../../components/gredi/GrediPage";
 
 const Gredi = () => {
   const { t } = useTranslation("common");

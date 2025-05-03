@@ -1,12 +1,11 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
 import Link from "next/link";
-import initIsotope from "../common/initIsotope";
-import GrediFeatures from "./features";
-import GrediSkills from "./skills";
+import CapellaFeatures from "./features";
+import CapellaSkills from "./skills";
 import PropertyDetails from "./propertyDetails";
-import BookingCalendar from "../components/BookingCalendar";
-import { useTranslation } from "react-i18next";
+import BookingCalendar from "../BookingCalendar";
+import initIsotope from "../../common/initIsotope";
 
 const dateRangesData = [
   {
@@ -19,11 +18,11 @@ const dateRangesData = [
     end: "2025-05-31",
     color: "#ff851b",
   },
-  // {
-  //   start: "2025-04-13",
-  //   end: "2025-04-18",
-  //   color: "#ff851b",
-  // },
+  {
+    start: "2025-07-13",
+    end: "2025-07-23",
+    color: "#ff851b",
+  },
   {
     start: "2025-11-01",
     end: "2026-04-01",
@@ -31,8 +30,7 @@ const dateRangesData = [
   },
 ];
 
-const GrediPage = () => {
-  const { t } = useTranslation("common");
+const CapellaPage = () => {
   React.useEffect(() => {
     setTimeout(() => {
       if (window.Isotope) initIsotope();
@@ -49,49 +47,13 @@ const GrediPage = () => {
                 <h3>Mekanlar</h3>
               </div>
             </div>
-            <Link href="/gredi/dayViews">
-              <div className="col-lg-6 items theaters">
-                <div className="item">
-                  <div className="img">
-                    <img
-                      alt=""
-                      src="/assets/img/slid/gredi/dayViews/1.jpeg"
-                      className="gallery-img-class"
-                    />
-                  </div>
-                  <div className="cont vis">
-                    <h5>Gündüz Görünümleri</h5>
-                    {/* <span>Architecture</span>
-                    <span>Modern</span> */}
-                  </div>
-                </div>
-              </div>
-            </Link>
-            <Link href="/gredi/nightViews">
-              <div className="col-lg-6 items residential interior">
-                <div className="item">
-                  <div className="img">
-                    <img
-                      alt=""
-                      src="/assets/img/slid/gredi/nightViews/1.jpeg"
-                      className="gallery-img-class"
-                    />
-                  </div>
-                  <div className="cont vis">
-                    <h5>Gece Görünümleri</h5>
-                    {/* <span>Architecture</span>
-                    <span>Modern</span> */}
-                  </div>
-                </div>
-              </div>
-            </Link>
-            <Link href="/gredi/insideViews">
+            <Link href="/capella/insideViews">
               <div className="col-lg-6 items interior">
                 <div className="item">
                   <div className="img">
                     <img
                       alt=""
-                      src="/assets/img/slid/gredi/indoor/1.jpeg"
+                      src="/assets/img/slid/capella/indoor/2.jpeg"
                       className="gallery-img-class"
                     />
                   </div>
@@ -103,13 +65,48 @@ const GrediPage = () => {
                 </div>
               </div>
             </Link>
-            <Link href="/gredi/activities">
+            <Link href="/capella/dayViews">
+              <div className="col-lg-6 items theaters">
+                <div className="item">
+                  <div className="img">
+                    <img
+                      alt=""
+                      src="/assets/img/slid/capella/dayViews/1.jpeg"
+                      className="gallery-img-class"
+                    />
+                  </div>
+                  <div className="cont vis">
+                    <h5>Gündüz Görünümleri</h5>
+                    {/* <span>Architecture</span>
+                    <span>Modern</span> */}
+                  </div>
+                </div>
+              </div>
+            </Link>
+            {/* <Link href="/capella/nightViews">
+              <div className="col-lg-6 items residential interior">
+                <div className="item">
+                  <div className="img">
+                    <img
+                      alt=""
+                      src="/assets/img/slid/capella/nightViews/1.jpeg"
+                    />
+                  </div>
+                  <div className="cont vis">
+                    <h5>Gece Görünümleri</h5>
+                    <span>Architecture</span>
+                    <span>Modern</span>
+                  </div>
+                </div>
+              </div>
+            </Link> */}
+            <Link href="/capella/activities">
               <div className="col-lg-6 items residential">
                 <div className="item">
                   <div className="img">
                     <img
                       alt=""
-                      src="/assets/img/slid/gredi/activities/2.jpeg"
+                      src="/assets/img/slid/capella/activities/2.jpeg"
                       className="gallery-img-class"
                     />
                   </div>
@@ -123,12 +120,12 @@ const GrediPage = () => {
             </Link>
           </div>
         </div>
-        <GrediSkills />
-        <GrediFeatures />
+        <CapellaSkills />
+        <CapellaFeatures />
         <PropertyDetails />
       </section>
     </>
   );
 };
 
-export default GrediPage;
+export default CapellaPage;

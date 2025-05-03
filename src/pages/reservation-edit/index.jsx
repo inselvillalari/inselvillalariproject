@@ -1,5 +1,5 @@
 import React from "react";
-import LightLayout from "./layout/LightLayout";
+import LightLayout from "../layout/LightLayout";
 
 export default function ReservationEdit() {
   return (
