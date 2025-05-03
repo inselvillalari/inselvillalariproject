@@ -5,8 +5,8 @@ import AgenaFeatures from "./features";
 import AgenaSkills from "./skills";
 import PropertyDetails from "./propertyDetails";
 import BookingCalendar from "../BookingCalendar";
-import { useTranslation } from "react-i18next";
 import initIsotope from "../../common/initIsotope";
+import { useTranslation } from "next-i18next";
 
 const dateRangesData = [
   {
@@ -78,7 +78,7 @@ const AgenaPage = () => {
                     />
                   </div>
                   <div className="cont vis">
-                    <h5>Gündüz Görünümleri</h5>
+                    <h5>{t("gunduzGorunumleri")}</h5>
                     {/* <span>Architecture</span>
                     <span>Modern</span> */}
                   </div>

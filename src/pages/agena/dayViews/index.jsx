@@ -3,7 +3,6 @@ import React from "react";
 import MainLayout from "../../layout/MainLayout";
 import PageHeader from "../../../components/Page-header";
 import ProjectIntro from "../../../agena/dayViews/ProjectIntro";
-import ProjectVideo from "../../../components/Project-Video";
 
 const AgenaDayViews = () => {
   React.useEffect(() => {

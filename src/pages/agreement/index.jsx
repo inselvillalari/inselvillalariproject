@@ -1,5 +1,6 @@
 import React from "react";
 import LightLayout from "../layout/LightLayout";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 export default function Agreement() {
   return (
@@ -501,4 +502,13 @@ export default function Agreement() {
       </div>
     </LightLayout>
   );
+}
+
+
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ["common"])),
+    },
+  };
 }

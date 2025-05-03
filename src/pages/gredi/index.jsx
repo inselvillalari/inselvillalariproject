@@ -3,7 +3,7 @@ import React from "react";
 import WorkHeader from "../../components/Work-header";
 import MainLayout from "../layout/MainLayout";
 import { useTranslation } from "next-i18next";
-import { withTranslationProps } from "../../utils/withTranslation";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import GrediPage from "../../components/gredi/GrediPage";
 
 const Gredi = () => {
@@ -23,5 +23,11 @@ const Gredi = () => {
     </MainLayout>
   );
 };
-export const getStaticProps = withTranslationProps();
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ["common"])),
+    },
+  };
+}
 export default Gredi;

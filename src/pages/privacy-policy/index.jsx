@@ -1,6 +1,6 @@
 import Head from "next/head";
 import LightLayout from "../layout/LightLayout";
-
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 export default function PrivacyPolicy() {
   return (
     <LightLayout>
@@ -95,4 +95,12 @@ export default function PrivacyPolicy() {
       </div>
     </LightLayout>
   );
+}
+
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ["common"])),
+    },
+  };
 }

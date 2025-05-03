@@ -6,7 +6,7 @@ import RigelFeatures from "./features";
 import RigelSkills from "./skills";
 import PropertyDetails from "./propertyDetails";
 import BookingCalendar from "../BookingCalendar";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "next-i18next";
 
 const dateRangesData = [
   {

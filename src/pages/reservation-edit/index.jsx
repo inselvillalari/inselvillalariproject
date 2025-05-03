@@ -1,5 +1,6 @@
 import React from "react";
 import LightLayout from "../layout/LightLayout";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 export default function ReservationEdit() {
   return (
@@ -27,3 +28,12 @@ export default function ReservationEdit() {
     </LightLayout>
   );
 }
+
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ["common"])),
+    },
+  };
+}
+

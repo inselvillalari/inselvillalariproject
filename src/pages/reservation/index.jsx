@@ -2,7 +2,7 @@ import React from "react";
 import ReservationForm from "../../components/Reservation/VillaReservationForm";
 import PriceDetailCard from "../../components/Reservation/PriceDetailCard";
 import LightLayout from "../layout/LightLayout";
-
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 export default function ReservationPage() {
   return (
     <LightLayout>
@@ -29,4 +29,12 @@ export default function ReservationPage() {
       </div>
     </LightLayout>
   );
+}
+
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ["common"])),
+    },
+  };
 }

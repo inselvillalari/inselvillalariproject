@@ -6,7 +6,7 @@ import Services from "../services";
 import AboutUs from "../aboutus";
 import Portfolio from "../portfolio";
 import Blogs2 from "../../components/Blogs2";
-import { withTranslationProps } from "../../utils/withTranslation";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 const Home1 = () => {
   React.useEffect(() => {
     document.querySelector("body").classList.add("homepage");
@@ -22,6 +22,12 @@ const Home1 = () => {
   );
 };
 
-export const getStaticProps = withTranslationProps();
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ["common"])),
+    },
+  };
+}
 
 export default Home1;
