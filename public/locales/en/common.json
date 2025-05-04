@@ -29,7 +29,8 @@
     "konum": "Our Location",
     "kalkan": "Kalkan",
     "kiziltas": "in Kızıltaş",
-    "aboutUsYazi": "we bring together the blue and green with you. Our villas are perfectly designed to help you unwind from the exhaustion of the entire year. We open our doors to offer you a holiday that will make you say ‘this is it’..."
+    "aboutUsYazi": "we bring together the blue and green with you. Our villas are perfectly designed to help you unwind from the exhaustion of the entire year. We open our doors to offer you a holiday that will make you say ‘this is it’...",
+    "villaNames": ["Agena", "Capella", "Gredi", "Rigel"]
   },
   "about": {
     "aciklama1": "IN-SEL Villas",
@@ -37,6 +38,18 @@
     "aciklama3": "As a company, our top priority is guest satisfaction. In this regard, we act with the principles of transparency, trust, and support at every stage—from the reservation process to the stay itself. Our villas are personally inspected and carefully selected to provide the highest accommodation standards.",
     "aciklama4": "With our secure payment infrastructure, user-friendly website, and always-accessible support line, we aim to provide our guests with a flawless experience. With IN-SEL Villas, your holiday will be more than just accommodation – it will be an experience filled with pleasure, tranquility, and exclusivity.",
     "aciklama5": "For more information and reservations, please contact us:"
+  },
+  "blogs": {
+    "location": "KALKAN",
+    "views": "Views",
+    "posts": {
+      "1": {
+        "title": "Villa Agena"
+      },
+      "2": {
+        "title": "Villa Capella"
+      }
+    }
   },
   "contact": {
     "arayin": "Call Us",

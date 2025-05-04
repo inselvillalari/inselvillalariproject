@@ -1,11 +1,16 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
-import aboutUsData from "./about-us.json";
 import Link from "next/link";
 import { useTranslation } from "next-i18next";
 
 const AboutUs = () => {
   const { t } = useTranslation("common");
+
+  const titleFirst = t("aboutUsHomePage.kalkan");
+  const titleSecond = t("aboutUsHomePage.kiziltas");
+  const content = t("aboutUsHomePage.aboutUsYazi");
+  const villaNames = t("aboutUsHomePage.villaNames", { returnObjects: true });
+
   return (
     <section
       className="about section-padding"
@@ -20,19 +25,14 @@ const AboutUs = () => {
             >
               <h6 className="sub-title">{t("aboutUsHomePage.konum")}</h6>
               <h2 className="mb-20 playfont">
-                {aboutUsData.title.first} <br /> {aboutUsData.title.second}
+                {titleFirst} <br /> {titleSecond}
               </h2>
-              <p>{aboutUsData.content}</p>
+              <p>{content}</p>
               <ul>
-                {aboutUsData.textList.map((item) => (
-                  <li key={item.id}>{item.name}</li>
+                {villaNames.map((name, index) => (
+                  <li key={index}>{name}</li>
                 ))}
               </ul>
-              {/* 
-                <a className="btn-curve btn-color mt-30" href="/about">
-                  <span>Daha Fazlası</span>
-                </a>
-            */}
             </div>
           </div>
           <div className="col-lg-6">
@@ -48,12 +48,12 @@ const AboutUs = () => {
                 </div>
                 <div className="col-md-8 wow fadeInUp" data-wow-delay=".3s">
                   <div className="img mb-20 wow imago">
-                    <img src={aboutUsData.image1} alt="" />
+                    <img src="/assets/img/slid/aboutUs/1.jpeg" alt="" />
                   </div>
                 </div>
                 <div className="col-md-7 wow fadeInUp" data-wow-delay=".3s">
                   <div className="img wow imago">
-                    <img src={aboutUsData.image2} alt="" />
+                    <img src="/assets/img/slid/aboutUs/2.jpeg" alt="" />
                   </div>
                 </div>
               </div>

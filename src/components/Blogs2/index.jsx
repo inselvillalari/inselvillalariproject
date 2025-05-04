@@ -2,8 +2,11 @@
 import React from "react";
 import Blog1Data from "../../data/blogs1.json";
 import Link from "next/link";
+import { useTranslation } from "next-i18next";
 
 const Blogs2 = () => {
+  const { t, i18n } = useTranslation("common");
+
   return (
     <section className="blog-grid center bg-gray section-padding">
       <div className="container">
@@ -11,10 +14,10 @@ const Blogs2 = () => {
           <div className="row justify-content-center">
             <div className="col-lg-6 col-md-8 col-sm-10">
               <h6 className="custom-font wow fadeInDown" data-wow-delay=".3s">
-                KALKAN
+                {t("blogs.location")}
               </h6>
               <h4 className="playfont wow flipInX" data-wow-delay=".5s">
-                Görünümler
+                {t("blogs.views")}
               </h4>
             </div>
           </div>
@@ -33,15 +36,13 @@ const Blogs2 = () => {
                 </div>
                 <div className="cont">
                   <div className="info">
-                    {/* <Link href="" style={{ pointerEvents: 'none' }}>
-                      {blog.by}
-                    </Link> */}
                     <Link href="" style={{ pointerEvents: "none" }}>
                       {blog.date}
                     </Link>
                   </div>
-
-                  <h5 className="playfont">{blog.title}</h5>
+                  <h5 className="playfont">
+                    {t(`blogs.posts.${blog.id}.title`)}
+                  </h5>
                 </div>
               </div>
             </div>

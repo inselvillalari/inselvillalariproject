@@ -29,7 +29,8 @@
     "konum": "Konumumuz",
     "kalkan": "Kalkan",
     "kiziltas": "Kızıltaş'ta",
-    "aboutUsYazi": "mavi ve yeşili sizlerle buluşturuyoruz. Villalarımız, bütün bir yılın yorgunluğunu üzerinizden atmanız için kusursuz bir şekilde tasarlanmıştır. Siz değerli misafirlerimize 'işte bu' dedirtecek bir tatil geçirtmek için; kapılarımızı açıyoruz…"
+    "aboutUsYazi": "mavi ve yeşili sizlerle buluşturuyoruz. Villalarımız, bütün bir yılın yorgunluğunu üzerinizden atmanız için kusursuz bir şekilde tasarlanmıştır. Siz değerli misafirlerimize 'işte bu' dedirtecek bir tatil geçirtmek için; kapılarımızı açıyoruz…",
+    "villaNames": ["Agena", "Capella", "Gredi", "Rigel"]
   },
   "about": {
     "aciklama1": "IN-SEL Villaları",
@@ -37,6 +38,18 @@
     "aciklama3": "Şirket olarak önceliğimiz, misafir memnuniyetidir. Bu doğrultuda, rezervasyon sürecinden konaklamaya kadar tüm aşamalarda şeffaflık, güven ve destek ilkeleriyle hareket ediyoruz. Villalarımız, bizzat tarafımızca kontrol edilmekte ve en yüksek konaklama standartlarını sunacak şekilde özenle seçilmektedir.",
     "aciklama4": "Güvenli ödeme altyapımız, kullanıcı dostu web sitemiz ve her zaman ulaşılabilir destek hattımız ile misafirlerimize kusursuz bir deneyim yaşatmayı hedefliyoruz. IN-SEL Villaları ile tatiliniz sadece bir konaklama değil; keyif, huzur ve ayrıcalık dolu bir deneyim olacak.",
     "aciklama5": "Daha fazla bilgi ve rezervasyon için bizimle iletişime geçebilirsiniz:"
+  },
+  "blogs": {
+    "location": "KALKAN",
+    "views": "Görünümler",
+    "posts": {
+      "1": {
+        "title": "Villa Agena"
+      },
+      "2": {
+        "title": "Villa Capella"
+      }
+    }
   },
   "contact": {
     "arayin": "Bizi Arayın",
