@@ -7,6 +7,7 @@ import PropertyDetails from "./propertyDetails";
 import BookingCalendar from "../BookingCalendar";
 import initIsotope from "../../common/initIsotope";
 import { useTranslation } from "next-i18next";
+import { withTranslationProps } from "../../utils/withTranslation";
 
 const dateRangesData = [
   {
@@ -46,7 +47,7 @@ const AgenaPage = () => {
           <div className="row gallery gallery-min-heigth-agena">
             <div className="col-lg-6 items mt-0 interior theaters residential">
               <div className="section-head mb-0">
-                <h3>Mekanlar</h3>
+                <h3>{t("mekanlar")}</h3>
               </div>
             </div>
             <Link href="/agena/insideViews">
@@ -60,7 +61,7 @@ const AgenaPage = () => {
                     />
                   </div>
                   <div className="cont vis">
-                    <h5>İç Mekan</h5>
+                    <h5>{t("icMekan")}</h5>
                     {/* <span>Architecture</span>
                     <span>Modern</span> */}
                   </div>
@@ -130,5 +131,5 @@ const AgenaPage = () => {
     </>
   );
 };
-
+export const getStaticProps = withTranslationProps();
 export default AgenaPage;

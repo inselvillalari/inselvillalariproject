@@ -6,25 +6,27 @@ import Check from "../../../icons/Check";
 import PrivatePool from "../../../icons/PrivatePool";
 import BBQ from "../../../icons/BBQ";
 import Jacuzzy from "../../../icons/Jacuzzy";
-
+import { useTranslation } from "next-i18next";
+import { withTranslationProps } from "../../../utils/withTranslation";
 const AgenaFeatures = () => {
+  const { t } = useTranslation("common");
   return (
     <section className="services section-padding p-0">
       <div className="container">
         <div className="section-head">
-          <h3>Özellikler</h3>
+          <h3>{t("features.ozellikler")}</h3>
         </div>
         <div className="row">
           <div className="col-sm-12 col-md-6 sm-mb30 sm-pl50">
             <div className="row">
               <div className="col-4">
                 <div className="item">
-                  <TenPeople title="10 Kişilik" />
+                  <TenPeople title={t("features.onKisilik")} />
                 </div>
               </div>
               <div className="col-4">
                 <div className="item">
-                  <PrivatePool title="Havuz" />
+                  <PrivatePool title={t("features.ozelHavuz")} />
                 </div>
               </div>
               <div className="col-4">
@@ -34,7 +36,7 @@ const AgenaFeatures = () => {
               </div>
               <div className="col-4 mt-4">
                 <div className="item">
-                  <Bilardo title="Bilardo" />
+                  <Bilardo title={t("features.bilardo")} />
                 </div>
               </div>
               <div className="col-4 mt-4">
@@ -110,7 +112,7 @@ const AgenaFeatures = () => {
                     <Check title="Klima" />
                   </div>
                   <div className="item">
-                    <Check title="Masa Tenisi" />
+                    <Check title={t("features.masaTenisi")} />
                   </div>
                   <div className="item ">
                     <Check title="Full Mobilyalı" />
@@ -181,5 +183,5 @@ const AgenaFeatures = () => {
     </section>
   );
 };
-
+export const getStaticProps = withTranslationProps();
 export default AgenaFeatures;
