@@ -5,6 +5,7 @@ import PageHeader from "../../../components/Page-header";
 import ProjectIntro from "../../../components/agena/dayViews/ProjectIntro";
 import { useTranslation } from "next-i18next";
 import { withTranslationProps } from "../../../utils/withTranslation";
+import withLoading from "../../../common/withLoading";
 
 const AgenaDayViews = () => {
   const { t } = useTranslation("common");
@@ -83,4 +84,4 @@ const AgenaDayViews = () => {
   );
 };
 export const getStaticProps = withTranslationProps(["common"]);
-export default AgenaDayViews;
+export default withLoading(AgenaDayViews);

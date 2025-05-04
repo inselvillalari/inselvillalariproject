@@ -6,6 +6,7 @@ import ProjectIntro from "../../../components/rigel/activities/ProjectIntro";
 import ProjectVideo from "../../../components/Project-Video";
 import { useTranslation } from "next-i18next";
 import { withTranslationProps } from "../../../utils/withTranslation";
+import withLoading from "../../../common/withLoading";
 
 const RigelActivities = () => {
   const { t } = useTranslation("common");
@@ -84,4 +85,4 @@ const RigelActivities = () => {
   );
 };
 export const getStaticProps = withTranslationProps(["common"]);
-export default RigelActivities;
+export default withLoading(RigelActivities);

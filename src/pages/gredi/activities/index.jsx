@@ -6,6 +6,7 @@ import ProjectIntro from "../../../components/gredi/activitites/ProjectIntro";
 import ProjectVideo from "../../../components/Project-Video";
 import { useTranslation } from "next-i18next";
 import { withTranslationProps } from "../../../utils/withTranslation";
+import withLoading from "../../../common/withLoading";
 
 const GrediActivities = () => {
   const { t } = useTranslation("common");
@@ -78,4 +79,4 @@ const GrediActivities = () => {
   );
 };
 export const getStaticProps = withTranslationProps(["common"]);
-export default GrediActivities;
+export default withLoading(GrediActivities);

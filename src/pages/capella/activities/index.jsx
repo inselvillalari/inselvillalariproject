@@ -6,6 +6,7 @@ import ProjectIntro from "../../../components/capella/activities/ProjectIntro";
 import ProjectVideo from "../../../components/Project-Video";
 import { useTranslation } from "next-i18next";
 import { withTranslationProps } from "../../../utils/withTranslation";
+import withLoading from "../../../common/withLoading";
 
 const CapellaActivities = () => {
   const { t } = useTranslation("common");
@@ -72,4 +73,4 @@ const CapellaActivities = () => {
   );
 };
 export const getStaticProps = withTranslationProps(["common"]);
-export default CapellaActivities;
+export default withLoading(CapellaActivities);

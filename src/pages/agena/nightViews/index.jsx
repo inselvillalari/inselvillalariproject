@@ -6,6 +6,7 @@ import ProjectIntro from "../../../components/agena/nightViews/ProjectIntro";
 import ProjectVideo from "../../../components/Project-Video";
 import { useTranslation } from "next-i18next";
 import { withTranslationProps } from "../../../utils/withTranslation";
+import withLoading from "../../../common/withLoading";
 
 const AgenaNightViews = () => {
   const { t } = useTranslation("common");
@@ -78,4 +79,4 @@ const AgenaNightViews = () => {
   );
 };
 export const getStaticProps = withTranslationProps(["common"]);
-export default AgenaNightViews;
+export default withLoading(AgenaNightViews);
