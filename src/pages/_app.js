@@ -12,7 +12,6 @@ import { appWithTranslation } from "next-i18next";
 import { useSelector } from "react-redux";
 import { useRouter } from "next/router";
 import { setLoading } from "../store/generalSlice";
-import "../components/pageLoading/index.css";
 
 const AppContent = ({ Component, pageProps }) => {
   const { loading } = useSelector((state) => state.general);
