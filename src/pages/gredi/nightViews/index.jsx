@@ -4,8 +4,11 @@ import MainLayout from "../../layout/MainLayout";
 import PageHeader from "../../../components/Page-header";
 import ProjectIntro from "../../../components/gredi/nightViews/ProjectIntro";
 import ProjectVideo from "../../../components/Project-Video";
+import { useTranslation } from "next-i18next";
+import { withTranslationProps } from "../../../utils/withTranslation";
 
 const GrediNightViews = () => {
+  const { t } = useTranslation("common");
   React.useEffect(() => {
     document.querySelector("body").classList.add("index3");
   }, []);
@@ -74,5 +77,5 @@ const GrediNightViews = () => {
     </MainLayout>
   );
 };
-
+export const getStaticProps = withTranslationProps(["common"]);
 export default GrediNightViews;

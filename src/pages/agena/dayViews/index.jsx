@@ -3,8 +3,11 @@ import React from "react";
 import MainLayout from "../../layout/MainLayout";
 import PageHeader from "../../../components/Page-header";
 import ProjectIntro from "../../../components/agena/dayViews/ProjectIntro";
+import { useTranslation } from "next-i18next";
+import { withTranslationProps } from "../../../utils/withTranslation";
 
 const AgenaDayViews = () => {
+  const { t } = useTranslation("common");
   React.useEffect(() => {
     document.querySelector("body").classList.add("index3");
   }, []);
@@ -13,8 +16,8 @@ const AgenaDayViews = () => {
       <PageHeader
         title="VİLLA AGENA"
         fullPath={[
-          { id: 1, name: "Anasayfa", url: "/" },
-          { id: 2, name: "İletişim", url: "/contact" },
+          { id: 1, name: t("navbar.anasayfa"), url: "/" },
+          { id: 2, name: t("navbar.iletisim"), url: "/contact" },
         ]}
         image="/assets/img/slid/villasCoverImg/agena.jpeg"
       />
@@ -79,5 +82,5 @@ const AgenaDayViews = () => {
     </MainLayout>
   );
 };
-
+export const getStaticProps = withTranslationProps(["common"]);
 export default AgenaDayViews;

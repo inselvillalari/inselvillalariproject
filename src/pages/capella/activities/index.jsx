@@ -4,8 +4,11 @@ import MainLayout from "../../layout/MainLayout";
 import PageHeader from "../../../components/Page-header";
 import ProjectIntro from "../../../components/capella/activities/ProjectIntro";
 import ProjectVideo from "../../../components/Project-Video";
+import { useTranslation } from "next-i18next";
+import { withTranslationProps } from "../../../utils/withTranslation";
 
 const CapellaActivities = () => {
+  const { t } = useTranslation("common");
   React.useEffect(() => {
     document.querySelector("body").classList.add("index3");
   }, []);
@@ -14,8 +17,8 @@ const CapellaActivities = () => {
       <PageHeader
         title="VİLLA CAPELLA"
         fullPath={[
-          { id: 1, name: "Anasayfa", url: "/" },
-          { id: 2, name: "İletişim", url: "/contact" },
+          { id: 1, name: t("navbar.anasayfa"), url: "/" },
+          { id: 2, name: t("navbar.iletisim"), url: "/contact" },
         ]}
         image="/assets/img/slid/villasCoverImg/capella.jpeg"
       />
@@ -68,5 +71,5 @@ const CapellaActivities = () => {
     </MainLayout>
   );
 };
-
+export const getStaticProps = withTranslationProps(["common"]);
 export default CapellaActivities;

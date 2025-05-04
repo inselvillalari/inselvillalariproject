@@ -4,8 +4,11 @@ import MainLayout from "../../layout/MainLayout";
 import PageHeader from "../../../components/Page-header";
 import ProjectIntro from "../../../components/rigel/dayViews/ProjectIntro";
 import ProjectVideo from "../../../components/Project-Video";
+import { useTranslation } from "next-i18next";
+import { withTranslationProps } from "../../../utils/withTranslation";
 
 const RigelDayViews = () => {
+  const { t } = useTranslation("common");
   React.useEffect(() => {
     document.querySelector("body").classList.add("index3");
   }, []);
@@ -14,8 +17,8 @@ const RigelDayViews = () => {
       <PageHeader
         title="VİLLA RİGEL"
         fullPath={[
-          { id: 1, name: "Anasayfa", url: "/" },
-          { id: 2, name: "İletişim", url: "/contact" },
+          { id: 1, name: t("navbar.anasayfa"), url: "/" },
+          { id: 2, name: t("navbar.iletisim"), url: "/contact" },
         ]}
         image="/assets/img/slid/villasCoverImg/rigel.jpeg"
       />
@@ -80,5 +83,5 @@ const RigelDayViews = () => {
     </MainLayout>
   );
 };
-
+export const getStaticProps = withTranslationProps(["common"]);
 export default RigelDayViews;
