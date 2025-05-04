@@ -7,7 +7,6 @@ import PropertyDetails from "./propertyDetails";
 import BookingCalendar from "../BookingCalendar";
 import initIsotope from "../../common/initIsotope";
 import { useTranslation } from "next-i18next";
-import { withTranslationProps } from "../../utils/withTranslation";
 
 const dateRangesData = [
   {
@@ -131,5 +130,5 @@ const AgenaPage = () => {
     </>
   );
 };
-export const getStaticProps = withTranslationProps();
+
 export default AgenaPage;

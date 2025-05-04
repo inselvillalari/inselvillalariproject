@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import dynamic from "next/dynamic";
 import { Calendar, DateObject } from "react-multi-date-picker";
 import "react-multi-date-picker/styles/backgrounds/bg-dark.css";
+import { useTranslation } from "next-i18next";
 
 const days = ["Pz", "Pt", "Sa", "Ça", "Pe", "Cu", "Ct"];
 const months = [
@@ -20,6 +21,7 @@ const months = [
 ];
 
 const BookingCalendar = (dateRangesData) => {
+  const { t } = useTranslation("common");
   const [dateRanges, setDateRanges] = useState([]);
 
   useEffect(() => {
@@ -63,7 +65,7 @@ const BookingCalendar = (dateRangesData) => {
     <section className="section-padding p-0 pb-100">
       <div className="container">
         <div className="section-head">
-          <h3>Takvim</h3>
+          <h3>{t("takvim.takvim")}</h3>
         </div>
       </div>
       <div className="container d-flex justify-content-center mobile">
@@ -102,18 +104,19 @@ const BookingCalendar = (dateRangesData) => {
       <div className="container d-flex justify-content-center">
         <div className="legend">
           <div>
-            <span className="legend-color musait"></span> Müsait
+            <span className="legend-color musait"></span> {t("takvim.musait")}
           </div>
           <div>
-            <span className="legend-color rezervasyon"></span> Rezerve
+            <span className="legend-color rezervasyon"></span>{" "}
+            {t("takvim.rezerve")}
           </div>
           <div>
-            <span className="legend-color dolu"></span> Tesis Tarafından
-            Kapatılmış
+            <span className="legend-color dolu"></span>{" "}
+            {t("takvim.tesisKapatmis")}
           </div>
-          <div>
+          {/* <div>
             <span className="legend-color secili"></span> Seçili Alan
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

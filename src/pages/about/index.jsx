@@ -1,8 +1,11 @@
 import React from "react";
 import Head from "next/head";
 import LightLayout from "../layout/LightLayout";
+import { useTranslation } from "next-i18next";
+import { withTranslationProps } from "../../utils/withTranslation";
 
-export default function ReservationPage() {
+export default function About() {
+  const { t } = useTranslation("common");
   return (
     <LightLayout>
       <div
@@ -22,35 +25,17 @@ export default function ReservationPage() {
             }}
           >
             <h1 style={{ fontSize: "2rem", marginBottom: "1.5rem" }}>
-              IN-SEL Villaları
+              {t("about.aciklama1")}
             </h1>
-            <p className="section-description">
-              IN-SEL Villaları, Akdeniz’in incisi Kalkan’da yer alan seçkin
-              tatil villalarını misafirlerimizle buluşturan özel bir kiralama
-              platformudur. Her biri doğayla iç içe, şık tasarıma ve özel
-              imkanlara sahip villalarımız, huzurlu ve konforlu bir tatil
-              arayanlara hitap etmektedir.
-            </p>
+            <p className="section-description">{t("about.aciklama2")}</p>
+
+            <p className="section-description">{t("about.aciklama3")}</p>
+
+            <p className="section-description">{t("about.aciklama4")}</p>
 
             <p className="section-description">
-              Şirket olarak önceliğimiz, misafir memnuniyetidir. Bu doğrultuda,
-              rezervasyon sürecinden konaklamaya kadar tüm aşamalarda şeffaflık,
-              güven ve destek ilkeleriyle hareket ediyoruz. Villalarımız, bizzat
-              tarafımızca kontrol edilmekte ve en yüksek konaklama
-              standartlarını sunacak şekilde özenle seçilmektedir.
-            </p>
-
-            <p className="section-description">
-              Güvenli ödeme altyapımız, kullanıcı dostu web sitemiz ve her zaman
-              ulaşılabilir destek hattımız ile misafirlerimize kusursuz bir
-              deneyim yaşatmayı hedefliyoruz. IN-SEL Villaları ile tatiliniz
-              sadece bir konaklama değil; keyif, huzur ve ayrıcalık dolu bir
-              deneyim olacak.
-            </p>
-
-            <p className="section-description">
-              Daha fazla bilgi ve rezervasyon için bizimle iletişime
-              geçebilirsiniz: <strong>info@inselvillalari.com</strong> –{" "}
+              {t("about.aciklama5")}
+              <strong>info@inselvillalari.com</strong> –{" "}
               <strong>+90 532 490 53 07</strong>
             </p>
           </div>
@@ -59,3 +44,4 @@ export default function ReservationPage() {
     </LightLayout>
   );
 }
+export const getStaticProps = withTranslationProps(["common"]);

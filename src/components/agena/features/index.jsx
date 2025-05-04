@@ -7,7 +7,7 @@ import PrivatePool from "../../../icons/PrivatePool";
 import BBQ from "../../../icons/BBQ";
 import Jacuzzy from "../../../icons/Jacuzzy";
 import { useTranslation } from "next-i18next";
-import { withTranslationProps } from "../../../utils/withTranslation";
+
 const AgenaFeatures = () => {
   const { t } = useTranslation("common");
   return (
@@ -41,44 +41,14 @@ const AgenaFeatures = () => {
               </div>
               <div className="col-4 mt-4">
                 <div className="item">
-                  <BBQ title="BBQ" />
+                  <BBQ title={t("features.bbq")} />
                 </div>
               </div>
               <div className="col-4 mt-4">
                 <div className="item">
-                  <Jacuzzy title="Jakuzi" />
+                  <Jacuzzy title={t("features.jakuzi")} />
                 </div>
               </div>
-              {/* <div className="col-4 mt-4">
-                <div className="item">
-                  <PingPong title="Masa Tenisi" />
-                </div>
-              </div> */}
-              {/* <div className="col-4 mt-4">
-                    <div className="item">
-                  <PingPong title="Masa Tenisi" />
-                </div>
-              </div> */}
-              {/* <div className="col-4 mt-4">
-                <div className="item">
-                  <PoolHeating title="Havuz Isıtma" />
-                </div>
-              </div> */}
-              {/* <div className="col-4 mt-4">
-                <div className="item">
-                  <Terrace title="Teras" />
-                </div>
-              </div> */}
-              {/* <div className="col-4 mt-4">
-                <div className="item">
-                  <BabyBed title="Bebek Yatağı" />
-                </div>
-              </div>
-              <div className="col-4 mt-4">
-                <div className="item">
-                  <IndoorPool title="Kapalı Havuz" />
-                </div>
-              </div> */}
             </div>
           </div>
           <div className="col-sm-12 col-md-6">
@@ -91,46 +61,43 @@ const AgenaFeatures = () => {
                   }}
                 >
                   <div className="item">
-                    <Check title="Otopark" />
+                    <Check title={t("features.otopark")} />
                   </div>
                   <div className="item">
-                    <Check title="Elektrikli Araç Şarj İstasyonu" />
+                    <Check title={t("features.denizManzarali")} />
                   </div>
                   <div className="item">
-                    <Check title="Smart TV - Uydu" />
+                    <Check title={t("features.tv")} />
                   </div>
                   <div className="item">
-                    <Check title="Playstation 5" />
+                    <Check title={t("features.ps5")} />
                   </div>
                   <div className="item ">
-                    <Check title="Güvenlik Görevlisi" />
+                    <Check title={t("features.gorevli")} />
                   </div>
                   <div className="item ">
-                    <Check title="Güvenlik Kamerası" />
+                    <Check title={t("features.kamera")} />
                   </div>
                   <div className="item">
-                    <Check title="Klima" />
+                    <Check title={t("features.klima")} />
                   </div>
                   <div className="item">
                     <Check title={t("features.masaTenisi")} />
                   </div>
                   <div className="item ">
-                    <Check title="Full Mobilyalı" />
-                  </div>
-                  <div className="item">
-                    <Check title="Havuz Isıtma" />
+                    <Check title={t("features.mobilyali")} />
                   </div>
                   <div className="item ">
-                    <Check title="Beyaz Eşyalı" />
+                    <Check title={t("features.beyazEsya")} />
                   </div>
                   <div className="item">
-                    <Check title="Saç Kurutma Makinesi" />
+                    <Check title={t("features.sacKurutma")} />
                   </div>
                   <div className="item">
-                    <Check title="Ütü" />
+                    <Check title={t("features.utu")} />
                   </div>
                   <div className="item ">
-                    <Check title="Deniz Manzaralı" />
+                    <Check title={t("features.sarj")} />
                   </div>
                 </div>
               </div>
@@ -142,37 +109,34 @@ const AgenaFeatures = () => {
                   }}
                 >
                   <div className="item ">
-                    <Check title="İnternet Bağlantısı" />
+                    <Check title={t("features.wifi")} />
                   </div>
                   <div className="item ">
-                    <Check title="Çamaşır Makinesi" />
+                    <Check title={t("features.camasir")} />
                   </div>
                   <div className="item ">
-                    <Check title="Bebek Yatağı" />
+                    <Check title={t("features.bebekYatagi")} />
                   </div>
                   <div className="item ">
-                    <Check title="Teras" />
+                    <Check title={t("features.teras")} />
                   </div>
                   <div className="item ">
-                    <Check title="Havuz - Bahçe Bakımı" />
+                    <Check title={t("features.havuzBakim")} />
                   </div>
                   <div className="item ">
-                    <Check title="Oyun Alanı" />
+                    <Check title={t("features.oyunAlani")} />
                   </div>
                   <div className="item ">
-                    <Check title="Duşakabin" />
+                    <Check title={t("features.alarm")} />
                   </div>
                   <div className="item ">
-                    <Check title="Alarm" />
+                    <Check title={t("features.bahceli")} />
                   </div>
                   <div className="item ">
-                    <Check title="Bahçeli" />
+                    <Check title={t("features.cocukHavuzu")} />
                   </div>
                   <div className="item ">
-                    <Check title="Çocuk Havuzu" />
-                  </div>
-                  <div className="item ">
-                    <Check title="Ebeveyn Banyosu" />
+                    <Check title={t("features.ebeveynBanyosu")} />
                   </div>
                 </div>
               </div>
@@ -183,5 +147,4 @@ const AgenaFeatures = () => {
     </section>
   );
 };
-export const getStaticProps = withTranslationProps();
 export default AgenaFeatures;

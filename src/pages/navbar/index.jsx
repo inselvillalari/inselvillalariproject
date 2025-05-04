@@ -4,8 +4,10 @@ import Link from "next/link";
 import getSiblings from "../../common/getSiblings";
 import LanguageSwitcher from "../../components/languageSwitcher";
 import { useRouter } from "next/router";
+import { useTranslation } from "next-i18next";
 
 const Navbar = ({ navbarRef, logoRef, logoClass }) => {
+  const { t } = useTranslation("common");
   const router = useRouter();
   const currentLocale = router.locale;
 
@@ -33,7 +35,6 @@ const Navbar = ({ navbarRef, logoRef, logoClass }) => {
       .getElementById("navbarSupportedContent")
       .classList.toggle("show-with-trans");
   };
-
 
   return (
     <>
@@ -93,22 +94,22 @@ const Navbar = ({ navbarRef, logoRef, logoClass }) => {
               </li>
               <li className="nav-item md-ml0" style={{ marginLeft: "60px" }}>
                 <Link href="/" locale={currentLocale} legacyBehavior>
-                  <a className="nav-link">Anasayfa</a>
+                  <a className="nav-link">{t("navbar.anasayfa")}</a>
                 </Link>
               </li>
               <li className="nav-item">
                 <Link href="/about" locale={currentLocale} legacyBehavior>
-                  <a className="nav-link">Hakkımızda</a>
+                  <a className="nav-link">{t("navbar.hakkimizda")}</a>
                 </Link>
               </li>
               <li className="nav-item">
                 <Link href="/reservation" locale={currentLocale} legacyBehavior>
-                  <a className="nav-link">Rezervasyon</a>
+                  <a className="nav-link">{t("navbar.rezervasyon")}</a>
                 </Link>
               </li>
               <li className="nav-item">
                 <Link href="/contact" locale={currentLocale} legacyBehavior>
-                  <a className="nav-link">İletişim</a>
+                  <a className="nav-link">{t("navbar.iletisim")}</a>
                 </Link>
               </li>
               <li className="nav-item ml-5 d-none d-md-block">

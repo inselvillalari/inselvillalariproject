@@ -1,8 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
 import Link from "next/link";
+import { useTranslation } from "next-i18next";
 
 const Footer = ({ classText }) => {
+  const { t } = useTranslation("common");
   return (
     <footer className={`${classText ? classText : ""}`}>
       <div className="container">
@@ -10,27 +12,27 @@ const Footer = ({ classText }) => {
           <div className="col-lg-6">
             <div className="item md-mb50">
               <div className="title">
-                <h5>Bize Ulaşın</h5>
+                <h5>{t("footer.ulasin")}</h5>
               </div>
               <ul>
                 <li>
                   <span className="icon pe-7s-map-marker"></span>
                   <div className="cont">
-                    <h6>Adres Bilgilerimiz</h6>
+                    <h6>{t("footer.adres")}</h6>
                     <p>Zakkum Sk Kalkan, Kaş, ANTALYA</p>
                   </div>
                 </li>
                 <li>
                   <span className="icon pe-7s-mail"></span>
                   <div className="cont">
-                    <h6>Bize Yazın</h6>
+                    <h6>{t("footer.yazin")}</h6>
                     <p>info@inselvillalari.com</p>
                   </div>
                 </li>
                 <li>
                   <span className="icon pe-7s-call"></span>
                   <div className="cont">
-                    <h6>Bizi Arayın</h6>
+                    <h6>{t("footer.arayin")}</h6>
                     <p>+90 532 490 53 07</p>
                   </div>
                 </li>
@@ -40,12 +42,10 @@ const Footer = ({ classText }) => {
               <div style={{ marginTop: "1.5rem" }}>
                 <ul style={{ listStyle: "none", paddingLeft: 0 }}>
                   <li>
-                    <Link href="/privacy-policy">Gizlilik Politikası</Link>
+                    <Link href="/privacy-policy">{t("footer.politika")}</Link>
                   </li>
                   <li>
-                    <Link href="/agreement">
-                      Mesafeli Hizmet Satış Sözleşmesi
-                    </Link>
+                    <Link href="/agreement">{t("footer.sozlesme")}</Link>
                   </li>
                 </ul>
               </div>
@@ -109,5 +109,4 @@ const Footer = ({ classText }) => {
     </footer>
   );
 };
-
 export default Footer;

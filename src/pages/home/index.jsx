@@ -1,16 +1,16 @@
 /* eslint-disable @next/next/no-img-element */
-import React from "react";
+import React, { useEffect } from "react";
 import LightLayout from "../layout/LightLayout";
 import Intro from "../intro";
 import Services from "../services";
 import AboutUs from "../aboutus";
 import Portfolio from "../portfolio";
 import Blogs2 from "../../components/Blogs2";
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-const Home1 = () => {
-  React.useEffect(() => {
+const Home = () => {
+  useEffect(() => {
     document.querySelector("body").classList.add("homepage");
   }, []);
+
   return (
     <LightLayout>
       <Intro />
@@ -22,12 +22,4 @@ const Home1 = () => {
   );
 };
 
-export async function getStaticProps({ locale }) {
-  return {
-    props: {
-      ...(await serverSideTranslations(locale, ["common"])),
-    },
-  };
-}
-
-export default Home1;
+export default Home;
