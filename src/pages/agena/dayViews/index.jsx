@@ -2,7 +2,7 @@
 import React from "react";
 import MainLayout from "../../layout/MainLayout";
 import PageHeader from "../../../components/Page-header";
-import ProjectIntro from "../../../agena/dayViews/ProjectIntro";
+import ProjectIntro from "../../../components/agena/dayViews/ProjectIntro";
 
 const AgenaDayViews = () => {
   React.useEffect(() => {

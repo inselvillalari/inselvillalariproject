@@ -2,7 +2,7 @@
 import React from "react";
 import MainLayout from "../../layout/MainLayout";
 import PageHeader from "../../../components/Page-header";
-import ProjectIntro from "../../../agena/nightViews/ProjectIntro";
+import ProjectIntro from "../../../components/agena/nightViews/ProjectIntro";
 import ProjectVideo from "../../../components/Project-Video";
 
 const AgenaNightViews = () => {

@@ -2,7 +2,7 @@
 import React from "react";
 import MainLayout from "../../layout/MainLayout";
 import PageHeader from "../../../components/Page-header";
-import ProjectIntro from "../../../gredi/dayViews/ProjectIntro";
+import ProjectIntro from "../../../components/gredi/dayViews/ProjectIntro";
 import ProjectVideo from "../../../components/Project-Video";
 
 const GrediDayViews = () => {
