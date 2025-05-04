@@ -1,6 +1,6 @@
 // pages/ReservationLookupPage.js
 import React, { useState } from "react";
-import LightLayout from "./layout/LightLayout";
+import LightLayout from "../layout/LightLayout";
 
 export default function ReservationLookupPage() {
   const [code, setCode] = useState("");

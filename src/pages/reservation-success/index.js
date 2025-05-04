@@ -2,7 +2,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import Head from "next/head";
-import LightLayout from "./layout/LightLayout";
+import LightLayout from "../layout/LightLayout";
 
 export default function ReservationSuccess() {
   const reservation = useSelector((state) => state.reservation);
