@@ -1,11 +1,12 @@
 import React from "react";
 import LightLayout from "../layout/LightLayout";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import withLoading from "../../common/withLoading";
 
-export default function Agreement() {
+const Agreement = () => {
   return (
     <LightLayout>
-      <div className="container" style={{marginTop:'50px'}}>
+      <div className="container" style={{ marginTop: "50px" }}>
         <div
           style={{
             padding: "30px",
@@ -502,8 +503,7 @@ export default function Agreement() {
       </div>
     </LightLayout>
   );
-}
-
+};
 
 export async function getStaticProps({ locale }) {
   return {
@@ -512,3 +512,4 @@ export async function getStaticProps({ locale }) {
     },
   };
 }
+export default withLoading(Agreement);

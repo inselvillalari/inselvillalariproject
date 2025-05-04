@@ -23,7 +23,8 @@
     "yazin": "Write to Us",
     "arayin": "Call Us",
     "politika": "Privacy Policy",
-    "sozlesme": "Distance Sales Agreement"
+    "sozlesme": "Distance Sales Agreement",
+    "yasal": "Legal Information"
   },
   "aboutUsHomePage": {
     "konum": "Our Location",
@@ -119,7 +120,9 @@
     "isitmali": "Heated Pool Fee:",
     "toplam": "Grand Total:",
     "depozito": "Deposit: 15,000 TL",
-    "depozitoTahsili": "The deposit will be collected separately at check-in."
+    "siteUzerinden": "Advance Payment",
+    "siteUzerindenAciklama": "To confirm your reservation, 40% of the total amount will be securely collected through our online payment system.",
+    "giristeOdeme": "Remaining Balance (at Check-in)"
   },
   "reservationEdit": {
     "calisma": "The Reservation System Will Be Available Soon",
@@ -194,5 +197,24 @@
     "grediBodrum": "Indoor Pool - Table Tennis - Gym - Seating Area",
     "rigelBodrum": "Indoor Pool - Billiards - Table Tennis - Gym - Seating Area",
     "kiralamaIcin": "For Rental:"
+  },
+  "legalInfo": {
+    "title": "Legal Information",
+    "intro": "This page is prepared in accordance with the Law on the Regulation of Electronic Commerce No. 6563 and relevant legislation, to publicly share the commercial entity's identity and contact information.",
+    "companyTitle": "Company Information",
+    "tradeName": "Trade Name",
+    "mersisNo": "MERSIS Number",
+    "headOffice": "Head Office Address",
+    "taxOffice": "Tax Office & Number",
+    "kep": "KEP Address",
+    "email": "Email",
+    "phone": "Phone",
+    "brand": "Business / Registered Brand",
+    "ethicsTitle": "Professional and Ethical Information",
+    "chamber": "Antalya Chamber of Commerce and Industry\nChamber Registry No: 28925\nTrade Registry No: 26955\nMembership Status: Active\nDegree: 1st Degree\nProfessional Group: 30 – Construction Activities",
+    "rules": "Code of Conduct",
+    "rulesNote": "Subject to relevant laws, regulations, and supervisory institutions. For more information, please visit mevzuat.gov.tr.",
+    "contactTitle": "Contact",
+    "contactNote": "For any questions or requests, please contact us at info@inselvillalari.com."
   }
 }

@@ -1,7 +1,9 @@
 import Head from "next/head";
 import LightLayout from "../layout/LightLayout";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-export default function PrivacyPolicy() {
+import withLoading from "../../common/withLoading";
+
+const PrivacyPolicy = () => {
   return (
     <LightLayout>
       <div className="container" style={{ marginTop: "50px" }}>
@@ -95,7 +97,7 @@ export default function PrivacyPolicy() {
       </div>
     </LightLayout>
   );
-}
+};
 
 export async function getStaticProps({ locale }) {
   return {
@@ -104,3 +106,4 @@ export async function getStaticProps({ locale }) {
     },
   };
 }
+export default withLoading(PrivacyPolicy);

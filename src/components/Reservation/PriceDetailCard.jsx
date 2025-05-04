@@ -39,11 +39,17 @@ export default function PriceDetailCard() {
       }
     }
 
+    const grandTotal = totalVillaPrice + totalHeatedPoolPrice;
+    const upfront = Math.round(grandTotal * 0.4);
+    const remaining = grandTotal - upfront;
+
     return {
       dayCount: dayDiff,
       villaPrice: totalVillaPrice,
       heatedPoolPrice: totalHeatedPoolPrice,
-      grandTotal: totalVillaPrice + totalHeatedPoolPrice,
+      grandTotal,
+      upfront,
+      remaining,
     };
   }, [villa, entryDate, exitDate, heatedPool]);
 
@@ -70,7 +76,7 @@ export default function PriceDetailCard() {
         border: "1px solid #eee",
         fontFamily: "'Poppins', sans-serif",
         color: "#333",
-        minHeight: "320px",
+        minHeight: "400px",
         width: "100%",
         maxWidth: "400px",
         margin: "0 auto",
@@ -120,11 +126,45 @@ export default function PriceDetailCard() {
               fontWeight: "700",
               textAlign: "center",
               color: "#C8A97E",
-              marginBottom: "20px",
+              marginBottom: "12px",
             }}
           >
             {t("reservationPriceCard.toplam")}{" "}
             {result.grandTotal.toLocaleString("tr-TR")} TL
+          </div>
+
+          <div
+            style={{
+              fontSize: "14px",
+              textAlign: "center",
+              marginBottom: "4px",
+              color: "#444",
+            }}
+          >
+            %40 {t("reservationPriceCard.siteUzerinden")}:{" "}
+            <strong>{result.upfront.toLocaleString("tr-TR")} TL</strong>
+          </div>
+          <p
+            style={{
+              fontSize: "12px",
+              textAlign: "center",
+              color: "#777",
+              marginBottom: "12px",
+            }}
+          >
+            {t("reservationPriceCard.siteUzerindenAciklama")}
+          </p>
+
+          <div
+            style={{
+              fontSize: "14px",
+              textAlign: "center",
+              marginBottom: "12px",
+              color: "#444",
+            }}
+          >
+            %60 {t("reservationPriceCard.giristeOdeme")}:{" "}
+            <strong>{result.remaining.toLocaleString("tr-TR")} TL</strong>
           </div>
 
           <div

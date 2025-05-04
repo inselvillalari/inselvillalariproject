@@ -23,7 +23,8 @@
     "yazin": "Bize Yazın",
     "arayin": "Bizi Arayın",
     "politika": "Gizlilik Politikası",
-    "sozlesme": "Mesafeli Hizmet Satış Sözleşmesi"
+    "sozlesme": "Mesafeli Hizmet Satış Sözleşmesi",
+    "yasal": "Yasal Bilgiler"
   },
   "aboutUsHomePage": {
     "konum": "Konumumuz",
@@ -119,7 +120,10 @@
     "isitmali": "Isıtmalı Havuz Ücreti:",
     "toplam": "Genel Toplam:",
     "depozito": "Depozito: 15.000 TL",
-    "depozitoTahsili": "Depozito giriş sırasında ayrıca tahsil edilecektir."
+    "depozitoTahsili": "Depozito giriş sırasında ayrıca tahsil edilecektir.",
+    "siteUzerinden": "Ön Ödeme Tutarı",
+    "siteUzerindenAciklama": "Rezervasyonunuzun kesinleşebilmesi için toplam tutarın %40’ı güvenli ödeme altyapımız üzerinden alınmaktadır.",
+    "giristeOdeme": "Kalan Tutar (Girişte)"
   },
   "reservationEdit": {
     "calisma": "Rezervasyon Sistemi Yakında Açılacaktır",
@@ -194,5 +198,24 @@
     "grediBodrum": "Kapalı Havuz - Masa Tenisi - Spor Salonu - Oturma Grubu",
     "rigelBodrum": "Kapalı Havuz - Bilardo - Masa Tenisi - Spor Salonu - Oturma Grubu",
     "kiralamaIcin": "Kiralama için:"
+  },
+  "legalInfo": {
+    "title": "Yasal Bilgiler",
+    "intro": "Bu sayfa, 6563 sayılı Elektronik Ticaretin Düzenlenmesi Hakkında Kanun ve ilgili mevzuat uyarınca, ticari işletmenin kimlik ve iletişim bilgilerini kamuya sunmak amacıyla hazırlanmıştır.",
+    "companyTitle": "Firma Bilgileri",
+    "tradeName": "Ticaret Unvanı",
+    "mersisNo": "MERSİS Numarası",
+    "headOffice": "Merkez Adresi",
+    "taxOffice": "Vergi Dairesi ve No",
+    "kep": "KEP Adresi",
+    "email": "E-Posta",
+    "phone": "Telefon",
+    "brand": "İşletme Adı / Tescilli Marka",
+    "ethicsTitle": "Meslek ve Etik Bilgileri",
+    "chamber": "Antalya Ticaret ve Sanayi Odası\nOda Sicil No: 28925\nTicaret Sicil No: 26955\nÜyelik Durumu: Faal\nDerecesi: 1. Derece\nMeslek Grubu: 30 – İnşaat Faaliyetleri",
+    "rules": "Mesleki Davranış Kuralları",
+    "rulesNote": "İlgili yasa, yönetmelik ve düzenleyici kurumların kurallarına tabidir. Detaylı bilgi için mevzuat.gov.tr adresini ziyaret edebilirsiniz.",
+    "contactTitle": "İletişim",
+    "contactNote": "Her türlü soru ve talebiniz için bizimle info@inselvillalari.com adresinden iletişime geçebilirsiniz."
   }
 }
