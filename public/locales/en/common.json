@@ -1,5 +1,16 @@
 {
   "": "",
+  "loadingText": "Loading",
+  "detayaGit": "Go to Details",
+  "mekanlar": "Places",
+  "aktiviteler": "Activities",
+  "icMekan": "Interior",
+  "geceGorunumleri": "Night Views",
+  "gunduzGorunumleri": "Daytime Views",
+  "agenaAciklama": "On the ground floor of our villa, there is an open-plan American kitchen and a living room with breathtaking sea and nature views. The upper floors feature five en-suite bedrooms, and in our main master bedroom, you can enjoy a relaxing time in the jacuzzi while admiring the view. Our villa, designed to offer a holiday experience beyond your dreams, includes a game room in the basement — featuring billiards, table tennis, and darts — to help you unwind from the stress of the entire year in complete comfort.",
+  "capellaAciklama": "On the ground floor of our villa, there is an open-plan American kitchen and a living room with stunning sea and nature views. The upper floors feature five en-suite bedrooms, two of which have jacuzzis where you can unwind while enjoying the view. Designed to offer a holiday experience beyond your dreams, our villa also includes a fitness room in the basement — equipped with a billiards table, table tennis, treadmill, and exercise bike — to help you relieve the stress of the entire year in complete comfort.",
+  "grediAciklama": "On the ground floor of our villa, there is an open-plan American kitchen and a living room with stunning sea and nature views. The upper floors feature five en-suite bedrooms, two of which include jacuzzis where you can relax while enjoying the view. Our villa offers a vacation experience beyond your dreams. Designed to help you unwind from the fatigue of the entire year, the basement floor includes a fitness room (billiards, table tennis, treadmill, exercise bike) and a heated indoor pool — all arranged for your ultimate comfort.",
+  "rigelAciklama": "On the ground floor of our villa, there is an open-plan kitchen and living room with stunning sea and nature views. On the upper floors, you will find five en-suite bedrooms, two of which feature a jacuzzi where you can relax while enjoying the view. Designed to help you unwind from the stress of the entire year, our villa offers a dream-like holiday experience with a basement floor that includes a gym (billiards, table tennis, treadmill, exercise bike) and a heated indoor pool — all arranged for your comfort and enjoyment.",
   "navbar": {
     "anasayfa": "Homepage",
     "iletisim": "Contact",
@@ -13,6 +24,12 @@
     "arayin": "Call Us",
     "politika": "Privacy Policy",
     "sozlesme": "Distance Sales Agreement"
+  },
+  "aboutUsHomePage": {
+    "konum": "Our Location",
+    "kalkan": "Kalkan",
+    "kiziltas": "in Kızıltaş",
+    "aboutUsYazi": "we bring together the blue and green with you. Our villas are perfectly designed to help you unwind from the exhaustion of the entire year. We open our doors to offer you a holiday that will make you say ‘this is it’..."
   },
   "about": {
     "aciklama1": "IN-SEL Villas",
@@ -92,12 +109,6 @@
     "depozito": "Deposit: 15,000 TL",
     "depozitoTahsili": "The deposit will be collected separately at check-in."
   },
-  "loadingText": "Loading",
-  "mekanlar": "Places",
-  "aktiviteler": "Activities",
-  "icMekan": "Interior",
-  "geceGorunumleri": "Night Views",
-  "gunduzGorunumleri": "Daytime Views",
   "features": {
     "ozellikler": "Features",
     "onKisilik": "For 10 People",
@@ -165,9 +176,5 @@
     "grediBodrum": "Indoor Pool - Table Tennis - Gym - Seating Area",
     "rigelBodrum": "Indoor Pool - Billiards - Table Tennis - Gym - Seating Area",
     "kiralamaIcin": "For Rental:"
-  },
-  "agenaAciklama": "On the ground floor of our villa, there is an open-plan American kitchen and a living room with breathtaking sea and nature views. The upper floors feature five en-suite bedrooms, and in our main master bedroom, you can enjoy a relaxing time in the jacuzzi while admiring the view. Our villa, designed to offer a holiday experience beyond your dreams, includes a game room in the basement — featuring billiards, table tennis, and darts — to help you unwind from the stress of the entire year in complete comfort.",
-  "capellaAciklama": "On the ground floor of our villa, there is an open-plan American kitchen and a living room with stunning sea and nature views. The upper floors feature five en-suite bedrooms, two of which have jacuzzis where you can unwind while enjoying the view. Designed to offer a holiday experience beyond your dreams, our villa also includes a fitness room in the basement — equipped with a billiards table, table tennis, treadmill, and exercise bike — to help you relieve the stress of the entire year in complete comfort.",
-  "grediAciklama": "On the ground floor of our villa, there is an open-plan American kitchen and a living room with stunning sea and nature views. The upper floors feature five en-suite bedrooms, two of which include jacuzzis where you can relax while enjoying the view. Our villa offers a vacation experience beyond your dreams. Designed to help you unwind from the fatigue of the entire year, the basement floor includes a fitness room (billiards, table tennis, treadmill, exercise bike) and a heated indoor pool — all arranged for your ultimate comfort.",
-  "rigelAciklama": "On the ground floor of our villa, there is an open-plan kitchen and living room with stunning sea and nature views. On the upper floors, you will find five en-suite bedrooms, two of which feature a jacuzzi where you can relax while enjoying the view. Designed to help you unwind from the stress of the entire year, our villa offers a dream-like holiday experience with a basement floor that includes a gym (billiards, table tennis, treadmill, exercise bike) and a heated indoor pool — all arranged for your comfort and enjoyment."
+  }
 }
