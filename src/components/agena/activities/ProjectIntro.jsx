@@ -1,20 +1,22 @@
 import React from "react";
 import Link from "next/link";
+import { useTranslation } from "next-i18next";
 
 const ProjectIntro = () => {
+  const { t } = useTranslation("common");
   return (
     <section className="intro-section section-padding">
       <div className="container">
         <div className="row">
           <div className="col-lg-3 col-md-4">
             <div className="htit">
-              <h4>Akiviteler</h4>
+              <h4>{t("aktiviteler")}</h4>
             </div>
           </div>
           <div className="col-lg-8 offset-lg-1 col-md-8 mb-30">
             <div className="text">
-              <p>Masa Tenisi</p>
-              <p>Bilardo</p>
+              <p>{t("features.masaTenisi")}</p>
+              <p>{t("features.bilardo")}</p>
             </div>
           </div>
 

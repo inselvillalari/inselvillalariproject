@@ -1,55 +1,52 @@
 import React from "react";
 import Link from "next/link";
+import { useTranslation } from "next-i18next";
 
 const PropertyDetails = () => {
+  const { t } = useTranslation("common");
   return (
     <section className=" section-padding">
       <div className="container">
         <div className="section-head">
-          <h3>Detaylar</h3>
+          <h3>{t("propertyDetails.detay")}</h3>
         </div>
         <div className="property-detail-info-list">
           <ul>
             <li>
-              <label>Kat Sayısı:</label> <span>4</span>
+              <label>{t("propertyDetails.kat")}</label> <span>4</span>
             </li>
             <li>
-              <label>Oda Sayısı:</label> <span>5 + 1</span>
+              <label>{t("propertyDetails.oda")}</label> <span>5 + 1</span>
             </li>
             <li>
-              <label>Suit Aile Odası:</label> <span>3</span>
+              <label>{t("propertyDetails.suitAile")}</label> <span>3</span>
             </li>
             <li>
-              <label>Suit Genç Odası:</label> <span>2</span>
+              <label>{t("propertyDetails.suitGenc")}</label> <span>2</span>
             </li>
             <li>
-              <label>Banyo Sayısı:</label> <span>6</span>
+              <label>{t("propertyDetails.banyo")}</label> <span>6</span>
             </li>
           </ul>
           <ul>
             <li>
-              <label>Suit Aile Odası:</label>
-              <span>
-                Çift Kişilik Yatak - Banyo - TV - Klima - Balkon - Elbise Dolabı
-              </span>
+              <label>{t("propertyDetails.suitAile")}</label>
+              <span>{t("propertyDetails.suitAileIcerik")}</span>
             </li>
             <li>
-              <label>Suit Genç Odası:</label>
-              <span>
-                2 Adet Tek Kişilik Yatak - Banyo - TV - Klima - Balkon - Elbise
-                Dolabı
-              </span>
+              <label>{t("propertyDetails.suitGenc")}</label>
+              <span>{t("propertyDetails.suitGencIcerik")}</span>
             </li>
             <li>
-              <label>Havuz Ölçüleri:</label>
-              <span>En: 4,35 m Boy: 8,95 m Derinlik: 155-195 cm</span>
+              <label> {t("propertyDetails.havuz")}</label>
+              <span>{t("propertyDetails.agenaHavuz")}</span>
             </li>
             <li>
-              <label>Bodrum Kat:</label>
-              <span>Bilardo - Masa Tenisi - Playstation - Oturma Grubu</span>
+              <label>{t("propertyDetails.bodrum")}</label>
+              <span>{t("propertyDetails.agenaBodrum")}</span>
             </li>
             <li>
-              <label>Kiralama için:</label>
+              <label>{t("propertyDetails.kiralamaIcin")}</label>
               <span>
                 <Link
                   href="https://wa.me/905324905307?text=Merhaba,%20İnsel%20Villaları%20hakkında%20bilgi%20almak%20istiyorum"
