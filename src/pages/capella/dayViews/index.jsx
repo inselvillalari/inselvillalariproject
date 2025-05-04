@@ -2,7 +2,7 @@
 import React from "react";
 import MainLayout from "../../layout/MainLayout";
 import PageHeader from "../../../components/Page-header";
-import ProjectIntro from "../../../capella/dayViews/ProjectIntro";
+import ProjectIntro from "../../../components/capella/dayViews/ProjectIntro";
 import ProjectVideo from "../../../components/Project-Video";
 
 const CapellaDayViews = () => {
