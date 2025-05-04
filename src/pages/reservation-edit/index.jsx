@@ -2,8 +2,9 @@ import React from "react";
 import LightLayout from "../layout/LightLayout";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
+import withLoading from "../../common/withLoading";
 
-export default function ReservationEdit() {
+function ReservationEdit() {
   const { t } = useTranslation("common");
   return (
     <LightLayout>
@@ -35,3 +36,5 @@ export async function getStaticProps({ locale }) {
     },
   };
 }
+
+export default withLoading(ReservationEdit);

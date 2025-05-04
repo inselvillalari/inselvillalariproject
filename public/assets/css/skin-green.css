@@ -15,7 +15,7 @@
 .navbar .navbar-nav .dropdown-item:hover,
 footer .item li .sm-post .date,
 footer .item .copy-right p a,
-.loading-text,
+/* .loading-text, */
 .progress-wrap::after{
   color: #bed86c !important;
 }

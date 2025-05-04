@@ -3,7 +3,9 @@ import ReservationForm from "../../components/Reservation/VillaReservationForm";
 import PriceDetailCard from "../../components/Reservation/PriceDetailCard";
 import LightLayout from "../layout/LightLayout";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-export default function ReservationPage() {
+import withLoading from "../../common/withLoading";
+
+function ReservationPage() {
   return (
     <LightLayout>
       <div
@@ -38,3 +40,5 @@ export async function getStaticProps({ locale }) {
     },
   };
 }
+
+export default withLoading(ReservationPage);

@@ -6,6 +6,8 @@ import Services from "../services";
 import AboutUs from "../aboutus";
 import Portfolio from "../portfolio";
 import Blogs2 from "../../components/Blogs2";
+import withLoading from "../../common/withLoading";
+
 const Home = () => {
   useEffect(() => {
     document.querySelector("body").classList.add("homepage");
@@ -22,4 +24,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default withLoading(Home);

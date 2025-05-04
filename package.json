@@ -33,6 +33,7 @@
     "react-modal-video": "^1.2.8",
     "react-multi-date-picker": "^4.5.2",
     "react-redux": "^9.2.0",
+    "reactstrap": "^9.2.3",
     "sass": "^1.45.0",
     "swiper": "^11.1.4",
     "yup": "^1.6.1"

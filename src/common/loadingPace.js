@@ -1,23 +1,23 @@
 const loadingPace = () => {
-    let preloader = document.querySelector("#preloader"),
-      loadingText = document.querySelector(".loading-text");
-    const addDoneClass = () => {
-      preloader.classList.add("isdone");
-      loadingText.classList.add("isdone");
-    };
-    Pace.on("start", function () {
-      preloader.classList.remove("isdone");
-      loadingText.classList.remove("isdone");
-    });
-    Pace.on("done", function () {
-      addDoneClass();
-    });
-    if (document.querySelector("body").classList.contains("pace-done")) {
-      addDoneClass();
-    }
-    document.addEventListener("load", () => {
-      addDoneClass();
-    });
-}
+  // const preloader = document.getElementById("preloader");
+  // const loadingText = document.querySelector(".loading-text");
 
-export default loadingPace
+  // if (!window.Pace) return;
+
+  // loadingText.classList.add("isdone");
+
+  // const MIN_DURATION = 10000; // 2 saniye
+  // const startTime = Date.now();
+
+  // window.Pace.on("done", function () {
+  //   const elapsed = Date.now() - startTime;
+  //   const remaining = Math.max(0, MIN_DURATION - elapsed);
+
+  //   setTimeout(() => {
+  //     preloader.classList.remove("isdone");
+  //     loadingText.classList.remove("isdone");
+  //   }, remaining);
+  // });
+};
+
+export default loadingPace;

@@ -5,6 +5,7 @@ import MainLayout from "../layout/MainLayout";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import GrediPage from "../../components/gredi/GrediPage";
+import withLoading from "../../common/withLoading";
 
 const Gredi = () => {
   const { t } = useTranslation("common");
@@ -30,4 +31,4 @@ export async function getStaticProps({ locale }) {
     },
   };
 }
-export default Gredi;
+export default withLoading(Gredi);

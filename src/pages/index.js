@@ -6,9 +6,9 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 export default function Home() {
   const router = useRouter();
 
-  useEffect(() => {
-    router.replace("/");
-  }, []);
+  // useEffect(() => {
+  //   router.replace("/");
+  // }, []);
 
   return <HomePage />;
 }

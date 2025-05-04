@@ -5,6 +5,7 @@ import MainLayout from "../layout/MainLayout";
 import AgenaPage from "../../components/agena/AgenaPage";
 import { useTranslation } from "next-i18next";
 import { withTranslationProps } from "../../utils/withTranslation";
+import withLoading from "../../common/withLoading";
 
 const Agena = () => {
   const { t } = useTranslation("common");
@@ -28,4 +29,4 @@ const Agena = () => {
 
 export const getStaticProps = withTranslationProps();
 
-export default Agena;
+export default withLoading(Agena);

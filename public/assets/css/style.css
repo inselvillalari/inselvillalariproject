@@ -1028,7 +1028,7 @@ span:hover {
   transition-delay: 1s;
 }
 
-.loading-text {
+/* .loading-text {
   font-weight: 300;
   text-transform: uppercase;
   letter-spacing: 10px;
@@ -1051,7 +1051,7 @@ span:hover {
   -webkit-transition-delay: 0.5s;
   -o-transition-delay: 0.5s;
   transition-delay: 0.5s;
-}
+} */
 
 /* ====================== [ End Preloader ] ====================== */
 /* ====================== [ Start Text Animation & Images ] ====================== */

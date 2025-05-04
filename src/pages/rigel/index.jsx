@@ -5,7 +5,7 @@ import MainLayout from "../layout/MainLayout";
 import RigelPage from "../../components/rigel/RigelPage";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
-
+import withLoading from "../../common/withLoading";
 const Rigel = () => {
   const { t } = useTranslation("common");
   React.useEffect(() => {
@@ -34,4 +34,4 @@ export async function getStaticProps({ locale }) {
   };
 }
 
-export default Rigel;
+export default withLoading(Rigel);

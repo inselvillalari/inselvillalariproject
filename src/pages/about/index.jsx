@@ -3,8 +3,9 @@ import Head from "next/head";
 import LightLayout from "../layout/LightLayout";
 import { useTranslation } from "next-i18next";
 import { withTranslationProps } from "../../utils/withTranslation";
+import withLoading from "../../common/withLoading";
 
-export default function About() {
+function About() {
   const { t } = useTranslation("common");
   return (
     <LightLayout>
@@ -45,3 +46,5 @@ export default function About() {
   );
 }
 export const getStaticProps = withTranslationProps(["common"]);
+
+export default withLoading(About);

@@ -5,6 +5,7 @@ import MainLayout from "../layout/MainLayout";
 import { useTranslation } from "next-i18next";
 import CapellaPage from "../../components/capella/CapellaPage";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import withLoading from "../../common/withLoading";
 
 const Capella = () => {
   const { t } = useTranslation("common");
@@ -34,4 +35,4 @@ export async function getStaticProps({ locale }) {
   };
 }
 
-export default Capella;
+export default withLoading(Capella);
