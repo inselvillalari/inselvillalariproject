@@ -26,15 +26,14 @@ const LanguageSwitcher = (classname) => {
     if (lng) {
       if (i18n?.changeLanguage) {
         i18n.changeLanguage(lng);
+        window.location.reload();
       }
       router.push({ pathname, query }, asPath, { locale: lng });
     }
   };
 
-  console.log('classname',classname)
-
   return (
-    <div classname={classname}>
+    <div className={classname}>
       <IconButton
         disableRipple
         disableFocusRipple

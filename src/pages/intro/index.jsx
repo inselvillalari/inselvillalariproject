@@ -2,17 +2,18 @@ import React from "react";
 import introData from "./index.json";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Split from "../split";
-
 import SwiperCore, { Navigation, Pagination, Parallax } from "swiper";
-
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import Link from "next/link";
 import removeSlashFromPagination from "../../common/removeSlashFromPagination";
+import { useTranslation } from "next-i18next";
+
 SwiperCore.use([Navigation, Pagination, Parallax]);
 
 const IntroWithVertical = () => {
+  const { t } = useTranslation("common");
   const widthRef = React.useRef(null);
   const [load, setLoad] = React.useState(true);
   React.useEffect(() => {
@@ -139,7 +140,7 @@ const IntroWithVertical = () => {
                               href={slide?.pageLink}
                               className="btn-curve btn-color mt-30"
                             >
-                              <span>Detaya Git</span>
+                              <span>{t("detayaGit")}</span>
                             </Link>
                           </div>
                         </div>

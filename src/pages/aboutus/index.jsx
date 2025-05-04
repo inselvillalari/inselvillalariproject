@@ -2,8 +2,10 @@
 import React from "react";
 import aboutUsData from "./about-us.json";
 import Link from "next/link";
+import { useTranslation } from "next-i18next";
 
 const AboutUs = () => {
+  const { t } = useTranslation("common");
   return (
     <section
       className="about section-padding"
@@ -16,7 +18,7 @@ const AboutUs = () => {
               className="exp-content nopat wow fadeInUp"
               data-wow-delay=".3s"
             >
-              <h6 className="sub-title">Konumumuz</h6>
+              <h6 className="sub-title">{t("aboutUsHomePage.konum")}</h6>
               <h2 className="mb-20 playfont">
                 {aboutUsData.title.first} <br /> {aboutUsData.title.second}
               </h2>

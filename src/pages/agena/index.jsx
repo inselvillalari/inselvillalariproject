@@ -2,7 +2,7 @@
 import React from "react";
 import WorkHeader from "../../components/Work-header";
 import MainLayout from "../layout/MainLayout";
-import AgenaPage from "../../agena/AgenaPage";
+import AgenaPage from "../../components/agena/AgenaPage";
 import { useTranslation } from "next-i18next";
 import { withTranslationProps } from "../../utils/withTranslation";
 

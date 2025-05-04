@@ -3864,9 +3864,9 @@ footer .item .copy-right p a {
     margin-left: 15px;
     width: 50px;
  }
-  .nav-scroll .navbar-collapse .nav-link, .light .navbar-collapse .nav-link {
+  /* .nav-scroll .navbar-collapse .nav-link, .light .navbar-collapse .nav-link {
     color: #fff !important;
- }
+ } */
   .nav-scroll .navbar-collapse .active, .light .navbar-collapse .active {
     color: #b19777 !important;
  }

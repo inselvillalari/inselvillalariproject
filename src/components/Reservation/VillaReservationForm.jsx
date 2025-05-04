@@ -6,10 +6,12 @@ import { useDispatch, useSelector } from "react-redux";
 import { useRouter } from "next/router";
 import { setReservationData } from "../../store/reservationSlice";
 import "react-datepicker/dist/react-datepicker.css";
+import { useTranslation } from "next-i18next";
 
 const villas = ["Villa Agena", "Villa Capella", "Villa Gredi", "Villa Rigel"];
 
 export default function ReservationForm() {
+  const { t } = useTranslation("common");
   const [extraAdults, setExtraAdults] = useState([]);
   const [extraChildren, setExtraChildren] = useState([]);
   const [guestError, setGuestError] = useState("");
@@ -59,14 +61,17 @@ export default function ReservationForm() {
       wantsCrib: false,
     },
     validationSchema: Yup.object({
-      villa: Yup.string().required("Lütfen bir villa seçiniz."),
+      villa: Yup.string().required(t("reservationForm.validation.villa")),
       hirerName: Yup.string()
-        .matches(/^[a-zA-ZğüşöçıİĞÜŞÖÇ\s]+$/, "Sadece harf giriniz.")
-        .required("Bu alan zorunludur."),
+        .matches(
+          /^[a-zA-ZğüşöçıİĞÜŞÖÇ\s]+$/,
+          t("reservationForm.validation.isim")
+        )
+        .required(t("reservationForm.validation.zorunluAlan")),
       hirerIdNumber: Yup.string()
         .test(
           "tcOrPassport-valid",
-          "Geçerli bir TC Kimlik veya Pasaport numarası giriniz.",
+          t("reservationForm.validation.tc"),
           (value) => {
             if (!value) return false;
             const onlyNumbers = /^[0-9]+$/.test(value);
@@ -77,18 +82,18 @@ export default function ReservationForm() {
             }
           }
         )
-        .required("Bu alan zorunludur."),
+        .required(t("reservationForm.validation.zorunluAlan")),
       email: Yup.string()
         .email("Geçerli bir e-posta giriniz.")
-        .required("Bu alan zorunludur."),
+        .required(t("reservationForm.validation.zorunluAlan")),
       phone: Yup.string()
-        .matches(/^[0-9]+$/, "Sadece rakam giriniz.")
-        .min(10, "Telefon numarası en az 10 haneli olmalıdır.")
-        .required("Bu alan zorunludur."),
-      entryDate: Yup.date().required("Giriş tarihi zorunludur."),
-      exitDate: Yup.date().required("Çıkış tarihi zorunludur."),
-      adults: Yup.number().required("Yetişkin sayısı zorunludur."),
-      children: Yup.number().required("Çocuk sayısı zorunludur."),
+        .matches(/^[0-9]+$/, t("reservationForm.validation.telefon1"))
+        .min(10, t("reservationForm.validation.telefon2"))
+        .required(t("reservationForm.validation.zorunluAlan")),
+      entryDate: Yup.date().required(t("reservationForm.validation.giris")),
+      exitDate: Yup.date().required(t("reservationForm.validation.cikis")),
+      adults: Yup.number().required(t("reservationForm.validation.yetiskin")),
+      children: Yup.number().required(t("reservationForm.validation.cocuk")),
     }),
     onSubmit: (values) => {
       dispatch(
@@ -114,7 +119,7 @@ export default function ReservationForm() {
     const children = parseInt(formik.values.children);
 
     if (isNaN(adults) || isNaN(children)) {
-      setGuestError("Yetişkin ve çocuk sayısı seçilmelidir.");
+      setGuestError(t("reservationForm.validation.secmeZorunlulugu"));
       setExtraAdults([]);
       setExtraChildren([]);
       return;
@@ -122,7 +127,7 @@ export default function ReservationForm() {
 
     const total = adults + children;
     if (total > 10) {
-      setGuestError("Toplam kişi sayısı 10'dan fazla olamaz.");
+      setGuestError(t("reservationForm.validation.toplam10"));
       setExtraAdults([]);
       setExtraChildren([]);
     } else {
@@ -188,13 +193,13 @@ export default function ReservationForm() {
           fontFamily: "'Poppins', sans-serif",
         }}
       >
-        İnsel Villaları Rezervasyon Formu
+        {t("reservationForm.form")}
       </h2>
 
       <form onSubmit={formik.handleSubmit}>
         {/* Villa Seçimi */}
-        <h3 style={sectionTitleStyle}>Villa Seçimi</h3>
-        <label style={labelStyle}>Villa</label>
+        <h3 style={sectionTitleStyle}>{t("reservationForm.villaSecimi")}</h3>
+        <label style={labelStyle}>{t("reservationForm.villa")}</label>
         <select
           name="villa"
           value={formik.values.villa}
@@ -204,7 +209,7 @@ export default function ReservationForm() {
             formik.touched.villa && formik.errors.villa ? "is-invalid" : ""
           }`}
         >
-          <option value="">Villa Seçin</option>
+          <option value=""> {t("reservationForm.sec")}</option>
           {villas.map((villa) => (
             <option key={villa} value={villa}>
               {villa}
@@ -216,8 +221,8 @@ export default function ReservationForm() {
         )}
 
         {/* Kiralayan Bilgileri */}
-        <h3 style={sectionTitleStyle}>Kiralayan Bilgileri</h3>
-        <label style={labelStyle}>İsim Soyisim</label>
+        <h3 style={sectionTitleStyle}> {t("reservationForm.kiralayan")}</h3>
+        <label style={labelStyle}>{t("reservationForm.isim")}</label>
         <input
           name="hirerName"
           value={formik.values.hirerName}
@@ -239,7 +244,7 @@ export default function ReservationForm() {
           <div className="invalid-feedback">{formik.errors.hirerName}</div>
         )}
 
-        <label style={labelStyle}>TC Kimlik veya Pasaport No</label>
+        <label style={labelStyle}>{t("reservationForm.tc")}</label>
         <input
           name="hirerIdNumber"
           value={formik.values.hirerIdNumber}
@@ -258,7 +263,7 @@ export default function ReservationForm() {
           <div className="invalid-feedback">{formik.errors.hirerIdNumber}</div>
         )}
 
-        <label style={labelStyle}>Email</label>
+        <label style={labelStyle}>{t("reservationForm.email")}</label>
         <input
           name="email"
           value={formik.values.email}
@@ -272,7 +277,7 @@ export default function ReservationForm() {
           <div className="invalid-feedback">{formik.errors.email}</div>
         )}
 
-        <label style={labelStyle}>Telefon</label>
+        <label style={labelStyle}>{t("reservationForm.telefon")}</label>
         <input
           name="phone"
           value={formik.values.phone}
@@ -290,11 +295,11 @@ export default function ReservationForm() {
         )}
 
         {/* Tarih Bilgileri */}
-        <h3 style={sectionTitleStyle}>Tarih Bilgileri</h3>
+        <h3 style={sectionTitleStyle}>{t("reservationForm.tarih")}</h3>
         <label
           style={{ ...labelStyle, marginTop: "10px", marginRight: "20px" }}
         >
-          Giriş Tarihi
+          {t("reservationForm.giris")}
         </label>
         <DatePicker
           selected={formik.values.entryDate}
@@ -310,7 +315,7 @@ export default function ReservationForm() {
           minDate={minDate}
           maxDate={maxDate}
           dateFormat="dd/MM/yyyy"
-          placeholderText="Giriş tarihi seçin"
+          placeholderText={t("reservationForm.girisSecin")}
           wrapperClassName="datePicker"
           className={`form-control ${
             formik.touched.entryDate && formik.errors.entryDate
@@ -325,7 +330,7 @@ export default function ReservationForm() {
         <label
           style={{ ...labelStyle, marginTop: "10px", marginRight: "20px" }}
         >
-          Çıkış Tarihi
+          {t("reservationForm.cikis")}
         </label>
         <DatePicker
           selected={formik.values.exitDate}
@@ -341,7 +346,7 @@ export default function ReservationForm() {
           minDate={formik.values.entryDate || minDate}
           maxDate={maxDate}
           dateFormat="dd/MM/yyyy"
-          placeholderText="Çıkış tarihi seçin"
+          placeholderText={t("reservationForm.cikisSecin")}
           wrapperClassName="datePicker"
           className={`form-control ${
             formik.touched.exitDate && formik.errors.exitDate
@@ -354,8 +359,8 @@ export default function ReservationForm() {
         )}
 
         {/* Kişi Sayısı */}
-        <h3 style={sectionTitleStyle}>Kişi Sayısı Bilgileri</h3>
-        <label style={labelStyle}>Yetişkin Sayısı</label>
+        <h3 style={sectionTitleStyle}>{t("reservationForm.kisiSayisi")}</h3>
+        <label style={labelStyle}>{t("reservationForm.yetiskin")}</label>
         <select
           name="adults"
           value={formik.values.adults}
@@ -372,14 +377,14 @@ export default function ReservationForm() {
         {formik.touched.adults && formik.errors.adults && (
           <div className="invalid-feedback">{formik.errors.adults}</div>
         )}
-        <label style={labelStyle}>Çocuk Sayısı</label>
+        <label style={labelStyle}>{t("reservationForm.cocuk")}</label>
         <select
           name="children"
           value={formik.values.children}
           onChange={formik.handleChange}
           style={inputStyle}
         >
-          <option value="">Seçin</option>
+          <option value="">{t("reservationForm.secin")}</option>
           {Array.from({ length: 11 }, (_, i) => (
             <option key={i} value={i}>
               {i}
@@ -407,17 +412,17 @@ export default function ReservationForm() {
         {extraAdults.length > 0 && (
           <>
             <h3 style={sectionTitleStyle}>
-              Ekstra Konaklayacak Yetişkin Bilgileri
+              {t("reservationForm.ekstraYetiskin")}
             </h3>
             {extraAdults.map((_, index) => (
               <div key={index} style={{ marginBottom: "15px" }}>
                 <label style={labelStyle}>
-                  {index + 1}. Yetişkin İsim Soyisim
+                  {index + 1}. {t("reservationForm.yetiskinIsim")}
                 </label>
                 <input placeholder="İsim Soyisim" style={inputStyle} />
-                <label style={labelStyle}>TC Kimlik veya Pasaport No</label>
+                <label style={labelStyle}>{t("reservationForm.tc")}</label>
                 <input
-                  placeholder="TC Kimlik veya Pasaport No"
+                  placeholder={t("reservationForm.tc")}
                   style={inputStyle}
                 />
               </div>
@@ -427,16 +432,18 @@ export default function ReservationForm() {
 
         {extraChildren.length > 0 && (
           <>
-            <h3 style={sectionTitleStyle}>Çocuk Bilgileri</h3>
+            <h3 style={sectionTitleStyle}>
+              {t("reservationForm.cocukBilgileri")}
+            </h3>
             {extraChildren.map((_, index) => (
               <div key={index} style={{ marginBottom: "15px" }}>
                 <label style={labelStyle}>
-                  {index + 1}. Çocuk İsim Soyisim
+                  {index + 1}. {t("reservationForm.cocukIsim")}
                 </label>
                 <input placeholder="İsim Soyisim" style={inputStyle} />
-                <label style={labelStyle}>TC Kimlik veya Pasaport No</label>
+                <label style={labelStyle}>{t("reservationForm.tc")}</label>
                 <input
-                  placeholder="TC Kimlik veya Pasaport No"
+                  placeholder={t("reservationForm.tc")}
                   style={inputStyle}
                 />
               </div>
@@ -455,7 +462,7 @@ export default function ReservationForm() {
                 onChange={formik.handleChange}
                 style={{ marginRight: "8px" }}
               />
-              Beşik İstiyorum
+              {t("reservationForm.besik")}
             </label>
           </div>
         )}
@@ -471,7 +478,7 @@ export default function ReservationForm() {
                 onChange={formik.handleChange}
                 style={{ marginRight: "8px" }}
               />
-              Isıtmalı Havuz İstiyorum (Günlük 1800 TL)
+              {t("reservationForm.isitmaliHavuz")}
             </label>
           </div>
         )}
@@ -484,7 +491,7 @@ export default function ReservationForm() {
           }}
         >
           <a
-            href="/mesafeliKiralamaSozlesmesi"
+            href="/agreement"
             target="_blank"
             rel="noopener noreferrer"
             style={{
@@ -495,7 +502,7 @@ export default function ReservationForm() {
               cursor: "pointer",
             }}
           >
-            İptal & İade Şartları
+            {t("reservationForm.sartlar")}
           </a>
         </div>
 
@@ -516,7 +523,7 @@ export default function ReservationForm() {
             fontFamily: "'Poppins', sans-serif",
           }}
         >
-          Ödeme Adımına Geç
+          {t("reservationForm.odemeButonu")}
         </button>
       </form>
     </div>

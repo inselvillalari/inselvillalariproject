@@ -4,8 +4,10 @@ import appData from "./app.json";
 import { Toaster } from "react-hot-toast";
 import emailjs from "@emailjs/browser";
 import { toast } from "react-hot-toast";
+import { useTranslation } from "next-i18next";
 
 const ContactWithMap = () => {
+  const { t } = useTranslation("common");
   const [loading, setLoading] = useState(false);
   const form = useRef();
 
@@ -46,7 +48,7 @@ const ContactWithMap = () => {
                   id="form_name"
                   type="text"
                   name="name"
-                  placeholder="İsminiz"
+                  placeholder={t("contact.form.isim")}
                   required="required"
                 />
               </div>
@@ -56,7 +58,7 @@ const ContactWithMap = () => {
                   id="form_email"
                   type="email"
                   name="email"
-                  placeholder="Mailiniz"
+                  placeholder={t("contact.form.email")}
                   required="required"
                 />
               </div>
@@ -65,7 +67,7 @@ const ContactWithMap = () => {
                 <textarea
                   id="form_message"
                   name="message"
-                  placeholder="Mesajınız"
+                  placeholder={t("contact.form.mesaj")}
                   rows="4"
                   required="required"
                 ></textarea>
@@ -76,7 +78,7 @@ const ContactWithMap = () => {
                 className="btn-curve btn-color"
                 disabled={loading}
               >
-                <span>Mail Gönder</span>
+                <span>{t("contact.form.gonder")}</span>
               </button>
             </div>
           </form>
