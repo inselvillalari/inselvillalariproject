@@ -10,10 +10,10 @@ function ReservationEdit() {
     <LightLayout>
       <div className="container" style={{ marginTop: "50px" }}>
         <div style={{ padding: "2rem", textAlign: "center" }}>
-          <h2>{t("reservationForm.calisma")}</h2>
-          <p>{t("reservationForm.aktifOlacak")}</p>
+          <h2>{t("reservationEdit.calisma")}</h2>
+          <p>{t("reservationEdit.aktifOlacak")}</p>
           <p>
-            {t("reservationForm.sorulariniz")}{" "}
+            {t("reservationEdit.sorulariniz")}{" "}
             <a
               href="https://wa.me/905324905307?text=Merhaba,%20İnsel%20Villaları%20hakkında%20bilgi%20almak%20istiyorum"
               rel="noopener noreferrer"
@@ -21,7 +21,7 @@ function ReservationEdit() {
             >
               <i className="fab fa-whatsapp"></i>
             </a>{" "}
-            {t("reservationForm.ulasabilirsiniz")}
+            {t("reservationEdit.ulasabilirsiniz")}
           </p>
         </div>
       </div>
