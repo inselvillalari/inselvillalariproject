@@ -9,7 +9,7 @@ const AboutUs = () => {
   const titleFirst = t("aboutUsHomePage.kalkan");
   const titleSecond = t("aboutUsHomePage.kiziltas");
   const content = t("aboutUsHomePage.aboutUsYazi");
-  const villaNames = t("aboutUsHomePage.villaNames", { returnObjects: true });
+  const villaNames = ["Agena", "Capella", "Gredi", "Rigel"];
 
   return (
     <section

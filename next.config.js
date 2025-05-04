@@ -1,10 +1,12 @@
 const path = require("path");
-const nextI18NextConfig = require('./next-i18next.config');
+const { i18n } = require("./next-i18next.config");
 
-module.exports = {
-  ...nextI18NextConfig,
+const nextConfig = {
   reactStrictMode: true,
   productionBrowserSourceMaps: false,
+
+  i18n, // Çok dilli destek buradan geliyor
+
   sassOptions: {
     includePaths: [path.join(__dirname, "css")],
   },
@@ -12,13 +14,18 @@ module.exports = {
   devIndicators: {
     buildActivity: false,
   },
+
   eslint: {
     ignoreDuringBuilds: false,
   },
+
   experimental: {
     optimizeCss: true,
   },
+
   compiler: {
     styledComponents: true,
   },
 };
+
+module.exports = nextConfig;
