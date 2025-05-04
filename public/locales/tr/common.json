@@ -109,6 +109,12 @@
     "depozito": "Depozito: 15.000 TL",
     "depozitoTahsili": "Depozito giriş sırasında ayrıca tahsil edilecektir."
   },
+  "reservationEdit": {
+    "calisma": "Rezervasyon Sistemi Yakında Açılacaktır",
+    "aktifOlacak": "Şu anda yalnızca bilgi amaçlı yayın yapıyoruz. Online rezervasyon ve ödeme adımları kısa süre içinde aktif edilecektir.",
+    "sorulariniz": "Sorularınız için bize",
+    "ulasabilirsiniz": "üzerinden ulaşabilirsiniz."
+  },
   "features": {
     "ozellikler": "Özellikler",
     "onKisilik": "10 Kişilik",

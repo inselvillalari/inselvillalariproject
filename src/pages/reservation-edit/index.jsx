@@ -1,19 +1,18 @@
 import React from "react";
 import LightLayout from "../layout/LightLayout";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { useTranslation } from "next-i18next";
 
 export default function ReservationEdit() {
+  const { t } = useTranslation("common");
   return (
     <LightLayout>
       <div className="container" style={{ marginTop: "50px" }}>
         <div style={{ padding: "2rem", textAlign: "center" }}>
-          <h2>Rezervasyon Sistemi Yakında Açılacaktır</h2>
+          <h2>{t("reservationForm.calisma")}</h2>
+          <p>{t("reservationForm.aktifOlacak")}</p>
           <p>
-            Şu anda yalnızca bilgi amaçlı yayın yapıyoruz. Online rezervasyon ve
-            ödeme adımları kısa süre içinde aktif edilecektir.
-          </p>
-          <p>
-            Sorularınız için bize{" "}
+            {t("reservationForm.sorulariniz")}{" "}
             <a
               href="https://wa.me/905324905307?text=Merhaba,%20İnsel%20Villaları%20hakkında%20bilgi%20almak%20istiyorum"
               rel="noopener noreferrer"
@@ -21,7 +20,7 @@ export default function ReservationEdit() {
             >
               <i className="fab fa-whatsapp"></i>
             </a>{" "}
-            üzerinden ulaşabilirsiniz.
+            {t("reservationForm.ulasabilirsiniz")}
           </p>
         </div>
       </div>
@@ -36,4 +35,3 @@ export async function getStaticProps({ locale }) {
     },
   };
 }
-

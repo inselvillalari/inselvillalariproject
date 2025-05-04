@@ -109,6 +109,12 @@
     "depozito": "Deposit: 15,000 TL",
     "depozitoTahsili": "The deposit will be collected separately at check-in."
   },
+  "reservationEdit": {
+    "calisma": "The Reservation System Will Be Available Soon",
+    "aktifOlacak": "We are currently publishing for informational purposes only. Online reservation and payment steps will be activated shortly.",
+    "sorulariniz": "For any questions, you can reach us",
+    "ulasabilirsiniz": "through the following channels."
+  },
   "features": {
     "ozellikler": "Features",
     "onKisilik": "For 10 People",

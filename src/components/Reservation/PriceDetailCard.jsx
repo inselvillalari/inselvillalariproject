@@ -4,8 +4,10 @@ import { useDispatch, useSelector } from "react-redux";
 import { setReservationData } from "../../store/reservationSlice";
 import dayjs from "dayjs";
 import villaPrices from "./villaPrices";
+import { useTranslation } from "next-i18next";
 
 export default function PriceDetailCard() {
+  const { t } = useTranslation("common");
   const dispatch = useDispatch();
   const { villa, entryDate, exitDate, heatedPool } = useSelector(
     (state) => state.reservation
@@ -85,28 +87,29 @@ export default function PriceDetailCard() {
           paddingBottom: "10px",
         }}
       >
-        Fiyat Detayı
+        {t("reservationPriceCard.fiyatDetayi")}
       </h3>
 
       {!result ? (
         <div style={{ fontSize: "14px", textAlign: "center", color: "#999" }}>
-          Lütfen villa ve tarih seçiniz.
+          {t("reservationPriceCard.secin")}
         </div>
       ) : (
         <>
           <div style={{ fontSize: "14px", marginBottom: "12px" }}>
-            <strong>Seçilen Villa:</strong> {villa}
+            <strong> {t("reservationPriceCard.secilen")}</strong> {villa}
           </div>
           <div style={{ fontSize: "14px", marginBottom: "12px" }}>
-            <strong>Toplam Gece:</strong> {result.dayCount} gece
+            <strong> {t("reservationPriceCard.gece")}</strong> {result.dayCount}{" "}
+            gece
           </div>
           <div style={{ fontSize: "14px", marginBottom: "12px" }}>
-            <strong>Villa Toplam Ücreti:</strong>{" "}
+            <strong> {t("reservationPriceCard.ucret")}</strong>{" "}
             {result.villaPrice.toLocaleString("tr-TR")} TL
           </div>
           {heatedPool && (
             <div style={{ fontSize: "14px", marginBottom: "12px" }}>
-              <strong>Isıtmalı Havuz Ücreti:</strong>{" "}
+              <strong>{t("reservationPriceCard.isitmali")}</strong>{" "}
               {result.heatedPoolPrice.toLocaleString("tr-TR")} TL
             </div>
           )}
@@ -120,7 +123,8 @@ export default function PriceDetailCard() {
               marginBottom: "20px",
             }}
           >
-            Genel Toplam: {result.grandTotal.toLocaleString("tr-TR")} TL
+            {t("reservationPriceCard.toplam")}{" "}
+            {result.grandTotal.toLocaleString("tr-TR")} TL
           </div>
 
           <div
@@ -141,10 +145,10 @@ export default function PriceDetailCard() {
                 marginBottom: "6px",
               }}
             >
-              Depozito: 15.000 TL
+              {t("reservationPriceCard.depozito")}
             </p>
             <p style={{ fontSize: "12px", color: "#777" }}>
-              Depozito giriş sırasında ayrıca tahsil edilecektir.
+              {t("reservationPriceCard.depozitoTahsili")}
             </p>
           </div>
         </>
