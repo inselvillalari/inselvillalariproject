@@ -3,9 +3,9 @@ import React from "react";
 import Link from "next/link";
 import initIsotope from "../../common/initIsotope";
 import GrediFeatures from "./features";
-import GrediSkills from "./skills";
 import PropertyDetails from "./propertyDetails";
 import BookingCalendar from "../BookingCalendar";
+import Skills from "../skills";
 import { useTranslation } from "next-i18next";
 
 const dateRangesData = [
@@ -46,7 +46,7 @@ const GrediPage = () => {
           <div className="row gallery gallery-min-heigth">
             <div className="col-lg-6 items mt-0 interior theaters residential">
               <div className="section-head mb-0">
-                <h3>Mekanlar</h3>
+                <h3>{t("mekanlar")}</h3>
               </div>
             </div>
             <Link href="/gredi/dayViews">
@@ -60,7 +60,7 @@ const GrediPage = () => {
                     />
                   </div>
                   <div className="cont vis">
-                    <h5>Gündüz Görünümleri</h5>
+                    <h5>{t("gunduzGorunumleri")}</h5>
                     {/* <span>Architecture</span>
                     <span>Modern</span> */}
                   </div>
@@ -78,7 +78,7 @@ const GrediPage = () => {
                     />
                   </div>
                   <div className="cont vis">
-                    <h5>Gece Görünümleri</h5>
+                    <h5>{t("geceGorunumleri")}</h5>
                     {/* <span>Architecture</span>
                     <span>Modern</span> */}
                   </div>
@@ -96,7 +96,7 @@ const GrediPage = () => {
                     />
                   </div>
                   <div className="cont vis">
-                    <h5>İç Mekan</h5>
+                    <h5>{t("icMekan")}</h5>
                     {/* <span>Architecture</span>
                     <span>Modern</span> */}
                   </div>
@@ -114,7 +114,7 @@ const GrediPage = () => {
                     />
                   </div>
                   <div className="cont vis">
-                    <h5>Aktiviteler</h5>
+                    <h5>{t("aktiviteler")}</h5>
                     {/* <span>Architecture</span>
                     <span>Modern</span> */}
                   </div>
@@ -123,7 +123,7 @@ const GrediPage = () => {
             </Link>
           </div>
         </div>
-        <GrediSkills />
+        <Skills />
         <GrediFeatures />
         <PropertyDetails />
       </section>

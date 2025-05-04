@@ -1,7 +1,9 @@
 import React from "react";
 import skillsProgress from "./skillsProgress";
+import { useTranslation } from "next-i18next";
 
-const AgenaSkills = () => {
+const Skills = () => {
+  const { t } = useTranslation("common");
   React.useEffect(() => {
     skillsProgress();
   }, []);
@@ -12,13 +14,13 @@ const AgenaSkills = () => {
     >
       <div className="container">
         <div className="section-head">
-          <h3>Konum</h3>
+          <h3>{t("skills.konum")}</h3>
         </div>
         <div className="row">
           <div className="col-lg-6 valign  md-mb50">
             <div className="skills-box full-width">
               <div className="skill-item">
-                <h6>Merkez</h6>
+                <h6>{t("skills.merkez")}</h6>
                 <div className="skill-progress">
                   <div
                     className="progres custom-font"
@@ -28,7 +30,7 @@ const AgenaSkills = () => {
                 </div>
               </div>
               <div className="skill-item">
-                <h6>Mini Market</h6>
+                <h6>{t("skills.miniMarket")}</h6>
                 <div className="skill-progress">
                   <div
                     className="progres custom-font"
@@ -38,7 +40,7 @@ const AgenaSkills = () => {
                 </div>
               </div>
               <div className="skill-item">
-                <h6>Otobüs Durakları</h6>
+                <h6>{t("skills.otobusDuraklari")}</h6>
                 <div className="skill-progress">
                   <div
                     className="progres custom-font"
@@ -48,7 +50,7 @@ const AgenaSkills = () => {
                 </div>
               </div>
               <div className="skill-item">
-                <h6>Dalaman Havalimanı</h6>
+                <h6>{t("skills.dalamanHavalimani")}</h6>
                 <div className="skill-progress">
                   <div
                     className="progres custom-font"
@@ -62,7 +64,7 @@ const AgenaSkills = () => {
           <div className="col-lg-6">
             <div className="skills-box full-width">
               <div className="skill-item">
-                <h6>Hastane</h6>
+                <h6>{t("skills.hastane")}</h6>
                 <div className="skill-progress">
                   <div
                     className="progres custom-font"
@@ -72,7 +74,7 @@ const AgenaSkills = () => {
                 </div>
               </div>
               <div className="skill-item">
-                <h6>Deniz (Plaj)</h6>
+                <h6>{t("skills.deniz")}</h6>
                 <div className="skill-progress">
                   <div
                     className="progres custom-font"
@@ -82,7 +84,7 @@ const AgenaSkills = () => {
                 </div>
               </div>
               <div className="skill-item">
-                <h6>Restaurant</h6>
+                <h6>{t("skills.restoran")}</h6>
                 <div className="skill-progress">
                   <div
                     className="progres custom-font"
@@ -92,7 +94,7 @@ const AgenaSkills = () => {
                 </div>
               </div>
               <div className="skill-item">
-                <h6>Antalya Havalimanı</h6>
+                <h6>{t("skills.antalyaHavalimani")}</h6>
                 <div className="skill-progress">
                   <div
                     className="progres custom-font"
@@ -109,4 +111,4 @@ const AgenaSkills = () => {
   );
 };
 
-export default AgenaSkills;
+export default Skills;

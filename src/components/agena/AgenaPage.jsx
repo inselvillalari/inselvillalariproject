@@ -2,10 +2,10 @@
 import React from "react";
 import Link from "next/link";
 import AgenaFeatures from "./features";
-import AgenaSkills from "./skills";
 import PropertyDetails from "./propertyDetails";
 import BookingCalendar from "../BookingCalendar";
 import initIsotope from "../../common/initIsotope";
+import Skills from "../skills";
 import { useTranslation } from "next-i18next";
 
 const dateRangesData = [
@@ -123,7 +123,7 @@ const AgenaPage = () => {
             </Link> */}
           </div>
         </div>
-        <AgenaSkills />
+        <Skills />
         <AgenaFeatures />
         <PropertyDetails />
       </section>

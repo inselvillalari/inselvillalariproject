@@ -96,6 +96,8 @@
   "mekanlar": "Places",
   "aktiviteler": "Activities",
   "icMekan": "Interior",
+  "geceGorunumleri": "Night Views",
+  "gunduzGorunumleri": "Daytime Views",
   "features": {
     "ozellikler": "Features",
     "onKisilik": "For 10 People",
@@ -129,7 +131,17 @@
     "ebeveynBanyosu": "En-suite Bathroom",
     "kapaliHavuz": "Indoor Pool"
   },
-  "gunduzGorunumleri": "Daytime Views",
+  "skills": {
+    "konum": "Location",
+    "merkez": "Center",
+    "miniMarket": "Mini Market",
+    "otobusDuraklari": "Bus Stops",
+    "dalamanHavalimani": "Dalaman Airport",
+    "hastane": "Hospital",
+    "deniz": "Sea (Beach)",
+    "restoran": "Restaurant",
+    "antalyaHavalimani": "Antalya Airport"
+  },
   "agenaAciklama": "On the ground floor of our villa, there is an open-plan American kitchen and a living room with breathtaking sea and nature views. The upper floors feature five en-suite bedrooms, and in our main master bedroom, you can enjoy a relaxing time in the jacuzzi while admiring the view. Our villa, designed to offer a holiday experience beyond your dreams, includes a game room in the basement — featuring billiards, table tennis, and darts — to help you unwind from the stress of the entire year in complete comfort.",
   "capellaAciklama": "On the ground floor of our villa, there is an open-plan American kitchen and a living room with stunning sea and nature views. The upper floors feature five en-suite bedrooms, two of which have jacuzzis where you can unwind while enjoying the view. Designed to offer a holiday experience beyond your dreams, our villa also includes a fitness room in the basement — equipped with a billiards table, table tennis, treadmill, and exercise bike — to help you relieve the stress of the entire year in complete comfort.",
   "grediAciklama": "On the ground floor of our villa, there is an open-plan American kitchen and a living room with stunning sea and nature views. The upper floors feature five en-suite bedrooms, two of which include jacuzzis where you can relax while enjoying the view. Our villa offers a vacation experience beyond your dreams. Designed to help you unwind from the fatigue of the entire year, the basement floor includes a fitness room (billiards, table tennis, treadmill, exercise bike) and a heated indoor pool — all arranged for your ultimate comfort.",

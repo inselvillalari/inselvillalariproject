@@ -2,10 +2,11 @@
 import React from "react";
 import Link from "next/link";
 import CapellaFeatures from "./features";
-import CapellaSkills from "./skills";
 import PropertyDetails from "./propertyDetails";
 import BookingCalendar from "../BookingCalendar";
 import initIsotope from "../../common/initIsotope";
+import Skills from "../skills";
+import { useTranslation } from "next-i18next";
 
 const dateRangesData = [
   {
@@ -31,6 +32,7 @@ const dateRangesData = [
 ];
 
 const CapellaPage = () => {
+  const { t } = useTranslation("common");
   React.useEffect(() => {
     setTimeout(() => {
       if (window.Isotope) initIsotope();
@@ -44,7 +46,7 @@ const CapellaPage = () => {
           <div className="row gallery gallery-min-heigth">
             <div className="col-lg-6 items mt-0 interior theaters residential">
               <div className="section-head mb-0">
-                <h3>Mekanlar</h3>
+                <h3>{t("mekanlar")}</h3>
               </div>
             </div>
             <Link href="/capella/insideViews">
@@ -58,7 +60,7 @@ const CapellaPage = () => {
                     />
                   </div>
                   <div className="cont vis">
-                    <h5>İç Mekan</h5>
+                    <h5>{t("icMekan")}</h5>
                     {/* <span>Architecture</span>
                     <span>Modern</span> */}
                   </div>
@@ -76,7 +78,7 @@ const CapellaPage = () => {
                     />
                   </div>
                   <div className="cont vis">
-                    <h5>Gündüz Görünümleri</h5>
+                    <h5>{t("gunduzGorunumleri")}</h5>
                     {/* <span>Architecture</span>
                     <span>Modern</span> */}
                   </div>
@@ -111,7 +113,7 @@ const CapellaPage = () => {
                     />
                   </div>
                   <div className="cont vis">
-                    <h5>Aktiviteler</h5>
+                    <h5>{t("aktiviteler")}</h5>
                     {/* <span>Architecture</span>
                     <span>Modern</span> */}
                   </div>
@@ -120,7 +122,7 @@ const CapellaPage = () => {
             </Link>
           </div>
         </div>
-        <CapellaSkills />
+        <Skills />
         <CapellaFeatures />
         <PropertyDetails />
       </section>
