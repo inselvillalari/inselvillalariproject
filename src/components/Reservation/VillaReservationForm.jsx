@@ -7,17 +7,31 @@ import { useRouter } from "next/router";
 import { setReservationData } from "../../store/reservationSlice";
 import "react-datepicker/dist/react-datepicker.css";
 import { useTranslation } from "next-i18next";
+import { registerLocale } from "react-datepicker";
+import tr from "date-fns/locale/tr";
+import enUS from "date-fns/locale/en-US";
+import ru from "date-fns/locale/ru";
 
 const villas = ["Villa Agena", "Villa Capella", "Villa Gredi", "Villa Rigel"];
 
 export default function ReservationForm() {
-  const { t } = useTranslation("common");
+  const { t, i18n } = useTranslation("common");
   const [extraAdults, setExtraAdults] = useState([]);
   const [extraChildren, setExtraChildren] = useState([]);
   const [guestError, setGuestError] = useState("");
   const dispatch = useDispatch();
   const router = useRouter();
   const reservationPrices = useSelector((state) => state.reservation);
+
+  useEffect(() => {
+    if (i18n.language === "tr") {
+      registerLocale("tr", tr);
+    } else if (i18n.language === "en") {
+      registerLocale("en", enUS);
+    } else if (i18n.language === "ru") {
+      registerLocale("ru", ru);
+    }
+  }, [i18n.language]);
 
   const inputStyle = {
     width: "100%",
@@ -302,6 +316,7 @@ export default function ReservationForm() {
           {t("reservationForm.giris")}
         </label>
         <DatePicker
+          locale={i18n.language}
           selected={formik.values.entryDate}
           onChange={(date) => {
             formik.setFieldValue("entryDate", date);
@@ -333,6 +348,7 @@ export default function ReservationForm() {
           {t("reservationForm.cikis")}
         </label>
         <DatePicker
+          locale={i18n.language}
           selected={formik.values.exitDate}
           onChange={(date) => {
             formik.setFieldValue("exitDate", date);

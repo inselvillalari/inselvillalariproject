@@ -4,25 +4,70 @@ import { Calendar, DateObject } from "react-multi-date-picker";
 import "react-multi-date-picker/styles/backgrounds/bg-dark.css";
 import { useTranslation } from "next-i18next";
 
-const days = ["Pz", "Pt", "Sa", "Ça", "Pe", "Cu", "Ct"];
-const months = [
-  "Ocak",
-  "Şubat",
-  "Mart",
-  "Nisan",
-  "Mayıs",
-  "Haziran",
-  "Temmuz",
-  "Ağustos",
-  "Eylül",
-  "Ekim",
-  "Kasım",
-  "Aralık",
-];
+// Türkçe locale tanımı (default olarak kullanılacak)
+const trLocale = {
+  name: "gregorian_tr",
+  months: [
+    ["Ocak", "Oca"],
+    ["Şubat", "Şub"],
+    ["Mart", "Mar"],
+    ["Nisan", "Nis"],
+    ["Mayıs", "May"],
+    ["Haziran", "Haz"],
+    ["Temmuz", "Tem"],
+    ["Ağustos", "Ağu"],
+    ["Eylül", "Eyl"],
+    ["Ekim", "Eki"],
+    ["Kasım", "Kas"],
+    ["Aralık", "Ara"],
+  ],
+  weekDays: [
+    ["Pazar", "Pz"],
+    ["Pazartesi", "Pt"],
+    ["Salı", "Sa"],
+    ["Çarşamba", "Ça"],
+    ["Perşembe", "Pe"],
+    ["Cuma", "Cu"],
+    ["Cumartesi", "Ct"],
+  ],
+  digits: ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
+  rtl: false,
+};
+
+// Rusça locale tanımı
+const ruLocale = {
+  name: "gregorian_ru",
+  months: [
+    ["Январь", "Янв"],
+    ["Февраль", "Фев"],
+    ["Март", "Мар"],
+    ["Апрель", "Апр"],
+    ["Май", "Май"],
+    ["Июнь", "Июн"],
+    ["Июль", "Июл"],
+    ["Август", "Авг"],
+    ["Сентябрь", "Сен"],
+    ["Октябрь", "Окт"],
+    ["Ноябрь", "Ноя"],
+    ["Декабрь", "Дек"],
+  ],
+  weekDays: [
+    ["Воскресенье", "Вс"],
+    ["Понедельник", "Пн"],
+    ["Вторник", "Вт"],
+    ["Среда", "Ср"],
+    ["Четверг", "Чт"],
+    ["Пятница", "Пт"],
+    ["Суббота", "Сб"],
+  ],
+  digits: ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
+  rtl: false,
+};
 
 const BookingCalendar = (dateRangesData) => {
-  const { t } = useTranslation("common");
+  const { t, i18n } = useTranslation("common");
   const [dateRanges, setDateRanges] = useState([]);
+  const [numberOfMonths, setNumberOfMonths] = useState(1);
 
   useEffect(() => {
     const parsedRanges = dateRangesData?.dateRangesData?.map((range) => ({
@@ -31,21 +76,14 @@ const BookingCalendar = (dateRangesData) => {
       color: range.color,
     }));
     setDateRanges(parsedRanges);
-  }, []);
-
-  const [numberOfMonths, setNumberOfMonths] = useState(1);
+  }, [dateRangesData]);
 
   useEffect(() => {
     function getNumberOfMonths() {
       const width = window.innerWidth;
-
-      if (width >= 1200) {
-        return 3;
-      } else if (width >= 768) {
-        return 2;
-      } else {
-        return 1;
-      }
+      if (width >= 1200) return 3;
+      else if (width >= 768) return 2;
+      else return 1;
     }
 
     const handleResize = () => {
@@ -53,13 +91,21 @@ const BookingCalendar = (dateRangesData) => {
     };
 
     setNumberOfMonths(getNumberOfMonths());
-
     window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
+
+  const getLocale = (lang) => {
+    switch (lang) {
+      case "ru":
+        return ruLocale;
+      case "en":
+        return undefined; // İngilizce varsayılan
+      case "tr":
+      default:
+        return trLocale; // Varsayılan: Türkçe
+    }
+  };
 
   return (
     <section className="section-padding p-0 pb-100">
@@ -70,16 +116,13 @@ const BookingCalendar = (dateRangesData) => {
       </div>
       <div className="container d-flex justify-content-center mobile">
         <Calendar
+          locale={getLocale(i18n.language)}
           numberOfMonths={numberOfMonths}
           weekStartDayIndex={1}
-          weekDays={days}
-          months={months}
           range
           readOnly
           className="bg-dark"
-          style={{
-            borderRadius: "8px",
-          }}
+          style={{ borderRadius: "8px" }}
           mapDays={({ date }) => {
             let props = {};
             let color = null;
@@ -114,9 +157,6 @@ const BookingCalendar = (dateRangesData) => {
             <span className="legend-color dolu"></span>{" "}
             {t("takvim.tesisKapatmis")}
           </div>
-          {/* <div>
-            <span className="legend-color secili"></span> Seçili Alan
-          </div> */}
         </div>
       </div>
     </section>
