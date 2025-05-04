@@ -2,7 +2,6 @@
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { Spinner } from "reactstrap";
-import "./index.css";
 
 const PageLoading = () => {
   const { loading } = useSelector((state) => state.general);
