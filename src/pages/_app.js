@@ -21,21 +21,23 @@ const AppContent = ({ Component, pageProps }) => {
 
   useEffect(() => {
     let timeoutId;
-  
-    const handleStart = () => {
+
+    const handleStart = (url) => {
+      // Aynı sayfaysa loading göstermeyelim
+      if (url === router.asPath) return;
       dispatch(setLoading(true));
     };
-  
+
     const handleComplete = () => {
       timeoutId = setTimeout(() => {
         dispatch(setLoading(false));
       }, 2000);
     };
-  
+
     router.events.on("routeChangeStart", handleStart);
     router.events.on("routeChangeComplete", handleComplete);
     router.events.on("routeChangeError", handleComplete);
-  
+
     return () => {
       router.events.off("routeChangeStart", handleStart);
       router.events.off("routeChangeComplete", handleComplete);
@@ -43,10 +45,6 @@ const AppContent = ({ Component, pageProps }) => {
       clearTimeout(timeoutId);
     };
   }, [router]);
-
-  useEffect(() => {
-    dispatch(setLoading(false));
-  }, []);
 
   return (
     <>
