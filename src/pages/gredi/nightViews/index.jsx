@@ -18,8 +18,8 @@ const GrediNightViews = () => {
       <PageHeader
         title="VİLLA GREDİ"
         fullPath={[
-          { id: 1, name: "Anasayfa", url: "/" },
-          { id: 2, name: "İletişim", url: "/contact" },
+          { id: 1, name: t("navbar.anasayfa"), url: "/" },
+          { id: 2, name: t("navbar.iletisim"), url: "/contact" },
         ]}
         image="/assets/img/slid/villasCoverImg/gredi.jpeg"
       />

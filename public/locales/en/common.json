@@ -116,10 +116,12 @@
     "secin": "Please select a villa and dates.",
     "secilen": "Selected Villa:",
     "gece": "Total Nights:",
+    "geceSayisi": "Nights",
     "ucret": "Total Villa Price:",
     "isitmali": "Heated Pool Fee:",
     "toplam": "Grand Total:",
     "depozito": "Deposit: 15,000 TL",
+    "depozitoTahsili": "The deposit will be collected separately upon check-in.",
     "siteUzerinden": "Advance Payment",
     "siteUzerindenAciklama": "To confirm your reservation, 40% of the total amount will be securely collected through our online payment system.",
     "giristeOdeme": "Remaining Balance (at Check-in)"

@@ -107,7 +107,7 @@ export default function PriceDetailCard() {
           </div>
           <div style={{ fontSize: "14px", marginBottom: "12px" }}>
             <strong> {t("reservationPriceCard.gece")}</strong> {result.dayCount}{" "}
-            gece
+            {t("reservationPriceCard.geceSayisi")}
           </div>
           <div style={{ fontSize: "14px", marginBottom: "12px" }}>
             <strong> {t("reservationPriceCard.ucret")}</strong>{" "}

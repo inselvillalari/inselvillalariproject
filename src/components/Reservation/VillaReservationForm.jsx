@@ -383,7 +383,7 @@ export default function ReservationForm() {
           onChange={formik.handleChange}
           style={inputStyle}
         >
-          <option value="">Seçin</option>
+          <option value="">{t("reservationForm.secin")}</option>
           {Array.from({ length: 10 }, (_, i) => (
             <option key={i + 1} value={i + 1}>
               {i + 1}
@@ -435,7 +435,10 @@ export default function ReservationForm() {
                 <label style={labelStyle}>
                   {index + 1}. {t("reservationForm.yetiskinIsim")}
                 </label>
-                <input placeholder="İsim Soyisim" style={inputStyle} />
+                <input
+                  placeholder={t("reservationForm.yetiskinIsim")}
+                  style={inputStyle}
+                />
                 <label style={labelStyle}>{t("reservationForm.tc")}</label>
                 <input
                   placeholder={t("reservationForm.tc")}
@@ -456,7 +459,10 @@ export default function ReservationForm() {
                 <label style={labelStyle}>
                   {index + 1}. {t("reservationForm.cocukIsim")}
                 </label>
-                <input placeholder="İsim Soyisim" style={inputStyle} />
+                <input
+                  placeholder={t("reservationForm.cocukIsim")}
+                  style={inputStyle}
+                />
                 <label style={labelStyle}>{t("reservationForm.tc")}</label>
                 <input
                   placeholder={t("reservationForm.tc")}
