@@ -1,29 +1,24 @@
 import "../styles/globals.css";
 import React, { useEffect } from "react";
-import Script from "next/script";
 import Head from "next/head";
+import Script from "next/script";
+import { Provider, useDispatch, useSelector } from "react-redux";
+import { useRouter } from "next/router";
+import { setLoading } from "../store/generalSlice";
+import store from "../store/store";
+import { appWithTranslation } from "next-i18next";
 import Cursor from "../components/Cursor";
 import ScrollToTop from "../components/scrollToTop";
 import PageLoading from "../components/pageLoading";
-import { SpeedInsights } from "@vercel/speed-insights/next";
-import { Provider, useDispatch } from "react-redux";
-import store from "../store/store";
-import { appWithTranslation } from "next-i18next";
-import { useSelector } from "react-redux";
-import { useRouter } from "next/router";
-import { setLoading } from "../store/generalSlice";
 
 const AppContent = ({ Component, pageProps }) => {
-  const { loading } = useSelector((state) => state.general);
-
-  const router = useRouter();
   const dispatch = useDispatch();
+  const router = useRouter();
 
   useEffect(() => {
     let timeoutId;
 
     const handleStart = (url) => {
-      // Aynı sayfaysa loading göstermeyelim
       if (url === router.asPath) return;
       dispatch(setLoading(true));
     };
@@ -49,31 +44,21 @@ const AppContent = ({ Component, pageProps }) => {
   return (
     <>
       <Head>
-        <title>IN-SEL</title>
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1, maximum-scale=1"
-        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>İnsel Villaları | Kalkan Kiralık Villa</title>
       </Head>
 
-      <Cursor />
-      <PageLoading />
       <Component {...pageProps} />
-      <SpeedInsights />
+      <PageLoading />
+      <Cursor />
       <ScrollToTop />
 
-      <Script id="wow" src="/assets/js/wow.min.js"></Script>
-      <Script
-        id="splitting"
-        strategy="beforeInteractive"
-        src="/assets/js/splitting.min.js"
-      ></Script>
-      <Script
-        id="simpleParallax"
-        src="/assets/js/simpleParallax.min.js"
-      ></Script>
-      <Script id="isotope" src="/assets/js/isotope.pkgd.min.js"></Script>
-      <Script src="/assets/js/main.js" id="init" strategy="lazyOnload"></Script>
+      {/* JS dosyaları */}
+      <Script src="/assets/js/wow.min.js" strategy="lazyOnload" />
+      <Script src="/assets/js/splitting.min.js" strategy="lazyOnload" />
+      <Script src="/assets/js/simpleParallax.min.js" strategy="lazyOnload" />
+      <Script src="/assets/js/isotope.pkgd.min.js" strategy="lazyOnload" />
+      <Script src="/assets/js/main.js" strategy="lazyOnload" />
     </>
   );
 };

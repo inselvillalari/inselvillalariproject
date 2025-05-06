@@ -18,7 +18,7 @@ class MyDocument extends Document {
             crossOrigin="anonymous"
           />
 
-          {/* Fontlar - optimize edilmiş css2 sürümü */}
+          {/* Fontlar - optimize css2 sürümü */}
           <link
             href="https://fonts.googleapis.com/css2?family=Poppins:wght@100..900&family=Teko:wght@300..700&family=Playfair+Display:wght@400..900&family=Cinzel:wght@400..900&family=Jost:wght@100..900&display=swap"
             rel="stylesheet"
@@ -75,7 +75,8 @@ class MyDocument extends Document {
           {/* Favicon */}
           <link rel="shortcut icon" href="/assets/img/favicon.ico" />
         </Head>
-        <body>
+        {/* 👇 homepage class burada eklendi */}
+        <body className="homepage">
           <Main />
           <NextScript />
         </body>
