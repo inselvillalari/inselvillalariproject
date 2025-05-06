@@ -67,6 +67,14 @@ class MyDocument extends Document {
           {/* Favicon */}
           <link rel="shortcut icon" href="/assets/img/favicon.ico" />
 
+          {/*<!-- 1. Preconnect -->*/}
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link
+            rel="preconnect"
+            href="https://fonts.gstatic.com"
+            crossOrigin="anonymous"
+          />
+
           {/* Fontlar */}
           <link
             href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap"
