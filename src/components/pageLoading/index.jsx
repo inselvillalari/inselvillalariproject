@@ -21,8 +21,8 @@ const PageLoading = () => {
         setVisible(false);
         cleanupTimeout = setTimeout(() => {
           setInternalLoading(false);
-        }, 200);
-      }, 300);
+        }, 300);
+      }, 500);
     }
 
     return () => {
