@@ -2,7 +2,7 @@
 import Head from "next/head";
 
 const SeoHead = ({
-  title = "İnsel Villaları | Kalkan Kiralık Villa",
+  title = "İnsel Villaları",
   description = "İnsel Villaları, Kalkan ve Kaş'ta özel havuzlu, deniz manzaralı lüks kiralık villalar sunar. Unutulmaz bir tatil deneyimi yaşayın.",
   keywords = "inselvillalari, insel, ilba, ilkin berberoglu, selcuk ince, ilkinberberoglu, selcukince, kalkan, kaş, kiralık villa, lüks villa",
   url = "https://inselvillalari.com",

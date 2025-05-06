@@ -41,7 +41,7 @@ class MyDocument extends Document {
           {/* Sosyal Medya - Open Graph */}
           <meta
             property="og:title"
-            content="İnsel Villaları | Kalkan Kiralık Villa"
+            content="İnsel Villaları"
           />
           <meta
             property="og:description"

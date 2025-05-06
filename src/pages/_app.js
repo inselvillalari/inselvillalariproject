@@ -45,7 +45,7 @@ const AppContent = ({ Component, pageProps }) => {
     <>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>İnsel Villaları | Kalkan Kiralık Villa</title>
+        <title>İnsel Villaları</title>
       </Head>
 
       <Component {...pageProps} />
