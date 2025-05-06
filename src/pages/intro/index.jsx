@@ -1,7 +1,7 @@
 import React from "react";
 import introData from "./index.json";
 import { Swiper, SwiperSlide } from "swiper/react";
-import Split from "../split";
+import SplitComponent from "../split";
 import SwiperCore, { Navigation, Pagination, Parallax } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -121,14 +121,14 @@ const IntroWithVertical = () => {
                               <h5 className="thin custom-font">
                                 {slide.title.first}
                               </h5>
-                              <Split>
+                              <SplitComponent>
                                 <h1
                                   data-splitting
                                   className="words chars splitting"
                                 >
                                   <Link href="#">{slide.title.second}</Link>
                                 </h1>
-                              </Split>
+                              </SplitComponent>
                             </div>
                             {slide?.content && (
                               <p className="mt-10">

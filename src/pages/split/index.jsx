@@ -1,20 +1,20 @@
-import React from "react";
+import { useEffect, useRef } from "react";
+import "splitting/dist/splitting.css";
 
-class Split extends React.Component {
-  target = React.createRef();
+const SplitComponent = ({ children }) => {
+  const ref = useRef();
 
-  split = () => {
-    if (this.target.current) {
-      Splitting({ target: this.target.current });
-    }
-  };
+  useEffect(() => {
+    const run = async () => {
+      if (typeof window !== "undefined") {
+        const Splitting = (await import("splitting")).default;
+        Splitting({ target: ref.current });
+      }
+    };
+    run();
+  }, [children]);
 
-  componentDidMount = this.split;
-  componentDidUpdate = this.split;
+  return <div ref={ref}>{children}</div>;
+};
 
-  render() {
-    return <div ref={this.target}>{this.props.children}</div>;
-  }
-}
-
-export default Split;
+export default SplitComponent;
