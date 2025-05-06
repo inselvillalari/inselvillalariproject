@@ -43,7 +43,7 @@ const PageLoading = () => {
         width: "100vw",
         height: "100vh",
         bgcolor: "rgba(255,255,255,0.4)",
-        backdropFilter: "blur(8px)",
+        backdropFilter: "blur(16px)",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
