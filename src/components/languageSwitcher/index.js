@@ -8,7 +8,7 @@ import {
   ListItemText,
 } from "@mui/material";
 import LanguageIcon from "@mui/icons-material/Language";
-import { i18n } from "i18next";
+import "/node_modules/flag-icons/css/flag-icons.min.css";
 
 const LanguageSwitcher = (classname) => {
   const [anchorEl, setAnchorEl] = useState(null);
@@ -55,21 +55,21 @@ const LanguageSwitcher = (classname) => {
       >
         <MenuItem onClick={() => handleClose("tr")}>
           <ListItemIcon sx={{ minWidth: 30, color: "inherit" }}>
-            <span style={{ fontSize: 20 }}>🇹🇷</span>
+            <span style={{ fontSize: 20 }} class="fi fi-tr"></span>
           </ListItemIcon>
           <ListItemText primary="Türkçe" />
         </MenuItem>
 
         <MenuItem onClick={() => handleClose("en")}>
           <ListItemIcon sx={{ minWidth: 30, color: "inherit" }}>
-            <span style={{ fontSize: 20 }}>🇬🇧</span>
+            <span style={{ fontSize: 20 }} class="fi fi-gb"></span>
           </ListItemIcon>
           <ListItemText primary="English" />
         </MenuItem>
 
         <MenuItem onClick={() => handleClose("ru")}>
           <ListItemIcon sx={{ minWidth: 30, color: "inherit" }}>
-            <span style={{ fontSize: 20 }}>🇷🇺</span>
+            <span style={{ fontSize: 20 }} class="fi fi-ru"></span>
           </ListItemIcon>
           <ListItemText primary="Русский" />
         </MenuItem>
