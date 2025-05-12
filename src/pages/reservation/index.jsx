@@ -7,7 +7,6 @@ import withLoading from "../../common/withLoading";
 
 function ReservationPage() {
   return (
-    <LightLayout>
       <div
         className="container"
         style={{ marginTop: "150px", marginBottom: "150px" }}
@@ -29,7 +28,6 @@ function ReservationPage() {
           </div>
         </div>
       </div>
-    </LightLayout>
   );
 }
 

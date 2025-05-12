@@ -1,6 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
-import LightLayout from "../layout/LightLayout";
 import Intro from "../intro";
 import Services from "../services";
 import AboutUs from "../aboutus";
@@ -10,13 +9,13 @@ import withLoading from "../../common/withLoading";
 
 const Home = () => {
   return (
-    <LightLayout>
+    <>
       <Intro />
       <Services />
       <AboutUs />
       <Portfolio />
       <Blogs2 />
-    </LightLayout>
+    </>
   );
 };
 

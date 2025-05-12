@@ -11,7 +11,10 @@ class MyDocument extends Document {
       <Html lang="tr">
         <Head>
           {/* Preconnect for Google Fonts */}
+          <link rel="stylesheet" href="/assets/css/style-light.css" />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <title>İnsel Villaları</title>
           <link
             rel="preconnect"
             href="https://fonts.gstatic.com"
@@ -39,10 +42,7 @@ class MyDocument extends Document {
           />
 
           {/* Sosyal Medya - Open Graph */}
-          <meta
-            property="og:title"
-            content="İnsel Villaları"
-          />
+          <meta property="og:title" content="İnsel Villaları" />
           <meta
             property="og:description"
             content="Kalkan ve Kaş'ta deniz manzaralı, özel havuzlu lüks kiralık villalar. Tatil sizinle başlar."

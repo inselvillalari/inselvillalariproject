@@ -10,6 +10,7 @@ import { appWithTranslation } from "next-i18next";
 import Cursor from "../components/Cursor";
 import ScrollToTop from "../components/scrollToTop";
 import PageLoading from "../components/pageLoading";
+import LightLayout from "./layout/LightLayout";
 
 const AppContent = ({ Component, pageProps }) => {
   const dispatch = useDispatch();
@@ -48,9 +49,8 @@ const AppContent = ({ Component, pageProps }) => {
         }, 100);
       }
     };
-  
+
     checkWOW();
-  
 
     return () => {
       router.events.off("routeChangeStart", handleStart);
@@ -62,12 +62,9 @@ const AppContent = ({ Component, pageProps }) => {
 
   return (
     <>
-      <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>İnsel Villaları</title>
-      </Head>
-
-      <Component {...pageProps} />
+      <LightLayout>
+        <Component {...pageProps} />
+      </LightLayout>
       <PageLoading />
       <Cursor />
       <ScrollToTop />

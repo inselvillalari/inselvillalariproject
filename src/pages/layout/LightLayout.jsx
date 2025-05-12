@@ -1,7 +1,5 @@
 /* eslint-disable @next/next/no-css-tags */
 import React from "react";
-import Head from "next/head";
-import appData from "./app.json";
 import Navbar from "../navbar";
 import Footer from "../footer";
 
@@ -29,9 +27,6 @@ const LightLayout = ({ children, footerClass }) => {
   }, [navbarRef]);
   return (
     <>
-      <Head>
-        <link rel="stylesheet" href="/assets/css/style-light.css" />
-      </Head>
       <Navbar navbarRef={navbarRef} logoRef={logoRef} />
       {children}
       <Footer classText={footerClass} />

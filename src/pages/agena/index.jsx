@@ -1,7 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
 import WorkHeader from "../../components/Work-header";
-import MainLayout from "../layout/MainLayout";
 import AgenaPage from "../../components/agena/AgenaPage";
 import { useTranslation } from "next-i18next";
 import { withTranslationProps } from "../../utils/withTranslation";
@@ -15,7 +14,7 @@ const Agena = () => {
   }, []);
 
   return (
-    <MainLayout>
+    <>
       <WorkHeader
         title={{
           first: "VİLLA AGENA",
@@ -23,7 +22,7 @@ const Agena = () => {
         content={t("agenaAciklama")}
       />
       <AgenaPage />
-    </MainLayout>
+    </>
   );
 };
 

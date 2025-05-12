@@ -1,7 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
 import WorkHeader from "../../components/Work-header";
-import MainLayout from "../layout/MainLayout";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import GrediPage from "../../components/gredi/GrediPage";
@@ -13,7 +12,7 @@ const Gredi = () => {
     document.querySelector("body").classList.add("index3");
   }, []);
   return (
-    <MainLayout>
+    <>
       <WorkHeader
         title={{
           first: "VİLLA GREDI",
@@ -21,7 +20,7 @@ const Gredi = () => {
         content={t("grediAciklama")}
       />
       <GrediPage />
-    </MainLayout>
+    </>
   );
 };
 export async function getStaticProps({ locale }) {
