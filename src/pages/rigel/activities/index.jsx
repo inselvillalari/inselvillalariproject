@@ -1,6 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
-import MainLayout from "../../layout/MainLayout";
 import PageHeader from "../../../components/Page-header";
 import ProjectIntro from "../../../components/rigel/activities/ProjectIntro";
 import ProjectVideo from "../../../components/Project-Video";
@@ -14,7 +13,7 @@ const RigelActivities = () => {
     document.querySelector("body").classList.add("index3");
   }, []);
   return (
-    <MainLayout>
+    <>
       <PageHeader
         title="VİLLA RİGEL"
         fullPath={[
@@ -81,7 +80,7 @@ const RigelActivities = () => {
           </div>
         </div>
       </section>
-    </MainLayout>
+    </>
   );
 };
 export const getStaticProps = withTranslationProps(["common"]);

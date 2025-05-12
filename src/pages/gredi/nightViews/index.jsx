@@ -1,6 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
-import MainLayout from "../../layout/MainLayout";
 import PageHeader from "../../../components/Page-header";
 import ProjectIntro from "../../../components/gredi/nightViews/ProjectIntro";
 import ProjectVideo from "../../../components/Project-Video";
@@ -14,7 +13,7 @@ const GrediNightViews = () => {
     document.querySelector("body").classList.add("index3");
   }, []);
   return (
-    <MainLayout>
+    <>
       <PageHeader
         title="VİLLA GREDİ"
         fullPath={[
@@ -75,7 +74,7 @@ const GrediNightViews = () => {
           </div>
         </div>
       </section>
-    </MainLayout>
+    </>
   );
 };
 export const getStaticProps = withTranslationProps(["common"]);

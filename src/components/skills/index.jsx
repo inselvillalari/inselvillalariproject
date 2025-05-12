@@ -10,7 +10,7 @@ const Skills = () => {
   return (
     <div
       className="skills-sec section-padding pt-100"
-      style={{ backgroundColor: "#181818" }}
+      style={{ backgroundColor: "#fff" }}
     >
       <div className="container">
         <div className="section-head">

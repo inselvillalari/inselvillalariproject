@@ -34,7 +34,7 @@ class MyDocument extends Document {
           <meta name="author" content="Sevgül Göksu Çelik, Tolga Kaya" />
           <meta
             name="keywords"
-            content="inselvillalari, insel, ilba, ilkin berberoğlu, selçuk ince, ilkinberberoglu, selcukince, kalkan, kaş, kiralık villa, lüks villa"
+            content="inselvillalari, insel, ilba, ilkin berberoğlu, selçuk ince, ilkinberberoglu, selcukince, kalkan, kaş, kiralık villa, lüks villa, agena, capella, gredi, rigel"
           />
           <meta
             name="description"
@@ -73,7 +73,7 @@ class MyDocument extends Document {
           <link rel="canonical" href="https://inselvillalari.com" />
 
           {/* Favicon */}
-          <link rel="shortcut icon" href="/assets/img/favicon.ico" />
+          <link rel="shortcut icon" href="/assets/img/favicon.png" />
         </Head>
         {/* 👇 homepage class burada eklendi */}
         <body className="homepage">
