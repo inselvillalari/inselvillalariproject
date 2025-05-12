@@ -133,9 +133,6 @@ const AgenaFeatures = () => {
                     <Check title={t("features.bahceli")} />
                   </div>
                   <div className="item ">
-                    <Check title={t("features.cocukHavuzu")} />
-                  </div>
-                  <div className="item ">
                     <Check title={t("features.ebeveynBanyosu")} />
                   </div>
                 </div>

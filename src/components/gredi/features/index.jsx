@@ -135,9 +135,6 @@ const GrediFeatures = () => {
                   <div className="item ">
                     <Check title={t("features.bahceli")} />
                   </div>
-                  <div className="item ">
-                    <Check title={t("features.cocukHavuzu")} />
-                  </div>
                 </div>
               </div>
             </div>
