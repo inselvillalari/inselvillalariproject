@@ -50,6 +50,7 @@ const ContactWithMap = () => {
                   name="name"
                   placeholder={t("contact.form.isim")}
                   required="required"
+                  style={{ color: "black" }}
                 />
               </div>
 
@@ -60,6 +61,7 @@ const ContactWithMap = () => {
                   name="email"
                   placeholder={t("contact.form.email")}
                   required="required"
+                  style={{ color: "black" }}
                 />
               </div>
 
@@ -70,6 +72,7 @@ const ContactWithMap = () => {
                   placeholder={t("contact.form.mesaj")}
                   rows="4"
                   required="required"
+                  style={{ color: "black" }}
                 ></textarea>
               </div>
 

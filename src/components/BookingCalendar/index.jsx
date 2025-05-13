@@ -130,8 +130,8 @@ const BookingCalendar = (dateRangesData) => {
           weekStartDayIndex={1}
           range
           readOnly
+          style={{ backgroundColor: "#2A2A38", borderRadius: "20px" }}
           className="bg-dark"
-          style={{ borderRadius: "8px" }}
           mapDays={({ date }) => {
             let props = {};
             let color = null;

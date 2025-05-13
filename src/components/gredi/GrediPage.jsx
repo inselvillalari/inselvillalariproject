@@ -121,7 +121,10 @@ const GrediPage = () => {
               </div>
             </Link>
             <Link href="/gredi/insideViews">
-              <div className="col-lg-6 items interior">
+              <div
+                className="col-lg-6 items interior"
+                style={{ marginBottom: "50px" }}
+              >
                 <div className="item">
                   <div className="img">
                     <img

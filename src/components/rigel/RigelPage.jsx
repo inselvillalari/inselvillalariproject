@@ -121,7 +121,10 @@ const RigelPage = () => {
               </div>
             </Link>
             <Link href="/rigel/nightViews">
-              <div className="col-lg-6 items residential interior">
+              <div
+                className="col-lg-6 items residential interior"
+                style={{ marginBottom: "50px" }}
+              >
                 <div className="item">
                   <div className="img">
                     <img
