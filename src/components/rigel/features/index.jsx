@@ -88,7 +88,7 @@ const RigelFeatures = () => {
                     <Check title={t("features.kamera")} />
                   </div>
                   <div className="item">
-                    <Check title={t("features.klima")} />
+                    <Check title={t("features.cocukHavuzu")} />
                   </div>
                   <div className="item">
                     <Check title={t("features.masaTenisi")} />
@@ -107,12 +107,6 @@ const RigelFeatures = () => {
                   </div>
                   <div className="item">
                     <Check title={t("features.utu")} />
-                  </div>
-                  <div className="item ">
-                    <Check title={t("features.cocukHavuzu")} />
-                  </div>
-                  <div className="item ">
-                    <Check title={t("features.ebeveynBanyosu")} />
                   </div>
                 </div>
               </div>
@@ -149,6 +143,12 @@ const RigelFeatures = () => {
                   </div>
                   <div className="item ">
                     <Check title={t("features.bahceli")} />
+                  </div>
+                  <div className="item ">
+                    <Check title={t("features.klima")} />
+                  </div>
+                  <div className="item ">
+                    <Check title={t("features.ebeveynBanyosu")} />
                   </div>
                   <div className="item ">
                     <Check title={t("features.sarj")} />
