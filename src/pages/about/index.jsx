@@ -34,6 +34,7 @@ function About() {
 
           <p className="section-description">
             {t("about.aciklama5")}
+            <br />
             <strong>info@inselvillalari.com</strong> –{" "}
             <strong>+90 532 490 53 07</strong>
           </p>
