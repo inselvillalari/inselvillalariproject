@@ -35,23 +35,23 @@ const AppContent = ({ Component, pageProps }) => {
     router.events.on("routeChangeComplete", handleComplete);
     router.events.on("routeChangeError", handleComplete);
 
-    const checkWOW = () => {
-      if (typeof window !== "undefined" && window.WOW) {
-        new window.WOW().init();
-      } else {
-        let retries = 0;
-        const interval = setInterval(() => {
-          if (window.WOW) {
-            new window.WOW().init();
-            clearInterval(interval);
-          } else if (++retries > 10) {
-            clearInterval(interval);
-          }
-        }, 100);
-      }
-    };
+    // const checkWOW = () => {
+    //   if (typeof window !== "undefined" && window.WOW) {
+    //     new window.WOW().init();
+    //   } else {
+    //     let retries = 0;
+    //     const interval = setInterval(() => {
+    //       if (window.WOW) {
+    //         new window.WOW().init();
+    //         clearInterval(interval);
+    //       } else if (++retries > 10) {
+    //         clearInterval(interval);
+    //       }
+    //     }, 100);
+    //   }
+    // };
 
-    checkWOW();
+    // checkWOW();
 
     return () => {
       router.events.off("routeChangeStart", handleStart);
