@@ -8,7 +8,16 @@ const PropertyDetails = () => {
     <section className=" section-padding">
       <div className="container">
         <div className="section-head">
-          <h3>{t("propertyDetails.detay")}</h3>
+          <h3
+            style={{
+              letterSpacing: "4px",
+              marginBottom: "30px",
+              fontFamily: "Jost, sans-serif",
+              fontSize: "50px",
+            }}
+          >
+            {t("propertyDetails.detay")}
+          </h3>
         </div>
         <div className="property-detail-info-list">
           <ul>

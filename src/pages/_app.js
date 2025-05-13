@@ -1,3 +1,4 @@
+import "../styles/style-light.css";
 import "../styles/globals.css";
 import React, { useEffect } from "react";
 import Head from "next/head";

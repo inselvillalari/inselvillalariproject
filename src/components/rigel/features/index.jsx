@@ -14,7 +14,16 @@ const RigelFeatures = () => {
     <section className="services section-padding p-0">
       <div className="container">
         <div className="section-head">
-          <h3>{t("features.ozellikler")}</h3>
+          <h3
+            style={{
+              letterSpacing: "4px",
+              marginBottom: "30px",
+              fontFamily: "Jost, sans-serif",
+              fontSize: "50px",
+            }}
+          >
+            {t("features.ozellikler")}
+          </h3>
         </div>
         <div className="row">
           <div className="col-sm-12 col-md-6 sm-mb30 sm-pl50">
@@ -100,7 +109,10 @@ const RigelFeatures = () => {
                     <Check title={t("features.utu")} />
                   </div>
                   <div className="item ">
-                    <Check title={t("features.sarj")} />
+                    <Check title={t("features.cocukHavuzu")} />
+                  </div>
+                  <div className="item ">
+                    <Check title={t("features.ebeveynBanyosu")} />
                   </div>
                 </div>
               </div>
@@ -139,10 +151,7 @@ const RigelFeatures = () => {
                     <Check title={t("features.bahceli")} />
                   </div>
                   <div className="item ">
-                    <Check title={t("features.cocukHavuzu")} />
-                  </div>
-                  <div className="item ">
-                    <Check title={t("features.ebeveynBanyosu")} />
+                    <Check title={t("features.sarj")} />
                   </div>
                 </div>
               </div>

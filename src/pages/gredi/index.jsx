@@ -15,7 +15,7 @@ const Gredi = () => {
     <>
       <WorkHeader
         title={{
-          first: "VİLLA GREDI",
+          first: "VİLLA GREDİ",
         }}
         content={t("grediAciklama")}
       />

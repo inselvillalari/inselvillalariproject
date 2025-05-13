@@ -111,7 +111,16 @@ const BookingCalendar = (dateRangesData) => {
     <section className="section-padding p-0 pb-100">
       <div className="container">
         <div className="section-head">
-          <h3>{t("takvim.takvim")}</h3>
+          <h3
+            style={{
+              letterSpacing: "4px",
+              marginBottom: "30px",
+              fontFamily: "Jost, sans-serif",
+              fontSize: "50px",
+            }}
+          >
+            {t("takvim.takvim")}
+          </h3>
         </div>
       </div>
       <div className="container d-flex justify-content-center mobile">
@@ -145,16 +154,54 @@ const BookingCalendar = (dateRangesData) => {
         />
       </div>
       <div className="container d-flex justify-content-center">
-        <div className="legend">
+        <div
+          style={{
+            display: "flex",
+            gap: "10px",
+            marginTop: "20px",
+            flexWrap: "wrap",
+          }}
+        >
           <div>
-            <span className="legend-color musait"></span> {t("takvim.musait")}
+            <span
+              style={{
+                display: "inlineBlock",
+                width: "15px",
+                height: "15px",
+                marginRight: "5px",
+                backgroundColor: "white",
+                border: "1px solid black",
+                color: "black",
+              }}
+            ></span>{" "}
+            {t("takvim.musait")}
           </div>
           <div>
-            <span className="legend-color rezervasyon"></span>{" "}
+            <span
+              style={{
+                display: "inlineBlock",
+                width: "15px",
+                height: "15px",
+                marginRight: "5px",
+                backgroundColor: "#ff851b",
+                border: "1px solid black",
+                color: "black",
+              }}
+            ></span>{" "}
             {t("takvim.rezerve")}
           </div>
           <div>
-            <span className="legend-color dolu"></span>{" "}
+            <span
+              style={{
+                display: "inlineBlock",
+                width: "15px",
+                height: "15px",
+                marginRight: "5px",
+                backgroundColor: "gray",
+                border: "1px solid black",
+                color: "black",
+              }}
+            ></span>{" "}
             {t("takvim.tesisKapatmis")}
           </div>
         </div>

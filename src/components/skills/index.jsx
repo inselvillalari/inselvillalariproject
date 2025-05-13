@@ -14,7 +14,17 @@ const Skills = () => {
     >
       <div className="container">
         <div className="section-head">
-          <h3>{t("skills.konum")}</h3>
+          <h3
+            style={{
+              letterSpacing: "4px",
+              marginBottom: "30px",
+              fontFamily: "Jost, sans-serif",
+              fontWeight: "500px",
+              fontSize: "50px",
+            }}
+          >
+            {t("skills.konum")}
+          </h3>
         </div>
         <div className="row">
           <div className="col-lg-6 valign  md-mb50">

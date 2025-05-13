@@ -14,7 +14,7 @@ const Rigel = () => {
     <>
       <WorkHeader
         title={{
-          first: "VİLLA RIGEL",
+          first: "VİLLA RİGEL",
         }}
         content={t("rigelAciklama")}
       />
