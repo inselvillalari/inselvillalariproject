@@ -188,6 +188,20 @@ export default function ReservationForm() {
     formik.values.heatedPool,
   ]);
 
+  useEffect(() => {
+    const form = document.querySelector("form");
+    const handleSubmit = () => {
+      setTimeout(() => {
+        const invalid = document.querySelector(".is-invalid");
+        if (invalid) {
+          invalid.scrollIntoView({ behavior: "smooth", block: "center" });
+        }
+      }, 0);
+    };
+    form?.addEventListener("submit", handleSubmit);
+    return () => form?.removeEventListener("submit", handleSubmit);
+  }, []);
+
   return (
     <div
       style={{
