@@ -35,24 +35,6 @@ const AppContent = ({ Component, pageProps }) => {
     router.events.on("routeChangeComplete", handleComplete);
     router.events.on("routeChangeError", handleComplete);
 
-    // const checkWOW = () => {
-    //   if (typeof window !== "undefined" && window.WOW) {
-    //     new window.WOW().init();
-    //   } else {
-    //     let retries = 0;
-    //     const interval = setInterval(() => {
-    //       if (window.WOW) {
-    //         new window.WOW().init();
-    //         clearInterval(interval);
-    //       } else if (++retries > 10) {
-    //         clearInterval(interval);
-    //       }
-    //     }, 100);
-    //   }
-    // };
-
-    // checkWOW();
-
     return () => {
       router.events.off("routeChangeStart", handleStart);
       router.events.off("routeChangeComplete", handleComplete);
@@ -61,11 +43,36 @@ const AppContent = ({ Component, pageProps }) => {
     };
   }, [router]);
 
+  // const checkWOW = () => {
+  //   if (typeof window !== "undefined" && window.WOW) {
+  //     new window.WOW().init();
+  //   } else {
+  //     let retries = 0;
+  //     const interval = setInterval(() => {
+  //       if (window.WOW) {
+  //         new window.WOW().init();
+  //         clearInterval(interval);
+  //       } else if (++retries > 10) {
+  //         clearInterval(interval);
+  //       }
+  //     }, 100);
+  //   }
+  // };
+
+  // checkWOW();
+
   return (
     <>
+      <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>İnsel Villaları</title>
+        <link rel="stylesheet" href="/assets/css/style-light.css" />
+      </Head>
+
       <LightLayout>
         <Component {...pageProps} />
       </LightLayout>
+
       <PageLoading />
       <Cursor />
       <ScrollToTop />
