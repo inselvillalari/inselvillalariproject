@@ -1,1 +1,2 @@
-new WOW().init();
+import WOW from "wowjs";
+new WOW.WOW().init();

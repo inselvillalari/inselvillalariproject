@@ -11,8 +11,6 @@ const Navbar = ({ navbarRef, logoRef, logoClass }) => {
   const router = useRouter();
   const currentLocale = router.locale;
 
-  const { pathname } = router;
-
   const handleDropdown = (e) => {
     getSiblings(e.target.parentElement)
       .filter((item) => item.classList.contains("show"))
