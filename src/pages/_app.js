@@ -1,3 +1,4 @@
+import "../styles/style-light.css";
 import "../styles/globals.css";
 import React, { useEffect } from "react";
 import Head from "next/head";
@@ -10,6 +11,7 @@ import { appWithTranslation } from "next-i18next";
 import Cursor from "../components/Cursor";
 import ScrollToTop from "../components/scrollToTop";
 import PageLoading from "../components/pageLoading";
+import LightLayout from "./layout/LightLayout";
 
 const AppContent = ({ Component, pageProps }) => {
   const dispatch = useDispatch();
@@ -33,25 +35,6 @@ const AppContent = ({ Component, pageProps }) => {
     router.events.on("routeChangeComplete", handleComplete);
     router.events.on("routeChangeError", handleComplete);
 
-    const checkWOW = () => {
-      if (typeof window !== "undefined" && window.WOW) {
-        new window.WOW().init();
-      } else {
-        let retries = 0;
-        const interval = setInterval(() => {
-          if (window.WOW) {
-            new window.WOW().init();
-            clearInterval(interval);
-          } else if (++retries > 10) {
-            clearInterval(interval);
-          }
-        }, 100);
-      }
-    };
-  
-    checkWOW();
-  
-
     return () => {
       router.events.off("routeChangeStart", handleStart);
       router.events.off("routeChangeComplete", handleComplete);
@@ -60,14 +43,36 @@ const AppContent = ({ Component, pageProps }) => {
     };
   }, [router]);
 
+  // const checkWOW = () => {
+  //   if (typeof window !== "undefined" && window.WOW) {
+  //     new window.WOW().init();
+  //   } else {
+  //     let retries = 0;
+  //     const interval = setInterval(() => {
+  //       if (window.WOW) {
+  //         new window.WOW().init();
+  //         clearInterval(interval);
+  //       } else if (++retries > 10) {
+  //         clearInterval(interval);
+  //       }
+  //     }, 100);
+  //   }
+  // };
+
+  // checkWOW();
+
   return (
     <>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>İnsel Villaları</title>
+        <link rel="stylesheet" href="/assets/css/style-light.css" />
       </Head>
 
-      <Component {...pageProps} />
+      <LightLayout>
+        <Component {...pageProps} />
+      </LightLayout>
+
       <PageLoading />
       <Cursor />
       <ScrollToTop />

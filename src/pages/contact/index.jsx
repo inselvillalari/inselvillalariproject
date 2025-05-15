@@ -1,7 +1,6 @@
 import React from "react";
 import { useEffect } from "react";
 import PageHeader from "../../contact/PageHeader";
-import MainLayout from "../main";
 import ContactInfo from "../../contact/contactInfo";
 import ContactWithMap from "../../contact/contactWithMap";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
@@ -15,7 +14,7 @@ const Contact = () => {
     document.querySelector("body").classList.add("index3");
   }, []);
   return (
-    <MainLayout>
+    <>
       <PageHeader
         title={t("contact.ulasin")}
         fullPath={[
@@ -28,7 +27,7 @@ const Contact = () => {
         <ContactInfo />
         <ContactWithMap />
       </section>
-    </MainLayout>
+    </>
   );
 };
 

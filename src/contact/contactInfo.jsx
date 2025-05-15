@@ -8,7 +8,10 @@ const ContactInfo = () => {
       <div className="container">
         <div className="row">
           <div className="col-lg-4">
-            <div className="item">
+            <div
+              className="item"
+              style={{ border: "1px solid #b19777", borderRadius: "10px" }}
+            >
               <span className="icon pe-7s-phone"></span>
               <div className="cont">
                 <h6 className="custom-font">{t("contact.arayin")}</h6>
@@ -17,7 +20,10 @@ const ContactInfo = () => {
             </div>
           </div>
           <div className="col-lg-4">
-            <div className="item">
+            <div
+              className="item"
+              style={{ border: "1px solid #b19777", borderRadius: "10px" }}
+            >
               <span className="icon pe-7s-mail-open"></span>
               <div className="cont">
                 <h6 className="custom-font">{t("contact.ulasin")}</h6>
@@ -26,11 +32,14 @@ const ContactInfo = () => {
             </div>
           </div>
           <div className="col-lg-4">
-            <div className="item">
+            <div
+              className="item"
+              style={{ border: "1px solid #b19777", borderRadius: "10px" }}
+            >
               <span className="icon pe-7s-map"></span>
               <div className="cont">
                 <h6 className="custom-font">{t("contact.adres")}</h6>
-                <p>Zakkum Sokak No:4 Kalkan, Kaş, ANTALYA</p>
+                <p>Zakkum Sok No:4 Kalkan, Kaş, ANTALYA</p>
               </div>
             </div>
           </div>

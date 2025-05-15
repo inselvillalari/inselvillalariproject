@@ -1,6 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
-import MainLayout from "../../layout/MainLayout";
 import PageHeader from "../../../components/Page-header";
 import ProjectIntro from "../../../components/agena/activities/ProjectIntro";
 import ProjectVideo from "../../../components/Project-Video";
@@ -14,7 +13,7 @@ const AgenaActivities = () => {
     document.querySelector("body").classList.add("index3");
   }, []);
   return (
-    <MainLayout>
+    <>
       <PageHeader
         title="VİLLA AGENA"
         fullPath={[
@@ -75,7 +74,7 @@ const AgenaActivities = () => {
           </div>
         </div>
       </section>
-    </MainLayout>
+    </>
   );
 };
 export const getStaticProps = withTranslationProps(["common"]);

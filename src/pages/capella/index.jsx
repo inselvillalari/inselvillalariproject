@@ -1,7 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
 import WorkHeader from "../../components/Work-header";
-import MainLayout from "../layout/MainLayout";
 import { useTranslation } from "next-i18next";
 import CapellaPage from "../../components/capella/CapellaPage";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
@@ -13,17 +12,15 @@ const Capella = () => {
     document.querySelector("body").classList.add("index3");
   }, []);
   return (
-    <MainLayout>
+    <>
       <WorkHeader
         title={{
           first: "VİLLA CAPELLA",
-          // second: "and the building speak for themeselves",
         }}
-        // title = "text"
         content={t("capellaAciklama")}
       />
       <CapellaPage />
-    </MainLayout>
+    </>
   );
 };
 

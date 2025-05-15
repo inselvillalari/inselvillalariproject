@@ -4464,16 +4464,16 @@ footer .item .copy-right p a {
   }
 
   .rmdp-week-day {
-    color: rgb(172, 79, 79) !important;
+    color: rgb(172, 79, 79);
   }
 
   .rmdp-month {
-    color: rgb(120, 59, 59) !important;
+    color: rgb(120, 59, 59);
   }
 
   .musait {
     background-color: white;
-    color: white;
+    color: black;
   }
 
   .dolu {

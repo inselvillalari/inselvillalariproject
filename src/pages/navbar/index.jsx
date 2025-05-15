@@ -11,8 +11,6 @@ const Navbar = ({ navbarRef, logoRef, logoClass }) => {
   const router = useRouter();
   const currentLocale = router.locale;
 
-  const { pathname } = router;
-
   const handleDropdown = (e) => {
     getSiblings(e.target.parentElement)
       .filter((item) => item.classList.contains("show"))
@@ -53,17 +51,7 @@ const Navbar = ({ navbarRef, logoRef, logoClass }) => {
               aria-label="Toggle navigation"
             >
               <span className="icon-bar">
-                <i
-                  className="fas fa-bars"
-                  style={
-                    pathname === "/reservation" ||
-                    pathname === "/" ||
-                    pathname === "/about" ||
-                    pathname === "/reservation-edit"
-                      ? { color: "#000" }
-                      : { color: "inherit" }
-                  }
-                ></i>
+                <i className="fas fa-bars" style={{ color: "#000" }}></i>
               </span>
             </button>
             <div className="d-block d-md-none">

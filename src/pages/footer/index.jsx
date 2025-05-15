@@ -6,7 +6,10 @@ import { useTranslation } from "next-i18next";
 const Footer = ({ classText }) => {
   const { t } = useTranslation("common");
   return (
-    <footer className={`${classText ? classText : ""}`}>
+    <footer
+      className={`${classText ? classText : ""}`}
+      style={{ backgroundColor: "#2A2A38" }}
+    >
       <div className="container">
         <div className="row">
           <div className="col-lg-6">
