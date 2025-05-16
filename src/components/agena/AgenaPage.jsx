@@ -11,7 +11,7 @@ import { useTranslation } from "next-i18next";
 const dateRangesData = [
   {
     start: "2024-11-01",
-    end: "2025-05-15",
+    end: "2025-05-21",
     color: "gray",
   },
   {
