@@ -15,6 +15,13 @@ function About() {
         <Head>
           <title>Hakkımızda | IN-SEL Villaları</title>
         </Head>
+        <div className="d-flex justify-content-center align-items-center">
+          <img
+            alt=""
+            src="/assets/img/favicon.png"
+            style={{ width: "100px", height: "100px" }}
+          />
+        </div>
         <div
           style={{
             maxWidth: "800px",

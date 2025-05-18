@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import React from "react";
+import React, { useEffect } from "react";
 import Link from "next/link";
 import getSiblings from "../../common/getSiblings";
 import LanguageSwitcher from "../../components/languageSwitcher";
@@ -33,6 +33,42 @@ const Navbar = ({ navbarRef, logoRef, logoClass }) => {
       .getElementById("navbarSupportedContent")
       .classList.toggle("show-with-trans");
   };
+
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (navbarRef.current && !navbarRef.current.contains(e.target)) {
+        // Close mobile menu
+        const collapseEl = document.getElementById("navbarSupportedContent");
+        if (collapseEl?.classList.contains("show-with-trans")) {
+          collapseEl.classList.remove("show-with-trans");
+        }
+        // Close dropdowns
+        const openItems = navbarRef.current.querySelectorAll(".nav-item.show");
+        openItems.forEach((item) => {
+          item.classList.remove("show");
+          const toggleBtn = item.querySelector("[aria-expanded]");
+          const menu = item.querySelector(".dropdown-menu");
+          if (toggleBtn) toggleBtn.setAttribute("aria-expanded", "false");
+          if (menu) menu.classList.remove("show");
+        });
+      }
+    };
+    document.addEventListener("click", handleClickOutside);
+    return () => document.removeEventListener("click", handleClickOutside);
+  }, [navbarRef]);
+
+  useEffect(() => {
+    const handleRouteComplete = () => {
+      const collapseEl = document.getElementById("navbarSupportedContent");
+      if (collapseEl?.classList.contains("show-with-trans")) {
+        collapseEl.classList.remove("show-with-trans");
+      }
+    };
+    router.events.on("routeChangeComplete", handleRouteComplete);
+    return () => {
+      router.events.off("routeChangeComplete", handleRouteComplete);
+    };
+  }, [router.events]);
 
   return (
     <>
