@@ -108,7 +108,8 @@
       "yetiskin": "Yetişkin sayısı zorunludur.",
       "cocuk": "Çocuk sayısı zorunludur.",
       "secmeZorunlulugu": "Yetişkin ve çocuk sayısı seçilmelidir.",
-      "toplam10": "Toplam kişi sayısı 10'dan fazla olamaz."
+      "toplam10": "Toplam kişi sayısı 10'dan fazla olamaz.",
+      "min4gun": "En az 4 gece konaklama yapılmalıdır."
     }
   },
   "reservationPriceCard": {

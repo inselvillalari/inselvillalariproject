@@ -108,7 +108,8 @@
       "yetiskin": "Number of adults is required.",
       "cocuk": "Number of children is required.",
       "secmeZorunlulugu": "Please select the number of adults and children.",
-      "toplam10": "Total number of guests cannot exceed 10."
+      "toplam10": "Total number of guests cannot exceed 10.",
+      "min4gun": "A minimum stay of 4 nights is required."
     }
   },
   "reservationPriceCard": {
