@@ -20,8 +20,7 @@ const AboutUs = () => {
         <div className="row">
           <div className="col-lg-6 valign">
             <div
-              className="exp-content nopat wow fadeInUp"
-              data-wow-delay=".3s"
+              className="exp-content nopat"
             >
               <h6 className="sub-title">{t("aboutUsHomePage.konum")}</h6>
               <h2 className="mb-20 playfont">
@@ -46,13 +45,13 @@ const AboutUs = () => {
                     }}
                   ></div>
                 </div>
-                <div className="col-md-8 wow fadeInUp" data-wow-delay=".3s">
-                  <div className="img mb-20 wow imago">
+                <div className="col-md-8">
+                  <div className="img mb-20">
                     <img src="/assets/img/slid/aboutUs/1.jpeg" alt="" />
                   </div>
                 </div>
-                <div className="col-md-7 wow fadeInUp" data-wow-delay=".3s">
-                  <div className="img wow imago">
+                <div className="col-md-7">
+                  <div className="img">
                     <img src="/assets/img/slid/aboutUs/2.jpeg" alt="" />
                   </div>
                 </div>
