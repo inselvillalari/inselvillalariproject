@@ -1,61 +1,12 @@
-/*-----------------------------------------------------------------------------------
-
-    Theme Name: architec
-    Theme URI: http://
-    Description: Architecture & Interior Design HTML Template
-    Author: ThemesCamp
-    Author URI: http://themeforest.net/user/ThemesCamp
-    Version: 1.0
-
------------------------------------------------------------------------------------*/
-/* ----------------------------------------------------------------
-
-== Table Of Content
-
-    |--- BASE
-
-        |- typography
-        |- helper classes
-
-    |--- SHORTCODES
-
-        |- extra
-        |- overlay
-        |- section-heading
-        |- buttons
-        |- navbar
-        |- sliders
-        |- intro
-        |- feature-box
-        |- clients
-        |- counter
-        |- portfolio
-        |- process
-        |- progress-bar
-        |- tabs
-        |- team
-        |- testimonials
-        |- blog
-        |- contact-form
-        |- footers
-
-    |--- BASE
-
-        |- responsive
-	
-
-
----------------------------------------------------------------- */
-
-@import "/assets/css/animate.min.css";
+/* @import "/assets/css/animate.min.css";
 @import "/assets/css/bootstrap.min.css";
 @import "/assets/css/flaticon.css";
 @import "/assets/css/fontawesome-all.min.css";
 @import "/assets/css/ionicons.min.css";
-@import "/assets/css/pe-icon-7-stroke.css";
+@import "/assets/css/pe-icon-7-stroke.css"; */
 
 /* ====================== [ Start Typography d1ed5d abe5ca abe5e2 ] ====================== */
-* {
+/* * {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
@@ -177,11 +128,11 @@ span {
 a:hover,
 span:hover {
   text-decoration: none;
-}
+} */
 
 /* ====================== [ End Typography  ] ====================== */
 /* ====================== [ Start Helper Classes  ] ====================== */
-.o-hidden {
+/* .o-hidden {
   overflow: hidden;
 }
 
@@ -314,12 +265,12 @@ span:hover {
 .padding5 {
   padding-right: 5%;
   padding-left: 5%;
-}
+} */
 
 /*-------------------------------------------------------
 					 text color
 -------------------------------------------------------*/
-.text-white {
+/* .text-white {
   color: #fff;
 }
 
@@ -329,12 +280,12 @@ span:hover {
 
 .text-extra-light-gray {
   color: #b7b7b7;
-}
+} */
 
 /*-------------------------------------------------------
 					font-weight
 -------------------------------------------------------*/
-.fw-100 {
+/* .fw-100 {
   font-weight: 100 !important;
 }
 
@@ -368,12 +319,12 @@ span:hover {
 
 .fw-900 {
   font-weight: 900 !important;
-}
+} */
 
 /*-------------------------------------------------------
 					 font-size
 -------------------------------------------------------*/
-.fz-10 {
+/* .fz-10 {
   font-size: 10px !important;
 }
 
@@ -419,12 +370,12 @@ span:hover {
 
 .fz-50 {
   font-size: 50px !important;
-}
+} */
 
 /*-------------------------------------------------------
 					line-height
 -------------------------------------------------------*/
-.line-height-10 {
+/* .line-height-10 {
   line-height: 10px;
 }
 
@@ -522,12 +473,12 @@ span:hover {
 
 .line-height-120 {
   line-height: 120px;
-}
+} */
 
 /*-------------------------------------------------------
 					text-transform
 -------------------------------------------------------*/
-.text-u {
+/* .text-u {
   text-transform: uppercase !important;
 }
 
@@ -545,12 +496,12 @@ span:hover {
 
 .text-i {
   font-style: italic;
-}
+} */
 
 /*-------------------------------------------------------
 					 letter-spacing
 -------------------------------------------------------*/
-.ls0 {
+/* .ls0 {
   letter-spacing: 0px !important;
 }
 
@@ -576,12 +527,12 @@ span:hover {
 
 .ls10 {
   letter-spacing: 10px !important;
-}
+} */
 
 /*-------------------------------------------------------
 			 margin-top  (0/100) +5
 -------------------------------------------------------*/
-.mt-0 {
+/* .mt-0 {
   margin-top: 0 !important;
 }
 
@@ -667,12 +618,12 @@ span:hover {
 
 .mt-100 {
   margin-top: 100px !important;
-}
+} */
 
 /*-------------------------------------------------------
 			 margin-bottom  (0/100) +5
 -------------------------------------------------------*/
-.mb-0 {
+/* .mb-0 {
   margin-bottom: 0 !important;
 }
 
@@ -758,12 +709,12 @@ span:hover {
 
 .mb-100 {
   margin-bottom: 100px !important;
-}
+} */
 
 /*-------------------------------------------------------
 			padding-top  (0/100) +5
 -------------------------------------------------------*/
-.pt-0 {
+/* .pt-0 {
   padding-top: 0 !important;
 }
 
@@ -845,12 +796,12 @@ span:hover {
 
 .pt-100 {
   padding-top: 100px !important;
-}
+} */
 
 /*-------------------------------------------------------
 		 padding-bottom  (0/100) +5
 -------------------------------------------------------*/
-.pb-0 {
+/* .pb-0 {
   padding-bottom: 0 !important;
 }
 
@@ -936,11 +887,11 @@ span:hover {
 
 .no-padding {
   padding: 0 !important;
-}
+} */
 
 /* ====================== [ End Helper Classes  ] ====================== */
 /* ====================== [ Start Preloader ] ====================== */
-.pace {
+/* .pace {
   pointer-events: none;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -1026,7 +977,7 @@ span:hover {
   -webkit-transition-delay: 1s;
   -o-transition-delay: 1s;
   transition-delay: 1s;
-}
+} */
 
 /* .loading-text {
   font-weight: 300;
@@ -1055,7 +1006,7 @@ span:hover {
 
 /* ====================== [ End Preloader ] ====================== */
 /* ====================== [ Start Text Animation & Images ] ====================== */
-.splitting.animated .char {
+/* .splitting.animated .char {
   -webkit-animation: fadeInUp 0.4s cubic-bezier(0.3, 0, 0.7, 1) both;
   animation: fadeInUp 0.4s cubic-bezier(0.3, 0, 0.7, 1) both;
   -webkit-animation-delay: calc(30ms * var(--char-index));
@@ -1134,11 +1085,11 @@ span:hover {
 .imago.animated {
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-}
+} */
 
 /* ====================== [ End Text Animation & Images ] ====================== */
 /* ====================== [ Start Cursor Style ] ====================== */
-body {
+/* body {
   cursor: none;
 }
 
@@ -1195,11 +1146,11 @@ body {
   .cursor-outer.cursor-hover {
     opacity: 0;
   }
-}
+} */
 
 /* ====================== [ End Cursor Style ] ====================== */
 /* ====================== [ Start progress-wrap ] ====================== */
-.progress-wrap {
+/* .progress-wrap {
   position: fixed;
   bottom: 30px;
   right: 30px;
@@ -1260,11 +1211,11 @@ body {
   -webkit-transition: all 400ms linear;
   -o-transition: all 400ms linear;
   transition: all 400ms linear;
-}
+} */
 
 /* ====================== [ End progress-wrap ] ====================== */
 /* ====================== [ Start Overlay ] ====================== */
-[data-overlay-dark],
+/* [data-overlay-dark],
 [data-overlay-light] {
   position: relative;
 }
@@ -1378,11 +1329,11 @@ body {
 [data-overlay-dark="10"]:before,
 [data-overlay-light="10"]:before {
   opacity: 1;
-}
+} */
 
 /* ====================== [ End Overlay ] ====================== */
 /* ====================== [ Start Heading ] ====================== */
-.section-head {
+/* .section-head {
   position: relative;
   margin: 0 auto 80px;
 }
@@ -1420,11 +1371,11 @@ body {
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   opacity: 0.03;
-}
+} */
 
 /* ====================== [ End Heading ] ====================== */
 /* ====================== [  Start Button Style ] ====================== */
-.btn-curve {
+/* .btn-curve {
   background: transparent;
   width: 170px;
   height: 50px;
@@ -1512,11 +1463,11 @@ body {
 }
 .btn-curve.btn-radius {
   border-radius: 30px;
-}
+} */
 
 /* ====================== [ End Button Style ] ====================== */
 /* ====================== [ Start navbar ] ====================== */
-.navbar {
+/* .navbar {
   position: absolute;
   left: 0;
   top: 0;
@@ -1691,11 +1642,11 @@ body {
 .nav-scroll .navbar-nav .logo {
   width: 100px;
   padding: 15px 0;
-}
+} */
 
 /* ====================== [ End navbar ] ====================== */
 /* ====================== [ Start Slider ] ====================== */
-.slider {
+/* .slider {
   position: relative;
 }
 .slider.fixed-slider {
@@ -2272,11 +2223,11 @@ body {
 .pages-header .cont .path span {
   margin: 0 20px;
   font-size: 10px;
-}
+} */
 
 /* ====================== [ End Slider ] ====================== */
 /* ====================== [ Start Intro ] ====================== */
-.about .exp {
+/* .about .exp {
   padding-right: 0;
   position: relative;
   z-index: 2;
@@ -2533,11 +2484,11 @@ body {
 .about-us .img .stauts .item h6 {
   font-size: 15px;
   margin-top: 5px;
-}
+} */
 
 /* ====================== [ End Intro ] ====================== */
 /* ====================== [ Start services ] ====================== */
-.services .container {
+/* .services .container {
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
   padding-bottom: 120px;
 }
@@ -2659,11 +2610,11 @@ body {
 }
 .services-col .item-bx .more {
   font-size: 13px;
-}
+} */
 
 /* ====================== [ End services ] ====================== */
 /* ====================== [ Start brands ] ====================== */
-.clients-brand .brands:hover .img {
+/* .clients-brand .brands:hover .img {
   -webkit-transform: scale(0);
   -ms-transform: scale(0);
   transform: scale(0);
@@ -2712,11 +2663,11 @@ body {
   -webkit-transition: all 0.4s;
   -o-transition: all 0.4s;
   transition: all 0.4s;
-}
+} */
 
 /* ====================== [ End brands ] ====================== */
 /* ====================== [ Start Numbers & Counter  ] ====================== */
-.numbers .item {
+/* .numbers .item {
   position: relative;
 }
 .numbers .item:after {
@@ -2758,11 +2709,11 @@ body {
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 2px;
-}
+} */
 
 /* ====================== [ End Numbers & Counter  ] ====================== */
 /* ====================== [ Start Work ] ====================== */
-.works.filter-img .filtering {
+/* .works.filter-img .filtering {
   overflow: hidden;
 }
 .works.filter-img .filtering .filter span {
@@ -3074,11 +3025,11 @@ body {
 .work-header .cont h2 {
   letter-spacing: 2px;
   margin-bottom: 30px;
-}
+} */
 
 /* ====================== [ End Work ] ====================== */
 /* ====================== [ Start Price ] ====================== */
-.price {
+/* .price {
   position: relative;
   z-index: 3;
 }
@@ -3141,11 +3092,11 @@ body {
 }
 .price .item .feat ul li .icon {
   color: #c5a47e;
-}
+} */
 
 /* ====================== [ End Price ] ====================== */
 /* ====================== [ Start services ] ====================== */
-.process {
+/* .process {
   position: relative;
 }
 .process:before {
@@ -3171,11 +3122,11 @@ body {
 }
 .process .item h5 {
   margin-bottom: 15px;
-}
+} */
 
 /* ====================== [ End services ] ====================== */
 /* ====================== [ Start progress bar ] ====================== */
-.skills-circle {
+/* .skills-circle {
   position: relative;
 }
 .skills-circle:before {
@@ -3284,11 +3235,11 @@ body {
   position: absolute;
   right: 15px;
   bottom: 14px;
-}
+} */
 
 /* ====================== [ End progress bar ] ====================== */
 /* ====================== [ Start Call To Action  ] ====================== */
-.video {
+/* .video {
   position: relative;
   min-height: 80vh;
 }
@@ -3401,11 +3352,11 @@ body {
 .video .container .stauts .item h6 {
   font-size: 15px;
   margin-top: 5px;
-}
+} */
 
 /* ====================== [ End Call To Action  ] ====================== */
 /* ====================== [ Start tabs before & after section ] ====================== */
-.after-before {
+/* .after-before {
   position: relative;
   color: #fff;
 }
@@ -3430,11 +3381,11 @@ body {
   right: 10%;
   height: 40%;
   z-index: -1;
-}
+} */
 
 /* ====================== [ Start tabs before & after section ] ====================== */
 /* ====================== [ 20 Start call-action ] ====================== */
-.call-action {
+/* .call-action {
   background-color: #020202;
   color: #fff;
 }
@@ -3644,11 +3595,11 @@ body {
   -webkit-transition: all 0.5s cubic-bezier(1, 0, 0, 1);
   -o-transition: all 0.5s cubic-bezier(1, 0, 0, 1);
   transition: all 0.5s cubic-bezier(1, 0, 0, 1);
-}
+} */
 
 /* ====================== [ End call-action ] ====================== */
 /* ====================== [ Start Team ] ====================== */
-.team {
+/* .team {
   position: relative;
 }
 .team .item {
@@ -3907,11 +3858,11 @@ body {
     -webkit-transform: rotate(0);
     transform: rotate(0);
   }
-}
+} */
 
 /* ====================== [ End Team ] ====================== */
 /* ====================== [ Start Testimonials ] ====================== */
-.testimonials.grid {
+/* .testimonials.grid {
   position: relative;
 }
 .testimonials.grid:before {
@@ -4313,11 +4264,11 @@ body {
   background-image: url(/assets/img/dots2.png);
   opacity: 0.8;
   z-index: -1;
-}
+} */
 
 /* ====================== [ End Testimonials ] ====================== */
 /* ====================== [ Start Blog ] ====================== */
-.blog-grid .item {
+/* .blog-grid .item {
   padding: 50px 30px;
   position: relative;
 }
@@ -4815,11 +4766,11 @@ body {
 .next-project .content p {
   font-size: 18px;
   color: #555;
-}
+} */
 
 /* ====================== [ End Blog ] ====================== */
 /* ====================== [ Start contact ] ====================== */
-.cont-map {
+/* .cont-map {
   position: relative;
   z-index: 2;
 }
@@ -4910,11 +4861,11 @@ body {
 }
 .contact .form textarea {
   height: 160px;
-}
+} */
 
 /* ====================== [ End contact ] ====================== */
 /* ====================== [ Start Footer ] ====================== */
-footer {
+/* footer {
   background: #151515;
   width: calc(100% - 50px);
   margin-left: 25px;
@@ -5005,11 +4956,11 @@ footer .item .copy-right p {
 }
 footer .item .copy-right p a {
   color: #c5a47e;
-}
+} */
 
 /* ====================== [ End Footer ] ====================== */
 /* ====================== [ Start Responsive ] ====================== */
-@media screen and (max-width: 991px) {
+/* @media screen and (max-width: 991px) {
   .md-ml0 {
     margin-left: 0px !important;
   }
@@ -5636,6 +5587,6 @@ footer .item .copy-right p a {
   width: 15px;
   height: 15px;
   margin-right: 5px;
-}
+} */
 
 /* ====================== [ End Responsive ] ====================== */
