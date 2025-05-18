@@ -1,10 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import ReservationForm from "../../components/Reservation/VillaReservationForm";
 import PriceDetailCard from "../../components/Reservation/PriceDetailCard";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import withLoading from "../../common/withLoading";
+import { useDispatch } from "react-redux";
+import { getAllReservations } from "../../store/reservation/thunk";
 
 function ReservationPage() {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getAllReservations());
+  }, []);
   return (
     <div
       className="container"

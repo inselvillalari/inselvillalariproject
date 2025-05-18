@@ -1,12 +1,12 @@
 // src/store/store.js
 
 import { configureStore } from "@reduxjs/toolkit";
-import reservationReducer from "./reservationSlice";
+import reservation from "./reservation/reducer";
 import generalReducer from "./generalSlice";
 
 export const store = configureStore({
   reducer: {
-    reservation: reservationReducer,
+    reservation: reservation,
     general: generalReducer,
   },
 });

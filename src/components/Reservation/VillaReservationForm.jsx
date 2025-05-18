@@ -4,13 +4,14 @@ import * as Yup from "yup";
 import DatePicker from "react-datepicker";
 import { useDispatch, useSelector } from "react-redux";
 import { useRouter } from "next/router";
-import { setReservationData } from "../../store/reservationSlice";
 import "react-datepicker/dist/react-datepicker.css";
 import { useTranslation } from "next-i18next";
 import { registerLocale } from "react-datepicker";
 import tr from "date-fns/locale/tr";
 import enUS from "date-fns/locale/en-US";
 import ru from "date-fns/locale/ru";
+import { createReservation } from "../../store/reservation/thunk";
+import API from "../../helpers/api";
 
 const villas = ["Villa Agena", "Villa Capella", "Villa Gredi", "Villa Rigel"];
 
@@ -73,6 +74,8 @@ export default function ReservationForm() {
       children: "",
       heatedPool: false,
       wantsCrib: false,
+      adults: [],
+      children: [],
     },
     validationSchema: Yup.object({
       villa: Yup.string().required(t("reservationForm.validation.villa")),
@@ -109,19 +112,38 @@ export default function ReservationForm() {
       adults: Yup.number().required(t("reservationForm.validation.yetiskin")),
       children: Yup.number().required(t("reservationForm.validation.cocuk")),
     }),
-    onSubmit: (values) => {
-      dispatch(
-        setReservationData({
+    onSubmit: async (values) => {
+      console.log("values", values);
+      try {
+        const payload = {
           ...values,
-          entryDate: values.entryDate?.toISOString() || null,
-          exitDate: values.exitDate?.toISOString() || null,
-          totalVillaPrice: reservationPrices.totalVillaPrice,
-          totalHeatedPoolPrice: reservationPrices.totalHeatedPoolPrice,
-          grandTotal: reservationPrices.grandTotal,
-          totalNights: reservationPrices.totalNights,
-        })
-      );
-      router.push("/reservation-edit");
+          entryDate: values.entryDate?.toISOString(),
+          exitDate: values.exitDate?.toISOString(),
+          status: "Pending",
+        };
+
+        // 1️⃣ Rezervasyon veritabanına kaydedilir
+        await dispatch(createReservation(payload)).unwrap();
+
+        // 2️⃣ Iyzico ödeme token'ı ve URL'si alınır
+        const res = await API.post("/api/payment/checkout", {
+          name: values.hirerName,
+          email: values.email,
+          phone: values.phone,
+          price: 32000, // Buraya dinamik fiyat hesaplama da bağlanabilir
+        });
+
+        const paymentUrl = res?.data?.paymentPageUrl;
+
+        if (paymentUrl) {
+          window.location.href = paymentUrl; // 3️⃣ Kullanıcıyı ödeme sayfasına yönlendir
+        } else {
+          throw new Error("Ödeme sayfası bağlantısı alınamadı");
+        }
+      } catch (err) {
+        console.error("Rezervasyon veya ödeme oluşturulamadı:", err);
+        alert("Bir hata oluştu. Lütfen tekrar deneyin.");
+      }
     },
   });
 
@@ -166,27 +188,27 @@ export default function ReservationForm() {
     }
   }, [formik.values.adults, formik.values.children]);
 
-  useEffect(() => {
-    if (
-      formik.values.villa &&
-      formik.values.entryDate &&
-      formik.values.exitDate
-    ) {
-      dispatch(
-        setReservationData({
-          villa: formik.values.villa,
-          entryDate: formik.values.entryDate?.toISOString() || null,
-          exitDate: formik.values.exitDate?.toISOString() || null,
-          heatedPool: formik.values.heatedPool,
-        })
-      );
-    }
-  }, [
-    formik.values.villa,
-    formik.values.entryDate,
-    formik.values.exitDate,
-    formik.values.heatedPool,
-  ]);
+  // useEffect(() => {
+  //   if (
+  //     formik.values.villa &&
+  //     formik.values.entryDate &&
+  //     formik.values.exitDate
+  //   ) {
+  //     dispatch(
+  //       setReservationData({
+  //         villa: formik.values.villa,
+  //         entryDate: formik.values.entryDate?.toISOString() || null,
+  //         exitDate: formik.values.exitDate?.toISOString() || null,
+  //         heatedPool: formik.values.heatedPool,
+  //       })
+  //     );
+  //   }
+  // }, [
+  //   formik.values.villa,
+  //   formik.values.entryDate,
+  //   formik.values.exitDate,
+  //   formik.values.heatedPool,
+  // ]);
 
   useEffect(() => {
     const form = document.querySelector("form");

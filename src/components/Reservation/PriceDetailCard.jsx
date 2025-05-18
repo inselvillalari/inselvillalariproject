@@ -1,7 +1,7 @@
 // ✅ PriceDetailCard.js (Formik yerine sadece Redux kullanır, hatasız ve kontrollü)
 import React, { useMemo, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { setReservationData } from "../../store/reservationSlice";
+// import { setReservationData } from "../../store/reservation";
 import dayjs from "dayjs";
 import villaPrices from "./villaPrices";
 import { useTranslation } from "next-i18next";
@@ -55,14 +55,14 @@ export default function PriceDetailCard() {
 
   useEffect(() => {
     if (result) {
-      dispatch(
-        setReservationData({
-          totalVillaPrice: result.villaPrice,
-          totalHeatedPoolPrice: result.heatedPoolPrice,
-          grandTotal: result.grandTotal,
-          totalNights: result.dayCount,
-        })
-      );
+      // dispatch(
+      //   setReservationData({
+      //     totalVillaPrice: result.villaPrice,
+      //     totalHeatedPoolPrice: result.heatedPoolPrice,
+      //     grandTotal: result.grandTotal,
+      //     totalNights: result.dayCount,
+      //   })
+      // );
     }
   }, [result]);
 
