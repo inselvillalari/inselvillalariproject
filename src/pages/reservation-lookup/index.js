@@ -1,22 +1,26 @@
-// pages/ReservationLookupPage.js
 import React, { useState } from "react";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import withLoading from "../../common/withLoading";
+import { useTranslation } from "next-i18next";
 
-export default function ReservationLookupPage() {
+function ReservationLookupPage() {
+  const { t } = useTranslation("common");
+
   const [code, setCode] = useState("");
   const [reservation, setReservation] = useState(null);
   const [notFound, setNotFound] = useState(false);
 
   const dummyReservation = {
-    code: "RSV-2025-001",
+    code: "RSV-3461-007",
     villa: "Villa Capella",
     entryDate: "2025-06-15",
     exitDate: "2025-06-20",
     totalNights: 5,
     heatedPool: true,
     wantsCrib: false,
-    hirerName: "Ahmet Yılmaz",
+    hirerName: "Yakışıklı Tolga Kaya",
     hirerIdNumber: "12345678901",
-    email: "ahmet@example.com",
+    email: "tolga3461@example.com",
     phone: "05551234567",
     adults: 2,
     children: 1,
@@ -24,7 +28,7 @@ export default function ReservationLookupPage() {
   };
 
   const handleSearch = () => {
-    if (code === dummyReservation.code) {
+    if (code.trim() === dummyReservation.code) {
       setReservation(dummyReservation);
       setNotFound(false);
     } else {
@@ -36,36 +40,39 @@ export default function ReservationLookupPage() {
   return (
     <div
       className="container"
-      style={{ marginTop: "150px", marginBottom: "150px" }}
+      style={{
+        marginTop: "100px",
+        marginBottom: "100px",
+        padding: "0 16px",
+        fontFamily: "'Poppins', sans-serif",
+      }}
     >
       <div
         style={{
-          maxWidth: "600px",
-          border: "2px solid #C8A97E",
+          maxWidth: "700px",
           margin: "0 auto",
           background: "#fff",
           border: "1px solid #eee",
-          borderRadius: "10px",
-          padding: "30px",
-          boxShadow: "0 2px 8px rgba(0,0,0,0.05)",
-          fontFamily: "'Poppins', sans-serif",
+          borderRadius: "12px",
+          padding: "36px",
+          boxShadow: "0 4px 16px rgba(0,0,0,0.06)",
         }}
       >
         <h2
           style={{
             textAlign: "center",
-            marginBottom: "25px",
-            fontSize: "22px",
+            fontSize: "24px",
             fontWeight: "700",
             color: "#C8A97E",
             borderBottom: "2px solid #C8A97E",
             paddingBottom: "10px",
+            marginBottom: "30px",
           }}
         >
-          Rezervasyon Sorgulama
+          {t("reservationLookup.rezervasyonSorgulama")}
         </h2>
 
-        <div style={{ marginBottom: "20px" }}>
+        <div style={{ marginBottom: "24px" }}>
           <label
             style={{
               fontSize: "14px",
@@ -74,13 +81,13 @@ export default function ReservationLookupPage() {
               display: "block",
             }}
           >
-            Rezervasyon Numarası
+            {t("reservationLookup.rezervasyonKodu")}
           </label>
           <input
             type="text"
             value={code}
             onChange={(e) => setCode(e.target.value)}
-            placeholder="Örnek: RSV-2025-001"
+            placeholder={t("reservationLookup.rezervasyonOrnek")}
             style={{
               width: "100%",
               padding: "10px",
@@ -106,95 +113,172 @@ export default function ReservationLookupPage() {
             fontFamily: "'Poppins', sans-serif",
           }}
         >
-          Sorgula
+          {t("reservationLookup.sorgula")}
         </button>
 
         {reservation && (
-          <div style={{ marginTop: "30px" }}>
+          <div style={{ marginTop: "40px" }}>
             <h3
               style={{
                 fontSize: "18px",
                 fontWeight: "600",
                 color: "#C8A97E",
-                marginBottom: "10px",
+                marginBottom: "16px",
+                borderBottom: "1px solid #eee",
+                paddingBottom: "8px",
               }}
             >
-              Rezervasyon Detayları
+              {t("reservationLookup.rezervasyonBilgileri")}
             </h3>
             <p>
-              <strong>Rezervasyon Kodu:</strong> {reservation.code}
+              <strong>{t("reservationLookup.kod")}:</strong> {reservation.code}
             </p>
             <p>
-              <strong>Villa:</strong> {reservation.villa}
+              <strong>{t("reservationLookup.villa")}:</strong>{" "}
+              {reservation.villa}
             </p>
             <p>
-              <strong>Giriş Tarihi:</strong> {reservation.entryDate}
+              <strong>{t("reservationLookup.girisTarihi")}:</strong>{" "}
+              {reservation.entryDate}
             </p>
             <p>
-              <strong>Çıkış Tarihi:</strong> {reservation.exitDate}
+              <strong>{t("reservationLookup.cikisTarihi")}:</strong>{" "}
+              {reservation.exitDate}
             </p>
             <p>
-              <strong>Toplam Gece:</strong> {reservation.totalNights}
+              <strong>{t("reservationLookup.toplamGece")}:</strong>{" "}
+              {reservation.totalNights}
             </p>
             <p>
-              <strong>Isıtmalı Havuz:</strong>{" "}
-              {reservation.heatedPool ? "Evet" : "Hayır"}
+              <strong>{t("reservationLookup.isitmaliHavuz")}:</strong>{" "}
+              {reservation.heatedPool
+                ? t("reservationLookup.evet")
+                : t("reservationLookup.hayir")}
             </p>
             <p>
-              <strong>Beşik Talebi:</strong>{" "}
-              {reservation.wantsCrib ? "Evet" : "Hayır"}
+              <strong>{t("reservationLookup.besik")}:</strong>{" "}
+              {reservation.wantsCrib
+                ? t("reservationLookup.evet")
+                : t("reservationLookup.hayir")}
+            </p>
+
+            <h3
+              style={{
+                fontSize: "18px",
+                fontWeight: "600",
+                color: "#C8A97E",
+                marginTop: "30px",
+                marginBottom: "16px",
+                borderBottom: "1px solid #eee",
+                paddingBottom: "8px",
+              }}
+            >
+              {t("reservationLookup.kiralayanBilgileri")}
+            </h3>
+            <p>
+              <strong>{t("reservationLookup.adSoyad")}:</strong>{" "}
+              {reservation.hirerName}
             </p>
             <p>
-              <strong>Ad Soyad:</strong> {reservation.hirerName}
+              <strong>{t("reservationLookup.kimlik")}:</strong>{" "}
+              {reservation.hirerIdNumber}
             </p>
             <p>
-              <strong>Kimlik / Pasaport:</strong> {reservation.hirerIdNumber}
+              <strong>{t("reservationLookup.email")}:</strong>{" "}
+              {reservation.email}
             </p>
             <p>
-              <strong>Email:</strong> {reservation.email}
+              <strong>{t("reservationLookup.telefon")}:</strong>{" "}
+              {reservation.phone}
             </p>
             <p>
-              <strong>Telefon:</strong> {reservation.phone}
+              <strong>{t("reservationLookup.yetiskin")}:</strong>{" "}
+              {reservation.adults}
             </p>
             <p>
-              <strong>Yetişkin:</strong> {reservation.adults}
+              <strong>{t("reservationLookup.cocuk")}:</strong>{" "}
+              {reservation.children}
             </p>
+
+            <h3
+              style={{
+                fontSize: "18px",
+                fontWeight: "600",
+                color: "#C8A97E",
+                marginTop: "30px",
+                marginBottom: "16px",
+                borderBottom: "1px solid #eee",
+                paddingBottom: "8px",
+              }}
+            >
+              {t("reservationLookup.odeme")}
+            </h3>
             <p>
-              <strong>Çocuk:</strong> {reservation.children}
-            </p>
-            <p>
-              <strong>Toplam Ücret:</strong>{" "}
+              <strong>{t("reservationLookup.toplamUcret")}:</strong>{" "}
               {reservation.totalPrice.toLocaleString("tr-TR")} TL
             </p>
-            <div style={{ textAlign: "center", marginTop: "20px" }}>
-              <button
+
+            <div
+              style={{
+                textAlign: "center",
+                marginTop: "30px",
+                display: "flex",
+                flexDirection: "column",
+                gap: "12px",
+              }}
+            >
+              <a
+                href="https://wa.me/905324905307?text=Merhaba,%20rezervasyonumu%20iptal%20etmek%20istiyorum."
+                target="_blank"
+                rel="noopener noreferrer"
                 style={{
-                  backgroundColor: "#000000",
+                  backgroundColor: "#000",
                   color: "white",
-                  border: "none",
-                  padding: "8px 16px",
+                  textDecoration: "none",
+                  padding: "10px 24px",
                   borderRadius: "6px",
                   fontWeight: "600",
                   fontSize: "14px",
-                  cursor: "pointer",
-                  fontFamily: "'Poppins', sans-serif",
                 }}
-                onClick={() =>
-                  alert("Rezervasyon iptal isteği alındı (demo aşaması)")
-                }
               >
-                Rezervasyonu İptal Et
-              </button>
+                {t("reservationLookup.iptalEt")}
+              </a>
+              <a
+                href="https://wa.me/905324905307?text=Merhaba,%20rezervasyonumda%20değişiklik%20yapmak%20istiyorum."
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  backgroundColor: "#C8A97E",
+                  color: "white",
+                  textDecoration: "none",
+                  padding: "10px 24px",
+                  borderRadius: "6px",
+                  fontWeight: "600",
+                  fontSize: "14px",
+                }}
+              >
+                {t("reservationLookup.degistir")}
+              </a>
             </div>
           </div>
         )}
 
         {notFound && (
-          <p style={{ color: "red", marginTop: "20px", textAlign: "center" }}>
-            Rezervasyon bulunamadı. Lütfen numarayı kontrol ediniz.
+          <p style={{ color: "red", marginTop: "24px", textAlign: "center" }}>
+            {t("reservationLookup.bulunamadi")}
           </p>
         )}
       </div>
     </div>
   );
 }
+
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ["common"])),
+    },
+  };
+}
+
+export default withLoading(ReservationLookupPage);
