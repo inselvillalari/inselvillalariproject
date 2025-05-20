@@ -10,16 +10,18 @@ import {
 } from "@mui/material";
 import { CheckCircleOutline, Print } from "@mui/icons-material";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { useTranslation } from "next-i18next";
 import withLoading from "../../common/withLoading";
 
 function ReservationSuccess() {
+  const { t } = useTranslation("common");
   const reservation = useSelector((state) => state.reservation);
   const componentRef = useRef();
 
   if (!reservation || Object.keys(reservation).length === 0) {
     return (
       <Box sx={{ textAlign: "center", mt: 10 }}>
-        <Typography variant="h6">Rezervasyon bilgisi bulunamadı.</Typography>
+        <Typography variant="h6">{t("reservationSuccess.bilgiYok")}</Typography>
       </Box>
     );
   }
@@ -46,58 +48,89 @@ function ReservationSuccess() {
         <Box textAlign="center" mb={4}>
           <CheckCircleOutline sx={{ fontSize: 48, color: "#C8A97E" }} />
           <Typography variant="h5" fontWeight="bold" mt={2}>
-            Rezervasyon Başarılı
+            {t("reservationSuccess.basarili")}
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            Rezervasyon Numaranız:{" "}
+            {t("reservationSuccess.kodunuz")}{" "}
             <strong style={{ color: "#C8A97E" }}>
               {reservation?.code || "RSV-XXXX-XXX"}
             </strong>
           </Typography>
         </Box>
 
-        <Section title="Villa Bilgileri">
-          <Info label="Villa" value={reservation?.villa} />
+        <Section title={t("reservationSuccess.villaBilgileri")}>
           <Info
-            label="Giriş Tarihi"
+            label={t("reservationSuccess.villa")}
+            value={reservation?.villa}
+          />
+          <Info
+            label={t("reservationSuccess.girisTarihi")}
             value={formatDate(reservation?.entryDate)}
           />
           <Info
-            label="Çıkış Tarihi"
+            label={t("reservationSuccess.cikisTarihi")}
             value={formatDate(reservation?.exitDate)}
           />
-          <Info label="Toplam Gece" value={reservation?.totalNights} />
           <Info
-            label="Isıtmalı Havuz"
-            value={reservation?.heatedPool ? "Evet" : "Hayır"}
+            label={t("reservationSuccess.toplamGece")}
+            value={reservation?.totalNights}
           />
           <Info
-            label="Beşik Talebi"
-            value={reservation?.wantsCrib ? "Evet" : "Hayır"}
+            label={t("reservationSuccess.isitmaliHavuz")}
+            value={
+              reservation?.heatedPool
+                ? t("reservationSuccess.evet")
+                : t("reservationSuccess.hayir")
+            }
+          />
+          <Info
+            label={t("reservationSuccess.besikTalebi")}
+            value={
+              reservation?.wantsCrib
+                ? t("reservationSuccess.evet")
+                : t("reservationSuccess.hayir")
+            }
           />
         </Section>
 
-        <Section title="Kiralayan Bilgileri">
-          <Info label="Ad Soyad" value={reservation?.hirerName} />
+        <Section title={t("reservationSuccess.kiralayanBilgileri")}>
           <Info
-            label="Kimlik / Pasaport No"
+            label={t("reservationSuccess.adSoyad")}
+            value={reservation?.hirerName}
+          />
+          <Info
+            label={t("reservationSuccess.kimlik")}
             value={reservation?.hirerIdNumber}
           />
-          <Info label="Email" value={reservation?.email} />
-          <Info label="Telefon" value={reservation?.phone} />
-          <Info label="Yetişkin" value={reservation?.adults} />
-          <Info label="Çocuk" value={reservation?.children} />
+          <Info
+            label={t("reservationSuccess.email")}
+            value={reservation?.email}
+          />
+          <Info
+            label={t("reservationSuccess.telefon")}
+            value={reservation?.phone}
+          />
+          <Info
+            label={t("reservationSuccess.yetiskin")}
+            value={reservation?.adults}
+          />
+          <Info
+            label={t("reservationSuccess.cocuk")}
+            value={reservation?.children}
+          />
         </Section>
 
         {Array.isArray(reservation?.extraAdults) &&
           reservation.extraAdults.length > 0 && (
-            <Section title="Ek Yetişkin Bilgileri">
+            <Section title={t("reservationSuccess.ekYetiskin")}>
               {reservation.extraAdults.map((adult, index) => (
                 <Info
                   key={index}
-                  label={`Yetişkin ${index + 1}`}
+                  label={`${t("reservationSuccess.yetiskin")} ${index + 1}`}
                   value={`${adult.name || "-"}${
-                    adult.age ? ` (${adult.age} yaşında)` : ""
+                    adult.age
+                      ? ` (${adult.age} ${t("reservationSuccess.yasinda")})`
+                      : ""
                   }`}
                 />
               ))}
@@ -106,30 +139,33 @@ function ReservationSuccess() {
 
         {Array.isArray(reservation?.extraChildren) &&
           reservation.extraChildren.length > 0 && (
-            <Section title="Çocuk Bilgileri">
+            <Section title={t("reservationSuccess.cocukBilgisi")}>
               {reservation.extraChildren.map((child, index) => (
                 <Info
                   key={index}
-                  label={`Çocuk ${index + 1}`}
+                  label={`${t("reservationSuccess.cocuk")} ${index + 1}`}
                   value={`${child.name || "-"}${
-                    child.age ? ` (${child.age} yaşında)` : ""
+                    child.age
+                      ? ` (${child.age} ${t("reservationSuccess.yasinda")})`
+                      : ""
                   }`}
                 />
               ))}
             </Section>
           )}
 
-        <Section title="Ödeme Özeti">
+        <Section title={t("reservationSuccess.odemeOzeti")}>
           <Info
-            label="Villa Ücreti"
+            label={t("reservationSuccess.villaUcreti")}
             value={formatTL(reservation?.totalVillaPrice)}
           />
           {reservation?.heatedPool && (
             <Info
-              label="Isıtmalı Havuz Ücreti"
+              label={t("reservationSuccess.havuzUcreti")}
               value={formatTL(reservation?.totalHeatedPoolPrice)}
             />
           )}
+
           <Typography
             variant="h6"
             fontWeight="bold"
@@ -137,19 +173,17 @@ function ReservationSuccess() {
             mt={2}
             mb={1}
           >
-            Genel Toplam: {formatTL(reservation?.grandTotal)}
+            {t("reservationSuccess.genelToplam")}:{" "}
+            {formatTL(reservation?.grandTotal)}
           </Typography>
 
           <Typography variant="body2" color="text.secondary" mt={2}>
-            Toplam tutarın <strong>%30'u</strong> online ödeme olarak
-            alınmıştır. Kalan bakiye, giriş esnasında banka aracılığıyla tahsil
-            edilecektir. Depozito girişte banka yoluyla ödenecek. Çıkışta
-            kontroller yapıldıktan sonra banka aracılığıyla iade edilecektir.
+            {t("reservationSuccess.odemeAciklama")}
           </Typography>
+
           {reservation?.heatedPool && (
             <Typography variant="body2" color="text.secondary" mt={1}>
-              Isıtmalı havuz tercihiniz doğrultusunda <strong>ek ücret</strong>{" "}
-              fiyata dahil edilmiştir.
+              {t("reservationSuccess.havuzBilgisi")}
             </Typography>
           )}
         </Section>
@@ -169,7 +203,7 @@ function ReservationSuccess() {
             fontWeight: "600",
           }}
         >
-          Sayfayı Yazdır
+          {t("reservationSuccess.yazdir")}
         </Button>
       </Box>
     </Box>

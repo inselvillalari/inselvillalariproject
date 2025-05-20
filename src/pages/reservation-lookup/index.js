@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import withLoading from "../../common/withLoading";
+import { useTranslation } from "next-i18next";
 
 function ReservationLookupPage() {
+  const { t } = useTranslation("common");
+
   const [code, setCode] = useState("");
   const [reservation, setReservation] = useState(null);
   const [notFound, setNotFound] = useState(false);
@@ -66,7 +69,7 @@ function ReservationLookupPage() {
             marginBottom: "30px",
           }}
         >
-          Rezervasyon Sorgulama
+          {t("reservationLookup.rezervasyonSorgulama")}
         </h2>
 
         <div style={{ marginBottom: "24px" }}>
@@ -78,13 +81,13 @@ function ReservationLookupPage() {
               display: "block",
             }}
           >
-            Rezervasyon Numarası
+            {t("reservationLookup.rezervasyonKodu")}
           </label>
           <input
             type="text"
             value={code}
             onChange={(e) => setCode(e.target.value)}
-            placeholder="Örnek: RSV-2024-001"
+            placeholder={t("reservationLookup.rezervasyonOrnek")}
             style={{
               width: "100%",
               padding: "10px",
@@ -110,7 +113,7 @@ function ReservationLookupPage() {
             fontFamily: "'Poppins', sans-serif",
           }}
         >
-          Sorgula
+          {t("reservationLookup.sorgula")}
         </button>
 
         {reservation && (
@@ -125,30 +128,38 @@ function ReservationLookupPage() {
                 paddingBottom: "8px",
               }}
             >
-              Rezervasyon Bilgileri
+              {t("reservationLookup.rezervasyonBilgileri")}
             </h3>
             <p>
-              <strong>Rezervasyon Kodu:</strong> {reservation.code}
+              <strong>{t("reservationLookup.kod")}:</strong> {reservation.code}
             </p>
             <p>
-              <strong>Villa:</strong> {reservation.villa}
+              <strong>{t("reservationLookup.villa")}:</strong>{" "}
+              {reservation.villa}
             </p>
             <p>
-              <strong>Giriş Tarihi:</strong> {reservation.entryDate}
+              <strong>{t("reservationLookup.girisTarihi")}:</strong>{" "}
+              {reservation.entryDate}
             </p>
             <p>
-              <strong>Çıkış Tarihi:</strong> {reservation.exitDate}
+              <strong>{t("reservationLookup.cikisTarihi")}:</strong>{" "}
+              {reservation.exitDate}
             </p>
             <p>
-              <strong>Toplam Gece:</strong> {reservation.totalNights}
+              <strong>{t("reservationLookup.toplamGece")}:</strong>{" "}
+              {reservation.totalNights}
             </p>
             <p>
-              <strong>Isıtmalı Havuz:</strong>{" "}
-              {reservation.heatedPool ? "Evet" : "Hayır"}
+              <strong>{t("reservationLookup.isitmaliHavuz")}:</strong>{" "}
+              {reservation.heatedPool
+                ? t("reservationLookup.evet")
+                : t("reservationLookup.hayir")}
             </p>
             <p>
-              <strong>Beşik Talebi:</strong>{" "}
-              {reservation.wantsCrib ? "Evet" : "Hayır"}
+              <strong>{t("reservationLookup.besik")}:</strong>{" "}
+              {reservation.wantsCrib
+                ? t("reservationLookup.evet")
+                : t("reservationLookup.hayir")}
             </p>
 
             <h3
@@ -162,25 +173,31 @@ function ReservationLookupPage() {
                 paddingBottom: "8px",
               }}
             >
-              Kiralayan Bilgileri
+              {t("reservationLookup.kiralayanBilgileri")}
             </h3>
             <p>
-              <strong>Ad Soyad:</strong> {reservation.hirerName}
+              <strong>{t("reservationLookup.adSoyad")}:</strong>{" "}
+              {reservation.hirerName}
             </p>
             <p>
-              <strong>Kimlik / Pasaport:</strong> {reservation.hirerIdNumber}
+              <strong>{t("reservationLookup.kimlik")}:</strong>{" "}
+              {reservation.hirerIdNumber}
             </p>
             <p>
-              <strong>Email:</strong> {reservation.email}
+              <strong>{t("reservationLookup.email")}:</strong>{" "}
+              {reservation.email}
             </p>
             <p>
-              <strong>Telefon:</strong> {reservation.phone}
+              <strong>{t("reservationLookup.telefon")}:</strong>{" "}
+              {reservation.phone}
             </p>
             <p>
-              <strong>Yetişkin:</strong> {reservation.adults}
+              <strong>{t("reservationLookup.yetiskin")}:</strong>{" "}
+              {reservation.adults}
             </p>
             <p>
-              <strong>Çocuk:</strong> {reservation.children}
+              <strong>{t("reservationLookup.cocuk")}:</strong>{" "}
+              {reservation.children}
             </p>
 
             <h3
@@ -194,10 +211,10 @@ function ReservationLookupPage() {
                 paddingBottom: "8px",
               }}
             >
-              Ödeme
+              {t("reservationLookup.odeme")}
             </h3>
             <p>
-              <strong>Toplam Ücret:</strong>{" "}
+              <strong>{t("reservationLookup.toplamUcret")}:</strong>{" "}
               {reservation.totalPrice.toLocaleString("tr-TR")} TL
             </p>
 
@@ -222,12 +239,10 @@ function ReservationLookupPage() {
                   borderRadius: "6px",
                   fontWeight: "600",
                   fontSize: "14px",
-                  fontFamily: "'Poppins', sans-serif",
                 }}
               >
-                Rezervasyonu İptal Et
+                {t("reservationLookup.iptalEt")}
               </a>
-
               <a
                 href="https://wa.me/905324905307?text=Merhaba,%20rezervasyonumda%20değişiklik%20yapmak%20istiyorum."
                 target="_blank"
@@ -240,10 +255,9 @@ function ReservationLookupPage() {
                   borderRadius: "6px",
                   fontWeight: "600",
                   fontSize: "14px",
-                  fontFamily: "'Poppins', sans-serif",
                 }}
               >
-                Rezervasyon Değişikliği
+                {t("reservationLookup.degistir")}
               </a>
             </div>
           </div>
@@ -251,7 +265,7 @@ function ReservationLookupPage() {
 
         {notFound && (
           <p style={{ color: "red", marginTop: "24px", textAlign: "center" }}>
-            Rezervasyon bulunamadı. Lütfen numarayı kontrol ediniz.
+            {t("reservationLookup.bulunamadi")}
           </p>
         )}
       </div>
