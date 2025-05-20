@@ -11,7 +11,7 @@ function ReservationLookupPage() {
   const [notFound, setNotFound] = useState(false);
 
   const dummyReservation = {
-    code: "RSV-2025-001",
+    code: "RSV-3461-007",
     villa: "Villa Capella",
     entryDate: "2025-06-15",
     exitDate: "2025-06-20",
