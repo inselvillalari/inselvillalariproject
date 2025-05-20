@@ -19,7 +19,7 @@ const Capella = () => {
       {/* ✅ SEO bilgileri */}
       <Head>
         <title>
-          Villa Capella | Capella | İnsel | İnsel Villaları | inselvillalari
+          Villa Capella
         </title>
         <meta
           name="description"

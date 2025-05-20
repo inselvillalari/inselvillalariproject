@@ -19,7 +19,7 @@ const Gredi = () => {
       {/* ✅ SEO Head */}
       <Head>
         <title>
-          Villa Gredi | Gredi | İnsel | İnsel Villaları | inselvillalari
+          Villa Gredi
         </title>
         <meta
           name="description"

@@ -1,203 +1,211 @@
-// pages/ReservationSuccess.js
-import React from "react";
+import React, { useRef } from "react";
 import { useSelector } from "react-redux";
-import Head from "next/head";
+import {
+  Box,
+  Typography,
+  Card,
+  CardContent,
+  Grid,
+  Button,
+} from "@mui/material";
+import { CheckCircleOutline, Print } from "@mui/icons-material";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import withLoading from "../../common/withLoading";
 
-export default function ReservationSuccess() {
+function ReservationSuccess() {
   const reservation = useSelector((state) => state.reservation);
+  const componentRef = useRef();
+
+  if (!reservation || Object.keys(reservation).length === 0) {
+    return (
+      <Box sx={{ textAlign: "center", mt: 10 }}>
+        <Typography variant="h6">Rezervasyon bilgisi bulunamadı.</Typography>
+      </Box>
+    );
+  }
+
+  const formatTL = (value) =>
+    value != null ? `${value.toLocaleString("tr-TR")} TL` : "-";
+
+  const formatDate = (date) =>
+    date ? new Date(date).toLocaleDateString("tr-TR") : "-";
 
   return (
-    <>
-      <Head>
-        <style>{`
-          @media print {
-            body * {
-              visibility: hidden;
-            }
-            .container, .container * {
-              visibility: visible;
-            }
-            .container {
-              position: absolute;
-              left: 0;
-              top: 0;
-              width: 100% !important;
-              margin: 0 !important;
-              padding: 0 !important;
-              box-shadow: none !important;
-            }
-            button {
-              display: none !important;
-            }
-          }
-        `}</style>
-      </Head>
-      <div
-        className="container"
-        style={{ marginTop: "150px", marginBottom: "150px" }}
+    <Box sx={{ py: 10, px: 2, backgroundColor: "#f7f7f7", minHeight: "100vh" }}>
+      <Box
+        ref={componentRef}
+        sx={{
+          maxWidth: 800,
+          mx: "auto",
+          backgroundColor: "#fff",
+          borderRadius: 2,
+          boxShadow: 3,
+          p: 4,
+        }}
       >
-        <div
-          style={{
-            maxWidth: "700px",
-            margin: "0 auto",
-            background: "#fff",
-            border: "1px solid #eee",
-            borderRadius: "10px",
-            padding: "40px",
-            boxShadow: "0 2px 8px rgba(0,0,0,0.05)",
-            fontFamily: "'Poppins', sans-serif",
+        <Box textAlign="center" mb={4}>
+          <CheckCircleOutline sx={{ fontSize: 48, color: "#C8A97E" }} />
+          <Typography variant="h5" fontWeight="bold" mt={2}>
+            Rezervasyon Başarılı
+          </Typography>
+          <Typography variant="body2" color="text.secondary">
+            Rezervasyon Numaranız:{" "}
+            <strong style={{ color: "#C8A97E" }}>
+              {reservation?.code || "RSV-XXXX-XXX"}
+            </strong>
+          </Typography>
+        </Box>
+
+        <Section title="Villa Bilgileri">
+          <Info label="Villa" value={reservation?.villa} />
+          <Info
+            label="Giriş Tarihi"
+            value={formatDate(reservation?.entryDate)}
+          />
+          <Info
+            label="Çıkış Tarihi"
+            value={formatDate(reservation?.exitDate)}
+          />
+          <Info label="Toplam Gece" value={reservation?.totalNights} />
+          <Info
+            label="Isıtmalı Havuz"
+            value={reservation?.heatedPool ? "Evet" : "Hayır"}
+          />
+          <Info
+            label="Beşik Talebi"
+            value={reservation?.wantsCrib ? "Evet" : "Hayır"}
+          />
+        </Section>
+
+        <Section title="Kiralayan Bilgileri">
+          <Info label="Ad Soyad" value={reservation?.hirerName} />
+          <Info
+            label="Kimlik / Pasaport No"
+            value={reservation?.hirerIdNumber}
+          />
+          <Info label="Email" value={reservation?.email} />
+          <Info label="Telefon" value={reservation?.phone} />
+          <Info label="Yetişkin" value={reservation?.adults} />
+          <Info label="Çocuk" value={reservation?.children} />
+        </Section>
+
+        {Array.isArray(reservation?.extraAdults) &&
+          reservation.extraAdults.length > 0 && (
+            <Section title="Ek Yetişkin Bilgileri">
+              {reservation.extraAdults.map((adult, index) => (
+                <Info
+                  key={index}
+                  label={`Yetişkin ${index + 1}`}
+                  value={`${adult.name || "-"}${
+                    adult.age ? ` (${adult.age} yaşında)` : ""
+                  }`}
+                />
+              ))}
+            </Section>
+          )}
+
+        {Array.isArray(reservation?.extraChildren) &&
+          reservation.extraChildren.length > 0 && (
+            <Section title="Çocuk Bilgileri">
+              {reservation.extraChildren.map((child, index) => (
+                <Info
+                  key={index}
+                  label={`Çocuk ${index + 1}`}
+                  value={`${child.name || "-"}${
+                    child.age ? ` (${child.age} yaşında)` : ""
+                  }`}
+                />
+              ))}
+            </Section>
+          )}
+
+        <Section title="Ödeme Özeti">
+          <Info
+            label="Villa Ücreti"
+            value={formatTL(reservation?.totalVillaPrice)}
+          />
+          {reservation?.heatedPool && (
+            <Info
+              label="Isıtmalı Havuz Ücreti"
+              value={formatTL(reservation?.totalHeatedPoolPrice)}
+            />
+          )}
+          <Typography
+            variant="h6"
+            fontWeight="bold"
+            color="#C8A97E"
+            mt={2}
+            mb={1}
+          >
+            Genel Toplam: {formatTL(reservation?.grandTotal)}
+          </Typography>
+
+          <Typography variant="body2" color="text.secondary" mt={2}>
+            Toplam tutarın <strong>%30'u</strong> online ödeme olarak
+            alınmıştır. Kalan bakiye, giriş esnasında banka aracılığıyla tahsil
+            edilecektir. Depozito girişte banka yoluyla ödenecek. Çıkışta
+            kontroller yapıldıktan sonra banka aracılığıyla iade edilecektir.
+          </Typography>
+          {reservation?.heatedPool && (
+            <Typography variant="body2" color="text.secondary" mt={1}>
+              Isıtmalı havuz tercihiniz doğrultusunda <strong>ek ücret</strong>{" "}
+              fiyata dahil edilmiştir.
+            </Typography>
+          )}
+        </Section>
+      </Box>
+
+      <Box textAlign="center" mt={4}>
+        <Button
+          variant="contained"
+          startIcon={<Print />}
+          onClick={() => window.print()}
+          sx={{
+            backgroundColor: "#C8A97E",
+            "&:hover": { backgroundColor: "#b2906c" },
+            color: "#fff",
+            px: 4,
+            py: 1.5,
+            fontWeight: "600",
           }}
         >
-          <h2
-            style={{
-              textAlign: "center",
-              marginBottom: "10px",
-              fontSize: "24px",
-              fontWeight: "700",
-              color: "#C8A97E",
-              borderBottom: "2px solid #C8A97E",
-              paddingBottom: "10px",
-            }}
-          >
-            Rezervasyon Başarıyla Tamamlandı
-          </h2>
-
-          <p
-            style={{
-              textAlign: "center",
-              fontSize: "14px",
-              color: "#444",
-              marginBottom: "20px",
-            }}
-          >
-            Rezervasyon Numaranız:{" "}
-            <strong style={{ color: "#C8A97E" }}>RSV-2025-001</strong>
-          </p>
-          <h3
-            style={{
-              fontSize: "18px",
-              fontWeight: "600",
-              marginBottom: "10px",
-              borderBottom: "1px solid #eee",
-              paddingBottom: "6px",
-              color: "#C8A97E",
-            }}
-          >
-            Villa Bilgileri
-          </h3>
-          <p>
-            <strong>Villa:</strong> {reservation.villa}
-          </p>
-          <p>
-            <strong>Giriş Tarihi:</strong>{" "}
-            {new Date(reservation.entryDate).toLocaleDateString("tr-TR")}
-          </p>
-          <p>
-            <strong>Çıkış Tarihi:</strong>{" "}
-            {new Date(reservation.exitDate).toLocaleDateString("tr-TR")}
-          </p>
-          <p>
-            <strong>Toplam Gece:</strong> {reservation.totalNights}
-          </p>
-          <p>
-            <strong>Isıtmalı Havuz:</strong>{" "}
-            {reservation.heatedPool ? "Evet" : "Hayır"}
-          </p>
-          <p>
-            <strong>Beşik Talebi:</strong>{" "}
-            {reservation.wantsCrib ? "Evet" : "Hayır"}
-          </p>
-
-          <h3
-            style={{
-              fontSize: "18px",
-              fontWeight: "600",
-              marginTop: "30px",
-              marginBottom: "10px",
-              borderBottom: "1px solid #eee",
-              paddingBottom: "6px",
-              color: "#C8A97E",
-            }}
-          >
-            Kiralayan Bilgileri
-          </h3>
-          <p>
-            <strong>Ad Soyad:</strong> {reservation.hirerName}
-          </p>
-          <p>
-            <strong>Kimlik / Pasaport No:</strong> {reservation.hirerIdNumber}
-          </p>
-          <p>
-            <strong>Email:</strong> {reservation.email}
-          </p>
-          <p>
-            <strong>Telefon:</strong> {reservation.phone}
-          </p>
-          <p>
-            <strong>Yetişkin:</strong> {reservation.adults}
-          </p>
-          <p>
-            <strong>Çocuk:</strong> {reservation.children}
-          </p>
-
-          <h3
-            style={{
-              fontSize: "18px",
-              fontWeight: "600",
-              marginTop: "30px",
-              marginBottom: "10px",
-              borderBottom: "1px solid #eee",
-              paddingBottom: "6px",
-              color: "#C8A97E",
-            }}
-          >
-            Ödeme Özeti
-          </h3>
-          <p>
-            <strong>Villa Ücreti:</strong>{" "}
-            {reservation.totalVillaPrice.toLocaleString("tr-TR")} TL
-          </p>
-          {reservation.heatedPool && (
-            <p>
-              <strong>Isıtmalı Havuz:</strong>{" "}
-              {reservation.totalHeatedPoolPrice.toLocaleString("tr-TR")} TL
-            </p>
-          )}
-          <p
-            style={{
-              fontWeight: "700",
-              fontSize: "18px",
-              marginTop: "10px",
-              color: "#C8A97E",
-            }}
-          >
-            Genel Toplam: {reservation.grandTotal.toLocaleString("tr-TR")} TL
-          </p>
-
-          <p style={{ fontSize: "13px", color: "#777", marginTop: "20px" }}>
-            Ödeme giriş sırasında tahsil edilecektir. Rezervasyon e-postanızı
-            kontrol ediniz.
-          </p>
-          <div style={{ textAlign: "center", marginTop: "30px" }}>
-            <button
-              onClick={() => window.print()}
-              style={{
-                backgroundColor: "#C8A97E",
-                color: "white",
-                border: "none",
-                padding: "10px 20px",
-                borderRadius: "6px",
-                fontWeight: "600",
-                fontSize: "14px",
-                cursor: "pointer",
-                fontFamily: "'Poppins', sans-serif",
-              }}
-            >
-              Sayfayı Yazdır
-            </button>
-          </div>
-        </div>
-      </div>
-    </>
+          Sayfayı Yazdır
+        </Button>
+      </Box>
+    </Box>
   );
 }
+
+const Section = ({ title, children }) => (
+  <Card variant="outlined" sx={{ mb: 3 }}>
+    <CardContent>
+      <Typography variant="subtitle1" fontWeight="bold" gutterBottom>
+        {title}
+      </Typography>
+      {children}
+    </CardContent>
+  </Card>
+);
+
+const Info = ({ label, value }) => (
+  <Grid container spacing={1} mb={0.5}>
+    <Grid item xs={5} md={4}>
+      <Typography variant="body2" fontWeight="500">
+        {label}:
+      </Typography>
+    </Grid>
+    <Grid item xs={7} md={8}>
+      <Typography variant="body2">{value || "-"}</Typography>
+    </Grid>
+  </Grid>
+);
+
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ["common"])),
+    },
+  };
+}
+
+export default withLoading(ReservationSuccess);

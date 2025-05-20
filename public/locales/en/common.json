@@ -15,7 +15,9 @@
     "anasayfa": "Homepage",
     "iletisim": "Contact",
     "hakkimizda": "About Us",
-    "rezervasyon": "Reservation"
+    "rezervasyon": "Reservation",
+    "rezervasyonYap": "Make a Reservation",
+    "rezervasyonSorgula": "Check Reservation"
   },
   "footer": {
     "ulasin": "Contact Us",

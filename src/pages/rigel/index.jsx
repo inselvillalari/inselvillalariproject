@@ -19,7 +19,7 @@ const Rigel = () => {
       {/* ✅ SEO Head */}
       <Head>
         <title>
-          Villa Rigel | Rigel | İnsel | İnsel Villaları | inselvillalari
+          Villa Rigel
         </title>
         <meta
           name="description"

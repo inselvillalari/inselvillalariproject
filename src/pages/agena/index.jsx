@@ -19,7 +19,7 @@ const Agena = () => {
       {/* ✅ SEO Head */}
       <Head>
         <title>
-          Villa Agena | Agena | İnsel | İnsel Villaları | inselvillalari
+          Villa Agena
         </title>
         <meta
           name="description"

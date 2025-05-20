@@ -126,9 +126,56 @@ const Navbar = ({ navbarRef, logoRef, logoClass }) => {
                   <a className="nav-link">{t("navbar.hakkimizda")}</a>
                 </Link>
               </li>
-              <li className="nav-item">
+              {/* Masaüstü dropdown (sadece büyük ekranlarda görünsün) */}
+              <li className="nav-item dropdown desktop-only">
+                <a
+                  className="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  onClick={handleDropdown}
+                  aria-expanded="false"
+                >
+                  {t("navbar.rezervasyon")}
+                </a>
+                <ul className="dropdown-menu">
+                  <li>
+                    <Link
+                      href="/reservation"
+                      locale={currentLocale}
+                      legacyBehavior
+                    >
+                      <a className="dropdown-item">
+                        {t("navbar.rezervasyonYap")}
+                      </a>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/reservation-lookup"
+                      locale={currentLocale}
+                      legacyBehavior
+                    >
+                      <a className="dropdown-item">
+                        {t("navbar.rezervasyonSorgula")}
+                      </a>
+                    </Link>
+                  </li>
+                </ul>
+              </li>
+
+              {/* Mobil görünüm için iki ayrı menü (dropdown değil) */}
+              <li className="nav-item mobile-only">
                 <Link href="/reservation" locale={currentLocale} legacyBehavior>
-                  <a className="nav-link">{t("navbar.rezervasyon")}</a>
+                  <a className="nav-link">{t("navbar.rezervasyonYap")}</a>
+                </Link>
+              </li>
+              <li className="nav-item mobile-only">
+                <Link
+                  href="/reservation-lookup"
+                  locale={currentLocale}
+                  legacyBehavior
+                >
+                  <a className="nav-link">{t("navbar.rezervasyonSorgula")}</a>
                 </Link>
               </li>
               <li className="nav-item">

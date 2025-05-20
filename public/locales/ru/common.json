@@ -15,7 +15,9 @@
     "anasayfa": "Главная страница",
     "iletisim": "Контакты",
     "hakkimizda": "О нас",
-    "rezervasyon": "Бронирование"
+    "rezervasyon": "Бронирование",
+    "rezervasyonYap": "Сделать бронирование",
+    "rezervasyonSorgula": "Проверить бронирование"
   },
   "footer": {
     "ulasin": "Свяжитесь с нами",

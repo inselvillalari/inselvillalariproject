@@ -15,7 +15,9 @@
     "anasayfa": "Anasayfa",
     "iletisim": "İletişim",
     "hakkimizda": "Hakkımızda",
-    "rezervasyon": "Rezervasyon"
+    "rezervasyon": "Rezervasyon",
+    "rezervasyonYap": "Rezervasyon Yap",
+    "rezervasyonSorgula": "Rezervasyon Sorgula"
   },
   "footer": {
     "ulasin": "Bize Ulaşın",
