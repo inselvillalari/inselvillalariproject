@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import PageHeader from "../../../components/Page-header";
-import ProjectIntro from "../../../components/agena/insideViews/ProjectIntro";
 import { useTranslation } from "next-i18next";
 import { withTranslationProps } from "../../../utils/withTranslation";
 import withLoading from "../../../common/withLoading";
 import FsLightbox from "fslightbox-react";
+import InsideViews from "../../../components/insideViews";
 
 const AgenaInsideViews = () => {
   const { t } = useTranslation("common");
@@ -12,7 +12,7 @@ const AgenaInsideViews = () => {
   const [slideIndex, setSlideIndex] = useState(1);
 
   const imageNumbers = [
-    1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18,
+    1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18,
   ];
 
   const sources = imageNumbers.map(
@@ -37,7 +37,7 @@ const AgenaInsideViews = () => {
         image="/assets/img/slid/villasCoverImg/agena.jpeg"
       />
 
-      <ProjectIntro />
+      <InsideViews />
 
       <section className="projdtal">
         <div className="justified-gallery">

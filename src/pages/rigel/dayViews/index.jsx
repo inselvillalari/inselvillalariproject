@@ -1,17 +1,29 @@
-/* eslint-disable @next/next/no-img-element */
-import React from "react";
+import React, { useEffect, useState } from "react";
 import PageHeader from "../../../components/Page-header";
-import ProjectIntro from "../../../components/rigel/dayViews/ProjectIntro";
-import ProjectVideo from "../../../components/Project-Video";
 import { useTranslation } from "next-i18next";
 import { withTranslationProps } from "../../../utils/withTranslation";
 import withLoading from "../../../common/withLoading";
+import FsLightbox from "fslightbox-react";
+import DayViews from "../../../components/dayViews";
 
 const RigelDayViews = () => {
   const { t } = useTranslation("common");
-  React.useEffect(() => {
+  const [toggler, setToggler] = useState(false);
+  const [slideIndex, setSlideIndex] = useState(1);
+
+  const imageNumbers = [1, 2, 3, 4, 5, 6, 7, 8];
+
+  const sources = imageNumbers.map(
+    (num) => `/assets/img/slid/rigel/dayViews/${num}.jpeg`
+  );
+
+  useEffect(() => {
     document.querySelector("body").classList.add("index3");
+    return () => {
+      document.querySelector("body").classList.remove("index3");
+    };
   }, []);
+
   return (
     <>
       <PageHeader
@@ -22,66 +34,33 @@ const RigelDayViews = () => {
         ]}
         image="/assets/img/slid/villasCoverImg/rigel.jpeg"
       />
-      <ProjectIntro />
-      <section className="projdtal">
-        <div className="justified-gallery">
-          <div className="row">
-            <a
-              style={{ cursor: "none" }}
-              className="col-lg-4 col-xl-3 col-md-12"
-            >
-              <img alt="" src="/assets/img/slid/rigel/dayViews/1.jpeg" />
-            </a>
-            <a
-              style={{ cursor: "none" }}
-              className="col-lg-4 col-xl-3 col-md-6"
-            >
-              <img alt="" src="/assets/img/slid/rigel/dayViews/2.jpeg" />
-            </a>
-            <a
-              style={{ cursor: "none" }}
-              className="col-lg-4 col-xl-3 col-md-6"
-            >
-              <img alt="" src="/assets/img/slid/rigel/dayViews/3.jpeg" />
-            </a>
-            <a
-              style={{ cursor: "none" }}
-              className="col-lg-4 col-xl-3 col-md-12"
-            >
-              <img alt="" src="/assets/img/slid/rigel/dayViews/4.jpeg" />
-            </a>
-          </div>
-        </div>
-      </section>
 
-      {/* <ProjectVideo /> */}
+      <DayViews />
 
       <section className="projdtal">
         <div className="justified-gallery">
           <div className="row">
-            <a
-              style={{ cursor: "none" }}
-              className="col-lg-4 col-xl-3 col-md-6"
-            >
-              <img alt="" src="/assets/img/slid/rigel/dayViews/5.jpeg" />
-            </a>
-            <a
-              style={{ cursor: "none" }}
-              className="col-lg-4 col-xl-3 col-md-6"
-            >
-              <img alt="" src="/assets/img/slid/rigel/dayViews/6.jpeg" />
-            </a>
-            {/* <a
-              style={{ cursor: "none" }}
-              className="col-lg-4 col-xl-3 col-md-6"
-            >
-              <img alt="" src="/assets/img/slid/rigel/dayViews/7.jpeg" />
-            </a> */}
+            {sources.map((src, index) => (
+              <a
+                key={index}
+                className="col-lg-4 col-xl-3 col-md-6"
+                style={{ cursor: "pointer" }}
+                onClick={() => {
+                  setSlideIndex(index + 1); // 1 tabanlı index
+                  setToggler(!toggler);
+                }}
+              >
+                <img alt={`indoor ${index + 1}`} src={src} />
+              </a>
+            ))}
           </div>
         </div>
       </section>
+
+      <FsLightbox toggler={toggler} sources={sources} slide={slideIndex} />
     </>
   );
 };
+
 export const getStaticProps = withTranslationProps(["common"]);
 export default withLoading(RigelDayViews);

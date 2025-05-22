@@ -58,6 +58,68 @@ const RigelPage = () => {
                 </h3>
               </div>
             </div>
+            <Link href="/rigel/nightInsideViews">
+              <div
+                className="col-lg-6 items residential"
+                style={{ marginBottom: "50px" }}
+              >
+                <div className="item">
+                  <div className="img">
+                    <img
+                      alt=""
+                      src="/assets/img/slid/rigel/nightInsideViews/1.jpeg"
+                      className="gallery-img-class"
+                    />
+                  </div>
+                  <div
+                    style={{
+                      position: "absolute",
+                      bottom: 0,
+                      left: 0,
+                      backgroundColor: "#fff",
+                      color: "#111",
+                      padding: "10px 16px",
+                      fontWeight: "bold",
+                      borderTopRightRadius: "6px",
+                      zIndex: 2,
+                    }}
+                  >
+                    <h6>{t("geceIcMekanGorunumu")}</h6>
+                  </div>
+                </div>
+              </div>
+            </Link>
+            <Link href="/rigel/nightViews">
+              <div
+                className="col-lg-6 items interior"
+                style={{ marginBottom: "50px" }}
+              >
+                <div className="item">
+                  <div className="img">
+                    <img
+                      alt=""
+                      src="/assets/img/slid/rigel/nightViews/1.jpeg"
+                      className="gallery-img-class"
+                    />
+                  </div>
+                  <div
+                    style={{
+                      position: "absolute",
+                      bottom: 0,
+                      left: 0,
+                      backgroundColor: "#fff",
+                      color: "#111",
+                      padding: "10px 16px",
+                      fontWeight: "bold",
+                      borderTopRightRadius: "6px",
+                      zIndex: 2,
+                    }}
+                  >
+                    <h6>{t("geceGorunumleri")}</h6>
+                  </div>
+                </div>
+              </div>
+            </Link>
             <Link href="/rigel/insideViews">
               <div
                 className="col-lg-6 items interior"
@@ -67,7 +129,7 @@ const RigelPage = () => {
                   <div className="img">
                     <img
                       alt=""
-                      src="/assets/img/slid/rigel/indoor/2.jpeg"
+                      src="/assets/img/slid/rigel/indoor/3.jpeg"
                       className="gallery-img-class"
                     />
                   </div>
@@ -120,44 +182,16 @@ const RigelPage = () => {
                 </div>
               </div>
             </Link>
-            <Link href="/rigel/nightViews">
+            <Link href="/rigel/activities">
               <div
-                className="col-lg-6 items residential interior"
+                className="col-lg-6 items residential"
                 style={{ marginBottom: "50px" }}
               >
                 <div className="item">
                   <div className="img">
                     <img
                       alt=""
-                      src="/assets/img/slid/rigel/nightViews/1.jpeg"
-                      className="gallery-img-class"
-                    />
-                  </div>
-                  <div
-                    style={{
-                      position: "absolute",
-                      bottom: 0,
-                      left: 0,
-                      backgroundColor: "#fff",
-                      color: "#111",
-                      padding: "10px 16px",
-                      fontWeight: "bold",
-                      borderTopRightRadius: "6px",
-                      zIndex: 2,
-                    }}
-                  >
-                    <h6>{t("geceGorunumleri")}</h6>
-                  </div>
-                </div>
-              </div>
-            </Link>
-            <Link href="/rigel/activities">
-              <div className="col-lg-6 items residential">
-                <div className="item">
-                  <div className="img">
-                    <img
-                      alt=""
-                      src="/assets/img/slid/rigel/activities/2.jpeg"
+                      src="/assets/img/slid/rigel/activities/1.jpeg"
                       className="gallery-img-class"
                     />
                   </div>
