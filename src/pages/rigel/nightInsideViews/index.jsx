@@ -11,7 +11,7 @@ const RigelInsideViews = () => {
   const [toggler, setToggler] = useState(false);
   const [slideIndex, setSlideIndex] = useState(1);
 
-  const imageNumbers = [1, 2, 3, 4, 6];
+  const imageNumbers = [1, 2, 3, 4, 5, 6];
 
   const sources = imageNumbers.map(
     (num) => `/assets/img/slid/rigel/nightInsideViews/${num}.jpeg`
@@ -50,7 +50,16 @@ const RigelInsideViews = () => {
                   setToggler(!toggler);
                 }}
               >
-                <img alt={`indoor ${index + 1}`} src={src} />
+                <img
+                  alt={`indoor ${index + 1}`}
+                  src={src}
+                  style={{
+                    width: "100%",
+                    maxHeight: "500px",
+                    objectFit: "cover",
+                    display: "block",
+                  }}
+                />
               </a>
             ))}
           </div>
