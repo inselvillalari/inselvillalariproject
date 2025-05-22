@@ -63,6 +63,68 @@ const CapellaPage = () => {
                 </h3>
               </div>
             </div>
+            <Link href="/capella/nightInsideViews">
+              <div
+                className="col-lg-6 items residential"
+                style={{ marginBottom: "50px" }}
+              >
+                <div className="item">
+                  <div className="img">
+                    <img
+                      alt=""
+                      src="/assets/img/slid/capella/nightInsideViews/2.jpeg"
+                      className="gallery-img-class"
+                    />
+                  </div>
+                  <div
+                    style={{
+                      position: "absolute",
+                      bottom: 0,
+                      left: 0,
+                      backgroundColor: "#fff",
+                      color: "#111",
+                      padding: "10px 16px",
+                      fontWeight: "bold",
+                      borderTopRightRadius: "6px",
+                      zIndex: 2,
+                    }}
+                  >
+                    <h6>{t("geceIcMekanGorunumu")}</h6>
+                  </div>
+                </div>
+              </div>
+            </Link>
+            <Link href="/capella/nightViews">
+              <div
+                className="col-lg-6 items interior"
+                style={{ marginBottom: "50px" }}
+              >
+                <div className="item">
+                  <div className="img">
+                    <img
+                      alt=""
+                      src="/assets/img/slid/capella/nightViews/1.jpeg"
+                      className="gallery-img-class"
+                    />
+                  </div>
+                  <div
+                    style={{
+                      position: "absolute",
+                      bottom: 0,
+                      left: 0,
+                      backgroundColor: "#fff",
+                      color: "#111",
+                      padding: "10px 16px",
+                      fontWeight: "bold",
+                      borderTopRightRadius: "6px",
+                      zIndex: 2,
+                    }}
+                  >
+                    <h6>{t("geceGorunumleri")}</h6>
+                  </div>
+                </div>
+              </div>
+            </Link>
             <Link href="/capella/insideViews">
               <div
                 className="col-lg-6 items interior"
@@ -125,25 +187,11 @@ const CapellaPage = () => {
                 </div>
               </div>
             </Link>
-            {/* <Link href="/capella/nightViews">
-              <div className="col-lg-6 items residential interior">
-                <div className="item">
-                  <div className="img">
-                    <img
-                      alt=""
-                      src="/assets/img/slid/capella/nightViews/1.jpeg"
-                    />
-                  </div>
-                  <div className="cont vis">
-                    <h5>Gece Görünümleri</h5>
-                    <span>Architecture</span>
-                    <span>Modern</span>
-                  </div>
-                </div>
-              </div>
-            </Link> */}
             <Link href="/capella/activities">
-              <div className="col-lg-6 items residential">
+              <div
+                className="col-lg-6 items residential"
+                style={{ marginBottom: "50px" }}
+              >
                 <div className="item">
                   <div className="img">
                     <img

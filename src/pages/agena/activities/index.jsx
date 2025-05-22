@@ -1,11 +1,11 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
 import PageHeader from "../../../components/Page-header";
-import ProjectIntro from "../../../components/agena/activities/ProjectIntro";
 import ProjectVideo from "../../../components/Project-Video";
 import { useTranslation } from "next-i18next";
 import { withTranslationProps } from "../../../utils/withTranslation";
 import withLoading from "../../../common/withLoading";
+import Activities from "../../../components/activities";
 
 const AgenaActivities = () => {
   const { t } = useTranslation("common");
@@ -22,7 +22,7 @@ const AgenaActivities = () => {
         ]}
         image="/assets/img/slid/villasCoverImg/agena.jpeg"
       />
-      <ProjectIntro />
+      <Activities />
       <section className="projdtal">
         <div className="justified-gallery">
           <div className="row">
