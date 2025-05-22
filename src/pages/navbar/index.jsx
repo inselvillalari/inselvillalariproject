@@ -72,7 +72,13 @@ const Navbar = ({ navbarRef, logoRef, logoClass }) => {
 
   return (
     <>
-      <nav className="navbar change navbar-expand-lg" ref={navbarRef}>
+      <nav
+        className="navbar change navbar-expand-lg"
+        ref={navbarRef}
+        style={{
+          color: router.pathname === "/" ? "#fff" : "inherit",
+        }}
+      >
         <div className="container">
           <a className={`logo ${logoClass && logoClass}`} href="/"></a>
           <div className="d-flex">
@@ -98,32 +104,62 @@ const Navbar = ({ navbarRef, logoRef, logoClass }) => {
             <ul className="navbar-nav ml-auto">
               <li className="nav-item">
                 <Link href="/agena" locale={currentLocale} legacyBehavior>
-                  <a className="nav-link">Agena</a>
+                  <a
+                    style={{ color: router.pathname === "/" ? "#fff" : "#000" }}
+                    className="nav-link"
+                  >
+                    Agena
+                  </a>
                 </Link>
               </li>
               <li className="nav-item">
                 <Link href="/capella" locale={currentLocale} legacyBehavior>
-                  <a className="nav-link">Capella</a>
+                  <a
+                    style={{ color: router.pathname === "/" ? "#fff" : "#000" }}
+                    className="nav-link"
+                  >
+                    Capella
+                  </a>
                 </Link>
               </li>
               <li className="nav-item">
                 <Link href="/gredi" locale={currentLocale} legacyBehavior>
-                  <a className="nav-link">Gredi</a>
+                  <a
+                    style={{ color: router.pathname === "/" ? "#fff" : "#000" }}
+                    className="nav-link"
+                  >
+                    Gredi
+                  </a>
                 </Link>
               </li>
               <li className="nav-item">
                 <Link href="/rigel" locale={currentLocale} legacyBehavior>
-                  <a className="nav-link">Rigel</a>
+                  <a
+                    style={{ color: router.pathname === "/" ? "#fff" : "#000" }}
+                    className="nav-link"
+                  >
+                    Rigel
+                  </a>
                 </Link>
               </li>
               <li className="nav-item md-ml0" style={{ marginLeft: "60px" }}>
                 <Link href="/" locale={currentLocale} legacyBehavior>
-                  <a className="nav-link">{t("navbar.anasayfa")}</a>
+                  <a
+                    style={{ color: router.pathname === "/" ? "#fff" : "#000" }}
+                    className="nav-link"
+                  >
+                    {t("navbar.anasayfa")}
+                  </a>
                 </Link>
               </li>
               <li className="nav-item">
                 <Link href="/about" locale={currentLocale} legacyBehavior>
-                  <a className="nav-link">{t("navbar.hakkimizda")}</a>
+                  <a
+                    style={{ color: router.pathname === "/" ? "#fff" : "#000" }}
+                    className="nav-link"
+                  >
+                    {t("navbar.hakkimizda")}
+                  </a>
                 </Link>
               </li>
               {/* Masaüstü dropdown (sadece büyük ekranlarda görünsün) */}
@@ -134,6 +170,7 @@ const Navbar = ({ navbarRef, logoRef, logoClass }) => {
                   role="button"
                   onClick={handleDropdown}
                   aria-expanded="false"
+                  style={{ color: router.pathname === "/" ? "#fff" : "#000" }}
                 >
                   {t("navbar.rezervasyon")}
                 </a>
@@ -180,7 +217,12 @@ const Navbar = ({ navbarRef, logoRef, logoClass }) => {
               </li>
               <li className="nav-item">
                 <Link href="/contact" locale={currentLocale} legacyBehavior>
-                  <a className="nav-link">{t("navbar.iletisim")}</a>
+                  <a
+                    className="nav-link"
+                    style={{ color: router.pathname === "/" ? "#fff" : "#000" }}
+                  >
+                    {t("navbar.iletisim")}
+                  </a>
                 </Link>
               </li>
               <li className="nav-item ml-5 d-none d-md-block">
