@@ -11,7 +11,7 @@ const CapellaNightViews = () => {
   const [toggler, setToggler] = useState(false);
   const [slideIndex, setSlideIndex] = useState(1);
 
-  const imageNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+  const imageNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
   const sources = imageNumbers.map(
     (num) => `/assets/img/slid/capella/nightViews/${num}.jpeg`

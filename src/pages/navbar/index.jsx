@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import getSiblings from "../../common/getSiblings";
 import LanguageSwitcher from "../../components/languageSwitcher";
@@ -10,6 +10,8 @@ const Navbar = ({ navbarRef, logoRef, logoClass }) => {
   const { t } = useTranslation("common");
   const router = useRouter();
   const currentLocale = router.locale;
+  const isHome = router.pathname === "/";
+  const [isDesktop, setIsDesktop] = useState(false);
 
   const handleDropdown = (e) => {
     getSiblings(e.target.parentElement)
@@ -70,13 +72,30 @@ const Navbar = ({ navbarRef, logoRef, logoClass }) => {
     };
   }, [router.events]);
 
+  useEffect(() => {
+    const handleResize = () => {
+      setIsDesktop(window.innerWidth >= 992);
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const linkStyle = {
+    color: isHome && isDesktop ? "#fff" : "#000",
+  };
+
   return (
     <>
       <nav
         className="navbar change navbar-expand-lg"
         ref={navbarRef}
         style={{
-          color: router.pathname === "/" ? "#fff" : "inherit",
+          color: !isDesktop
+            ? "#b19777"
+            : router.pathname === "/"
+            ? "white"
+            : "black",
         }}
       >
         <div className="container">
@@ -93,7 +112,12 @@ const Navbar = ({ navbarRef, logoRef, logoClass }) => {
               aria-label="Toggle navigation"
             >
               <span className="icon-bar">
-                <i className="fas fa-bars" style={{ color: "#000" }}></i>
+                <i
+                  className="fas fa-bars"
+                  style={{
+                    color: "#b19777",
+                  }}
+                ></i>
               </span>
             </button>
             <div className="d-block d-md-none">
@@ -104,60 +128,42 @@ const Navbar = ({ navbarRef, logoRef, logoClass }) => {
             <ul className="navbar-nav ml-auto">
               <li className="nav-item">
                 <Link href="/agena" locale={currentLocale} legacyBehavior>
-                  <a
-                    style={{ color: router.pathname === "/" ? "#fff" : "#000" }}
-                    className="nav-link"
-                  >
+                  <a style={linkStyle} className="nav-link">
                     Agena
                   </a>
                 </Link>
               </li>
               <li className="nav-item">
                 <Link href="/capella" locale={currentLocale} legacyBehavior>
-                  <a
-                    style={{ color: router.pathname === "/" ? "#fff" : "#000" }}
-                    className="nav-link"
-                  >
+                  <a style={linkStyle} className="nav-link">
                     Capella
                   </a>
                 </Link>
               </li>
               <li className="nav-item">
                 <Link href="/gredi" locale={currentLocale} legacyBehavior>
-                  <a
-                    style={{ color: router.pathname === "/" ? "#fff" : "#000" }}
-                    className="nav-link"
-                  >
+                  <a style={linkStyle} className="nav-link">
                     Gredi
                   </a>
                 </Link>
               </li>
               <li className="nav-item">
                 <Link href="/rigel" locale={currentLocale} legacyBehavior>
-                  <a
-                    style={{ color: router.pathname === "/" ? "#fff" : "#000" }}
-                    className="nav-link"
-                  >
+                  <a style={linkStyle} className="nav-link">
                     Rigel
                   </a>
                 </Link>
               </li>
               <li className="nav-item md-ml0" style={{ marginLeft: "60px" }}>
                 <Link href="/" locale={currentLocale} legacyBehavior>
-                  <a
-                    style={{ color: router.pathname === "/" ? "#fff" : "#000" }}
-                    className="nav-link"
-                  >
+                  <a style={linkStyle} className="nav-link">
                     {t("navbar.anasayfa")}
                   </a>
                 </Link>
               </li>
               <li className="nav-item">
                 <Link href="/about" locale={currentLocale} legacyBehavior>
-                  <a
-                    style={{ color: router.pathname === "/" ? "#fff" : "#000" }}
-                    className="nav-link"
-                  >
+                  <a style={linkStyle} className="nav-link">
                     {t("navbar.hakkimizda")}
                   </a>
                 </Link>
@@ -170,7 +176,7 @@ const Navbar = ({ navbarRef, logoRef, logoClass }) => {
                   role="button"
                   onClick={handleDropdown}
                   aria-expanded="false"
-                  style={{ color: router.pathname === "/" ? "#fff" : "#000" }}
+                  style={linkStyle}
                 >
                   {t("navbar.rezervasyon")}
                 </a>
@@ -217,10 +223,7 @@ const Navbar = ({ navbarRef, logoRef, logoClass }) => {
               </li>
               <li className="nav-item">
                 <Link href="/contact" locale={currentLocale} legacyBehavior>
-                  <a
-                    className="nav-link"
-                    style={{ color: router.pathname === "/" ? "#fff" : "#000" }}
-                  >
+                  <a className="nav-link" style={linkStyle}>
                     {t("navbar.iletisim")}
                   </a>
                 </Link>
