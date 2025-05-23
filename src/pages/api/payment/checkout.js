@@ -3,10 +3,7 @@ import { v4 as uuidv4 } from "uuid";
 
 export default async function handler(req, res) {
   if (req.method !== "POST") return res.status(405).end();
-
-  console.log("KEY:", process.env.IYZICO_API_KEY);
-  console.log("SECRET:", process.env.IYZICO_SECRET_KEY);
-
+  
   const {
     name,
     email,

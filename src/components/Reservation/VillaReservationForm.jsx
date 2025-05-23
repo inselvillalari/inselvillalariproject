@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useFormik } from "formik";
-import * as Yup from "yup";
+
 import DatePicker from "react-datepicker";
 import { useDispatch, useSelector } from "react-redux";
 import { useRouter } from "next/router";
@@ -13,6 +13,8 @@ import ru from "date-fns/locale/ru";
 import { createReservation } from "../../store/reservation/thunk";
 import { setReservationData } from "../../store/reservation/reducer";
 import API from "../../helpers/api";
+import { inputStyle, labelStyle, sectionTitleStyle } from "./styles";
+import { getFormValidationSchema } from "./reservationFormValidation";
 
 const villas = ["Villa Agena", "Villa Capella", "Villa Gredi", "Villa Rigel"];
 
@@ -35,38 +37,11 @@ export default function ReservationForm() {
     }
   }, [i18n.language]);
 
-  const inputStyle = {
-    width: "100%",
-    padding: "6px",
-    height: "34px",
-    border: "1px solid #ccc",
-    borderRadius: "6px",
-    marginBottom: "10px",
-    fontSize: "13px",
-    fontFamily: "'Poppins', sans-serif",
-  };
-
-  const labelStyle = {
-    fontWeight: "600",
-    marginBottom: "4px",
-    fontSize: "13px",
-    fontFamily: "'Poppins', sans-serif",
-  };
-
-  const sectionTitleStyle = {
-    fontSize: "16px",
-    fontWeight: "700",
-    margin: "20px 0 10px",
-    fontFamily: "'Poppins', sans-serif",
-    borderBottom: "1px solid #eee",
-    paddingBottom: "5px",
-  };
-
   const formik = useFormik({
     initialValues: {
       villa: "",
-      hirerName: "",
-      hirerIdNumber: "",
+      name: "",
+      identityNumber: "",
       email: "",
       phone: "",
       entryDate: null,
@@ -81,47 +56,15 @@ export default function ReservationForm() {
       billingCountry: "Turkey",
       billingZipCode: "",
       registrationAddress: "",
+
+      //burdan sonrasina dokunma
+      totalVillaPrice: "",
+      totalHeatedPoolPrice: "",
+      grandTotal: "",
+      totalNights: 0,
+      locale: i18n.language,
     },
-    validationSchema: Yup.object({
-      villa: Yup.string().required(t("reservationForm.validation.villa")),
-      hirerName: Yup.string()
-        .matches(
-          /^[a-zA-ZğüşöçıİĞÜŞÖÇ\s]+$/,
-          t("reservationForm.validation.isim")
-        )
-        .required(t("reservationForm.validation.zorunluAlan")),
-      hirerIdNumber: Yup.string()
-        .test(
-          "tcOrPassport-valid",
-          t("reservationForm.validation.tc"),
-          (value) => {
-            if (!value) return false;
-            const onlyNumbers = /^[0-9]+$/.test(value);
-            if (onlyNumbers) {
-              return value.length === 11;
-            } else {
-              return value.length >= 5;
-            }
-          }
-        )
-        .required(t("reservationForm.validation.zorunluAlan")),
-      email: Yup.string()
-        .email("Geçerli bir e-posta giriniz.")
-        .required(t("reservationForm.validation.zorunluAlan")),
-      phone: Yup.string()
-        .matches(/^[0-9]+$/, t("reservationForm.validation.telefon1"))
-        .min(10, t("reservationForm.validation.telefon2"))
-        .required(t("reservationForm.validation.zorunluAlan")),
-      entryDate: Yup.date().required(t("reservationForm.validation.giris")),
-      exitDate: Yup.date().required(t("reservationForm.validation.cikis")),
-      adults: Yup.number().required(t("reservationForm.validation.yetiskin")),
-      children: Yup.number().required(t("reservationForm.validation.cocuk")),
-      billingContactName: Yup.string().required("Fatura adı gerekli"),
-      billingAddress: Yup.string().required("Fatura adresi gerekli"),
-      billingCity: Yup.string().required("Şehir gerekli"),
-      billingZipCode: Yup.string(),
-      registrationAddress: Yup.string().required("Kayıt adresi gerekli"),
-    }),
+    validationSchema: getFormValidationSchema(t),
     onSubmit: async (values) => {
       try {
         const payload = {
@@ -129,6 +72,7 @@ export default function ReservationForm() {
           entryDate: values.entryDate?.toISOString(),
           exitDate: values.exitDate?.toISOString(),
           status: "Pending",
+          conversationId: uuidv4(),
         };
 
         // 1️⃣ Rezervasyon veritabanına kaydedilir
@@ -139,7 +83,7 @@ export default function ReservationForm() {
           name: values.hirerName,
           email: values.email,
           phone: values.phone,
-          price: 32000, // Buraya dinamik fiyat bağlanabilir
+          price: 32000,
         });
 
         const paymentUrl = res?.data?.paymentPageUrl;
@@ -319,43 +263,41 @@ export default function ReservationForm() {
         <h3 style={sectionTitleStyle}> {t("reservationForm.kiralayan")}</h3>
         <label style={labelStyle}>{t("reservationForm.isim")}</label>
         <input
-          name="hirerName"
-          value={formik.values.hirerName}
+          name="name"
+          value={formik.values.name}
           onChange={(e) => {
             const onlyLetters = e.target.value.replace(
               /[^a-zA-ZğüşöçıİĞÜŞÖÇ\s]/g,
               ""
             );
-            formik.setFieldValue("hirerName", onlyLetters);
+            formik.setFieldValue("name", onlyLetters);
           }}
           onBlur={formik.handleBlur}
           className={`form-control ${
-            formik.touched.hirerName && formik.errors.hirerName
-              ? "is-invalid"
-              : ""
+            formik.touched.name && formik.errors.name ? "is-invalid" : ""
           }`}
         />
-        {formik.touched.hirerName && formik.errors.hirerName && (
-          <div className="invalid-feedback">{formik.errors.hirerName}</div>
+        {formik.touched.name && formik.errors.name && (
+          <div className="invalid-feedback">{formik.errors.name}</div>
         )}
 
         <label style={labelStyle}>{t("reservationForm.tc")}</label>
         <input
-          name="hirerIdNumber"
-          value={formik.values.hirerIdNumber}
+          name="identityNumber"
+          value={formik.values.identityNumber}
           onChange={(e) => {
             const allowed = e.target.value.replace(/[^a-zA-Z0-9]/g, "");
-            formik.setFieldValue("hirerIdNumber", allowed);
+            formik.setFieldValue("identityNumber", allowed);
           }}
           onBlur={formik.handleBlur}
           className={`form-control ${
-            formik.touched.hirerIdNumber && formik.errors.hirerIdNumber
+            formik.touched.identityNumber && formik.errors.identityNumber
               ? "is-invalid"
               : ""
           }`}
         />
-        {formik.touched.hirerIdNumber && formik.errors.hirerIdNumber && (
-          <div className="invalid-feedback">{formik.errors.hirerIdNumber}</div>
+        {formik.touched.identityNumber && formik.errors.identityNumber && (
+          <div className="invalid-feedback">{formik.errors.identityNumber}</div>
         )}
 
         <label style={labelStyle}>{t("reservationForm.email")}</label>
