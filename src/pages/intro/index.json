@@ -2,25 +2,25 @@
   {
     "id": 1,
     "title": { "first": "", "second": "VİLLA AGENA" },
-    "image": "/assets/img/slid/homePage/agenaHomePage.jpeg",
+    "image": "/assets/img/slid/homePage/agenaHomePage.webp",
     "pageLink": "/agena"
   },
   {
     "id": 2,
     "title": { "first": "", "second": "VİLLA CAPELLA" },
-    "image": "/assets/img/slid/homePage/capellaHomePage.jpeg",
+    "image": "/assets/img/slid/homePage/capellaHomePage.webp",
     "pageLink": "/capella"
   },
   {
     "id": 3,
     "title": { "first": "", "second": "VİLLA GREDI" },
-    "image": "/assets/img/slid/homePage/grediHomePage.jpeg",
+    "image": "/assets/img/slid/homePage/grediHomePage.webp",
     "pageLink": "/gredi"
   },
   {
     "id": 4,
     "title": { "first": "", "second": "VİLLA RIGEL" },
-    "image": "/assets/img/slid/homePage/rigelHomePage.jpeg",
+    "image": "/assets/img/slid/homePage/rigelHomePage.webp",
     "pageLink": "/rigel"
   }
 ]
