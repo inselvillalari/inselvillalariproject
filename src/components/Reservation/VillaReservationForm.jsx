@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { useFormik } from "formik";
-
+import countries from "i18n-iso-countries";
+import trCountries from "i18n-iso-countries/langs/tr.json";
+import enCountries from "i18n-iso-countries/langs/en.json";
+import ruCountries from "i18n-iso-countries/langs/ru.json";
 import DatePicker from "react-datepicker";
 import { useDispatch, useSelector } from "react-redux";
 import { useRouter } from "next/router";
@@ -17,6 +20,9 @@ import { inputStyle, labelStyle, sectionTitleStyle } from "./styles";
 import { getFormValidationSchema } from "./reservationFormValidation";
 
 const villas = ["Villa Agena", "Villa Capella", "Villa Gredi", "Villa Rigel"];
+countries.registerLocale(trCountries);
+countries.registerLocale(enCountries);
+countries.registerLocale(ruCountries);
 
 export default function ReservationForm() {
   const { t, i18n } = useTranslation("common");
@@ -26,6 +32,9 @@ export default function ReservationForm() {
   const dispatch = useDispatch();
   const router = useRouter();
   const reservationPrices = useSelector((state) => state.reservation);
+  const countryOptions = Object.entries(
+    countries.getNames(i18n.language, { select: "official" })
+  ).map(([code, name]) => ({ value: code, label: name }));
 
   useEffect(() => {
     if (i18n.language === "tr") {
@@ -45,6 +54,7 @@ export default function ReservationForm() {
       identityNumber: "",
       email: "",
       gsmNumber: "",
+      registrationAddress: "",
       buyerCity: "",
       buyerCountry: "",
       entryDate: null,
@@ -56,9 +66,8 @@ export default function ReservationForm() {
       contactName: "",
       address: "",
       city: "",
-      country: "Turkey",
+      country: "",
       zipCode: "",
-      registrationAddress: "",
 
       //burdan sonrasina dokunma
       totalVillaPrice: "",
@@ -393,18 +402,24 @@ export default function ReservationForm() {
         )}
 
         <label style={labelStyle}>{t("reservationForm.ulke")}</label>
-        <input
+        <select
           name="buyerCountry"
           value={formik.values.buyerCountry}
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
-          style={inputStyle}
-          className={
+          className={`form-control ${
             formik.touched.buyerCountry && formik.errors.buyerCountry
               ? "is-invalid"
               : ""
-          }
-        />
+          }`}
+        >
+          <option value="">{t("reservationForm.secin")}</option>
+          {countryOptions.map((country) => (
+            <option key={country.value} value={country.value}>
+              {country.label}
+            </option>
+          ))}
+        </select>
         {formik.touched.buyerCountry && formik.errors.buyerCountry && (
           <div className="invalid-feedback">{formik.errors.buyerCountry}</div>
         )}
@@ -633,7 +648,26 @@ export default function ReservationForm() {
         {formik.touched.zipCode && formik.errors.zipCode && (
           <div className="invalid-feedback">{formik.errors.zipCode}</div>
         )}
-
+        <label style={labelStyle}>{t("reservationForm.ulke")}</label>
+        <select
+          name="country"
+          value={formik.values.country}
+          onChange={formik.handleChange}
+          onBlur={formik.handleBlur}
+          className={`form-control ${
+            formik.touched.country && formik.errors.country ? "is-invalid" : ""
+          }`}
+        >
+          <option value="">{t("reservationForm.secin")}</option>
+          {countryOptions.map((country) => (
+            <option key={country.value} value={country.value}>
+              {country.label}
+            </option>
+          ))}
+        </select>
+        {formik.touched.country && formik.errors.country && (
+          <div className="invalid-feedback">{formik.errors.country}</div>
+        )}
         {/* Ekstralar */}
         {formik.values.villa && (
           <div style={{ marginTop: "20px" }}>

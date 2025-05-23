@@ -50,6 +50,7 @@ export const getFormValidationSchema = (t) =>
     contactName: Yup.string().required(t("reservationForm.validation.adSoyad")),
     address: Yup.string().required(t("reservationForm.validation.adres")),
     city: Yup.string().required(t("reservationForm.validation.sehir")),
+    country: Yup.string().required(t("reservationForm.validation.ulke")),
     zipCode: Yup.string()
       .matches(/^[0-9]+$/, t("reservationForm.validation.postaKoduGecersiz"))
       .min(4, t("reservationForm.validation.postaKoduMinimum"))
