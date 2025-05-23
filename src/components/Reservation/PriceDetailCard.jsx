@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import dayjs from "dayjs";
 import villaPrices from "./villaPrices";
 import { useTranslation } from "next-i18next";
+import { setReservationData } from "../../store/reservation/reducer";
 
 export default function PriceDetailCard() {
   const { t } = useTranslation("common");
@@ -23,7 +24,12 @@ export default function PriceDetailCard() {
     if (dayDiff <= 0) return null;
 
     let totalVillaPrice = 0;
-    let totalHeatedPoolPrice = heatedPool ? dayDiff * 1800 : 0;
+    let totalHeatedPoolPrice = 0;
+
+
+    if (villa !== "Villa Gredi" && villa !== "Villa Agena" && heatedPool) {
+      totalHeatedPoolPrice = dayDiff * 1800;
+    }
 
     const pricePeriods = villaPrices?.[villa] || [];
 
@@ -55,14 +61,16 @@ export default function PriceDetailCard() {
 
   useEffect(() => {
     if (result) {
-      // dispatch(
-      //   setReservationData({
-      //     totalVillaPrice: result.villaPrice,
-      //     totalHeatedPoolPrice: result.heatedPoolPrice,
-      //     grandTotal: result.grandTotal,
-      //     totalNights: result.dayCount,
-      //   })
-      // );
+      dispatch(
+        setReservationData({
+          ...reservationData,
+          totalVillaPrice: result.villaPrice,
+          totalHeatedPoolPrice: result.heatedPoolPrice,
+          grandTotal: result.grandTotal,
+          totalNights: result.dayCount,
+          price: result.upfront,
+        })
+      );
     }
   }, [result]);
 
@@ -113,7 +121,7 @@ export default function PriceDetailCard() {
             <strong> {t("reservationPriceCard.ucret")}</strong>{" "}
             {result.villaPrice.toLocaleString("tr-TR")} TL
           </div>
-          {heatedPool && (
+          {heatedPool && result.heatedPoolPrice !== 0 && (
             <div style={{ fontSize: "14px", marginBottom: "12px" }}>
               <strong>{t("reservationPriceCard.isitmali")}</strong>{" "}
               {result.heatedPoolPrice.toLocaleString("tr-TR")} TL

@@ -24,14 +24,19 @@ countries.registerLocale(trCountries);
 countries.registerLocale(enCountries);
 countries.registerLocale(ruCountries);
 
+const generateShortCode = () => {
+  const now = Date.now().toString(36);
+  const rand = Math.random().toString(36).substr(2, 5);
+  return `RSV-${now}-${rand}`.toUpperCase(); // Örn: RSV-LQDC6D-HU7P9
+};
+
 export default function ReservationForm() {
   const { t, i18n } = useTranslation("common");
   const [extraAdults, setExtraAdults] = useState([]);
   const [extraChildren, setExtraChildren] = useState([]);
   const [guestError, setGuestError] = useState("");
   const dispatch = useDispatch();
-  const router = useRouter();
-  const reservationPrices = useSelector((state) => state.reservation);
+  const { reservationData } = useSelector((state) => state.reservation);
   const countryOptions = Object.entries(
     countries.getNames(i18n.language, { select: "official" })
   ).map(([code, name]) => ({ value: code, label: name }));
@@ -68,35 +73,35 @@ export default function ReservationForm() {
       city: "",
       country: "",
       zipCode: "",
-
-      //burdan sonrasina dokunma
       totalVillaPrice: "",
       totalHeatedPoolPrice: "",
       grandTotal: "",
       totalNights: 0,
+      price: "",
       locale: i18n.language,
     },
     validationSchema: getFormValidationSchema(t),
     onSubmit: async (values) => {
       try {
+        const reservationNumber = generateShortCode();
         const payload = {
           ...values,
           entryDate: values.entryDate?.toISOString(),
           exitDate: values.exitDate?.toISOString(),
           status: "Pending",
-          conversationId: uuidv4(),
+          conversationId: reservationNumber,
+          totalVillaPrice: reservationData.totalVillaPrice,
+          totalHeatedPoolPrice: reservationData.totalHeatedPoolPrice,
+          grandTotal: reservationData.grandTotal,
+          totalNights: reservationData.totalNights,
+          price: reservationData.price,
         };
 
         // 1️⃣ Rezervasyon veritabanına kaydedilir
         await dispatch(createReservation(payload)).unwrap();
 
         // 2️⃣ Iyzico ödeme token'ı ve URL'si alınır
-        const res = await API.post("/api/payment/checkout", {
-          name: values.hirerName,
-          email: values.email,
-          phone: values.phone,
-          price: 32000,
-        });
+        const res = await API.post("/api/payment/checkout", payload);
 
         const paymentUrl = res?.data?.paymentPageUrl;
 
@@ -148,6 +153,7 @@ export default function ReservationForm() {
     },
   });
 
+
   const minDate = new Date("2025-05-15");
   const maxDate = new Date("2025-11-01");
 
@@ -197,6 +203,7 @@ export default function ReservationForm() {
     ) {
       dispatch(
         setReservationData({
+          ...reservationData,
           villa: formik.values.villa,
           entryDate: formik.values.entryDate?.toISOString() || null,
           exitDate: formik.values.exitDate?.toISOString() || null,

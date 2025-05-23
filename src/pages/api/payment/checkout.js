@@ -3,15 +3,24 @@ import { v4 as uuidv4 } from "uuid";
 
 export default async function handler(req, res) {
   if (req.method !== "POST") return res.status(405).end();
-  
+
+  const payload = req.body;
   const {
+    locale,
+    conversationId,
     name,
+    surname,
     email,
-    phone,
-    price,
-    surname = "Belirtilmedi",
-    identityNumber = "11111111111",
-  } = req.body;
+    identityNumber,
+    registrationAddress,
+    city,
+    country,
+    address,
+    zipCode,
+    contactName,
+  } = payload;
+
+  console.log("payload", payload);
 
   const rawIp =
     req.headers["x-forwarded-for"] ||
@@ -22,11 +31,11 @@ export default async function handler(req, res) {
   const ip =
     typeof rawIp === "string" && rawIp.includes("::") ? "85.34.78.112" : rawIp;
 
-  const safePrice = Number(price || 0).toFixed(2);
+  const safePrice = Number(payload?.price || 0).toFixed(2);
 
   const request = {
-    locale: "tr",
-    conversationId: uuidv4(),
+    locale,
+    conversationId,
     price: safePrice,
     paidPrice: safePrice,
     currency: "TRY",
@@ -37,13 +46,13 @@ export default async function handler(req, res) {
       id: uuidv4(),
       name,
       surname,
-      gsmNumber: phone.replace(/^0/, "90"),
+      gsmNumber: payload?.gsmNumber?.replace(/^0/, "90"),
       email,
       identityNumber,
-      registrationAddress: "Kaş, Antalya",
+      registrationAddress,
       ip,
-      city: "Antalya",
-      country: "Turkey",
+      city: payload?.buyerCity,
+      country: payload?.buyerCountry,
     },
     basketItems: [
       {
@@ -55,18 +64,18 @@ export default async function handler(req, res) {
       },
     ],
     billingAddress: {
-      contactName: "Tolga Kaya",
-      city: "Antalya",
-      country: "Turkey",
-      address: "Kaş, Antalya",
-      zipCode: "07580"
+      contactName,
+      city,
+      country,
+      address,
+      zipCode,
     },
   };
 
   let responseSent = false;
 
   iyzipay.checkoutFormInitialize.create(request, (err, result) => {
-    console.log('request',request)
+    console.log("request", request);
     if (responseSent) return;
     responseSent = true;
 
