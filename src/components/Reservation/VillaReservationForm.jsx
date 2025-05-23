@@ -73,6 +73,12 @@ export default function ReservationForm() {
       children: "",
       heatedPool: false,
       wantsCrib: false,
+      billingContactName: "",
+      billingAddress: "",
+      billingCity: "",
+      billingCountry: "Turkey",
+      billingZipCode: "",
+      registrationAddress: "",
     },
     validationSchema: Yup.object({
       villa: Yup.string().required(t("reservationForm.validation.villa")),
@@ -108,6 +114,11 @@ export default function ReservationForm() {
       exitDate: Yup.date().required(t("reservationForm.validation.cikis")),
       adults: Yup.number().required(t("reservationForm.validation.yetiskin")),
       children: Yup.number().required(t("reservationForm.validation.cocuk")),
+      billingContactName: Yup.string().required("Fatura adı gerekli"),
+      billingAddress: Yup.string().required("Fatura adresi gerekli"),
+      billingCity: Yup.string().required("Şehir gerekli"),
+      billingZipCode: Yup.string(),
+      registrationAddress: Yup.string().required("Kayıt adresi gerekli"),
     }),
     onSubmit: (values) => {
       dispatch(
@@ -486,6 +497,110 @@ export default function ReservationForm() {
             ))}
           </>
         )}
+        <h3 style={sectionTitleStyle}>Fatura Adresi</h3>
+        <label style={labelStyle}>Ad</label>
+        <input
+          name="billingContactName"
+          value={formik.values.billingContactName}
+          onChange={formik.handleChange}
+          onBlur={formik.handleBlur}
+          style={inputStyle}
+          className={
+            formik.touched.billingContactName &&
+            formik.errors.billingContactName
+              ? "is-invalid"
+              : ""
+          }
+        />
+        {formik.touched.billingContactName &&
+          formik.errors.billingContactName && (
+            <div className="invalid-feedback">
+              {formik.errors.billingContactName}
+            </div>
+          )}
+        <label style={labelStyle}>Soyad</label>
+        <input
+          name="billingContactName"
+          value={formik.values.billingContactName}
+          onChange={formik.handleChange}
+          onBlur={formik.handleBlur}
+          style={inputStyle}
+          className={
+            formik.touched.billingContactName &&
+            formik.errors.billingContactName
+              ? "is-invalid"
+              : ""
+          }
+        />
+        {formik.touched.billingContactName &&
+          formik.errors.billingContactName && (
+            <div className="invalid-feedback">
+              {formik.errors.billingContactName}
+            </div>
+          )}
+
+        <label style={labelStyle}>Adres</label>
+        <input
+          name="billingAddress"
+          value={formik.values.billingAddress}
+          onChange={formik.handleChange}
+          onBlur={formik.handleBlur}
+          style={inputStyle}
+          className={
+            formik.touched.billingAddress && formik.errors.billingAddress
+              ? "is-invalid"
+              : ""
+          }
+        />
+        {formik.touched.billingAddress && formik.errors.billingAddress && (
+          <div className="invalid-feedback">{formik.errors.billingAddress}</div>
+        )}
+
+        <label style={labelStyle}>Şehir</label>
+        <input
+          name="billingCity"
+          value={formik.values.billingCity}
+          onChange={formik.handleChange}
+          onBlur={formik.handleBlur}
+          style={inputStyle}
+          className={
+            formik.touched.billingCity && formik.errors.billingCity
+              ? "is-invalid"
+              : ""
+          }
+        />
+        {formik.touched.billingCity && formik.errors.billingCity && (
+          <div className="invalid-feedback">{formik.errors.billingCity}</div>
+        )}
+
+        <label style={labelStyle}>Posta Kodu</label>
+        <input
+          name="billingZipCode"
+          value={formik.values.billingZipCode}
+          onChange={formik.handleChange}
+          onBlur={formik.handleBlur}
+          style={inputStyle}
+        />
+        <label style={labelStyle}>Kayıt Adresi</label>
+        <input
+          name="registrationAddress"
+          value={formik.values.registrationAddress}
+          onChange={formik.handleChange}
+          onBlur={formik.handleBlur}
+          style={inputStyle}
+          className={
+            formik.touched.registrationAddress &&
+            formik.errors.registrationAddress
+              ? "is-invalid"
+              : ""
+          }
+        />
+        {formik.touched.registrationAddress &&
+          formik.errors.registrationAddress && (
+            <div className="invalid-feedback">
+              {formik.errors.registrationAddress}
+            </div>
+          )}
 
         {/* Ekstralar */}
         {formik.values.villa && (
