@@ -41,20 +41,23 @@ export default function ReservationForm() {
     initialValues: {
       villa: "",
       name: "",
+      surname: "",
       identityNumber: "",
       email: "",
-      phone: "",
+      gsmNumber: "",
+      buyerCity: "",
+      buyerCountry: "",
       entryDate: null,
       exitDate: null,
       adults: "",
       children: "",
       heatedPool: false,
       wantsCrib: false,
-      billingContactName: "",
-      billingAddress: "",
-      billingCity: "",
-      billingCountry: "Turkey",
-      billingZipCode: "",
+      contactName: "",
+      address: "",
+      city: "",
+      country: "Turkey",
+      zipCode: "",
       registrationAddress: "",
 
       //burdan sonrasina dokunma
@@ -261,7 +264,7 @@ export default function ReservationForm() {
 
         {/* Kiralayan Bilgileri */}
         <h3 style={sectionTitleStyle}> {t("reservationForm.kiralayan")}</h3>
-        <label style={labelStyle}>{t("reservationForm.isim")}</label>
+        <label style={labelStyle}>{t("reservationForm.ad")}</label>
         <input
           name="name"
           value={formik.values.name}
@@ -279,6 +282,25 @@ export default function ReservationForm() {
         />
         {formik.touched.name && formik.errors.name && (
           <div className="invalid-feedback">{formik.errors.name}</div>
+        )}
+        <label style={labelStyle}>{t("reservationForm.soyad")}</label>
+        <input
+          name="surname"
+          value={formik.values.surname}
+          onChange={(e) => {
+            const onlyLetters = e.target.value.replace(
+              /[^a-zA-ZğüşöçıİĞÜŞÖÇ\s]/g,
+              ""
+            );
+            formik.setFieldValue("surname", onlyLetters);
+          }}
+          onBlur={formik.handleBlur}
+          className={`form-control ${
+            formik.touched.surname && formik.errors.surname ? "is-invalid" : ""
+          }`}
+        />
+        {formik.touched.surname && formik.errors.surname && (
+          <div className="invalid-feedback">{formik.errors.surname}</div>
         )}
 
         <label style={labelStyle}>{t("reservationForm.tc")}</label>
@@ -316,19 +338,75 @@ export default function ReservationForm() {
 
         <label style={labelStyle}>{t("reservationForm.telefon")}</label>
         <input
-          name="phone"
-          value={formik.values.phone}
+          name="gsmNumber"
+          value={formik.values.gsmNumber}
           onChange={(e) => {
             const onlyNums = e.target.value.replace(/[^0-9]/g, ""); // sadece 0-9 rakamları alır
-            formik.setFieldValue("phone", onlyNums);
+            formik.setFieldValue("gsmNumber", onlyNums);
           }}
           onBlur={formik.handleBlur}
           className={`form-control ${
-            formik.touched.phone && formik.errors.phone ? "is-invalid" : ""
+            formik.touched.gsmNumber && formik.errors.gsmNumber
+              ? "is-invalid"
+              : ""
           }`}
         />
-        {formik.touched.phone && formik.errors.phone && (
-          <div className="invalid-feedback">{formik.errors.phone}</div>
+        {formik.touched.gsmNumber && formik.errors.gsmNumber && (
+          <div className="invalid-feedback">{formik.errors.gsmNumber}</div>
+        )}
+        <label style={labelStyle}>{t("reservationForm.adres")}</label>
+        <input
+          name="registrationAddress"
+          value={formik.values.registrationAddress}
+          onChange={formik.handleChange}
+          onBlur={formik.handleBlur}
+          style={inputStyle}
+          className={
+            formik.touched.registrationAddress &&
+            formik.errors.registrationAddress
+              ? "is-invalid"
+              : ""
+          }
+        />
+        {formik.touched.registrationAddress &&
+          formik.errors.registrationAddress && (
+            <div className="invalid-feedback">
+              {formik.errors.registrationAddress}
+            </div>
+          )}
+
+        <label style={labelStyle}>{t("reservationForm.sehir")}</label>
+        <input
+          name="buyerCity"
+          value={formik.values.buyerCity}
+          onChange={formik.handleChange}
+          onBlur={formik.handleBlur}
+          style={inputStyle}
+          className={
+            formik.touched.buyerCity && formik.errors.buyerCity
+              ? "is-invalid"
+              : ""
+          }
+        />
+        {formik.touched.buyerCity && formik.errors.buyerCity && (
+          <div className="invalid-feedback">{formik.errors.buyerCity}</div>
+        )}
+
+        <label style={labelStyle}>{t("reservationForm.ulke")}</label>
+        <input
+          name="buyerCountry"
+          value={formik.values.buyerCountry}
+          onChange={formik.handleChange}
+          onBlur={formik.handleBlur}
+          style={inputStyle}
+          className={
+            formik.touched.buyerCountry && formik.errors.buyerCountry
+              ? "is-invalid"
+              : ""
+          }
+        />
+        {formik.touched.buyerCountry && formik.errors.buyerCountry && (
+          <div className="invalid-feedback">{formik.errors.buyerCountry}</div>
         )}
 
         {/* Tarih Bilgileri */}
@@ -495,110 +573,66 @@ export default function ReservationForm() {
             ))}
           </>
         )}
-        <h3 style={sectionTitleStyle}>Fatura Adresi</h3>
-        <label style={labelStyle}>Ad</label>
-        <input
-          name="billingContactName"
-          value={formik.values.billingContactName}
-          onChange={formik.handleChange}
-          onBlur={formik.handleBlur}
-          style={inputStyle}
-          className={
-            formik.touched.billingContactName &&
-            formik.errors.billingContactName
-              ? "is-invalid"
-              : ""
-          }
-        />
-        {formik.touched.billingContactName &&
-          formik.errors.billingContactName && (
-            <div className="invalid-feedback">
-              {formik.errors.billingContactName}
-            </div>
-          )}
-        <label style={labelStyle}>Soyad</label>
-        <input
-          name="billingContactName"
-          value={formik.values.billingContactName}
-          onChange={formik.handleChange}
-          onBlur={formik.handleBlur}
-          style={inputStyle}
-          className={
-            formik.touched.billingContactName &&
-            formik.errors.billingContactName
-              ? "is-invalid"
-              : ""
-          }
-        />
-        {formik.touched.billingContactName &&
-          formik.errors.billingContactName && (
-            <div className="invalid-feedback">
-              {formik.errors.billingContactName}
-            </div>
-          )}
+        <h3 style={sectionTitleStyle}>{t("reservationForm.faturaAdresi")}</h3>
 
-        <label style={labelStyle}>Adres</label>
+        <label style={labelStyle}>{t("reservationForm.isim")}</label>
         <input
-          name="billingAddress"
-          value={formik.values.billingAddress}
+          name="contactName"
+          value={formik.values.contactName}
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
           style={inputStyle}
           className={
-            formik.touched.billingAddress && formik.errors.billingAddress
+            formik.touched.contactName && formik.errors.contactName
               ? "is-invalid"
               : ""
           }
         />
-        {formik.touched.billingAddress && formik.errors.billingAddress && (
-          <div className="invalid-feedback">{formik.errors.billingAddress}</div>
+        {formik.touched.contactName && formik.errors.contactName && (
+          <div className="invalid-feedback">{formik.errors.contactName}</div>
         )}
 
-        <label style={labelStyle}>Şehir</label>
+        <label style={labelStyle}>{t("reservationForm.adres")}</label>
         <input
-          name="billingCity"
-          value={formik.values.billingCity}
+          name="address"
+          value={formik.values.address}
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
           style={inputStyle}
           className={
-            formik.touched.billingCity && formik.errors.billingCity
-              ? "is-invalid"
-              : ""
+            formik.touched.address && formik.errors.address ? "is-invalid" : ""
           }
         />
-        {formik.touched.billingCity && formik.errors.billingCity && (
-          <div className="invalid-feedback">{formik.errors.billingCity}</div>
+        {formik.touched.address && formik.errors.address && (
+          <div className="invalid-feedback">{formik.errors.address}</div>
         )}
 
-        <label style={labelStyle}>Posta Kodu</label>
+        <label style={labelStyle}>{t("reservationForm.sehir")}</label>
         <input
-          name="billingZipCode"
-          value={formik.values.billingZipCode}
-          onChange={formik.handleChange}
-          onBlur={formik.handleBlur}
-          style={inputStyle}
-        />
-        <label style={labelStyle}>Kayıt Adresi</label>
-        <input
-          name="registrationAddress"
-          value={formik.values.registrationAddress}
+          name="city"
+          value={formik.values.city}
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
           style={inputStyle}
           className={
-            formik.touched.registrationAddress &&
-            formik.errors.registrationAddress
-              ? "is-invalid"
-              : ""
+            formik.touched.city && formik.errors.city ? "is-invalid" : ""
           }
         />
-        {formik.touched.registrationAddress &&
-          formik.errors.registrationAddress && (
-            <div className="invalid-feedback">
-              {formik.errors.registrationAddress}
-            </div>
-          )}
+        {formik.touched.city && formik.errors.city && (
+          <div className="invalid-feedback">{formik.errors.city}</div>
+        )}
+
+        <label style={labelStyle}>{t("reservationForm.postaKodu")}</label>
+        <input
+          name="zipCode"
+          value={formik.values.zipCode}
+          onChange={formik.handleChange}
+          onBlur={formik.handleBlur}
+          style={inputStyle}
+        />
+        {formik.touched.zipCode && formik.errors.zipCode && (
+          <div className="invalid-feedback">{formik.errors.zipCode}</div>
+        )}
 
         {/* Ekstralar */}
         {formik.values.villa && (
