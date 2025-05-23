@@ -9,9 +9,9 @@ import { useTranslation } from "next-i18next";
 export default function PriceDetailCard() {
   const { t } = useTranslation("common");
   const dispatch = useDispatch();
-  const { villa, entryDate, exitDate, heatedPool } = useSelector(
-    (state) => state.reservation
-  );
+  const { reservationData } = useSelector((state) => state.reservation);
+
+  const { villa, entryDate, exitDate, heatedPool } = reservationData;
 
   const result = useMemo(() => {
     if (!villa || !entryDate || !exitDate) return null;

@@ -11,6 +11,7 @@ import tr from "date-fns/locale/tr";
 import enUS from "date-fns/locale/en-US";
 import ru from "date-fns/locale/ru";
 import { createReservation } from "../../store/reservation/thunk";
+import { setReservationData } from "../../store/reservation/reducer";
 import API from "../../helpers/api";
 
 const villas = ["Villa Agena", "Villa Capella", "Villa Gredi", "Villa Rigel"];
@@ -113,7 +114,6 @@ export default function ReservationForm() {
       children: Yup.number().required(t("reservationForm.validation.cocuk")),
     }),
     onSubmit: async (values) => {
-      console.log("values", values);
       try {
         const payload = {
           ...values,
@@ -130,13 +130,49 @@ export default function ReservationForm() {
           name: values.hirerName,
           email: values.email,
           phone: values.phone,
-          price: 32000, // Buraya dinamik fiyat hesaplama da bağlanabilir
+          price: 32000, // Buraya dinamik fiyat bağlanabilir
         });
 
         const paymentUrl = res?.data?.paymentPageUrl;
 
         if (paymentUrl) {
-          window.location.href = paymentUrl; // 3️⃣ Kullanıcıyı ödeme sayfasına yönlendir
+          // Kullanıcıya ara sayfa göster + yönlendir
+          const redirectWindow = window.open("", "_self");
+          if (redirectWindow) {
+            redirectWindow.document.write(`
+              <html>
+                <head>
+                  <title>Ödeme Sayfasına Yönlendiriliyor</title>
+                  <meta name="viewport" content="width=device-width, initial-scale=1" />
+                  <style>
+                    body {
+                      font-family: 'Poppins', sans-serif;
+                      text-align: center;
+                      padding: 50px;
+                      background-color: #fff;
+                      color: #333;
+                    }
+                    h2 {
+                      font-size: 22px;
+                      margin-bottom: 20px;
+                    }
+                    p {
+                      font-size: 14px;
+                    }
+                  </style>
+                </head>
+                <body>
+                  <h2>Ödeme sayfasına yönlendiriliyorsunuz...</h2>
+                  <p>Lütfen bekleyiniz. Eğer birkaç saniye içinde yönlendirilmezseniz <a href="${paymentUrl}">buraya tıklayın</a>.</p>
+                  <script>
+                    setTimeout(() => {
+                      window.location.href = "${paymentUrl}";
+                    }, 1000);
+                  </script>
+                </body>
+              </html>
+            `);
+          }
         } else {
           throw new Error("Ödeme sayfası bağlantısı alınamadı");
         }
@@ -188,27 +224,27 @@ export default function ReservationForm() {
     }
   }, [formik.values.adults, formik.values.children]);
 
-  // useEffect(() => {
-  //   if (
-  //     formik.values.villa &&
-  //     formik.values.entryDate &&
-  //     formik.values.exitDate
-  //   ) {
-  //     dispatch(
-  //       setReservationData({
-  //         villa: formik.values.villa,
-  //         entryDate: formik.values.entryDate?.toISOString() || null,
-  //         exitDate: formik.values.exitDate?.toISOString() || null,
-  //         heatedPool: formik.values.heatedPool,
-  //       })
-  //     );
-  //   }
-  // }, [
-  //   formik.values.villa,
-  //   formik.values.entryDate,
-  //   formik.values.exitDate,
-  //   formik.values.heatedPool,
-  // ]);
+  useEffect(() => {
+    if (
+      formik.values.villa &&
+      formik.values.entryDate &&
+      formik.values.exitDate
+    ) {
+      dispatch(
+        setReservationData({
+          villa: formik.values.villa,
+          entryDate: formik.values.entryDate?.toISOString() || null,
+          exitDate: formik.values.exitDate?.toISOString() || null,
+          heatedPool: formik.values.heatedPool,
+        })
+      );
+    }
+  }, [
+    formik.values.villa,
+    formik.values.entryDate,
+    formik.values.exitDate,
+    formik.values.heatedPool,
+  ]);
 
   useEffect(() => {
     const form = document.querySelector("form");

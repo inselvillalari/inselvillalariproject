@@ -8,7 +8,7 @@ const getAllReservations = createAsyncThunk(
       const res = await ReservationService.getAllReservations();
       return res?.data;
     } catch (error) {
-      handleError(error);
+      // handleError(error);
     }
   }
 );
@@ -20,7 +20,7 @@ const deleteReservation = createAsyncThunk(
       const res = await ReservationService.deleteReservation(id);
       return res?.data;
     } catch (error) {
-      handleError(error);
+      // handleError(error);
     }
   }
 );
@@ -32,7 +32,7 @@ const createReservation = createAsyncThunk(
       const res = await ReservationService.createReservation(values);
       return res?.data;
     } catch (error) {
-      handleError(error);
+      // handleError(error);
     }
   }
 );
