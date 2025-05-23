@@ -58,6 +58,68 @@ const AgenaPage = () => {
                 </h3>
               </div>
             </div>
+            <Link href="/agena/nightInsideViews">
+              <div
+                className="col-lg-6 items residential"
+                style={{ marginBottom: "50px" }}
+              >
+                <div className="item">
+                  <div className="img">
+                    <img
+                      alt=""
+                      src="/assets/img/slid/agena/nightInsideViews/2.jpeg"
+                      className="gallery-img-class"
+                    />
+                  </div>
+                  <div
+                    style={{
+                      position: "absolute",
+                      bottom: 0,
+                      left: 0,
+                      backgroundColor: "#fff",
+                      color: "#111",
+                      padding: "10px 16px",
+                      fontWeight: "bold",
+                      borderTopRightRadius: "6px",
+                      zIndex: 2,
+                    }}
+                  >
+                    <h6>{t("geceIcMekanGorunumu")}</h6>
+                  </div>
+                </div>
+              </div>
+            </Link>
+            <Link href="/agena/nightViews">
+              <div
+                className="col-lg-6 items interior"
+                style={{ marginBottom: "50px" }}
+              >
+                <div className="item">
+                  <div className="img">
+                    <img
+                      alt=""
+                      src="/assets/img/slid/agena/nightViews/1.jpeg"
+                      className="gallery-img-class"
+                    />
+                  </div>
+                  <div
+                    style={{
+                      position: "absolute",
+                      bottom: 0,
+                      left: 0,
+                      backgroundColor: "#fff",
+                      color: "#111",
+                      padding: "10px 16px",
+                      fontWeight: "bold",
+                      borderTopRightRadius: "6px",
+                      zIndex: 2,
+                    }}
+                  >
+                    <h6>{t("geceGorunumleri")}</h6>
+                  </div>
+                </div>
+              </div>
+            </Link>
             <Link href="/agena/insideViews">
               <div
                 className="col-lg-6 items interior"
@@ -97,9 +159,11 @@ const AgenaPage = () => {
                 </div>
               </div>
             </Link>
-
             <Link href="/agena/dayViews">
-              <div className="col-lg-6 items theaters">
+              <div
+                className="col-lg-6 items theaters"
+                style={{ marginBottom: "50px" }}
+              >
                 <div
                   className="item"
                   style={{ position: "relative", overflow: "hidden" }}
@@ -134,43 +198,6 @@ const AgenaPage = () => {
                 </div>
               </div>
             </Link>
-
-            {/* <Link href="/agena/nightViews">
-              <div className="col-lg-6 items residential interior">
-                <div className="item">
-                  <div className="img">
-                    <img
-                      alt=""
-                      src="/assets/img/slid/agena/nightViews/1.jpeg"
-                      className="gallery-img-class"
-                    />
-                  </div>
-                  <div className="cont vis">
-                    <h5>Gece Görünümleri</h5>
-                    <span>Architecture</span>
-                    <span>Modern</span>
-                  </div>
-                </div>
-              </div>
-            </Link>
-            <Link href="/agena/activities">
-              <div className="col-lg-6 items residential">
-                <div className="item">
-                  <div className="img">
-                    <img
-                      alt=""
-                      src="/assets/img/slid/agena/activities/2.jpeg"
-                      className="gallery-img-class"
-                    />
-                  </div>
-                  <div className="cont vis">
-                    <h5>Aktiviteler</h5>
-                    <span>Architecture</span>
-                    <span>Modern</span>
-                  </div>
-                </div>
-              </div>
-            </Link> */}
           </div>
         </div>
         <Skills />

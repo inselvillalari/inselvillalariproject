@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import getSiblings from "../../common/getSiblings";
 import LanguageSwitcher from "../../components/languageSwitcher";
@@ -10,6 +10,8 @@ const Navbar = ({ navbarRef, logoRef, logoClass }) => {
   const { t } = useTranslation("common");
   const router = useRouter();
   const currentLocale = router.locale;
+  const isHome = router.pathname === "/";
+  const [isDesktop, setIsDesktop] = useState(false);
 
   const handleDropdown = (e) => {
     getSiblings(e.target.parentElement)
@@ -70,9 +72,32 @@ const Navbar = ({ navbarRef, logoRef, logoClass }) => {
     };
   }, [router.events]);
 
+  useEffect(() => {
+    const handleResize = () => {
+      setIsDesktop(window.innerWidth >= 992);
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const linkStyle = {
+    color: isHome && isDesktop ? "#fff" : "#000",
+  };
+
   return (
     <>
-      <nav className="navbar change navbar-expand-lg" ref={navbarRef}>
+      <nav
+        className="navbar change navbar-expand-lg"
+        ref={navbarRef}
+        style={{
+          color: !isDesktop
+            ? "#b19777"
+            : router.pathname === "/"
+            ? "white"
+            : "black",
+        }}
+      >
         <div className="container">
           <a className={`logo ${logoClass && logoClass}`} href="/"></a>
           <div className="d-flex">
@@ -87,7 +112,12 @@ const Navbar = ({ navbarRef, logoRef, logoClass }) => {
               aria-label="Toggle navigation"
             >
               <span className="icon-bar">
-                <i className="fas fa-bars" style={{ color: "#000" }}></i>
+                <i
+                  className="fas fa-bars"
+                  style={{
+                    color: "#b19777",
+                  }}
+                ></i>
               </span>
             </button>
             <div className="d-block d-md-none">
@@ -98,42 +128,104 @@ const Navbar = ({ navbarRef, logoRef, logoClass }) => {
             <ul className="navbar-nav ml-auto">
               <li className="nav-item">
                 <Link href="/agena" locale={currentLocale} legacyBehavior>
-                  <a className="nav-link">Agena</a>
+                  <a style={linkStyle} className="nav-link">
+                    Agena
+                  </a>
                 </Link>
               </li>
               <li className="nav-item">
                 <Link href="/capella" locale={currentLocale} legacyBehavior>
-                  <a className="nav-link">Capella</a>
+                  <a style={linkStyle} className="nav-link">
+                    Capella
+                  </a>
                 </Link>
               </li>
               <li className="nav-item">
                 <Link href="/gredi" locale={currentLocale} legacyBehavior>
-                  <a className="nav-link">Gredi</a>
+                  <a style={linkStyle} className="nav-link">
+                    Gredi
+                  </a>
                 </Link>
               </li>
               <li className="nav-item">
                 <Link href="/rigel" locale={currentLocale} legacyBehavior>
-                  <a className="nav-link">Rigel</a>
+                  <a style={linkStyle} className="nav-link">
+                    Rigel
+                  </a>
                 </Link>
               </li>
               <li className="nav-item md-ml0" style={{ marginLeft: "60px" }}>
                 <Link href="/" locale={currentLocale} legacyBehavior>
-                  <a className="nav-link">{t("navbar.anasayfa")}</a>
+                  <a style={linkStyle} className="nav-link">
+                    {t("navbar.anasayfa")}
+                  </a>
                 </Link>
               </li>
               <li className="nav-item">
                 <Link href="/about" locale={currentLocale} legacyBehavior>
-                  <a className="nav-link">{t("navbar.hakkimizda")}</a>
+                  <a style={linkStyle} className="nav-link">
+                    {t("navbar.hakkimizda")}
+                  </a>
                 </Link>
               </li>
-              <li className="nav-item">
+              {/* Masaüstü dropdown (sadece büyük ekranlarda görünsün) */}
+              <li className="nav-item dropdown desktop-only">
+                <a
+                  className="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  onClick={handleDropdown}
+                  aria-expanded="false"
+                  style={linkStyle}
+                >
+                  {t("navbar.rezervasyon")}
+                </a>
+                <ul className="dropdown-menu">
+                  <li>
+                    <Link
+                      href="/reservation"
+                      locale={currentLocale}
+                      legacyBehavior
+                    >
+                      <a className="dropdown-item">
+                        {t("navbar.rezervasyonYap")}
+                      </a>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/reservation-lookup"
+                      locale={currentLocale}
+                      legacyBehavior
+                    >
+                      <a className="dropdown-item">
+                        {t("navbar.rezervasyonSorgula")}
+                      </a>
+                    </Link>
+                  </li>
+                </ul>
+              </li>
+
+              {/* Mobil görünüm için iki ayrı menü (dropdown değil) */}
+              <li className="nav-item mobile-only">
                 <Link href="/reservation" locale={currentLocale} legacyBehavior>
-                  <a className="nav-link">{t("navbar.rezervasyon")}</a>
+                  <a className="nav-link">{t("navbar.rezervasyonYap")}</a>
+                </Link>
+              </li>
+              <li className="nav-item mobile-only">
+                <Link
+                  href="/reservation-lookup"
+                  locale={currentLocale}
+                  legacyBehavior
+                >
+                  <a className="nav-link">{t("navbar.rezervasyonSorgula")}</a>
                 </Link>
               </li>
               <li className="nav-item">
                 <Link href="/contact" locale={currentLocale} legacyBehavior>
-                  <a className="nav-link">{t("navbar.iletisim")}</a>
+                  <a className="nav-link" style={linkStyle}>
+                    {t("navbar.iletisim")}
+                  </a>
                 </Link>
               </li>
               <li className="nav-item ml-5 d-none d-md-block">

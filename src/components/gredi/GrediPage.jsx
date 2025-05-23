@@ -58,16 +58,16 @@ const GrediPage = () => {
                 </h3>
               </div>
             </div>
-            <Link href="/gredi/dayViews">
+            <Link href="/gredi/nightInsideViews">
               <div
-                className="col-lg-6 items theaters"
+                className="col-lg-6 items residential"
                 style={{ marginBottom: "50px" }}
               >
                 <div className="item">
                   <div className="img">
                     <img
                       alt=""
-                      src="/assets/img/slid/gredi/dayViews/1.jpeg"
+                      src="/assets/img/slid/gredi/nightInsideViews/2.jpeg"
                       className="gallery-img-class"
                     />
                   </div>
@@ -84,14 +84,14 @@ const GrediPage = () => {
                       zIndex: 2,
                     }}
                   >
-                    <h6>{t("gunduzGorunumleri")}</h6>
+                    <h6>{t("geceIcMekanGorunumu")}</h6>
                   </div>
                 </div>
               </div>
             </Link>
             <Link href="/gredi/nightViews">
               <div
-                className="col-lg-6 items residential interior"
+                className="col-lg-6 items interior"
                 style={{ marginBottom: "50px" }}
               >
                 <div className="item">
@@ -129,7 +129,7 @@ const GrediPage = () => {
                   <div className="img">
                     <img
                       alt=""
-                      src="/assets/img/slid/gredi/indoor/1.jpeg"
+                      src="/assets/img/slid/gredi/indoor/3.jpeg"
                       className="gallery-img-class"
                     />
                   </div>
@@ -151,13 +151,47 @@ const GrediPage = () => {
                 </div>
               </div>
             </Link>
-            <Link href="/gredi/activities">
-              <div className="col-lg-6 items residential">
+            <Link href="/gredi/dayViews">
+              <div
+                className="col-lg-6 items theaters"
+                style={{ marginBottom: "50px" }}
+              >
                 <div className="item">
                   <div className="img">
                     <img
                       alt=""
-                      src="/assets/img/slid/gredi/activities/2.jpeg"
+                      src="/assets/img/slid/gredi/dayViews/1.jpeg"
+                      className="gallery-img-class"
+                    />
+                  </div>
+                  <div
+                    style={{
+                      position: "absolute",
+                      bottom: 0,
+                      left: 0,
+                      backgroundColor: "#fff",
+                      color: "#111",
+                      padding: "10px 16px",
+                      fontWeight: "bold",
+                      borderTopRightRadius: "6px",
+                      zIndex: 2,
+                    }}
+                  >
+                    <h6>{t("gunduzGorunumleri")}</h6>
+                  </div>
+                </div>
+              </div>
+            </Link>
+            <Link href="/gredi/activities">
+              <div
+                className="col-lg-6 items residential"
+                style={{ marginBottom: "50px" }}
+              >
+                <div className="item">
+                  <div className="img">
+                    <img
+                      alt=""
+                      src="/assets/img/slid/gredi/activities/1.jpeg"
                       className="gallery-img-class"
                     />
                   </div>

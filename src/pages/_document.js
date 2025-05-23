@@ -29,8 +29,9 @@ class MyDocument extends Document {
           <meta name="author" content="Sevgül Göksu Çelik, Tolga Kaya" />
           <meta
             name="keywords"
-            content="inselvillalari, insel, ilba, ilkin berberoğlu, selçuk ince, ilkinberberoglu, selcukince, kalkan, kaş, kiralık villa, lüks villa, agena, capella, gredi, rigel"
+            content="inselvillalari, insel, insel villaları, ilba, ilkin berberoğlu, ilkin berberoglu, selçuk ince, selcuk ince, kalkan, kaş, kas, rental villa, luxury villa, agena, capella, gredi, rigel, villa agena, villa capella, villa gredi, villa rigel"
           />
+
           <meta
             name="description"
             content="İnsel Villaları, Kalkan ve Kaş'ta özel havuzlu, deniz manzaralı lüks kiralık villalar sunar. Unutulmaz bir tatil deneyimi yaşayın."
