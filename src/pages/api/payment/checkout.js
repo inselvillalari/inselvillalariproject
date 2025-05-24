@@ -18,6 +18,7 @@ export default async function handler(req, res) {
     address,
     zipCode,
     contactName,
+    gsmNumber,
   } = payload;
 
   console.log("payload", payload);
@@ -26,10 +27,11 @@ export default async function handler(req, res) {
     req.headers["x-forwarded-for"] ||
     req.connection?.remoteAddress ||
     req.socket?.remoteAddress ||
-    "85.34.78.112";
+    req.headers["x-real-ip"] ||
+    "127.0.0.1";
 
   const ip =
-    typeof rawIp === "string" && rawIp.includes("::") ? "85.34.78.112" : rawIp;
+    typeof rawIp === "string" ? rawIp.split(",")[0].trim() : "127.0.0.1";
 
   const safePrice = Number(payload?.price || 0).toFixed(2);
 
@@ -41,12 +43,12 @@ export default async function handler(req, res) {
     currency: "TRY",
     basketId: uuidv4(),
     paymentGroup: "PRODUCT",
-    callbackUrl: `${process.env.NEXT_PUBLIC_BASE_URL}/reservation-success`,
+    callbackUrl: `${process.env.NEXT_PUBLIC_BASE_URL}/api/payment/${conversationId}`,
     buyer: {
       id: uuidv4(),
       name,
       surname,
-      gsmNumber: payload?.gsmNumber?.replace(/^0/, "90"),
+      gsmNumber,
       email,
       identityNumber,
       registrationAddress,
@@ -75,7 +77,7 @@ export default async function handler(req, res) {
   let responseSent = false;
 
   iyzipay.checkoutFormInitialize.create(request, (err, result) => {
-    console.log("request", request);
+    // console.log("request", request);
     if (responseSent) return;
     responseSent = true;
 

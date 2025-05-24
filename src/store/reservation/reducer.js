@@ -1,12 +1,13 @@
 // src/store/reservationSlice.js
 
 import { createSlice } from "@reduxjs/toolkit";
-import { getAllReservations } from "./thunk";
+import { getAllReservations, getReservationById } from "./thunk";
 
 const initialState = {
   loading: false,
   reservationData: {},
   allReservations: [],
+  reservationDetail: null,
 };
 ``;
 export const reservation = createSlice({
@@ -27,6 +28,16 @@ export const reservation = createSlice({
       state.allReservations = action.payload;
     });
     builder.addCase(getAllReservations.rejected, (state) => {
+      state.loading = false;
+    });
+    builder.addCase(getReservationById.pending, (state) => {
+      state.loading = true;
+    });
+    builder.addCase(getReservationById.fulfilled, (state, action) => {
+      state.loading = false;
+      state.reservationDetail = action.payload;
+    });
+    builder.addCase(getReservationById.rejected, (state) => {
       state.loading = false;
     });
   },

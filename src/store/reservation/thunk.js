@@ -37,23 +37,23 @@ const createReservation = createAsyncThunk(
   }
 );
 
-// const getReservationById = createAsyncThunk(
-//   "reservation/getReservationById",
-//   async (id, { dispatch }) => {
-//     try {
-//       const res = await ReservationService.getReservationById(id);
-//       return res?.data;
-//     } catch (error) {
-//       handleError(error);
-//     }
-//   }
-// );
+const getReservationById = createAsyncThunk(
+  "reservation/getReservationById",
+  async (id, { dispatch }) => {
+    try {
+      const res = await ReservationService.getReservationById(id);
+      return res?.data;
+    } catch (error) {
+      handleError(error);
+    }
+  }
+);
 
 export {
   getAllReservations,
   deleteReservation,
   createReservation,
-  //   getReservationById,
+  getReservationById,
   //   createReservation,
   //   deleteResarvation,
 };

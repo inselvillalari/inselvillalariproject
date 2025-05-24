@@ -86,15 +86,17 @@ export default function ReservationForm() {
         const reservationNumber = generateShortCode();
         const payload = {
           ...values,
-          entryDate: values.entryDate?.toISOString(),
-          exitDate: values.exitDate?.toISOString(),
+          entryDate: values?.entryDate?.toISOString(),
+          exitDate: values?.exitDate?.toISOString(),
           status: "Pending",
           conversationId: reservationNumber,
+          reservationNumber: reservationNumber,
           totalVillaPrice: reservationData.totalVillaPrice,
           totalHeatedPoolPrice: reservationData.totalHeatedPoolPrice,
           grandTotal: reservationData.grandTotal,
           totalNights: reservationData.totalNights,
           price: reservationData.price,
+          gsmNumber: values?.gsmNumber?.replace(/^0/, "90"),
         };
 
         // 1️⃣ Rezervasyon veritabanına kaydedilir
@@ -152,7 +154,6 @@ export default function ReservationForm() {
       }
     },
   });
-
 
   const minDate = new Date("2025-05-15");
   const maxDate = new Date("2025-11-01");
