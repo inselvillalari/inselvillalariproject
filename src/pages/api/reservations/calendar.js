@@ -22,8 +22,6 @@ export default async function handler(req, res) {
       const dateRanges = reservations.map((res) => {
         const status = Array.isArray(res.status) ? res.status[0] : res.status;
 
-        console.log("res", res);
-
         return {
           start: res.entryDate?.toISOString().split("T")[0],
           end: res.exitDate?.toISOString().split("T")[0],

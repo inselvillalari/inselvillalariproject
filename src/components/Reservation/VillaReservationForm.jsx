@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import { useFormik } from "formik";
 import countries from "i18n-iso-countries";
 import trCountries from "i18n-iso-countries/langs/tr.json";
@@ -18,6 +18,7 @@ import { setReservationData } from "../../store/reservation/reducer";
 import API from "../../helpers/api";
 import { inputStyle, labelStyle, sectionTitleStyle } from "./styles";
 import { getFormValidationSchema } from "./reservationFormValidation";
+import { getCalendarRanges } from "../../store/reservation/thunk";
 
 const villas = ["Villa Agena", "Villa Capella", "Villa Gredi", "Villa Rigel"];
 countries.registerLocale(trCountries);
@@ -36,7 +37,10 @@ export default function ReservationForm() {
   const [extraChildren, setExtraChildren] = useState([]);
   const [guestError, setGuestError] = useState("");
   const dispatch = useDispatch();
-  const { reservationData } = useSelector((state) => state.reservation);
+
+  const { reservationData, calendarRanges } = useSelector(
+    (state) => state.reservation
+  );
   const countryOptions = Object.entries(
     countries.getNames(i18n.language, { select: "official" })
   ).map(([code, name]) => ({ value: code, label: name }));
@@ -233,6 +237,22 @@ export default function ReservationForm() {
     form?.addEventListener("submit", handleSubmit);
     return () => form?.removeEventListener("submit", handleSubmit);
   }, []);
+
+  useEffect(() => {
+    if (formik?.values?.villa) {
+      dispatch(getCalendarRanges(formik.values.villa));
+    }
+  }, [formik?.values?.villa]);
+
+  const excludedRanges = useMemo(() => {
+    const villaKey = formik?.values?.villa?.split(" ")[1]?.toLowerCase(); // e.g., "capella"
+    const ranges = calendarRanges?.[villaKey] || [];
+
+    return ranges.map(({ start, end }) => ({
+      start: new Date(start),
+      end: new Date(end),
+    }));
+  }, [formik?.values?.villa, calendarRanges]);
 
   return (
     <div
@@ -462,6 +482,7 @@ export default function ReservationForm() {
               ? "is-invalid"
               : ""
           }`}
+          excludeDateIntervals={excludedRanges}
         />
         {formik.touched.entryDate && formik.errors.entryDate && (
           <div className="invalid-feedback">{formik.errors.entryDate}</div>
@@ -494,6 +515,7 @@ export default function ReservationForm() {
               ? "is-invalid"
               : ""
           }`}
+          excludeDateIntervals={excludedRanges}
         />
         {formik.touched.exitDate && formik.errors.exitDate && (
           <div className="invalid-feedback">{formik.errors.exitDate}</div>
