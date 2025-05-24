@@ -22,6 +22,10 @@ const ReservationSchema = new mongoose.Schema({
     type: ["Pending", "Completed", "Failed", "Canceled"],
     default: "Pending",
   },
+  reservationBy: {
+    type: ["Admin", "Customer"],
+    default: "Customer",
+  },
   reservationNumber: String,
   conversationId: String, // ✅ Iyzico ile eşleşme için
   contactName: String,

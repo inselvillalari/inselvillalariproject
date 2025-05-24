@@ -79,6 +79,7 @@ export default function ReservationForm() {
       totalNights: 0,
       price: "",
       locale: i18n.language,
+      reservationBy: "Customer",
     },
     validationSchema: getFormValidationSchema(t),
     onSubmit: async (values) => {

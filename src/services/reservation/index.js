@@ -20,9 +20,21 @@ const deleteReservation = async (id) => {
   return res?.data;
 };
 
+const getReservationByFilter = async (values) => {
+  const res = await API.post("/api/reservations/filter", values);
+  return res?.data;
+};
+
+const getCalendarRanges = async (villa) => {
+  const res = await API.post("/api/reservations/calendar", { villa });
+  return res?.data;
+};
+
 export const ReservationService = {
   getAllReservations,
   getReservationById,
   createReservation,
   deleteReservation,
+  getReservationByFilter,
+  getCalendarRanges,
 };

@@ -49,11 +49,37 @@ const getReservationById = createAsyncThunk(
   }
 );
 
+const getReservationByFilter = createAsyncThunk(
+  "reservation/getReservationByFilter",
+  async (values, { dispatch }) => {
+    try {
+      const res = await ReservationService.getReservationByFilter(values);
+      return res?.data;
+    } catch (error) {
+      handleError(error);
+    }
+  }
+);
+
+const getCalendarRanges = createAsyncThunk(
+  "reservation/getCalendarRanges",
+  async (villa) => {
+    try {
+      const res = await ReservationService.getCalendarRanges(villa);
+      return { villa, ranges: res.data };
+    } catch (error) {
+      handleError(error);
+    }
+  }
+);
+
 export {
   getAllReservations,
   deleteReservation,
   createReservation,
   getReservationById,
+  getReservationByFilter,
+  getCalendarRanges,
   //   createReservation,
   //   deleteResarvation,
 };

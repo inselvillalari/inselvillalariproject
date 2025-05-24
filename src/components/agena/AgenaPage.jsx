@@ -7,6 +7,8 @@ import BookingCalendar from "../BookingCalendar";
 import initIsotope from "../../common/initIsotope";
 import Skills from "../skills";
 import { useTranslation } from "next-i18next";
+import { useDispatch, useSelector } from "react-redux";
+import { getCalendarRanges } from "../../store/reservation/thunk";
 
 const dateRangesData = [
   {
@@ -32,17 +34,24 @@ const dateRangesData = [
 ];
 
 const AgenaPage = () => {
+  const dispatch = useDispatch();
   const { t } = useTranslation("common");
+
+  const { calendarRanges } = useSelector((state) => state.reservation);
+
   React.useEffect(() => {
     setTimeout(() => {
       if (window.Isotope) initIsotope();
     }, 1000);
+
+    dispatch(getCalendarRanges("Villa Agena"));
   }, []);
+
   return (
     <>
       <section className="works filter-img section-padding">
         <div className="container">
-          <BookingCalendar dateRangesData={dateRangesData} />
+          <BookingCalendar dateRangesData={calendarRanges?.agena || []} />
           <div className="row gallery gallery-min-heigth-agena">
             <div className="col-lg-6 items mt-0 interior theaters residential">
               <div className="section-head mb-0">
