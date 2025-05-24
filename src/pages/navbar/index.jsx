@@ -13,21 +13,30 @@ const Navbar = ({ navbarRef, logoRef, logoClass }) => {
   const isHome = router.pathname === "/";
   const [isDesktop, setIsDesktop] = useState(false);
 
+  const closeAllDropdowns = () => {
+    const openDropdowns = navbarRef.current?.querySelectorAll(".nav-item.show");
+    openDropdowns?.forEach((item) => {
+      item.classList.remove("show");
+      const toggleBtn = item.querySelector("[aria-expanded]");
+      const menu = item.querySelector(".dropdown-menu");
+      if (toggleBtn) toggleBtn.setAttribute("aria-expanded", "false");
+      if (menu) menu.classList.remove("show");
+    });
+  };
+
   const handleDropdown = (e) => {
-    getSiblings(e.target.parentElement)
-      .filter((item) => item.classList.contains("show"))
-      .map((item) => {
-        item.classList.remove("show");
-        if (item.childNodes[0]) {
-          item.childNodes[0].setAttribute("aria-expanded", false);
-        }
-        if (item.childNodes[1]) {
-          item.childNodes[1].classList.remove("show");
-        }
-      });
-    e.target.parentElement.classList.toggle("show");
-    e.target.setAttribute("aria-expanded", true);
-    e.target.parentElement.childNodes[1].classList.toggle("show");
+    e.preventDefault();
+    const parent = e.target.closest(".nav-item");
+
+    // Diğer açık dropdownları kapat
+    closeAllDropdowns();
+
+    // Tıklanan dropdown'u aç
+    parent.classList.add("show");
+    const toggleBtn = parent.querySelector("[aria-expanded]");
+    const menu = parent.querySelector(".dropdown-menu");
+    if (toggleBtn) toggleBtn.setAttribute("aria-expanded", "true");
+    if (menu) menu.classList.add("show");
   };
 
   const handleMobileDropdown = (e) => {
@@ -187,7 +196,7 @@ const Navbar = ({ navbarRef, logoRef, logoClass }) => {
                       locale={currentLocale}
                       legacyBehavior
                     >
-                      <a className="dropdown-item">
+                      <a className="dropdown-item" onClick={closeAllDropdowns}>
                         {t("navbar.rezervasyonYap")}
                       </a>
                     </Link>
@@ -198,7 +207,7 @@ const Navbar = ({ navbarRef, logoRef, logoClass }) => {
                       locale={currentLocale}
                       legacyBehavior
                     >
-                      <a className="dropdown-item">
+                      <a className="dropdown-item" onClick={closeAllDropdowns}>
                         {t("navbar.rezervasyonSorgula")}
                       </a>
                     </Link>

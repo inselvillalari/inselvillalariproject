@@ -1,10 +1,9 @@
-import React, { useState, useEffect, useMemo } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { useFormik } from "formik";
 import countries from "i18n-iso-countries";
 import trCountries from "i18n-iso-countries/langs/tr.json";
 import enCountries from "i18n-iso-countries/langs/en.json";
 import ruCountries from "i18n-iso-countries/langs/ru.json";
-import DatePicker from "react-datepicker";
 import { useDispatch, useSelector } from "react-redux";
 import { useRouter } from "next/router";
 import "react-datepicker/dist/react-datepicker.css";
@@ -14,11 +13,20 @@ import tr from "date-fns/locale/tr";
 import enUS from "date-fns/locale/en-US";
 import ru from "date-fns/locale/ru";
 import { createReservation } from "../../store/reservation/thunk";
-import { setReservationData } from "../../store/reservation/reducer";
+import {
+  resetReservationData,
+  resetReservationDetail,
+  setReservationData,
+} from "../../store/reservation/reducer";
 import API from "../../helpers/api";
 import { inputStyle, labelStyle, sectionTitleStyle } from "./styles";
 import { getFormValidationSchema } from "./reservationFormValidation";
 import { getCalendarRanges } from "../../store/reservation/thunk";
+import "react-date-range/dist/styles.css";
+import "react-date-range/dist/theme/default.css";
+import { DateRange } from "react-date-range";
+import { addDays } from "date-fns";
+import dayjs from "dayjs";
 
 const villas = ["Villa Agena", "Villa Capella", "Villa Gredi", "Villa Rigel"];
 countries.registerLocale(trCountries);
@@ -91,8 +99,8 @@ export default function ReservationForm() {
         const reservationNumber = generateShortCode();
         const payload = {
           ...values,
-          entryDate: values?.entryDate?.toISOString(),
-          exitDate: values?.exitDate?.toISOString(),
+          entryDate: dayjs(values?.entryDate).endOf("day").toISOString(),
+          exitDate: dayjs(values?.exitDate).endOf("day").toISOString(),
           status: "Pending",
           conversationId: reservationNumber,
           reservationNumber: reservationNumber,
@@ -159,9 +167,6 @@ export default function ReservationForm() {
       }
     },
   });
-
-  const minDate = new Date("2025-05-15");
-  const maxDate = new Date("2025-11-01");
 
   useEffect(() => {
     const adults = parseInt(formik.values.adults);
@@ -244,15 +249,39 @@ export default function ReservationForm() {
     }
   }, [formik?.values?.villa]);
 
-  const excludedRanges = useMemo(() => {
+  const disabledDates = useMemo(() => {
     const villaKey = formik?.values?.villa?.split(" ")[1]?.toLowerCase(); // e.g., "capella"
     const ranges = calendarRanges?.[villaKey] || [];
 
-    return ranges.map(({ start, end }) => ({
-      start: new Date(start),
-      end: new Date(end),
-    }));
-  }, [formik?.values?.villa, calendarRanges]);
+    const disabled = new Set();
+
+    ranges.forEach(({ start, end }) => {
+      let current = new Date(start);
+      const endDate = new Date(end);
+      endDate.setDate(endDate.getDate() - 1); // end tarihini dahil etme (aynı gün giriş yapılabilsin)
+
+      while (current <= endDate) {
+        disabled.add(new Date(current).toDateString());
+        current.setDate(current.getDate() + 1);
+      }
+    });
+
+    return [...disabled].map((dateStr) => new Date(dateStr));
+  }, [calendarRanges, formik?.values?.villa]);
+
+  const handleRangeChange = (ranges) => {
+    const { startDate, endDate } = ranges.selection;
+    formik.setFieldValue("entryDate", startDate);
+    formik.setFieldValue("exitDate", endDate);
+  };
+
+  useEffect(() => {
+    return () => {
+      formik.resetForm();
+      dispatch(resetReservationData());
+      dispatch(resetReservationDetail());
+    };
+  }, []);
 
   return (
     <div
@@ -460,7 +489,25 @@ export default function ReservationForm() {
         >
           {t("reservationForm.giris")}
         </label>
-        <DatePicker
+        <DateRange
+          onChange={handleRangeChange}
+          moveRangeOnFirstSelection={false}
+          ranges={[
+            {
+              startDate: formik.values.entryDate || new Date(),
+              endDate: formik.values.exitDate || addDays(new Date(), 1),
+              key: "selection",
+            },
+          ]}
+          minDate={new Date()}
+          maxDate={new Date("2025-11-01")}
+          disabledDates={disabledDates}
+          locale={
+            i18n.language === "tr" ? tr : i18n.language === "ru" ? ru : enUS
+          }
+        />
+
+        {/* <DatePicker
           locale={i18n.language}
           selected={formik.values.entryDate}
           onChange={(date) => {
@@ -486,9 +533,9 @@ export default function ReservationForm() {
         />
         {formik.touched.entryDate && formik.errors.entryDate && (
           <div className="invalid-feedback">{formik.errors.entryDate}</div>
-        )}
+        )} */}
         <hr />
-        <label
+        {/* <label
           style={{ ...labelStyle, marginTop: "10px", marginRight: "20px" }}
         >
           {t("reservationForm.cikis")}
@@ -519,7 +566,7 @@ export default function ReservationForm() {
         />
         {formik.touched.exitDate && formik.errors.exitDate && (
           <div className="invalid-feedback">{formik.errors.exitDate}</div>
-        )}
+        )} */}
 
         {/* Kişi Sayısı */}
         <h3 style={sectionTitleStyle}>{t("reservationForm.kisiSayisi")}</h3>
