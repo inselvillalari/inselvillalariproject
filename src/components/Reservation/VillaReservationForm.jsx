@@ -29,9 +29,9 @@ import { addDays } from "date-fns";
 import dayjs from "dayjs";
 
 const villas = ["Villa Agena", "Villa Capella", "Villa Gredi", "Villa Rigel"];
-countries.registerLocale(trCountries);
-countries.registerLocale(enCountries);
-countries.registerLocale(ruCountries);
+countries?.registerLocale(trCountries);
+countries?.registerLocale(enCountries);
+countries?.registerLocale(ruCountries);
 
 const generateShortCode = () => {
   const now = Date.now().toString(36);
@@ -49,16 +49,16 @@ export default function ReservationForm() {
   const { reservationData, calendarRanges } = useSelector(
     (state) => state.reservation
   );
-  const countryOptions = Object.entries(
-    countries.getNames(i18n.language, { select: "official" })
+  const countryOptions = Object?.entries(
+    countries?.getNames(i18n.language, { select: "official" })
   ).map(([code, name]) => ({ value: code, label: name }));
 
   useEffect(() => {
-    if (i18n.language === "tr") {
+    if (i18n?.language === "tr") {
       registerLocale("tr", tr);
-    } else if (i18n.language === "en") {
+    } else if (i18n?.language === "en") {
       registerLocale("en", enUS);
-    } else if (i18n.language === "ru") {
+    } else if (i18n?.language === "ru") {
       registerLocale("ru", ru);
     }
   }, [i18n.language]);
@@ -104,11 +104,11 @@ export default function ReservationForm() {
           status: "Pending",
           conversationId: reservationNumber,
           reservationNumber: reservationNumber,
-          totalVillaPrice: reservationData.totalVillaPrice,
-          totalHeatedPoolPrice: reservationData.totalHeatedPoolPrice,
-          grandTotal: reservationData.grandTotal,
-          totalNights: reservationData.totalNights,
-          price: reservationData.price,
+          totalVillaPrice: reservationData?.totalVillaPrice,
+          totalHeatedPoolPrice: reservationData?.totalHeatedPoolPrice,
+          grandTotal: reservationData?.grandTotal,
+          totalNights: reservationData?.totalNights,
+          price: reservationData?.price,
           gsmNumber: values?.gsmNumber?.replace(/^0/, "90"),
         };
 
@@ -169,8 +169,8 @@ export default function ReservationForm() {
   });
 
   useEffect(() => {
-    const adults = parseInt(formik.values.adults);
-    const children = parseInt(formik.values.children);
+    const adults = parseInt(formik.values?.adults);
+    const children = parseInt(formik.values?.children);
 
     if (isNaN(adults) || isNaN(children)) {
       setGuestError(t("reservationForm.validation.secmeZorunlulugu"));
@@ -204,29 +204,29 @@ export default function ReservationForm() {
       setExtraAdults(adultsArray);
       setExtraChildren(childrenArray);
     }
-  }, [formik.values.adults, formik.values.children]);
+  }, [formik.values?.adults, formik.values?.children]);
 
   useEffect(() => {
     if (
-      formik.values.villa &&
-      formik.values.entryDate &&
-      formik.values.exitDate
+      formik.values?.villa &&
+      formik.values?.entryDate &&
+      formik.values?.exitDate
     ) {
       dispatch(
         setReservationData({
           ...reservationData,
-          villa: formik.values.villa,
-          entryDate: formik.values.entryDate?.toISOString() || null,
-          exitDate: formik.values.exitDate?.toISOString() || null,
-          heatedPool: formik.values.heatedPool,
+          villa: formik.values?.villa,
+          entryDate: formik.values?.entryDate?.toISOString() || null,
+          exitDate: formik.values?.exitDate?.toISOString() || null,
+          heatedPool: formik.values?.heatedPool,
         })
       );
     }
   }, [
-    formik.values.villa,
-    formik.values.entryDate,
-    formik.values.exitDate,
-    formik.values.heatedPool,
+    formik.values?.villa,
+    formik.values?.entryDate,
+    formik.values?.exitDate,
+    formik.values?.heatedPool,
   ]);
 
   useEffect(() => {
@@ -245,7 +245,7 @@ export default function ReservationForm() {
 
   useEffect(() => {
     if (formik?.values?.villa) {
-      dispatch(getCalendarRanges(formik.values.villa));
+      dispatch(getCalendarRanges(formik.values?.villa));
     }
   }, [formik?.values?.villa]);
 
@@ -270,7 +270,7 @@ export default function ReservationForm() {
   }, [calendarRanges, formik?.values?.villa]);
 
   const handleRangeChange = (ranges) => {
-    const { startDate, endDate } = ranges.selection;
+    const { startDate, endDate } = ranges?.selection;
     formik.setFieldValue("entryDate", startDate);
     formik.setFieldValue("exitDate", endDate);
   };
@@ -305,28 +305,28 @@ export default function ReservationForm() {
         {t("reservationForm.form")}
       </h2>
 
-      <form onSubmit={formik.handleSubmit}>
+      <form onSubmit={formik?.handleSubmit}>
         {/* Villa Seçimi */}
         <h3 style={sectionTitleStyle}>{t("reservationForm.villaSecimi")}</h3>
         <label style={labelStyle}>{t("reservationForm.villa")}</label>
         <select
           name="villa"
-          value={formik.values.villa}
-          onChange={formik.handleChange}
-          onBlur={formik.handleBlur}
+          value={formik?.values?.villa}
+          onChange={formik?.handleChange}
+          onBlur={formik?.handleBlur}
           className={`form-control ${
-            formik.touched.villa && formik.errors.villa ? "is-invalid" : ""
+            formik?.touched?.villa && formik?.errors?.villa ? "is-invalid" : ""
           }`}
         >
           <option value=""> {t("reservationForm.sec")}</option>
-          {villas.map((villa) => (
+          {villas?.map((villa) => (
             <option key={villa} value={villa}>
               {villa}
             </option>
           ))}
         </select>
-        {formik.touched.villa && formik.errors.villa && (
-          <div className="invalid-feedback">{formik.errors.villa}</div>
+        {formik?.touched?.villa && formik?.errors?.villa && (
+          <div className="invalid-feedback">{formik?.errors?.villa}</div>
         )}
 
         {/* Kiralayan Bilgileri */}
@@ -334,9 +334,9 @@ export default function ReservationForm() {
         <label style={labelStyle}>{t("reservationForm.ad")}</label>
         <input
           name="name"
-          value={formik.values.name}
+          value={formik?.values?.name}
           onChange={(e) => {
-            const onlyLetters = e.target.value.replace(
+            const onlyLetters = e?.target?.value.replace(
               /[^a-zA-ZğüşöçıİĞÜŞÖÇ\s]/g,
               ""
             );
@@ -373,7 +373,7 @@ export default function ReservationForm() {
         <label style={labelStyle}>{t("reservationForm.tc")}</label>
         <input
           name="identityNumber"
-          value={formik.values.identityNumber}
+          value={formik.values?.identityNumber}
           onChange={(e) => {
             const allowed = e.target.value.replace(/[^a-zA-Z0-9]/g, "");
             formik.setFieldValue("identityNumber", allowed);
@@ -392,7 +392,7 @@ export default function ReservationForm() {
         <label style={labelStyle}>{t("reservationForm.email")}</label>
         <input
           name="email"
-          value={formik.values.email}
+          value={formik.values?.email}
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
           className={`form-control ${
@@ -406,31 +406,31 @@ export default function ReservationForm() {
         <label style={labelStyle}>{t("reservationForm.telefon")}</label>
         <input
           name="gsmNumber"
-          value={formik.values.gsmNumber}
+          value={formik.values?.gsmNumber}
           onChange={(e) => {
-            const onlyNums = e.target.value.replace(/[^0-9]/g, ""); // sadece 0-9 rakamları alır
+            const onlyNums = e?.target?.value.replace(/[^0-9]/g, ""); // sadece 0-9 rakamları alır
             formik.setFieldValue("gsmNumber", onlyNums);
           }}
           onBlur={formik.handleBlur}
           className={`form-control ${
-            formik.touched.gsmNumber && formik.errors.gsmNumber
+            formik?.touched?.gsmNumber && formik?.errors?.gsmNumber
               ? "is-invalid"
               : ""
           }`}
         />
-        {formik.touched.gsmNumber && formik.errors.gsmNumber && (
-          <div className="invalid-feedback">{formik.errors.gsmNumber}</div>
+        {formik?.touched?.gsmNumber && formik?.errors?.gsmNumber && (
+          <div className="invalid-feedback">{formik?.errors?.gsmNumber}</div>
         )}
         <label style={labelStyle}>{t("reservationForm.adres")}</label>
         <input
           name="registrationAddress"
-          value={formik.values.registrationAddress}
-          onChange={formik.handleChange}
-          onBlur={formik.handleBlur}
+          value={formik?.values?.registrationAddress}
+          onChange={formik?.handleChange}
+          onBlur={formik?.handleBlur}
           style={inputStyle}
           className={
-            formik.touched.registrationAddress &&
-            formik.errors.registrationAddress
+            formik?.touched?.registrationAddress &&
+            formik?.errors?.registrationAddress
               ? "is-invalid"
               : ""
           }

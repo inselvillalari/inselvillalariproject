@@ -2,8 +2,11 @@ import { useDispatch } from "react-redux";
 import React, { useState } from "react";
 import { useRouter } from "next/router";
 import { adminLogin } from "../../store/auth/thunk";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import withLoading from "../../common/withLoading";
 
-export default function AdminLoginPage() {
+function AdminLoginPage() {
+  const { t } = useTranslation("common");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(null);
@@ -48,3 +51,13 @@ export default function AdminLoginPage() {
     </div>
   );
 }
+
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ["common"])),
+    },
+  };
+}
+
+export default withLoading(AdminLoginPage);

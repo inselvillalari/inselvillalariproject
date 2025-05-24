@@ -25,6 +25,8 @@ import {
 import LogoutIcon from "@mui/icons-material/Logout";
 import { useDispatch } from "react-redux";
 import { getAllReservations } from "../../store/reservation/thunk";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import withLoading from "../../common/withLoading";
 
 const columns = [
   { id: "reservationNumber", label: "Rez. No" },
@@ -35,8 +37,8 @@ const columns = [
   { id: "status", label: "Durum" },
 ];
 
-
-export default function AdminDashboardPage() {
+function AdminDashboardPage() {
+  const { t } = useTranslation("common");
   const dispatch = useDispatch();
   const [selected, setSelected] = useState(null);
   const router = useRouter();
@@ -241,3 +243,13 @@ export default function AdminDashboardPage() {
     </Box>
   );
 }
+
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ["common"])),
+    },
+  };
+}
+
+export default withLoading(AdminDashboardPage);
