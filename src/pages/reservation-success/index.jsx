@@ -1,5 +1,5 @@
-import React, { useRef } from "react";
-import { useSelector } from "react-redux";
+import React, { useRef, useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import {
   Box,
   Typography,
@@ -12,8 +12,10 @@ import { CheckCircleOutline, Print } from "@mui/icons-material";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
 import withLoading from "../../common/withLoading";
+import { resetReservationDetail } from "../../store/reservation/reducer";
 
 function ReservationSuccess() {
+  const dispatch = useDispatch();
   const { t } = useTranslation("common");
   const { reservationDetail, loading } = useSelector(
     (state) => state.reservation
@@ -33,6 +35,10 @@ function ReservationSuccess() {
 
   const formatDate = (date) =>
     date ? new Date(date).toLocaleDateString("tr-TR") : "-";
+
+  useEffect(() => {
+    return () => dispatch(resetReservationDetail());
+  }, []);
 
   return (
     <>

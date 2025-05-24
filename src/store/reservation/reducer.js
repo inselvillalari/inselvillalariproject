@@ -18,6 +18,9 @@ export const reservation = createSlice({
       state.reservationData = action.payload;
     },
     resetReservationData: () => initialState,
+    resetReservationDetail: (state) => {
+      state.reservationDetail = null;
+    },
   },
   extraReducers: (builder) => {
     builder.addCase(getAllReservations.pending, (state) => {
@@ -43,5 +46,9 @@ export const reservation = createSlice({
   },
 });
 
-export const { setReservationData, resetReservationData } = reservation.actions;
+export const {
+  setReservationData,
+  resetReservationData,
+  resetReservationDetail,
+} = reservation.actions;
 export default reservation.reducer;

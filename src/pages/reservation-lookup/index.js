@@ -1,41 +1,39 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import withLoading from "../../common/withLoading";
 import { useTranslation } from "next-i18next";
+import { useDispatch, useSelector } from "react-redux";
+import { getReservationById } from "../../store/reservation/thunk";
+import { resetReservationDetail } from "../../store/reservation/reducer";
+import dayjs from "dayjs";
+import LoadingButton from "@mui/lab/LoadingButton";
 
 function ReservationLookupPage() {
+  const dispatch = useDispatch();
   const { t } = useTranslation("common");
 
-  const [code, setCode] = useState("");
-  const [reservation, setReservation] = useState(null);
+  const { reservationDetail, loading } = useSelector(
+    (state) => state.reservation
+  );
+
   const [notFound, setNotFound] = useState(false);
 
-  const dummyReservation = {
-    code: "RSV-3461-007",
-    villa: "Villa Capella",
-    entryDate: "2025-06-15",
-    exitDate: "2025-06-20",
-    totalNights: 5,
-    heatedPool: true,
-    wantsCrib: false,
-    hirerName: "Yakışıklı Tolga Kaya",
-    hirerIdNumber: "12345678901",
-    email: "tolga3461@example.com",
-    phone: "05551234567",
-    adults: 2,
-    children: 1,
-    totalPrice: 34500,
+  const [code, setCode] = useState("");
+
+  const handleSearch = async () => {
+    await dispatch(resetReservationDetail());
+    await dispatch(getReservationById(code)).then((res) => {
+      if (res?.meta?.requestStatus == "fulfilled") {
+        setNotFound(false);
+      } else {
+        setNotFound(true);
+      }
+    });
   };
 
-  const handleSearch = () => {
-    if (code.trim() === dummyReservation.code) {
-      setReservation(dummyReservation);
-      setNotFound(false);
-    } else {
-      setReservation(null);
-      setNotFound(true);
-    }
-  };
+  useEffect(() => {
+    return () => dispatch(resetReservationDetail());
+  }, []);
 
   return (
     <div
@@ -97,9 +95,30 @@ function ReservationLookupPage() {
             }}
           />
         </div>
+        <LoadingButton
+          onClick={() => code && handleSearch()}
+          loading={loading}
+          variant="contained"
+          fullWidth
+          sx={{
+            backgroundColor: "#C8A97E",
+            color: "white",
+            fontWeight: 600,
+            fontSize: "14px",
+            fontFamily: "'Poppins', sans-serif",
+            padding: "10px",
+            borderRadius: "6px",
+            "&:hover": {
+              backgroundColor: "#b2906c",
+            },
+          }}
+        >
+          {t("reservationLookup.sorgula")}
+        </LoadingButton>
 
-        <button
-          onClick={handleSearch}
+        {/* <button
+          onClick={() => code && handleSearch()}
+          type="submit"
           style={{
             backgroundColor: "#C8A97E",
             color: "white",
@@ -114,9 +133,9 @@ function ReservationLookupPage() {
           }}
         >
           {t("reservationLookup.sorgula")}
-        </button>
+        </button> */}
 
-        {reservation && (
+        {reservationDetail && (
           <div style={{ marginTop: "40px" }}>
             <h3
               style={{
@@ -131,33 +150,38 @@ function ReservationLookupPage() {
               {t("reservationLookup.rezervasyonBilgileri")}
             </h3>
             <p>
-              <strong>{t("reservationLookup.kod")}:</strong> {reservation.code}
+              <strong>{t("reservationLookup.kod")}:</strong>{" "}
+              {reservationDetail?.reservationNumber || "-"}
             </p>
             <p>
               <strong>{t("reservationLookup.villa")}:</strong>{" "}
-              {reservation.villa}
+              {reservationDetail?.villa || "-"}
             </p>
             <p>
               <strong>{t("reservationLookup.girisTarihi")}:</strong>{" "}
-              {reservation.entryDate}
+              {dayjs(reservationDetail?.entryDate, { utc: true }).format(
+                "DD/MM/YYYY"
+              ) || "-"}
             </p>
             <p>
               <strong>{t("reservationLookup.cikisTarihi")}:</strong>{" "}
-              {reservation.exitDate}
+              {dayjs(reservationDetail?.exitDate, { utc: true }).format(
+                "DD/MM/YYYY"
+              ) || "-"}
             </p>
             <p>
               <strong>{t("reservationLookup.toplamGece")}:</strong>{" "}
-              {reservation.totalNights}
+              {reservationDetail?.totalNights || "-"}
             </p>
             <p>
               <strong>{t("reservationLookup.isitmaliHavuz")}:</strong>{" "}
-              {reservation.heatedPool
+              {reservationDetail?.totalHeatedPoolPrice
                 ? t("reservationLookup.evet")
                 : t("reservationLookup.hayir")}
             </p>
             <p>
               <strong>{t("reservationLookup.besik")}:</strong>{" "}
-              {reservation.wantsCrib
+              {reservationDetail?.wantsCrib
                 ? t("reservationLookup.evet")
                 : t("reservationLookup.hayir")}
             </p>
@@ -177,27 +201,27 @@ function ReservationLookupPage() {
             </h3>
             <p>
               <strong>{t("reservationLookup.adSoyad")}:</strong>{" "}
-              {reservation.hirerName}
+              {reservationDetail?.name || "-"}
             </p>
             <p>
               <strong>{t("reservationLookup.kimlik")}:</strong>{" "}
-              {reservation.hirerIdNumber}
+              {reservationDetail?.identityNumber || "-"}
             </p>
             <p>
               <strong>{t("reservationLookup.email")}:</strong>{" "}
-              {reservation.email}
+              {reservationDetail?.email || "-"}
             </p>
             <p>
               <strong>{t("reservationLookup.telefon")}:</strong>{" "}
-              {reservation.phone}
+              {reservationDetail?.gsmNumber || "-"}
             </p>
             <p>
               <strong>{t("reservationLookup.yetiskin")}:</strong>{" "}
-              {reservation.adults}
+              {reservationDetail?.adults || "-"}
             </p>
             <p>
               <strong>{t("reservationLookup.cocuk")}:</strong>{" "}
-              {reservation.children}
+              {reservationDetail?.children || "-"}
             </p>
 
             <h3
@@ -215,7 +239,7 @@ function ReservationLookupPage() {
             </h3>
             <p>
               <strong>{t("reservationLookup.toplamUcret")}:</strong>{" "}
-              {reservation.totalPrice.toLocaleString("tr-TR")} TL
+              {reservationDetail?.price.toLocaleString("tr-TR")} TL
             </p>
 
             <div
