@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 import { adminLogin } from "../../store/auth/thunk";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import withLoading from "../../common/withLoading";
+import { useTranslation } from "react-i18next";
 
 function AdminLoginPage() {
   const { t } = useTranslation("common");
