@@ -13,7 +13,6 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
 import withLoading from "../../common/withLoading";
 
-
 function ReservationSuccess() {
   const { t } = useTranslation("common");
   const { reservationDetail, loading } = useSelector(
@@ -37,7 +36,6 @@ function ReservationSuccess() {
 
   return (
     <>
-    
       <Box
         sx={{ py: 10, px: 2, backgroundColor: "#f7f7f7", minHeight: "100vh" }}
       >
@@ -102,16 +100,16 @@ function ReservationSuccess() {
 
           <Section title={t("reservationSuccess.kiralayanBilgileri")}>
             <Info
-              label={t("reservationSuccess.adSoyad")}
+              label={t("reservationSuccess.ad")}
               value={reservationDetail?.name}
             />
             <Info
-              label={t("reservationSuccess.adSoyad")}
+              label={t("reservationSuccess.soyad")}
               value={reservationDetail?.surname}
             />
             <Info
               label={t("reservationSuccess.kimlik")}
-              value={reservationDetail?.iden}
+              value={reservationDetail?.identityNumber}
             />
             <Info
               label={t("reservationSuccess.email")}
