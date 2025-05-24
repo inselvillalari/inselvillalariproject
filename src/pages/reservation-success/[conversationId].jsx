@@ -13,14 +13,13 @@ const ReservationSuccessPage = () => {
 
   const { loading } = useSelector((state) => state.reservation);
 
-
-  console.log('loading',loading)
+  console.log("loading", loading);
 
   useEffect(() => {
-    if (query.conversationId) {
-      dispatch(getReservationById(query.conversationId));
+    if (query?.conversationId) {
+      dispatch(getReservationById(query?.conversationId));
     }
-  }, [query.conversationId]);
+  }, [query?.conversationId]);
 
   return (
     <>
@@ -38,4 +37,3 @@ export async function getServerSideProps({ locale }) {
   };
 }
 export default withLoading(ReservationSuccessPage);
-
