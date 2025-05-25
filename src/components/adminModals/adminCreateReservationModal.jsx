@@ -260,6 +260,7 @@ function AdminCreateReservationModal({ open, onClose, id }) {
                   }
                   slotProps={{ textField: { size: "small", fullWidth: true } }}
                   format="DD.MM.YYYY"
+                  minDate={dayjs()}
                 />
               </Grid>
               <Grid item xs={6}>
@@ -269,6 +270,7 @@ function AdminCreateReservationModal({ open, onClose, id }) {
                   onChange={(value) => formik?.setFieldValue("exitDate", value)}
                   slotProps={{ textField: { size: "small", fullWidth: true } }}
                   format="DD.MM.YYYY"
+                  minDate={dayjs()}
                 />
               </Grid>
             </LocalizationProvider>
