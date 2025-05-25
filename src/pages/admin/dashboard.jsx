@@ -33,10 +33,16 @@ import withLoading from "../../common/withLoading";
 import { useTranslation } from "next-i18next";
 import dayjs from "dayjs";
 import { useFormik } from "formik";
+import AdminReservationDetailModal from "../../components/adminModals/adminReservationDetailModal";
+import DeleteIcon from "@mui/icons-material/Delete";
+import VisibilityIcon from "@mui/icons-material/Visibility";
+import EditIcon from "@mui/icons-material/Edit";
+import AdminCreateReservationModal from "../../components/adminModals/adminCreateReservationModal";
 
 const villas = ["Villa Agena", "Villa Capella", "Villa Gredi", "Villa Rigel"];
 
 const columns = [
+  { id: "", label: "Actions" },
   { id: "reservationNumber", label: "Rez. No" },
   { id: "name", label: "İsim" },
   { id: "surname", label: "Soyisim" },
@@ -51,6 +57,16 @@ function AdminDashboardPage() {
   const dispatch = useDispatch();
   const [selected, setSelected] = useState(null);
   const router = useRouter();
+
+  const [detailModalIsOpen, setDetailModalIsOpen] = useState({
+    id: "",
+    open: false,
+  });
+
+  const [createModalIsOpen, setCreateModalIsOpen] = useState({
+    id: "",
+    open: false,
+  });
 
   const { filteredReservations } = useSelector((state) => state.reservation);
 
@@ -113,104 +129,106 @@ function AdminDashboardPage() {
           </Button>
         </Toolbar>
       </AppBar>
-      <Container maxWidth="lg" sx={{ mt: 12, mb: 8 }}>
+      <Container sx={{ mt: 12, mb: 8 }}>
         <Typography variant="h4" gutterBottom align="center">
           Tüm Rezervasyonlar
         </Typography>
 
-        <form
-          noValidate
-          autoComplete="off"
-          onSubmit={(e) => {
-            e?.preventDefault();
-            formik?.handleSubmit();
-          }}
-          style={{ marginBottom: "50px" }}
-        >
-          <Grid container spacing={2}>
-            <Grid item xs={12} sm={6} md={3}>
-              <TextField
-                fullWidth
-                autoComplete="off"
-                size="small"
-                id="reservationNumber"
-                name="reservationNumber"
-                label="Rezervasyon no"
-                value={formik?.values?.reservationNumber}
-                onChange={formik?.handleChange}
-              />
-            </Grid>
-            <Grid item xs={12} sm={6} md={3}>
-              <TextField
-                fullWidth
-                autoComplete="off"
-                size="small"
-                id="name"
-                name="name"
-                label="İsim"
-                value={formik?.values?.name}
-                onChange={formik?.handleChange}
-              />
-            </Grid>
-            <Grid item xs={12} sm={6} md={3}>
-              <TextField
-                fullWidth
-                size="small"
-                autoComplete="off"
-                id="surname"
-                name="surname"
-                label="Soy isim"
-                value={formik?.values?.surname}
-                onChange={formik?.handleChange}
-              />
-            </Grid>
-            <Grid item xs={12} sm={6} md={3} style={{ minWidth: 150 }}>
-              <FormControl fullWidth size="small" variant="outlined">
-                <InputLabel id="villa-label">Villa</InputLabel>
-                <Select
-                  labelId="villa-label"
-                  id="villa"
-                  name="villa"
-                  value={formik?.values?.villa}
+        <Box component={Paper} my={3} p={1}>
+          <form
+            noValidate
+            autoComplete="off"
+            onSubmit={(e) => {
+              e?.preventDefault();
+              formik?.handleSubmit();
+            }}
+            style={{ marginBottom: "50px" }}
+          >
+            <Grid container spacing={2}>
+              <Grid item xs={12} sm={6} md={3}>
+                <TextField
+                  fullWidth
+                  autoComplete="off"
+                  size="small"
+                  id="reservationNumber"
+                  name="reservationNumber"
+                  label="Rezervasyon no"
+                  value={formik?.values?.reservationNumber}
                   onChange={formik?.handleChange}
-                  label="Villa"
-                >
-                  <MenuItem value="">Tümü</MenuItem>
-                  {villas?.map((villa) => (
-                    <MenuItem key={villa} value={villa}>
-                      {villa}
-                    </MenuItem>
-                  ))}
-                </Select>
-              </FormControl>
-            </Grid>
-            <Grid item xs={12} sm={6} md={3} style={{ minWidth: 150 }}>
-              <FormControl fullWidth size="small" variant="outlined">
-                <InputLabel id="villa-label">Statu</InputLabel>
-                <Select
-                  labelId="status"
-                  id="status"
-                  name="status"
-                  value={formik?.values?.status}
+                />
+              </Grid>
+              <Grid item xs={12} sm={6} md={3}>
+                <TextField
+                  fullWidth
+                  autoComplete="off"
+                  size="small"
+                  id="name"
+                  name="name"
+                  label="İsim"
+                  value={formik?.values?.name}
                   onChange={formik?.handleChange}
-                  label="Status"
-                >
-                  <MenuItem value="">Tümü</MenuItem>
-                  <MenuItem value="Completed">Completed</MenuItem>
-                  <MenuItem value="Pending">Pending</MenuItem>
-                  <MenuItem value="Failed">Failed</MenuItem>
-                  <MenuItem value="Canceled">Canceled</MenuItem>
-                </Select>
-              </FormControl>
-            </Grid>
+                />
+              </Grid>
+              <Grid item xs={12} sm={6} md={3}>
+                <TextField
+                  fullWidth
+                  size="small"
+                  autoComplete="off"
+                  id="surname"
+                  name="surname"
+                  label="Soy isim"
+                  value={formik?.values?.surname}
+                  onChange={formik?.handleChange}
+                />
+              </Grid>
+              <Grid item xs={12} sm={6} md={3} style={{ minWidth: 150 }}>
+                <FormControl fullWidth size="small" variant="outlined">
+                  <InputLabel id="villa-label">Villa</InputLabel>
+                  <Select
+                    labelId="villa-label"
+                    id="villa"
+                    name="villa"
+                    value={formik?.values?.villa}
+                    onChange={formik?.handleChange}
+                    label="Villa"
+                  >
+                    <MenuItem value="">Tümü</MenuItem>
+                    {villas?.map((villa) => (
+                      <MenuItem key={villa} value={villa}>
+                        {villa}
+                      </MenuItem>
+                    ))}
+                  </Select>
+                </FormControl>
+              </Grid>
+              <Grid item xs={12} sm={6} md={3} style={{ minWidth: 150 }}>
+                <FormControl fullWidth size="small" variant="outlined">
+                  <InputLabel id="villa-label">Statu</InputLabel>
+                  <Select
+                    labelId="status"
+                    id="status"
+                    name="status"
+                    value={formik?.values?.status}
+                    onChange={formik?.handleChange}
+                    label="Status"
+                  >
+                    <MenuItem value="">Tümü</MenuItem>
+                    <MenuItem value="Completed">Completed</MenuItem>
+                    <MenuItem value="Pending">Pending</MenuItem>
+                    <MenuItem value="Failed">Failed</MenuItem>
+                    <MenuItem value="Canceled">Canceled</MenuItem>
+                  </Select>
+                </FormControl>
+              </Grid>
 
-            <Grid item xs={6} sm={6} md={2} gap={5}>
-              <Button variant="contained" type="submit" color="primary">
-                Ara
-              </Button>
+              <Grid item xs={6} sm={6} md={2} gap={5}>
+                <Button variant="contained" type="submit" color="primary">
+                  Ara
+                </Button>
+              </Grid>
             </Grid>
-          </Grid>
-        </form>
+          </form>
+        </Box>
 
         <TableContainer component={Paper} sx={{ boxShadow: 2 }}>
           <Table>
@@ -223,14 +241,41 @@ function AdminDashboardPage() {
             </TableHead>
             <TableBody>
               {reservations?.map((row) => (
-                <TableRow
-                  key={row?.id}
-                  hover
-                  style={{ cursor: "pointer" }}
-                  onClick={() => setSelected(row)}
-                >
-                  {columns?.map((col) => (
-                    <TableCell key={col?.id}>{row[col?.id]}</TableCell>
+                <TableRow key={row?.id} hover>
+                  <TableCell>
+                    <div className="d-flex w-100">
+                      <IconButton
+                        color="primary"
+                        onClick={() =>
+                          setDetailModalIsOpen({
+                            id: row?.reservationNumber,
+                            open: true,
+                          })
+                        }
+                      >
+                        <VisibilityIcon />
+                      </IconButton>
+                      <IconButton
+                        color="warning"
+                        onClick={() =>
+                          setCreateModalIsOpen({
+                            id: row?.reservationNumber,
+                            open: true,
+                          })
+                        }
+                      >
+                        <EditIcon />
+                      </IconButton>
+                      <IconButton
+                        color="error"
+                        onClick={() => alert("Sil: " + row?.id)}
+                      >
+                        <DeleteIcon />
+                      </IconButton>
+                    </div>
+                  </TableCell>
+                  {columns.slice(1).map((col) => (
+                    <TableCell key={col.id}>{row[col.id]}</TableCell>
                   ))}
                 </TableRow>
               ))}
@@ -238,62 +283,26 @@ function AdminDashboardPage() {
           </Table>
         </TableContainer>
 
-        <Modal open={!!selected} onClose={() => setSelected(null)}>
-          <Box
-            sx={{
-              position: "absolute",
-              top: "50%",
-              left: "50%",
-              transform: "translate(-50%, -50%)",
-              bgcolor: "background.paper",
-              p: 4,
-              width: 500,
-              borderRadius: 2,
-              boxShadow: 24,
-            }}
-          >
-            <Typography variant="h6" gutterBottom>
-              Rezervasyon Detayı
-            </Typography>
-            {selected && (
-              <>
-                <Typography>
-                  <strong>Ad Soyad:</strong> {selected?.name}{" "}
-                  {selected?.surname}
-                </Typography>
-                <Typography>
-                  <strong>Villa:</strong> {selected?.villa}
-                </Typography>
-                <Typography>
-                  <strong>Giriş:</strong> {selected?.entryDate}
-                </Typography>
-                <Typography>
-                  <strong>Çıkış:</strong> {selected?.exitDate}
-                </Typography>
-                <Typography>
-                  <strong>Durum:</strong> {selected?.status}
-                </Typography>
-                <Typography>
-                  <strong>Email:</strong> {selected?.email}
-                </Typography>
-                <Typography>
-                  <strong>Telefon:</strong> {selected?.gsmNumber}
-                </Typography>
-                <Typography>
-                  <strong>Toplam Fiyat:</strong> {selected?.totalPrice} ₺
-                </Typography>
-                <Button
-                  sx={{ mt: 2 }}
-                  onClick={() => setSelected(null)}
-                  variant="contained"
-                  fullWidth
-                >
-                  Kapat
-                </Button>
-              </>
-            )}
-          </Box>
-        </Modal>
+        <AdminReservationDetailModal
+          id={detailModalIsOpen?.id}
+          open={detailModalIsOpen?.open}
+          onClose={() => {
+            setDetailModalIsOpen({
+              id: "",
+              open: false,
+            });
+          }}
+        />
+        <AdminCreateReservationModal
+          id={createModalIsOpen?.id}
+          open={createModalIsOpen?.open}
+          onClose={() => {
+            setCreateModalIsOpen({
+              id: "",
+              open: false,
+            });
+          }}
+        />
       </Container>
     </Box>
   );
