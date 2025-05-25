@@ -1,19 +1,25 @@
 import { dbConnect } from "../../../utils/dbConnect";
 import Reservation from "../../../models/Reservation";
+import { verifyAdminToken } from "../../../utils/verifyToken";
 
 export default async function handler(req, res) {
   await dbConnect();
 
-  if (req.method !== "POST") return res.status(405).end(); // Yalnızca POST izinli
+  if (req.method !== "POST") return res.status(405).end(); // Sadece POST desteklenir
+
+  const decoded = verifyAdminToken(req, res);
+  if (!decoded) return; // Geçersiz token varsa sonlandır
 
   try {
     const filters = req.body || {};
 
     const allowedFields = [
       "villa",
-      "gsmNumber",
+      "name",
+      "surname",
+      "identityNumber",
       "email",
-      "hirerName",
+      "gsmNumber",
       "reservationNumber",
       "status",
     ];
@@ -21,7 +27,13 @@ export default async function handler(req, res) {
     const queryObj = Object.keys(filters)
       .filter((key) => allowedFields.includes(key))
       .reduce((acc, key) => {
-        acc[key] = filters[key];
+        const value = filters[key];
+        if (["name", "surname", "reservationNumber"].includes(key)) {
+          // İçeren (contains) ve büyük/küçük harfe duyarsız
+          acc[key] = { $regex: value, $options: "i" };
+        } else {
+          acc[key] = value;
+        }
         return acc;
       }, {});
 

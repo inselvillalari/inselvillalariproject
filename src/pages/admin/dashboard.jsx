@@ -21,16 +21,25 @@ import {
   TextField,
   MenuItem,
   Grid,
+  Select,
+  InputLabel,
+  FormControl,
 } from "@mui/material";
 import LogoutIcon from "@mui/icons-material/Logout";
 import { useDispatch } from "react-redux";
-import { getAllReservations } from "../../store/reservation/thunk";
+import { getReservationByFilter } from "../../store/reservation/thunk";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import withLoading from "../../common/withLoading";
+import { useTranslation } from "next-i18next";
+import dayjs from "dayjs";
+import { useFormik } from "formik";
+
+const villas = ["Villa Agena", "Villa Capella", "Villa Gredi", "Villa Rigel"];
 
 const columns = [
   { id: "reservationNumber", label: "Rez. No" },
-  { id: "name", label: "Ad Soyad" },
+  { id: "name", label: "İsim" },
+  { id: "surname", label: "Soyisim" },
   { id: "villa", label: "Villa" },
   { id: "entryDate", label: "Giriş" },
   { id: "exitDate", label: "Çıkış" },
@@ -43,14 +52,14 @@ function AdminDashboardPage() {
   const [selected, setSelected] = useState(null);
   const router = useRouter();
 
-  const { allReservations } = useSelector((state) => state.reservation);
+  const { filteredReservations } = useSelector((state) => state.reservation);
 
   useEffect(() => {
     const token = localStorage.getItem("adminToken");
     if (!token) {
       router.push("/admin/login");
     }
-    dispatch(getAllReservations());
+    dispatch(getReservationByFilter({}));
   }, []);
 
   const handleLogout = () => {
@@ -58,7 +67,34 @@ function AdminDashboardPage() {
     router.push("/admin/login");
   };
 
-  const reservations = allReservations || [];
+  const reservations = filteredReservations || [];
+
+  const formik = useFormik({
+    initialValues: {
+      villa: "",
+      name: "",
+      surname: "",
+      reservationNumber: "",
+      identityNumber: "",
+      email: "",
+      gsmNumber: "",
+      status: "",
+    },
+    // validationSchema: getFormValidationSchema(t),
+    onSubmit: async (values) => {
+      const filteredValues = Object.entries(values).reduce(
+        (acc, [key, value]) => {
+          if (value !== "" && value !== null && value !== undefined) {
+            acc[key] = value;
+          }
+          return acc;
+        },
+        {}
+      );
+
+      dispatch(getReservationByFilter(filteredValues));
+    },
+  });
 
   return (
     <Box mt={5}>
@@ -82,81 +118,99 @@ function AdminDashboardPage() {
           Tüm Rezervasyonlar
         </Typography>
 
-        <Toolbar
-          sx={{
-            mb: 2,
-            p: 2,
-            borderRadius: 2,
-            bgcolor: "#f9f9f9",
-            flexDirection: "column",
-            alignItems: "flex-start",
-            gap: 2,
+        <form
+          noValidate
+          autoComplete="off"
+          onSubmit={(e) => {
+            e.preventDefault();
+            formik.handleSubmit();
           }}
+          style={{ marginBottom: "50px" }}
         >
           <Grid container spacing={2}>
-            <Grid item xs={12} sm={4} md={3}>
+            <Grid item xs={12} sm={6} md={3}>
               <TextField
                 fullWidth
-                label="Ad Soyad"
-                variant="outlined"
+                autoComplete="off"
                 size="small"
-                // value={} onChange={}
-              />
-            </Grid>
-            <Grid item xs={12} sm={4} md={3}>
-              <TextField
-                fullWidth
-                label="Rezervasyon No"
-                variant="outlined"
-                size="small"
-                // value={} onChange={}
-              />
-            </Grid>
-            <Grid item xs={12} sm={4} md={3}>
-              <TextField
-                fullWidth
-                label="Telefon"
-                variant="outlined"
-                size="small"
-                // value={} onChange={}
-              />
-            </Grid>
-            <Grid item xs={12} sm={4} md={3}>
-              <TextField
-                fullWidth
-                label="Email"
-                variant="outlined"
-                size="small"
-                // value={} onChange={}
+                id="reservationNumber"
+                name="reservationNumber"
+                label="Rezervasyon no"
+                value={formik?.values?.reservationNumber}
+                onChange={formik?.handleChange}
               />
             </Grid>
             <Grid item xs={12} sm={6} md={3}>
               <TextField
                 fullWidth
-                label="Tarih (örn: 2025-07)"
-                variant="outlined"
+                autoComplete="off"
                 size="small"
-                // value={} onChange={}
+                id="name"
+                name="name"
+                label="İsim"
+                value={formik?.values?.name}
+                onChange={formik?.handleChange}
               />
             </Grid>
             <Grid item xs={12} sm={6} md={3}>
               <TextField
-                select
                 fullWidth
-                label="Durum"
-                variant="outlined"
                 size="small"
-                defaultValue=""
-                // value={} onChange={}
-              >
-                <MenuItem value="">Hepsi</MenuItem>
-                <MenuItem value="Pending">Pending</MenuItem>
-                <MenuItem value="Confirmed">Confirmed</MenuItem>
-                <MenuItem value="Cancelled">Cancelled</MenuItem>
-              </TextField>
+                autoComplete="off"
+                id="surname"
+                name="surname"
+                label="Soy isim"
+                value={formik?.values?.surname}
+                onChange={formik?.handleChange}
+              />
+            </Grid>
+            <Grid item xs={12} sm={6} md={3}>
+              <FormControl fullWidth size="small" variant="outlined">
+                <InputLabel id="villa-label">Villa</InputLabel>
+                <Select
+                  labelId="villa-label"
+                  id="villa"
+                  name="villa"
+                  value={formik.values.villa}
+                  onChange={formik.handleChange}
+                  label="Villa"
+                >
+                  <MenuItem value="">Tümü</MenuItem>
+                  {villas.map((villa) => (
+                    <MenuItem key={villa} value={villa}>
+                      {villa}
+                    </MenuItem>
+                  ))}
+                </Select>
+              </FormControl>
+            </Grid>
+            <Grid item xs={12} sm={6} md={3}>
+              <FormControl fullWidth size="small" variant="outlined">
+                <InputLabel id="villa-label">Statu</InputLabel>
+                <Select
+                  labelId="status"
+                  id="status"
+                  name="status"
+                  value={formik.values.status}
+                  onChange={formik.handleChange}
+                  label="Status"
+                >
+                  <MenuItem value="">Tümü</MenuItem>
+                  <MenuItem value="Completed">Completed</MenuItem>
+                  <MenuItem value="Pending">Pending</MenuItem>
+                  <MenuItem value="Failed">Failed</MenuItem>
+                  <MenuItem value="Canceled">Canceled</MenuItem>
+                </Select>
+              </FormControl>
+            </Grid>
+
+            <Grid item xs={6} sm={6} md={2} gap={5}>
+              <Button variant="contained" type="submit" color="primary">
+                Ara
+              </Button>
             </Grid>
           </Grid>
-        </Toolbar>
+        </form>
 
         <TableContainer component={Paper} sx={{ boxShadow: 2 }}>
           <Table>

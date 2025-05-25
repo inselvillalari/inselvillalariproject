@@ -21,7 +21,12 @@ const deleteReservation = async (id) => {
 };
 
 const getReservationByFilter = async (values) => {
-  const res = await API.post("/api/reservations/filter", values);
+  const token = localStorage.getItem("adminToken");
+  const res = await API.post("/api/reservations/filter", values, {
+    headers: {
+      Authorization: `Bearer ${token}`, // token header'a eklenir
+    },
+  });
   return res?.data;
 };
 
