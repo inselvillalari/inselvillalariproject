@@ -45,12 +45,14 @@ const villas = ["Villa Agena", "Villa Capella", "Villa Gredi", "Villa Rigel"];
 const columns = [
   { id: "", label: "Actions" },
   { id: "reservationNumber", label: "Rez. No" },
+  { id: "reservationBy", label: "Rezerve Eden" },
   { id: "name", label: "İsim" },
   { id: "surname", label: "Soyisim" },
   { id: "villa", label: "Villa" },
   { id: "entryDate", label: "Giriş" },
   { id: "exitDate", label: "Çıkış" },
   { id: "status", label: "Durum" },
+  { id: "grandTotal", label: "Toplam Tutar" },
 ];
 
 function AdminDashboardPage() {
@@ -301,8 +303,8 @@ function AdminDashboardPage() {
                         </IconButton>
                       </div>
                     </TableCell>
-                    {columns.slice(1).map((col) => (
-                      <TableCell key={col.id}>{row[col.id]}</TableCell>
+                    {columns?.slice(1).map((col) => (
+                      <TableCell key={col?.id}>{row[col?.id]}</TableCell>
                     ))}
                   </TableRow>
                 ))}
