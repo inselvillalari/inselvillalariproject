@@ -20,6 +20,8 @@ export default async function handler(req, res) {
     entryDate,
     exitDate,
     grandTotal,
+    price,
+    refundPrice,
   } = req.body;
 
   if (!reservationNumber) {
@@ -40,6 +42,8 @@ export default async function handler(req, res) {
     reservation.grandTotal = grandTotal ?? reservation.grandTotal;
     reservation.entryDate = entryDate ?? reservation.entryDate;
     reservation.exitDate = exitDate ?? reservation.exitDate;
+    reservation.price = price ?? reservation.price;
+    reservation.refundPrice = refundPrice ?? reservation.refundPrice;
 
     await reservation.save();
 

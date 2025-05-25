@@ -23,6 +23,7 @@ export default async function handler(req, res) {
       price,
       grandTotal,
       reservationBy,
+      refundPrice,
     } = req.body;
 
     if (
@@ -61,6 +62,7 @@ export default async function handler(req, res) {
       exitDate: exit,
       price: price || 0,
       grandTotal: grandTotal || 0,
+      refundPrice: refundPrice || 0,
       status: ["Completed"],
       reservationBy: reservationBy,
       reservationNumber: reservationNumber,
@@ -73,13 +75,11 @@ export default async function handler(req, res) {
       totalNights,
     });
 
-    return res
-      .status(201)
-      .json({
-        status: "created",
-        data: newRes,
-        message: "Rezervasyon başarıyla oluşturuldu.",
-      });
+    return res.status(201).json({
+      status: "created",
+      data: newRes,
+      message: "Rezervasyon başarıyla oluşturuldu.",
+    });
   } catch (err) {
     return res.status(500).json({ error: err.message });
   }

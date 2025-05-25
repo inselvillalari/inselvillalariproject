@@ -50,6 +50,8 @@ function AdminCreateReservationModal({ open, onClose, id }) {
       entryDate: null,
       exitDate: null,
       grandTotal: "",
+      price: "",
+      refundPrice: 0,
       id: id ?? "",
     },
     enableReinitialize: true,
@@ -181,6 +183,26 @@ function AdminCreateReservationModal({ open, onClose, id }) {
               fullWidth
               size="small"
               value={formik?.values?.grandTotal}
+              onChange={formik?.handleChange}
+            />
+          </Grid>
+          <Grid item xs={12}>
+            <TextField
+              label="Ödenen Tutar"
+              name="price"
+              fullWidth
+              size="small"
+              value={formik?.values?.price}
+              onChange={formik?.handleChange}
+            />
+          </Grid>
+          <Grid item xs={12}>
+            <TextField
+              label="İade Tutarı"
+              name="refundPrice"
+              fullWidth
+              size="small"
+              value={formik?.values?.refundPrice}
               onChange={formik?.handleChange}
             />
           </Grid>

@@ -38,6 +38,7 @@ const ReservationSchema = new mongoose.Schema({
   totalHeatedPoolPrice: Number,
   grandTotal: Number,
   price: Number,
+  refundPrice: Number,
   totalNights: Number,
   locale: String,
   createdAt: {

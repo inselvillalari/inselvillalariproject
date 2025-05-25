@@ -54,6 +54,8 @@ const columns = [
   { id: "exitDate", label: "Çıkış" },
   { id: "status", label: "Durum" },
   { id: "grandTotal", label: "Toplam Tutar" },
+  { id: "price", label: "Ödenen Tutar" },
+  { id: "refundPrice", label: "İptal Tutarı" },
 ];
 
 function AdminDashboardPage() {
