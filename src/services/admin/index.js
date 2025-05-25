@@ -20,15 +20,16 @@ const updateReservation = async (values) => {
   return res?.data;
 };
 
-const createReservation = async (data) => {
+const createReservation = async (values) => {
   const token = localStorage.getItem("adminToken");
-  const res = await API.post(`/api/admin/reservations`, data, {
+  const res = await API.post(`/api/admin/reservations/create`, values, {
     headers: {
       Authorization: `Bearer ${token}`,
     },
   });
   return res?.data;
 };
+
 
 export const AdminService = {
   getAdminReservationDetail,

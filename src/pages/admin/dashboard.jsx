@@ -146,7 +146,6 @@ function AdminDashboardPage() {
           <Typography variant="h4" gutterBottom align="center">
             Tüm Rezervasyonlar
           </Typography>
-
           <Box component={Paper} my={3} p={1}>
             <form
               noValidate
@@ -242,6 +241,21 @@ function AdminDashboardPage() {
               </Grid>
             </form>
           </Box>
+
+          <div className="d-flex justify-content-end mb-4">
+            <Button
+              variant="contained"
+              color="secondary"
+              onClick={() =>
+                setCreateModalIsOpen({
+                  id: null,
+                  open: true,
+                })
+              }
+            >
+              Yeni oluştur
+            </Button>
+          </div>
 
           <TableContainer component={Paper} sx={{ boxShadow: 2 }}>
             <Table>

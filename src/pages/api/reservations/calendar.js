@@ -25,7 +25,11 @@ export default async function handler(req, res) {
         return {
           start: res.entryDate?.toISOString().split("T")[0],
           end: res.exitDate?.toISOString().split("T")[0],
-          color: res?.reservationBy[0] === "Customer" ? "#ff851b" : "gray",
+          color:
+            res?.reservationBy[0] === "Customer" ||
+            res?.reservationBy[0] === "Outsource"
+              ? "#ff851b"
+              : "gray",
         };
       });
 

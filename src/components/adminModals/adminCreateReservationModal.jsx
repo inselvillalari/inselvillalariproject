@@ -22,6 +22,7 @@ import { useTranslation } from "next-i18next";
 import {
   getAdminReservationDetail,
   updateReservation,
+  createReservation,
 } from "../../store/admin/thunk";
 import { resetAdminReservationDetail } from "../../store/admin/reducer";
 import { getCalendarRanges } from "../../store/reservation/thunk";
@@ -29,6 +30,7 @@ import "dayjs/locale/tr";
 
 const villas = ["Villa Agena", "Villa Capella", "Villa Gredi", "Villa Rigel"];
 const statusOptions = ["Pending", "Completed", "Failed", "Canceled"];
+const reservationByOptions = ["Admin", "Customer", "Outsource"];
 
 function AdminCreateReservationModal({ open, onClose, id }) {
   const { t } = useTranslation("common");
@@ -38,10 +40,16 @@ function AdminCreateReservationModal({ open, onClose, id }) {
   const formik = useFormik({
     initialValues: {
       name: "",
+      surname: "",
       villa: "",
       status: "",
+      gsmNumber: "",
+      email: "",
+      identityNumber: "",
+      reservationBy: "",
       entryDate: null,
       exitDate: null,
+      grandTotal: "",
       id: id ?? "",
     },
     enableReinitialize: true,
@@ -59,7 +67,17 @@ function AdminCreateReservationModal({ open, onClose, id }) {
           }
         });
       } else {
-        //   dispatch(createReservation(values));
+        dispatch(
+          createReservation({
+            ...values,
+            entryDate: dayjs(values?.entryDate)?.endOf("day")?.toISOString(),
+            exitDate: dayjs(values?.exitDate)?.endOf("day")?.toISOString(),
+          })
+        ).then((res) => {
+          if (res?.meta?.requestStatus == "fulfilled") {
+            onClose();
+          }
+        });
       }
     },
   });
@@ -117,6 +135,56 @@ function AdminCreateReservationModal({ open, onClose, id }) {
             />
           </Grid>
           <Grid item xs={12}>
+            <TextField
+              label="Soyisim"
+              name="surname"
+              fullWidth
+              size="small"
+              value={formik?.values?.surname}
+              onChange={formik?.handleChange}
+            />
+          </Grid>
+          <Grid item xs={12}>
+            <TextField
+              label="Telefon"
+              name="gsmNumber"
+              fullWidth
+              size="small"
+              value={formik?.values?.gsmNumber}
+              onChange={formik?.handleChange}
+            />
+          </Grid>
+          <Grid item xs={12}>
+            <TextField
+              label="Email"
+              name="email"
+              fullWidth
+              size="small"
+              value={formik?.values?.email}
+              onChange={formik?.handleChange}
+            />
+          </Grid>
+          <Grid item xs={12}>
+            <TextField
+              label="TC no"
+              name="identityNumber"
+              fullWidth
+              size="small"
+              value={formik?.values?.identityNumber}
+              onChange={formik?.handleChange}
+            />
+          </Grid>
+          <Grid item xs={12}>
+            <TextField
+              label="Toplam tutar"
+              name="grandTotal"
+              fullWidth
+              size="small"
+              value={formik?.values?.grandTotal}
+              onChange={formik?.handleChange}
+            />
+          </Grid>
+          <Grid item xs={12}>
             <FormControl fullWidth size="small">
               <InputLabel>Villa</InputLabel>
               <Select
@@ -128,6 +196,23 @@ function AdminCreateReservationModal({ open, onClose, id }) {
                 {villas?.map((villa) => (
                   <MenuItem key={villa} value={villa}>
                     {villa}
+                  </MenuItem>
+                ))}
+              </Select>
+            </FormControl>
+          </Grid>
+          <Grid item xs={12}>
+            <FormControl fullWidth size="small">
+              <InputLabel>Rezerve eden</InputLabel>
+              <Select
+                name="reservationBy"
+                value={formik?.values?.reservationBy}
+                onChange={formik?.handleChange}
+                label="Rezerve eden"
+              >
+                {reservationByOptions?.map((item) => (
+                  <MenuItem key={item} value={item}>
+                    {item}
                   </MenuItem>
                 ))}
               </Select>

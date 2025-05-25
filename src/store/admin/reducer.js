@@ -1,7 +1,11 @@
 // src/store/reservationSlice.js
 
 import { createSlice } from "@reduxjs/toolkit";
-import { getAdminReservationDetail, updateReservation } from "./thunk";
+import {
+  getAdminReservationDetail,
+  updateReservation,
+  createReservation,
+} from "./thunk";
 
 const initialState = {
   loading: false,
@@ -38,6 +42,15 @@ export const admin = createSlice({
       state.loading = false;
     });
     builder.addCase(updateReservation.rejected, (state) => {
+      state.loading = false;
+    });
+    builder.addCase(createReservation.pending, (state) => {
+      state.loading = true;
+    });
+    builder.addCase(createReservation.fulfilled, (state) => {
+      state.loading = false;
+    });
+    builder.addCase(createReservation.rejected, (state) => {
       state.loading = false;
     });
   },

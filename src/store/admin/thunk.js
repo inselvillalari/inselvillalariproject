@@ -14,9 +14,9 @@ const getAdminReservationDetail = createAsyncThunk(
     }
   }
 );
-export const updateReservation = createAsyncThunk(
+const updateReservation = createAsyncThunk(
   "admin/updateReservation",
-  async (values, { dispatch, getState }) => {
+  async (values, { dispatch }) => {
     try {
       const res = await AdminService.updateReservation(values);
       dispatch(getReservationByFilter({}));
@@ -27,17 +27,18 @@ export const updateReservation = createAsyncThunk(
     }
   }
 );
-
-export const createReservation = createAsyncThunk(
+const createReservation = createAsyncThunk(
   "admin/createReservation",
-  async (data, thunkAPI) => {
+  async (values, { dispatch }) => {
     try {
-      const res = await AdminService.createReservation(data);
+      const res = await AdminService.createReservation(values);
+      dispatch(getReservationByFilter({}));
+      toast.success(res?.message);
       return res;
     } catch (error) {
-      return thunkAPI.rejectWithValue(error?.response?.data || error.message);
+      // return thunkAPI.rejectWithValue(error?.response?.data || error.message);
     }
   }
 );
 
-export { getAdminReservationDetail };
+export { getAdminReservationDetail, updateReservation, createReservation };

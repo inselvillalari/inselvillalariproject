@@ -12,8 +12,15 @@ export default async function handler(req, res) {
   const decoded = verifyAdminToken(req, res);
   if (!decoded) return;
 
-  const { reservationNumber, name, villa, status, entryDate, exitDate } =
-    req.body;
+  const {
+    reservationNumber,
+    name,
+    villa,
+    status,
+    entryDate,
+    exitDate,
+    grandTotal,
+  } = req.body;
 
   if (!reservationNumber) {
     return res.status(400).json({ message: "reservationNumber zorunludur." });
@@ -30,18 +37,17 @@ export default async function handler(req, res) {
     reservation.name = name ?? reservation.name;
     reservation.villa = villa ?? reservation.villa;
     reservation.status = status ?? reservation.status;
+    reservation.grandTotal = grandTotal ?? reservation.grandTotal;
     reservation.entryDate = entryDate ?? reservation.entryDate;
     reservation.exitDate = exitDate ?? reservation.exitDate;
 
     await reservation.save();
 
-    return res
-      .status(200)
-      .json({
-        status: "ok",
-        data: reservation,
-        message: "Başarıyla güncellendi!",
-      });
+    return res.status(200).json({
+      status: "ok",
+      data: reservation,
+      message: "Başarıyla güncellendi!",
+    });
   } catch (err) {
     return res.status(500).json({ status: "error", message: err.message });
   }

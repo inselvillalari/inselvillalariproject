@@ -23,7 +23,7 @@ const ReservationSchema = new mongoose.Schema({
     default: "Pending",
   },
   reservationBy: {
-    type: ["Admin", "Customer"],
+    type: ["Admin", "Customer", "Outsource"],
     default: "Customer",
   },
   reservationNumber: String,
