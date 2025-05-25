@@ -41,6 +41,7 @@ import AdminCreateReservationModal from "../../components/adminModals/adminCreat
 import { ToastContainer } from "react-toastify";
 
 const villas = ["Villa Agena", "Villa Capella", "Villa Gredi", "Villa Rigel"];
+const reservationByOptions = ["Admin", "Customer", "Outsource"];
 
 const columns = [
   { id: "", label: "Actions" },
@@ -234,7 +235,28 @@ function AdminDashboardPage() {
                     </Select>
                   </FormControl>
                 </Grid>
-
+                <Grid item xs={12} sm={6} md={3} style={{ minWidth: 150 }}>
+                  <FormControl fullWidth size="small" variant="outlined">
+                    <InputLabel id="reservationBy-label">
+                      Rezerve Eden
+                    </InputLabel>
+                    <Select
+                      labelId="reservationBy-label"
+                      id="reservationBy"
+                      name="reservationBy"
+                      value={formik?.values?.reservationBy}
+                      onChange={formik?.handleChange}
+                      label="Rezerve Eden"
+                    >
+                      <MenuItem value="">Tümü</MenuItem>
+                      {reservationByOptions?.map((reservationBy) => (
+                        <MenuItem key={reservationBy} value={reservationBy}>
+                          {reservationBy}
+                        </MenuItem>
+                      ))}
+                    </Select>
+                  </FormControl>
+                </Grid>
                 <Grid item xs={6} sm={6} md={2} gap={5}>
                   <Button variant="contained" type="submit" color="primary">
                     Ara
@@ -303,9 +325,18 @@ function AdminDashboardPage() {
                         </IconButton>
                       </div>
                     </TableCell>
-                    {columns?.slice(1).map((col) => (
-                      <TableCell key={col?.id}>{row[col?.id]}</TableCell>
-                    ))}
+                    {columns?.slice(1).map((col) => {
+                      const value = row[col?.id];
+                      const isDateField =
+                        col?.id === "entryDate" || col?.id === "exitDate";
+                      return (
+                        <TableCell key={col?.id}>
+                          {isDateField && value
+                            ? dayjs(value).format("DD/MM/YYYY")
+                            : value}
+                        </TableCell>
+                      );
+                    })}
                   </TableRow>
                 ))}
               </TableBody>

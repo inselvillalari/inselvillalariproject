@@ -166,7 +166,7 @@ function AdminCreateReservationModal({ open, onClose, id }) {
           </Grid>
           <Grid item xs={12}>
             <TextField
-              label="TC no"
+              label="TC No"
               name="identityNumber"
               fullWidth
               size="small"
@@ -176,7 +176,7 @@ function AdminCreateReservationModal({ open, onClose, id }) {
           </Grid>
           <Grid item xs={12}>
             <TextField
-              label="Toplam tutar"
+              label="Toplam Tutar"
               name="grandTotal"
               fullWidth
               size="small"
@@ -203,12 +203,12 @@ function AdminCreateReservationModal({ open, onClose, id }) {
           </Grid>
           <Grid item xs={12}>
             <FormControl fullWidth size="small">
-              <InputLabel>Rezerve eden</InputLabel>
+              <InputLabel>Rezerve Eden</InputLabel>
               <Select
                 name="reservationBy"
                 value={formik?.values?.reservationBy}
                 onChange={formik?.handleChange}
-                label="Rezerve eden"
+                label="Rezerve Eden"
               >
                 {reservationByOptions?.map((item) => (
                   <MenuItem key={item} value={item}>
