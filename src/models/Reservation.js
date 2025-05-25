@@ -45,6 +45,7 @@ const ReservationSchema = new mongoose.Schema({
     type: Date,
     default: Date.now,
   },
+  fromIyzico: Boolean,
 });
 
 export default mongoose.models.Reservation ||

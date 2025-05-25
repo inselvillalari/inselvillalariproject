@@ -56,6 +56,7 @@ const columns = [
   { id: "grandTotal", label: "Toplam Tutar" },
   { id: "price", label: "Ödenen Tutar" },
   { id: "refundPrice", label: "İptal Tutarı" },
+  { id: "fromIyzico", label: "Oluşturulma Yeri" },
 ];
 
 function AdminDashboardPage() {
@@ -336,6 +337,8 @@ function AdminDashboardPage() {
                           {isDateField && value
                             ? dayjs(value).format("DD/MM/YYYY")
                             : value}
+                          {col?.id === "fromIyzico" &&
+                            (value ? "Iyzico" : "Admin Panel")}
                         </TableCell>
                       );
                     })}

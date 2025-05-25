@@ -73,6 +73,7 @@ export default async function handler(req, res) {
       country: "",
       locale: "tr",
       totalNights,
+      fromIyzico: false,
     });
 
     return res.status(201).json({

@@ -94,6 +94,7 @@ export default function ReservationForm() {
       price: "",
       locale: i18n?.language,
       reservationBy: "Customer",
+      fromIyzico: true,
     },
     validationSchema: getFormValidationSchema(t),
     onSubmit: async (values) => {
