@@ -26,7 +26,6 @@ export default function PriceDetailCard() {
     let totalVillaPrice = 0;
     let totalHeatedPoolPrice = 0;
 
-
     if (villa !== "Villa Gredi" && villa !== "Villa Agena" && heatedPool) {
       totalHeatedPoolPrice = dayDiff * 1800;
     }
@@ -34,19 +33,19 @@ export default function PriceDetailCard() {
     const pricePeriods = villaPrices?.[villa] || [];
 
     for (let d = 0; d < dayDiff; d++) {
-      const currentDay = start.add(d, "day");
-      const currentDate = currentDay.format("YYYY-MM-DD");
+      const currentDay = start?.add(d, "day");
+      const currentDate = currentDay?.format("YYYY-MM-DD");
 
       const period = pricePeriods.find(
-        (p) => currentDate >= p.start && currentDate <= p.end
+        (p) => currentDate >= p?.start && currentDate <= p.end
       );
       if (period) {
-        totalVillaPrice += period.price;
+        totalVillaPrice += period?.price;
       }
     }
 
     const grandTotal = totalVillaPrice + totalHeatedPoolPrice;
-    const upfront = Math.round(grandTotal * 0.4);
+    const upfront = Math?.round(grandTotal * 0.4);
     const remaining = grandTotal - upfront;
 
     return {
@@ -64,11 +63,11 @@ export default function PriceDetailCard() {
       dispatch(
         setReservationData({
           ...reservationData,
-          totalVillaPrice: result.villaPrice,
-          totalHeatedPoolPrice: result.heatedPoolPrice,
-          grandTotal: result.grandTotal,
-          totalNights: result.dayCount,
-          price: result.upfront,
+          totalVillaPrice: result?.villaPrice,
+          totalHeatedPoolPrice: result?.heatedPoolPrice,
+          grandTotal: result?.grandTotal,
+          totalNights: result?.dayCount,
+          price: result?.upfront,
         })
       );
     }
@@ -119,12 +118,12 @@ export default function PriceDetailCard() {
           </div>
           <div style={{ fontSize: "14px", marginBottom: "12px" }}>
             <strong> {t("reservationPriceCard.ucret")}</strong>{" "}
-            {result.villaPrice.toLocaleString("tr-TR")} TL
+            {result?.villaPrice?.toLocaleString("tr-TR")} TL
           </div>
           {heatedPool && result.heatedPoolPrice !== 0 && (
             <div style={{ fontSize: "14px", marginBottom: "12px" }}>
               <strong>{t("reservationPriceCard.isitmali")}</strong>{" "}
-              {result.heatedPoolPrice.toLocaleString("tr-TR")} TL
+              {result?.heatedPoolPrice?.toLocaleString("tr-TR")} TL
             </div>
           )}
           <hr style={{ margin: "20px 0", borderTop: "1px solid #ddd" }} />
@@ -138,7 +137,7 @@ export default function PriceDetailCard() {
             }}
           >
             {t("reservationPriceCard.toplam")}{" "}
-            {result.grandTotal.toLocaleString("tr-TR")} TL
+            {result?.grandTotal?.toLocaleString("tr-TR")} TL
           </div>
 
           <div
@@ -150,7 +149,7 @@ export default function PriceDetailCard() {
             }}
           >
             %40 {t("reservationPriceCard.siteUzerinden")}:{" "}
-            <strong>{result.upfront.toLocaleString("tr-TR")} TL</strong>
+            <strong>{result?.upfront?.toLocaleString("tr-TR")} TL</strong>
           </div>
           <p
             style={{
@@ -172,7 +171,7 @@ export default function PriceDetailCard() {
             }}
           >
             %60 {t("reservationPriceCard.giristeOdeme")}:{" "}
-            <strong>{result.remaining.toLocaleString("tr-TR")} TL</strong>
+            <strong>{result?.remaining?.toLocaleString("tr-TR")} TL</strong>
           </div>
 
           <div
