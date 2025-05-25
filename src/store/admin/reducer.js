@@ -5,6 +5,7 @@ import {
   getAdminReservationDetail,
   updateReservation,
   createReservation,
+  refundReservation,
 } from "./thunk";
 
 const initialState = {
@@ -51,6 +52,15 @@ export const admin = createSlice({
       state.loading = false;
     });
     builder.addCase(createReservation.rejected, (state) => {
+      state.loading = false;
+    });
+    builder.addCase(refundReservation.pending, (state) => {
+      state.loading = true;
+    });
+    builder.addCase(refundReservation.fulfilled, (state) => {
+      state.loading = false;
+    });
+    builder.addCase(refundReservation.rejected, (state) => {
       state.loading = false;
     });
   },

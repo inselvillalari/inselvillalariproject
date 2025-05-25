@@ -30,9 +30,24 @@ const createReservation = async (values) => {
   return res?.data;
 };
 
+const refundReservation = async (conversationId, refundAmount = null) => {
+  console.log('conversationId',conversationId)
+  console.log('refundAmount',refundAmount)
+  const token = localStorage.getItem("adminToken");
+  const body = refundAmount ? { refundAmount } : {};
+
+  const res = await API.post(`/api/refund/${conversationId}`, body, {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  });
+
+  return res?.data;
+};
 
 export const AdminService = {
   getAdminReservationDetail,
   updateReservation,
   createReservation,
+  refundReservation,
 };

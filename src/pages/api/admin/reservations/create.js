@@ -23,7 +23,6 @@ export default async function handler(req, res) {
       price,
       grandTotal,
       reservationBy,
-      refundPrice,
     } = req.body;
 
     if (
@@ -62,8 +61,7 @@ export default async function handler(req, res) {
       exitDate: exit,
       price: price || 0,
       grandTotal: grandTotal || 0,
-      refundPrice: refundPrice || 0,
-      status: ["Completed"],
+      status: "Completed",
       reservationBy: reservationBy,
       reservationNumber: reservationNumber,
       conversationId: reservationNumber,

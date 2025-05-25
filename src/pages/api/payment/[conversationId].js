@@ -19,22 +19,28 @@ export default async function handler(req, res) {
   iyzipay.checkoutForm.retrieve(
     { locale: "tr", token },
     async (err, result) => {
-      if (err || result.status !== "success") {
+      if (err) {
+        return res.redirect(302, `/reservation-failed?reason=payment-error`);
+      }
+
+      if (result.status !== "success") {
         return res.redirect(302, `/reservation-failed?reason=payment-failed`);
       }
 
-      // Statüyü güncelle
+      const paymentTransactionId = result.itemTransactions?.[0]?.paymentTransactionId;
+
       const updated = await Reservation.findOneAndUpdate(
-        { conversationId: conversationId },
-        { status: "Completed" },
+        { conversationId },
+        {
+          status: "Completed",
+          paymentTransactionId: paymentTransactionId,
+        },
         { new: true }
       );
 
       if (!updated) {
         return res.redirect(302, `/reservation`);
       }
-
-      // Başarılı yönlendirme → frontend sayfası
       return res.redirect(302, `/reservation-success/${conversationId}`);
     }
   );

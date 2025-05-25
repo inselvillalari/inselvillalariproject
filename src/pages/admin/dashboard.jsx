@@ -39,6 +39,7 @@ import VisibilityIcon from "@mui/icons-material/Visibility";
 import EditIcon from "@mui/icons-material/Edit";
 import AdminCreateReservationModal from "../../components/adminModals/adminCreateReservationModal";
 import { ToastContainer } from "react-toastify";
+import AdminRefundReservationModal from "../../components/adminModals/adminRefundReservationModal";
 
 const villas = ["Villa Agena", "Villa Capella", "Villa Gredi", "Villa Rigel"];
 const reservationByOptions = ["Admin", "Customer", "Outsource"];
@@ -71,6 +72,11 @@ function AdminDashboardPage() {
   });
 
   const [createModalIsOpen, setCreateModalIsOpen] = useState({
+    id: "",
+    open: false,
+  });
+
+  const [refundModalIsOpen, setRefundModalIsOpen] = useState({
     id: "",
     open: false,
   });
@@ -320,12 +326,19 @@ function AdminDashboardPage() {
                         >
                           <EditIcon />
                         </IconButton>
-                        <IconButton
-                          color="error"
-                          onClick={() => alert("Sil: " + row?.id)}
-                        >
-                          <DeleteIcon />
-                        </IconButton>
+                        {row?.fromIyzico && (
+                          <IconButton
+                            color="error"
+                            onClick={() =>
+                              setRefundModalIsOpen({
+                                id: row?.conversationId,
+                                open: true,
+                              })
+                            }
+                          >
+                            <DeleteIcon />
+                          </IconButton>
+                        )}
                       </div>
                     </TableCell>
                     {columns?.slice(1).map((col) => {
@@ -347,7 +360,6 @@ function AdminDashboardPage() {
               </TableBody>
             </Table>
           </TableContainer>
-
           <AdminReservationDetailModal
             id={detailModalIsOpen?.id}
             open={detailModalIsOpen?.open}
@@ -363,6 +375,16 @@ function AdminDashboardPage() {
             open={createModalIsOpen?.open}
             onClose={() => {
               setCreateModalIsOpen({
+                id: "",
+                open: false,
+              });
+            }}
+          />
+          <AdminRefundReservationModal
+            id={refundModalIsOpen?.id}
+            open={refundModalIsOpen?.open}
+            onClose={() => {
+              setRefundModalIsOpen({
                 id: "",
                 open: false,
               });

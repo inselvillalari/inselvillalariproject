@@ -19,7 +19,8 @@ const ReservationSchema = new mongoose.Schema({
   extraServices: [String],
   totalPrice: Number,
   status: {
-    type: ["Pending", "Completed", "Failed", "Canceled"],
+    type: String,
+    enum: ["Pending", "Completed", "Failed", "Canceled"],
     default: "Pending",
   },
   reservationBy: {
@@ -46,6 +47,7 @@ const ReservationSchema = new mongoose.Schema({
     default: Date.now,
   },
   fromIyzico: Boolean,
+  paymentTransactionId: String,
 });
 
 export default mongoose.models.Reservation ||
