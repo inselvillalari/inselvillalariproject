@@ -22,6 +22,7 @@ export default async function handler(req, res) {
       "gsmNumber",
       "reservationNumber",
       "status",
+      "reservationBy",
     ];
 
     const queryObj = Object.keys(filters)
