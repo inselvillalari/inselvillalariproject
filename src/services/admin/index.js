@@ -10,9 +10,9 @@ const getAdminReservationDetail = async (id) => {
   return res?.data;
 };
 
-const updateReservation = async (id, data) => {
+const updateReservation = async (values) => {
   const token = localStorage.getItem("adminToken");
-  const res = await API.put(`/api/admin/reservations/${id}`, data, {
+  const res = await API.put(`/api/admin/reservations/update`, values, {
     headers: {
       Authorization: `Bearer ${token}`,
     },

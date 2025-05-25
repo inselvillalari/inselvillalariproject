@@ -19,9 +19,13 @@ import { useFormik } from "formik";
 import dayjs from "dayjs";
 import withLoading from "../../common/withLoading";
 import { useTranslation } from "next-i18next";
-import { getAdminReservationDetail } from "../../store/admin/thunk";
+import {
+  getAdminReservationDetail,
+  updateReservation,
+} from "../../store/admin/thunk";
 import { resetAdminReservationDetail } from "../../store/admin/reducer";
 import { getCalendarRanges } from "../../store/reservation/thunk";
+import "dayjs/locale/tr";
 
 const villas = ["Villa Agena", "Villa Capella", "Villa Gredi", "Villa Rigel"];
 const statusOptions = ["Pending", "Completed", "Failed", "Canceled"];
@@ -38,15 +42,25 @@ function AdminCreateReservationModal({ open, onClose, id }) {
       status: "",
       entryDate: null,
       exitDate: null,
+      id: id ?? "",
     },
     enableReinitialize: true,
     onSubmit: (values) => {
-      //   if (data?._id) {
-      //     dispatch(updateReservation(data._id, values));
-      //   } else {
-      //     dispatch(createReservation(values));
-      //   }
-      //   onClose();
+      if (id) {
+        dispatch(
+          updateReservation({
+            ...values,
+            entryDate: dayjs(values?.entryDate)?.endOf("day")?.toISOString(),
+            exitDate: dayjs(values?.exitDate)?.endOf("day")?.toISOString(),
+          })
+        ).then((res) => {
+          if (res?.meta?.requestStatus == "fulfilled") {
+            onClose();
+          }
+        });
+      } else {
+        //   dispatch(createReservation(values));
+      }
     },
   });
 
@@ -56,13 +70,12 @@ function AdminCreateReservationModal({ open, onClose, id }) {
   }, [id]);
 
   useEffect(() => {
-    if (adminReservationDetail && id) {
+    if (adminReservationDetail) {
       formik.setValues({
-        name: adminReservationDetail?.name || "",
-        villa: adminReservationDetail?.villa || "",
-        status: adminReservationDetail?.status || "",
-        entryDate: dayjs(adminReservationDetail?.entryDate),
-        exitDate: dayjs(adminReservationDetail?.exitDate),
+        ...adminReservationDetail,
+        entryDate: dayjs(adminReservationDetail.entryDate),
+        exitDate: dayjs(adminReservationDetail.exitDate),
+        status: adminReservationDetail.status?.[0] || "", // çünkü MUI Select string bekler
       });
     }
   }, [adminReservationDetail]);
@@ -137,13 +150,14 @@ function AdminCreateReservationModal({ open, onClose, id }) {
               </Select>
             </FormControl>
           </Grid>
-          <LocalizationProvider dateAdapter={AdapterDayjs}>
+          <LocalizationProvider dateAdapter={AdapterDayjs} adapterLocale="tr">
             <Grid item xs={6}>
               <DatePicker
                 label="Giriş Tarihi"
                 value={formik?.values?.entryDate}
                 onChange={(value) => formik?.setFieldValue("entryDate", value)}
                 slotProps={{ textField: { size: "small", fullWidth: true } }}
+                format="DD.MM.YYYY"
               />
             </Grid>
             <Grid item xs={6}>
@@ -152,6 +166,7 @@ function AdminCreateReservationModal({ open, onClose, id }) {
                 value={formik?.values?.exitDate}
                 onChange={(value) => formik?.setFieldValue("exitDate", value)}
                 slotProps={{ textField: { size: "small", fullWidth: true } }}
+                format="DD.MM.YYYY"
               />
             </Grid>
           </LocalizationProvider>

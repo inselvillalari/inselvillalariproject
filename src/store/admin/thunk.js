@@ -1,5 +1,7 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import { AdminService } from "../../services/admin";
+import { getReservationByFilter } from "../reservation/thunk";
+import { toast } from "react-toastify";
 
 const getAdminReservationDetail = createAsyncThunk(
   "admin/getAdminReservationDetail",
@@ -14,12 +16,14 @@ const getAdminReservationDetail = createAsyncThunk(
 );
 export const updateReservation = createAsyncThunk(
   "admin/updateReservation",
-  async ({ id, data }, thunkAPI) => {
+  async (values, { dispatch, getState }) => {
     try {
-      const res = await AdminService.updateReservation(id, data);
+      const res = await AdminService.updateReservation(values);
+      dispatch(getReservationByFilter({}));
+      toast.success(res?.message);
       return res;
     } catch (error) {
-      return thunkAPI.rejectWithValue(error?.response?.data || error.message);
+      // return thunkAPI.rejectWithValue(error?.response?.data || error.message);
     }
   }
 );
