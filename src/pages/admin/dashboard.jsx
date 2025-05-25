@@ -82,7 +82,7 @@ function AdminDashboardPage() {
     },
     // validationSchema: getFormValidationSchema(t),
     onSubmit: async (values) => {
-      const filteredValues = Object.entries(values).reduce(
+      const filteredValues = Object?.entries(values).reduce(
         (acc, [key, value]) => {
           if (value !== "" && value !== null && value !== undefined) {
             acc[key] = value;
@@ -122,8 +122,8 @@ function AdminDashboardPage() {
           noValidate
           autoComplete="off"
           onSubmit={(e) => {
-            e.preventDefault();
-            formik.handleSubmit();
+            e?.preventDefault();
+            formik?.handleSubmit();
           }}
           style={{ marginBottom: "50px" }}
         >
@@ -171,8 +171,8 @@ function AdminDashboardPage() {
                   labelId="villa-label"
                   id="villa"
                   name="villa"
-                  value={formik.values.villa}
-                  onChange={formik.handleChange}
+                  value={formik?.values?.villa}
+                  onChange={formik?.handleChange}
                   label="Villa"
                 >
                   <MenuItem value="">Tümü</MenuItem>
@@ -191,8 +191,8 @@ function AdminDashboardPage() {
                   labelId="status"
                   id="status"
                   name="status"
-                  value={formik.values.status}
-                  onChange={formik.handleChange}
+                  value={formik?.values?.status}
+                  onChange={formik?.handleChange}
                   label="Status"
                 >
                   <MenuItem value="">Tümü</MenuItem>
@@ -216,21 +216,21 @@ function AdminDashboardPage() {
           <Table>
             <TableHead>
               <TableRow>
-                {columns.map((col) => (
-                  <TableCell key={col.id}>{col.label}</TableCell>
+                {columns?.map((col) => (
+                  <TableCell key={col?.id}>{col?.label}</TableCell>
                 ))}
               </TableRow>
             </TableHead>
             <TableBody>
               {reservations.map((row) => (
                 <TableRow
-                  key={row.id}
+                  key={row?.id}
                   hover
                   style={{ cursor: "pointer" }}
                   onClick={() => setSelected(row)}
                 >
-                  {columns.map((col) => (
-                    <TableCell key={col.id}>{row[col.id]}</TableCell>
+                  {columns?.map((col) => (
+                    <TableCell key={col?.id}>{row[col?.id]}</TableCell>
                   ))}
                 </TableRow>
               ))}
@@ -258,28 +258,29 @@ function AdminDashboardPage() {
             {selected && (
               <>
                 <Typography>
-                  <strong>Ad Soyad:</strong> {selected.name} {selected.surname}
+                  <strong>Ad Soyad:</strong> {selected?.name}{" "}
+                  {selected?.surname}
                 </Typography>
                 <Typography>
-                  <strong>Villa:</strong> {selected.villa}
+                  <strong>Villa:</strong> {selected?.villa}
                 </Typography>
                 <Typography>
-                  <strong>Giriş:</strong> {selected.entryDate}
+                  <strong>Giriş:</strong> {selected?.entryDate}
                 </Typography>
                 <Typography>
-                  <strong>Çıkış:</strong> {selected.exitDate}
+                  <strong>Çıkış:</strong> {selected?.exitDate}
                 </Typography>
                 <Typography>
-                  <strong>Durum:</strong> {selected.status}
+                  <strong>Durum:</strong> {selected?.status}
                 </Typography>
                 <Typography>
-                  <strong>Email:</strong> {selected.email}
+                  <strong>Email:</strong> {selected?.email}
                 </Typography>
                 <Typography>
-                  <strong>Telefon:</strong> {selected.phone}
+                  <strong>Telefon:</strong> {selected?.gsmNumber}
                 </Typography>
                 <Typography>
-                  <strong>Toplam Fiyat:</strong> {selected.totalPrice} ₺
+                  <strong>Toplam Fiyat:</strong> {selected?.totalPrice} ₺
                 </Typography>
                 <Button
                   sx={{ mt: 2 }}
