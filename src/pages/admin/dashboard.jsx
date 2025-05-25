@@ -63,8 +63,8 @@ function AdminDashboardPage() {
   }, []);
 
   const handleLogout = () => {
-    localStorage.removeItem("adminToken");
-    router.push("/admin/login");
+    localStorage?.removeItem("adminToken");
+    router?.push("/admin/login");
   };
 
   const reservations = filteredReservations || [];
@@ -164,7 +164,7 @@ function AdminDashboardPage() {
                 onChange={formik?.handleChange}
               />
             </Grid>
-            <Grid item xs={12} sm={6} md={3}>
+            <Grid item xs={12} sm={6} md={3} style={{ minWidth: 150 }}>
               <FormControl fullWidth size="small" variant="outlined">
                 <InputLabel id="villa-label">Villa</InputLabel>
                 <Select
@@ -176,7 +176,7 @@ function AdminDashboardPage() {
                   label="Villa"
                 >
                   <MenuItem value="">Tümü</MenuItem>
-                  {villas.map((villa) => (
+                  {villas?.map((villa) => (
                     <MenuItem key={villa} value={villa}>
                       {villa}
                     </MenuItem>
@@ -184,7 +184,7 @@ function AdminDashboardPage() {
                 </Select>
               </FormControl>
             </Grid>
-            <Grid item xs={12} sm={6} md={3}>
+            <Grid item xs={12} sm={6} md={3} style={{ minWidth: 150 }}>
               <FormControl fullWidth size="small" variant="outlined">
                 <InputLabel id="villa-label">Statu</InputLabel>
                 <Select
@@ -222,7 +222,7 @@ function AdminDashboardPage() {
               </TableRow>
             </TableHead>
             <TableBody>
-              {reservations.map((row) => (
+              {reservations?.map((row) => (
                 <TableRow
                   key={row?.id}
                   hover
