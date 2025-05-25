@@ -45,6 +45,8 @@ export default function ReservationForm() {
   const [extraChildren, setExtraChildren] = useState([]);
   const [guestError, setGuestError] = useState("");
   const dispatch = useDispatch();
+  const router = useRouter();
+  const selectedVilla = router.query.villa;
 
   const { reservationData, calendarRanges } = useSelector(
     (state) => state?.reservation
@@ -65,7 +67,7 @@ export default function ReservationForm() {
 
   const formik = useFormik({
     initialValues: {
-      villa: "",
+      villa: selectedVilla || "",
       name: "",
       surname: "",
       identityNumber: "",

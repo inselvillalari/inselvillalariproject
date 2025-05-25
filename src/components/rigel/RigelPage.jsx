@@ -35,7 +35,7 @@ const dateRangesData = [
 
 const RigelPage = () => {
   const { calendarRanges } = useSelector((state) => state.reservation);
-    const dispatch = useDispatch();
+  const dispatch = useDispatch();
   const { t } = useTranslation("common");
   React.useEffect(() => {
     setTimeout(() => {
@@ -47,6 +47,47 @@ const RigelPage = () => {
     <>
       <section className="works filter-img section-padding">
         <div className="container">
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "flex-end",
+              margin: "20px 0",
+            }}
+          >
+            <Link
+              href={{
+                pathname: "/reservation",
+                query: { villa: "Villa Rigel" },
+              }}
+            >
+              <button
+                style={{
+                  backgroundColor: "#111", // varsayılan siyah
+                  color: "#fff",
+                  padding: "10px 20px",
+                  fontSize: "16px",
+                  borderRadius: "6px",
+                  border: "none",
+                  cursor: "pointer",
+                  transition: "all 0.3s ease",
+                }}
+                onClick={(e) => {
+                  e.currentTarget.style.backgroundColor = "rgb(200, 169, 126)";
+                  e.currentTarget.style.color = "white";
+                }}
+                onMouseOver={(e) => {
+                  e.currentTarget.style.backgroundColor = "rgb(200, 169, 126)";
+                  e.currentTarget.style.color = "white";
+                }}
+                onMouseOut={(e) => {
+                  e.currentTarget.style.backgroundColor = "#111";
+                  e.currentTarget.style.color = "#fff";
+                }}
+              >
+                {t("villaRigelIcinRezervasyonOlustur")}
+              </button>
+            </Link>
+          </div>
           <BookingCalendar dateRangesData={calendarRanges?.rigel || []} />
           <div className="row gallery gallery-min-heigth">
             <div className="col-lg-6 items mt-0 interior theaters residential">
