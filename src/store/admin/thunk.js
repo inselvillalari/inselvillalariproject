@@ -12,5 +12,28 @@ const getAdminReservationDetail = createAsyncThunk(
     }
   }
 );
+export const updateReservation = createAsyncThunk(
+  "admin/updateReservation",
+  async ({ id, data }, thunkAPI) => {
+    try {
+      const res = await AdminService.updateReservation(id, data);
+      return res;
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error?.response?.data || error.message);
+    }
+  }
+);
+
+export const createReservation = createAsyncThunk(
+  "admin/createReservation",
+  async (data, thunkAPI) => {
+    try {
+      const res = await AdminService.createReservation(data);
+      return res;
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error?.response?.data || error.message);
+    }
+  }
+);
 
 export { getAdminReservationDetail };
