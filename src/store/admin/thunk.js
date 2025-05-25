@@ -27,6 +27,7 @@ const updateReservation = createAsyncThunk(
     }
   }
 );
+
 const createReservation = createAsyncThunk(
   "admin/createReservation",
   async (values, { dispatch }) => {
@@ -41,4 +42,26 @@ const createReservation = createAsyncThunk(
   }
 );
 
-export { getAdminReservationDetail, updateReservation, createReservation };
+const refundReservation = createAsyncThunk(
+  "admin/refundReservation",
+  async (values, { dispatch }) => {
+    try {
+      const res = await AdminService.refundReservation(
+        values?.conversationId,
+        values?.refundAmount
+      );
+      dispatch(getReservationByFilter({}));
+      toast.success(res?.message);
+      return res;
+    } catch (error) {
+      // return thunkAPI.rejectWithValue(error?.response?.data || error.message);
+    }
+  }
+);
+
+export {
+  getAdminReservationDetail,
+  updateReservation,
+  createReservation,
+  refundReservation,
+};

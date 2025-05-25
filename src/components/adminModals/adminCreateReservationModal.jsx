@@ -54,7 +54,6 @@ function AdminCreateReservationModal({ open, onClose, id }) {
       exitDate: null,
       grandTotal: "",
       price: "",
-      refundPrice: 0,
       id: id ?? "",
     },
     enableReinitialize: true,
@@ -98,7 +97,6 @@ function AdminCreateReservationModal({ open, onClose, id }) {
         ...adminReservationDetail,
         entryDate: dayjs(adminReservationDetail.entryDate),
         exitDate: dayjs(adminReservationDetail.exitDate),
-        status: adminReservationDetail.status?.[0] || "", // çünkü MUI Select string bekler
       });
     }
   }, [adminReservationDetail]);
@@ -198,16 +196,6 @@ function AdminCreateReservationModal({ open, onClose, id }) {
                 fullWidth
                 size="small"
                 value={formik?.values?.price}
-                onChange={formik?.handleChange}
-              />
-            </Grid>
-            <Grid item xs={12}>
-              <TextField
-                label="İade Tutarı"
-                name="refundPrice"
-                fullWidth
-                size="small"
-                value={formik?.values?.refundPrice}
                 onChange={formik?.handleChange}
               />
             </Grid>
