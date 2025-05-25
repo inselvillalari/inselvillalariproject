@@ -130,6 +130,7 @@ const BookingCalendar = (dateRangesData) => {
           weekStartDayIndex={1}
           range
           readOnly
+          hideYear
           style={{
             // backgroundColor: "#2A2A38",
             borderRadius: "20px",

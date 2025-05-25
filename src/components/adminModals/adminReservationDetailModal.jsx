@@ -27,7 +27,6 @@ import {
 } from "@mui/material";
 import LogoutIcon from "@mui/icons-material/Logout";
 import { useDispatch } from "react-redux";
-
 import withLoading from "../../common/withLoading";
 import { useTranslation } from "next-i18next";
 import dayjs from "dayjs";
@@ -37,11 +36,10 @@ import { resetAdminReservationDetail } from "../../store/admin/reducer";
 function AdminReservationDetailModal(props) {
   const { t } = useTranslation("common");
   const dispatch = useDispatch();
-
   const { adminReservationDetail } = useSelector((state) => state.admin);
 
   useEffect(() => {
-    if(!props?.id) return 
+    if (!props?.id) return;
     dispatch(getAdminReservationDetail(props?.id));
   }, [props?.id]);
 
@@ -52,7 +50,7 @@ function AdminReservationDetailModal(props) {
   return (
     <Box mt={5}>
       <Container maxWidth="lg" sx={{ mt: 12, mb: 8 }}>
-        <Modal open={props?.open} onClose={() => props.onClose()}>
+        <Modal open={props?.open} onClose={() => props?.onClose()}>
           <Box
             sx={{
               position: "absolute",
@@ -79,13 +77,31 @@ function AdminReservationDetailModal(props) {
                   <strong>Villa:</strong> {adminReservationDetail?.villa}
                 </Typography>
                 <Typography>
-                  <strong>Giriş:</strong> {adminReservationDetail?.entryDate}
+                  <strong>Giriş Tarihi:</strong>{" "}
+                  {dayjs(adminReservationDetail?.entryDate).format(
+                    "DD.MM.YYYY"
+                  )}
                 </Typography>
                 <Typography>
-                  <strong>Çıkış:</strong> {adminReservationDetail?.exitDate}
+                  <strong>Çıkış Tarihi:</strong>{" "}
+                  {dayjs(adminReservationDetail?.exitDate).format("DD.MM.YYYY")}
+                </Typography>
+                <Typography>
+                  <strong>Konaklama Süresi:</strong>{" "}
+                  {adminReservationDetail?.totalNights}
                 </Typography>
                 <Typography>
                   <strong>Durum:</strong> {adminReservationDetail?.status}
+                </Typography>
+                <Typography>
+                  <strong>İsim:</strong> {adminReservationDetail?.name}
+                </Typography>
+                <Typography>
+                  <strong>Soyisim:</strong> {adminReservationDetail?.surname}
+                </Typography>
+                <Typography>
+                  <strong>TC No/Pasaport No:</strong>{" "}
+                  {adminReservationDetail?.identityNumber}
                 </Typography>
                 <Typography>
                   <strong>Email:</strong> {adminReservationDetail?.email}
@@ -94,12 +110,51 @@ function AdminReservationDetailModal(props) {
                   <strong>Telefon:</strong> {adminReservationDetail?.gsmNumber}
                 </Typography>
                 <Typography>
-                  <strong>Toplam Fiyat:</strong>{" "}
-                  {adminReservationDetail?.totalPrice} ₺
+                  <strong>Rezerve Eden:</strong>{" "}
+                  {adminReservationDetail?.reservationBy}
+                </Typography>
+                <Typography>
+                  <strong>Ödenen Tutar:</strong> {adminReservationDetail?.price}{" "}
+                  ₺
+                </Typography>
+                <Typography>
+                  <strong>İade Tutarı:</strong>{" "}
+                  {adminReservationDetail?.refundPrice} ₺
+                </Typography>
+                <Typography>
+                  <strong>Toplam Tutar:</strong>{" "}
+                  {adminReservationDetail?.grandTotal} ₺
+                </Typography>
+                <Typography>
+                  <strong>Kayıt Adresi:</strong>{" "}
+                  {adminReservationDetail?.registrationAddress}
+                </Typography>
+                <Typography>
+                  <strong>Müşteri Şehir:</strong>{" "}
+                  {adminReservationDetail?.buyerCity}
+                </Typography>
+                <Typography>
+                  <strong>Müşteri Ülke:</strong>{" "}
+                  {adminReservationDetail?.buyerCountry}
+                </Typography>
+                <Typography>
+                  <strong>Isıtmalı Havuz:</strong>{" "}
+                  {adminReservationDetail?.heatedPool}
+                </Typography>
+                <Typography>
+                  <strong>Beşik:</strong> {adminReservationDetail?.wantsCrib}
+                </Typography>
+                <Typography>
+                  <strong>Fatura Bilgisi:</strong>{" "}
+                  {adminReservationDetail?.contactName}
+                </Typography>
+                <Typography>
+                  <strong>Fatura Adresi:</strong>{" "}
+                  {adminReservationDetail?.address}
                 </Typography>
                 <Button
                   sx={{ mt: 2 }}
-                  onClick={() => props.onClose()}
+                  onClick={() => props?.onClose()}
                   variant="contained"
                   fullWidth
                 >
