@@ -27,7 +27,7 @@ import {
 } from "@mui/material";
 import LogoutIcon from "@mui/icons-material/Logout";
 import { useDispatch } from "react-redux";
-import { getReservationByFilter } from "../../store/reservation/thunk";
+import { getReservationByFilter } from "../../store/admin/thunk";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import withLoading from "../../common/withLoading";
 import { useTranslation } from "next-i18next";
@@ -40,6 +40,7 @@ import EditIcon from "@mui/icons-material/Edit";
 import AdminCreateReservationModal from "../../components/adminModals/adminCreateReservationModal";
 import { ToastContainer } from "react-toastify";
 import AdminRefundReservationModal from "../../components/adminModals/adminRefundReservationModal";
+import PageLoadingForRequest from "../../components/pageloadingForRequest";
 
 const villas = ["Villa Agena", "Villa Capella", "Villa Gredi", "Villa Rigel"];
 const reservationByOptions = ["Admin", "Customer", "Outsource"];
@@ -65,6 +66,7 @@ function AdminDashboardPage() {
   const dispatch = useDispatch();
   const [selected, setSelected] = useState(null);
   const router = useRouter();
+  const { loading, filteredReservations } = useSelector((state) => state.admin);
 
   const [detailModalIsOpen, setDetailModalIsOpen] = useState({
     id: "",
@@ -80,8 +82,6 @@ function AdminDashboardPage() {
     id: "",
     open: false,
   });
-
-  const { filteredReservations } = useSelector((state) => state.reservation);
 
   useEffect(() => {
     const token = localStorage.getItem("adminToken");
@@ -127,6 +127,7 @@ function AdminDashboardPage() {
 
   return (
     <>
+      {loading && <PageLoadingForRequest />}
       <ToastContainer
         position="top-center"
         autoClose={5000}

@@ -6,11 +6,13 @@ import {
   updateReservation,
   createReservation,
   refundReservation,
+  getReservationByFilter,
 } from "./thunk";
 
 const initialState = {
   loading: false,
   adminReservationDetail: null,
+  filteredReservations: [],
 };
 
 export const admin = createSlice({
@@ -26,6 +28,16 @@ export const admin = createSlice({
     },
   },
   extraReducers: (builder) => {
+    builder.addCase(getReservationByFilter.pending, (state) => {
+      state.loading = true;
+    });
+    builder.addCase(getReservationByFilter.fulfilled, (state, action) => {
+      state.loading = false;
+      state.filteredReservations = action.payload;
+    });
+    builder.addCase(getReservationByFilter.rejected, (state) => {
+      state.loading = false;
+    });
     builder.addCase(getAdminReservationDetail.pending, (state) => {
       state.loading = true;
     });

@@ -26,9 +26,9 @@ export const auth = createSlice({
     builder.addCase(adminLogin.fulfilled, (state, action) => {
       console.log('action',action.payload)
       state.loading = false;
-      const token = action.payload.data.token;
+      const token = action?.payload?.data?.token;
       localStorage.setItem("adminToken", token);
-      action.payload.router.push("/admin/dashboard");
+      action?.payload?.router?.push("/admin/dashboard");
     });
     builder.addCase(adminLogin.rejected, (state) => {
       state.loading = false;

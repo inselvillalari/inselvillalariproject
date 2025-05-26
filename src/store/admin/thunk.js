@@ -1,7 +1,6 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import { AdminService } from "../../services/admin";
-import { getReservationByFilter } from "../reservation/thunk";
 import { toast } from "react-toastify";
+import { AdminService } from "../../services/admin";
 
 const getAdminReservationDetail = createAsyncThunk(
   "admin/getAdminReservationDetail",
@@ -59,9 +58,22 @@ const refundReservation = createAsyncThunk(
   }
 );
 
+const getReservationByFilter = createAsyncThunk(
+  "admin/getReservationByFilter",
+  async (values, { dispatch }) => {
+    try {
+      const res = await AdminService.getReservationByFilter(values);
+      return res?.data;
+    } catch (error) {
+      handleError(error);
+    }
+  }
+);
+
 export {
   getAdminReservationDetail,
   updateReservation,
   createReservation,
   refundReservation,
+  getReservationByFilter,
 };

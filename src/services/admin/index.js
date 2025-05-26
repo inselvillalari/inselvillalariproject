@@ -31,8 +31,6 @@ const createReservation = async (values) => {
 };
 
 const refundReservation = async (conversationId, refundAmount = null) => {
-  console.log('conversationId',conversationId)
-  console.log('refundAmount',refundAmount)
   const token = localStorage.getItem("adminToken");
   const body = refundAmount ? { refundAmount } : {};
 
@@ -45,9 +43,20 @@ const refundReservation = async (conversationId, refundAmount = null) => {
   return res?.data;
 };
 
+const getReservationByFilter = async (values) => {
+  const token = localStorage.getItem("adminToken");
+  const res = await API.post("/api/reservations/filter", values, {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  });
+  return res?.data;
+};
+
 export const AdminService = {
   getAdminReservationDetail,
   updateReservation,
   createReservation,
   refundReservation,
+  getReservationByFilter,
 };
