@@ -45,7 +45,7 @@ const refundReservation = async (conversationId, refundAmount = null) => {
 
 const getReservationByFilter = async (values) => {
   const token = localStorage.getItem("adminToken");
-  const res = await API.post("/api/reservations/filter", values, {
+  const res = await API.post("/api/admin/reservations/filter", values, {
     headers: {
       Authorization: `Bearer ${token}`,
     },

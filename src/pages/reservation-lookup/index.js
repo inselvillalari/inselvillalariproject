@@ -22,13 +22,15 @@ function ReservationLookupPage() {
 
   const handleSearch = async () => {
     await dispatch(resetReservationDetail());
-    await dispatch(getReservationById(code)).then((res) => {
-      if (res?.meta?.requestStatus == "fulfilled") {
-        setNotFound(false);
-      } else {
-        setNotFound(true);
+    await dispatch(getReservationById({ id: code, from: "lookup" })).then(
+      (res) => {
+        if (res?.meta?.requestStatus == "fulfilled") {
+          setNotFound(false);
+        } else {
+          setNotFound(true);
+        }
       }
-    });
+    );
   };
 
   useEffect(() => {

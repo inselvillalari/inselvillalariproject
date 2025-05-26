@@ -1,7 +1,9 @@
 import API from "../../helpers/api";
 
-const getReservationById = async (id) => {
-  const res = await API.get(`/api/reservations/${id}`);
+const getReservationById = async (values) => {
+  const res = await API.post(`/api/reservations/${values?.id}`, {
+    from: values?.from || null,
+  });
   return res?.data;
 };
 
@@ -10,7 +12,13 @@ const getCalendarRanges = async (villa) => {
   return res?.data;
 };
 
+const createReservation = async (values) => {
+  const res = await API.post("/api/reservations", values);
+  return res?.data;
+};
+
 export const ReservationService = {
   getReservationById,
   getCalendarRanges,
+  createReservation,
 };

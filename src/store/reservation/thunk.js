@@ -15,9 +15,9 @@ const getCalendarRanges = createAsyncThunk(
 
 const getReservationById = createAsyncThunk(
   "reservation/getReservationById",
-  async (id) => {
+  async (values) => {
     try {
-      const res = await ReservationService.getReservationById(id);
+      const res = await ReservationService.getReservationById(values);
       return res?.data;
     } catch (error) {
       handleError(error);
@@ -25,4 +25,17 @@ const getReservationById = createAsyncThunk(
   }
 );
 
-export { getReservationById, getCalendarRanges };
+const createReservation = createAsyncThunk(
+  "reservation/createReservation",
+  async (values, { dispatch }) => {
+    try {
+      const res = await ReservationService.createReservation(values);
+      return res?.data;
+    } catch (error) {
+      // handleError(error);
+      handleError(error);
+    }
+  }
+);
+
+export { getReservationById, getCalendarRanges, createReservation };

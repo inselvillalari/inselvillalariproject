@@ -1,5 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { getReservationById, getCalendarRanges } from "./thunk";
+import {
+  getReservationById,
+  getCalendarRanges,
+  createReservation,
+} from "./thunk";
 
 const initialState = {
   loading: false,
@@ -60,6 +64,15 @@ export const reservation = createSlice({
       state.reservationDetail = action.payload;
     });
     builder.addCase(getReservationById.rejected, (state) => {
+      state.loading = false;
+    });
+    builder.addCase(createReservation.pending, (state) => {
+      state.loading = true;
+    });
+    builder.addCase(createReservation.fulfilled, (state) => {
+      state.loading = false;
+    });
+    builder.addCase(createReservation.rejected, (state) => {
       state.loading = false;
     });
   },

@@ -4,11 +4,6 @@ import Reservation from "../../../models/Reservation";
 export default async function handler(req, res) {
   await dbConnect();
 
-  if (req.method === "GET") {
-    const reservations = await Reservation.find().sort({ createdAt: -1 });
-    return res.status(200).json({ status: "ok", data: reservations });
-  }
-
   if (req.method === "POST") {
     try {
       const newRes = await Reservation.create(req.body);

@@ -1,6 +1,6 @@
-import { dbConnect } from "../../../utils/dbConnect";
-import Reservation from "../../../models/Reservation";
-import { verifyAdminToken } from "../../../utils/verifyToken";
+import Reservation from "../../../../models/Reservation";
+import { dbConnect } from "../../../../utils/dbConnect";
+import { verifyAdminToken } from "../../../../utils/verifyToken";
 
 export default async function handler(req, res) {
   await dbConnect();

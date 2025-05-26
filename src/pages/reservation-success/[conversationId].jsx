@@ -6,6 +6,7 @@ import ReservationSuccessView from "./index";
 import PageLoading from "../../components/pageLoading";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import withLoading from "../../common/withLoading";
+import { resetReservationDetail } from "../../store/reservation/reducer";
 
 const ReservationSuccessPage = () => {
   const { query } = useRouter();
@@ -17,9 +18,15 @@ const ReservationSuccessPage = () => {
 
   useEffect(() => {
     if (query?.conversationId) {
-      dispatch(getReservationById(query?.conversationId));
+      dispatch(
+        getReservationById({ id: query?.conversationId, from: "successPage" })
+      );
     }
   }, [query?.conversationId]);
+
+  useEffect(() => {
+    return () => dispatch(resetReservationDetail());
+  }, []);
 
   return (
     <>

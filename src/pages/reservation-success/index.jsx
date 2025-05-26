@@ -36,9 +36,7 @@ function ReservationSuccess() {
   const formatDate = (date) =>
     date ? new Date(date).toLocaleDateString("tr-TR") : "-";
 
-  // useEffect(() => {
-  //   return () => dispatch(resetReservationDetail());
-  // }, []);
+
 
   return (
     <>
