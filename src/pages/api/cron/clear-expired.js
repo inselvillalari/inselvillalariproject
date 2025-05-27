@@ -11,29 +11,19 @@ export default async function handler(req, res) {
   }
 
   try {
-    console.log("⏳ Connecting to DB...");
     await dbConnect();
-    console.log("✅ MongoDB connected.");
-
     const thresholdDate = new Date(Date.now() - 5 * 60 * 1000);
-    console.log("📅 Threshold date:", thresholdDate);
-
     const result = await Reservation.updateMany(
-      {
-        status: "Pending",
-        createdAt: { $lt: thresholdDate },
-      },
+      { status: "Pending", createdAt: { $lt: thresholdDate } },
       { $set: { status: "Failed" } }
     );
-
-    console.log(`🔁 Updated ${result.modifiedCount} reservations.`);
 
     return res.status(200).json({
       ok: true,
       updatedCount: result.modifiedCount,
     });
   } catch (error) {
-    console.error("❌ CRON job error:", error.message);
+    console.error("CRON error:", error);
     return res.status(500).json({ ok: false, error: error.message });
   }
 }
