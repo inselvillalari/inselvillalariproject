@@ -216,6 +216,12 @@
     "hayir": "Hayır",
     "yazdir": "Sayfayı Yazdır"
   },
+  "reservationFailed": {
+    "basarisiz": "Rezervasyon Başarısız",
+    "aciklama": "İşleminiz tamamlanamadı. Lütfen tekrar deneyin.",
+    "anasayfa": "Anasayfaya Dön",
+    "rezervasyonaDon": "Rezervasyon Ekranına Dön"
+  },
   "features": {
     "ozellikler": "Özellikler",
     "onKisilik": "10 Kişilik",

@@ -216,6 +216,12 @@
     "hayir": "No",
     "yazdir": "Print Page"
   },
+  "reservationFailed": {
+    "basarisiz": "Reservation Failed",
+    "aciklama": "Your transaction could not be completed. Please try again.",
+    "anasayfa": "Return to Homepage",
+    "rezervasyonaDon": "Return to Reservation Page"
+  },
   "features": {
     "ozellikler": "Features",
     "onKisilik": "For 10 People",
