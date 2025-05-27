@@ -27,6 +27,8 @@ import "react-date-range/dist/theme/default.css";
 import { DateRange } from "react-date-range";
 import { addDays } from "date-fns";
 import dayjs from "dayjs";
+import store from "../../store/store";
+import { toast } from "react-toastify";
 
 const villas = ["Villa Agena", "Villa Capella", "Villa Gredi", "Villa Rigel"];
 countries?.registerLocale(trCountries);
@@ -100,6 +102,40 @@ export default function ReservationForm() {
     onSubmit: async (values) => {
       try {
         const reservationNumber = generateShortCode();
+
+        // 1️⃣ En güncel calendar ranges'i çek
+        await dispatch(getCalendarRanges(values.villa)).unwrap();
+
+        // 2️⃣ Güncel durumu store'dan oku
+        const latestState = store.getState();
+        const villaKey = values.villa.split(" ")[1].toLowerCase(); // örn: capella
+        const latestRanges =
+          latestState.reservation.calendarRanges?.[villaKey] || [];
+
+        console.log("latestState", latestState);
+
+        // 3️⃣ Çakışma kontrolü
+        const entry = new Date(values.entryDate);
+        const exit = new Date(values.exitDate);
+        const isConflict = latestRanges.some((range) => {
+          const start = new Date(range.start);
+          const end = new Date(range.end);
+          return (
+            (entry >= start && entry < end) || // giriş arada
+            (exit > start && exit <= end) || // çıkış arada
+            (entry <= start && exit >= end) // tamamen kapsıyor
+          );
+        });
+
+        if (isConflict) {
+          formik?.resetForm();
+          dispatch(resetReservationData());
+          toast.warning(
+            "İşlem sırasında bir hata oluştu. Lütfen tarihleri kontrol edip tekrar deneyiniz."
+          );
+          return;
+        }
+
         const payload = {
           ...values,
           entryDate: dayjs(values?.entryDate)?.endOf("day")?.toISOString(),
