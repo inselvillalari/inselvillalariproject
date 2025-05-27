@@ -100,7 +100,7 @@ const IntroWithVertical = () => {
               }}
               className="swiper-wrapper cta__slider"
             >
-              {introData.map((slide) => (
+              {introData?.map((slide) => (
                 <SwiperSlide
                   key={slide.id}
                   className="cta__slider-item swiper-slide"

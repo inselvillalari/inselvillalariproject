@@ -14,7 +14,7 @@ const GrediDayViews = () => {
   const imageNumbers = [1, 2, 3, 4, 5, 6, 7];
 
   const sources = imageNumbers.map(
-    (num) => `/assets/img/slid/gredi/dayViews/${num}.jpeg`
+    (num) => `/assets/img/slid/gredi/dayViews/${num}.webp`
   );
 
   useEffect(() => {

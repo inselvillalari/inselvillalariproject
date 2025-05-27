@@ -14,7 +14,7 @@ const GrediInsideViews = () => {
   const imageNumbers = [1, 2, 3, 4, 5, 6, 7];
 
   const sources = imageNumbers.map(
-    (num) => `/assets/img/slid/gredi/indoor/${num}.jpeg`
+    (num) => `/assets/img/slid/gredi/indoor/${num}.webp`
   );
 
   useEffect(() => {

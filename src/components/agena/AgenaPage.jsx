@@ -67,7 +67,7 @@ const AgenaPage = () => {
                   <div className="img">
                     <img
                       alt=""
-                      src="/assets/img/slid/agena/nightInsideViews/2.jpeg"
+                      src="/assets/img/slid/agena/nightInsideViews/2.webp"
                       className="gallery-img-class"
                     />
                   </div>
@@ -98,7 +98,7 @@ const AgenaPage = () => {
                   <div className="img">
                     <img
                       alt=""
-                      src="/assets/img/slid/agena/nightViews/1.jpeg"
+                      src="/assets/img/slid/agena/nightViews/1.webp"
                       className="gallery-img-class"
                     />
                   </div>
@@ -132,7 +132,7 @@ const AgenaPage = () => {
                   <div className="img">
                     <img
                       alt=""
-                      src="/assets/img/slid/agena/indoor/2.jpeg"
+                      src="/assets/img/slid/agena/indoor/2.webp"
                       className="gallery-img-class"
                       style={{
                         width: "100%",

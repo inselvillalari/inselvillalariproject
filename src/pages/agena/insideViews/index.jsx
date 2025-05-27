@@ -16,7 +16,7 @@ const AgenaInsideViews = () => {
   ];
 
   const sources = imageNumbers.map(
-    (num) => `/assets/img/slid/agena/indoor/${num}.jpeg`
+    (num) => `/assets/img/slid/agena/indoor/${num}.webp`
   );
 
   useEffect(() => {
