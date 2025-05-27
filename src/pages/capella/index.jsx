@@ -18,16 +18,41 @@ const Capella = () => {
     <>
       {/* ✅ SEO bilgileri */}
       <Head>
-        <title>
-          Villa Capella
-        </title>
+        <title>Villa Capella - İnsel Villaları</title>
         <meta
           name="description"
-          content="Villa Capella, lüks, özel havuzlu tatil villası. Capella, İnsel, İnsel Villaları, inselvillalari."
+          content="Villa Capella, Kalkan’da deniz manzaralı, özel havuzlu ve jakuzili lüks bir tatil villasıdır. Hemen rezervasyon yapın!"
         />
         <meta
           name="keywords"
-          content="Villa Capella, Capella, İnsel, İnsel Villaları, inselvillalari"
+          content="Villa Capella, Kalkan lüks villa, deniz manzaralı villa, jakuzili villa, İnsel Villaları"
+        />
+        <meta
+          property="og:title"
+          content="Villa Capella - Kalkan’da Lüks Tatil Villası"
+        />
+        <meta
+          property="og:description"
+          content="Villa Capella, deniz manzaralı, özel havuzlu ve jakuzili lüks bir tatil villasıdır."
+        />
+        <meta
+          property="og:image"
+          content="https://inselvillalari.com/assets/img/slid/homePage/capellaHomePage.webp"
+        />
+        <meta property="og:url" content="https://inselvillalari.com/capella" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Villa Capella - Kalkan’da Lüks Tatil Villası"
+        />
+        <meta
+          name="twitter:description"
+          content="Kalkan'da jakuzili, özel havuzlu ve deniz manzaralı lüks villa: Villa Capella."
+        />
+        <meta
+          name="twitter:image"
+          content="https://inselvillalari.com/assets/img/slid/homePage/capellaHomePage.webp"
         />
       </Head>
 
