@@ -20,7 +20,7 @@ const updateReservation = async (values) => {
   return res?.data;
 };
 
-const createReservation = async (values) => {
+const createAdminReservation = async (values) => {
   const token = localStorage.getItem("adminToken");
   const res = await API.post(`/api/admin/reservations/create`, values, {
     headers: {
@@ -56,7 +56,7 @@ const getReservationByFilter = async (values) => {
 export const AdminService = {
   getAdminReservationDetail,
   updateReservation,
-  createReservation,
+  createAdminReservation,
   refundReservation,
   getReservationByFilter,
 };

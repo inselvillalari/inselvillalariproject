@@ -27,11 +27,11 @@ const updateReservation = createAsyncThunk(
   }
 );
 
-const createReservation = createAsyncThunk(
-  "admin/createReservation",
+const createAdminReservation = createAsyncThunk(
+  "admin/createAdminReservation",
   async (values, { dispatch }) => {
     try {
-      const res = await AdminService.createReservation(values);
+      const res = await AdminService.createAdminReservation(values);
       dispatch(getReservationByFilter({}));
       toast.success(res?.message);
       return res;
@@ -73,7 +73,7 @@ const getReservationByFilter = createAsyncThunk(
 export {
   getAdminReservationDetail,
   updateReservation,
-  createReservation,
+  createAdminReservation,
   refundReservation,
   getReservationByFilter,
 };

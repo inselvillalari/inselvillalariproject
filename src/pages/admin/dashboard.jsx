@@ -38,7 +38,6 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import EditIcon from "@mui/icons-material/Edit";
 import AdminCreateReservationModal from "../../components/adminModals/adminCreateReservationModal";
-import { ToastContainer } from "react-toastify";
 import AdminRefundReservationModal from "../../components/adminModals/adminRefundReservationModal";
 import PageLoadingForRequest from "../../components/pageloadingForRequest";
 
@@ -120,7 +119,6 @@ function AdminDashboardPage() {
         },
         {}
       );
-
       dispatch(getReservationByFilter(filteredValues));
     },
   });
@@ -128,17 +126,6 @@ function AdminDashboardPage() {
   return (
     <>
       {loading && <PageLoadingForRequest />}
-      <ToastContainer
-        position="top-center"
-        autoClose={5000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-      />
       <Box mt={5}>
         <AppBar position="fixed" color="default" elevation={1}>
           <Toolbar>

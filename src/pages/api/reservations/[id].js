@@ -11,7 +11,11 @@ export default async function handler(req, res) {
       const { from } = req.body;
 
       const reservation = await Reservation.findOne({ reservationNumber: id });
-      if (!reservation) return res.status(404).json({ status: "not found" });
+      if (!reservation)
+        return res.status(404).json({
+          status: "not found",
+          message: "Rezervasyon bulunamadı!",
+        });
       return res.status(200).json({
         status: "ok",
         data:

@@ -12,6 +12,7 @@ import Cursor from "../components/Cursor";
 import ScrollToTop from "../components/scrollToTop";
 import PageLoading from "../components/pageLoading";
 import LightLayout from "./layout/LightLayout";
+import { ToastContainer } from "react-toastify";
 
 const AppContent = ({ Component, pageProps }) => {
   const dispatch = useDispatch();
@@ -72,6 +73,19 @@ const AppContent = ({ Component, pageProps }) => {
       <LightLayout>
         <Component {...pageProps} />
       </LightLayout>
+
+      {/* Global Toast Container */}
+      <ToastContainer
+        position="top-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
 
       <PageLoading />
       <Cursor />

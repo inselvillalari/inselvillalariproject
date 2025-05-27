@@ -1,5 +1,7 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import { ReservationService } from "../../services/reservation";
+import errorHandler from "../../helpers/api/errorHandler";
+import { toast } from "react-toastify";
 
 const getCalendarRanges = createAsyncThunk(
   "reservation/getCalendarRanges",
@@ -8,7 +10,7 @@ const getCalendarRanges = createAsyncThunk(
       const res = await ReservationService.getCalendarRanges(villa);
       return { villa, ranges: res.data };
     } catch (error) {
-      handleError(error);
+      errorHandler(error);
     }
   }
 );
@@ -20,7 +22,7 @@ const getReservationById = createAsyncThunk(
       const res = await ReservationService.getReservationById(values);
       return res?.data;
     } catch (error) {
-      handleError(error);
+      errorHandler(error);
     }
   }
 );
@@ -32,8 +34,7 @@ const createReservation = createAsyncThunk(
       const res = await ReservationService.createReservation(values);
       return res?.data;
     } catch (error) {
-      // handleError(error);
-      handleError(error);
+      errorHandler(error);
     }
   }
 );

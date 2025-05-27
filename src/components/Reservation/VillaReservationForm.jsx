@@ -249,6 +249,18 @@ export default function ReservationForm() {
   useEffect(() => {
     if (formik?.values?.villa) {
       dispatch(getCalendarRanges(formik.values?.villa));
+      formik?.setValues({
+        ...formik?.values,
+        entryDate: null,
+        exitDate: null,
+        heatedPool: false,
+        wantsCrib: false,
+        adults: "",
+        children: "",
+        extraAdults: [],
+        extraChildren: [],
+      });
+      dispatch(resetReservationData());
     }
   }, [formik?.values?.villa]);
 
@@ -496,23 +508,33 @@ export default function ReservationForm() {
         >
           {t("reservationForm.giris")}
         </label>
-        <DateRange
-          onChange={handleRangeChange}
-          moveRangeOnFirstSelection={false}
-          ranges={[
-            {
-              startDate: formik?.values?.entryDate || new Date(),
-              endDate: formik?.values?.exitDate || addDays(new Date(), 1),
-              key: "selection",
-            },
-          ]}
-          minDate={new Date()}
-          maxDate={new Date("2025-11-01")}
-          disabledDates={disabledDates}
-          locale={
-            i18n?.language === "tr" ? tr : i18n?.language === "ru" ? ru : enUS
-          }
-        />
+        <div
+          style={{
+            pointerEvents: !formik?.values?.villa ? "none" : "auto",
+            opacity: !formik?.values?.villa ? 0.5 : 1,
+            width: "100%",
+          }}
+        >
+          <DateRange
+            className="w-100"
+            style={{ width: "100%" }}
+            onChange={handleRangeChange}
+            moveRangeOnFirstSelection={false}
+            ranges={[
+              {
+                startDate: formik?.values?.entryDate || new Date(),
+                endDate: formik?.values?.exitDate || addDays(new Date(), 1),
+                key: "selection",
+              },
+            ]}
+            minDate={new Date()}
+            maxDate={new Date("2025-11-01")}
+            disabledDates={disabledDates}
+            locale={
+              i18n?.language === "tr" ? tr : i18n?.language === "ru" ? ru : enUS
+            }
+          />
+        </div>
         <hr />
         {/* Kişi Sayısı */}
         <h3 style={sectionTitleStyle}>{t("reservationForm.kisiSayisi")}</h3>

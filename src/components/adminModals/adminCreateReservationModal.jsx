@@ -22,7 +22,7 @@ import { useTranslation } from "next-i18next";
 import {
   getAdminReservationDetail,
   updateReservation,
-  createReservation,
+  createAdminReservation,
 } from "../../store/admin/thunk";
 import { resetAdminReservationDetail } from "../../store/admin/reducer";
 import { getCalendarRanges } from "../../store/reservation/thunk";
@@ -72,7 +72,7 @@ function AdminCreateReservationModal({ open, onClose, id }) {
         });
       } else {
         dispatch(
-          createReservation({
+          createAdminReservation({
             ...values,
             entryDate: dayjs(values?.entryDate)?.endOf("day")?.toISOString(),
             exitDate: dayjs(values?.exitDate)?.endOf("day")?.toISOString(),
