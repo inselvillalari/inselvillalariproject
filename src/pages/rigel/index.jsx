@@ -18,16 +18,41 @@ const Rigel = () => {
     <>
       {/* ✅ SEO Head */}
       <Head>
-        <title>
-          Villa Rigel
-        </title>
+        <title>Villa Rigel - İnsel Villaları</title>
         <meta
           name="description"
-          content="Villa Rigel, panoramik manzaralı, özel havuzlu tatil villası. Rigel, İnsel, İnsel Villaları, inselvillalari."
+          content="Villa Rigel, Kalkan’da konforu ve şıklığı bir araya getiren, özel havuzlu lüks bir tatil villasıdır. Hemen rezervasyon yapın!"
         />
         <meta
           name="keywords"
-          content="Villa Rigel, Rigel, İnsel, İnsel Villaları, inselvillalari"
+          content="Villa Rigel, Kalkan tatil evi, özel havuzlu villa, şık villa, İnsel Villaları"
+        />
+        <meta
+          property="og:title"
+          content="Villa Rigel - Kalkan’da Lüks Tatil Villası"
+        />
+        <meta
+          property="og:description"
+          content="Villa Rigel, özel havuzlu, ferah ve konforlu bir Kalkan tatil villasıdır."
+        />
+        <meta
+          property="og:image"
+          content="https://inselvillalari.com/assets/img/slid/homePage/rigelHomePage.webp"
+        />
+        <meta property="og:url" content="https://inselvillalari.com/rigel" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Villa Rigel - Kalkan’da Lüks Tatil Villası"
+        />
+        <meta
+          name="twitter:description"
+          content="Kalkan’da özel havuzlu, konforlu, ferah kiralık villa: Villa Rigel."
+        />
+        <meta
+          name="twitter:image"
+          content="https://inselvillalari.com/assets/img/slid/homePage/rigelHomePage.webp"
         />
       </Head>
 
