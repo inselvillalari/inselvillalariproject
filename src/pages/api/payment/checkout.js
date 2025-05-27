@@ -21,8 +21,6 @@ export default async function handler(req, res) {
     gsmNumber,
   } = payload;
 
-  console.log("payload", payload);
-
   const rawIp =
     req.headers["x-forwarded-for"] ||
     req.connection?.remoteAddress ||

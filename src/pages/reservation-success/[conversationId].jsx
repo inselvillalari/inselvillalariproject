@@ -14,7 +14,6 @@ const ReservationSuccessPage = () => {
 
   const { loading } = useSelector((state) => state.reservation);
 
-  console.log("loading", loading);
 
   useEffect(() => {
     if (query?.conversationId) {

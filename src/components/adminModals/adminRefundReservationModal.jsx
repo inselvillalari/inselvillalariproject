@@ -47,7 +47,6 @@ function AdminRefundReservationModal({ open, onClose, id }) {
         ? values
         : { conversationId: values?.conversationId };
 
-        console.log('dataToSend',dataToSend)
 
       dispatch(refundReservation(dataToSend)).then((res) => {
         if (res?.meta?.requestStatus == "fulfilled") {

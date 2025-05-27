@@ -24,7 +24,6 @@ export const auth = createSlice({
       state.loading = true;
     });
     builder.addCase(adminLogin.fulfilled, (state, action) => {
-      console.log('action',action.payload)
       state.loading = false;
       const token = action?.payload?.data?.token;
       localStorage.setItem("adminToken", token);

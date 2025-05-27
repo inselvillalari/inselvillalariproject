@@ -112,8 +112,6 @@ export default function ReservationForm() {
         const latestRanges =
           latestState.reservation.calendarRanges?.[villaKey] || [];
 
-        console.log("latestState", latestState);
-
         // 3️⃣ Çakışma kontrolü
         const entry = new Date(values.entryDate);
         const exit = new Date(values.exitDate);
