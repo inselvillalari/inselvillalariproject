@@ -1,6 +1,8 @@
 import iyzipay from "../../../utils/iyzipay";
 import { dbConnect } from "../../../utils/dbConnect";
 import Reservation from "../../../models/Reservation";
+import errorHandler from "../../../helpers/api/errorHandler";
+import { toast } from "react-toastify";
 
 export default async function handler(req, res) {
   if (req.method !== "POST") return res.status(405).end();
@@ -24,10 +26,24 @@ export default async function handler(req, res) {
       }
 
       if (result.status !== "success") {
-        return res.redirect(302, `/reservation-failed?reason=payment-failed`);
+        toast.error(result?.errorMessage);
+        await Reservation.findOneAndUpdate(
+          { conversationId },
+          {
+            status: "Failed",
+          },
+          { new: true }
+        );
+        return res.redirect(
+          302,
+          `/reservation?error=${encodeURIComponent(
+            result?.errorMessage || "Ödeme başarısız oldu"
+          )}`
+        );
       }
 
-      const paymentTransactionId = result.itemTransactions?.[0]?.paymentTransactionId;
+      const paymentTransactionId =
+        result.itemTransactions?.[0]?.paymentTransactionId;
 
       const updated = await Reservation.findOneAndUpdate(
         { conversationId },
