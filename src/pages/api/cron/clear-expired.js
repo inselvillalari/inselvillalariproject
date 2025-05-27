@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
-import { dbConnect } from "../../../../utils/dbConnect";
-import Reservation from "../../../../models/Reservation";
+import { dbConnect } from "../../../utils/dbConnect";
+import Reservation from "../../../models/Reservation";
 
 export async function GET(req) {
   const authHeader = req.headers.get("authorization");
