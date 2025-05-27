@@ -1,14 +1,13 @@
-import { NextResponse } from "next/server";
 import { dbConnect } from "../../../utils/dbConnect";
 import Reservation from "../../../models/Reservation";
 
-export async function GET(req) {
-  const authHeader = req.headers.get("authorization");
+export default async function handler(req, res) {
+  const authHeader = req.headers.authorization;
   const cronSecret = process.env.CRON_SECRET;
 
   if (authHeader !== `Bearer ${cronSecret}`) {
     console.warn("Unauthorized cron request received.");
-    return new Response("Unauthorized", { status: 401 });
+    return res.status(401).send("Unauthorized");
   }
 
   try {
@@ -29,19 +28,12 @@ export async function GET(req) {
 
     console.log(`🔁 Updated ${result.modifiedCount} reservations.`);
 
-    return NextResponse.json({
+    return res.status(200).json({
       ok: true,
       updatedCount: result.modifiedCount,
     });
   } catch (error) {
-    console.error("❌ CRON job error:", {
-      message: error.message,
-      stack: error.stack,
-    });
-
-    return NextResponse.json(
-      { ok: false, error: error.message },
-      { status: 500 }
-    );
+    console.error("❌ CRON job error:", error.message);
+    return res.status(500).json({ ok: false, error: error.message });
   }
 }
