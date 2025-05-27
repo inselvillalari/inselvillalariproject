@@ -14,7 +14,7 @@ const CapellaDayViews = () => {
   const imageNumbers = [1, 2, 3, 4, 5, 6, 7, 8];
 
   const sources = imageNumbers.map(
-    (num) => `/assets/img/slid/capella/dayViews/${num}.jpeg`
+    (num) => `/assets/img/slid/capella/dayViews/${num}.webp`
   );
 
   useEffect(() => {
@@ -32,7 +32,7 @@ const CapellaDayViews = () => {
           { id: 1, name: t("navbar.anasayfa"), url: "/" },
           { id: 2, name: t("navbar.iletisim"), url: "/contact" },
         ]}
-        image="/assets/img/slid/villasCoverImg/capella.jpeg"
+        image="/assets/img/slid/villasCoverImg/capella.webp"
       />
 
       <DayViews />

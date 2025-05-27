@@ -121,7 +121,7 @@ const GrediPage = () => {
                   <div className="img">
                     <img
                       alt=""
-                      src="/assets/img/slid/gredi/nightInsideViews/2.jpeg"
+                      src="/assets/img/slid/gredi/nightInsideViews/2.webp"
                       className="gallery-img-class"
                     />
                   </div>
@@ -152,7 +152,7 @@ const GrediPage = () => {
                   <div className="img">
                     <img
                       alt=""
-                      src="/assets/img/slid/gredi/nightViews/1.jpeg"
+                      src="/assets/img/slid/gredi/nightViews/1.webp"
                       className="gallery-img-class"
                     />
                   </div>
@@ -183,7 +183,7 @@ const GrediPage = () => {
                   <div className="img">
                     <img
                       alt=""
-                      src="/assets/img/slid/gredi/indoor/3.jpeg"
+                      src="/assets/img/slid/gredi/indoor/3.webp"
                       className="gallery-img-class"
                     />
                   </div>
@@ -214,7 +214,7 @@ const GrediPage = () => {
                   <div className="img">
                     <img
                       alt=""
-                      src="/assets/img/slid/gredi/dayViews/1.jpeg"
+                      src="/assets/img/slid/gredi/dayViews/1.webp"
                       className="gallery-img-class"
                     />
                   </div>
@@ -245,7 +245,7 @@ const GrediPage = () => {
                   <div className="img">
                     <img
                       alt=""
-                      src="/assets/img/slid/gredi/activities/1.jpeg"
+                      src="/assets/img/slid/gredi/activities/1.webp"
                       className="gallery-img-class"
                     />
                   </div>

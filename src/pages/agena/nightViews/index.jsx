@@ -14,7 +14,7 @@ const AgenaNightViews = () => {
   const imageNumbers = [1, 2, 3];
 
   const sources = imageNumbers.map(
-    (num) => `/assets/img/slid/agena/nightViews/${num}.jpeg`
+    (num) => `/assets/img/slid/agena/nightViews/${num}.webp`
   );
 
   useEffect(() => {

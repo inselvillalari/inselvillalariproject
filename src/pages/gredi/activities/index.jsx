@@ -14,7 +14,7 @@ const GrediActivities = () => {
   const imageNumbers = [1, 2, 3, 4];
 
   const sources = imageNumbers.map(
-    (num) => `/assets/img/slid/gredi/activities/${num}.jpeg`
+    (num) => `/assets/img/slid/gredi/activities/${num}.webp`
   );
 
   useEffect(() => {

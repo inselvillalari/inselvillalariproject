@@ -22,6 +22,11 @@ const dateRangesData = [
     color: "#ff851b",
   },
   {
+    start: "2025-06-02",
+    end: "2025-06-11",
+    color: "#ff851b",
+  },
+  {
     start: "2025-07-13",
     end: "2025-07-23",
     color: "#ff851b",
@@ -128,7 +133,7 @@ const CapellaPage = () => {
                   <div className="img">
                     <img
                       alt=""
-                      src="/assets/img/slid/capella/nightInsideViews/2.jpeg"
+                      src="/assets/img/slid/capella/nightInsideViews/2.webp"
                       className="gallery-img-class"
                     />
                   </div>
@@ -159,7 +164,7 @@ const CapellaPage = () => {
                   <div className="img">
                     <img
                       alt=""
-                      src="/assets/img/slid/capella/nightViews/1.jpeg"
+                      src="/assets/img/slid/capella/nightViews/1.webp"
                       className="gallery-img-class"
                     />
                   </div>
@@ -190,7 +195,7 @@ const CapellaPage = () => {
                   <div className="img">
                     <img
                       alt=""
-                      src="/assets/img/slid/capella/indoor/2.jpeg"
+                      src="/assets/img/slid/capella/indoor/2.webp"
                       className="gallery-img-class"
                     />
                   </div>
@@ -221,7 +226,7 @@ const CapellaPage = () => {
                   <div className="img">
                     <img
                       alt=""
-                      src="/assets/img/slid/capella/dayViews/1.jpeg"
+                      src="/assets/img/slid/capella/dayViews/1.webp"
                       className="gallery-img-class"
                     />
                   </div>
@@ -252,7 +257,7 @@ const CapellaPage = () => {
                   <div className="img">
                     <img
                       alt=""
-                      src="/assets/img/slid/capella/activities/2.jpeg"
+                      src="/assets/img/slid/capella/activities/2.webp"
                       className="gallery-img-class"
                     />
                   </div>

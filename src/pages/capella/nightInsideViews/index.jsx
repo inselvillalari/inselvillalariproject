@@ -14,7 +14,7 @@ const CapellaInsideViews = () => {
   const imageNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
   const sources = imageNumbers.map(
-    (num) => `/assets/img/slid/capella/nightInsideViews/${num}.jpeg`
+    (num) => `/assets/img/slid/capella/nightInsideViews/${num}.webp`
   );
 
   useEffect(() => {

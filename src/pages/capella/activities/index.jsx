@@ -14,7 +14,7 @@ const CapellaActivities = () => {
   const imageNumbers = [1, 2, 3, 4, 5];
 
   const sources = imageNumbers.map(
-    (num) => `/assets/img/slid/capella/activities/${num}.jpeg`
+    (num) => `/assets/img/slid/capella/activities/${num}.webp`
   );
 
   useEffect(() => {

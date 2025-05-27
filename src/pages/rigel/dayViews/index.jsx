@@ -14,7 +14,7 @@ const RigelDayViews = () => {
   const imageNumbers = [1, 2, 3, 4, 5, 6, 7, 8];
 
   const sources = imageNumbers.map(
-    (num) => `/assets/img/slid/rigel/dayViews/${num}.jpeg`
+    (num) => `/assets/img/slid/rigel/dayViews/${num}.webp`
   );
 
   useEffect(() => {

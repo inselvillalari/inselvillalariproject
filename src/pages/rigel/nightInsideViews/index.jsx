@@ -14,7 +14,7 @@ const RigelInsideViews = () => {
   const imageNumbers = [1, 2, 3, 4, 5, 6];
 
   const sources = imageNumbers.map(
-    (num) => `/assets/img/slid/rigel/nightInsideViews/${num}.jpeg`
+    (num) => `/assets/img/slid/rigel/nightInsideViews/${num}.webp`
   );
 
   useEffect(() => {
