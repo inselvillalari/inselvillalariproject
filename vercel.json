@@ -4,5 +4,14 @@
       "path": "/api/cron/clear-expired",
       "schedule": "*/3 * * * *"
     }
+  ],
+  "routes": [
+    {
+      "src": "/api/cron/clear-expired",
+      "methods": ["GET"],
+      "headers": {
+        "x-public": "1"
+      }
+    }
   ]
 }
