@@ -24,6 +24,7 @@ import {
   Select,
   InputLabel,
   FormControl,
+  Chip,
 } from "@mui/material";
 import LogoutIcon from "@mui/icons-material/Logout";
 import { useDispatch } from "react-redux";
@@ -122,6 +123,32 @@ function AdminDashboardPage() {
       dispatch(getReservationByFilter(filteredValues));
     },
   });
+
+  const renderCellValue = (colId, value) => {
+    if (colId === "status") {
+      let color =
+        value === "Completed"
+          ? "success"
+          : value === "Pending"
+          ? "warning"
+          : value === "Failed"
+          ? "error"
+          : "default";
+      return (
+        <Chip label={value} color={color} variant="outlined" size="small" />
+      );
+    }
+
+    if (colId === "entryDate" || colId === "exitDate") {
+      return value ? dayjs(value).format("DD/MM/YYYY") : "";
+    }
+
+    if (colId === "fromIyzico") {
+      return value ? "Iyzico" : "Admin Panel";
+    }
+
+    return value;
+  };
 
   return (
     <>
@@ -335,11 +362,7 @@ function AdminDashboardPage() {
                         col?.id === "entryDate" || col?.id === "exitDate";
                       return (
                         <TableCell key={col?.id}>
-                          {isDateField && value
-                            ? dayjs(value).format("DD/MM/YYYY")
-                            : value}
-                          {col?.id === "fromIyzico" &&
-                            (value ? "Iyzico" : "Admin Panel")}
+                          {renderCellValue(col?.id, row[col?.id])}
                         </TableCell>
                       );
                     })}
