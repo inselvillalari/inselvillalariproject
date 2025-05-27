@@ -118,6 +118,14 @@ export default function ReservationForm() {
         // 1️⃣ Rezervasyon veritabanına kaydedilir
         await dispatch(createReservation(payload)).unwrap();
 
+        try {
+          const channel = new BroadcastChannel("calendar-update");
+          channel.postMessage("refresh");
+          channel.close();
+        } catch (err) {
+          console.warn("Takvim broadcast başarısız:", err);
+        }
+
         // 2️⃣ Iyzico ödeme token'ı ve URL'si alınır
         const res = await API.post("/api/payment/checkout", payload);
 
@@ -296,6 +304,16 @@ export default function ReservationForm() {
       dispatch(resetReservationData());
       dispatch(resetReservationDetail());
     };
+  }, []);
+
+  useEffect(() => {
+    const channel = new BroadcastChannel("calendar-channel");
+    channel.onmessage = (event) => {
+      if (event.data === "calendar-update" && formik?.values?.villa) {
+        dispatch(getCalendarRanges(formik.values.villa));
+      }
+    };
+    return () => channel.close();
   }, []);
 
   return (

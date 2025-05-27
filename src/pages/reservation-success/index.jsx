@@ -13,6 +13,7 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
 import withLoading from "../../common/withLoading";
 import { resetReservationDetail } from "../../store/reservation/reducer";
+import PageLoadingForRequest from "../../components/pageloadingForRequest";
 
 function ReservationSuccess() {
   const dispatch = useDispatch();
@@ -22,6 +23,21 @@ function ReservationSuccess() {
   );
   const componentRef = useRef();
 
+  useEffect(() => {
+    const channel = new BroadcastChannel("calendar-update");
+    channel.postMessage("refresh");
+    channel.close();
+  }, []);
+
+  const formatTL = (value) =>
+    value != null ? `${value.toLocaleString("tr-TR")} TL` : "-";
+
+  const formatDate = (date) =>
+    date ? new Date(date).toLocaleDateString("tr-TR") : "-";
+
+  const formattedEntryDate = formatDate(reservationDetail?.entryDate);
+  const formattedExitDate = formatDate(reservationDetail?.exitDate);
+
   if (!reservationDetail || Object.keys(reservationDetail).length === 0) {
     return (
       <Box sx={{ textAlign: "center", mt: 10 }}>
@@ -30,13 +46,9 @@ function ReservationSuccess() {
     );
   }
 
-  const formatTL = (value) =>
-    value != null ? `${value.toLocaleString("tr-TR")} TL` : "-";
-
-  const formatDate = (date) =>
-    date ? new Date(date).toLocaleDateString("tr-TR") : "-";
-
-
+  if (loading) {
+    return <PageLoadingForRequest />;
+  }
 
   return (
     <>
@@ -74,11 +86,11 @@ function ReservationSuccess() {
             />
             <Info
               label={t("reservationSuccess.girisTarihi")}
-              value={formatDate(reservationDetail?.entryDate)}
+              value={formattedEntryDate}
             />
             <Info
               label={t("reservationSuccess.cikisTarihi")}
-              value={formatDate(reservationDetail?.exitDate)}
+              value={formattedExitDate}
             />
             <Info
               label={t("reservationSuccess.toplamGece")}

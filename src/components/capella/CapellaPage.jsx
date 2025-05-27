@@ -46,7 +46,17 @@ const CapellaPage = () => {
     setTimeout(() => {
       if (window.Isotope) initIsotope();
     }, 1000);
-    dispatch(getCalendarRanges("Villa Capella"));
+
+    dispatch(getCalendarRanges("Villa Capella")); // ilk yükleme
+
+    const channel = new BroadcastChannel("calendar-update");
+    channel.onmessage = (e) => {
+      if (e.data === "refresh") {
+        dispatch(getCalendarRanges("Villa Capella"));
+      }
+    };
+
+    return () => channel.close();
   }, []);
   return (
     <>

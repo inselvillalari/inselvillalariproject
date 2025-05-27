@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useRouter } from "next/router";
 import { Box, Typography, Button, Paper, Stack } from "@mui/material";
 import { HighlightOff } from "@mui/icons-material";
@@ -6,9 +6,16 @@ import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import withLoading from "../../common/withLoading";
 
-function ReservationFailed({ errorMessage }) {
+function ReservationFailed() {
   const { t } = useTranslation("common");
   const router = useRouter();
+  const { reason } = router.query;
+
+  useEffect(() => {
+    const channel = new BroadcastChannel("calendar-update");
+    channel.postMessage("refresh");
+    channel.close();
+  }, []);
 
   return (
     <Box
@@ -42,17 +49,17 @@ function ReservationFailed({ errorMessage }) {
         </Typography>
 
         {/* Buraya özel hata mesajı gelecek */}
-        {errorMessage && (
+        {reason && (
           <Typography
             variant="body2"
             sx={{
               mb: 4,
               color: "#b00020",
-              fontStyle: "italic",
+
               fontWeight: 500,
             }}
           >
-            {errorMessage}
+            {reason || "Bir hata oluştu."}
           </Typography>
         )}
 

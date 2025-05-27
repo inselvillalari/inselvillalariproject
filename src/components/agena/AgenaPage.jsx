@@ -44,7 +44,16 @@ const AgenaPage = () => {
       if (window.Isotope) initIsotope();
     }, 1000);
 
-    dispatch(getCalendarRanges("Villa Agena"));
+    dispatch(getCalendarRanges("Villa Agena")); // ilk yükleme
+
+    const channel = new BroadcastChannel("calendar-update");
+    channel.onmessage = (e) => {
+      if (e.data === "refresh") {
+        dispatch(getCalendarRanges("Villa Agena"));
+      }
+    };
+
+    return () => channel.close();
   }, []);
 
   return (

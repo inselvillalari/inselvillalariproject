@@ -16,20 +16,30 @@ export default async function handler(req, res) {
     try {
       const reservations = await Reservation.find({
         villa,
-        status: { $in: ["Completed"] },
+        status: { $in: ["Completed", "Pending"] },
       });
 
       const dateRanges = reservations.map((res) => {
         const status = Array.isArray(res.status) ? res.status[0] : res.status;
+        const reservationBy = Array.isArray(res.reservationBy)
+          ? res.reservationBy[0]
+          : res.reservationBy;
+
+        let color = "gray"; // default
+
+        if (status === "Pending") {
+          color = "gray";
+        } else if (
+          reservationBy === "Customer" ||
+          reservationBy === "Outsource"
+        ) {
+          color = "#ff851b";
+        }
 
         return {
           start: res.entryDate?.toISOString().split("T")[0],
           end: res.exitDate?.toISOString().split("T")[0],
-          color:
-            res?.reservationBy[0] === "Customer" ||
-            res?.reservationBy[0] === "Outsource"
-              ? "#ff851b"
-              : "gray",
+          color,
         };
       });
 

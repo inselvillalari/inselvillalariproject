@@ -42,6 +42,14 @@ const GrediPage = () => {
       if (window.Isotope) initIsotope();
     }, 1000);
     dispatch(getCalendarRanges("Villa Gredi"));
+    const channel = new BroadcastChannel("calendar-update");
+    channel.onmessage = (e) => {
+      if (e.data === "refresh") {
+        dispatch(getCalendarRanges("Villa Gredi"));
+      }
+    };
+
+    return () => channel.close();
   }, []);
   return (
     <>

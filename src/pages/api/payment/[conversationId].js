@@ -22,11 +22,6 @@ export default async function handler(req, res) {
     { locale: "tr", token },
     async (err, result) => {
       if (err) {
-        return res.redirect(302, `/reservation-failed?reason=payment-error`);
-      }
-
-      if (result.status !== "success") {
-        toast.error(result?.errorMessage);
         await Reservation.findOneAndUpdate(
           { conversationId },
           {
@@ -36,8 +31,24 @@ export default async function handler(req, res) {
         );
         return res.redirect(
           302,
-          `/reservation?error=${encodeURIComponent(
-            result?.errorMessage || "Ödeme başarısız oldu"
+          `/reservation-failed?reason=${encodeURIComponent(
+            result?.errorMessage || "Ödeme başarısız"
+          )}`
+        );
+      }
+
+      if (result.status !== "success") {
+        await Reservation.findOneAndUpdate(
+          { conversationId },
+          {
+            status: "Failed",
+          },
+          { new: true }
+        );
+        return res.redirect(
+          302,
+          `/reservation-failed?reason=${encodeURIComponent(
+            result?.errorMessage || "Ödeme başarısız"
           )}`
         );
       }

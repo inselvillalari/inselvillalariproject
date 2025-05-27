@@ -42,6 +42,14 @@ const RigelPage = () => {
       if (window.Isotope) initIsotope();
     }, 1000);
     dispatch(getCalendarRanges("Villa Rigel"));
+    const channel = new BroadcastChannel("calendar-update");
+    channel.onmessage = (e) => {
+      if (e.data === "refresh") {
+        dispatch(getCalendarRanges("Villa Rigel"));
+      }
+    };
+
+    return () => channel.close();
   }, []);
   return (
     <>
