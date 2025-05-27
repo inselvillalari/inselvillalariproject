@@ -14,7 +14,7 @@ const RigelNightViews = () => {
   const imageNumbers = [1, 2, 3, 4, 5];
 
   const sources = imageNumbers.map(
-    (num) => `/assets/img/slid/rigel/nightViews/${num}.jpeg`
+    (num) => `/assets/img/slid/rigel/nightViews/${num}.webp`
   );
 
   useEffect(() => {

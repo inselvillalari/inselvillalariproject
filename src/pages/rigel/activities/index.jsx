@@ -14,7 +14,7 @@ const RigelActivities = () => {
   const imageNumbers = [1, 2, 3, 4];
 
   const sources = imageNumbers.map(
-    (num) => `/assets/img/slid/rigel/activities/${num}.jpeg`
+    (num) => `/assets/img/slid/rigel/activities/${num}.webp`
   );
 
   useEffect(() => {
