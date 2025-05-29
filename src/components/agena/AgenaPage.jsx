@@ -40,11 +40,11 @@ const AgenaPage = () => {
   const { calendarRanges } = useSelector((state) => state.reservation);
 
   React.useEffect(() => {
-    setTimeout(() => {
-      if (window.Isotope) initIsotope();
-    }, 1000);
-
-    dispatch(getCalendarRanges("Villa Agena")); // ilk yükleme
+    let fetched = false;
+    if (!fetched) {
+      dispatch(getCalendarRanges("Villa Agena"));
+      fetched = true;
+    }
 
     const channel = new BroadcastChannel("calendar-update");
     channel.onmessage = (e) => {
@@ -53,7 +53,9 @@ const AgenaPage = () => {
       }
     };
 
-    return () => channel.close();
+    return () => {
+      channel.close();
+    };
   }, []);
 
   return (
