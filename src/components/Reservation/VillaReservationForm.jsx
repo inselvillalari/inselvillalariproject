@@ -533,6 +533,7 @@ export default function ReservationForm() {
 
         <label style={labelStyle}>{t("reservationForm.telefon")}</label>
         <PhoneInput
+          name="gsmNumber"
           country={"tr"}
           value={formik.values.gsmNumber}
           preferredCountries={["tr", "gb", "ru"]}
@@ -544,7 +545,7 @@ export default function ReservationForm() {
               formik.setFieldValue("gsmNumber", value);
             }
           }}
-          onBlur={() => formik.setFieldTouched("gsmNumber", true)}
+          onBlur={formik?.handleBlur}
           enableSearch
           inputProps={{
             required: true,
