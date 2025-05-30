@@ -19,7 +19,12 @@ import {
   setReservationData,
 } from "../../store/reservation/reducer";
 import API from "../../helpers/api";
-import { inputStyle, labelStyle, sectionTitleStyle } from "./styles";
+import {
+  inputStyle,
+  labelStyle,
+  sectionTitleStyle,
+  phoneInputErrorStyle,
+} from "./styles";
 import { getFormValidationSchema } from "./reservationFormValidation";
 import { getCalendarRanges } from "../../store/reservation/thunk";
 import "react-date-range/dist/styles.css";
@@ -29,6 +34,8 @@ import { addDays } from "date-fns";
 import dayjs from "dayjs";
 import store from "../../store/store";
 import { toast } from "react-toastify";
+import PhoneInput from "react-phone-input-2";
+import "react-phone-input-2/lib/style.css";
 
 const villas = ["Villa Agena", "Villa Capella", "Villa Gredi", "Villa Rigel"];
 countries?.registerLocale(trCountries);
@@ -42,6 +49,7 @@ const generateShortCode = () => {
 };
 
 export default function ReservationForm() {
+  const [currentDialCode, setCurrentDialCode] = useState("90"); // default Türkiye
   const { t, i18n } = useTranslation("common");
   const [extraAdults, setExtraAdults] = useState([]);
   const [extraChildren, setExtraChildren] = useState([]);
@@ -72,7 +80,9 @@ export default function ReservationForm() {
       villa: selectedVilla || "",
       name: "",
       surname: "",
+      isForeign: false,
       identityNumber: "",
+      passportNumber: "",
       email: "",
       gsmNumber: "",
       registrationAddress: "",
@@ -146,7 +156,6 @@ export default function ReservationForm() {
           grandTotal: reservationData?.grandTotal,
           totalNights: reservationData?.totalNights,
           price: reservationData?.price,
-          gsmNumber: values?.gsmNumber?.replace(/^0/, "90"),
         };
 
         // 1️⃣ Rezervasyon veritabanına kaydedilir
@@ -371,7 +380,6 @@ export default function ReservationForm() {
       >
         {t("reservationForm.form")}
       </h2>
-
       <form onSubmit={formik?.handleSubmit}>
         {/* Villa Seçimi */}
         <h3 style={sectionTitleStyle}>{t("reservationForm.villaSecimi")}</h3>
@@ -439,26 +447,75 @@ export default function ReservationForm() {
           <div className="invalid-feedback">{formik?.errors?.surname}</div>
         )}
 
-        <label style={labelStyle}>{t("reservationForm.tc")}</label>
-        <input
-          name="identityNumber"
-          value={formik?.values?.identityNumber}
-          onChange={(e) => {
-            const allowed = e?.target?.value?.replace(/[^a-zA-Z0-9]/g, "");
-            formik?.setFieldValue("identityNumber", allowed);
-          }}
-          onBlur={formik?.handleBlur}
-          className={`form-control ${
-            formik?.touched?.identityNumber && formik?.errors?.identityNumber
-              ? "is-invalid"
-              : ""
-          }`}
-        />
-        {formik?.touched?.identityNumber && formik?.errors?.identityNumber && (
-          <div className="invalid-feedback">
-            {formik?.errors?.identityNumber}
-          </div>
+        {!formik?.values?.isForeign ? (
+          <>
+            <label style={labelStyle}>{t("reservationForm.tc")}</label>
+            <input
+              name="identityNumber"
+              value={formik?.values?.identityNumber}
+              onChange={(e) => {
+                const allowed = e?.target?.value?.replace(/[^a-zA-Z0-9]/g, "");
+                formik?.setFieldValue("identityNumber", allowed);
+              }}
+              onBlur={formik?.handleBlur}
+              className={`form-control ${
+                formik?.touched?.identityNumber &&
+                formik?.errors?.identityNumber
+                  ? "is-invalid"
+                  : ""
+              }`}
+            />
+            {formik?.touched?.identityNumber &&
+              formik?.errors?.identityNumber && (
+                <div className="invalid-feedback">
+                  {formik?.errors?.identityNumber}
+                </div>
+              )}
+          </>
+        ) : (
+          <>
+            <label style={labelStyle}>{t("reservationForm.passport")}</label>
+            <input
+              name="passportNumber"
+              value={formik?.values?.passportNumber}
+              onChange={formik?.handleChange}
+              onBlur={formik?.handleBlur}
+              className={`form-control ${
+                formik?.touched?.passportNumber &&
+                formik?.errors?.passportNumber
+                  ? "is-invalid"
+                  : ""
+              }`}
+            />
+            {formik?.touched?.passportNumber &&
+              formik?.errors?.passportNumber && (
+                <div className="invalid-feedback">
+                  {formik?.errors?.passportNumber}
+                </div>
+              )}
+          </>
         )}
+
+        <div style={{ marginTop: "10px", marginBottom: "10px" }}>
+          <label style={labelStyle}>
+            <input
+              type="checkbox"
+              name="isForeign"
+              checked={formik?.values?.isForeign}
+              onChange={() => {
+                formik?.setValues({
+                  ...formik?.values,
+                  isForeign: !formik?.values?.isForeign,
+                  identityNumber: "",
+                  passportNumber: "",
+                });
+              }}
+              style={{ marginRight: "8px" }}
+              role="button"
+            />
+            {t("reservationForm.foreignCustomer")}
+          </label>
+        </div>
 
         <label style={labelStyle}>{t("reservationForm.email")}</label>
         <input
@@ -475,30 +532,47 @@ export default function ReservationForm() {
         )}
 
         <label style={labelStyle}>{t("reservationForm.telefon")}</label>
-        <input
+        <PhoneInput
           name="gsmNumber"
-          value={formik?.values?.gsmNumber}
-          onChange={(e) => {
-            const onlyNums = e?.target?.value.replace(/[^0-9]/g, ""); // sadece 0-9 rakamları alır
-            formik?.setFieldValue("gsmNumber", onlyNums);
+          country={"tr"}
+          value={formik.values.gsmNumber}
+          preferredCountries={["tr", "gb", "ru"]}
+          onChange={(value, countryData) => {
+            if (countryData?.dialCode !== currentDialCode) {
+              setCurrentDialCode(countryData.dialCode);
+              formik.setFieldValue("gsmNumber", countryData.dialCode);
+            } else {
+              formik.setFieldValue("gsmNumber", value);
+            }
           }}
           onBlur={formik?.handleBlur}
-          className={`form-control ${
+          enableSearch
+          inputProps={{
+            required: true,
+            autoFocus: false,
+            name: "gsmNumber",
+          }}
+          disableCountryCode={false}
+          disableDropdown={false}
+          countryCodeEditable={false}
+          inputClass={`form-control w-100 ${
             formik?.touched?.gsmNumber && formik?.errors?.gsmNumber
               ? "is-invalid"
               : ""
           }`}
+          containerClass="mb-2"
         />
         {formik?.touched?.gsmNumber && formik?.errors?.gsmNumber && (
           <div className="invalid-feedback">{formik?.errors?.gsmNumber}</div>
         )}
         <label style={labelStyle}>{t("reservationForm.adres")}</label>
-        <input
+        <textarea
+          rows={4}
           name="registrationAddress"
           value={formik?.values?.registrationAddress}
           onChange={formik?.handleChange}
           onBlur={formik?.handleBlur}
-          style={inputStyle}
+          style={{ ...inputStyle, height: "auto" }}
           className={
             formik?.touched?.registrationAddress &&
             formik?.errors?.registrationAddress
@@ -560,6 +634,31 @@ export default function ReservationForm() {
         >
           {t("reservationForm.giris")}
         </label>
+        {!formik?.values?.villa && (
+          <div
+            style={{
+              color: "red",
+              marginTop: "8px",
+              marginBottom: "12px",
+              fontSize: "13px",
+            }}
+          >
+            {t("reservationForm.validation.cannotSelectWithoutVillaSelected")}
+          </div>
+        )}
+        {formik?.values?.villa &&
+          (!formik?.values?.entryDate || !formik?.values?.exitDate) && (
+            <div
+              style={{
+                color: "red",
+                marginTop: "8px",
+                marginBottom: "12px",
+                fontSize: "13px",
+              }}
+            >
+              {t("reservationForm.validation.zorunluAlan")}
+            </div>
+          )}
         <div
           style={{
             pointerEvents: !formik?.values?.villa ? "none" : "auto",
@@ -638,7 +737,7 @@ export default function ReservationForm() {
           </div>
         )}
 
-        {/* Ekstra Konaklayacaklar */}
+        {/* Ekstra Konaklayacaklar
         {extraAdults?.length > 0 && (
           <>
             <h3 style={sectionTitleStyle}>
@@ -685,7 +784,7 @@ export default function ReservationForm() {
               </div>
             ))}
           </>
-        )}
+        )} */}
         <h3 style={sectionTitleStyle}>{t("reservationForm.faturaAdresi")}</h3>
 
         <label style={labelStyle}>{t("reservationForm.isim")}</label>
@@ -706,12 +805,13 @@ export default function ReservationForm() {
         )}
 
         <label style={labelStyle}>{t("reservationForm.adres")}</label>
-        <input
+        <textarea
+          rows={4}
           name="address"
           value={formik?.values?.address}
           onChange={formik?.handleChange}
           onBlur={formik?.handleBlur}
-          style={inputStyle}
+          style={{ ...inputStyle, height: "auto" }}
           className={
             formik?.touched?.address && formik?.errors?.address
               ? "is-invalid"
@@ -845,6 +945,9 @@ export default function ReservationForm() {
           {t("reservationForm.odemeButonu")}
         </button>
       </form>
+      <style jsx global>
+        {phoneInputErrorStyle}
+      </style>
     </div>
   );
 }
