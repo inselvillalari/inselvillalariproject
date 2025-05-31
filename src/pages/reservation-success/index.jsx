@@ -260,12 +260,5 @@ const Info = ({ label, value }) => (
   </Grid>
 );
 
-export async function getStaticProps({ locale }) {
-  return {
-    props: {
-      ...(await serverSideTranslations(locale, ["common"])),
-    },
-  };
-}
 
 export default withLoading(ReservationSuccess);

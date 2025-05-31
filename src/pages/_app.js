@@ -13,6 +13,7 @@ import ScrollToTop from "../components/scrollToTop";
 import PageLoading from "../components/pageLoading";
 import LightLayout from "./layout/LightLayout";
 import { ToastContainer } from "react-toastify";
+import nextI18NextConfig from "../../next-i18next.config";
 
 const AppContent = ({ Component, pageProps }) => {
   const dispatch = useDispatch();
@@ -109,4 +110,4 @@ function MyApp(props) {
   );
 }
 
-export default appWithTranslation(MyApp);
+export default appWithTranslation(MyApp, nextI18NextConfig);
