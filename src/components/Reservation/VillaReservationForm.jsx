@@ -36,6 +36,7 @@ import store from "../../store/store";
 import { toast } from "react-toastify";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
+import LoadingButton from "@mui/lab/LoadingButton";
 
 const villas = ["Villa Agena", "Villa Capella", "Villa Gredi", "Villa Rigel"];
 countries?.registerLocale(trCountries);
@@ -58,7 +59,7 @@ export default function ReservationForm() {
   const router = useRouter();
   const selectedVilla = router.query.villa;
 
-  const { reservationData, calendarRanges } = useSelector(
+  const { reservationData, calendarRanges, loading } = useSelector(
     (state) => state?.reservation
   );
   const countryOptions = Object?.entries(
@@ -926,24 +927,26 @@ export default function ReservationForm() {
         </div>
 
         {/* Submit Butonu */}
-        <button
+        <LoadingButton
           type="submit"
-          style={{
+          loading={loading}
+          variant="contained"
+          fullWidth
+          sx={{
             backgroundColor: "#C8A97E",
             color: "white",
-            border: "none",
-            padding: "10px",
-            width: "100%",
-            marginTop: "25px",
-            borderRadius: "6px",
-            fontWeight: "600",
-            fontSize: "15px",
-            cursor: "pointer",
+            fontWeight: 600,
+            fontSize: "14px",
             fontFamily: "'Poppins', sans-serif",
+            padding: "10px",
+            borderRadius: "6px",
+            "&:hover": {
+              backgroundColor: "#b2906c",
+            },
           }}
         >
           {t("reservationForm.odemeButonu")}
-        </button>
+        </LoadingButton>
       </form>
       <style jsx global>
         {phoneInputErrorStyle}
