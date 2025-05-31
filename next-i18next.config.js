@@ -6,5 +6,6 @@ module.exports = {
     locales: ["tr", "en", "ru"],
     localeDetection: false,
   },
-  localePath: path.resolve("./public/locales"), // 🟢 bu satır önemli!
+  localePath: path.resolve("./public/locales"),
+  use: [], // 🛑 fs-backend kullanılmasın!
 };

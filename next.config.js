@@ -5,7 +5,7 @@ const nextConfig = {
   reactStrictMode: true,
   productionBrowserSourceMaps: false,
 
-  i18n, // Çok dilli destek buradan geliyor
+  i18n,
 
   sassOptions: {
     includePaths: [path.join(__dirname, "css")],
@@ -25,6 +25,22 @@ const nextConfig = {
 
   compiler: {
     styledComponents: true,
+  },
+
+  webpack: (config, { isServer }) => {
+    if (!isServer) {
+      config.resolve.fallback = {
+        ...config.resolve.fallback,
+        fs: false,
+      };
+
+      config.resolve.alias = {
+        ...(config.resolve.alias || {}),
+        "i18next-fs-backend": false,
+      };
+    }
+
+    return config;
   },
 };
 
