@@ -4,7 +4,7 @@ const inputStyle = {
   height: "34px",
   border: "1px solid #ccc",
   borderRadius: "6px",
-  marginBottom: "10px",
+  // marginBottom: "10px",
   fontSize: "13px",
   fontFamily: "'Poppins', sans-serif",
 };
