@@ -138,6 +138,13 @@
       "postaKoduGecersiz": "Please enter a valid postal code.",
       "postaKoduMinimum": "Postal code must be at least 4 digits.",
       "minKonaklamaUyarisi": "A minimum stay of 4 nights is required."
+    },
+    "odemeHata": {
+      "baglantiAlinamadi": "Payment page connection could not be established",
+      "odemeOlusturulamadi": "Reservation or payment could not be created:",
+      "hataOlustu": "An error occurred. Please try again.",
+      "takvimBroadcastBasarisiz": "Calendar broadcast failed:",
+      "islemHatasi": "An error occurred during the process. Please check the dates and try again."
     }
   },
   "reservationPriceCard": {

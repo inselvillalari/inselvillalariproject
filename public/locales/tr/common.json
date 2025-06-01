@@ -138,6 +138,13 @@
       "postaKoduGecersiz": "Geçerli bir posta kodu giriniz.",
       "postaKoduMinimum": "Posta kodu en az 4 haneli olmalıdır.",
       "minKonaklamaUyarisi": "En az 4 gece seçilmelidir."
+    },
+    "odemeHata": {
+      "baglantiAlinamadi": "Ödeme sayfası bağlantısı alınamadı",
+      "odemeOlusturulamadi": "Rezervasyon veya ödeme oluşturulamadı:",
+      "hataOlustu": "Bir hata oluştu. Lütfen tekrar deneyin.",
+      "takvimBroadcastBasarisiz": "Takvim broadcast başarısız:",
+      "islemHatasi": "İşlem sırasında bir hata oluştu. Lütfen tarihleri kontrol edip tekrar deneyiniz."
     }
   },
   "reservationPriceCard": {

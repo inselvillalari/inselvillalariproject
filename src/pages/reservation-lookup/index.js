@@ -201,7 +201,7 @@ function ReservationLookupPage() {
             >
               {t("reservationLookup.kiralayanBilgileri")}
             </h3>
-            <p>
+            {/* <p>
               <strong>{t("reservationLookup.adSoyad")}:</strong>{" "}
               {reservationDetail?.name || "-"}
             </p>
@@ -216,7 +216,7 @@ function ReservationLookupPage() {
             <p>
               <strong>{t("reservationLookup.telefon")}:</strong>{" "}
               {reservationDetail?.gsmNumber || "-"}
-            </p>
+            </p> */}
             <p>
               <strong>{t("reservationLookup.yetiskin")}:</strong>{" "}
               {reservationDetail?.adults || "-"}

@@ -139,9 +139,7 @@ export default function ReservationForm() {
         if (isConflict) {
           formik?.resetForm();
           dispatch(resetReservationData());
-          toast.warning(
-            "İşlem sırasında bir hata oluştu. Lütfen tarihleri kontrol edip tekrar deneyiniz."
-          );
+          toast.warning(t("reservationForm.odemeHata.islemHatasi"));
           return;
         }
 
@@ -167,7 +165,10 @@ export default function ReservationForm() {
           channel.postMessage("refresh");
           channel.close();
         } catch (err) {
-          console.warn("Takvim broadcast başarısız:", err);
+          console.warn(
+            t("reservationForm.odemeHata.takvimBroadcastBasarisiz"),
+            err
+          );
         }
 
         // 2️⃣ Iyzico ödeme token'ı ve URL'si alınır
@@ -214,11 +215,11 @@ export default function ReservationForm() {
             `);
           }
         } else {
-          throw new Error("Ödeme sayfası bağlantısı alınamadı");
+          throw new Error(t("reservationForm.odemeHata.baglantiAlinamadi"));
         }
       } catch (err) {
-        console.error("Rezervasyon veya ödeme oluşturulamadı:", err);
-        alert("Bir hata oluştu. Lütfen tekrar deneyin.");
+        console.error(t("reservationForm.odemeHata.odemeOlusturulamadi"), err);
+        alert(t("reservationForm.odemeHata.hataOlustu"));
       }
     },
   });
@@ -336,8 +337,28 @@ export default function ReservationForm() {
     return [...disabled]?.map((dateStr) => new Date(dateStr));
   }, [calendarRanges, formik?.values?.villa]);
 
+  // const handleRangeChange = (ranges) => {
+  //   const { startDate, endDate } = ranges?.selection;
+  //   formik.setFieldValue("entryDate", startDate);
+  //   formik.setFieldValue("exitDate", endDate);
+  // };
   const handleRangeChange = (ranges) => {
     const { startDate, endDate } = ranges?.selection;
+
+    // Eğer kullanıcı sadece başlangıç gününü seçtiyse hiçbir şey yapma
+    if (startDate.getTime() === endDate.getTime()) {
+      formik.setFieldValue("entryDate", startDate);
+      formik.setFieldValue("exitDate", endDate);
+      return;
+    }
+
+    const diffInDays = (endDate - startDate) / (1000 * 60 * 60 * 24);
+
+    if (diffInDays < 4) {
+      toast.error(t("reservationForm.validation.minKonaklamaUyarisi"));
+      return;
+    }
+
     formik.setFieldValue("entryDate", startDate);
     formik.setFieldValue("exitDate", endDate);
   };
