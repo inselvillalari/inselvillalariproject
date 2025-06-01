@@ -97,6 +97,7 @@
     "girisSecin": "Giriş tarihi seçin",
     "cikis": "Çıkış Tarihi",
     "cikisSecin": "Çıkış tarihi seçin",
+    "konaklamaTarihi": "Konaklama Tarihi",
     "kisiSayisi": "Kişi Sayısı Bilgileri",
     "yetiskin": "Yetişkin Sayısı",
     "cocuk": "Çocuk Sayısı",
@@ -135,7 +136,8 @@
       "sehir": "Şehir zorunludur.",
       "postaKodu": "Posta kodu zorunludur.",
       "postaKoduGecersiz": "Geçerli bir posta kodu giriniz.",
-      "postaKoduMinimum": "Posta kodu en az 4 haneli olmalıdır."
+      "postaKoduMinimum": "Posta kodu en az 4 haneli olmalıdır.",
+      "minKonaklamaUyarisi": "En az 4 gece seçilmelidir."
     }
   },
   "reservationPriceCard": {

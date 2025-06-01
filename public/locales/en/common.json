@@ -97,6 +97,7 @@
     "girisSecin": "Select check-in date",
     "cikis": "Check-out Date",
     "cikisSecin": "Select check-out date",
+    "konaklamaTarihi": "Accommodation Dates",
     "kisiSayisi": "Guest Count",
     "yetiskin": "Number of Adults",
     "cocuk": "Number of Children",
@@ -135,7 +136,8 @@
       "adSoyad": "Full name is required.",
       "postaKodu": "Postal code is required.",
       "postaKoduGecersiz": "Please enter a valid postal code.",
-      "postaKoduMinimum": "Postal code must be at least 4 digits."
+      "postaKoduMinimum": "Postal code must be at least 4 digits.",
+      "minKonaklamaUyarisi": "A minimum stay of 4 nights is required."
     }
   },
   "reservationPriceCard": {
