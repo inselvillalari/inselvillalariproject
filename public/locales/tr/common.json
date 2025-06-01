@@ -112,6 +112,9 @@
     "besik": "Beşik İstiyorum",
     "isitmaliHavuz": "Isıtmalı Havuz İstiyorum (Günlük 1800 TL)",
     "sartlar": "İptal & İade Şartları",
+    "mesafeliHizmetSozlesmesi": "Mesafeli Hizmet Satış Sözleşmesi",
+    "gizlilikPolitikasi": "Gizlilik Politikası",
+    "okudumVeOnayliyorum": "metnini okudum ve onaylıyorum.",
     "odemeButonu": "Ödeme Adımına Geç",
     "validation": {
       "invalidGsmNumber": "Geçerli bir telefon numarası giriniz.",
@@ -137,7 +140,9 @@
       "postaKodu": "Posta kodu zorunludur.",
       "postaKoduGecersiz": "Geçerli bir posta kodu giriniz.",
       "postaKoduMinimum": "Posta kodu en az 4 haneli olmalıdır.",
-      "minKonaklamaUyarisi": "En az 4 gece seçilmelidir."
+      "minKonaklamaUyarisi": "En az 4 gece seçilmelidir.",
+      "mesafeliHizmetSozlesmesiOnayi": "Mesafeli hizmet satış sözleşmesini onaylamanız gerekmektedir.",
+      "gizlilikPolitikasiOnayi": "Gizlilik politikasını onaylamanız gerekmektedir."
     },
     "odemeHata": {
       "baglantiAlinamadi": "Ödeme sayfası bağlantısı alınamadı",

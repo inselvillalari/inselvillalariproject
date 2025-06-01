@@ -112,6 +112,9 @@
     "besik": "I Would Like a Baby Crib",
     "isitmaliHavuz": "I Want Heated Pool (₺1800 per day)",
     "sartlar": "Cancellation & Refund Policy",
+    "mesafeliHizmetSozlesmesi": "Distance Sales Agreement",
+    "gizlilikPolitikasi": "Privacy Policy",
+    "okudumVeOnayliyorum": "I have read and agree to the terms.",
     "odemeButonu": "Proceed to Payment",
     "validation": {
       "invalidGsmNumber": "Please enter a valid phone number.",
@@ -137,7 +140,9 @@
       "postaKodu": "Postal code is required.",
       "postaKoduGecersiz": "Please enter a valid postal code.",
       "postaKoduMinimum": "Postal code must be at least 4 digits.",
-      "minKonaklamaUyarisi": "A minimum stay of 4 nights is required."
+      "minKonaklamaUyarisi": "A minimum stay of 4 nights is required.",
+      "mesafeliHizmetSozlesmesiOnayi": "You must agree to the distance sales agreement.",
+      "gizlilikPolitikasiOnayi": "You must agree to the privacy policy."
     },
     "odemeHata": {
       "baglantiAlinamadi": "Payment page connection could not be established",

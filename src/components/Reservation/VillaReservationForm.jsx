@@ -108,6 +108,8 @@ export default function ReservationForm() {
       locale: i18n?.language,
       reservationBy: "Customer",
       fromIyzico: true,
+      agreementDistance: false,
+      agreementPrivacy: false,
     },
     validationSchema: getFormValidationSchema(t),
     onSubmit: async (values) => {
@@ -923,28 +925,70 @@ export default function ReservationForm() {
             </label>
           </div>
         )}
-        {/* İptal & İade Şartları Linki */}
-        <div
-          style={{
-            textAlign: "center",
-            marginTop: "20px",
-            marginBottom: "15px",
-          }}
-        >
-          <a
-            href="/agreement"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{
-              fontSize: "13px",
-              fontFamily: "'Poppins', sans-serif",
-              color: "#C8A97E",
-              textDecoration: "underline",
-              cursor: "pointer",
-            }}
+        {/* Sözleşme Onay Linki */}
+        <div>
+          <label
+            style={{ display: "block", marginBottom: "8px", marginTop: "10px" }}
           >
-            {t("reservationForm.sartlar")}
-          </a>
+            <input
+              type="checkbox"
+              name="agreementDistance"
+              checked={formik?.values?.agreementDistance}
+              onChange={formik?.handleChange}
+              onBlur={formik?.handleBlur}
+              style={{ marginRight: "8px" }}
+            />
+            <a
+              href="/agreement"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                color: "#C8A97E",
+                textDecoration: "underline",
+              }}
+            >
+              {t("reservationForm.mesafeliHizmetSozlesmesi")}
+            </a>{" "}
+            {t("reservationForm.okudumVeOnayliyorum")}
+          </label>
+          {formik?.touched?.agreementDistance &&
+            formik?.errors?.agreementDistance && (
+              <div className="invalid-feedback d-block">
+                {formik?.errors?.agreementDistance}
+              </div>
+            )}
+
+          <label style={{ marginTop: "10px" }}>
+            <input
+              type="checkbox"
+              name="agreementPrivacy"
+              checked={formik?.values?.agreementPrivacy}
+              onChange={formik?.handleChange}
+              onBlur={formik?.handleBlur}
+              style={{ marginRight: "8px" }}
+            />
+            <a
+              href="/privacy-policy"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                color: "#C8A97E",
+                textDecoration: "underline",
+              }}
+            >
+              {t("reservationForm.gizlilikPolitikasi")}
+            </a>{" "}
+            {t("reservationForm.okudumVeOnayliyorum")}
+          </label>
+          {formik?.touched?.agreementPrivacy &&
+            formik?.errors?.agreementPrivacy && (
+              <div
+                className="invalid-feedback d-block"
+                style={{ marginBottom: "8px" }}
+              >
+                {formik?.errors?.agreementPrivacy}
+              </div>
+            )}
         </div>
 
         {/* Submit Butonu */}

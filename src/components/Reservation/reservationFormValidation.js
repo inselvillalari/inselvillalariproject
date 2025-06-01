@@ -84,4 +84,13 @@ export const getFormValidationSchema = (t) =>
       .matches(/^[0-9]+$/, t("reservationForm.validation.postaKoduGecersiz"))
       .min(4, t("reservationForm.validation.postaKoduMinimum"))
       .required(t("reservationForm.validation.postaKodu")),
+    agreementDistance: Yup.boolean().oneOf(
+      [true],
+      t("reservationForm.validation.mesafeliHizmetSozlesmesiOnayi")
+    ),
+
+    agreementPrivacy: Yup.boolean().oneOf(
+      [true],
+      t("reservationForm.validation.gizlilikPolitikasiOnayi")
+    ),
   });
