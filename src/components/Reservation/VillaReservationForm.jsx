@@ -336,22 +336,8 @@ export default function ReservationForm() {
     return [...disabled]?.map((dateStr) => new Date(dateStr));
   }, [calendarRanges, formik?.values?.villa]);
 
-  // const handleRangeChange = (ranges) => {
-  //   const { startDate, endDate } = ranges?.selection;
-  //   formik.setFieldValue("entryDate", startDate);
-  //   formik.setFieldValue("exitDate", endDate);
-  // };
-
   const handleRangeChange = (ranges) => {
     const { startDate, endDate } = ranges?.selection;
-
-    const diffInDays = (endDate - startDate) / (1000 * 60 * 60 * 24);
-
-    if (diffInDays < 3) {
-      toast.error(t("reservationForm.validation.minKonaklamaUyarisi"));
-      return;
-    }
-
     formik.setFieldValue("entryDate", startDate);
     formik.setFieldValue("exitDate", endDate);
   };
