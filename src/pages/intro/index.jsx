@@ -169,7 +169,7 @@ const IntroWithVertical = () => {
               ref={navigationPrevRef}
               className="cta__slider-arrow cta__slider-arrow--previous"
               onClick={handlePrev}
-              style={{ marginBottom: "100px" }}
+              style={{ marginBottom: "130px" }}
             >
               {widthRef?.current?.offsetWidth > 1100 ? (
                 <i className="fas fa-chevron-up"></i>
