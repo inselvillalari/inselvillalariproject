@@ -3,6 +3,8 @@ import { dbConnect } from "../../../utils/dbConnect";
 import Reservation from "../../../models/Reservation";
 import errorHandler from "../../../helpers/api/errorHandler";
 import { toast } from "react-toastify";
+import { sendReservationMail } from "../../../utils/sendMail";
+import { generateReservationMail } from "../../../utils/generateReservationMail";
 
 export default async function handler(req, res) {
   if (req.method !== "POST") return res.status(405).end();
@@ -67,6 +69,16 @@ export default async function handler(req, res) {
 
       if (!updated) {
         return res.redirect(302, `/reservation`);
+      }
+
+      try {
+        await sendReservationMail({
+          to: updated.email,
+          subject: "İnsel Villaları Rezervasyon Onayı",
+          html: generateReservationMail(updated),
+        });
+      } catch (mailError) {
+        console.error("📨 Mail gönderilemedi:", mailError);
       }
       return res.redirect(302, `/reservation-success/${conversationId}`);
     }
