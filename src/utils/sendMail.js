@@ -2,7 +2,7 @@ import nodemailer from "nodemailer";
 
 export async function sendReservationMail({ to, subject, html }) {
   const transporter = nodemailer.createTransport({
-    service: "gmail", // ya da kendi SMTP sunucun
+    service: "gmail",
     auth: {
       user: process.env.MAIL_USER,
       pass: process.env.MAIL_PASS,
@@ -11,7 +11,8 @@ export async function sendReservationMail({ to, subject, html }) {
 
   const mailOptions = {
     from: `"İnsel Villaları" <${process.env.MAIL_USER}>`,
-    to,
+    to, // kullanıcıya gönder
+    bcc: "info@inselvillalari.com", // kendine de gönder (kullanıcı görmez)
     subject,
     html,
   };

@@ -23,11 +23,15 @@ function ReservationSuccess() {
     (state) => state.reservation
   );
   const componentRef = useRef();
+  const [showPrintButton, setShowPrintButton] = useState(false);
 
   useEffect(() => {
     const channel = new BroadcastChannel("calendar-update");
     channel.postMessage("refresh");
     channel.close();
+
+    // sadece client tarafında render için
+    setShowPrintButton(true);
   }, []);
 
   const formatTL = (value) =>
@@ -215,30 +219,32 @@ function ReservationSuccess() {
           </Section>
         </Box>
 
-        <Box textAlign="center" mt={4}>
-          <ReactToPrint
-            trigger={() => (
-              <Button
-                variant="contained"
-                startIcon={<Print />}
-                sx={{
-                  backgroundColor: "#C8A97E",
-                  "&:hover": { backgroundColor: "#b2906c" },
-                  color: "#fff",
-                  px: 4,
-                  py: 1.5,
-                  fontWeight: "600",
-                }}
-              >
-                {t("reservationSuccess.yazdir")}
-              </Button>
-            )}
-            content={() => componentRef.current}
-            documentTitle={`Rezervasyon-${
-              reservationDetail?.reservationNumber || "inselvillalari"
-            }`}
-          />
-        </Box>
+        {showPrintButton && (
+          <Box textAlign="center" mt={4}>
+            <ReactToPrint
+              trigger={() => (
+                <Button
+                  variant="contained"
+                  startIcon={<Print />}
+                  sx={{
+                    backgroundColor: "#C8A97E",
+                    "&:hover": { backgroundColor: "#b2906c" },
+                    color: "#fff",
+                    px: 4,
+                    py: 1.5,
+                    fontWeight: "600",
+                  }}
+                >
+                  {t("reservationSuccess.yazdir")}
+                </Button>
+              )}
+              content={() => componentRef.current}
+              documentTitle={`Rezervasyon-${
+                reservationDetail?.reservationNumber || "inselvillalari"
+              }`}
+            />
+          </Box>
+        )}
       </Box>
     </>
   );
