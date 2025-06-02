@@ -86,6 +86,7 @@ function ReservationSuccess() {
         sx={{ py: 10, px: 2, backgroundColor: "#f7f7f7", minHeight: "100vh" }}
       >
         <Box
+          id="print-section"
           ref={componentRef}
           sx={{
             maxWidth: 800,
@@ -97,7 +98,10 @@ function ReservationSuccess() {
           }}
         >
           <Box textAlign="center" mb={4}>
-            <CheckCircleOutline sx={{ fontSize: 48, color: "#C8A97E" }} />
+            <CheckCircleOutline
+              className="print-icon-small print-icon"
+              sx={{ fontSize: 48, color: "#C8A97E" }}
+            />
             <Typography variant="h5" fontWeight="bold" mt={2}>
               {t("reservationSuccess.basarili")}
             </Typography>
