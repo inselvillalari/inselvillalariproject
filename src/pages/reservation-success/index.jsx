@@ -14,7 +14,6 @@ import { useTranslation } from "next-i18next";
 import withLoading from "../../common/withLoading";
 import { resetReservationDetail } from "../../store/reservation/reducer";
 import PageLoadingForRequest from "../../components/pageloadingForRequest";
-import ReactToPrint from "react-to-print";
 
 function ReservationSuccess() {
   const dispatch = useDispatch();
@@ -50,6 +49,36 @@ function ReservationSuccess() {
   if (loading) {
     return <PageLoadingForRequest />;
   }
+
+  const handlePrint = () => {
+    const printContents = componentRef.current.innerHTML;
+    const newWindow = window.open("", "_blank");
+    newWindow.document.write(`
+      <html>
+        <head>
+          <title>${t("reservationSuccess.yazdir")}</title>
+          <style>
+            body {
+              font-family: Arial, sans-serif;
+              padding: 20px;
+            }
+            h5 {
+              font-size: 20px;
+              margin-bottom: 10px;
+            }
+            strong {
+              color: #000;
+            }
+          </style>
+        </head>
+        <body>${printContents}</body>
+      </html>
+    `);
+    newWindow.document.close();
+    newWindow.focus();
+    newWindow.print();
+    newWindow.close();
+  };
 
   return (
     <>
@@ -219,7 +248,7 @@ function ReservationSuccess() {
           <Button
             variant="contained"
             startIcon={<Print />}
-            onClick={() => window.print()}
+            onClick={handlePrint}
             sx={{
               backgroundColor: "#C8A97E",
               "&:hover": { backgroundColor: "#b2906c" },
