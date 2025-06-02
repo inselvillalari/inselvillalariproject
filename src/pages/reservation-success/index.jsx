@@ -50,43 +50,12 @@ function ReservationSuccess() {
     return <PageLoadingForRequest />;
   }
 
-  const handlePrint = () => {
-    const printContents = componentRef.current.innerHTML;
-    const newWindow = window.open("", "_blank");
-    newWindow.document.write(`
-      <html>
-        <head>
-          <title>${t("reservationSuccess.yazdir")}</title>
-          <style>
-            body {
-              font-family: Arial, sans-serif;
-              padding: 20px;
-            }
-            h5 {
-              font-size: 20px;
-              margin-bottom: 10px;
-            }
-            strong {
-              color: #000;
-            }
-          </style>
-        </head>
-        <body>${printContents}</body>
-      </html>
-    `);
-    newWindow.document.close();
-    newWindow.focus();
-    newWindow.print();
-    newWindow.close();
-  };
-
   return (
     <>
       <Box
         sx={{ py: 10, px: 2, backgroundColor: "#f7f7f7", minHeight: "100vh" }}
       >
         <Box
-          id="print-section"
           ref={componentRef}
           sx={{
             maxWidth: 800,
@@ -98,10 +67,7 @@ function ReservationSuccess() {
           }}
         >
           <Box textAlign="center" mb={4}>
-            <CheckCircleOutline
-              className="print-icon-small print-icon"
-              sx={{ fontSize: 48, color: "#C8A97E" }}
-            />
+            <CheckCircleOutline sx={{ fontSize: 48, color: "#C8A97E" }} />
             <Typography variant="h5" fontWeight="bold" mt={2}>
               {t("reservationSuccess.basarili")}
             </Typography>
@@ -250,9 +216,9 @@ function ReservationSuccess() {
 
         <Box textAlign="center" mt={4}>
           <Button
+            onClick={() => window.print()}
             variant="contained"
             startIcon={<Print />}
-            onClick={handlePrint}
             sx={{
               backgroundColor: "#C8A97E",
               "&:hover": { backgroundColor: "#b2906c" },
