@@ -14,6 +14,7 @@ import { useTranslation } from "next-i18next";
 import withLoading from "../../common/withLoading";
 import { resetReservationDetail } from "../../store/reservation/reducer";
 import PageLoadingForRequest from "../../components/pageloadingForRequest";
+import ReactToPrint from "react-to-print";
 
 function ReservationSuccess() {
   const dispatch = useDispatch();
@@ -215,21 +216,28 @@ function ReservationSuccess() {
         </Box>
 
         <Box textAlign="center" mt={4}>
-          <Button
-            variant="contained"
-            startIcon={<Print />}
-            onClick={() => window.print()}
-            sx={{
-              backgroundColor: "#C8A97E",
-              "&:hover": { backgroundColor: "#b2906c" },
-              color: "#fff",
-              px: 4,
-              py: 1.5,
-              fontWeight: "600",
-            }}
-          >
-            {t("reservationSuccess.yazdir")}
-          </Button>
+          <ReactToPrint
+            trigger={() => (
+              <Button
+                variant="contained"
+                startIcon={<Print />}
+                sx={{
+                  backgroundColor: "#C8A97E",
+                  "&:hover": { backgroundColor: "#b2906c" },
+                  color: "#fff",
+                  px: 4,
+                  py: 1.5,
+                  fontWeight: "600",
+                }}
+              >
+                {t("reservationSuccess.yazdir")}
+              </Button>
+            )}
+            content={() => componentRef.current}
+            documentTitle={`Rezervasyon-${
+              reservationDetail?.reservationNumber || "inselvillalari"
+            }`}
+          />
         </Box>
       </Box>
     </>
@@ -259,6 +267,5 @@ const Info = ({ label, value }) => (
     </Grid>
   </Grid>
 );
-
 
 export default withLoading(ReservationSuccess);

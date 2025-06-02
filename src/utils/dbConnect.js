@@ -21,8 +21,6 @@ export async function dbConnect() {
     cached.promise = mongoose.connect(MONGODB_URI, {
       dbName: "inselvillalari",
       bufferCommands: false,
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
     });
   }
 
