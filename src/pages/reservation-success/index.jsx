@@ -23,7 +23,6 @@ function ReservationSuccess() {
     (state) => state.reservation
   );
   const componentRef = useRef();
-  const [showPrintButton, setShowPrintButton] = useState(false);
 
   useEffect(() => {
     const channel = new BroadcastChannel("calendar-update");
