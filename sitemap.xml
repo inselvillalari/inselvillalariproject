@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    <!-- Anasayfa -->
+    <url>
+        <loc>https://www.inselvillalari.com/</loc>
+        <lastmod>2025-06-03</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <!-- Genel Sayfalar -->
+    <url>
+        <loc>https://www.inselvillalari.com/home</loc>
+        <lastmod>2025-06-03</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <url>
+        <loc>https://www.inselvillalari.com/contact</loc>
+        <lastmod>2025-06-03</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://www.inselvillalari.com/reservation</loc>
+        <lastmod>2025-06-03</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <url>
+        <loc>https://www.inselvillalari.com/reservation-lookup</loc>
+        <lastmod>2025-06-03</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://www.inselvillalari.com/reservation-success</loc>
+        <lastmod>2025-06-03</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+    <url>
+        <loc>https://www.inselvillalari.com/reservation-failed</loc>
+        <lastmod>2025-06-03</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+    <!-- Villa Sayfaları -->
+    <!-- Tek tek hepsi için sayfalar -->
+    <!-- Örnek: Villa Agena -->
+    <url>
+        <loc>https://www.inselvillalari.com/agena</loc>
+        <lastmod>2025-06-03</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://www.inselvillalari.com/agena/activities</loc>
+        <lastmod>2025-06-03</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.inselvillalari.com/agena/nightViews</loc>
+        <lastmod>2025-06-03</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.inselvillalari.com/agena/dayViews</loc>
+        <lastmod>2025-06-03</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.inselvillalari.com/agena/nightInsideViews</loc>
+        <lastmod>2025-06-03</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.inselvillalari.com/agena/insideViews</loc>
+        <lastmod>2025-06-03</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- capella -->
+    <url>
+        <loc>https://www.inselvillalari.com/capella</loc>
+        <lastmod>2025-06-03</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://www.inselvillalari.com/capella/activities</loc>
+        <lastmod>2025-06-03</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.inselvillalari.com/capella/nightViews</loc>
+        <lastmod>2025-06-03</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.inselvillalari.com/capella/dayViews</loc>
+        <lastmod>2025-06-03</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.inselvillalari.com/capella/nightInsideViews</loc>
+        <lastmod>2025-06-03</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.inselvillalari.com/capella/insideViews</loc>
+        <lastmod>2025-06-03</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- gredi -->
+    <url>
+        <loc>https://www.inselvillalari.com/gredi</loc>
+        <lastmod>2025-06-03</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://www.inselvillalari.com/gredi/activities</loc>
+        <lastmod>2025-06-03</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.inselvillalari.com/gredi/nightViews</loc>
+        <lastmod>2025-06-03</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.inselvillalari.com/gredi/dayViews</loc>
+        <lastmod>2025-06-03</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.inselvillalari.com/gredi/nightInsideViews</loc>
+        <lastmod>2025-06-03</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.inselvillalari.com/gredi/insideViews</loc>
+        <lastmod>2025-06-03</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- rigel -->
+    <url>
+        <loc>https://www.inselvillalari.com/rigel</loc>
+        <lastmod>2025-06-03</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://www.inselvillalari.com/rigel/activities</loc>
+        <lastmod>2025-06-03</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.inselvillalari.com/rigel/nightViews</loc>
+        <lastmod>2025-06-03</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.inselvillalari.com/rigel/dayViews</loc>
+        <lastmod>2025-06-03</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.inselvillalari.com/rigel/nightInsideViews</loc>
+        <lastmod>2025-06-03</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.inselvillalari.com/rigel/insideViews</loc>
+        <lastmod>2025-06-03</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.inselvillalari.com/privacy-policy</loc>
+        <lastmod>2025-06-03</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+    </url>
+
+    <url>
+        <loc>https://www.inselvillalari.com/agreement</loc>
+        <lastmod>2025-06-03</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+    </url>
+
+    <url>
+        <loc>https://www.inselvillalari.com/legal-info</loc>
+        <lastmod>2025-06-03</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+    </url>
+
+</urlset>
