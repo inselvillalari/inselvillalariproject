@@ -10,29 +10,6 @@ import { useTranslation } from "next-i18next";
 import { useDispatch, useSelector } from "react-redux";
 import { getCalendarRanges } from "../../store/reservation/thunk";
 
-const dateRangesData = [
-  {
-    start: "2024-11-01",
-    end: "2025-05-21",
-    color: "gray",
-  },
-  {
-    start: "2025-05-26",
-    end: "2025-05-31",
-    color: "#ff851b",
-  },
-  {
-    start: "2025-08-30",
-    end: "2025-09-07",
-    color: "#ff851b",
-  },
-  {
-    start: "2025-11-01",
-    end: "2026-04-01",
-    color: "gray",
-  },
-];
-
 const AgenaPage = () => {
   const dispatch = useDispatch();
   const { t } = useTranslation("common");
@@ -40,12 +17,11 @@ const AgenaPage = () => {
   const { calendarRanges } = useSelector((state) => state.reservation);
 
   React.useEffect(() => {
-    let fetched = false;
-    if (!fetched) {
-      dispatch(getCalendarRanges("Villa Agena"));
-      fetched = true;
-    }
+    setTimeout(() => {
+      if (window.Isotope) initIsotope();
+    }, 1000);
 
+    dispatch(getCalendarRanges("Villa Agena"));
     const channel = new BroadcastChannel("calendar-update");
     channel.onmessage = (e) => {
       if (e.data === "refresh") {
@@ -111,7 +87,7 @@ const AgenaPage = () => {
               marginBottom: "40px",
             }}
           ></div>
-          <div className="row gallery gallery-min-heigth-agena">
+          <div className="row gallery gallery-min-heigth">
             <div className="col-lg-6 items mt-0 interior theaters residential">
               <div className="section-head mb-0">
                 <h3

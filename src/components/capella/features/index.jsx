@@ -1,159 +1,210 @@
-import React from "react";
-import TenPeople from "../../../icons/TenPeople";
-import FivePlusOne from "../../../icons/FivePlusOne";
-import Bilardo from "../../../icons/Bilardo";
-import Check from "../../../icons/Check";
-import PrivatePool from "../../../icons/PrivatePool";
-import BBQ from "../../../icons/BBQ";
-import Jacuzzy from "../../../icons/Jacuzzy";
+import React, { useState } from "react";
 import { useTranslation } from "next-i18next";
+import Accordion from "@mui/material/Accordion";
+import AccordionSummary from "@mui/material/AccordionSummary";
+import AccordionDetails from "@mui/material/AccordionDetails";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+
+const featureList = [
+  "onKisilik",
+  "ozelHavuz",
+  "besBir",
+  "wifi",
+  "bilardo",
+  "bbq",
+  "jakuzi",
+  "otopark",
+  "tv",
+  "ps5",
+  "gorevli",
+  "kamera",
+  "masaTenisi",
+  "mobilyali",
+  "bebekYatagi",
+  "teras",
+  "havuzBakim",
+  "oyunAlani",
+  "alarm",
+  "sarj",
+];
+
+const beyazEsyaItems = [
+  "buzdolabi",
+  "camasirMakinesi",
+  "bulasikMakinesi",
+  "ankastreOcak",
+  "firin",
+  "mikrodalga",
+  "klima",
+];
+
+const kucukEvAletleriItems = [
+  "kapsulKahve",
+  "turkKahvesi",
+  "cayMakinesi",
+  "kettle",
+  "utu",
+  "sarikSupurge",
+  "tostMakinesi",
+  "sacKurutma",
+];
+
+const boxStyle = {
+  padding: "16px 20px",
+  background: "#fbf9f6",
+  borderRadius: "10px",
+  borderLeft: "8px solid #d4c3ac",
+  fontSize: "16px",
+  fontFamily: "Jost, sans-serif",
+  color: "#111",
+  flex: "1 1 calc(25% - 20px)",
+  minWidth: "220px",
+  boxShadow: "0 1px 2px rgba(0,0,0,0.05)",
+};
+
+const accordionBoxStyle = {
+  ...boxStyle,
+  flex: "1 1 calc(50% - 20px)",
+  padding: 0,
+  overflow: "hidden",
+};
 
 const CapellaFeatures = () => {
   const { t } = useTranslation("common");
+  const [open, setOpen] = useState(null); // "beyaz" | "kucuk" | null
+
   return (
-    <section className="services section-padding p-0">
-      <div className="container">
-        <div className="section-head">
-          <h3
+    <section style={{ padding: "80px 20px", background: "#fff" }}>
+      <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
+        <h3
+          style={{
+            textAlign: "center",
+            fontFamily: "Jost, sans-serif",
+            fontSize: "50px",
+            letterSpacing: "4px",
+            marginBottom: "30px",
+            fontWeight: "600",
+          }}
+        >
+          {t("features.ozellikler")}
+          <span
             style={{
-              letterSpacing: "4px",
-              marginBottom: "30px",
-              fontFamily: "Jost, sans-serif",
-              fontSize: "50px",
+              display: "block",
+              width: "60px",
+              height: "3px",
+              background: "#d4c3ac",
+              margin: "12px auto 0",
+              borderRadius: "2px",
             }}
-          >
-            {t("features.ozellikler")}
-          </h3>
+          />
+        </h3>
+
+        {/* İlk 12 */}
+        <div style={{ display: "flex", flexWrap: "wrap", gap: "20px" }}>
+          {featureList.slice(0, 12).map((key) => (
+            <div key={key} style={boxStyle}>
+              {t(`features.${key}`)}
+            </div>
+          ))}
         </div>
-        <div className="row">
-          <div className="col-sm-12 col-md-6 sm-mb30 sm-pl50">
-            <div className="row">
-              <div className="col-4">
-                <div className="item">
-                  <TenPeople title={t("features.onKisilik")} />
-                </div>
-              </div>
-              <div className="col-4">
-                <div className="item">
-                  <PrivatePool title={t("features.ozelHavuz")} />
-                </div>
-              </div>
-              <div className="col-4">
-                <div className="item">
-                  <FivePlusOne title="5+1" />
-                </div>
-              </div>
-              <div className="col-4 mt-4">
-                <div className="item">
-                  <Bilardo title={t("features.bilardo")} />
-                </div>
-              </div>
-              <div className="col-4 mt-4">
-                <div className="item">
-                  <BBQ title={t("features.bbq")} />
-                </div>
-              </div>
-              <div className="col-4 mt-4">
-                <div className="item">
-                  <Jacuzzy title={t("features.jakuzi")} />
-                </div>
-              </div>
+
+        {/* Accordionlar alt alta sıralı */}
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column", // ⬅️ Değişiklik burada
+            gap: "20px",
+            margin: "30px 0",
+          }}
+        >
+          {/* Beyaz Eşyalar */}
+          <Accordion
+            expanded={open === "beyaz"}
+            disableGutters
+            square
+            elevation={0}
+            style={{ ...accordionBoxStyle, flex: "unset" }} // ⬅️ Genişlik kısıtlaması kaldırıldı
+          >
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon />}
+              onClick={() => setOpen(open === "beyaz" ? null : "beyaz")}
+              style={{
+                outline: "none",
+                boxShadow: "none",
+              }}
+            >
+              <strong>{t("features.beyazEsyaDetay")}</strong>
+            </AccordionSummary>
+            {open === "beyaz" && (
+              <AccordionDetails>
+                <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
+                  {beyazEsyaItems.map((key, i) => (
+                    <li
+                      key={key}
+                      style={{
+                        padding: "6px 0",
+                        borderBottom:
+                          i < beyazEsyaItems.length - 1
+                            ? "1px solid #e0ddd7"
+                            : "none",
+                      }}
+                    >
+                      {t(`features.${key}`)}
+                    </li>
+                  ))}
+                </ul>
+              </AccordionDetails>
+            )}
+          </Accordion>
+
+          {/* Küçük Ev Aletleri */}
+          <Accordion
+            expanded={open === "kucuk"}
+            disableGutters
+            square
+            elevation={0}
+            style={{ ...accordionBoxStyle, flex: "unset" }}
+          >
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon />}
+              onClick={() => setOpen(open === "kucuk" ? null : "kucuk")}
+              style={{
+                outline: "none",
+                boxShadow: "none",
+              }}
+            >
+              <strong>{t("features.kucukEvAletleriDetay")}</strong>
+            </AccordionSummary>
+            {open === "kucuk" && (
+              <AccordionDetails>
+                <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
+                  {kucukEvAletleriItems.map((key, i) => (
+                    <li
+                      key={key}
+                      style={{
+                        padding: "6px 0",
+                        borderBottom:
+                          i < kucukEvAletleriItems.length - 1
+                            ? "1px solid #e0ddd7"
+                            : "none",
+                      }}
+                    >
+                      {t(`features.${key}`)}
+                    </li>
+                  ))}
+                </ul>
+              </AccordionDetails>
+            )}
+          </Accordion>
+        </div>
+
+        {/* Son 8 */}
+        <div style={{ display: "flex", flexWrap: "wrap", gap: "20px" }}>
+          {featureList.slice(12).map((key) => (
+            <div key={key} style={boxStyle}>
+              {t(`features.${key}`)}
             </div>
-          </div>
-          <div className="col-sm-12 col-md-6">
-            <div className="row pl-5">
-              <div className="col-sm-12 col-md-6 sm-mb30 sm-pl50">
-                <div
-                  className="row"
-                  style={{
-                    flexDirection: "column",
-                  }}
-                >
-                  <div className="item">
-                    <Check title={t("features.otopark")} />
-                  </div>
-                  <div className="item">
-                    <Check title={t("features.denizManzarali")} />
-                  </div>
-                  <div className="item">
-                    <Check title={t("features.tv")} />
-                  </div>
-                  <div className="item">
-                    <Check title={t("features.ps5")} />
-                  </div>
-                  <div className="item ">
-                    <Check title={t("features.gorevli")} />
-                  </div>
-                  <div className="item ">
-                    <Check title={t("features.kamera")} />
-                  </div>
-                  <div className="item">
-                    <Check title={t("features.klima")} />
-                  </div>
-                  <div className="item">
-                    <Check title={t("features.masaTenisi")} />
-                  </div>
-                  <div className="item ">
-                    <Check title={t("features.mobilyali")} />
-                  </div>
-                  <div className="item">
-                    <Check title={t("features.havuzIsitma")} />
-                  </div>
-                  <div className="item ">
-                    <Check title={t("features.beyazEsya")} />
-                  </div>
-                  <div className="item">
-                    <Check title={t("features.sacKurutma")} />
-                  </div>
-                </div>
-              </div>
-              <div className="col-sm-12 col-md-6 sm-pl50">
-                <div
-                  className="row "
-                  style={{
-                    flexDirection: "column",
-                  }}
-                >
-                  <div className="item ">
-                    <Check title={t("features.wifi")} />
-                  </div>
-                  <div className="item ">
-                    <Check title={t("features.camasir")} />
-                  </div>
-                  <div className="item ">
-                    <Check title={t("features.bebekYatagi")} />
-                  </div>
-                  <div className="item ">
-                    <Check title={t("features.teras")} />
-                  </div>
-                  <div className="item ">
-                    <Check title={t("features.havuzBakim")} />
-                  </div>
-                  <div className="item ">
-                    <Check title={t("features.oyunAlani")} />
-                  </div>
-                  <div className="item ">
-                    <Check title={t("features.alarm")} />
-                  </div>
-                  <div className="item ">
-                    <Check title={t("features.bahceli")} />
-                  </div>
-                  <div className="item ">
-                    <Check title={t("features.cocukHavuzu")} />
-                  </div>
-                  <div className="item ">
-                    <Check title={t("features.ebeveynBanyosu")} />
-                  </div>
-                  <div className="item">
-                    <Check title={t("features.utu")} />
-                  </div>
-                  <div className="item ">
-                    <Check title={t("features.sarj")} />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>

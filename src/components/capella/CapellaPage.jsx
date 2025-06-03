@@ -10,39 +10,6 @@ import { useTranslation } from "next-i18next";
 import { useDispatch, useSelector } from "react-redux";
 import { getCalendarRanges } from "../../store/reservation/thunk";
 
-const dateRangesData = [
-  {
-    start: "2024-11-01",
-    end: "2025-05-21",
-    color: "gray",
-  },
-  {
-    start: "2025-05-26",
-    end: "2025-05-31",
-    color: "#ff851b",
-  },
-  {
-    start: "2025-06-02",
-    end: "2025-06-11",
-    color: "#ff851b",
-  },
-  {
-    start: "2025-07-13",
-    end: "2025-07-23",
-    color: "#ff851b",
-  },
-  {
-    start: "2025-08-03",
-    end: "2025-08-21",
-    color: "#ff851b",
-  },
-  {
-    start: "2025-11-01",
-    end: "2026-04-01",
-    color: "gray",
-  },
-];
-
 const CapellaPage = () => {
   const dispatch = useDispatch();
   const { calendarRanges } = useSelector((state) => state.reservation);
@@ -53,7 +20,6 @@ const CapellaPage = () => {
     }, 1000);
 
     dispatch(getCalendarRanges("Villa Capella")); // ilk yükleme
-
     const channel = new BroadcastChannel("calendar-update");
     channel.onmessage = (e) => {
       if (e.data === "refresh") {
