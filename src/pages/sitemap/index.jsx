@@ -12,7 +12,9 @@ const Sitemap = () => {
   return (
     <>
       <Head>
-        <title>{t("siteHaritasi")} | İnsel Villaları</title>
+        <title>
+          <title>{`${t("siteHaritasi")} | ${t("siteAdi")}`}</title>
+        </title>
         <meta name="description" content={t("siteHaritasiDesc")} />
       </Head>
 
