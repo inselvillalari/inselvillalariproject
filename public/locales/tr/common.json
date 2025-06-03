@@ -1,5 +1,16 @@
 {
   "": "",
+  "siteHaritasi": "Site Haritası",
+  "siteHaritasiDesc": "İnsel Villaları'nın tüm sayfalarına buradan ulaşabilirsiniz.",
+  "genelSayfalar": "Genel Sayfalar",
+  "villalar": "Villalar",
+  "villaIsimleri": {
+    "agena": { "baslik": "Villa Agena" },
+    "capella": { "baslik": "Villa Capella" },
+    "gredi": { "baslik": "Villa Gredi" },
+    "rigel": { "baslik": "Villa Rigel" }
+  },
+  "villaSayfasi": "Villa Sayfası",
   "loadingText": "Yükleniyor...",
   "detayaGit": "Detaya Git",
   "mekanlar": "Mekanlar",
@@ -22,7 +33,7 @@
     "hakkimizda": "Hakkımızda",
     "rezervasyon": "Rezervasyon",
     "rezervasyonYap": "Rezervasyon Yap",
-    "rezervasyonSorgula": "Rezervasyon Sorgula"
+    "rezervasyonSorgula": "Rezervasyon Sorgulama"
   },
   "footer": {
     "ulasin": "Bize Ulaşın",

@@ -4581,4 +4581,78 @@ footer .item .copy-right p a {
     font-size: 32px !important;
   }
 }
+/* ==== SİTE HARİTASI STİLLERİ ==== */
+
+.sitemap-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.sitemap-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 4rem 0 2.5rem 0; /* 🔼 üst boşluk eklendi */
+  text-align: center;
+}
+
+.sitemap-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.sitemap-column {
+  flex: 1 1 400px;
+}
+
+.sitemap-section-title {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 0.4rem;
+  color: #333;
+}
+
+.sitemap-ul {
+  list-style: none;
+  padding-left: 0;
+  line-height: 1.8;
+  margin: 0;
+}
+
+.sitemap-li {
+  margin-bottom: 0.4rem;
+}
+
+.sitemap-link {
+  text-decoration: none;
+  color: #333;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+
+.sitemap-link:hover {
+  color: #000;
+}
+
+.sitemap-villa-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.sitemap-villa-box {
+  padding-bottom: 1rem;
+}
+
+.sitemap-villa-title {
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: #222;
+}
+
 /* ====================== [ End Responsive ] ====================== */

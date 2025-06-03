@@ -53,6 +53,9 @@ const Footer = ({ classText }) => {
                   <li>
                     <Link href="/legal-info">{t("footer.yasal")}</Link>
                   </li>
+                  <li>
+                    <Link href="/sitemap">{t("siteHaritasi")}</Link>
+                  </li>
                 </ul>
               </div>
             </div>

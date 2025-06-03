@@ -1,5 +1,16 @@
 {
   "": "",
+  "siteHaritasi": "Карта сайта",
+  "siteHaritasiDesc": "Здесь вы можете найти все страницы сайта Insel Villaları.",
+  "genelSayfalar": "Основные страницы",
+  "villalar": "Виллы",
+  "villaIsimleri": {
+    "agena": { "baslik": "Вилла Агена" },
+    "capella": { "baslik": "Вилла Капелла" },
+    "gredi": { "baslik": "Вилла Греди" },
+    "rigel": { "baslik": "Вилла Ригель" }
+  },
+  "villaSayfasi": "Страница виллы",
   "loadingText": "Загрузка...",
   "detayaGit": "Перейти к деталям",
   "mekanlar": "Места",

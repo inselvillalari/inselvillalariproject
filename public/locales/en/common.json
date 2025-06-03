@@ -1,5 +1,16 @@
 {
   "": "",
+  "siteHaritasi": "Sitemap",
+  "siteHaritasiDesc": "You can access all pages of Insel Villas from here.",
+  "genelSayfalar": "General Pages",
+  "villalar": "Villas",
+  "villaIsimleri": {
+    "agena": { "baslik": "Villa Agena" },
+    "capella": { "baslik": "Villa Capella" },
+    "gredi": { "baslik": "Villa Gredi" },
+    "rigel": { "baslik": "Villa Rigel" }
+  },
+  "villaSayfasi": "Villa Page",
   "loadingText": "Loading...",
   "detayaGit": "Go to Details",
   "mekanlar": "Places",
