@@ -11,10 +11,10 @@ const CapellaActivities = () => {
   const [toggler, setToggler] = useState(false);
   const [slideIndex, setSlideIndex] = useState(1);
 
-  const imageNumbers = [1, 2, 3, 4, 5];
+  const imageNumbers = [1, 2, 3, 4];
 
   const sources = imageNumbers.map(
-    (num) => `/assets/img/slid/capella/activities/${num}.webp`
+    (num) => `/assets/img/slid/capella/activities/${num}.jpg`
   );
 
   useEffect(() => {

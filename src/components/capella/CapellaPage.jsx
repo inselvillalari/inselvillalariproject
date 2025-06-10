@@ -223,7 +223,7 @@ const CapellaPage = () => {
                   <div className="img">
                     <img
                       alt=""
-                      src="/assets/img/slid/capella/activities/2.webp"
+                      src="/assets/img/slid/capella/activities/2.jpg"
                       className="gallery-img-class"
                     />
                   </div>

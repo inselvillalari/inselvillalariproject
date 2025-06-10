@@ -39,7 +39,7 @@ const Agena = () => {
         />
         <meta
           property="og:image"
-          content="https://inselvillalari.com/assets/img/slid/homePage/agenaHomePage.webp"
+          content="https://inselvillalari.com/assets/img/slid/homePage/agenaHomePage.jpg"
         />
         <meta property="og:url" content="https://inselvillalari.com/agena" />
         <meta property="og:type" content="website" />
@@ -56,7 +56,7 @@ const Agena = () => {
         />
         <meta
           name="twitter:image"
-          content="https://inselvillalari.com/assets/img/slid/homePage/agenaHomePage.webp"
+          content="https://inselvillalari.com/assets/img/slid/homePage/agenaHomePage.jpg"
         />
       </Head>
 

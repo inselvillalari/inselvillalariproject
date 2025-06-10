@@ -1,25 +1,28 @@
 import React from "react";
 import introData from "./index.json";
 import { Swiper, SwiperSlide } from "swiper/react";
-import SplitComponent from "../split";
-import SwiperCore, { Navigation, Pagination, Parallax } from "swiper";
+import { Navigation, Pagination, Parallax } from "swiper/modules";
+
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import "swiper/css/parallax";
+
+import SplitComponent from "../split";
 import Link from "next/link";
 import removeSlashFromPagination from "../../common/removeSlashFromPagination";
 import { useTranslation } from "next-i18next";
-
-SwiperCore.use([Navigation, Pagination, Parallax]);
 
 const IntroWithVertical = () => {
   const { t } = useTranslation("common");
   const widthRef = React.useRef(null);
   const [load, setLoad] = React.useState(true);
+
   React.useEffect(() => {
     setTimeout(() => {
       removeSlashFromPagination();
     }, 1000);
+
     setTimeout(() => {
       setLoad(false);
     });
@@ -53,10 +56,6 @@ const IntroWithVertical = () => {
               ref={sliderRef}
               speed={800}
               parallax={true}
-              // navigation={{
-              //   prevEl: navigationPrevRef.current,
-              //   nextEl: navigationNextRef.current,
-              // }}
               pagination={{
                 type: "fraction",
                 clickable: true,
@@ -71,13 +70,11 @@ const IntroWithVertical = () => {
                 1100: { direction: "vertical" },
               }}
               onBeforeInit={(swiper) => {
-                // swiper.params.navigation.prevEl = navigationPrevRef.current;
-                // swiper.params.navigation.nextEl = navigationNextRef.current;
                 swiper.params.pagination.el = paginationRef.current;
               }}
               onSwiper={(swiper) => {
                 setTimeout(() => {
-                  for (var i = 0; i < swiper?.slides?.length; i++) {
+                  for (let i = 0; i < swiper?.slides?.length; i++) {
                     swiper.slides[i].childNodes[0].setAttribute(
                       "data-swiper-parallax",
                       0.75 * swiper.height
@@ -85,10 +82,7 @@ const IntroWithVertical = () => {
                   }
 
                   if (swiper.params) {
-                    // swiper.params.navigation.prevEl = navigationPrevRef.current;
-                    // swiper.params.navigation.nextEl = navigationNextRef.current;
                     swiper.params.pagination.el = paginationRef.current;
-                    // Re-init navigation
                     swiper.navigation?.destroy();
                     swiper.navigation?.init();
                     swiper.navigation?.update();
@@ -151,6 +145,7 @@ const IntroWithVertical = () => {
               ))}
             </Swiper>
           ) : null}
+
           <div className="cta__slider-arrows">
             <i
               id="js-cta-slider-next"
@@ -179,10 +174,12 @@ const IntroWithVertical = () => {
             </i>
           </div>
         </div>
+
         <div
           ref={paginationRef}
           className="swiper-pagination top custom-font"
         ></div>
+
         <div
           className="social-icon"
           style={{

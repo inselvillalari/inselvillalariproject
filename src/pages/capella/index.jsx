@@ -37,7 +37,7 @@ const Capella = () => {
         />
         <meta
           property="og:image"
-          content="https://inselvillalari.com/assets/img/slid/homePage/capellaHomePage.webp"
+          content="https://inselvillalari.com/assets/img/slid/homePage/capellaHomePage.jpg"
         />
         <meta property="og:url" content="https://inselvillalari.com/capella" />
         <meta property="og:type" content="website" />
@@ -52,7 +52,7 @@ const Capella = () => {
         />
         <meta
           name="twitter:image"
-          content="https://inselvillalari.com/assets/img/slid/homePage/capellaHomePage.webp"
+          content="https://inselvillalari.com/assets/img/slid/homePage/capellaHomePage.jpg"
         />
       </Head>
 
