@@ -11,10 +11,10 @@ const RigelInsideViews = () => {
   const [toggler, setToggler] = useState(false);
   const [slideIndex, setSlideIndex] = useState(1);
 
-  const imageNumbers = [1, 2, 3, 4, 5, 6];
+  const imageNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
 
   const sources = imageNumbers.map(
-    (num) => `/assets/img/slid/rigel/nightInsideViews/${num}.webp`
+    (num) => `/assets/img/slid/rigel/nightInsideViews/${num}.jpg`
   );
 
   useEffect(() => {

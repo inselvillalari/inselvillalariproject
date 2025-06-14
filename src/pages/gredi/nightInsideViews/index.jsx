@@ -11,10 +11,10 @@ const GrediNightInsideViews = () => {
   const [toggler, setToggler] = useState(false);
   const [slideIndex, setSlideIndex] = useState(1);
 
-  const imageNumbers = [1, 2, 3, 4, 5, 6];
+  const imageNumbers = [1, 2, 3, 4, 5];
 
   const sources = imageNumbers.map(
-    (num) => `/assets/img/slid/gredi/nightInsideViews/${num}.webp`
+    (num) => `/assets/img/slid/gredi/nightInsideViews/${num}.jpg`
   );
 
   useEffect(() => {

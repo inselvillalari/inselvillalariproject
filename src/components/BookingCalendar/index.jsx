@@ -164,7 +164,7 @@ const BookingCalendar = ({ dateRangesData, priceList = [] }) => {
                   {priceForDay && (
                     <div
                       style={{
-                        fontSize: "8px",
+                        fontSize: "7px",
                         marginTop: "1px",
                         textShadow: "0 0 1px black",
                         lineHeight: 1,

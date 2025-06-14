@@ -14,13 +14,13 @@
   {
     "id": 3,
     "title": { "first": "", "second": "VILLA GREDI" },
-    "image": "/assets/img/slid/homePage/grediHomePage.webp",
+    "image": "/assets/img/slid/homePage/grediHomePage.jpg",
     "pageLink": "/gredi"
   },
   {
     "id": 4,
     "title": { "first": "", "second": "VILLA RIGEL" },
-    "image": "/assets/img/slid/homePage/rigelHomePage.webp",
+    "image": "/assets/img/slid/homePage/rigelHomePage.JPG",
     "pageLink": "/rigel"
   }
 ]

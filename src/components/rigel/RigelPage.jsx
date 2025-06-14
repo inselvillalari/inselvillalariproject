@@ -103,7 +103,7 @@ const RigelPage = () => {
                   <div className="img">
                     <img
                       alt=""
-                      src="/assets/img/slid/rigel/nightInsideViews/1.webp"
+                      src="/assets/img/slid/rigel/nightInsideViews/1.jpg"
                       className="gallery-img-class"
                     />
                   </div>
@@ -165,7 +165,7 @@ const RigelPage = () => {
                   <div className="img">
                     <img
                       alt=""
-                      src="/assets/img/slid/rigel/indoor/3.webp"
+                      src="/assets/img/slid/rigel/indoor/1.jpg"
                       className="gallery-img-class"
                     />
                   </div>
@@ -227,7 +227,7 @@ const RigelPage = () => {
                   <div className="img">
                     <img
                       alt=""
-                      src="/assets/img/slid/rigel/activities/1.webp"
+                      src="/assets/img/slid/rigel/activities/1.jpg"
                       className="gallery-img-class"
                     />
                   </div>
