@@ -4,7 +4,7 @@ import { Calendar, DateObject } from "react-multi-date-picker";
 import "react-multi-date-picker/styles/backgrounds/bg-dark.css";
 import { useTranslation } from "next-i18next";
 
-// Türkçe locale tanımı (default olarak kullanılacak)
+// Türkçe
 const trLocale = {
   name: "gregorian_tr",
   months: [
@@ -34,7 +34,7 @@ const trLocale = {
   rtl: false,
 };
 
-// Rusça locale tanımı
+// Rusça
 const ruLocale = {
   name: "gregorian_ru",
   months: [
@@ -64,46 +64,38 @@ const ruLocale = {
   rtl: false,
 };
 
-const BookingCalendar = (dateRangesData) => {
+const BookingCalendar = ({ dateRangesData, priceList = [] }) => {
   const { t, i18n } = useTranslation("common");
   const [dateRanges, setDateRanges] = useState([]);
   const [numberOfMonths, setNumberOfMonths] = useState(1);
 
   useEffect(() => {
-    const parsedRanges = dateRangesData?.dateRangesData?.map((range) => ({
+    const parsedRanges = dateRangesData?.map((range) => ({
       start: new DateObject(range.start),
       end: new DateObject(range.end),
       color: range.color,
     }));
-    setDateRanges(parsedRanges);
+    setDateRanges(parsedRanges || []);
   }, [dateRangesData]);
 
   useEffect(() => {
-    function getNumberOfMonths() {
+    const updateMonths = () => {
       const width = window.innerWidth;
-      if (width >= 1200) return 3;
-      else if (width >= 768) return 2;
-      else return 1;
-    }
-
-    const handleResize = () => {
-      setNumberOfMonths(getNumberOfMonths());
+      setNumberOfMonths(width >= 1200 ? 3 : width >= 768 ? 2 : 1);
     };
-
-    setNumberOfMonths(getNumberOfMonths());
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+    updateMonths();
+    window.addEventListener("resize", updateMonths);
+    return () => window.removeEventListener("resize", updateMonths);
   }, []);
 
   const getLocale = (lang) => {
     switch (lang) {
       case "ru":
         return ruLocale;
-      case "en":
-        return undefined; // İngilizce varsayılan
       case "tr":
+        return trLocale;
       default:
-        return trLocale; // Varsayılan: Türkçe
+        return undefined;
     }
   };
 
@@ -123,6 +115,7 @@ const BookingCalendar = (dateRangesData) => {
           </h3>
         </div>
       </div>
+
       <div className="container d-flex justify-content-center mobile">
         <Calendar
           locale={getLocale(i18n.language)}
@@ -131,32 +124,62 @@ const BookingCalendar = (dateRangesData) => {
           range
           readOnly
           hideYear
-          style={{
-            // backgroundColor: "#2A2A38",
-            borderRadius: "20px",
-          }}
           className="bg-dark"
+          style={{ borderRadius: "20px" }}
           mapDays={({ date }) => {
-            let props = {};
-            let color = null;
+            const formattedDate = date.format("YYYY-MM-DD");
+            const priceForDay = priceList?.find(
+              (p) => p.date === formattedDate
+            )?.price;
 
-            dateRanges.forEach((range) => {
+            // ✅ Önce color'ı tanımla
+            let color = null;
+            dateRanges?.forEach((range) => {
               if (date >= range.start && date <= range.end) {
                 color = range.color;
               }
             });
 
-            if (color) {
-              props.style = {
-                backgroundColor: color,
-                color: color === "gray" ? "black" : "white",
-              };
-            }
-
-            return props;
+            return {
+              children: (
+                <div
+                  className="rmdp-selected"
+                  style={{
+                    width: "32px",
+                    height: "32px",
+                    borderRadius: "50%",
+                    backgroundColor: color || "transparent", // turuncu burada
+                    color: color === "gray" ? "black" : "white",
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    fontSize: "12px",
+                    fontWeight: 500,
+                    boxShadow: color ? "0 0 3px rgba(0, 0, 0, 0.3)" : undefined,
+                    margin: "auto",
+                  }}
+                >
+                  {date.day}
+                  {priceForDay && (
+                    <div
+                      style={{
+                        fontSize: "8px",
+                        marginTop: "1px",
+                        textShadow: "0 0 1px black",
+                        lineHeight: 1,
+                      }}
+                    >
+                      ₺{priceForDay.toLocaleString("tr-TR")}
+                    </div>
+                  )}
+                </div>
+              ),
+            };
           }}
         />
       </div>
+
       <div className="container d-flex justify-content-center">
         <div
           style={{
@@ -166,52 +189,29 @@ const BookingCalendar = (dateRangesData) => {
             flexWrap: "wrap",
           }}
         >
-          <div>
-            <span
-              style={{
-                display: "inlineBlock",
-                width: "15px",
-                height: "15px",
-                marginRight: "5px",
-                backgroundColor: "white",
-                border: "1px solid black",
-                color: "black",
-              }}
-            ></span>{" "}
-            {t("takvim.musait")}
-          </div>
-          <div>
-            <span
-              style={{
-                display: "inlineBlock",
-                width: "15px",
-                height: "15px",
-                marginRight: "5px",
-                backgroundColor: "#ff851b",
-                border: "1px solid black",
-                color: "black",
-              }}
-            ></span>{" "}
-            {t("takvim.rezerve")}
-          </div>
-          <div>
-            <span
-              style={{
-                display: "inlineBlock",
-                width: "15px",
-                height: "15px",
-                marginRight: "5px",
-                backgroundColor: "gray",
-                border: "1px solid black",
-                color: "black",
-              }}
-            ></span>{" "}
-            {t("takvim.tesisKapatmis")}
-          </div>
+          <LegendBox color="white" label={t("takvim.musait")} />
+          <LegendBox color="#ff851b" label={t("takvim.rezerve")} />
+          <LegendBox color="gray" label={t("takvim.tesisKapatmis")} />
         </div>
       </div>
     </section>
   );
 };
+
+const LegendBox = ({ color, label }) => (
+  <div>
+    <span
+      style={{
+        display: "inline-block",
+        width: "15px",
+        height: "15px",
+        marginRight: "5px",
+        backgroundColor: color,
+        border: "1px solid black",
+      }}
+    ></span>
+    {label}
+  </div>
+);
 
 export default dynamic(() => Promise.resolve(BookingCalendar), { ssr: false });

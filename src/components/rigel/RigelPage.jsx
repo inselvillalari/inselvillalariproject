@@ -9,34 +9,13 @@ import Skills from "../skills";
 import { useTranslation } from "next-i18next";
 import { getCalendarRanges } from "../../store/reservation/thunk";
 import { useDispatch, useSelector } from "react-redux";
-
-const dateRangesData = [
-  {
-    start: "2024-11-01",
-    end: "2025-05-21",
-    color: "gray",
-  },
-  {
-    start: "2025-05-26",
-    end: "2025-05-31",
-    color: "#ff851b",
-  },
-  {
-    start: "2025-06-05",
-    end: "2025-06-09",
-    color: "#ff851b",
-  },
-  {
-    start: "2025-11-01",
-    end: "2026-04-01",
-    color: "gray",
-  },
-];
+import { getDailyPriceList } from "../../utils/getDailyPriceList";
 
 const RigelPage = () => {
   const { calendarRanges } = useSelector((state) => state.reservation);
   const dispatch = useDispatch();
   const { t } = useTranslation("common");
+  const priceList = getDailyPriceList("Villa Rigel");
   React.useEffect(() => {
     setTimeout(() => {
       if (window.Isotope) initIsotope();
@@ -96,7 +75,10 @@ const RigelPage = () => {
               </button>
             </Link>
           </div>
-          <BookingCalendar dateRangesData={calendarRanges?.rigel || []} />
+          <BookingCalendar
+            dateRangesData={calendarRanges?.rigel || []}
+            priceList={priceList}
+          />
           <div className="row gallery gallery-min-heigth">
             <div className="col-lg-6 items mt-0 interior theaters residential">
               <div className="section-head mb-0">

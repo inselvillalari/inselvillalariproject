@@ -9,13 +9,13 @@ import Skills from "../skills";
 import { useTranslation } from "next-i18next";
 import { useDispatch, useSelector } from "react-redux";
 import { getCalendarRanges } from "../../store/reservation/thunk";
+import { getDailyPriceList } from "../../utils/getDailyPriceList";
 
 const AgenaPage = () => {
   const dispatch = useDispatch();
-  const { t } = useTranslation("common");
-
   const { calendarRanges } = useSelector((state) => state.reservation);
-
+  const { t } = useTranslation("common");
+  const priceList = getDailyPriceList("Villa Agena");
   React.useEffect(() => {
     setTimeout(() => {
       if (window.Isotope) initIsotope();
@@ -33,7 +33,6 @@ const AgenaPage = () => {
       channel.close();
     };
   }, []);
-
   return (
     <>
       <section className="works filter-img section-padding">
@@ -79,14 +78,10 @@ const AgenaPage = () => {
               </button>
             </Link>
           </div>
-          <BookingCalendar dateRangesData={calendarRanges?.agena || []} />
-          <div
-            style={{
-              textAlign: "center",
-              marginTop: "20px",
-              marginBottom: "40px",
-            }}
-          ></div>
+          <BookingCalendar
+            dateRangesData={calendarRanges?.agena || []}
+            priceList={priceList}
+          />
           <div className="row gallery gallery-min-heigth">
             <div className="col-lg-6 items mt-0 interior theaters residential">
               <div className="section-head mb-0">
@@ -111,7 +106,7 @@ const AgenaPage = () => {
                   <div className="img">
                     <img
                       alt=""
-                      src="/assets/img/slid/agena/nightInsideViews/2.webp"
+                      src="/assets/img/slid/agena/nightInsideViews/1.jpg"
                       className="gallery-img-class"
                     />
                   </div>
@@ -142,7 +137,7 @@ const AgenaPage = () => {
                   <div className="img">
                     <img
                       alt=""
-                      src="/assets/img/slid/agena/nightViews/1.webp"
+                      src="/assets/img/slid/agena/nightViews/1.jpg"
                       className="gallery-img-class"
                     />
                   </div>
@@ -169,20 +164,12 @@ const AgenaPage = () => {
                 className="col-lg-6 items interior"
                 style={{ marginBottom: "50px" }}
               >
-                <div
-                  className="item"
-                  style={{ position: "relative", overflow: "hidden" }}
-                >
+                <div className="item">
                   <div className="img">
                     <img
                       alt=""
-                      src="/assets/img/slid/agena/indoor/2.webp"
+                      src="/assets/img/slid/agena/indoor/1.jpg"
                       className="gallery-img-class"
-                      style={{
-                        width: "100%",
-                        height: "auto",
-                        display: "block",
-                      }}
                     />
                   </div>
                   <div
@@ -198,7 +185,7 @@ const AgenaPage = () => {
                       zIndex: 2,
                     }}
                   >
-                    <h6 style={{ margin: 0 }}>{t("icMekan")}</h6>
+                    <h6>{t("icMekan")}</h6>
                   </div>
                 </div>
               </div>
@@ -208,20 +195,12 @@ const AgenaPage = () => {
                 className="col-lg-6 items theaters"
                 style={{ marginBottom: "50px" }}
               >
-                <div
-                  className="item"
-                  style={{ position: "relative", overflow: "hidden" }}
-                >
+                <div className="item">
                   <div className="img">
                     <img
                       alt=""
-                      src="/assets/img/slid/agena/dayViews/1.jpeg"
+                      src="/assets/img/slid/agena/dayViews/1.jpg"
                       className="gallery-img-class"
-                      style={{
-                        width: "100%",
-                        height: "auto",
-                        display: "block",
-                      }}
                     />
                   </div>
                   <div
@@ -237,7 +216,38 @@ const AgenaPage = () => {
                       zIndex: 2,
                     }}
                   >
-                    <h6 style={{ margin: 0 }}>{t("gunduzGorunumleri")}</h6>
+                    <h6>{t("gunduzGorunumleri")}</h6>
+                  </div>
+                </div>
+              </div>
+            </Link>
+            <Link href="/agena/activities">
+              <div
+                className="col-lg-6 items residential"
+                style={{ marginBottom: "50px" }}
+              >
+                <div className="item">
+                  <div className="img">
+                    <img
+                      alt=""
+                      src="/assets/img/slid/agena/activities/1.jpg"
+                      className="gallery-img-class"
+                    />
+                  </div>
+                  <div
+                    style={{
+                      position: "absolute",
+                      bottom: 0,
+                      left: 0,
+                      backgroundColor: "#fff",
+                      color: "#111",
+                      padding: "10px 16px",
+                      fontWeight: "bold",
+                      borderTopRightRadius: "6px",
+                      zIndex: 2,
+                    }}
+                  >
+                    <h6>{t("aktiviteler")}</h6>
                   </div>
                 </div>
               </div>

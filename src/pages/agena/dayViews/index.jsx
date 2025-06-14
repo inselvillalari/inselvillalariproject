@@ -4,17 +4,17 @@ import { useTranslation } from "next-i18next";
 import { withTranslationProps } from "../../../utils/withTranslation";
 import withLoading from "../../../common/withLoading";
 import FsLightbox from "fslightbox-react";
-import NightInsideViews from "../../../components/nightInsideViews";
+import DayViews from "../../../components/dayViews";
 
 const AgenaDayViews = () => {
   const { t } = useTranslation("common");
   const [toggler, setToggler] = useState(false);
   const [slideIndex, setSlideIndex] = useState(1);
 
-  const imageNumbers = [1, 2, 3, 4, 5, 6, 7];
+  const imageNumbers = [1, 2, 3, 4, 5, 6, 7, 8];
 
   const sources = imageNumbers.map(
-    (num) => `/assets/img/slid/agena/dayViews/${num}.jpeg`
+    (num) => `/assets/img/slid/agena/dayViews/${num}.jpg`
   );
 
   useEffect(() => {
@@ -35,7 +35,7 @@ const AgenaDayViews = () => {
         image="/assets/img/slid/villasCoverImg/agena.jpeg"
       />
 
-      <NightInsideViews />
+      <DayViews />
 
       <section className="projdtal">
         <div className="justified-gallery">

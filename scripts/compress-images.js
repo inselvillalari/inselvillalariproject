@@ -38,11 +38,10 @@ if (images.length === 0) {
 console.log(`🔍 ${images.length} görsel bulundu. Sıkıştırma başlıyor...\n`);
 
 async function compressAll(images) {
-  const compressPromises = images.map(async (imgPath, index) => {
+  for (let i = 0; i < images.length; i++) {
+    const imgPath = images[i];
     try {
       const originalSize = fs.statSync(imgPath).size;
-
-      // Geçici dosya: sıkıştırılmış hali buraya gelir
       const tempPath = imgPath + ".temp";
 
       await tinify.fromFile(imgPath).toFile(tempPath);
@@ -51,17 +50,17 @@ async function compressAll(images) {
       const savedPercent = ((originalSize - newSize) / originalSize) * 100;
 
       if (savedPercent < 1) {
-        fs.unlinkSync(tempPath); // fark yoksa temp dosyayı sil
+        fs.unlinkSync(tempPath);
         console.log(
-          `⚪ [${index + 1}] ${path.relative(
+          `⚪ [${i + 1}] ${path.relative(
             baseDir,
             imgPath
           )} zaten optimize (%0 fark)`
         );
       } else {
-        fs.renameSync(tempPath, imgPath); // sıkıştırılmış dosyayla değiştir
+        fs.renameSync(tempPath, imgPath);
         console.log(
-          `✅ [${index + 1}] ${path.relative(
+          `✅ [${i + 1}] ${path.relative(
             baseDir,
             imgPath
           )} sıkıştırıldı (%${savedPercent.toFixed(1)})`
@@ -70,9 +69,8 @@ async function compressAll(images) {
     } catch (err) {
       console.error(`❌ Hata: ${imgPath} →`, err.message);
     }
-  });
+  }
 
-  await Promise.all(compressPromises);
   console.log("\n🎉 Tüm işlem tamamlandı.");
   process.exit(0);
 }

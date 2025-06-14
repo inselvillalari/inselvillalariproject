@@ -9,34 +9,13 @@ import Skills from "../skills";
 import { useTranslation } from "next-i18next";
 import { useDispatch, useSelector } from "react-redux";
 import { getCalendarRanges } from "../../store/reservation/thunk";
-
-const dateRangesData = [
-  {
-    start: "2024-11-01",
-    end: "2025-05-21",
-    color: "gray",
-  },
-  {
-    start: "2025-05-26",
-    end: "2025-05-31",
-    color: "#ff851b",
-  },
-  // {
-  //   start: "2025-04-13",
-  //   end: "2025-04-18",
-  //   color: "#ff851b",
-  // },
-  {
-    start: "2025-11-01",
-    end: "2026-04-01",
-    color: "gray",
-  },
-];
+import { getDailyPriceList } from "../../utils/getDailyPriceList";
 
 const GrediPage = () => {
   const { calendarRanges } = useSelector((state) => state.reservation);
   const dispatch = useDispatch();
   const { t } = useTranslation("common");
+  const priceList = getDailyPriceList("Villa Gredi");
   React.useEffect(() => {
     setTimeout(() => {
       if (window.Isotope) initIsotope();
@@ -96,7 +75,10 @@ const GrediPage = () => {
               </button>
             </Link>
           </div>
-          <BookingCalendar dateRangesData={calendarRanges?.gredi || []} />
+          <BookingCalendar
+            dateRangesData={calendarRanges?.gredi || []}
+            priceList={priceList}
+          />
           <div className="row gallery gallery-min-heigth">
             <div className="col-lg-6 items mt-0 interior theaters residential">
               <div className="section-head mb-0">

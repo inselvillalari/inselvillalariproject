@@ -11,10 +11,10 @@ const AgenaActivities = () => {
   const [toggler, setToggler] = useState(false);
   const [slideIndex, setSlideIndex] = useState(1);
 
-  const imageNumbers = [1, 2, 3, 4, 5];
+  const imageNumbers = [1, 2, 3, 4, 5, 6];
 
   const sources = imageNumbers.map(
-    (num) => `/assets/img/slid/agena/activities/${num}.jpeg`
+    (num) => `/assets/img/slid/agena/activities/${num}.jpg`
   );
 
   useEffect(() => {

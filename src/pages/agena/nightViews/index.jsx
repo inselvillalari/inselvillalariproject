@@ -11,10 +11,10 @@ const AgenaNightViews = () => {
   const [toggler, setToggler] = useState(false);
   const [slideIndex, setSlideIndex] = useState(1);
 
-  const imageNumbers = [1, 2, 3];
+  const imageNumbers = [1, 2, 3, 4, 5, 6];
 
   const sources = imageNumbers.map(
-    (num) => `/assets/img/slid/agena/nightViews/${num}.webp`
+    (num) => `/assets/img/slid/agena/nightViews/${num}.jpg`
   );
 
   useEffect(() => {

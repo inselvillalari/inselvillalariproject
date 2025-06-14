@@ -9,11 +9,13 @@ import Skills from "../skills";
 import { useTranslation } from "next-i18next";
 import { useDispatch, useSelector } from "react-redux";
 import { getCalendarRanges } from "../../store/reservation/thunk";
+import { getDailyPriceList } from "../../utils/getDailyPriceList";
 
 const CapellaPage = () => {
   const dispatch = useDispatch();
   const { calendarRanges } = useSelector((state) => state.reservation);
   const { t } = useTranslation("common");
+  const priceList = getDailyPriceList("Villa Capella");
   React.useEffect(() => {
     setTimeout(() => {
       if (window.Isotope) initIsotope();
@@ -74,7 +76,10 @@ const CapellaPage = () => {
               </button>
             </Link>
           </div>
-          <BookingCalendar dateRangesData={calendarRanges?.capella || []} />
+          <BookingCalendar
+            dateRangesData={calendarRanges?.capella || []}
+            priceList={priceList}
+          />
           <div className="row gallery gallery-min-heigth">
             <div className="col-lg-6 items mt-0 interior theaters residential">
               <div className="section-head mb-0">
@@ -99,7 +104,7 @@ const CapellaPage = () => {
                   <div className="img">
                     <img
                       alt=""
-                      src="/assets/img/slid/capella/nightInsideViews/2.webp"
+                      src="/assets/img/slid/capella/nightInsideViews/1.jpg"
                       className="gallery-img-class"
                     />
                   </div>
@@ -130,7 +135,7 @@ const CapellaPage = () => {
                   <div className="img">
                     <img
                       alt=""
-                      src="/assets/img/slid/capella/nightViews/1.webp"
+                      src="/assets/img/slid/capella/nightViews/1.jpg"
                       className="gallery-img-class"
                     />
                   </div>
@@ -161,7 +166,7 @@ const CapellaPage = () => {
                   <div className="img">
                     <img
                       alt=""
-                      src="/assets/img/slid/capella/indoor/2.webp"
+                      src="/assets/img/slid/capella/indoor/1.jpg"
                       className="gallery-img-class"
                     />
                   </div>
@@ -192,7 +197,7 @@ const CapellaPage = () => {
                   <div className="img">
                     <img
                       alt=""
-                      src="/assets/img/slid/capella/dayViews/1.webp"
+                      src="/assets/img/slid/capella/dayViews/1.jpg"
                       className="gallery-img-class"
                     />
                   </div>
@@ -223,7 +228,7 @@ const CapellaPage = () => {
                   <div className="img">
                     <img
                       alt=""
-                      src="/assets/img/slid/capella/activities/2.jpg"
+                      src="/assets/img/slid/capella/activities/1.jpg"
                       className="gallery-img-class"
                     />
                   </div>
