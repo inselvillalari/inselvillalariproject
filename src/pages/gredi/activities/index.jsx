@@ -4,7 +4,7 @@ import { useTranslation } from "next-i18next";
 import { withTranslationProps } from "../../../utils/withTranslation";
 import withLoading from "../../../common/withLoading";
 import FsLightbox from "fslightbox-react";
-import NightInsideViews from "../../../components/nightInsideViews";
+import Activities from "../../../components/activities";
 
 const GrediActivities = () => {
   const { t } = useTranslation("common");
@@ -35,7 +35,7 @@ const GrediActivities = () => {
         image="/assets/img/slid/villasCoverImg/gredi.jpeg"
       />
 
-      <NightInsideViews />
+      <Activities />
 
       <section className="projdtal">
         <div className="justified-gallery">

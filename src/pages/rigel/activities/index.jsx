@@ -4,7 +4,7 @@ import { useTranslation } from "next-i18next";
 import { withTranslationProps } from "../../../utils/withTranslation";
 import withLoading from "../../../common/withLoading";
 import FsLightbox from "fslightbox-react";
-import NightInsideViews from "../../../components/nightInsideViews";
+import Activities from "../../../components/activities";
 
 const RigelActivities = () => {
   const { t } = useTranslation("common");
@@ -34,8 +34,7 @@ const RigelActivities = () => {
         ]}
         image="/assets/img/slid/villasCoverImg/rigel.jpeg"
       />
-
-      <NightInsideViews />
+      <Activities />
 
       <section className="projdtal">
         <div className="justified-gallery">
