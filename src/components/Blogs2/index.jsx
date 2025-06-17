@@ -41,7 +41,11 @@ const Blogs2 = () => {
                     </Link>
                   </div>
                   <h5 className="playfont">
-                    {t(`blogs.posts.${blog.id}.title`)}
+                    <Link href={`/${blog.route}`} legacyBehavior>
+                      <a style={{ color: "inherit" }}>
+                        {t(`blogs.posts.${blog.id}.title`)}
+                      </a>
+                    </Link>
                   </h5>
                 </div>
               </div>

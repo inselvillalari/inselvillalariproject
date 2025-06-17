@@ -19,9 +19,7 @@ const AboutUs = () => {
       <div className="container">
         <div className="row">
           <div className="col-lg-6 valign">
-            <div
-              className="exp-content nopat"
-            >
+            <div className="exp-content nopat">
               <h6 className="sub-title">{t("aboutUsHomePage.konum")}</h6>
               <h2 className="mb-20 playfont">
                 {titleFirst} <br /> {titleSecond}
@@ -29,7 +27,17 @@ const AboutUs = () => {
               <p>{content}</p>
               <ul>
                 {villaNames.map((name, index) => (
-                  <li key={index}>{name}</li>
+                  <li key={index}>
+                    <Link href={`/${name.toLowerCase()}`} legacyBehavior>
+                      <a
+                        style={{
+                          color: "inherit",
+                        }}
+                      >
+                        {name}
+                      </a>
+                    </Link>
+                  </li>
                 ))}
               </ul>
             </div>
