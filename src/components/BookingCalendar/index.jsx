@@ -132,7 +132,6 @@ const BookingCalendar = ({ dateRangesData, priceList = [] }) => {
               (p) => p.date === formattedDate
             )?.price;
 
-            // ✅ Önce color'ı tanımla
             let color = null;
             dateRanges?.forEach((range) => {
               if (date >= range.start && date <= range.end) {
@@ -143,31 +142,41 @@ const BookingCalendar = ({ dateRangesData, priceList = [] }) => {
             return {
               children: (
                 <div
-                  className="rmdp-selected"
                   style={{
-                    width: "22px",
-                    height: "22px",
-                    borderRadius: "50%",
-                    backgroundColor: color || "transparent", // turuncu burada
-                    color: color === "gray" ? "black" : "white",
                     display: "flex",
                     flexDirection: "column",
                     alignItems: "center",
                     justifyContent: "center",
                     fontSize: "12px",
                     fontWeight: 500,
-                    boxShadow: color ? "0 0 3px rgba(0, 0, 0, 0.3)" : undefined,
-                    margin: "auto",
                   }}
                 >
-                  {date.day}
+                  <div
+                    style={{
+                      width: "22px",
+                      height: "22px",
+                      borderRadius: "50%",
+                      backgroundColor: color || "transparent",
+                      color: color === "gray" ? "black" : "white",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      lineHeight: 1,
+                      boxShadow: color
+                        ? "0 0 3px rgba(0, 0, 0, 0.3)"
+                        : undefined,
+                    }}
+                  >
+                    {date.day}
+                  </div>
                   {priceForDay && (
                     <div
                       style={{
                         fontSize: "7px",
-                        marginTop: "1px",
+                        marginTop: "2px",
+                        color: "#ccc",
                         textShadow: "0 0 1px black",
-                        lineHeight: 1,
+                        lineHeight: 1.1,
                       }}
                     >
                       ₺{priceForDay.toLocaleString("tr-TR")}
