@@ -27,7 +27,7 @@ const RigelInsideViews = () => {
   return (
     <>
       <PageHeader
-        title="VİLLA AGENA"
+        title="VİLLA RİGEL"
         fullPath={[
           { id: 1, name: t("navbar.anasayfa"), url: "/" },
           { id: 2, name: t("navbar.iletisim"), url: "/contact" },
